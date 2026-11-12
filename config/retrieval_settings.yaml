@@ -1,0 +1,7 @@
+# final_passages = how many ranked passages are offered to the context builder (retrieval depth).
+# context_budget = max tokens of evidence that reach the LLM; the builder also obeys the pressure cap (min of both).
+# Settings are compared at about the same budget (Akash, 2026-11-12), so 256-token settings get twice the passages.
+A: {piece_tokens: 256, candidates: 20, rerank: false, final_passages: 8, context_budget: 1600, expansion: false}
+B: {piece_tokens: 256, candidates: 20, rerank: true,  final_passages: 8, context_budget: 1600, expansion: false}
+C: {piece_tokens: 512, candidates: 20, rerank: true,  final_passages: 4, context_budget: 1600, expansion: false}
+# D (expansion) is out of the active comparison until expand.py exists; without it D would just duplicate B.

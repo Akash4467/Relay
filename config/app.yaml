@@ -1,0 +1,53 @@
+prompt_version: p1
+verification_policy_version: v1
+generation_config_version: g1
+corpus_version: c1                     # bump when chunks are rebuilt
+
+models:
+  primary:  {id: openai/gpt-oss-120b, reasoning_effort: low, max_tokens: 900, temperature: 0.2}
+  fallback: {id: openai/gpt-oss-20b,  reasoning_effort: low, max_tokens: 900, temperature: 0.2}
+
+reservation:
+  output_p95_tokens: {openai/gpt-oss-120b: 700, openai/gpt-oss-20b: 700}   # includes reasoning; refit from baseline
+  safety_margin: 0.10
+
+pressure:                               # global, recomputed every 1 s
+  L0: {context_cap: 2500, expansion: bounded, redraft: true}
+  L1: {context_cap: 1500, expansion: paragraph_only, redraft: false,
+       trigger: {primary_tpm_remaining_frac_lt: 0.5, or_queue_growing_for_s: 10}}
+  L2: {context_cap: 1000, expansion: off, redraft: false,
+       trigger: {primary_est_wait_ms_gt: 2000}}
+  L3: {trigger: both_daily_quotas_exhausted}
+
+retrieval_policy:
+  # only when a question names >= 2 papers: candidates come from each named paper, and the context reserves
+  # this many passages per named paper (at least one each always survives the token cap)
+  cross_paper_reserve_per_paper: 2
+
+model_decision:
+  max_wait_for_primary_ms: 2000
+  fallback_gate_categories: []          # filled from model benchmark (§19.4)
+
+queue:
+  max_length: 50
+  semaphore_inflight_hosted_calls: 4
+
+timeouts:
+  connect_ms: 3000
+  first_byte_ms: 15000
+  stream_idle_ms: 8000                  # max gap between SSE chunks
+  total_call_ms: 45000
+
+retry:
+  max_transport_retries_per_call: 2
+  backoff_base_ms: 500
+  backoff_cap_ms: 8000
+  budget_frac_of_initial_per_min: 0.10
+
+deadlines:
+  default_patience_ms: 20000            # used when the client sends none
+
+cache:
+  enabled: false                        # main experiments run with cache off
+singleflight:
+  enabled: false

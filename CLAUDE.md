@@ -50,6 +50,7 @@ uv sync                     # creates .venv (Python 3.12) and installs deps + de
 # ingestion (offline)
 uv run python -m relay.retrieval.fetch_papers
 uv run python -m relay.retrieval.latex_parse
+uv run python -m relay.retrieval.pdf_validate
 uv run python -m relay.retrieval.chunker
 uv run python -m relay.retrieval.index_build
 # app
