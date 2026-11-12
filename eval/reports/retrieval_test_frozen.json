@@ -1,0 +1,1104 @@
+{
+  "meta": {
+    "split": "test",
+    "run_at": "2026-11-12T14:29:38+00:00",
+    "git_commit": "a0a6a8ccbe9d162a106529f9cb963ebc499634ec",
+    "git_dirty": false,
+    "questions_sha256": "ee1794f7daf691e03ccb52cdcadc5bcac87d3a026d612119e028a1af94c21b4a",
+    "corpus_version": "c1",
+    "settings": {
+      "A": {
+        "piece_tokens": 256,
+        "candidates": 20,
+        "rerank": false,
+        "final_passages": 8,
+        "context_budget": 1600,
+        "expansion": false
+      },
+      "B": {
+        "piece_tokens": 256,
+        "candidates": 20,
+        "rerank": true,
+        "final_passages": 8,
+        "context_budget": 1600,
+        "expansion": false
+      },
+      "C": {
+        "piece_tokens": 512,
+        "candidates": 20,
+        "rerank": true,
+        "final_passages": 4,
+        "context_budget": 1600,
+        "expansion": false
+      }
+    },
+    "retrieval_policy": {
+      "cross_paper_reserve_per_paper": 2
+    },
+    "pressure_cap": 2500
+  },
+  "results": [
+    {
+      "setting": "A",
+      "piece_tokens": 256,
+      "final_passages": 8,
+      "context_cap": 1600,
+      "answerable": 7,
+      "any_gold_retrieved_pct": 100.0,
+      "all_gold_retrieved_pct": 57.1,
+      "quote_recall_pct": 66.7,
+      "mean_context_tokens": 1500.5,
+      "max_context_tokens": 1600,
+      "rows": [
+        {
+          "question_id": "q02",
+          "answerable": true,
+          "tokens": 1509,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7733,
+          "top_ce": null,
+          "passages": [
+            "AIAYN:6.2:c031",
+            "AIAYN:3.2.2:c014",
+            "AIAYN:3.2.2:c013",
+            "AIAYN:3.1:c008",
+            "AIAYN:AttentionVisualizations:c036",
+            "AIAYN:AttentionVisualizations:c037",
+            "AIAYN:4:c021",
+            "HNET:B:c107"
+          ],
+          "quotes": 1,
+          "quotes_covered": 1,
+          "first_gold_rank": 2
+        },
+        {
+          "question_id": "q04",
+          "answerable": true,
+          "tokens": 1600,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7046,
+          "top_ce": null,
+          "passages": [
+            "MOSHI:3.3.1:c030",
+            "MOSHI:5.1:c071",
+            "MOSHI:3.3.1:c029",
+            "MOSHI:A:c127",
+            "MOSHI:3.3.1:c028",
+            "MOSHI:5.1:c070",
+            "MOSHI:T17:r03",
+            "MOSHI:T17:r01"
+          ],
+          "quotes": 1,
+          "quotes_covered": 1,
+          "first_gold_rank": 1
+        },
+        {
+          "question_id": "q06",
+          "answerable": true,
+          "tokens": 1599,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.7951,
+          "top_ce": null,
+          "passages": [
+            "HNET:A.3:c104",
+            "HNET:1:c003",
+            "HNET:F:c120",
+            "HNET:1:c009",
+            "HNET:F:c121",
+            "HNET:4:c085",
+            "HNET:A:c088"
+          ],
+          "quotes": 2,
+          "quotes_covered": 1,
+          "first_gold_rank": 2
+        },
+        {
+          "question_id": "q08",
+          "answerable": true,
+          "tokens": 1546,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.8354,
+          "top_ce": null,
+          "passages": [
+            "AIAYN:3.5:c019",
+            "AIAYN:3.5:c020",
+            "AIAYN:6.2:c031",
+            "AIAYN:T3:r08",
+            "AIAYN:5.4:c028",
+            "AIAYN:3.4:c018",
+            "MOSHI:3.2.1:c019",
+            "HNET:2.2.2:c030"
+          ],
+          "quotes": 3,
+          "quotes_covered": 3,
+          "first_gold_rank": 2
+        },
+        {
+          "question_id": "q10",
+          "answerable": true,
+          "tokens": 1589,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.8629,
+          "top_ce": null,
+          "passages": [
+            "HNET:T6:r01",
+            "HNET:4:c080",
+            "HNET:T6:r03",
+            "HNET:T6:r02",
+            "HNET:3.1:c049",
+            "HNET:1:c009",
+            "HNET:3.1:c054"
+          ],
+          "quotes": 3,
+          "quotes_covered": 1,
+          "first_gold_rank": 2
+        },
+        {
+          "question_id": "q13",
+          "answerable": true,
+          "tokens": 1507,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.7701,
+          "top_ce": null,
+          "passages": [
+            "HNET:3.1:c053",
+            "HNET:3.2:c061",
+            "HNET:T2:r10",
+            "HNET:T2:r15",
+            "HNET:3.3:c073",
+            "HNET:3.1:c051",
+            "HNET:T2:r09"
+          ],
+          "quotes": 3,
+          "quotes_covered": 1,
+          "first_gold_rank": 3
+        },
+        {
+          "question_id": "q15",
+          "answerable": true,
+          "tokens": 1402,
+          "policy": "per_paper",
+          "named_papers": [
+            "AIAYN",
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.6379,
+          "top_ce": null,
+          "passages": [
+            "AIAYN:6.1:c030",
+            "MOSHI:3.1:c017",
+            "AIAYN:5.2:c026",
+            "MOSHI:4.4:c062",
+            "AIAYN:1:c003",
+            "MOSHI:4.4:c064",
+            "AIAYN:abstract:c001"
+          ],
+          "quotes": 2,
+          "quotes_covered": 2,
+          "first_gold_rank": 2
+        },
+        {
+          "question_id": "q17",
+          "answerable": false,
+          "tokens": 1374,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7678,
+          "top_ce": null,
+          "passages": [
+            "AIAYN:6.1:c029",
+            "AIAYN:abstract:c001",
+            "AIAYN:T2:r03",
+            "AIAYN:T2:r05",
+            "AIAYN:T2:r01",
+            "AIAYN:T2:r04"
+          ]
+        },
+        {
+          "question_id": "q19",
+          "answerable": false,
+          "tokens": 1536,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7603,
+          "top_ce": null,
+          "passages": [
+            "AIAYN:3.2.2:c013",
+            "AIAYN:3.2.2:c015",
+            "AIAYN:3.2.2:c014",
+            "AIAYN:3.1:c009",
+            "AIAYN:3.2.3:c016",
+            "AIAYN:7:c034",
+            "AIAYN:2:c004",
+            "AIAYN:3.1:c008"
+          ]
+        },
+        {
+          "question_id": "q21",
+          "answerable": false,
+          "tokens": 1551,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.6526,
+          "top_ce": null,
+          "passages": [
+            "AIAYN:5.2:c026",
+            "MOSHI:4.4:c062",
+            "MOSHI:4.4:c064",
+            "MOSHI:4.4:c065",
+            "MOSHI:6.2:c114",
+            "AIAYN:6.1:c030",
+            "MOSHI:T1:r01"
+          ]
+        },
+        {
+          "question_id": "q23",
+          "answerable": false,
+          "tokens": 1526,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.7305,
+          "top_ce": null,
+          "passages": [
+            "MOSHI:3.1:c016",
+            "MOSHI:5.4:c085",
+            "MOSHI:5.5:c092",
+            "MOSHI:7:c126",
+            "MOSHI:F.1:c151",
+            "MOSHI:5.4:c086"
+          ]
+        },
+        {
+          "question_id": "q25",
+          "answerable": false,
+          "tokens": 1456,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.6386,
+          "top_ce": null,
+          "passages": [
+            "MOSHI:6.3:c115",
+            "MOSHI:5.8:c098",
+            "MOSHI:2:c013",
+            "MOSHI:6.2:c112",
+            "MOSHI:7:c126",
+            "MOSHI:abstract:c002",
+            "AIAYN:6.1:c030"
+          ]
+        },
+        {
+          "question_id": "q27",
+          "answerable": false,
+          "tokens": 1537,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.6873,
+          "top_ce": null,
+          "passages": [
+            "HNET:3:c043",
+            "HNET:E.2:c114",
+            "HNET:T1:r06",
+            "HNET:T2:r15",
+            "HNET:3.1:c051",
+            "HNET:T1:r04",
+            "AIAYN:5.2:c026"
+          ]
+        },
+        {
+          "question_id": "q29",
+          "answerable": false,
+          "tokens": 1277,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.6787,
+          "top_ce": null,
+          "passages": [
+            "HNET:3.2:c061",
+            "HNET:4:c079",
+            "HNET:3.2:c065",
+            "HNET:2.1.2:c021",
+            "HNET:A.3:c102",
+            "HNET:3.3:c078",
+            "MOSHI:6.2:c111",
+            "HNET:2.3:c036"
+          ]
+        },
+        {
+          "question_id": "q30",
+          "answerable": false,
+          "tokens": 1499,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.7846,
+          "top_ce": null,
+          "passages": [
+            "HNET:3:c047",
+            "HNET:1:c012",
+            "HNET:2.1.1:c015",
+            "HNET:A.1.2:c092",
+            "HNET:3:c042",
+            "HNET:2.3:c037",
+            "HNET:2.2.2:c025"
+          ]
+        }
+      ],
+      "unanswerable_top_scores": [
+        [
+          "q17",
+          0.7678,
+          null
+        ],
+        [
+          "q19",
+          0.7603,
+          null
+        ],
+        [
+          "q21",
+          0.6526,
+          null
+        ],
+        [
+          "q23",
+          0.7305,
+          null
+        ],
+        [
+          "q25",
+          0.6386,
+          null
+        ],
+        [
+          "q27",
+          0.6873,
+          null
+        ],
+        [
+          "q29",
+          0.6787,
+          null
+        ],
+        [
+          "q30",
+          0.7846,
+          null
+        ]
+      ]
+    },
+    {
+      "setting": "B",
+      "piece_tokens": 256,
+      "final_passages": 8,
+      "context_cap": 1600,
+      "answerable": 7,
+      "any_gold_retrieved_pct": 71.4,
+      "all_gold_retrieved_pct": 57.1,
+      "quote_recall_pct": 60.0,
+      "mean_context_tokens": 1437,
+      "max_context_tokens": 1599,
+      "rows": [
+        {
+          "question_id": "q02",
+          "answerable": true,
+          "tokens": 1538,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7733,
+          "top_ce": 4.6184,
+          "passages": [
+            "AIAYN:6.2:c031",
+            "MOSHI:3.4.1:c040",
+            "AIAYN:3.2.2:c014",
+            "AIAYN:3.2.3:c016",
+            "AIAYN:3.2.2:c013",
+            "AIAYN:AttentionVisualizations:c036",
+            "HNET:B:c107",
+            "AIAYN:AttentionVisualizations:c037"
+          ],
+          "quotes": 1,
+          "quotes_covered": 1,
+          "first_gold_rank": 3
+        },
+        {
+          "question_id": "q04",
+          "answerable": true,
+          "tokens": 1474,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7046,
+          "top_ce": 5.1496,
+          "passages": [
+            "MOSHI:3.3.1:c030",
+            "MOSHI:3.3.1:c029",
+            "MOSHI:T17:r03",
+            "MOSHI:T17:r02",
+            "MOSHI:T17:r01",
+            "MOSHI:3.3.1:c028"
+          ],
+          "quotes": 1,
+          "quotes_covered": 1,
+          "first_gold_rank": 1
+        },
+        {
+          "question_id": "q06",
+          "answerable": true,
+          "tokens": 1520,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.7951,
+          "top_ce": 2.4549,
+          "passages": [
+            "HNET:A:c088",
+            "HNET:A.1:c090",
+            "HNET:3:c047",
+            "HNET:A.1.3:c094",
+            "HNET:1:c009",
+            "HNET:A.3:c103",
+            "HNET:4:c080",
+            "HNET:A.3:c105"
+          ],
+          "quotes": 2,
+          "quotes_covered": 0,
+          "first_gold_rank": 11
+        },
+        {
+          "question_id": "q08",
+          "answerable": true,
+          "tokens": 1339,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.8354,
+          "top_ce": 0.7153,
+          "passages": [
+            "AIAYN:3.5:c019",
+            "AIAYN:3.5:c020",
+            "AIAYN:T3:r08",
+            "AIAYN:6.2:c031",
+            "AIAYN:3.4:c018",
+            "AIAYN:5.4:c028",
+            "MOSHI:3.2.1:c019"
+          ],
+          "quotes": 3,
+          "quotes_covered": 3,
+          "first_gold_rank": 2
+        },
+        {
+          "question_id": "q10",
+          "answerable": true,
+          "tokens": 1593,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.8629,
+          "top_ce": 4.0675,
+          "passages": [
+            "HNET:3.1:c052",
+            "HNET:T6:r03",
+            "HNET:T6:r01",
+            "HNET:1:c012",
+            "HNET:3.1:c049",
+            "HNET:T6:r02",
+            "HNET:3:c043"
+          ],
+          "quotes": 3,
+          "quotes_covered": 0,
+          "first_gold_rank": 9
+        },
+        {
+          "question_id": "q13",
+          "answerable": true,
+          "tokens": 1455,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.7701,
+          "top_ce": 5.142,
+          "passages": [
+            "HNET:T2:r10",
+            "HNET:T2:r09",
+            "HNET:T2:r15",
+            "HNET:T2:r08",
+            "HNET:T2:r07",
+            "HNET:T2:r01"
+          ],
+          "quotes": 3,
+          "quotes_covered": 2,
+          "first_gold_rank": 1
+        },
+        {
+          "question_id": "q15",
+          "answerable": true,
+          "tokens": 1333,
+          "policy": "per_paper",
+          "named_papers": [
+            "AIAYN",
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.6379,
+          "top_ce": 1.7978,
+          "passages": [
+            "AIAYN:5.2:c026",
+            "MOSHI:4.4:c062",
+            "AIAYN:1:c003",
+            "MOSHI:3.1:c017",
+            "MOSHI:3.4.1:c040",
+            "MOSHI:4.4:c064",
+            "AIAYN:6.1:c029"
+          ],
+          "quotes": 2,
+          "quotes_covered": 2,
+          "first_gold_rank": 1
+        },
+        {
+          "question_id": "q17",
+          "answerable": false,
+          "tokens": 1374,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7678,
+          "top_ce": 7.7543,
+          "passages": [
+            "AIAYN:6.1:c029",
+            "AIAYN:abstract:c001",
+            "AIAYN:T2:r01",
+            "AIAYN:T2:r03",
+            "AIAYN:T2:r05",
+            "AIAYN:T2:r04"
+          ]
+        },
+        {
+          "question_id": "q19",
+          "answerable": false,
+          "tokens": 1482,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7603,
+          "top_ce": 0.631,
+          "passages": [
+            "AIAYN:3.2.2:c013",
+            "AIAYN:3.2.3:c016",
+            "AIAYN:3.1:c009",
+            "AIAYN:3.2.2:c015",
+            "AIAYN:3.1:c008",
+            "AIAYN:7:c034",
+            "AIAYN:2:c004",
+            "AIAYN:AttentionVisualizations:c036"
+          ]
+        },
+        {
+          "question_id": "q21",
+          "answerable": false,
+          "tokens": 1451,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.6526,
+          "top_ce": 2.4606,
+          "passages": [
+            "MOSHI:4.4:c062",
+            "AIAYN:5.2:c026",
+            "MOSHI:6.1:c110",
+            "MOSHI:3.2.1:c020",
+            "MOSHI:4.4:c064",
+            "AIAYN:6.1:c030",
+            "AIAYN:1:c003",
+            "MOSHI:3.1:c017"
+          ]
+        },
+        {
+          "question_id": "q23",
+          "answerable": false,
+          "tokens": 1440,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.7305,
+          "top_ce": 6.3133,
+          "passages": [
+            "MOSHI:T18:r17",
+            "MOSHI:6.1:c110",
+            "MOSHI:6.1:c109",
+            "MOSHI:5.5:c090",
+            "MOSHI:5.5:c092",
+            "MOSHI:5.4:c085",
+            "MOSHI:5.8:c103"
+          ]
+        },
+        {
+          "question_id": "q25",
+          "answerable": false,
+          "tokens": 1418,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.6386,
+          "top_ce": -4.4932,
+          "passages": [
+            "MOSHI:5.8:c098",
+            "MOSHI:6.3:c115",
+            "MOSHI:6.1:c110",
+            "MOSHI:4.4:c062",
+            "MOSHI:3.1:c018",
+            "MOSHI:2:c013",
+            "MOSHI:5.6:c094"
+          ]
+        },
+        {
+          "question_id": "q27",
+          "answerable": false,
+          "tokens": 1441,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.6873,
+          "top_ce": -0.5034,
+          "passages": [
+            "AIAYN:5.2:c026",
+            "HNET:E.2:c114",
+            "HNET:3.1:c051",
+            "HNET:3.1:c053",
+            "HNET:3:c043",
+            "HNET:3.2:c061",
+            "HNET:3.1:c050"
+          ]
+        },
+        {
+          "question_id": "q29",
+          "answerable": false,
+          "tokens": 1098,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.6787,
+          "top_ce": -1.5782,
+          "passages": [
+            "HNET:3.3:c078",
+            "HNET:2.1.2:c021",
+            "HNET:4:c080",
+            "HNET:3.2:c061",
+            "HNET:abstract:c002",
+            "HNET:2.3:c036",
+            "HNET:3:c043",
+            "HNET:3.2:c065"
+          ]
+        },
+        {
+          "question_id": "q30",
+          "answerable": false,
+          "tokens": 1599,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.7846,
+          "top_ce": 0.5945,
+          "passages": [
+            "HNET:3:c047",
+            "HNET:2.1.1:c015",
+            "HNET:2.2.2:c025",
+            "HNET:1:c012",
+            "HNET:A.1.4:c098",
+            "MOSHI:T11:r01",
+            "HNET:A.1.2:c092"
+          ]
+        }
+      ],
+      "unanswerable_top_scores": [
+        [
+          "q17",
+          0.7678,
+          7.7543
+        ],
+        [
+          "q19",
+          0.7603,
+          0.631
+        ],
+        [
+          "q21",
+          0.6526,
+          2.4606
+        ],
+        [
+          "q23",
+          0.7305,
+          6.3133
+        ],
+        [
+          "q25",
+          0.6386,
+          -4.4932
+        ],
+        [
+          "q27",
+          0.6873,
+          -0.5034
+        ],
+        [
+          "q29",
+          0.6787,
+          -1.5782
+        ],
+        [
+          "q30",
+          0.7846,
+          0.5945
+        ]
+      ]
+    },
+    {
+      "setting": "C",
+      "piece_tokens": 512,
+      "final_passages": 4,
+      "context_cap": 1600,
+      "answerable": 7,
+      "any_gold_retrieved_pct": 85.7,
+      "all_gold_retrieved_pct": 57.1,
+      "quote_recall_pct": 60.0,
+      "mean_context_tokens": 1212.7,
+      "max_context_tokens": 1492,
+      "rows": [
+        {
+          "question_id": "q02",
+          "answerable": true,
+          "tokens": 971,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.764,
+          "top_ce": 4.6184,
+          "passages": [
+            "AIAYN:6.2:c023",
+            "AIAYN:3.2.2:c009",
+            "AIAYN:3.2.3:c011",
+            "AIAYN:AttentionVisualizations:c027"
+          ],
+          "quotes": 1,
+          "quotes_covered": 1,
+          "first_gold_rank": 2
+        },
+        {
+          "question_id": "q04",
+          "answerable": true,
+          "tokens": 1474,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7229,
+          "top_ce": 5.5204,
+          "passages": [
+            "MOSHI:3.3.1:c016",
+            "MOSHI:T4:r01",
+            "MOSHI:T4:r02"
+          ],
+          "quotes": 1,
+          "quotes_covered": 1,
+          "first_gold_rank": 1
+        },
+        {
+          "question_id": "q06",
+          "answerable": true,
+          "tokens": 1365,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.7893,
+          "top_ce": 1.6132,
+          "passages": [
+            "HNET:A:c053",
+            "HNET:A.1.4:c059",
+            "HNET:1:c003",
+            "HNET:abstract:c001"
+          ],
+          "quotes": 2,
+          "quotes_covered": 1,
+          "first_gold_rank": 4
+        },
+        {
+          "question_id": "q08",
+          "answerable": true,
+          "tokens": 1075,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.8288,
+          "top_ce": 3.6593,
+          "passages": [
+            "AIAYN:3.5:c014",
+            "AIAYN:6.2:c023",
+            "AIAYN:3.4:c013",
+            "AIAYN:T3:r03"
+          ],
+          "quotes": 3,
+          "quotes_covered": 3,
+          "first_gold_rank": 1
+        },
+        {
+          "question_id": "q10",
+          "answerable": true,
+          "tokens": 1397,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.8608,
+          "top_ce": 3.6645,
+          "passages": [
+            "HNET:1:c004",
+            "HNET:T6:r02",
+            "HNET:T6:r01",
+            "HNET:1:c006"
+          ],
+          "quotes": 3,
+          "quotes_covered": 0,
+          "first_gold_rank": 12
+        },
+        {
+          "question_id": "q13",
+          "answerable": true,
+          "tokens": 1401,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.7701,
+          "top_ce": 4.898,
+          "passages": [
+            "HNET:3.1:c028",
+            "HNET:T2:r05",
+            "HNET:T2:r08",
+            "HNET:T2:r07"
+          ],
+          "quotes": 3,
+          "quotes_covered": 1,
+          "first_gold_rank": 2
+        },
+        {
+          "question_id": "q15",
+          "answerable": true,
+          "tokens": 1160,
+          "policy": "per_paper",
+          "named_papers": [
+            "AIAYN",
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.6257,
+          "top_ce": 1.9134,
+          "passages": [
+            "AIAYN:5.2:c019",
+            "MOSHI:4.4:c036",
+            "AIAYN:6.1:c022",
+            "MOSHI:3.2.1:c011"
+          ],
+          "quotes": 2,
+          "quotes_covered": 2,
+          "first_gold_rank": 1
+        },
+        {
+          "question_id": "q17",
+          "answerable": false,
+          "tokens": 1492,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7204,
+          "top_ce": 7.1487,
+          "passages": [
+            "AIAYN:6.1:c022",
+            "AIAYN:abstract:c001",
+            "AIAYN:T2:r01",
+            "AIAYN:T2:r02"
+          ]
+        },
+        {
+          "question_id": "q19",
+          "answerable": false,
+          "tokens": 966,
+          "policy": "global",
+          "named_papers": [],
+          "top_dense_cos": 0.7724,
+          "top_ce": 0.7042,
+          "passages": [
+            "AIAYN:3.2.2:c009",
+            "AIAYN:3.2.3:c011",
+            "AIAYN:3.2.2:c010",
+            "AIAYN:3.1:c006"
+          ]
+        },
+        {
+          "question_id": "q21",
+          "answerable": false,
+          "tokens": 1219,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.6435,
+          "top_ce": 2.4657,
+          "passages": [
+            "MOSHI:4.4:c036",
+            "AIAYN:5.2:c019",
+            "MOSHI:4.4:c037",
+            "MOSHI:3.2.1:c011"
+          ]
+        },
+        {
+          "question_id": "q23",
+          "answerable": false,
+          "tokens": 1119,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.7271,
+          "top_ce": 4.3676,
+          "passages": [
+            "MOSHI:6.1:c061",
+            "MOSHI:6.4:c065",
+            "MOSHI:5.5:c050"
+          ]
+        },
+        {
+          "question_id": "q25",
+          "answerable": false,
+          "tokens": 1345,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.6108,
+          "top_ce": -5.9544,
+          "passages": [
+            "MOSHI:6.3:c064",
+            "MOSHI:5.8:c054",
+            "MOSHI:4.4:c038",
+            "MOSHI:3.1:c009"
+          ]
+        },
+        {
+          "question_id": "q27",
+          "answerable": false,
+          "tokens": 820,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.6873,
+          "top_ce": -0.5034,
+          "passages": [
+            "AIAYN:5.2:c019",
+            "HNET:E.2:c068",
+            "HNET:3.1:c030",
+            "HNET:3.1:c028"
+          ]
+        },
+        {
+          "question_id": "q29",
+          "answerable": false,
+          "tokens": 1272,
+          "policy": "global",
+          "named_papers": [
+            "HNET"
+          ],
+          "top_dense_cos": 0.6787,
+          "top_ce": -1.5782,
+          "passages": [
+            "HNET:3.3:c046",
+            "HNET:4:c047",
+            "HNET:3.2:c035",
+            "HNET:2.1.1:c008"
+          ]
+        },
+        {
+          "question_id": "q30",
+          "answerable": false,
+          "tokens": 1115,
+          "policy": "global",
+          "named_papers": [
+            "MOSHI"
+          ],
+          "top_dense_cos": 0.7846,
+          "top_ce": 0.5945,
+          "passages": [
+            "HNET:3:c026",
+            "HNET:2.2.2:c014",
+            "HNET:1:c006",
+            "HNET:A.1.4:c059"
+          ]
+        }
+      ],
+      "unanswerable_top_scores": [
+        [
+          "q17",
+          0.7204,
+          7.1487
+        ],
+        [
+          "q19",
+          0.7724,
+          0.7042
+        ],
+        [
+          "q21",
+          0.6435,
+          2.4657
+        ],
+        [
+          "q23",
+          0.7271,
+          4.3676
+        ],
+        [
+          "q25",
+          0.6108,
+          -5.9544
+        ],
+        [
+          "q27",
+          0.6873,
+          -0.5034
+        ],
+        [
+          "q29",
+          0.6787,
+          -1.5782
+        ],
+        [
+          "q30",
+          0.7846,
+          0.5945
+        ]
+      ]
+    }
+  ]
+}
