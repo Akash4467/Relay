@@ -1,0 +1,2023 @@
+{
+  "meta": {
+    "git_commit": "4df35755f51e716c4833e8b824210214cc9e54a0",
+    "git_dirty": true,
+    "pairs_sha256": "89d8d99948a6fd62b312883bff32fa9c130bad1195d6b203f8577299e799ed83",
+    "harness_sha256": "7752aa1a01b591bba7c475ec9d182d6b55b3751ed15c2e7156e6b7afcf64cf62",
+    "grid": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.98,
+      0.99
+    ],
+    "fa_weight": 2,
+    "claims_per_answer": 4
+  },
+  "models": {
+    "cross-encoder/nli-deberta-v3-small": {
+      "evaluation": {
+        "P1": {
+          "params": {
+            "t": 0.25
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 0,
+            "false_rejections": 6,
+            "false_acceptance_rate_pct": 0.0,
+            "false_rejection_rate_pct": 50.0,
+            "accuracy_pct": 76.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 3,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 2,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 4,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 3,
+            "false_rejections": 2,
+            "false_acceptance_rate_pct": 42.9,
+            "false_rejection_rate_pct": 25.0,
+            "accuracy_pct": 66.7,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "heldout_decisions": {
+            "s02": false,
+            "u02": false,
+            "s05": true,
+            "s07": false,
+            "u04": false,
+            "s09": true,
+            "u06": true,
+            "s12": true,
+            "u08": true,
+            "s15": true,
+            "u10": false,
+            "s17": true,
+            "u14": true,
+            "s19": true,
+            "u17": false
+          },
+          "calibration_decisions": {
+            "s01": false,
+            "s03": true,
+            "u01": false,
+            "s04": false,
+            "s06": true,
+            "u03": false,
+            "s08": false,
+            "s10": true,
+            "u05": false,
+            "s11": false,
+            "s13": true,
+            "u07": false,
+            "s14": false,
+            "u09": false,
+            "u11": false,
+            "u12": false,
+            "s16": false,
+            "u13": false,
+            "u15": false,
+            "s18": true,
+            "s20": true,
+            "u16": false,
+            "u18": false,
+            "u19": false,
+            "u20": false
+          }
+        },
+        "P2": {
+          "params": {
+            "tc": 0.25,
+            "tf": 0.25
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 1,
+            "false_rejections": 3,
+            "false_acceptance_rate_pct": 7.7,
+            "false_rejection_rate_pct": 25.0,
+            "accuracy_pct": 84.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 3,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 4,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 4,
+            "false_rejections": 2,
+            "false_acceptance_rate_pct": 57.1,
+            "false_rejection_rate_pct": 25.0,
+            "accuracy_pct": 60.0,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "heldout_decisions": {
+            "s02": true,
+            "u02": false,
+            "s05": true,
+            "s07": false,
+            "u04": false,
+            "s09": true,
+            "u06": true,
+            "s12": false,
+            "u08": true,
+            "s15": true,
+            "u10": false,
+            "s17": true,
+            "u14": true,
+            "s19": true,
+            "u17": true
+          },
+          "calibration_decisions": {
+            "s01": false,
+            "s03": true,
+            "u01": false,
+            "s04": false,
+            "s06": true,
+            "u03": false,
+            "s08": true,
+            "s10": true,
+            "u05": false,
+            "s11": false,
+            "s13": true,
+            "u07": false,
+            "s14": true,
+            "u09": false,
+            "u11": false,
+            "u12": false,
+            "s16": true,
+            "u13": false,
+            "u15": false,
+            "s18": true,
+            "s20": true,
+            "u16": false,
+            "u18": false,
+            "u19": false,
+            "u20": true
+          }
+        },
+        "latency_ms_per_claim": {
+          "mean": 286.6,
+          "p50": 286.0,
+          "p95": 437.2
+        },
+        "latency_ms_per_answer_est": {
+          "mean": 1146.4,
+          "p50": 1144.0,
+          "p95": 1748.8
+        }
+      },
+      "rows": [
+        {
+          "pair_id": "s01",
+          "split": "calibration",
+          "category": "exact",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.00083
+          ],
+          "contra_by_premise": [
+            0.99509
+          ],
+          "entail": 0.0008278535070831204,
+          "contra": 0.9950921763648951,
+          "ms": 181.92
+        },
+        {
+          "pair_id": "s02",
+          "split": "heldout",
+          "category": "exact",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.04141
+          ],
+          "contra_by_premise": [
+            0.01868
+          ],
+          "entail": 0.041414253883802085,
+          "contra": 0.018684881113588542,
+          "ms": 318.3
+        },
+        {
+          "pair_id": "s03",
+          "split": "calibration",
+          "category": "exact",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.53693
+          ],
+          "contra_by_premise": [
+            0.0206
+          ],
+          "entail": 0.5369293437305793,
+          "contra": 0.020601446885699756,
+          "ms": 305.27
+        },
+        {
+          "pair_id": "u01",
+          "split": "calibration",
+          "category": "exact",
+          "supported": false,
+          "flags": [
+            "term 'v100' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00053
+          ],
+          "contra_by_premise": [
+            0.99468
+          ],
+          "entail": 0.0005274141578297389,
+          "contra": 0.9946836319611906,
+          "ms": 174.38
+        },
+        {
+          "pair_id": "u02",
+          "split": "heldout",
+          "category": "exact",
+          "supported": false,
+          "flags": [
+            "term 'tpu' not in the cited passage",
+            "term 'v4' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00078
+          ],
+          "contra_by_premise": [
+            0.01351
+          ],
+          "entail": 0.0007779207843119961,
+          "contra": 0.013512694278407896,
+          "ms": 310.38
+        },
+        {
+          "pair_id": "s04",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "flags": [
+            "term 'parallelized' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.01044
+          ],
+          "contra_by_premise": [
+            0.01921
+          ],
+          "entail": 0.010444224449750395,
+          "contra": 0.01921266039909668,
+          "ms": 310.63
+        },
+        {
+          "pair_id": "s05",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99424
+          ],
+          "contra_by_premise": [
+            0.00035
+          ],
+          "entail": 0.9942415618068369,
+          "contra": 0.00035366021834609744,
+          "ms": 222.02
+        },
+        {
+          "pair_id": "s06",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "flags": [
+            "term 'lets' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.28912
+          ],
+          "contra_by_premise": [
+            0.13029
+          ],
+          "entail": 0.28912281141395935,
+          "contra": 0.13029189765421317,
+          "ms": 383.53
+        },
+        {
+          "pair_id": "s07",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.02434
+          ],
+          "contra_by_premise": [
+            0.85062
+          ],
+          "entail": 0.024344389822847562,
+          "contra": 0.8506244773899925,
+          "ms": 313.47
+        },
+        {
+          "pair_id": "u03",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00246
+          ],
+          "contra_by_premise": [
+            0.44506
+          ],
+          "entail": 0.002459699047829009,
+          "contra": 0.44505934799194813,
+          "ms": 263.28
+        },
+        {
+          "pair_id": "u04",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            2e-05
+          ],
+          "contra_by_premise": [
+            0.99956
+          ],
+          "entail": 1.8589026802679983e-05,
+          "contra": 0.9995561456836617,
+          "ms": 204.52
+        },
+        {
+          "pair_id": "s08",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.00524
+          ],
+          "contra_by_premise": [
+            0.02357
+          ],
+          "entail": 0.005241578376930764,
+          "contra": 0.023568367560983256,
+          "ms": 189.41
+        },
+        {
+          "pair_id": "s09",
+          "split": "heldout",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99252
+          ],
+          "contra_by_premise": [
+            0.00115
+          ],
+          "entail": 0.9925203530143473,
+          "contra": 0.0011491442411697536,
+          "ms": 217.97
+        },
+        {
+          "pair_id": "s10",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.98613
+          ],
+          "contra_by_premise": [
+            0.0024
+          ],
+          "entail": 0.9861324619880294,
+          "contra": 0.002404976943076804,
+          "ms": 302.4
+        },
+        {
+          "pair_id": "u05",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": false,
+          "flags": [
+            "number 512 not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00025
+          ],
+          "contra_by_premise": [
+            0.99325
+          ],
+          "entail": 0.0002474396719225548,
+          "contra": 0.9932545715406144,
+          "ms": 190.94
+        },
+        {
+          "pair_id": "u06",
+          "split": "heldout",
+          "category": "technical_paraphrase",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.61763
+          ],
+          "contra_by_premise": [
+            0.10146
+          ],
+          "entail": 0.6176282150245065,
+          "contra": 0.10146021459424787,
+          "ms": 285.63
+        },
+        {
+          "pair_id": "s11",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            8e-05,
+            0.00383,
+            0.00234
+          ],
+          "contra_by_premise": [
+            0.56684,
+            0.00726,
+            0.00283
+          ],
+          "entail": 0.0038331873328158834,
+          "contra": 0.5668419761390987,
+          "ms": 841.17
+        },
+        {
+          "pair_id": "s12",
+          "split": "heldout",
+          "category": "implicit_entity",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.57162
+          ],
+          "contra_by_premise": [
+            0.29181
+          ],
+          "entail": 0.5716197603271489,
+          "contra": 0.29181044846704146,
+          "ms": 323.48
+        },
+        {
+          "pair_id": "s13",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99349
+          ],
+          "contra_by_premise": [
+            0.00052
+          ],
+          "entail": 0.9934886538260991,
+          "contra": 0.0005166759346892061,
+          "ms": 289.91
+        },
+        {
+          "pair_id": "u07",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": false,
+          "flags": [
+            "term 'helium' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00192
+          ],
+          "contra_by_premise": [
+            0.00492
+          ],
+          "entail": 0.0019168455615719596,
+          "contra": 0.00492374588099016,
+          "ms": 303.24
+        },
+        {
+          "pair_id": "u08",
+          "split": "heldout",
+          "category": "implicit_entity",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.98407
+          ],
+          "contra_by_premise": [
+            0.00625
+          ],
+          "entail": 0.9840650717146994,
+          "contra": 0.006249613568305266,
+          "ms": 165.85
+        },
+        {
+          "pair_id": "s14",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.00404
+          ],
+          "contra_by_premise": [
+            0.23987
+          ],
+          "entail": 0.004035146618650346,
+          "contra": 0.2398704968210214,
+          "ms": 423.86
+        },
+        {
+          "pair_id": "s15",
+          "split": "heldout",
+          "category": "numerical",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99262
+          ],
+          "contra_by_premise": [
+            0.00091
+          ],
+          "entail": 0.9926225398913481,
+          "contra": 0.0009094753752102116,
+          "ms": 201.07
+        },
+        {
+          "pair_id": "u09",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "flags": [
+            "number 43.2 not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.01796
+          ],
+          "contra_by_premise": [
+            0.96669
+          ],
+          "entail": 0.017964833388835994,
+          "contra": 0.9666886106155581,
+          "ms": 246.52
+        },
+        {
+          "pair_id": "u10",
+          "split": "heldout",
+          "category": "numerical",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00131
+          ],
+          "contra_by_premise": [
+            0.97486
+          ],
+          "entail": 0.0013105441072601017,
+          "contra": 0.9748585887531527,
+          "ms": 270.76
+        },
+        {
+          "pair_id": "u11",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00482
+          ],
+          "contra_by_premise": [
+            0.99143
+          ],
+          "entail": 0.004822556804115191,
+          "contra": 0.991434440372234,
+          "ms": 164.52
+        },
+        {
+          "pair_id": "u12",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "flags": [
+            "number 70.1 not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.01874
+          ],
+          "contra_by_premise": [
+            0.05815
+          ],
+          "entail": 0.018740004603607828,
+          "contra": 0.058146867931171194,
+          "ms": 262.3
+        },
+        {
+          "pair_id": "s16",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.01919
+          ],
+          "contra_by_premise": [
+            0.03468
+          ],
+          "entail": 0.0191859346875788,
+          "contra": 0.03467853834987078,
+          "ms": 286.43
+        },
+        {
+          "pair_id": "s17",
+          "split": "heldout",
+          "category": "attribution",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.97552
+          ],
+          "contra_by_premise": [
+            0.00468
+          ],
+          "entail": 0.9755214275329293,
+          "contra": 0.004678856537578873,
+          "ms": 290.2
+        },
+        {
+          "pair_id": "u13",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.0234
+          ],
+          "contra_by_premise": [
+            0.72497
+          ],
+          "entail": 0.023400364412830086,
+          "contra": 0.724973210128915,
+          "ms": 298.42
+        },
+        {
+          "pair_id": "u14",
+          "split": "heldout",
+          "category": "attribution",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.97084
+          ],
+          "contra_by_premise": [
+            0.00553
+          ],
+          "entail": 0.9708359904517981,
+          "contra": 0.005529159038800353,
+          "ms": 296.09
+        },
+        {
+          "pair_id": "u15",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00071
+          ],
+          "contra_by_premise": [
+            0.99869
+          ],
+          "entail": 0.0007051114151490055,
+          "contra": 0.9986873854550837,
+          "ms": 257.17
+        },
+        {
+          "pair_id": "s18",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.98572
+          ],
+          "contra_by_premise": [
+            0.00162
+          ],
+          "entail": 0.9857177572010171,
+          "contra": 0.0016192414911330056,
+          "ms": 310.53
+        },
+        {
+          "pair_id": "s19",
+          "split": "heldout",
+          "category": "experimental_added",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99432
+          ],
+          "contra_by_premise": [
+            0.00095
+          ],
+          "entail": 0.9943248575750417,
+          "contra": 0.0009538653680535116,
+          "ms": 195.82
+        },
+        {
+          "pair_id": "s20",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": true,
+          "flags": [
+            "number 1 not in the cited passage",
+            "number 1 not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.97085
+          ],
+          "contra_by_premise": [
+            0.00388
+          ],
+          "entail": 0.9708515998371919,
+          "contra": 0.003880550763884227,
+          "ms": 196.24
+        },
+        {
+          "pair_id": "u16",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "flags": [
+            "term 'wmt' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00011
+          ],
+          "contra_by_premise": [
+            0.03408
+          ],
+          "entail": 0.00010649589664427012,
+          "contra": 0.03408477856635997,
+          "ms": 186.34
+        },
+        {
+          "pair_id": "u17",
+          "split": "heldout",
+          "category": "experimental_added",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00032
+          ],
+          "contra_by_premise": [
+            0.00098
+          ],
+          "entail": 0.0003204014396699689,
+          "contra": 0.0009812116351657183,
+          "ms": 415.35
+        },
+        {
+          "pair_id": "u18",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "flags": [
+            "number 10 not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00047
+          ],
+          "contra_by_premise": [
+            0.0014
+          ],
+          "entail": 0.0004711131597994943,
+          "contra": 0.001396507639727572,
+          "ms": 263.03
+        },
+        {
+          "pair_id": "u19",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "flags": [
+            "term 'generalize' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00074
+          ],
+          "contra_by_premise": [
+            0.05459
+          ],
+          "entail": 0.0007421047865571129,
+          "contra": 0.054588741424043144,
+          "ms": 437.9
+        },
+        {
+          "pair_id": "u20",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00081
+          ],
+          "contra_by_premise": [
+            0.00037
+          ],
+          "entail": 0.0008095979646305633,
+          "contra": 0.0003652293462386649,
+          "ms": 364.85
+        }
+      ]
+    },
+    "cross-encoder/nli-deberta-v3-base": {
+      "evaluation": {
+        "P1": {
+          "params": {
+            "t": 0.95
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 0,
+            "false_rejections": 8,
+            "false_acceptance_rate_pct": 0.0,
+            "false_rejection_rate_pct": 66.7,
+            "accuracy_pct": 68.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 2,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 2,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 3,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 2,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 4,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 1,
+            "false_rejections": 3,
+            "false_acceptance_rate_pct": 14.3,
+            "false_rejection_rate_pct": 37.5,
+            "accuracy_pct": 73.3,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "heldout_decisions": {
+            "s02": true,
+            "u02": false,
+            "s05": true,
+            "s07": false,
+            "u04": false,
+            "s09": true,
+            "u06": false,
+            "s12": false,
+            "u08": true,
+            "s15": true,
+            "u10": false,
+            "s17": false,
+            "u14": false,
+            "s19": true,
+            "u17": false
+          },
+          "calibration_decisions": {
+            "s01": true,
+            "s03": true,
+            "u01": false,
+            "s04": false,
+            "s06": false,
+            "u03": false,
+            "s08": false,
+            "s10": false,
+            "u05": false,
+            "s11": false,
+            "s13": true,
+            "u07": false,
+            "s14": false,
+            "u09": false,
+            "u11": false,
+            "u12": false,
+            "s16": false,
+            "u13": false,
+            "u15": false,
+            "s18": true,
+            "s20": false,
+            "u16": false,
+            "u18": false,
+            "u19": false,
+            "u20": false
+          }
+        },
+        "P2": {
+          "params": {
+            "tc": 0.45,
+            "tf": 0.02
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 1,
+            "false_rejections": 3,
+            "false_acceptance_rate_pct": 7.7,
+            "false_rejection_rate_pct": 25.0,
+            "accuracy_pct": 84.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 3,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 4,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 3,
+            "false_rejections": 0,
+            "false_acceptance_rate_pct": 42.9,
+            "false_rejection_rate_pct": 0.0,
+            "accuracy_pct": 80.0,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "heldout_decisions": {
+            "s02": true,
+            "u02": false,
+            "s05": true,
+            "s07": true,
+            "u04": false,
+            "s09": true,
+            "u06": true,
+            "s12": true,
+            "u08": true,
+            "s15": true,
+            "u10": false,
+            "s17": true,
+            "u14": false,
+            "s19": true,
+            "u17": true
+          },
+          "calibration_decisions": {
+            "s01": true,
+            "s03": true,
+            "u01": false,
+            "s04": false,
+            "s06": true,
+            "u03": false,
+            "s08": false,
+            "s10": true,
+            "u05": false,
+            "s11": true,
+            "s13": true,
+            "u07": false,
+            "s14": true,
+            "u09": false,
+            "u11": false,
+            "u12": false,
+            "s16": true,
+            "u13": false,
+            "u15": false,
+            "s18": true,
+            "s20": false,
+            "u16": false,
+            "u18": false,
+            "u19": false,
+            "u20": true
+          }
+        },
+        "latency_ms_per_claim": {
+          "mean": 564.3,
+          "p50": 552.5,
+          "p95": 807.6
+        },
+        "latency_ms_per_answer_est": {
+          "mean": 2257.2,
+          "p50": 2210.0,
+          "p95": 3230.4
+        }
+      },
+      "rows": [
+        {
+          "pair_id": "s01",
+          "split": "calibration",
+          "category": "exact",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.97623
+          ],
+          "contra_by_premise": [
+            0.01998
+          ],
+          "entail": 0.9762317261950397,
+          "contra": 0.019978391950994583,
+          "ms": 383.67
+        },
+        {
+          "pair_id": "s02",
+          "split": "heldout",
+          "category": "exact",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.97267
+          ],
+          "contra_by_premise": [
+            0.00526
+          ],
+          "entail": 0.9726669001009122,
+          "contra": 0.005264579559118426,
+          "ms": 601.86
+        },
+        {
+          "pair_id": "s03",
+          "split": "calibration",
+          "category": "exact",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99378
+          ],
+          "contra_by_premise": [
+            0.00013
+          ],
+          "entail": 0.993782358466444,
+          "contra": 0.00012876709536886296,
+          "ms": 811.93
+        },
+        {
+          "pair_id": "u01",
+          "split": "calibration",
+          "category": "exact",
+          "supported": false,
+          "flags": [
+            "term 'v100' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.29734
+          ],
+          "contra_by_premise": [
+            0.69589
+          ],
+          "entail": 0.2973351359235159,
+          "contra": 0.6958944993201502,
+          "ms": 339.93
+        },
+        {
+          "pair_id": "u02",
+          "split": "heldout",
+          "category": "exact",
+          "supported": false,
+          "flags": [
+            "term 'tpu' not in the cited passage",
+            "term 'v4' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00022
+          ],
+          "contra_by_premise": [
+            0.99153
+          ],
+          "entail": 0.00022399881829432728,
+          "contra": 0.9915286811329032,
+          "ms": 585.8
+        },
+        {
+          "pair_id": "s04",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "flags": [
+            "term 'parallelized' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00296
+          ],
+          "contra_by_premise": [
+            0.001
+          ],
+          "entail": 0.0029570778510037213,
+          "contra": 0.001002139821825384,
+          "ms": 600.5
+        },
+        {
+          "pair_id": "s05",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99777
+          ],
+          "contra_by_premise": [
+            6e-05
+          ],
+          "entail": 0.9977671209224291,
+          "contra": 5.5299101992859376e-05,
+          "ms": 438.68
+        },
+        {
+          "pair_id": "s06",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "flags": [
+            "term 'lets' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.03518
+          ],
+          "contra_by_premise": [
+            0.01251
+          ],
+          "entail": 0.035182607694073935,
+          "contra": 0.012514014663818854,
+          "ms": 406.96
+        },
+        {
+          "pair_id": "s07",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.86632
+          ],
+          "contra_by_premise": [
+            0.00077
+          ],
+          "entail": 0.8663212855947449,
+          "contra": 0.0007697640593548263,
+          "ms": 591.85
+        },
+        {
+          "pair_id": "u03",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00022
+          ],
+          "contra_by_premise": [
+            0.99652
+          ],
+          "entail": 0.00022184293618712149,
+          "contra": 0.9965155558283311,
+          "ms": 545.46
+        },
+        {
+          "pair_id": "u04",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            1e-05
+          ],
+          "contra_by_premise": [
+            0.9998
+          ],
+          "entail": 1.0676224060950585e-05,
+          "contra": 0.9997962409789252,
+          "ms": 403.65
+        },
+        {
+          "pair_id": "s08",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.00224
+          ],
+          "contra_by_premise": [
+            0.9871
+          ],
+          "entail": 0.0022380835988124307,
+          "contra": 0.9870969350823713,
+          "ms": 418.23
+        },
+        {
+          "pair_id": "s09",
+          "split": "heldout",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99575
+          ],
+          "contra_by_premise": [
+            0.00022
+          ],
+          "entail": 0.9957536211970465,
+          "contra": 0.00021654868737133325,
+          "ms": 451.78
+        },
+        {
+          "pair_id": "s10",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.02006
+          ],
+          "contra_by_premise": [
+            0.0003
+          ],
+          "entail": 0.020058090946946244,
+          "contra": 0.00030413144634342144,
+          "ms": 597.09
+        },
+        {
+          "pair_id": "u05",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": false,
+          "flags": [
+            "number 512 not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00016
+          ],
+          "contra_by_premise": [
+            0.99865
+          ],
+          "entail": 0.00016241477935144958,
+          "contra": 0.998650435795165,
+          "ms": 398.14
+        },
+        {
+          "pair_id": "u06",
+          "split": "heldout",
+          "category": "technical_paraphrase",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00183
+          ],
+          "contra_by_premise": [
+            0.00196
+          ],
+          "entail": 0.0018327413875936604,
+          "contra": 0.001962634378657322,
+          "ms": 592.77
+        },
+        {
+          "pair_id": "s11",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            4e-05,
+            0.00275,
+            0.00187
+          ],
+          "contra_by_premise": [
+            0.00313,
+            0.00198,
+            0.00059
+          ],
+          "entail": 0.0027513034088579367,
+          "contra": 0.003129765347396949,
+          "ms": 1740.77
+        },
+        {
+          "pair_id": "s12",
+          "split": "heldout",
+          "category": "implicit_entity",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.02072
+          ],
+          "contra_by_premise": [
+            0.03525
+          ],
+          "entail": 0.020717650535667504,
+          "contra": 0.03524584112811359,
+          "ms": 726.15
+        },
+        {
+          "pair_id": "s13",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99742
+          ],
+          "contra_by_premise": [
+            0.00014
+          ],
+          "entail": 0.9974229506658352,
+          "contra": 0.00014482656143855483,
+          "ms": 533.24
+        },
+        {
+          "pair_id": "u07",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": false,
+          "flags": [
+            "term 'helium' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00174
+          ],
+          "contra_by_premise": [
+            0.00542
+          ],
+          "entail": 0.0017396608068016666,
+          "contra": 0.005417384766490898,
+          "ms": 485.58
+        },
+        {
+          "pair_id": "u08",
+          "split": "heldout",
+          "category": "implicit_entity",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.99569
+          ],
+          "contra_by_premise": [
+            0.00037
+          ],
+          "entail": 0.9956913460056472,
+          "contra": 0.00036527790649200836,
+          "ms": 297.64
+        },
+        {
+          "pair_id": "s14",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.00276
+          ],
+          "contra_by_premise": [
+            0.00378
+          ],
+          "entail": 0.0027550159359935517,
+          "contra": 0.003776377347576074,
+          "ms": 547.93
+        },
+        {
+          "pair_id": "s15",
+          "split": "heldout",
+          "category": "numerical",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99615
+          ],
+          "contra_by_premise": [
+            0.00055
+          ],
+          "entail": 0.9961537114727231,
+          "contra": 0.0005549641883443726,
+          "ms": 476.37
+        },
+        {
+          "pair_id": "u09",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "flags": [
+            "number 43.2 not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.0019
+          ],
+          "contra_by_premise": [
+            0.07347
+          ],
+          "entail": 0.0018955605345234191,
+          "contra": 0.0734725714928819,
+          "ms": 503.43
+        },
+        {
+          "pair_id": "u10",
+          "split": "heldout",
+          "category": "numerical",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00113
+          ],
+          "contra_by_premise": [
+            0.99458
+          ],
+          "entail": 0.0011326859048654766,
+          "contra": 0.9945802150695244,
+          "ms": 564.01
+        },
+        {
+          "pair_id": "u11",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.16125
+          ],
+          "contra_by_premise": [
+            0.83514
+          ],
+          "entail": 0.16124942870022482,
+          "contra": 0.8351399831914784,
+          "ms": 411.62
+        },
+        {
+          "pair_id": "u12",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "flags": [
+            "number 70.1 not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00088
+          ],
+          "contra_by_premise": [
+            0.00283
+          ],
+          "entail": 0.0008821706692114727,
+          "contra": 0.002829870070357088,
+          "ms": 697.72
+        },
+        {
+          "pair_id": "s16",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.23427
+          ],
+          "contra_by_premise": [
+            0.42147
+          ],
+          "entail": 0.23426706979728074,
+          "contra": 0.4214707486226258,
+          "ms": 627.46
+        },
+        {
+          "pair_id": "s17",
+          "split": "heldout",
+          "category": "attribution",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.45207
+          ],
+          "contra_by_premise": [
+            0.00151
+          ],
+          "entail": 0.45207209973069795,
+          "contra": 0.0015137646351470473,
+          "ms": 573.13
+        },
+        {
+          "pair_id": "u13",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00038
+          ],
+          "contra_by_premise": [
+            0.99899
+          ],
+          "entail": 0.00037867318470117937,
+          "contra": 0.9989896901635439,
+          "ms": 625.85
+        },
+        {
+          "pair_id": "u14",
+          "split": "heldout",
+          "category": "attribution",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.01278
+          ],
+          "contra_by_premise": [
+            0.96923
+          ],
+          "entail": 0.012783978609368718,
+          "contra": 0.9692285672870796,
+          "ms": 647.45
+        },
+        {
+          "pair_id": "u15",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.0005
+          ],
+          "contra_by_premise": [
+            0.99873
+          ],
+          "entail": 0.0004994900767938044,
+          "contra": 0.998728769700514,
+          "ms": 557.54
+        },
+        {
+          "pair_id": "s18",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99695
+          ],
+          "contra_by_premise": [
+            0.00022
+          ],
+          "entail": 0.9969534958486066,
+          "contra": 0.00021774041082151208,
+          "ms": 646.74
+        },
+        {
+          "pair_id": "s19",
+          "split": "heldout",
+          "category": "experimental_added",
+          "supported": true,
+          "flags": [],
+          "entail_by_premise": [
+            0.99689
+          ],
+          "contra_by_premise": [
+            0.00012
+          ],
+          "entail": 0.9968926796317404,
+          "contra": 0.00012040856399011141,
+          "ms": 557.11
+        },
+        {
+          "pair_id": "s20",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": true,
+          "flags": [
+            "number 1 not in the cited passage",
+            "number 1 not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00648
+          ],
+          "contra_by_premise": [
+            0.00067
+          ],
+          "entail": 0.006477681343906437,
+          "contra": 0.0006748633737150124,
+          "ms": 428.24
+        },
+        {
+          "pair_id": "u16",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "flags": [
+            "term 'wmt' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            2e-05
+          ],
+          "contra_by_premise": [
+            0.00148
+          ],
+          "entail": 2.3691095367400585e-05,
+          "contra": 0.0014807253637976368,
+          "ms": 436.96
+        },
+        {
+          "pair_id": "u17",
+          "split": "heldout",
+          "category": "experimental_added",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00037
+          ],
+          "contra_by_premise": [
+            0.0003
+          ],
+          "entail": 0.00037269525017572474,
+          "contra": 0.0003042771890516579,
+          "ms": 712.32
+        },
+        {
+          "pair_id": "u18",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "flags": [
+            "number 10 not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.0001
+          ],
+          "contra_by_premise": [
+            0.00018
+          ],
+          "entail": 0.00010445467919214998,
+          "contra": 0.0001793889298178137,
+          "ms": 454.74
+        },
+        {
+          "pair_id": "u19",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "flags": [
+            "term 'generalize' not in the cited passage"
+          ],
+          "entail_by_premise": [
+            0.00047
+          ],
+          "contra_by_premise": [
+            0.00033
+          ],
+          "entail": 0.00047453241182814586,
+          "contra": 0.00032912763340027415,
+          "ms": 632.53
+        },
+        {
+          "pair_id": "u20",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "flags": [],
+          "entail_by_premise": [
+            0.00022
+          ],
+          "contra_by_premise": [
+            0.00029
+          ],
+          "entail": 0.0002190229703299522,
+          "contra": 0.00029205784727651666,
+          "ms": 520.03
+        }
+      ]
+    }
+  }
+}

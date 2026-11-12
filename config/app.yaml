@@ -24,6 +24,13 @@ retrieval_policy:
   # this many passages per named paper (at least one each always survives the token cap)
   cross_paper_reserve_per_paper: 2
 
+verification:
+  # semantic support decides (DESIGN §14, 2026-11-12); thresholds are placeholders until fitted on the
+  # verifier stress set (§19.6), never on test questions
+  nli_model: cross-encoder/nli-deberta-v3-small
+  entail_min: 0.5           # every claim
+  entail_min_flagged: 0.8   # claims with a level 2 warning (number, technical term, attribution)
+
 model_decision:
   max_wait_for_primary_ms: 2000
   fallback_gate_categories: []          # filled from model benchmark (§19.4)

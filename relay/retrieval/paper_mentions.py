@@ -18,3 +18,10 @@ _PATTERNS = {
 def named_papers(question: str) -> list[str]:
     """Paper codes named in the question, in library order."""
     return [code for code, pat in _PATTERNS.items() if pat.search(question)]
+
+
+def strip_mentions(text: str) -> str:
+    """Text with the paper references removed, so "Vaswani" or "H-Net" never count as content terms."""
+    for pat in _PATTERNS.values():
+        text = pat.sub(" ", text)
+    return text
