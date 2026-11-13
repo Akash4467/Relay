@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from relay.llm.tokenizer import count
 from relay.retrieval import chunker as ch
 
@@ -32,15 +34,34 @@ def test_single_huge_sentence_is_cut_by_tokens():
     assert all(count(c["text"]) <= 20 for c in chunks)
 
 
+def table(n_rows, caption="Short caption."):
+    rows = [{"row_header": f"Model {i}", "cells": {"BLEU / (dev)": f"{i}.0"}} for i in range(n_rows)]
+    return {"table_id": "T3", "caption": caption, "headers": ["Model", "BLEU / (dev)"], "rows": rows,
+            "row_texts": [f"Model {i}: BLEU / (dev) = {i}.0" for i in range(n_rows)]}
+
+
 def test_table_chunks_repeat_header_and_short_caption():
-    table = {"table_id": "T3", "caption": "Short caption.", "headers": ["Model", "BLEU"],
-             "row_texts": [f"Model {i}: BLEU = {i}.0" for i in range(30)]}
-    chunks = ch.table_chunks(table, size=60)
+    chunks = ch.table_chunks(table(30), size=60)
     assert len(chunks) > 1
     for c in chunks:
-        assert c["text"].startswith("Table 3: Short caption.\nColumns: Model | BLEU\n")
+        assert c["text"].startswith("Table 3: Short caption.\nColumns: Model | BLEU / (dev)\n")
         assert count(c["text"]) <= 60
-    assert sum(c["rows"] for c in chunks) == 30
+    assert sum(len(c["rows"]) for c in chunks) == 30
+
+
+def test_table_rows_name_their_configuration_and_are_structured():
+    (c,) = ch.table_chunks(table(2), size=256)
+    assert c["text"].endswith("Configuration Model 0: BLEU / (dev) = 0.0\nConfiguration Model 1: BLEU / (dev) = 1.0")
+    assert c["rows"][1] == {"configuration": "Model 1",
+                            "values": [{"metric": "BLEU", "split": "dev", "column": "BLEU / (dev)", "value": "1.0"}]}
+
+
+@pytest.mark.parametrize("header,expected", [
+    ("BLEU / (dev)", ("BLEU", "dev")), ("PPL / (test)", ("PPL", "test")), ("ABX (↓)", ("ABX (↓)", None)),
+    ("Training Cost (FLOPs) / EN-DE", ("Training Cost (FLOPs) / EN-DE", None)), ("F-Edu / bpb ↓", ("F-Edu / bpb ↓", None)),
+])
+def test_metric_split(header, expected):
+    assert ch.metric_split(header) == expected
 
 
 def test_long_caption_shortened_to_first_sentence():
@@ -54,7 +75,8 @@ DATA = {
                  {"paper": "AIAYN", "section_id": "2", "title": "Results"}],
     "paragraphs": [para(0, SENT, 1), para(1, SENT, 2), para(0, SENT, 3, sec="2")],
     "tables": [{"paper": "AIAYN", "table_id": "T1", "section_id": "2", "caption": "Scores. " + "Long words here. " * 30,
-                "headers": ["M", "S"], "row_texts": ["a: S = 1", "b: S = 2"]}],
+                "headers": ["M", "S"], "row_texts": ["a: S = 1", "b: S = 2"],
+                "rows": [{"row_header": "a", "cells": {"S": "1"}}, {"row_header": "b", "cells": {"S": "2"}}]}],
     "figures": [{"paper": "AIAYN", "figure_id": "F1", "section_id": "1", "caption": "The architecture."}],
 }
 

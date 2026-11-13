@@ -46,6 +46,24 @@ def test_ordinary_words_are_never_flagged_however_rare():
     assert ev.signals("each of the 8 quantizers lets it be parallelized and generalize", [MIMI]) == []
 
 
+def test_delatex_drops_notation_but_keeps_symbols_and_numbers():
+    assert ev.delatex(r"\(\hat{x}_t\) and \(k_{t-1}\)").split() == ["x_t", "and", "k_t-1"]
+    assert "0.5" in ev.delatex(r"\(b_t = \mathds{1}_{\{p_t \ge 0.5\}}\)")
+
+
+def test_latex_macros_are_not_flagged_as_technical_terms():
+    # q05 regression: "\tfrac12" was flagged as the term 'tfrac12'
+    c = chunk(r"p_t = \frac{1}{2} \left(1 - \frac{q_t^\top k_{t-1}}{...}\right) and b_t = \mathds{1}_{\{p_t \geq 0.5\}}",
+              "HNET", "2.2.1", "Chunking Layer")
+    claim = r"It computes \(p_t = \tfrac12\bigl(1 - \frac{q_t^\top k_{t-1}}{\|q_t\|\|k_{t-1}\|}\bigr)\) and sets \(b_t\) at \(p_t \ge 0.5\)"
+    assert ev.signals(claim, [c]) == []
+
+
+def test_numbers_inside_latex_are_still_checked():
+    c = chunk("b_t = 1 when p_t >= 0.5", "HNET", "2.2.1", "Chunking Layer")
+    assert ev.signals(r"a boundary is set when \(p_t \ge 0.7\)", [c]) == ["number 0.7 not in the cited passage"]
+
+
 def test_named_paper_must_be_cited():
     flags = ev.signals("According to the original Transformer paper, 8 quantizers are used", [MIMI])
     assert flags == ["names AIAYN but cites no AIAYN passage"]

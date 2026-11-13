@@ -1,0 +1,710 @@
+{
+  "meta": {
+    "label": "v3",
+    "threshold": 0.9,
+    "git_commit": "0fc88bebfc96195c0b99cf0ab59ca0d5397e2429",
+    "git_dirty": true,
+    "pairs_sha256": "836fe67cc333ea363edde2d901f994850fcd0abd40dd363f47e65c87a71d6b56",
+    "nli_model": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+    "corpus_version": "c3",
+    "verification_policy_version": "v3"
+  },
+  "calibration": {
+    "n": 14,
+    "false_acceptances": 2,
+    "false_rejections": 0,
+    "false_acceptance_rate_pct": 22.2,
+    "false_rejection_rate_pct": 0.0,
+    "accuracy_pct": 85.7,
+    "by_category": {
+      "direct": {
+        "supported": 2,
+        "false_rejections": 0,
+        "unsupported": 0,
+        "false_acceptances": 0
+      },
+      "math": {
+        "supported": 1,
+        "false_rejections": 0,
+        "unsupported": 1,
+        "false_acceptances": 1
+      },
+      "table": {
+        "supported": 1,
+        "false_rejections": 0,
+        "unsupported": 1,
+        "false_acceptances": 0
+      },
+      "pronoun": {
+        "supported": 1,
+        "false_rejections": 0,
+        "unsupported": 1,
+        "false_acceptances": 0
+      },
+      "compound": {
+        "supported": 0,
+        "false_rejections": 0,
+        "unsupported": 2,
+        "false_acceptances": 0
+      },
+      "numeric": {
+        "supported": 0,
+        "false_rejections": 0,
+        "unsupported": 2,
+        "false_acceptances": 0
+      },
+      "absence": {
+        "supported": 0,
+        "false_rejections": 0,
+        "unsupported": 2,
+        "false_acceptances": 1
+      }
+    },
+    "confusion": {
+      "supported_accepted": 5,
+      "supported_rejected": 0,
+      "unsupported_accepted": 2,
+      "unsupported_rejected": 7
+    }
+  },
+  "calibration_detail": {
+    "d1": {
+      "sentence": "Self-attention layers are faster than recurrent layers when the sequence length n is smaller than the representation dimensionality d [AIAYN:4:c022].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9950630429555986,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "d2": {
+      "sentence": "The Transformer is the first sequence transduction model based entirely on attention [AIAYN:7:c034].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9978589765893344,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "m1": {
+      "sentence": "The smoothing module computes \\(\\bar{z}_t = P_t \\hat{z}_t + (1 - P_t)\\,\\bar{z}_{t-1}\\), an exponential moving average [HNET:2.2.2:c025].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9885040751256183,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "m2": {
+      "sentence": "The smoothing module computes \\(\\bar{z}_t = (1 - P_t)\\hat{z}_t + P_t \\bar{z}_{t-1}\\) [HNET:2.2.2:c025].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9742124447178904,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "t1": {
+      "sentence": "In Table 2, the big Transformer reaches 28.4 BLEU on English-to-German [AIAYN:T2:r05].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9796102195473028,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "t2": {
+      "sentence": "In Table 2, ConvS2S reaches 26.03 BLEU on English-to-German [AIAYN:T2:r02].",
+      "ok": false,
+      "absence": false,
+      "entailment": null,
+      "context": null,
+      "flags": [
+        "term 'convs2 s' not in the cited passage"
+      ],
+      "reasons": [
+        "the value 26.03 belongs to MoE in the cited table, not to ConvS2S"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "p1": {
+      "sentence": "It applies an exponential moving average to create smooth interpolations between chunks [HNET:2.2.2:c025].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9958168443305353,
+      "context": "H-Net uses a smoothing module in its dechunking layer.",
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "p2": {
+      "sentence": "It was inspired by curriculum learning schedules [HNET:2.2.3:c031].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.0001695025766104363,
+      "context": "The ratio loss guides compression in H-Net.",
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.00 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        true,
+        false
+      ]
+    },
+    "k1": {
+      "sentence": "The Transformer uses sinusoidal positional encodings, and these clearly outperformed learned positional embeddings [AIAYN:3.5:c020].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.0172723267055859,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.02 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "k2": {
+      "sentence": "H-Net adds a projection only to the residual connection, because projections on the main path lowered perplexity in every experiment [HNET:2.3:c035].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.001240971834096019,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (clause: \"Projections on the main path lowered perplexity in every experiment.\") (entailment 0.00 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "n1": {
+      "sentence": "In English conversational speech, padding tokens make up about 56% of the tokens [MOSHI:3.4.4:c049].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.0012804352847216045,
+      "context": null,
+      "flags": [
+        "number 56 % not in the cited passage"
+      ],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.00 < 0.9); number 56 % not in the cited passage"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "n2": {
+      "sentence": "In Table 2, GNMT + RL reaches 39.2 BLEU on English-to-French [AIAYN:T2:r01].",
+      "ok": false,
+      "absence": false,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "the value 39.2 belongs to Deep-Att + PosUnk in the cited table, not to GNMT + RL"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "a1": {
+      "sentence": "The retrieved passages do not state the English-to-French BLEU of the big Transformer.",
+      "ok": false,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "absence contradicted: the retrieved row 'Transformer (big)' reports bleu"
+      ],
+      "all_sentences_ok": [
+        true,
+        false
+      ]
+    },
+    "a2": {
+      "sentence": "The retrieved passages do not state whether the text tokens of different words usually overlap.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    }
+  },
+  "evaluation": {
+    "n": 28,
+    "false_acceptances": 2,
+    "false_rejections": 1,
+    "false_acceptance_rate_pct": 13.3,
+    "false_rejection_rate_pct": 7.7,
+    "accuracy_pct": 89.3,
+    "by_category": {
+      "direct": {
+        "supported": 4,
+        "false_rejections": 0,
+        "unsupported": 0,
+        "false_acceptances": 0
+      },
+      "math": {
+        "supported": 3,
+        "false_rejections": 0,
+        "unsupported": 1,
+        "false_acceptances": 0
+      },
+      "table": {
+        "supported": 3,
+        "false_rejections": 0,
+        "unsupported": 1,
+        "false_acceptances": 0
+      },
+      "pronoun": {
+        "supported": 3,
+        "false_rejections": 1,
+        "unsupported": 1,
+        "false_acceptances": 0
+      },
+      "compound": {
+        "supported": 0,
+        "false_rejections": 0,
+        "unsupported": 4,
+        "false_acceptances": 0
+      },
+      "numeric": {
+        "supported": 0,
+        "false_rejections": 0,
+        "unsupported": 4,
+        "false_acceptances": 0
+      },
+      "absence": {
+        "supported": 0,
+        "false_rejections": 0,
+        "unsupported": 4,
+        "false_acceptances": 2
+      }
+    },
+    "confusion": {
+      "supported_accepted": 12,
+      "supported_rejected": 1,
+      "unsupported_accepted": 2,
+      "unsupported_rejected": 13
+    }
+  },
+  "evaluation_detail": {
+    "d3": {
+      "sentence": "Restricting self-attention to a neighborhood of size r would increase the maximum path length to O(n/r) [AIAYN:4:c022].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9970088242664562,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "d4": {
+      "sentence": "In English conversational speech, padding tokens make up about 65% of the tokens [MOSHI:3.4.4:c049].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9931400900256863,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "d5": {
+      "sentence": "H-Net adds a linear projection only to the residual connection [HNET:2.3:c035].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.965175513986431,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "d6": {
+      "sentence": "The authors found that learned positional embeddings and the sinusoidal version produced nearly identical results [AIAYN:3.5:c020].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9949230683115834,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "m3": {
+      "sentence": "The positional encoding for dimension 2i is \\(PE_{(pos,2i)} = \\sin\\left(pos / 10000^{2i/d_{\\text{model}}}\\right)\\) [AIAYN:3.5:c020].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9698316362127662,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "m4": {
+      "sentence": "In the ratio loss, \\(F = \\tfrac{1}{L}\\sum_{t=1}^{L} b_t\\) is the fraction of vectors actually selected [HNET:2.2.3:c031].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9322175132028415,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "m5": {
+      "sentence": "Multi-head attention is defined as \\(\\mathrm{MultiHead}(Q, K, V) = \\mathrm{Concat}(\\mathrm{head}_1, \\ldots, \\mathrm{head}_h)W^O\\) [AIAYN:3.2.2:c013].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.978555353677429,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "m6": {
+      "sentence": "The positional encoding for dimension 2i is \\(PE_{(pos,2i)} = \\cos(pos / 10000^{2i/d_{\\text{model}}})\\) [AIAYN:3.5:c020].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.7164300373035429,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.72 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "t3": {
+      "sentence": "In Table 4, SemantiCodec has a VisQOL score of 2.43 [MOSHI:T4:r02].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9806951974987279,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "t4": {
+      "sentence": "In Table 2, LlamaByte at FLOPs matched to GPT-3 Large reaches an average accuracy of 44.1 [HNET:T2:r02].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9867072231018403,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "t5": {
+      "sentence": "In Table 2, the base Transformer scores 27.3 BLEU on English-to-German, higher than ConvS2S at 25.16 [AIAYN:T2:r04, AIAYN:T2:r02].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9848984765391601,
+      "context": null,
+      "flags": [
+        "term 'convs2 s' not in the cited passage"
+      ],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "t6": {
+      "sentence": "In Table 4, SpeechTokenizer at 1.5kbps has a MOSNet score of 3.12 [MOSHI:T4:r02].",
+      "ok": false,
+      "absence": false,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "the value 3.12 belongs to SemantiCodec in the cited table, not to SpeechTokenizer"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "p3": {
+      "sentence": "They may allow the model to extrapolate to sequence lengths longer than those seen during training [AIAYN:3.5:c020].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9755971569601224,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        false,
+        true
+      ]
+    },
+    "p4": {
+      "sentence": "It guides the network toward targeted compression ratios [HNET:2.2.3:c031].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.7024502059374066,
+      "context": "The ratio loss in H-Net is inspired by load balancing in Mixture-of-Experts models.",
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.70 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        true,
+        false
+      ]
+    },
+    "p5": {
+      "sentence": "This would increase the maximum path length to O(n/r) [AIAYN:4:c022].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9872741167472777,
+      "context": "Restricted self-attention would consider only a neighborhood of size r around each output position.",
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "p6": {
+      "sentence": "It uses one shared projection for every head [AIAYN:3.2.2:c013].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.0007334684051729479,
+      "context": "Multi-head attention projects the queries, keys and values h times.",
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.00 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        true,
+        false
+      ]
+    },
+    "k3": {
+      "sentence": "A self-attention layer connects all positions with a constant number of sequential operations, while a recurrent layer requires O(log n) sequential operations [AIAYN:4:c022].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.01797541447499635,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (clause: \"A recurrent layer requires O(log n) sequential operations.\") (entailment 0.02 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "k4": {
+      "sentence": "Padding tokens make up about 65% of the tokens in English conversational speech, and the text tokens of consecutive words usually overlap [MOSHI:3.4.4:c049].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.0027103213619154593,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (clause: \"The text tokens of consecutive words usually overlap.\") (entailment 0.00 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "k5": {
+      "sentence": "The smoothing module applies an exponential moving average, which removes the need for a routing module [HNET:2.2.2:c025].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.0004748908836925838,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (clause: \"This removes the need for a routing module.\") (entailment 0.00 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "k6": {
+      "sentence": "The Transformer achieves a new state of the art on WMT 2014 English-to-German, but its best model is outperformed by previously reported ensembles [AIAYN:7:c034].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.0018473329855335989,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.00 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "n3": {
+      "sentence": "The wavelengths of the positional encoding form a geometric progression from 2π to 1000 · 2π [AIAYN:3.5:c020].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.0011268308587499272,
+      "context": null,
+      "flags": [
+        "number 1000 not in the cited passage"
+      ],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.00 < 0.9); number 1000 not in the cited passage"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "n4": {
+      "sentence": "In Table 2, the big Transformer reaches 41.0 BLEU on English-to-French [AIAYN:T2:r05].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.006845909538167757,
+      "context": null,
+      "flags": [
+        "number 41.0 not in the cited passage"
+      ],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.01 < 0.9); number 41.0 not in the cited passage"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "n5": {
+      "sentence": "In Table 4, Mimi trained with the adversarial loss only runs at 12.5Hz with a bitrate of 1.5kbps [MOSHI:T4:r03].",
+      "ok": false,
+      "absence": false,
+      "entailment": null,
+      "context": null,
+      "flags": [
+        "number 1.5 kbps not in the cited passage"
+      ],
+      "reasons": [
+        "the value 1.5 belongs to SpeechTokenizer in the cited table, not to Mimi, adv. loss only"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "n6": {
+      "sentence": "In Table 2, LlamaByte (Global) uses 0.42 GFLOPs per byte [HNET:T2:r03].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.5145855460392212,
+      "context": null,
+      "flags": [
+        "number 0.42 not in the cited passage"
+      ],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.51 < 0.9); number 0.42 not in the cited passage"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "a3": {
+      "sentence": "The retrieved passages do not state the English-to-German BLEU of MoE.",
+      "ok": false,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "absence contradicted: the retrieved row 'MoE' reports bleu"
+      ],
+      "all_sentences_ok": [
+        true,
+        false
+      ]
+    },
+    "a4": {
+      "sentence": "The retrieved passages do not state the MOSNet score of SpeechTokenizer.",
+      "ok": false,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "absence contradicted: the retrieved row 'SpeechTokenizer' reports mosnet"
+      ],
+      "all_sentences_ok": [
+        true,
+        false
+      ]
+    },
+    "a5": {
+      "sentence": "The retrieved passages do not state what inspired the ratio loss.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "a6": {
+      "sentence": "The retrieved passages do not state why the sinusoidal version was chosen.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        false,
+        true
+      ]
+    }
+  },
+  "latency_ms_per_answer": {
+    "n": 42,
+    "mean": 697.2,
+    "p50": 497.3,
+    "p95": 1934.2
+  }
+}

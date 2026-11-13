@@ -42,7 +42,7 @@ def test_no_evidence_refuses_without_calling_the_model():
     llm = FakeLLM()
     r = answer_from_evidence("How many quantizers does Mimi use?", ev([]), llm, verifier(SUPPORTED), CORPUS)
     assert r.status == "refused" and r.llm_calls == 0 and llm.calls == []
-    assert r.text.startswith("The three papers don't state this.")
+    assert r.text.startswith("I couldn't find this in the passages I retrieved")
 
 
 def test_named_paper_without_passage_refuses_without_calling_the_model():

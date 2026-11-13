@@ -1,0 +1,12 @@
+{
+  "scenario": "daily_exhausted",
+  "offered": 20,
+  "admitted": 5,
+  "completed": 3,
+  "rejected": 17,
+  "timed_out": 0,
+  "gave_up": 0,
+  "errors": 0,
+  "duration_s": 480,
+  "offered_per_min": 2.5
+}

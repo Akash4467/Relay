@@ -7,6 +7,7 @@ IDs: {PAPER}:{section_id}:c{NNN} (NNN = order within the paper) and {PAPER}:T{n}
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -64,17 +65,40 @@ def short_caption(caption: str, size: int) -> str:
     return (split_sentences(caption) or [caption])[0]
 
 
+_SPLIT = re.compile(r"\((dev|development|test|train|training|valid|validation)\)", re.I)
+
+
+def metric_split(header: str) -> tuple[str, str | None]:
+    """"BLEU / (dev)" -> ("BLEU", "dev"); "Training Cost (FLOPs) / EN-DE" -> (unchanged, None)."""
+    parts = [p.strip() for p in header.split(" / ")]
+    splits = [m.group(1).lower() for p in parts if (m := _SPLIT.fullmatch(p))]
+    metric = " / ".join(p for p in parts if not _SPLIT.fullmatch(p)) or header
+    return metric, (splits[0] if splits else None)
+
+
+def structured_row(row: dict) -> dict:
+    """One table row as explicit evidence: its configuration and one record per cell (column, metric, split, value).
+    Rows of the same table stay separate records, so siblings are never read as competing values."""
+    return {"configuration": row["row_header"],
+            "values": [dict(zip(("metric", "split"), metric_split(col)), column=col, value=val)
+                       for col, val in row["cells"].items()]}
+
+
 def table_chunks(table: dict, size: int) -> list[dict]:
-    """Caption + header line + as many rows as fit; every chunk repeats the (short) caption and headers."""
+    """Caption + header line + as many rows as fit; every chunk repeats the (short) caption and headers.
+    Each row line names its configuration ("Configuration base: ..."), so a question about a configuration can
+    match its row; the chunk also keeps the rows as structured records for the verifier."""
     n = table["table_id"][1:]
     head = f"Table {n}: {short_caption(table['caption'], size)}\nColumns: {' | '.join(table['headers'])}"
-    groups: list[list[str]] = []
-    for row in table["row_texts"]:
-        if groups and count(head + "\n" + "\n".join(groups[-1] + [row])) <= size:
-            groups[-1].append(row)
+    lines = [f"Configuration {t}" for t in table["row_texts"]]
+    groups: list[list[int]] = []
+    for i, line in enumerate(lines):
+        if groups and count(head + "\n" + "\n".join([lines[j] for j in groups[-1]] + [line])) <= size:
+            groups[-1].append(i)
         else:
-            groups.append([row])  # shortcut: a caption longer than the piece still keeps one row, so the chunk overflows
-    return [{"text": head + "\n" + "\n".join(g), "rows": len(g)} for g in groups or [[]]]
+            groups.append([i])  # shortcut: a caption longer than the piece still keeps one row, so the chunk overflows
+    return [{"text": head + "\n" + "\n".join(lines[i] for i in g), "rows": [structured_row(table["rows"][i]) for i in g]}
+            for g in groups or [[]]]
 
 
 def chunk_paper(code: str, sections: list[dict], paragraphs: list[dict], tables: list[dict],
@@ -92,11 +116,12 @@ def chunk_paper(code: str, sections: list[dict], paragraphs: list[dict], tables:
     out: list[dict] = []
 
     def add(section_id: str, kind: str, text: str, para_span: list[int] | None, page: int | None,
-            chunk_id: str | None = None) -> None:
+            chunk_id: str | None = None, rows: list[dict] | None = None) -> None:
         out.append({"chunk_id": chunk_id or f"{code}:{section_id}:c{len([c for c in out if c['kind'] != 'table']) + 1:03d}",
                     "paper": code, "section_id": section_id, "section_title": titles.get(section_id, ""),
                     "kind": kind, "piece_tokens": size, "para_span": para_span, "text": text,
-                    "n_tokens": count(text), "page": page, "corpus_version": corpus_version})
+                    "n_tokens": count(text), "page": page, "corpus_version": corpus_version}
+                   | ({"table_id": chunk_id.split(":")[1], "rows": rows} if kind == "table" else {}))
 
     for s in (s for s in sections if s["paper"] == code):
         sid = s["section_id"]
@@ -114,7 +139,7 @@ def chunk_paper(code: str, sections: list[dict], paragraphs: list[dict], tables:
                 for piece in pack_section([{"para_idx": 0, "text": f"Table {t['table_id'][1:]}: {t['caption']}"}], size):
                     add(sid, "caption", piece["text"], None, None)
             for k, c in enumerate(table_chunks(t, size), 1):
-                add(sid, "table", c["text"], None, None, f"{code}:{t['table_id']}:r{k:02d}")
+                add(sid, "table", c["text"], None, None, f"{code}:{t['table_id']}:r{k:02d}", c["rows"])
     return out
 
 

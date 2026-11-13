@@ -119,7 +119,9 @@ def test_fetch_parse_validate_attaches_pages(tmp_path):
     assert aiayn == [("AIAYN:abstract:c001", "text", 1), ("AIAYN:1:c002", "text", 1),
                      ("AIAYN:2:c003", "text", 2), ("AIAYN:T1:r01", "table", None)]
     table = next(c for c in chunks if c["chunk_id"] == "AIAYN:T1:r01")
-    assert table["text"] == "Table 1: Main results.\nColumns: Model | BLEU\nBig: BLEU = 28.4"
+    assert table["text"] == "Table 1: Main results.\nColumns: Model | BLEU\nConfiguration Big: BLEU = 28.4"
+    assert table["rows"] == [{"configuration": "Big", "values": [
+        {"metric": "BLEU", "split": None, "column": "BLEU", "value": "28.4"}]}]
 
     from tests.unit.test_index_build import FakeModel  # deterministic embedder, no model download
     report = ib.build(256, FakeModel(), out, tmp_path / "index")

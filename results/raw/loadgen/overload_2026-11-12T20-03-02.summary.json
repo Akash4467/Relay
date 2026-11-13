@@ -1,0 +1,12 @@
+{
+  "scenario": "overload",
+  "offered": 43,
+  "admitted": 35,
+  "completed": 16,
+  "rejected": 26,
+  "timed_out": 0,
+  "gave_up": 1,
+  "errors": 0,
+  "duration_s": 480,
+  "offered_per_min": 5.38
+}

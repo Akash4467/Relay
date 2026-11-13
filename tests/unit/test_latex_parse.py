@@ -126,6 +126,14 @@ def test_parse_tabular_bare_star_multirow_and_rule_struts():
     assert "0pt" not in headers[0]
 
 
+def test_specialrule_does_not_leak_into_row_headers():
+    # AIAYN Table 4 regression: "\specialrule{1pt}{-1pt}{0pt}" became "1pt-1pt0pt Transformer (4 layers)"
+    tab = r"{ccc}\hline Parser & Training & F1 \\ \hline Dyer & WSJ & 91.7 \\ \specialrule{1pt}{-1pt}{0pt}" "\n" \
+          r"Transformer (4 layers) & WSJ & 91.3 \\"
+    _, rows = lp.parse_tabular(tab, {})
+    assert [r["row_header"] for r in rows] == ["Dyer", "Transformer (4 layers)"]
+
+
 def test_parse_tabular_without_rules_uses_first_row_as_header():
     headers, rows = lp.parse_tabular(r"{ll} a & b \\ x & 1 \\ y & 2", {})
     assert headers == ["a", "b"]

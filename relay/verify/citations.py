@@ -1,7 +1,13 @@
 """Verifier level 1, citation integrity (DESIGN §14.2). Deterministic.
 
-Every sentence except the allowed "The papers do not state ..." sentence must cite at least one passage,
-and every cited ID must exist in the corpus and have been retrieved for this request.
+Every factual sentence must cite at least one passage, and every cited ID must exist in the corpus and have been
+retrieved for this request. The one sentence kind without a citation is an absence sentence, and it is checked too
+(2026-11-13, after a false "The papers do not state ..." reached a draft in q11):
+- it must be scoped to the evidence: "The retrieved passages do not state <missing part>." A claim that the
+  *papers* do not state something is rejected: the model only saw the retrieved passages, so it cannot know;
+- it must not cite a passage and must not contain a number (a value inside an absence claim is itself a claim).
+Whether the retrieved passages really lack the missing part is not provable by entailment; that limit is recorded,
+not hidden.
 """
 from __future__ import annotations
 
@@ -13,6 +19,9 @@ from relay.verify.sentences import split_sentences
 
 CHUNK_ID = re.compile(r"[A-Z]+:[0-9A-Za-z.]+:[cr]\d+")
 _BRACKET = re.compile(r"\[([^\[\]]+)\]")
+_UNSCOPED_ABSENCE = re.compile(
+    r"^(?:the|these|both|all three)?\s*(?:three\s+)?(?:papers?|authors?|literature)\s+(?:do|does|did)\s+not\s+"
+    r"(?:state|mention|say|report|specify|give|provide|discuss)", re.I)
 
 
 @dataclass
@@ -20,9 +29,10 @@ class SentenceCheck:
     sentence: str
     citations: list[str] = field(default_factory=list)
     reasons: list[str] = field(default_factory=list)  # failures: the sentence is rejected
-    exempt: bool = False  # the "papers do not state" sentence
+    absence: bool = False                             # "The retrieved passages do not state ..." (checked, not exempt)
     flags: list[str] = field(default_factory=list)    # level 2 warnings: raise the support the sentence needs
     entailment: float | None = None                   # semantic support from the best cited premise
+    context: str | None = None                        # previous accepted sentence used to resolve "it"/"they"
 
     @property
     def ok(self) -> bool:
@@ -49,10 +59,16 @@ def check(answer: str, retrieved_ids: set[str], corpus_ids: set[str]) -> list[Se
     out = []
     for sent in split_sentences(answer):
         c = SentenceCheck(sent, citations_in(sent))
-        if strip_citations(sent).startswith(NOT_STATED):
-            c.exempt = True
+        claim = strip_citations(sent)
+        if claim.startswith(NOT_STATED):
+            c.absence = True
             if c.citations:
-                c.reasons.append("the 'papers do not state' sentence must not cite a passage")
+                c.reasons.append("an absence sentence must not cite a passage")
+            if re.search(r"\d", claim):
+                c.reasons.append("an absence sentence must not contain a value: a value is a claim that needs a citation")
+        elif _UNSCOPED_ABSENCE.match(claim):
+            c.reasons.append("claims the papers do not state something; only the retrieved passages were seen, "
+                             f"so write \"{NOT_STATED} ...\"")
         elif not c.citations:
             c.reasons.append("no citation")
         for cid in c.citations:

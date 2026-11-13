@@ -1,0 +1,3718 @@
+{
+  "meta": {
+    "git_commit": "0fc88bebfc96195c0b99cf0ab59ca0d5397e2429",
+    "git_dirty": true,
+    "pairs_file": "eval\\verifier_stress_v2.jsonl",
+    "pairs_sha256": "9365b2a787aeeb3513bd23a68f36b40b172265b10ba0cfc2cd0857cae7e23922",
+    "harness_sha256": "ce3010c7e8e104c06303f604135d1222fbafe0adc665129494318de51157b653",
+    "grid": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      0.98,
+      0.99
+    ],
+    "fa_weight": 2,
+    "claims_per_answer": 4
+  },
+  "models": {
+    "cross-encoder/nli-deberta-v3-base": {
+      "evaluation": {
+        "P1-whole": {
+          "params": {
+            "t": 0.98
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 1,
+            "false_rejections": 6,
+            "false_acceptance_rate_pct": 7.7,
+            "false_rejection_rate_pct": 50.0,
+            "accuracy_pct": 72.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 2,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 4,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 2,
+                "false_acceptances": 1
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 3,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 0,
+            "false_rejections": 5,
+            "false_acceptance_rate_pct": 0.0,
+            "false_rejection_rate_pct": 62.5,
+            "accuracy_pct": 66.7,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 0,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "calibration_decisions": {
+            "s01": false,
+            "s03": true,
+            "u01": false,
+            "s04": true,
+            "s06": false,
+            "u03": false,
+            "s08": false,
+            "s10": false,
+            "u05": false,
+            "s11": true,
+            "s13": true,
+            "u07": false,
+            "s14": false,
+            "u09": false,
+            "u10": false,
+            "u11": false,
+            "u12": false,
+            "s16": false,
+            "u13": false,
+            "u15": true,
+            "s18": true,
+            "s20": true,
+            "u16": false,
+            "u18": false,
+            "u20": false
+          },
+          "heldout_decisions": {
+            "s02": false,
+            "u02": false,
+            "s05": false,
+            "s07": true,
+            "u04": false,
+            "s09": true,
+            "u06": false,
+            "s12": false,
+            "u08": false,
+            "s15": false,
+            "s17": false,
+            "u14": false,
+            "s19": true,
+            "u17": false,
+            "u19": false
+          }
+        },
+        "P2-whole": {
+          "params": {
+            "tc": 0.01,
+            "tf": 0.99
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 4,
+            "false_rejections": 2,
+            "false_acceptance_rate_pct": 30.8,
+            "false_rejection_rate_pct": 16.7,
+            "accuracy_pct": 76.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 4,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 1
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 3,
+                "false_acceptances": 2
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 3,
+            "false_rejections": 2,
+            "false_acceptance_rate_pct": 42.9,
+            "false_rejection_rate_pct": 25.0,
+            "accuracy_pct": 66.7,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 0,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "calibration_decisions": {
+            "s01": true,
+            "s03": true,
+            "u01": false,
+            "s04": true,
+            "s06": true,
+            "u03": false,
+            "s08": false,
+            "s10": true,
+            "u05": true,
+            "s11": true,
+            "s13": true,
+            "u07": false,
+            "s14": false,
+            "u09": false,
+            "u10": false,
+            "u11": false,
+            "u12": false,
+            "s16": true,
+            "u13": false,
+            "u15": true,
+            "s18": true,
+            "s20": true,
+            "u16": true,
+            "u18": true,
+            "u20": false
+          },
+          "heldout_decisions": {
+            "s02": false,
+            "u02": false,
+            "s05": true,
+            "s07": true,
+            "u04": false,
+            "s09": true,
+            "u06": true,
+            "s12": true,
+            "u08": true,
+            "s15": true,
+            "s17": false,
+            "u14": false,
+            "s19": true,
+            "u17": true,
+            "u19": false
+          }
+        },
+        "P1-atomic": {
+          "params": {
+            "t": 0.6
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 1,
+            "false_rejections": 4,
+            "false_acceptance_rate_pct": 7.7,
+            "false_rejection_rate_pct": 33.3,
+            "accuracy_pct": 80.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 2,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 4,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 1
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 3,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 0,
+            "false_rejections": 6,
+            "false_acceptance_rate_pct": 0.0,
+            "false_rejection_rate_pct": 75.0,
+            "accuracy_pct": 60.0,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 0,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 2,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "calibration_decisions": {
+            "s01": false,
+            "s03": true,
+            "u01": false,
+            "s04": true,
+            "s06": false,
+            "u03": false,
+            "s08": false,
+            "s10": false,
+            "u05": false,
+            "s11": true,
+            "s13": true,
+            "u07": false,
+            "s14": true,
+            "u09": false,
+            "u10": false,
+            "u11": false,
+            "u12": false,
+            "s16": true,
+            "u13": false,
+            "u15": true,
+            "s18": true,
+            "s20": true,
+            "u16": false,
+            "u18": false,
+            "u20": false
+          },
+          "heldout_decisions": {
+            "s02": false,
+            "u02": false,
+            "s05": false,
+            "s07": true,
+            "u04": false,
+            "s09": false,
+            "u06": false,
+            "s12": false,
+            "u08": false,
+            "s15": true,
+            "s17": false,
+            "u14": false,
+            "s19": false,
+            "u17": false,
+            "u19": false
+          }
+        },
+        "P2-atomic": {
+          "params": {
+            "tc": 0.02,
+            "tf": 0.99
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 3,
+            "false_rejections": 1,
+            "false_acceptance_rate_pct": 23.1,
+            "false_rejection_rate_pct": 8.3,
+            "accuracy_pct": 84.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 4,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 1
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 3,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 2,
+            "false_rejections": 3,
+            "false_acceptance_rate_pct": 28.6,
+            "false_rejection_rate_pct": 37.5,
+            "accuracy_pct": 66.7,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 0,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 2,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "calibration_decisions": {
+            "s01": true,
+            "s03": true,
+            "u01": false,
+            "s04": true,
+            "s06": true,
+            "u03": false,
+            "s08": false,
+            "s10": true,
+            "u05": true,
+            "s11": true,
+            "s13": true,
+            "u07": false,
+            "s14": true,
+            "u09": false,
+            "u10": false,
+            "u11": false,
+            "u12": false,
+            "s16": true,
+            "u13": false,
+            "u15": true,
+            "s18": true,
+            "s20": true,
+            "u16": true,
+            "u18": false,
+            "u20": false
+          },
+          "heldout_decisions": {
+            "s02": true,
+            "u02": false,
+            "s05": true,
+            "s07": true,
+            "u04": false,
+            "s09": false,
+            "u06": false,
+            "s12": true,
+            "u08": true,
+            "s15": true,
+            "s17": false,
+            "u14": false,
+            "s19": false,
+            "u17": true,
+            "u19": false
+          }
+        },
+        "latency_ms_per_sentence_whole": {
+          "mean": 456.7,
+          "p50": 442.5,
+          "p95": 587.1
+        },
+        "latency_ms_per_answer_est_whole": {
+          "mean": 1826.8,
+          "p50": 1770.0,
+          "p95": 2348.4
+        },
+        "latency_ms_per_sentence_atomic": {
+          "mean": 680.0,
+          "p50": 515.8,
+          "p95": 1618.8
+        },
+        "latency_ms_per_answer_est_atomic": {
+          "mean": 2720.0,
+          "p50": 2063.2,
+          "p95": 6475.2
+        }
+      },
+      "rows": [
+        {
+          "pair_id": "s01",
+          "split": "calibration",
+          "category": "exact",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "We used the Adam optimizer with \u03b2_1=0.9 and \u03b2_2=0.98.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00038
+              ],
+              "contra_by_premise": [
+                0.00029
+              ],
+              "entail": 0.00038449039339745873,
+              "contra": 0.000292710388519403,
+              "ms": 411.77
+            }
+          ],
+          "ms_whole": 411.77,
+          "ms_atomic": 411.77
+        },
+        {
+          "pair_id": "s02",
+          "split": "heldout",
+          "category": "exact",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "All the audio is resampled to 24kHz and downmixed to mono.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00085
+              ],
+              "contra_by_premise": [
+                0.01877
+              ],
+              "entail": 0.0008468657001119787,
+              "contra": 0.01877497051741299,
+              "ms": 575.0
+            }
+          ],
+          "ms_whole": 575.0,
+          "ms_atomic": 575.0
+        },
+        {
+          "pair_id": "s03",
+          "split": "calibration",
+          "category": "exact",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "For ablation studies, H-Net at Large scale is trained on 36B tokens randomly sampled from FineWeb-Edu.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99751
+              ],
+              "contra_by_premise": [
+                8e-05
+              ],
+              "entail": 0.9975131926612448,
+              "contra": 7.544851571178237e-05,
+              "ms": 434.54
+            }
+          ],
+          "ms_whole": 434.54,
+          "ms_atomic": 434.54
+        },
+        {
+          "pair_id": "u01",
+          "split": "calibration",
+          "category": "exact",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "We used the Adam optimizer with \u03b2_1=0.9 and \u03b2_2=0.999.",
+              "flags": [
+                "number 0.999 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00048
+              ],
+              "contra_by_premise": [
+                0.00284
+              ],
+              "entail": 0.00047801711019219626,
+              "contra": 0.0028350516032053887,
+              "ms": 380.65
+            }
+          ],
+          "ms_whole": 380.65,
+          "ms_atomic": 380.65
+        },
+        {
+          "pair_id": "u02",
+          "split": "heldout",
+          "category": "exact",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "All the audio is resampled to 16kHz and downmixed to mono.",
+              "flags": [
+                "number 16 khz not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.0002
+              ],
+              "contra_by_premise": [
+                0.99505
+              ],
+              "entail": 0.00020370891753554874,
+              "contra": 0.9950478902938982,
+              "ms": 515.8
+            }
+          ],
+          "ms_whole": 515.8,
+          "ms_atomic": 515.8
+        },
+        {
+          "pair_id": "s04",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Label smoothing makes the model less certain, which worsens perplexity but raises BLEU.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99575
+              ],
+              "contra_by_premise": [
+                0.00014
+              ],
+              "entail": 0.9957480341555632,
+              "contra": 0.0001420278957030138,
+              "ms": 347.65
+            },
+            {
+              "claim": "Label smoothing makes the model less certain.",
+              "flags": [],
+              "entail_by_premise": [
+                0.81604
+              ],
+              "contra_by_premise": [
+                0.00542
+              ],
+              "entail": 0.8160397470829982,
+              "contra": 0.00542309461521148,
+              "ms": 343.08
+            },
+            {
+              "claim": "This worsens perplexity but raises BLEU.",
+              "flags": [],
+              "entail_by_premise": [
+                0.91511
+              ],
+              "contra_by_premise": [
+                0.00054
+              ],
+              "entail": 0.9151059441389936,
+              "contra": 0.0005351209536963903,
+              "ms": 345.37
+            }
+          ],
+          "ms_whole": 347.65,
+          "ms_atomic": 1036.1
+        },
+        {
+          "pair_id": "s05",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Compressing and decompressing audio with Mimi wipes out the signal-based watermark.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00304
+              ],
+              "contra_by_premise": [
+                9e-05
+              ],
+              "entail": 0.003040328359954615,
+              "contra": 9.024151496121183e-05,
+              "ms": 352.72
+            }
+          ],
+          "ms_whole": 352.72,
+          "ms_atomic": 352.72
+        },
+        {
+          "pair_id": "s06",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Removing the smoothing module makes the compression ratio swing wildly during training.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00364
+              ],
+              "contra_by_premise": [
+                4e-05
+              ],
+              "entail": 0.003635693278001689,
+              "contra": 4.37741794892234e-05,
+              "ms": 459.76
+            }
+          ],
+          "ms_whole": 459.76,
+          "ms_atomic": 459.76
+        },
+        {
+          "pair_id": "s07",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Moshi's language abilities suffer more from quantization than the quality of its audio.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99105
+              ],
+              "contra_by_premise": [
+                0.00217
+              ],
+              "entail": 0.9910504539184178,
+              "contra": 0.0021724766284460643,
+              "ms": 426.26
+            }
+          ],
+          "ms_whole": 426.26,
+          "ms_atomic": 426.26
+        },
+        {
+          "pair_id": "u03",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "Moshi's audio quality suffers more from quantization than its language abilities.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00527
+              ],
+              "contra_by_premise": [
+                0.99162
+              ],
+              "entail": 0.005271761799575139,
+              "contra": 0.991615110607621,
+              "ms": 412.77
+            }
+          ],
+          "ms_whole": 412.77,
+          "ms_atomic": 412.77
+        },
+        {
+          "pair_id": "u04",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The signal-based watermark survives compression with the Mimi codec.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00027
+              ],
+              "contra_by_premise": [
+                0.99936
+              ],
+              "entail": 0.0002734366979458868,
+              "contra": 0.9993578472740604,
+              "ms": 367.22
+            }
+          ],
+          "ms_whole": 367.22,
+          "ms_atomic": 367.22
+        },
+        {
+          "pair_id": "s08",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "The feed-forward network's inner layer is four times wider than the model dimension.",
+              "flags": [
+                "number 4 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00099
+              ],
+              "contra_by_premise": [
+                0.00501
+              ],
+              "entail": 0.0009924136545964393,
+              "contra": 0.0050101273879921806,
+              "ms": 407.21
+            }
+          ],
+          "ms_whole": 407.21,
+          "ms_atomic": 407.21
+        },
+        {
+          "pair_id": "s09",
+          "split": "heldout",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Dot products are divided by the square root of the key dimension so that the softmax does not end up with tiny gradients.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99079
+              ],
+              "contra_by_premise": [
+                0.00025
+              ],
+              "entail": 0.9907877006657225,
+              "contra": 0.0002537525985701267,
+              "ms": 411.98
+            },
+            {
+              "claim": "Dot products are divided by the square root of the key dimension.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99033
+              ],
+              "contra_by_premise": [
+                0.00068
+              ],
+              "entail": 0.9903294372155133,
+              "contra": 0.0006767821042641413,
+              "ms": 401.12
+            },
+            {
+              "claim": "The softmax does not end up with tiny gradients.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00115
+              ],
+              "contra_by_premise": [
+                0.99308
+              ],
+              "entail": 0.001145235897901588,
+              "contra": 0.9930778992095858,
+              "ms": 385.54
+            }
+          ],
+          "ms_whole": 411.98,
+          "ms_atomic": 1198.64
+        },
+        {
+          "pair_id": "s10",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "The ratio loss reaches its minimum of 1 when the selected fraction and the average boundary probability both equal 1/N.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00056
+              ],
+              "contra_by_premise": [
+                0.00045
+              ],
+              "entail": 0.0005610713507301933,
+              "contra": 0.0004450407191865665,
+              "ms": 579.69
+            }
+          ],
+          "ms_whole": 579.69,
+          "ms_atomic": 579.69
+        },
+        {
+          "pair_id": "u05",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The feed-forward network's inner layer is twice as wide as the model dimension.",
+              "flags": [],
+              "entail_by_premise": [
+                0.0004
+              ],
+              "contra_by_premise": [
+                0.00219
+              ],
+              "entail": 0.0003981780706036986,
+              "contra": 0.0021923201844127344,
+              "ms": 450.43
+            }
+          ],
+          "ms_whole": 450.43,
+          "ms_atomic": 450.43
+        },
+        {
+          "pair_id": "u06",
+          "split": "heldout",
+          "category": "technical_paraphrase",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "Dot products are multiplied by the square root of the key dimension so that the softmax produces larger gradients.",
+              "flags": [],
+              "entail_by_premise": [
+                0.96198
+              ],
+              "contra_by_premise": [
+                0.0025
+              ],
+              "entail": 0.9619843537772548,
+              "contra": 0.0024998698785770384,
+              "ms": 410.2
+            },
+            {
+              "claim": "Dot products are multiplied by the square root of the key dimension.",
+              "flags": [],
+              "entail_by_premise": [
+                0.9849
+              ],
+              "contra_by_premise": [
+                0.00067
+              ],
+              "entail": 0.9849022563442104,
+              "contra": 0.0006687776379959719,
+              "ms": 429.66
+            },
+            {
+              "claim": "The softmax produces larger gradients.",
+              "flags": [],
+              "entail_by_premise": [
+                0.04308
+              ],
+              "contra_by_premise": [
+                0.02194
+              ],
+              "entail": 0.0430801912594048,
+              "contra": 0.021942435535136973,
+              "ms": 386.98
+            }
+          ],
+          "ms_whole": 410.2,
+          "ms_atomic": 1226.84
+        },
+        {
+          "pair_id": "s11",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "The Transformer shares one weight matrix between its two embedding layers and the pre-softmax linear transformation.",
+              "flags": [],
+              "entail_by_premise": [
+                0.9893
+              ],
+              "contra_by_premise": [
+                0.00051
+              ],
+              "entail": 0.9892976830640099,
+              "contra": 0.0005108467063627595,
+              "ms": 333.67
+            }
+          ],
+          "ms_whole": 333.67,
+          "ms_atomic": 333.67
+        },
+        {
+          "pair_id": "s12",
+          "split": "heldout",
+          "category": "implicit_entity",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "H-Net places an RMSNorm at the end of each encoder, decoder and main network.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00218
+              ],
+              "contra_by_premise": [
+                0.00019
+              ],
+              "entail": 0.002175262028346622,
+              "contra": 0.00018667330492708097,
+              "ms": 545.7
+            }
+          ],
+          "ms_whole": 545.7,
+          "ms_atomic": 545.7
+        },
+        {
+          "pair_id": "s13",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "In Moshi, the first Mimi codebook carries semantic information and the other seven carry acoustic features.",
+              "flags": [
+                "number 7 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.99666
+              ],
+              "contra_by_premise": [
+                0.00023
+              ],
+              "entail": 0.9966554437212194,
+              "contra": 0.00022853157501249028,
+              "ms": 379.87
+            }
+          ],
+          "ms_whole": 379.87,
+          "ms_atomic": 379.87
+        },
+        {
+          "pair_id": "u07",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The 4-layer model with d_model = 1024 was trained for English-to-German translation.",
+              "flags": [],
+              "entail_by_premise": [
+                0.05623
+              ],
+              "contra_by_premise": [
+                0.93098
+              ],
+              "entail": 0.05622514555815837,
+              "contra": 0.9309792239562411,
+              "ms": 541.39
+            }
+          ],
+          "ms_whole": 541.39,
+          "ms_atomic": 541.39
+        },
+        {
+          "pair_id": "u08",
+          "split": "heldout",
+          "category": "implicit_entity",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "In the DNA experiments, all four models were H-Nets with different main networks.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00176
+              ],
+              "contra_by_premise": [
+                0.00221
+              ],
+              "entail": 0.0017584255307784749,
+              "contra": 0.0022098977568816504,
+              "ms": 560.24
+            }
+          ],
+          "ms_whole": 560.24,
+          "ms_atomic": 560.24
+        },
+        {
+          "pair_id": "s14",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "The unsupervised audio dataset contains 7 million hours of audio.",
+              "flags": [],
+              "entail_by_premise": [
+                0.9744
+              ],
+              "contra_by_premise": [
+                0.01146
+              ],
+              "entail": 0.9744015114258541,
+              "contra": 0.011459027323962201,
+              "ms": 587.49
+            }
+          ],
+          "ms_whole": 587.49,
+          "ms_atomic": 587.49
+        },
+        {
+          "pair_id": "s15",
+          "split": "heldout",
+          "category": "numerical",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "The DNA models were trained on HG38 with a learning rate of 5\u00b710^-3 for base-pair modules and a d_model of 512.",
+              "flags": [],
+              "entail_by_premise": [
+                0.81315
+              ],
+              "contra_by_premise": [
+                0.00014
+              ],
+              "entail": 0.8131543313668057,
+              "contra": 0.00013514731415279542,
+              "ms": 576.52
+            }
+          ],
+          "ms_whole": 576.52,
+          "ms_atomic": 576.52
+        },
+        {
+          "pair_id": "u09",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The supervised multi-stream dataset contains 1,700 hours of conversations.",
+              "flags": [
+                "number 1700 hours not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00015
+              ],
+              "contra_by_premise": [
+                0.99844
+              ],
+              "entail": 0.00014975004078008852,
+              "contra": 0.9984432107945513,
+              "ms": 383.5
+            }
+          ],
+          "ms_whole": 383.5,
+          "ms_atomic": 383.5
+        },
+        {
+          "pair_id": "u10",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The parsing model was trained on about 40K WSJ sentences, and it used d_model = 512.",
+              "flags": [
+                "number 512 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00083
+              ],
+              "contra_by_premise": [
+                0.99806
+              ],
+              "entail": 0.0008307493631395451,
+              "contra": 0.9980555899822225,
+              "ms": 555.37
+            },
+            {
+              "claim": "The parsing model was trained on about 40K WSJ sentences.",
+              "flags": [],
+              "entail_by_premise": [
+                0.81512
+              ],
+              "contra_by_premise": [
+                0.12179
+              ],
+              "entail": 0.8151178525028183,
+              "contra": 0.12178609972777507,
+              "ms": 529.85
+            },
+            {
+              "claim": "It used d_model = 512.",
+              "flags": [
+                "number 512 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00012
+              ],
+              "contra_by_premise": [
+                0.99926
+              ],
+              "entail": 0.00012290008357540943,
+              "contra": 0.9992588781539833,
+              "ms": 535.55
+            }
+          ],
+          "ms_whole": 555.37,
+          "ms_atomic": 1620.77
+        },
+        {
+          "pair_id": "u11",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "Quantizing Helium to 4 bits gives a 4.3 times smaller model.",
+              "flags": [
+                "number 4.3 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00704
+              ],
+              "contra_by_premise": [
+                0.44161
+              ],
+              "entail": 0.007041698483481417,
+              "contra": 0.4416116156085632,
+              "ms": 613.08
+            }
+          ],
+          "ms_whole": 613.08,
+          "ms_atomic": 613.08
+        },
+        {
+          "pair_id": "u12",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The hybrid main network has 7 Mamba-2 layers and 20 Transformer layers.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00096
+              ],
+              "contra_by_premise": [
+                0.9965
+              ],
+              "entail": 0.0009634030669374645,
+              "contra": 0.9965024464509431,
+              "ms": 324.49
+            }
+          ],
+          "ms_whole": 324.49,
+          "ms_atomic": 324.49
+        },
+        {
+          "pair_id": "s16",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Helium is more robust to quantization than the final Moshi model.",
+              "flags": [],
+              "entail_by_premise": [
+                0.64696
+              ],
+              "contra_by_premise": [
+                0.00341
+              ],
+              "entail": 0.6469629730334767,
+              "contra": 0.00340892142429248,
+              "ms": 503.02
+            }
+          ],
+          "ms_whole": 503.02,
+          "ms_atomic": 503.02
+        },
+        {
+          "pair_id": "s17",
+          "split": "heldout",
+          "category": "attribution",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "For both H-Net and SpaceByte++, the pure Transformer encoder-decoder configuration performs worst.",
+              "flags": [
+                "term 'encoder-decoder' not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00414
+              ],
+              "contra_by_premise": [
+                5e-05
+              ],
+              "entail": 0.004142579898343432,
+              "contra": 4.530531525990377e-05,
+              "ms": 430.51
+            }
+          ],
+          "ms_whole": 430.51,
+          "ms_atomic": 430.51
+        },
+        {
+          "pair_id": "u13",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The final Moshi model is more robust to quantization than Helium.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00086
+              ],
+              "contra_by_premise": [
+                0.99798
+              ],
+              "entail": 0.0008602697281293407,
+              "contra": 0.9979820699731553,
+              "ms": 502.97
+            }
+          ],
+          "ms_whole": 502.97,
+          "ms_atomic": 502.97
+        },
+        {
+          "pair_id": "u14",
+          "split": "heldout",
+          "category": "attribution",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "For both H-Net and SpaceByte++, the pure Mamba encoder-decoder configuration performs worst.",
+              "flags": [
+                "term 'encoder-decoder' not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00141
+              ],
+              "contra_by_premise": [
+                0.99182
+              ],
+              "entail": 0.0014124480992860412,
+              "contra": 0.9918236847452576,
+              "ms": 515.72
+            }
+          ],
+          "ms_whole": 515.72,
+          "ms_atomic": 515.72
+        },
+        {
+          "pair_id": "u15",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The Transformer outperforms the Recurrent Neural Network Grammar on English constituency parsing.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99619
+              ],
+              "contra_by_premise": [
+                0.0004
+              ],
+              "entail": 0.9961936656127075,
+              "contra": 0.0003955725609482714,
+              "ms": 286.21
+            }
+          ],
+          "ms_whole": 286.21,
+          "ms_atomic": 286.21
+        },
+        {
+          "pair_id": "s18",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "A delay of 1 or 2 steps between semantic and acoustic features greatly improves generation quality.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99571
+              ],
+              "contra_by_premise": [
+                6e-05
+              ],
+              "entail": 0.9957103817115871,
+              "contra": 5.843302544542041e-05,
+              "ms": 547.59
+            }
+          ],
+          "ms_whole": 547.59,
+          "ms_atomic": 547.59
+        },
+        {
+          "pair_id": "s19",
+          "split": "heldout",
+          "category": "experimental_added",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Sparsity improves LlamaByte, but it remains far worse than FLOPs-matched H-Net.",
+              "flags": [],
+              "entail_by_premise": [
+                0.98689
+              ],
+              "contra_by_premise": [
+                4e-05
+              ],
+              "entail": 0.986892343211314,
+              "contra": 3.520102704048802e-05,
+              "ms": 511.48
+            },
+            {
+              "claim": "Sparsity improves LlamaByte.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00294
+              ],
+              "contra_by_premise": [
+                0.04041
+              ],
+              "entail": 0.0029421813430667754,
+              "contra": 0.04041427964169394,
+              "ms": 481.19
+            },
+            {
+              "claim": "It remains far worse than FLOPs-matched H-Net.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99495
+              ],
+              "contra_by_premise": [
+                8e-05
+              ],
+              "entail": 0.9949465852200915,
+              "contra": 7.80825875742984e-05,
+              "ms": 547.2
+            }
+          ],
+          "ms_whole": 511.48,
+          "ms_atomic": 1539.87
+        },
+        {
+          "pair_id": "s20",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Without task-specific tuning, the Transformer still beats the BerkeleyParser when trained only on the 40K WSJ sentences.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99753
+              ],
+              "contra_by_premise": [
+                7e-05
+              ],
+              "entail": 0.9975283869742189,
+              "contra": 6.990665359543299e-05,
+              "ms": 283.48
+            }
+          ],
+          "ms_whole": 283.48,
+          "ms_atomic": 283.48
+        },
+        {
+          "pair_id": "u16",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "A delay between semantic and acoustic features improves generation because it lets the Depth Transformer model their inter-dependence.",
+              "flags": [],
+              "entail_by_premise": [
+                0.95058
+              ],
+              "contra_by_premise": [
+                6e-05
+              ],
+              "entail": 0.9505751860491121,
+              "contra": 5.7766591530444665e-05,
+              "ms": 553.25
+            },
+            {
+              "claim": "A delay between semantic and acoustic features improves generation.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99216
+              ],
+              "contra_by_premise": [
+                7e-05
+              ],
+              "entail": 0.9921589063326476,
+              "contra": 7.131930209985788e-05,
+              "ms": 539.01
+            },
+            {
+              "claim": "It lets the Depth Transformer model their inter-dependence.",
+              "flags": [],
+              "entail_by_premise": [
+                0.01186
+              ],
+              "contra_by_premise": [
+                0.00131
+              ],
+              "entail": 0.011857000636576557,
+              "contra": 0.0013090781451671081,
+              "ms": 552.39
+            }
+          ],
+          "ms_whole": 553.25,
+          "ms_atomic": 1644.65
+        },
+        {
+          "pair_id": "u17",
+          "split": "heldout",
+          "category": "experimental_added",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The smoothing module is essential for stable training, and removing it also doubles the training time.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00014
+              ],
+              "contra_by_premise": [
+                0.00014
+              ],
+              "entail": 0.0001356416085484632,
+              "contra": 0.00013962425845995028,
+              "ms": 397.45
+            },
+            {
+              "claim": "The smoothing module is essential for stable training.",
+              "flags": [],
+              "entail_by_premise": [
+                0.97577
+              ],
+              "contra_by_premise": [
+                3e-05
+              ],
+              "entail": 0.9757665145203892,
+              "contra": 3.221723172250173e-05,
+              "ms": 382.44
+            },
+            {
+              "claim": "Removing it also doubles the training time.",
+              "flags": [],
+              "entail_by_premise": [
+                5e-05
+              ],
+              "contra_by_premise": [
+                0.00041
+              ],
+              "entail": 5.4128008216093686e-05,
+              "contra": 0.00041175895408093234,
+              "ms": 387.16
+            }
+          ],
+          "ms_whole": 397.45,
+          "ms_atomic": 1167.05
+        },
+        {
+          "pair_id": "u18",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "Label smoothing improves BLEU because it makes the model more confident in its predictions.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00058
+              ],
+              "contra_by_premise": [
+                0.002
+              ],
+              "entail": 0.0005799196176722058,
+              "contra": 0.0019967536157553785,
+              "ms": 363.01
+            },
+            {
+              "claim": "Label smoothing improves BLEU.",
+              "flags": [],
+              "entail_by_premise": [
+                0.01918
+              ],
+              "contra_by_premise": [
+                0.00019
+              ],
+              "entail": 0.01917599841225027,
+              "contra": 0.00019381436486388536,
+              "ms": 341.23
+            },
+            {
+              "claim": "It makes the model more confident in its predictions.",
+              "flags": [],
+              "entail_by_premise": [
+                0.0004
+              ],
+              "contra_by_premise": [
+                0.04468
+              ],
+              "entail": 0.0003956858683781501,
+              "contra": 0.04467850826004104,
+              "ms": 384.52
+            }
+          ],
+          "ms_whole": 363.01,
+          "ms_atomic": 1088.76
+        },
+        {
+          "pair_id": "u19",
+          "split": "heldout",
+          "category": "experimental_added",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "Mamba layers suit the encoder and decoder because they store complete key-value caches for all positions.",
+              "flags": [],
+              "entail_by_premise": [
+                0.01098
+              ],
+              "contra_by_premise": [
+                0.95863
+              ],
+              "entail": 0.010975424610436869,
+              "contra": 0.9586338396819942,
+              "ms": 481.26
+            },
+            {
+              "claim": "Mamba layers suit the encoder and decoder.",
+              "flags": [],
+              "entail_by_premise": [
+                0.9855
+              ],
+              "contra_by_premise": [
+                3e-05
+              ],
+              "entail": 0.9855049959027631,
+              "contra": 3.016097688417e-05,
+              "ms": 452.28
+            },
+            {
+              "claim": "They store complete key-value caches for all positions.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00287
+              ],
+              "contra_by_premise": [
+                0.99072
+              ],
+              "entail": 0.0028668989238744003,
+              "contra": 0.9907223573244981,
+              "ms": 472.7
+            }
+          ],
+          "ms_whole": 481.26,
+          "ms_atomic": 1406.24
+        },
+        {
+          "pair_id": "u20",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The unsupervised audio is transcribed with Whisper large-v3, and the transcripts were checked by human annotators.",
+              "flags": [],
+              "entail_by_premise": [
+                6e-05
+              ],
+              "contra_by_premise": [
+                0.01023
+              ],
+              "entail": 6.347008299555605e-05,
+              "contra": 0.01022640722522201,
+              "ms": 547.93
+            },
+            {
+              "claim": "The unsupervised audio is transcribed with Whisper large-v3.",
+              "flags": [],
+              "entail_by_premise": [
+                0.0004
+              ],
+              "contra_by_premise": [
+                0.06195
+              ],
+              "entail": 0.00039749647411661403,
+              "contra": 0.06195299630732879,
+              "ms": 519.99
+            },
+            {
+              "claim": "The transcripts were checked by human annotators.",
+              "flags": [],
+              "entail_by_premise": [
+                4e-05
+              ],
+              "contra_by_premise": [
+                0.02422
+              ],
+              "entail": 4.282037461471234e-05,
+              "contra": 0.024218061888038985,
+              "ms": 514.05
+            }
+          ],
+          "ms_whole": 547.93,
+          "ms_atomic": 1581.97
+        }
+      ]
+    },
+    "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli": {
+      "evaluation": {
+        "P1-whole": {
+          "params": {
+            "t": 0.9
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 1,
+            "false_rejections": 3,
+            "false_acceptance_rate_pct": 7.7,
+            "false_rejection_rate_pct": 25.0,
+            "accuracy_pct": 84.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 4,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 3,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 1,
+            "false_rejections": 2,
+            "false_acceptance_rate_pct": 14.3,
+            "false_rejection_rate_pct": 25.0,
+            "accuracy_pct": 80.0,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 0,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "calibration_decisions": {
+            "s01": false,
+            "s03": true,
+            "u01": false,
+            "s04": true,
+            "s06": true,
+            "u03": false,
+            "s08": true,
+            "s10": false,
+            "u05": false,
+            "s11": true,
+            "s13": false,
+            "u07": false,
+            "s14": true,
+            "u09": false,
+            "u10": false,
+            "u11": false,
+            "u12": false,
+            "s16": true,
+            "u13": false,
+            "u15": false,
+            "s18": true,
+            "s20": true,
+            "u16": true,
+            "u18": false,
+            "u20": false
+          },
+          "heldout_decisions": {
+            "s02": false,
+            "u02": false,
+            "s05": true,
+            "s07": true,
+            "u04": false,
+            "s09": true,
+            "u06": false,
+            "s12": false,
+            "u08": true,
+            "s15": true,
+            "s17": true,
+            "u14": false,
+            "s19": true,
+            "u17": false,
+            "u19": false
+          }
+        },
+        "P2-whole": {
+          "params": {
+            "tc": 0.01,
+            "tf": 0.99
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 2,
+            "false_rejections": 5,
+            "false_acceptance_rate_pct": 15.4,
+            "false_rejection_rate_pct": 41.7,
+            "accuracy_pct": 72.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 2,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 4,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 2,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 3,
+                "false_acceptances": 2
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 1,
+            "false_rejections": 5,
+            "false_acceptance_rate_pct": 14.3,
+            "false_rejection_rate_pct": 62.5,
+            "accuracy_pct": 60.0,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 0,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "calibration_decisions": {
+            "s01": false,
+            "s03": true,
+            "u01": false,
+            "s04": true,
+            "s06": true,
+            "u03": false,
+            "s08": false,
+            "s10": false,
+            "u05": false,
+            "s11": true,
+            "s13": false,
+            "u07": false,
+            "s14": true,
+            "u09": false,
+            "u10": false,
+            "u11": false,
+            "u12": false,
+            "s16": false,
+            "u13": false,
+            "u15": false,
+            "s18": true,
+            "s20": true,
+            "u16": true,
+            "u18": false,
+            "u20": true
+          },
+          "heldout_decisions": {
+            "s02": false,
+            "u02": false,
+            "s05": true,
+            "s07": true,
+            "u04": false,
+            "s09": false,
+            "u06": false,
+            "s12": false,
+            "u08": false,
+            "s15": false,
+            "s17": false,
+            "u14": false,
+            "s19": true,
+            "u17": true,
+            "u19": false
+          }
+        },
+        "P1-atomic": {
+          "params": {
+            "t": 0.9
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 0,
+            "false_rejections": 3,
+            "false_acceptance_rate_pct": 0.0,
+            "false_rejection_rate_pct": 25.0,
+            "accuracy_pct": 88.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 4,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 2,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 3,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 1,
+            "false_rejections": 4,
+            "false_acceptance_rate_pct": 14.3,
+            "false_rejection_rate_pct": 50.0,
+            "accuracy_pct": 66.7,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 0,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 2,
+                "false_acceptances": 0
+              }
+            }
+          },
+          "calibration_decisions": {
+            "s01": false,
+            "s03": true,
+            "u01": false,
+            "s04": true,
+            "s06": true,
+            "u03": false,
+            "s08": true,
+            "s10": false,
+            "u05": false,
+            "s11": true,
+            "s13": false,
+            "u07": false,
+            "s14": true,
+            "u09": false,
+            "u10": false,
+            "u11": false,
+            "u12": false,
+            "s16": true,
+            "u13": false,
+            "u15": false,
+            "s18": true,
+            "s20": true,
+            "u16": false,
+            "u18": false,
+            "u20": false
+          },
+          "heldout_decisions": {
+            "s02": false,
+            "u02": false,
+            "s05": true,
+            "s07": true,
+            "u04": false,
+            "s09": false,
+            "u06": false,
+            "s12": false,
+            "u08": true,
+            "s15": true,
+            "s17": true,
+            "u14": false,
+            "s19": false,
+            "u17": false,
+            "u19": false
+          }
+        },
+        "P2-atomic": {
+          "params": {
+            "tc": 0.05,
+            "tf": 0.65
+          },
+          "calibration": {
+            "n": 25,
+            "false_acceptances": 1,
+            "false_rejections": 4,
+            "false_acceptance_rate_pct": 7.7,
+            "false_rejection_rate_pct": 33.3,
+            "accuracy_pct": 80.0,
+            "by_category": {
+              "exact": {
+                "supported": 2,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 2,
+                "false_rejections": 2,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 4,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 2,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 3,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "heldout": {
+            "n": 15,
+            "false_acceptances": 2,
+            "false_rejections": 4,
+            "false_acceptance_rate_pct": 28.6,
+            "false_rejection_rate_pct": 50.0,
+            "accuracy_pct": 60.0,
+            "by_category": {
+              "exact": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "semantic_paraphrase": {
+                "supported": 2,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "technical_paraphrase": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "implicit_entity": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 1,
+                "false_acceptances": 1
+              },
+              "numerical": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 0,
+                "false_acceptances": 0
+              },
+              "attribution": {
+                "supported": 1,
+                "false_rejections": 0,
+                "unsupported": 1,
+                "false_acceptances": 0
+              },
+              "experimental_added": {
+                "supported": 1,
+                "false_rejections": 1,
+                "unsupported": 2,
+                "false_acceptances": 1
+              }
+            }
+          },
+          "calibration_decisions": {
+            "s01": false,
+            "s03": true,
+            "u01": false,
+            "s04": true,
+            "s06": true,
+            "u03": false,
+            "s08": false,
+            "s10": false,
+            "u05": false,
+            "s11": true,
+            "s13": true,
+            "u07": false,
+            "s14": true,
+            "u09": false,
+            "u10": false,
+            "u11": false,
+            "u12": false,
+            "s16": false,
+            "u13": false,
+            "u15": false,
+            "s18": true,
+            "s20": true,
+            "u16": true,
+            "u18": false,
+            "u20": false
+          },
+          "heldout_decisions": {
+            "s02": false,
+            "u02": false,
+            "s05": true,
+            "s07": true,
+            "u04": false,
+            "s09": false,
+            "u06": false,
+            "s12": false,
+            "u08": true,
+            "s15": true,
+            "s17": true,
+            "u14": false,
+            "s19": false,
+            "u17": true,
+            "u19": false
+          }
+        },
+        "latency_ms_per_sentence_whole": {
+          "mean": 457.2,
+          "p50": 449.1,
+          "p95": 576.4
+        },
+        "latency_ms_per_answer_est_whole": {
+          "mean": 1828.8,
+          "p50": 1796.4,
+          "p95": 2305.6
+        },
+        "latency_ms_per_sentence_atomic": {
+          "mean": 684.7,
+          "p50": 516.5,
+          "p95": 1617.0
+        },
+        "latency_ms_per_answer_est_atomic": {
+          "mean": 2738.8,
+          "p50": 2066.0,
+          "p95": 6468.0
+        }
+      },
+      "rows": [
+        {
+          "pair_id": "s01",
+          "split": "calibration",
+          "category": "exact",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "We used the Adam optimizer with \u03b2_1=0.9 and \u03b2_2=0.98.",
+              "flags": [],
+              "entail_by_premise": [
+                0.2078
+              ],
+              "contra_by_premise": [
+                0.0695
+              ],
+              "entail": 0.20780028705166745,
+              "contra": 0.06949548741060381,
+              "ms": 437.96
+            }
+          ],
+          "ms_whole": 437.96,
+          "ms_atomic": 437.96
+        },
+        {
+          "pair_id": "s02",
+          "split": "heldout",
+          "category": "exact",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "All the audio is resampled to 24kHz and downmixed to mono.",
+              "flags": [],
+              "entail_by_premise": [
+                0.5628
+              ],
+              "contra_by_premise": [
+                0.19596
+              ],
+              "entail": 0.5628019807506939,
+              "contra": 0.19595762805156483,
+              "ms": 522.88
+            }
+          ],
+          "ms_whole": 522.88,
+          "ms_atomic": 522.88
+        },
+        {
+          "pair_id": "s03",
+          "split": "calibration",
+          "category": "exact",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "For ablation studies, H-Net at Large scale is trained on 36B tokens randomly sampled from FineWeb-Edu.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99628
+              ],
+              "contra_by_premise": [
+                0.00131
+              ],
+              "entail": 0.996280094423376,
+              "contra": 0.0013141164417672273,
+              "ms": 469.67
+            }
+          ],
+          "ms_whole": 469.67,
+          "ms_atomic": 469.67
+        },
+        {
+          "pair_id": "u01",
+          "split": "calibration",
+          "category": "exact",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "We used the Adam optimizer with \u03b2_1=0.9 and \u03b2_2=0.999.",
+              "flags": [
+                "number 0.999 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.03746
+              ],
+              "contra_by_premise": [
+                0.89473
+              ],
+              "entail": 0.03746200937620687,
+              "contra": 0.894732334188378,
+              "ms": 396.7
+            }
+          ],
+          "ms_whole": 396.7,
+          "ms_atomic": 396.7
+        },
+        {
+          "pair_id": "u02",
+          "split": "heldout",
+          "category": "exact",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "All the audio is resampled to 16kHz and downmixed to mono.",
+              "flags": [
+                "number 16 khz not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00021
+              ],
+              "contra_by_premise": [
+                0.9993
+              ],
+              "entail": 0.00020785208406400474,
+              "contra": 0.999299854401272,
+              "ms": 536.09
+            }
+          ],
+          "ms_whole": 536.09,
+          "ms_atomic": 536.09
+        },
+        {
+          "pair_id": "s04",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Label smoothing makes the model less certain, which worsens perplexity but raises BLEU.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99074
+              ],
+              "contra_by_premise": [
+                0.00223
+              ],
+              "entail": 0.9907393929981728,
+              "contra": 0.0022335061470438603,
+              "ms": 367.46
+            },
+            {
+              "claim": "Label smoothing makes the model less certain.",
+              "flags": [],
+              "entail_by_premise": [
+                0.95313
+              ],
+              "contra_by_premise": [
+                0.03079
+              ],
+              "entail": 0.9531324040846336,
+              "contra": 0.03079495627250168,
+              "ms": 357.44
+            },
+            {
+              "claim": "This worsens perplexity but raises BLEU.",
+              "flags": [],
+              "entail_by_premise": [
+                0.97785
+              ],
+              "contra_by_premise": [
+                0.01078
+              ],
+              "entail": 0.9778474480712029,
+              "contra": 0.010776574581126602,
+              "ms": 346.1
+            }
+          ],
+          "ms_whole": 367.46,
+          "ms_atomic": 1071.0
+        },
+        {
+          "pair_id": "s05",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Compressing and decompressing audio with Mimi wipes out the signal-based watermark.",
+              "flags": [],
+              "entail_by_premise": [
+                0.9457
+              ],
+              "contra_by_premise": [
+                0.00448
+              ],
+              "entail": 0.9456994968549509,
+              "contra": 0.004484971536899962,
+              "ms": 373.33
+            }
+          ],
+          "ms_whole": 373.33,
+          "ms_atomic": 373.33
+        },
+        {
+          "pair_id": "s06",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Removing the smoothing module makes the compression ratio swing wildly during training.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99791
+              ],
+              "contra_by_premise": [
+                0.00057
+              ],
+              "entail": 0.9979069283833751,
+              "contra": 0.0005721689870475332,
+              "ms": 392.27
+            }
+          ],
+          "ms_whole": 392.27,
+          "ms_atomic": 392.27
+        },
+        {
+          "pair_id": "s07",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Moshi's language abilities suffer more from quantization than the quality of its audio.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99672
+              ],
+              "contra_by_premise": [
+                0.00229
+              ],
+              "entail": 0.9967164439820979,
+              "contra": 0.0022907560333393436,
+              "ms": 413.64
+            }
+          ],
+          "ms_whole": 413.64,
+          "ms_atomic": 413.64
+        },
+        {
+          "pair_id": "u03",
+          "split": "calibration",
+          "category": "semantic_paraphrase",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "Moshi's audio quality suffers more from quantization than its language abilities.",
+              "flags": [],
+              "entail_by_premise": [
+                0.26679
+              ],
+              "contra_by_premise": [
+                0.72855
+              ],
+              "entail": 0.26679308416265374,
+              "contra": 0.7285467119088519,
+              "ms": 425.85
+            }
+          ],
+          "ms_whole": 425.85,
+          "ms_atomic": 425.85
+        },
+        {
+          "pair_id": "u04",
+          "split": "heldout",
+          "category": "semantic_paraphrase",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The signal-based watermark survives compression with the Mimi codec.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00118
+              ],
+              "contra_by_premise": [
+                0.99745
+              ],
+              "entail": 0.0011764475311541553,
+              "contra": 0.9974481285792224,
+              "ms": 381.43
+            }
+          ],
+          "ms_whole": 381.43,
+          "ms_atomic": 381.43
+        },
+        {
+          "pair_id": "s08",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "The feed-forward network's inner layer is four times wider than the model dimension.",
+              "flags": [
+                "number 4 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.90022
+              ],
+              "contra_by_premise": [
+                0.08114
+              ],
+              "entail": 0.9002172242073386,
+              "contra": 0.08114143074290332,
+              "ms": 480.33
+            }
+          ],
+          "ms_whole": 480.33,
+          "ms_atomic": 480.33
+        },
+        {
+          "pair_id": "s09",
+          "split": "heldout",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Dot products are divided by the square root of the key dimension so that the softmax does not end up with tiny gradients.",
+              "flags": [],
+              "entail_by_premise": [
+                0.97332
+              ],
+              "contra_by_premise": [
+                0.01527
+              ],
+              "entail": 0.9733226144931292,
+              "contra": 0.015271161806147859,
+              "ms": 423.12
+            },
+            {
+              "claim": "Dot products are divided by the square root of the key dimension.",
+              "flags": [],
+              "entail_by_premise": [
+                0.87068
+              ],
+              "contra_by_premise": [
+                0.07862
+              ],
+              "entail": 0.8706825785398088,
+              "contra": 0.0786243733106798,
+              "ms": 404.84
+            },
+            {
+              "claim": "The softmax does not end up with tiny gradients.",
+              "flags": [],
+              "entail_by_premise": [
+                0.01198
+              ],
+              "contra_by_premise": [
+                0.97864
+              ],
+              "entail": 0.011975311474367594,
+              "contra": 0.9786393360626966,
+              "ms": 396.96
+            }
+          ],
+          "ms_whole": 423.12,
+          "ms_atomic": 1224.92
+        },
+        {
+          "pair_id": "s10",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "The ratio loss reaches its minimum of 1 when the selected fraction and the average boundary probability both equal 1/N.",
+              "flags": [],
+              "entail_by_premise": [
+                0.86973
+              ],
+              "contra_by_premise": [
+                0.11737
+              ],
+              "entail": 0.8697321239034072,
+              "contra": 0.11736680952489444,
+              "ms": 566.35
+            }
+          ],
+          "ms_whole": 566.35,
+          "ms_atomic": 566.35
+        },
+        {
+          "pair_id": "u05",
+          "split": "calibration",
+          "category": "technical_paraphrase",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The feed-forward network's inner layer is twice as wide as the model dimension.",
+              "flags": [],
+              "entail_by_premise": [
+                0.75605
+              ],
+              "contra_by_premise": [
+                0.14121
+              ],
+              "entail": 0.7560500144882001,
+              "contra": 0.14120931695785244,
+              "ms": 397.14
+            }
+          ],
+          "ms_whole": 397.14,
+          "ms_atomic": 397.14
+        },
+        {
+          "pair_id": "u06",
+          "split": "heldout",
+          "category": "technical_paraphrase",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "Dot products are multiplied by the square root of the key dimension so that the softmax produces larger gradients.",
+              "flags": [],
+              "entail_by_premise": [
+                0.59475
+              ],
+              "contra_by_premise": [
+                0.32585
+              ],
+              "entail": 0.5947526853343885,
+              "contra": 0.3258465023917978,
+              "ms": 412.7
+            },
+            {
+              "claim": "Dot products are multiplied by the square root of the key dimension.",
+              "flags": [],
+              "entail_by_premise": [
+                0.83521
+              ],
+              "contra_by_premise": [
+                0.10922
+              ],
+              "entail": 0.835208208074107,
+              "contra": 0.10921528145671679,
+              "ms": 397.77
+            },
+            {
+              "claim": "The softmax produces larger gradients.",
+              "flags": [],
+              "entail_by_premise": [
+                0.01095
+              ],
+              "contra_by_premise": [
+                0.94211
+              ],
+              "entail": 0.010947024805327782,
+              "contra": 0.9421137757419531,
+              "ms": 396.1
+            }
+          ],
+          "ms_whole": 412.7,
+          "ms_atomic": 1206.57
+        },
+        {
+          "pair_id": "s11",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "The Transformer shares one weight matrix between its two embedding layers and the pre-softmax linear transformation.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99017
+              ],
+              "contra_by_premise": [
+                0.00191
+              ],
+              "entail": 0.990171037210266,
+              "contra": 0.0019089416648683352,
+              "ms": 344.83
+            }
+          ],
+          "ms_whole": 344.83,
+          "ms_atomic": 344.83
+        },
+        {
+          "pair_id": "s12",
+          "split": "heldout",
+          "category": "implicit_entity",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "H-Net places an RMSNorm at the end of each encoder, decoder and main network.",
+              "flags": [],
+              "entail_by_premise": [
+                0.7799
+              ],
+              "contra_by_premise": [
+                0.10028
+              ],
+              "entail": 0.7798990149558845,
+              "contra": 0.10028094294231069,
+              "ms": 536.56
+            }
+          ],
+          "ms_whole": 536.56,
+          "ms_atomic": 536.56
+        },
+        {
+          "pair_id": "s13",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "In Moshi, the first Mimi codebook carries semantic information and the other seven carry acoustic features.",
+              "flags": [
+                "number 7 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.69659
+              ],
+              "contra_by_premise": [
+                0.03182
+              ],
+              "entail": 0.6965910178707807,
+              "contra": 0.03182390732011774,
+              "ms": 383.24
+            }
+          ],
+          "ms_whole": 383.24,
+          "ms_atomic": 383.24
+        },
+        {
+          "pair_id": "u07",
+          "split": "calibration",
+          "category": "implicit_entity",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The 4-layer model with d_model = 1024 was trained for English-to-German translation.",
+              "flags": [],
+              "entail_by_premise": [
+                0.89505
+              ],
+              "contra_by_premise": [
+                0.06597
+              ],
+              "entail": 0.8950514650119699,
+              "contra": 0.06596530723577514,
+              "ms": 547.37
+            }
+          ],
+          "ms_whole": 547.37,
+          "ms_atomic": 547.37
+        },
+        {
+          "pair_id": "u08",
+          "split": "heldout",
+          "category": "implicit_entity",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "In the DNA experiments, all four models were H-Nets with different main networks.",
+              "flags": [],
+              "entail_by_premise": [
+                0.96104
+              ],
+              "contra_by_premise": [
+                0.0304
+              ],
+              "entail": 0.9610436215842006,
+              "contra": 0.03039898623644537,
+              "ms": 574.95
+            }
+          ],
+          "ms_whole": 574.95,
+          "ms_atomic": 574.95
+        },
+        {
+          "pair_id": "s14",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "The unsupervised audio dataset contains 7 million hours of audio.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99928
+              ],
+              "contra_by_premise": [
+                0.00035
+              ],
+              "entail": 0.9992807549664982,
+              "contra": 0.00035369408519984934,
+              "ms": 500.45
+            }
+          ],
+          "ms_whole": 500.45,
+          "ms_atomic": 500.45
+        },
+        {
+          "pair_id": "s15",
+          "split": "heldout",
+          "category": "numerical",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "The DNA models were trained on HG38 with a learning rate of 5\u00b710^-3 for base-pair modules and a d_model of 512.",
+              "flags": [],
+              "entail_by_premise": [
+                0.95979
+              ],
+              "contra_by_premise": [
+                0.02641
+              ],
+              "entail": 0.9597909152555792,
+              "contra": 0.026411296673515158,
+              "ms": 584.39
+            }
+          ],
+          "ms_whole": 584.39,
+          "ms_atomic": 584.39
+        },
+        {
+          "pair_id": "u09",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The supervised multi-stream dataset contains 1,700 hours of conversations.",
+              "flags": [
+                "number 1700 hours not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00094
+              ],
+              "contra_by_premise": [
+                0.99754
+              ],
+              "entail": 0.0009398235124166614,
+              "contra": 0.9975372132793012,
+              "ms": 390.16
+            }
+          ],
+          "ms_whole": 390.16,
+          "ms_atomic": 390.16
+        },
+        {
+          "pair_id": "u10",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The parsing model was trained on about 40K WSJ sentences, and it used d_model = 512.",
+              "flags": [
+                "number 512 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.0736
+              ],
+              "contra_by_premise": [
+                0.92357
+              ],
+              "entail": 0.0735968875148713,
+              "contra": 0.9235691501765564,
+              "ms": 550.85
+            },
+            {
+              "claim": "The parsing model was trained on about 40K WSJ sentences.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99368
+              ],
+              "contra_by_premise": [
+                0.00411
+              ],
+              "entail": 0.9936796955879887,
+              "contra": 0.004108219249809277,
+              "ms": 536.08
+            },
+            {
+              "claim": "It used d_model = 512.",
+              "flags": [
+                "number 512 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00575
+              ],
+              "contra_by_premise": [
+                0.99315
+              ],
+              "entail": 0.005748984051938117,
+              "contra": 0.9931471692370271,
+              "ms": 534.89
+            }
+          ],
+          "ms_whole": 550.85,
+          "ms_atomic": 1621.82
+        },
+        {
+          "pair_id": "u11",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "Quantizing Helium to 4 bits gives a 4.3 times smaller model.",
+              "flags": [
+                "number 4.3 not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.01858
+              ],
+              "contra_by_premise": [
+                0.97664
+              ],
+              "entail": 0.01858160853518068,
+              "contra": 0.9766417132318126,
+              "ms": 576.43
+            }
+          ],
+          "ms_whole": 576.43,
+          "ms_atomic": 576.43
+        },
+        {
+          "pair_id": "u12",
+          "split": "calibration",
+          "category": "numerical",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The hybrid main network has 7 Mamba-2 layers and 20 Transformer layers.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00291
+              ],
+              "contra_by_premise": [
+                0.99446
+              ],
+              "entail": 0.0029110072780495645,
+              "contra": 0.9944559152199183,
+              "ms": 342.61
+            }
+          ],
+          "ms_whole": 342.61,
+          "ms_atomic": 342.61
+        },
+        {
+          "pair_id": "s16",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Helium is more robust to quantization than the final Moshi model.",
+              "flags": [],
+              "entail_by_premise": [
+                0.91485
+              ],
+              "contra_by_premise": [
+                0.06714
+              ],
+              "entail": 0.9148489039977786,
+              "contra": 0.06714388055129482,
+              "ms": 517.77
+            }
+          ],
+          "ms_whole": 517.77,
+          "ms_atomic": 517.77
+        },
+        {
+          "pair_id": "s17",
+          "split": "heldout",
+          "category": "attribution",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "For both H-Net and SpaceByte++, the pure Transformer encoder-decoder configuration performs worst.",
+              "flags": [
+                "term 'encoder-decoder' not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.93482
+              ],
+              "contra_by_premise": [
+                0.02196
+              ],
+              "entail": 0.9348211648151512,
+              "contra": 0.021957416771997165,
+              "ms": 445.01
+            }
+          ],
+          "ms_whole": 445.01,
+          "ms_atomic": 445.01
+        },
+        {
+          "pair_id": "u13",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The final Moshi model is more robust to quantization than Helium.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00139
+              ],
+              "contra_by_premise": [
+                0.99745
+              ],
+              "entail": 0.0013941288455869235,
+              "contra": 0.9974492445806302,
+              "ms": 515.29
+            }
+          ],
+          "ms_whole": 515.29,
+          "ms_atomic": 515.29
+        },
+        {
+          "pair_id": "u14",
+          "split": "heldout",
+          "category": "attribution",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "For both H-Net and SpaceByte++, the pure Mamba encoder-decoder configuration performs worst.",
+              "flags": [
+                "term 'encoder-decoder' not in the cited passage"
+              ],
+              "entail_by_premise": [
+                0.00115
+              ],
+              "contra_by_premise": [
+                0.99627
+              ],
+              "entail": 0.0011529205597240015,
+              "contra": 0.9962676018516907,
+              "ms": 453.22
+            }
+          ],
+          "ms_whole": 453.22,
+          "ms_atomic": 453.22
+        },
+        {
+          "pair_id": "u15",
+          "split": "calibration",
+          "category": "attribution",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The Transformer outperforms the Recurrent Neural Network Grammar on English constituency parsing.",
+              "flags": [],
+              "entail_by_premise": [
+                0.83608
+              ],
+              "contra_by_premise": [
+                0.07106
+              ],
+              "entail": 0.8360819109544301,
+              "contra": 0.07105547828532253,
+              "ms": 292.83
+            }
+          ],
+          "ms_whole": 292.83,
+          "ms_atomic": 292.83
+        },
+        {
+          "pair_id": "s18",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "A delay of 1 or 2 steps between semantic and acoustic features greatly improves generation quality.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99433
+              ],
+              "contra_by_premise": [
+                0.00085
+              ],
+              "entail": 0.9943275319054651,
+              "contra": 0.000851253458095657,
+              "ms": 532.5
+            }
+          ],
+          "ms_whole": 532.5,
+          "ms_atomic": 532.5
+        },
+        {
+          "pair_id": "s19",
+          "split": "heldout",
+          "category": "experimental_added",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Sparsity improves LlamaByte, but it remains far worse than FLOPs-matched H-Net.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99788
+              ],
+              "contra_by_premise": [
+                0.0011
+              ],
+              "entail": 0.9978797968883928,
+              "contra": 0.0011041111244890153,
+              "ms": 486.02
+            },
+            {
+              "claim": "Sparsity improves LlamaByte.",
+              "flags": [],
+              "entail_by_premise": [
+                0.55485
+              ],
+              "contra_by_premise": [
+                0.43655
+              ],
+              "entail": 0.5548453875050778,
+              "contra": 0.43655377834632475,
+              "ms": 480.83
+            },
+            {
+              "claim": "It remains far worse than FLOPs-matched H-Net.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99563
+              ],
+              "contra_by_premise": [
+                0.00209
+              ],
+              "entail": 0.9956300600486567,
+              "contra": 0.002093840586652324,
+              "ms": 507.15
+            }
+          ],
+          "ms_whole": 486.02,
+          "ms_atomic": 1474.0
+        },
+        {
+          "pair_id": "s20",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": true,
+          "claims": [
+            {
+              "claim": "Without task-specific tuning, the Transformer still beats the BerkeleyParser when trained only on the 40K WSJ sentences.",
+              "flags": [],
+              "entail_by_premise": [
+                0.98794
+              ],
+              "contra_by_premise": [
+                0.0014
+              ],
+              "entail": 0.9879366590320952,
+              "contra": 0.0013983346538318916,
+              "ms": 298.53
+            }
+          ],
+          "ms_whole": 298.53,
+          "ms_atomic": 298.53
+        },
+        {
+          "pair_id": "u16",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "A delay between semantic and acoustic features improves generation because it lets the Depth Transformer model their inter-dependence.",
+              "flags": [],
+              "entail_by_premise": [
+                0.98892
+              ],
+              "contra_by_premise": [
+                0.00116
+              ],
+              "entail": 0.9889163017472752,
+              "contra": 0.0011564485451101988,
+              "ms": 539.58
+            },
+            {
+              "claim": "A delay between semantic and acoustic features improves generation.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99768
+              ],
+              "contra_by_premise": [
+                0.00048
+              ],
+              "entail": 0.9976786654382302,
+              "contra": 0.0004750824022843197,
+              "ms": 578.55
+            },
+            {
+              "claim": "It lets the Depth Transformer model their inter-dependence.",
+              "flags": [],
+              "entail_by_premise": [
+                0.29832
+              ],
+              "contra_by_premise": [
+                0.00481
+              ],
+              "entail": 0.29831812256813944,
+              "contra": 0.004812081965183878,
+              "ms": 665.77
+            }
+          ],
+          "ms_whole": 539.58,
+          "ms_atomic": 1783.9
+        },
+        {
+          "pair_id": "u17",
+          "split": "heldout",
+          "category": "experimental_added",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The smoothing module is essential for stable training, and removing it also doubles the training time.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00026
+              ],
+              "contra_by_premise": [
+                0.00091
+              ],
+              "entail": 0.00025650235471420314,
+              "contra": 0.0009105294329563824,
+              "ms": 420.95
+            },
+            {
+              "claim": "The smoothing module is essential for stable training.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99298
+              ],
+              "contra_by_premise": [
+                0.00313
+              ],
+              "entail": 0.9929758459743931,
+              "contra": 0.0031296827905610506,
+              "ms": 420.13
+            },
+            {
+              "claim": "Removing it also doubles the training time.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00014
+              ],
+              "contra_by_premise": [
+                0.00082
+              ],
+              "entail": 0.00014249381907592782,
+              "contra": 0.000822192370933431,
+              "ms": 376.82
+            }
+          ],
+          "ms_whole": 420.95,
+          "ms_atomic": 1217.9
+        },
+        {
+          "pair_id": "u18",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "Label smoothing improves BLEU because it makes the model more confident in its predictions.",
+              "flags": [],
+              "entail_by_premise": [
+                0.08807
+              ],
+              "contra_by_premise": [
+                0.01075
+              ],
+              "entail": 0.08807205161268711,
+              "contra": 0.010747882561877507,
+              "ms": 440.35
+            },
+            {
+              "claim": "Label smoothing improves BLEU.",
+              "flags": [],
+              "entail_by_premise": [
+                0.98007
+              ],
+              "contra_by_premise": [
+                0.00479
+              ],
+              "entail": 0.9800694438894471,
+              "contra": 0.0047917438849625574,
+              "ms": 386.9
+            },
+            {
+              "claim": "It makes the model more confident in its predictions.",
+              "flags": [],
+              "entail_by_premise": [
+                0.12512
+              ],
+              "contra_by_premise": [
+                0.06339
+              ],
+              "entail": 0.12512081959936813,
+              "contra": 0.06338907339354266,
+              "ms": 367.78
+            }
+          ],
+          "ms_whole": 440.35,
+          "ms_atomic": 1195.03
+        },
+        {
+          "pair_id": "u19",
+          "split": "heldout",
+          "category": "experimental_added",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "Mamba layers suit the encoder and decoder because they store complete key-value caches for all positions.",
+              "flags": [],
+              "entail_by_premise": [
+                0.01196
+              ],
+              "contra_by_premise": [
+                0.97994
+              ],
+              "entail": 0.011957101608791315,
+              "contra": 0.9799425610823697,
+              "ms": 491.06
+            },
+            {
+              "claim": "Mamba layers suit the encoder and decoder.",
+              "flags": [],
+              "entail_by_premise": [
+                0.99825
+              ],
+              "contra_by_premise": [
+                0.00048
+              ],
+              "entail": 0.9982495420890467,
+              "contra": 0.0004763696626549952,
+              "ms": 464.1
+            },
+            {
+              "claim": "They store complete key-value caches for all positions.",
+              "flags": [],
+              "entail_by_premise": [
+                0.1792
+              ],
+              "contra_by_premise": [
+                0.64968
+              ],
+              "entail": 0.17919899269174583,
+              "contra": 0.6496834305177687,
+              "ms": 481.15
+            }
+          ],
+          "ms_whole": 491.06,
+          "ms_atomic": 1436.31
+        },
+        {
+          "pair_id": "u20",
+          "split": "calibration",
+          "category": "experimental_added",
+          "supported": false,
+          "claims": [
+            {
+              "claim": "The unsupervised audio is transcribed with Whisper large-v3, and the transcripts were checked by human annotators.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00475
+              ],
+              "contra_by_premise": [
+                0.00362
+              ],
+              "entail": 0.004751038696167821,
+              "contra": 0.0036246931042642453,
+              "ms": 525.5
+            },
+            {
+              "claim": "The unsupervised audio is transcribed with Whisper large-v3.",
+              "flags": [],
+              "entail_by_premise": [
+                0.90955
+              ],
+              "contra_by_premise": [
+                0.0788
+              ],
+              "entail": 0.9095462911731877,
+              "contra": 0.07880035113319449,
+              "ms": 487.19
+            },
+            {
+              "claim": "The transcripts were checked by human annotators.",
+              "flags": [],
+              "entail_by_premise": [
+                0.00111
+              ],
+              "contra_by_premise": [
+                0.0015
+              ],
+              "entail": 0.001106853941909448,
+              "contra": 0.001497501180096187,
+              "ms": 512.3
+            }
+          ],
+          "ms_whole": 525.5,
+          "ms_atomic": 1524.99
+        }
+      ]
+    }
+  }
+}

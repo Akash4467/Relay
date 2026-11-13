@@ -10,8 +10,10 @@ import numpy as np
 
 
 def load_nli(model_name: str):
+    import torch
     from sentence_transformers import CrossEncoder  # heavy import, only when verifying
-    return CrossEncoder(model_name, device="cpu")
+    # some checkpoints default to float16, which is slower on CPU and shifts scores; compare models in float32
+    return CrossEncoder(model_name, device="cpu", model_kwargs={"dtype": torch.float32})
 
 
 def scores(model, pairs: list[tuple[str, str]]) -> list[tuple[float, float]]:

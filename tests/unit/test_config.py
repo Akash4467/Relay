@@ -5,7 +5,7 @@ from relay import config
 
 
 def test_repo_config_loads():
-    assert config.app_config()["corpus_version"] == "c1"
+    assert config.app_config()["corpus_version"] == "c3"
     settings = config.retrieval_settings()
     assert set(settings) == {"A", "B", "C"}  # D returns with expand.py
     assert (settings["A"].rerank, settings["B"].rerank) == (False, True)  # A vs B isolates reranking

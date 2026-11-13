@@ -1,3 +1,5 @@
+import pytest
+
 from relay.verify import citations as cit
 
 CORPUS = {"MOSHI:3.3.1:c030", "MOSHI:T4:r01", "AIAYN:3.2.2:c014", "HNET:2.2.1:c023"}
@@ -31,12 +33,29 @@ def test_citation_not_retrieved_or_not_existing_fails():
     assert out[1].reasons == ["cites MOSHI:9:c999, which does not exist"]
 
 
-def test_papers_do_not_state_sentence_is_exempt_but_must_not_cite():
-    out = cit.check("Mimi runs at 12.5Hz [MOSHI:3.3.1:c030]. The papers do not state the GPU count.",
+def test_scoped_absence_sentence_is_allowed_without_citation():
+    out = cit.check("Mimi runs at 12.5Hz [MOSHI:3.3.1:c030]. The retrieved passages do not state the GPU count.",
                     RETRIEVED, CORPUS)
-    assert [c.ok for c in out] == [True, True] and out[1].exempt
-    bad = cit.check("The papers do not state the GPU count [MOSHI:T4:r01].", RETRIEVED, CORPUS)
-    assert not bad[0].ok
+    assert [c.ok for c in out] == [True, True] and out[1].absence and not out[0].absence
+
+
+@pytest.mark.parametrize("sentence", [
+    # q11 regression: the model claimed the papers omit a value they do contain (the row was just not retrieved)
+    "The papers do not state the development BLEU of the base configuration.",
+    "The paper does not report the GPU count.",
+    "The three papers do not mention VoiceBench.",
+    "The authors do not specify the learning rate.",
+])
+def test_unscoped_claims_about_the_papers_are_rejected(sentence):
+    (c,) = cit.check(sentence, RETRIEVED, CORPUS)
+    assert not c.ok and not c.absence and "retrieved passages" in c.reasons[0]
+
+
+def test_absence_sentence_cannot_cite_or_carry_a_value():
+    (cited,) = cit.check("The retrieved passages do not state the GPU count [MOSHI:T4:r01].", RETRIEVED, CORPUS)
+    assert not cited.ok and "must not cite" in cited.reasons[0]
+    (valued,) = cit.check("The retrieved passages do not state the base BLEU, which is 25.8.", RETRIEVED, CORPUS)
+    assert not valued.ok and "must not contain a value" in valued.reasons[0]
 
 
 def test_citation_after_the_period_still_counts():

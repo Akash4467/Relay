@@ -1,0 +1,18 @@
+{
+  "question_id": "q11",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "p1",
+  "recorded_at": "2026-11-12T18:43:10.111+00:00",
+  "drafts": [
+    {
+      "content": "The single‑head attention variant (row A with h = 1) achieved a development BLEU of 24.9 [AIAYN:T3:r02]. The papers do not state the development BLEU of the base configuration.",
+      "completion_tokens": 120,
+      "reasoning_tokens": 59
+    },
+    {
+      "content": "The model with a single attention head (row A, h = 1) obtained a development BLEU of 24.9 [AIAYN:T3:r02]. The papers do not state the development BLEU of the base configuration.",
+      "completion_tokens": 135,
+      "reasoning_tokens": 73
+    }
+  ]
+}

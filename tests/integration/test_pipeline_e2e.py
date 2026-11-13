@@ -50,7 +50,35 @@ def test_unsupported_claim_is_caught_and_never_reaches_the_user(index):
 def test_unanswerable_question_is_refused(index):
     r = run("what GPU trained the mimi codec", B, 2500, index, FakeLLM("NOT_IN_PAPERS"), verifier(index, {}),
             FakeCrossEncoder())
-    assert r.status == "refused" and r.text.startswith("The three papers don't state this. I searched:")
+    assert r.status == "refused" and r.text.startswith("I couldn't find this in the passages I retrieved from the three papers")
+
+
+def test_full_request_through_http_client_and_governor(index, tmp_path):
+    """question -> search -> structural check -> HostedLLM (governor + streaming client, fake HTTP server) ->
+    verify -> redraft -> grounded answer; both calls logged raw, governor settled after each."""
+    import httpx
+
+    from relay.governor.governor import Governor
+    from relay.llm.client import ChatClient
+    from relay.llm.hosted import HostedLLM
+    from tests.unit.test_client import TIMEOUTS, delta, sse
+
+    bad, good = "It uses 16 parallel attention heads [AIAYN:3.2.2:c001].", "It uses 8 parallel attention heads [AIAYN:3.2.2:c001]."
+    usage = {"choices": [], "x_groq": {"usage": {"prompt_tokens": 300, "completion_tokens": 40, "total_tokens": 340}}}
+    replies = [httpx.Response(200, content=sse(delta(bad, "stop"), usage)),
+               httpx.Response(200, content=sse(delta(good, "stop"), usage))]
+    transport = httpx.MockTransport(lambda req: replies.pop(0))
+    gov = Governor({"m": {"rpm": 30, "rpd": 1000, "tpm": 8000, "tpd": 200000}}, clock=lambda: 0.0)
+    llm = HostedLLM(ChatClient("https://x/v1", "k", TIMEOUTS, "real", tmp_path, transport), gov,
+                    {"id": "m", "max_tokens": 900, "temperature": 0.2, "reasoning_effort": "low"}, output_reserve=770)
+
+    r = run("how many attention heads", B, 2500, index, llm,
+            verifier(index, {"It uses 8 parallel attention heads.": 0.95}), FakeCrossEncoder())
+
+    assert (r.status, r.text, r.llm_calls) == ("answered", good, 2)
+    assert [c["status"] for c in llm.calls] == ["ok", "ok"]
+    assert gov.buckets["m"]["tpd"].available(0) == pytest.approx(200000 - 2 * 340)  # settled to actual usage
+    assert len((tmp_path / "real").glob("*.jsonl").__next__().read_text(encoding="utf-8").splitlines()) == 2
 
 
 def test_cited_passage_from_another_request_is_rejected(index):

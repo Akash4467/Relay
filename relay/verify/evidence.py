@@ -36,6 +36,15 @@ def normalize(text: str) -> str:
     return text
 
 
+def delatex(text: str) -> str:
+    """Drop LaTeX notation before extracting numbers and terms: math delimiters, \\commands (with TeX's digit
+    shorthand, as in \\tfrac12), escaped symbols, braces and carets. "\\(\\hat{x}_t\\)" -> "x_t"."""
+    text = re.sub(r"\\[()\[\]]|\$", " ", text)
+    text = re.sub(r"\\[A-Za-z]+\d*\*?", " ", text)
+    text = re.sub(r"\\.", " ", text)
+    return re.sub(r"[{}]", "", text).replace("^", " ")
+
+
 def tokens(text: str) -> list[str]:
     return [_NUM_WORDS.get(t, t) for t in _TOKEN.findall(normalize(text))]
 
@@ -79,7 +88,8 @@ def _number_ok(num: str, unit: str | None, toks: list[str]) -> bool:
 
 def signals(claim: str, cited: list[dict]) -> list[str]:
     """Warning flags for one claim (citations already stripped) against its cited passages."""
-    toks = [t for p in cited for t in tokens(index_text(p))]
+    toks = [t for p in cited for t in tokens(delatex(index_text(p)))]
+    claim = delatex(claim)
     flags = []
     stoks = tokens(claim)
     for i, t in enumerate(stoks):
@@ -101,6 +111,6 @@ def signals(claim: str, cited: list[dict]) -> list[str]:
 def check(sentences: list[SentenceCheck], passages: dict[str, dict]) -> list[SentenceCheck]:
     """Adds flags to sentences that passed level 1. passages: chunk_id -> retrieved chunk."""
     for c in sentences:
-        if not c.exempt and c.ok:
+        if not c.absence and c.ok:
             c.flags = signals(strip_citations(c.sentence), [passages[cid] for cid in c.citations])
     return sentences

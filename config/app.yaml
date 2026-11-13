@@ -1,7 +1,7 @@
-prompt_version: p1
-verification_policy_version: v1
+prompt_version: p3                     # p2: absence scoped to retrieved passages; p3 (2026-11-13): plain text, no LaTeX
+verification_policy_version: v4        # v4 (2026-11-13): v3 + sub/superscript groups kept, formulas must match a cited passage up to notation, absence sentences rejected when one retrieved sentence holds all their content words
 generation_config_version: g1
-corpus_version: c1                     # bump when chunks are rebuilt
+corpus_version: c3                     # bump when chunks are rebuilt; c2 (2026-11-13): structured table rows; c3: specialrule fix
 
 models:
   primary:  {id: openai/gpt-oss-120b, reasoning_effort: low, max_tokens: 900, temperature: 0.2}
@@ -10,6 +10,9 @@ models:
 reservation:
   output_p95_tokens: {openai/gpt-oss-120b: 700, openai/gpt-oss-20b: 700}   # includes reasoning; refit from baseline
   safety_margin: 0.10
+  # fixed tokens gpt-oss adds to every request (chat-format preamble): Groq reported 78 prompt tokens where the
+  # local count was 11, identical on 120b and 20b (check_models, 2026-11-13)
+  request_overhead_tokens: 67
 
 pressure:                               # global, recomputed every 1 s
   L0: {context_cap: 2500, expansion: bounded, redraft: true}
@@ -27,9 +30,12 @@ retrieval_policy:
 verification:
   # semantic support decides (DESIGN §14, 2026-11-12); thresholds are placeholders until fitted on the
   # verifier stress set (§19.6), never on test questions
-  nli_model: cross-encoder/nli-deberta-v3-small
-  entail_min: 0.5           # every claim
-  entail_min_flagged: 0.8   # claims with a level 2 warning (number, technical term, attribution)
+  # PROVISIONAL (Akash, 2026-11-13): ANLI + P1 whole-sentence, t = 0.9 from stress round 2 calibration; no atomic split.
+  # A stricter bar for flagged claims caught nothing more on round-2 calibration and added a false rejection, so
+  # flags stay diagnostic (logged, sent back in redraft reasons) at the same threshold.
+  nli_model: MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli
+  entail_min: 0.9           # every claim
+  entail_min_flagged: 0.9   # claims with a level 2 warning (number, technical term, attribution)
 
 model_decision:
   max_wait_for_primary_ms: 2000

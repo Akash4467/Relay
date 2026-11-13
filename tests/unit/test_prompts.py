@@ -33,9 +33,10 @@ def test_redraft_appends_draft_and_failures():
 
 def test_refusal_names_what_was_searched_without_duplicates():
     text = prompts.refusal_text(PASSAGES + PASSAGES[:1])
-    assert text == ("The three papers don't state this. I searched: MOSHI §3.3.1 Architecture; "
-                    "MOSHI §5.2 Audio Tokenization.")
-    assert prompts.refusal_text([]) == "The three papers don't state this."
+    assert text == ("I couldn't find this in the passages I retrieved from the three papers, so I won't guess. "
+                    "I searched: MOSHI §3.3.1 Architecture; MOSHI §5.2 Audio Tokenization.")
+    # a refusal is about the retrieved passages, never a claim that the papers do not say it
+    assert "papers don't state" not in prompts.refusal_text([]) and "papers do not state" not in text
 
 
 def test_busy_text():

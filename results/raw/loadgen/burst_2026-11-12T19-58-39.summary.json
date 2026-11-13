@@ -1,0 +1,12 @@
+{
+  "scenario": "burst",
+  "offered": 25,
+  "admitted": 19,
+  "completed": 6,
+  "rejected": 19,
+  "timed_out": 0,
+  "gave_up": 0,
+  "errors": 0,
+  "duration_s": 360,
+  "offered_per_min": 4.17
+}

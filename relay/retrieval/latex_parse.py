@@ -41,7 +41,7 @@ _LAYOUT = re.compile(
     r"|^\s*\[-?[\d.]+(?:em|pt|ex)\]", re.M)
 # \caption* is an unnumbered sub-caption, so it is not matched and never counts as a float
 _CAPTION = re.compile(r"\\caption(?:of\s*\{(table|figure)\})?(?!\s*\*)\s*(?:\[[^\]]*\])?\s*(?=\{)")
-_RULES = re.compile(r"\\(?:hline|toprule|midrule|bottomrule|addlinespace|cline\{[^}]*\}|cmidrule(?:\[[^\]]*\])?(?:\([^)]*\))?\{[^}]*\}|rowcolor(?:\[[^\]]*\])?\{[^}]*\})")
+_RULES = re.compile(r"\\(?:hline|toprule|midrule|bottomrule|addlinespace|specialrule(?:\s*\{[^}]*\}){3}|cline\{[^}]*\}|cmidrule(?:\[[^\]]*\])?(?:\([^)]*\))?\{[^}]*\}|rowcolor(?:\[[^\]]*\])?\{[^}]*\})")
 _EQ_SLOT = "\x00EQ{}\x00"
 
 

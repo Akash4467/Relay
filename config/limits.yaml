@@ -1,0 +1,7 @@
+# Groq limits (DESIGN §5.3). Docs sample table, read 2026-11-12: https://console.groq.com/docs/rate-limits.md
+# Organization-wide, per model. Replace with the account's limits page and then with observed values (Table 1).
+source: "Groq docs sample limits table, read 2026-11-12; account limits page not yet checked"
+models:
+  openai/gpt-oss-120b: {rpm: 30, rpd: 1000, tpm: 8000, tpd: 200000}
+  openai/gpt-oss-20b:  {rpm: 30, rpd: 1000, tpm: 8000, tpd: 200000}
+window: unknown   # fixed | sliding: set from probe observations

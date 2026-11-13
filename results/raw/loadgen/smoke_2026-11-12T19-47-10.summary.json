@@ -1,0 +1,12 @@
+{
+  "scenario": "smoke",
+  "offered": 6,
+  "admitted": 6,
+  "completed": 4,
+  "rejected": 2,
+  "timed_out": 0,
+  "gave_up": 0,
+  "errors": 0,
+  "duration_s": 60,
+  "offered_per_min": 6
+}

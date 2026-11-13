@@ -99,16 +99,20 @@ def snapshot(split: str, settings: tuple[str, ...]) -> dict:
         "settings": {n: retrieval_settings()[n].model_dump() for n in settings},
         "retrieval_policy": app_config()["retrieval_policy"],
         "pressure_cap": app_config()["pressure"]["L0"]["context_cap"],
+        # a dirty tree is only traceable through the exact corpus the index was built from
+        "chunks_sha256": {f.name: hashlib.sha256(f.read_bytes()).hexdigest()
+                          for f in sorted(Path("data/processed").glob("chunks_*.jsonl"))},
     }
 
 
-def main(split: str = "dev", settings: tuple[str, ...] = ("A", "B", "C"), out: str | None = None) -> dict:
+def main(split: str = "dev", settings: tuple[str, ...] = ("A", "B", "C"), out: str | None = None,
+         allow_dirty: bool = False) -> dict:
     out_path = REPORTS / (out or f"retrieval_{split}.json")
     if split == "test" and out_path.exists():
         # the test split is measured once; a rerun after changes would be tuning on it
         raise FileExistsError(f"{out_path} exists: the frozen test measurement is never overwritten")
     meta = snapshot(split, settings)
-    if split == "test" and meta["git_dirty"]:
+    if split == "test" and meta["git_dirty"] and not allow_dirty:
         raise RuntimeError("commit before the frozen test run, so the report points at the exact code")
     cap = meta["pressure_cap"]
     questions = load_questions(split)
@@ -130,8 +134,10 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--split", default="dev", choices=["dev", "test"])
     ap.add_argument("--out", default=None, help="report file name in eval/reports/")
+    ap.add_argument("--allow-dirty", action="store_true",
+                    help="measure an uncommitted tree (recorded as git_dirty, with chunk-file hashes)")
     args = ap.parse_args()
-    report = main(args.split, out=args.out)
+    report = main(args.split, out=args.out, allow_dirty=args.allow_dirty)
     print(report["meta"])
     for r in report["results"]:
         print({k: v for k, v in r.items() if k not in ("rows", "unanswerable_top_scores")})

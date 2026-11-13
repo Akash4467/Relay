@@ -6,6 +6,7 @@ call it (CLAUDE.md hard rule 7). A structural failure refuses before any LLM cal
 """
 from __future__ import annotations
 
+import time
 from dataclasses import dataclass, field
 from typing import Callable
 
@@ -28,6 +29,7 @@ class Result:
     drafts: list[str] = field(default_factory=list)
     reports: list[Report] = field(default_factory=list)
     evidence: Evidence | None = None
+    verification_ms: float = 0.0    # NLI + citation/evidence checks, summed over drafts
 
 
 @dataclass
@@ -48,21 +50,25 @@ def answer_from_evidence(question: str, ev: Evidence, llm: LLM, verifier: Verifi
         return _refuse(f"insufficient evidence: {suff.reason}", ev)
 
     drafts, reports = [], []
+    verify_ns = 0
     msgs = prompts.messages(question, ev.passages)
     for attempt in range(2 if allow_redraft else 1):
         draft = llm(msgs).strip()
         drafts.append(draft)
         if draft == prompts.NOT_IN_PAPERS:
             return _refuse("model: not in papers", ev, llm_calls=len(drafts), drafts=drafts, reports=reports)
+        t0 = time.perf_counter_ns()
         report = verify(draft, ev.passages, corpus_ids, verifier.nli_model,
                         verifier.entail_min, verifier.entail_min_flagged)
+        verify_ns += time.perf_counter_ns() - t0
         reports.append(report)
         if report.ok:
             return Result("answered", draft, report.cited(), llm_calls=len(drafts), drafts=drafts,
-                          reports=reports, evidence=ev)
+                          reports=reports, evidence=ev, verification_ms=round(verify_ns / 1e6, 1))
         msgs = prompts.redraft_messages(question, ev.passages, draft, report.failures())
     reason = "verification failed" + (" after redraft" if len(drafts) > 1 else "")
-    return _refuse(reason, ev, llm_calls=len(drafts), drafts=drafts, reports=reports)
+    return _refuse(reason, ev, llm_calls=len(drafts), drafts=drafts, reports=reports,
+                   verification_ms=round(verify_ns / 1e6, 1))
 
 
 def run(question: str, setting: RetrievalSetting, context_cap: int, index: Index, llm: LLM, verifier: Verifier,
