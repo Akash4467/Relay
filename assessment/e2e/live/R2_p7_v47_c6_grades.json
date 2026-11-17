@@ -1,0 +1,7 @@
+{"about": "Grades against the papers (ASSISTANT grades). Run: c6 + retrieval R2 + p7 + v4.7c, 6 questions, 2026-11-14 (R2_p7_v47_c6/). 12 requests, 23,538 tokens (cap 30,000).",
+ "grades": {
+  "q14": {"grade": "partially_correct", "why": "AIAYN half correct and from the right passage: 'Sentences were encoded using byte-pair encoding, which has a shared source-target vocabulary of about 37000 tokens [AIAYN:5.1:c025]' (omits the 32000 word-piece vocabulary for English-French). H-Net half off-target: describes SpaceByte, a baseline that chunks on spaces [HNET:3:c041], not H-Net's learned byte-level dynamic chunking. Cause: the expanded query is also used for the H-Net slot, which drops HNET:abstract:c001 and protects HNET:3:c041."},
+  "q15": {"grade": "correct_and_fully_supported", "why": "trained for as little as twelve hours on eight P100 GPUs (AIAYN:1:c003); Moshi on H100 (MOSHI:4.4:c062)"},
+  "q07": {"grade": "correct_and_fully_supported"}, "t05": {"grade": "correct_and_fully_supported", "why": "64.0 +/- 1.7"},
+  "q16": {"grade": "correctly_refused"},
+  "q04": {"grade": "incorrectly_refused", "why": "context identical to E25 (where it was correct); the redraft added a false absence ('frame rate not stated'): sampling variance, not a retrieval change"}}}

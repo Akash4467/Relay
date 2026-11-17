@@ -1,0 +1,130 @@
+original A
+  c4 {'context_tokens_mean': 1473.7, 'duplicate_table_chunk_rate': 0.099, 'passages_dropped_by_budget': 28, 'any_gold': '13/15', 'complete': '7/15', 'quote_recall': '22/34', 'mrr': 0.602, 'quotes_lost_to_budget': 1, 'missing': ['q03', 'q14']}
+  c5 {'context_tokens_mean': 1476.9, 'duplicate_table_chunk_rate': 0.078, 'passages_dropped_by_budget': 34, 'any_gold': '13/15', 'complete': '7/15', 'quote_recall': '22/34', 'mrr': 0.569, 'quotes_lost_to_budget': 1, 'missing': ['q03', 'q14']}
+original B
+  c4 {'context_tokens_mean': 1460.9, 'duplicate_table_chunk_rate': 0.126, 'passages_dropped_by_budget': 25, 'any_gold': '11/15', 'complete': '7/15', 'quote_recall': '20/34', 'mrr': 0.582, 'quotes_lost_to_budget': 2, 'missing': ['q06', 'q10', 'q11', 'q14']}
+  c5 {'context_tokens_mean': 1457.5, 'duplicate_table_chunk_rate': 0.147, 'passages_dropped_by_budget': 36, 'any_gold': '11/15', 'complete': '7/15', 'quote_recall': '19/34', 'mrr': 0.55, 'quotes_lost_to_budget': 3, 'missing': ['q06', 'q10', 'q11', 'q14']}
+original C
+  c4 {'context_tokens_mean': 1270.7, 'duplicate_table_chunk_rate': 0.062, 'passages_dropped_by_budget': 8, 'any_gold': '14/15', 'complete': '9/15', 'quote_recall': '23/34', 'mrr': 0.644, 'quotes_lost_to_budget': 0, 'missing': ['q14']}
+  c5 {'context_tokens_mean': 1284.7, 'duplicate_table_chunk_rate': 0.045, 'passages_dropped_by_budget': 9, 'any_gold': '14/15', 'complete': '9/15', 'quote_recall': '23/34', 'mrr': 0.644, 'quotes_lost_to_budget': 0, 'missing': ['q14']}
+table A
+  c4 {'context_tokens_mean': 1495.2, 'duplicate_table_chunk_rate': 0.357, 'passages_dropped_by_budget': 32, 'table_in': '21/24', 'table_mrr': 0.697, 'rows_in': '26/31', 'complete': '18/24', 'complete_without_budget_limit': '18/24', 'table_lost_to_budget': 1, 'competing_table_in_context': '3/24', 'unanswerable_table_in': '6/8'}
+  c5 {'context_tokens_mean': 1469.3, 'duplicate_table_chunk_rate': 0.411, 'passages_dropped_by_budget': 64, 'table_in': '24/24', 'table_mrr': 0.865, 'rows_in': '27/31', 'complete': '21/24', 'complete_without_budget_limit': '23/24', 'table_lost_to_budget': 0, 'competing_table_in_context': '5/24', 'unanswerable_table_in': '7/8'}
+table B
+  c4 {'context_tokens_mean': 1503.0, 'duplicate_table_chunk_rate': 0.453, 'passages_dropped_by_budget': 42, 'table_in': '23/24', 'table_mrr': 0.938, 'rows_in': '27/31', 'complete': '19/24', 'complete_without_budget_limit': '19/24', 'table_lost_to_budget': 0, 'competing_table_in_context': '7/24', 'unanswerable_table_in': '8/8'}
+  c5 {'context_tokens_mean': 1459.2, 'duplicate_table_chunk_rate': 0.497, 'passages_dropped_by_budget': 77, 'table_in': '24/24', 'table_mrr': 0.979, 'rows_in': '29/31', 'complete': '22/24', 'complete_without_budget_limit': '24/24', 'table_lost_to_budget': 0, 'competing_table_in_context': '10/24', 'unanswerable_table_in': '7/8'}
+table C
+  c4 {'context_tokens_mean': 1403.8, 'duplicate_table_chunk_rate': 0.279, 'passages_dropped_by_budget': 24, 'table_in': '24/24', 'table_mrr': 0.931, 'rows_in': '29/31', 'complete': '19/24', 'complete_without_budget_limit': '20/24', 'table_lost_to_budget': 0, 'competing_table_in_context': '8/24', 'unanswerable_table_in': '6/8'}
+  c5 {'context_tokens_mean': 1416.2, 'duplicate_table_chunk_rate': 0.313, 'passages_dropped_by_budget': 29, 'table_in': '24/24', 'table_mrr': 1.0, 'rows_in': '31/31', 'complete': '24/24', 'complete_without_budget_limit': '24/24', 'table_lost_to_budget': 0, 'competing_table_in_context': '5/24', 'unanswerable_table_in': '7/8'}
+t3_t17 A
+  c4 {'context_tokens_mean': 1513.4, 'duplicate_table_chunk_rate': 0.562, 'passages_dropped_by_budget': 16, 'correct_ahead': '9/16', 'gold_in': '10/16', 'other_in': '9/16', 'exclusion_correct_ahead': '2/3', 'wrong_first': ['a2', 'a3', 'a4', 't06', 't07', 't08', 't31']}
+  c5 {'context_tokens_mean': 1465.9, 'duplicate_table_chunk_rate': 0.549, 'passages_dropped_by_budget': 37, 'correct_ahead': '12/16', 'gold_in': '15/16', 'other_in': '8/16', 'exclusion_correct_ahead': '2/3', 'wrong_first': ['a2', 't06', 't08', 't31']}
+t3_t17 B
+  c4 {'context_tokens_mean': 1486.9, 'duplicate_table_chunk_rate': 0.61, 'passages_dropped_by_budget': 28, 'correct_ahead': '14/16', 'gold_in': '16/16', 'other_in': '13/16', 'exclusion_correct_ahead': '1/3', 'wrong_first': ['a8', 't31']}
+  c5 {'context_tokens_mean': 1452.5, 'duplicate_table_chunk_rate': 0.646, 'passages_dropped_by_budget': 46, 'correct_ahead': '13/16', 'gold_in': '15/16', 'other_in': '11/16', 'exclusion_correct_ahead': '1/3', 'wrong_first': ['a8', 't08', 't31']}
+t3_t17 C
+  c4 {'context_tokens_mean': 1404.5, 'duplicate_table_chunk_rate': 0.354, 'passages_dropped_by_budget': 16, 'correct_ahead': '9/16', 'gold_in': '13/16', 'other_in': '11/16', 'exclusion_correct_ahead': '0/3', 'wrong_first': ['a5', 'a6', 'a8', 't08', 't29', 't30', 't31']}
+  c5 {'context_tokens_mean': 1528.6, 'duplicate_table_chunk_rate': 0.468, 'passages_dropped_by_budget': 17, 'correct_ahead': '13/16', 'gold_in': '14/16', 'other_in': '4/16', 'exclusion_correct_ahead': '1/3', 'wrong_first': ['a8', 't08', 't31']}
+   {'dataset': 'original', 'setting': 'A', 'q': 'q03', 'metric': 'mrr', 'base': 0.1111, 'c5': 0.125, 'direction': 'gain'}
+   {'dataset': 'original', 'setting': 'A', 'q': 'q10', 'metric': 'mrr', 'base': 1.0, 'c5': 0.5, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't04', 'metric': 'table_mrr', 'base': 1.0, 'c5': 0.5, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't05', 'metric': 'table_mrr', 'base': 0.3333, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't06', 'metric': 'table_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't06', 'metric': 'table_mrr', 'base': 0.1111, 'c5': 0.1667, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't07', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't07', 'metric': 'table_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't07', 'metric': 'rows_in', 'base': 0, 'c5': 1, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't07', 'metric': 'competing_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't07', 'metric': 'table_mrr', 'base': 0.125, 'c5': 0.3333, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't10', 'metric': 'table_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't10', 'metric': 'rows_in', 'base': 0, 'c5': 1, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't10', 'metric': 'table_mrr', 'base': 0.0, 'c5': 0.25, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't11', 'metric': 'table_mrr', 'base': 0.5, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't12', 'metric': 'competing_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't13', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't13', 'metric': 'competing_in', 'base': False, 'c5': True, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't13', 'metric': 'table_mrr', 'base': 0.3333, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't14', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't14', 'metric': 'competing_in', 'base': False, 'c5': True, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't14', 'metric': 'table_mrr', 'base': 0.3333, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't15', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't15', 'metric': 'competing_in', 'base': False, 'c5': True, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't16', 'metric': 'competing_in', 'base': False, 'c5': True, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't16', 'metric': 'table_mrr', 'base': 0.5, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't20', 'metric': 'competing_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't20', 'metric': 'table_mrr', 'base': 0.1667, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't25', 'metric': 'table_mrr', 'base': 0.5, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't26', 'metric': 'table_mrr', 'base': 0.5, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't27', 'metric': 'table_mrr', 'base': 0.3333, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't31', 'metric': 'table_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't31', 'metric': 'table_mrr', 'base': 0.0625, 'c5': 0.25, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't32', 'metric': 'complete', 'base': True, 'c5': False, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'A', 'q': 't32', 'metric': 'rows_in', 'base': 1, 'c5': 0, 'direction': 'regression'}
+   {'dataset': 't3_t17', 'setting': 'A', 'q': 'a2', 'metric': 'gold_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'A', 'q': 'a3', 'metric': 'correct_ahead', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'A', 'q': 'a4', 'metric': 'correct_ahead', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'A', 'q': 'a4', 'metric': 'gold_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'A', 'q': 't06', 'metric': 'gold_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'A', 'q': 't07', 'metric': 'correct_ahead', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'A', 'q': 't07', 'metric': 'gold_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'A', 'q': 't07', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'A', 'q': 't31', 'metric': 'gold_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'original', 'setting': 'B', 'q': 'q11', 'metric': 'mrr', 'base': 0.125, 'c5': 0.1429, 'direction': 'gain'}
+   {'dataset': 'original', 'setting': 'B', 'q': 'q12', 'metric': 'mrr', 'base': 1.0, 'c5': 0.5, 'direction': 'regression'}
+   {'dataset': 'original', 'setting': 'B', 'q': 'q13', 'metric': 'quotes_in', 'base': 2, 'c5': 1, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't01', 'metric': 'competing_in', 'base': False, 'c5': True, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't08', 'metric': 'table_in', 'base': True, 'c5': False, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't08', 'metric': 'table_mrr', 'base': 0.3333, 'c5': 0.125, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't10', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't10', 'metric': 'table_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't10', 'metric': 'rows_in', 'base': 0, 'c5': 3, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't10', 'metric': 'table_mrr', 'base': 0.0, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't12', 'metric': 'competing_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't13', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't13', 'metric': 'competing_in', 'base': False, 'c5': True, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't14', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't14', 'metric': 'competing_in', 'base': False, 'c5': True, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't15', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't23', 'metric': 'competing_in', 'base': False, 'c5': True, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't29', 'metric': 'competing_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't30', 'metric': 'complete', 'base': True, 'c5': False, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't30', 'metric': 'rows_in', 'base': 1, 'c5': 0, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'B', 'q': 't31', 'metric': 'table_mrr', 'base': 0.2, 'c5': 0.25, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'B', 'q': 'a1', 'metric': 'other_in', 'base': False, 'c5': True, 'direction': 'regression'}
+   {'dataset': 't3_t17', 'setting': 'B', 'q': 'a5', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'B', 'q': 'a6', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'B', 'q': 't08', 'metric': 'correct_ahead', 'base': True, 'c5': False, 'direction': 'regression'}
+   {'dataset': 't3_t17', 'setting': 'B', 'q': 't08', 'metric': 'gold_in', 'base': True, 'c5': False, 'direction': 'regression'}
+   {'dataset': 't3_t17', 'setting': 'B', 'q': 't29', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't08', 'metric': 'table_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't08', 'metric': 'table_mrr', 'base': 0.25, 'c5': 0.3333, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't10', 'metric': 'competing_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't11', 'metric': 'competing_in', 'base': False, 'c5': True, 'direction': 'regression'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't13', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't14', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't15', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't16', 'metric': 'table_mrr', 'base': 0.3333, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't19', 'metric': 'table_mrr', 'base': 0.5, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't20', 'metric': 'table_mrr', 'base': 0.3333, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't29', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't29', 'metric': 'rows_in', 'base': 0, 'c5': 1, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't29', 'metric': 'competing_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't29', 'metric': 'table_mrr', 'base': 0.3333, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't30', 'metric': 'complete', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't30', 'metric': 'rows_in', 'base': 0, 'c5': 1, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't30', 'metric': 'competing_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't30', 'metric': 'table_mrr', 'base': 0.5, 'c5': 1.0, 'direction': 'gain'}
+   {'dataset': 'table', 'setting': 'C', 'q': 't32', 'metric': 'competing_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 'a5', 'metric': 'correct_ahead', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 'a5', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 'a6', 'metric': 'correct_ahead', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 'a6', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 'a7', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 't08', 'metric': 'gold_in', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 't29', 'metric': 'correct_ahead', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 't29', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 't30', 'metric': 'correct_ahead', 'base': False, 'c5': True, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 't30', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 't31', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+   {'dataset': 't3_t17', 'setting': 'C', 'q': 't32', 'metric': 'other_in', 'base': True, 'c5': False, 'direction': 'gain'}
+experiments\phase9\out\retrieval_eval_2026-11-13T22-17-05Z.json

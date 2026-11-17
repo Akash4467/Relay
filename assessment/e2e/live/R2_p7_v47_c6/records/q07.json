@@ -1,0 +1,279 @@
+{
+ "run": "assessment/e2e/live/R2_p7_v47_c6",
+ "timestamp": "2026-11-14T15:16:42.049+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "q07",
+ "dataset": [
+  "A_fixed_regression",
+  "B_failure_focused"
+ ],
+ "question": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "In addition to the two sub‑layers in each encoder layer, the decoder inserts a third sub‑layer, which performs multi‑head attention over the output of the encoder stack [AIAYN:3.1:c009]. In the decoder, the self‑attention sub‑layer is masked to prevent positions from attending to subsequent positions, whereas the encoder’s self‑attention allows each position to attend to all positions in the previous encoder layer [AIAYN:3.2.3:c016]. In encoder‑decoder attention layers, the queries come from the previous decoder layer [AIAYN:3.2.3:c016]. The memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "AIAYN:3.1:c009",
+   "AIAYN:3.2.3:c016"
+  ],
+  "request_id": "loop-R2_p7_v47_c6-q07"
+ },
+ "client_ms": 38218.7,
+ "evidence_ids": [
+  "AIAYN:3.2.3:c016",
+  "AIAYN:3:c006",
+  "AIAYN:3.1:c009",
+  "AIAYN:3.3:c017",
+  "HNET:2.1.2:c017",
+  "HNET:3.3:c069",
+  "AIAYN:abstract:c001"
+ ],
+ "gold_units_in_context": [
+  true,
+  true,
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  true,
+  true
+ ],
+ "drafts": [
+  "The decoder stack includes a third sub‑layer that performs multi‑head attention over the output of the encoder stack, which the encoder stack does not have [AIAYN:3.1:c009]. In the decoder, the self‑attention sub‑layer is masked to prevent positions from attending to subsequent positions, whereas the encoder’s self‑attention allows each position to attend to all positions in the previous encoder layer [AIAYN:3.2.3:c016]. In encoder‑decoder attention layers, the queries are taken from the previous decoder layer [AIAYN:3.2.3:c016]. The keys and values for these attention layers are taken from the output of the encoder [AIAYN:3.2.3:c016].",
+  "In addition to the two sub‑layers in each encoder layer, the decoder inserts a third sub‑layer, which performs multi‑head attention over the output of the encoder stack [AIAYN:3.1:c009]. In the decoder, the self‑attention sub‑layer is masked to prevent positions from attending to subsequent positions, whereas the encoder’s self‑attention allows each position to attend to all positions in the previous encoder layer [AIAYN:3.2.3:c016]. In encoder‑decoder attention layers, the queries come from the previous decoder layer [AIAYN:3.2.3:c016]. The memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.3:c016"
+   ],
+   "failures": [
+    [
+     "The decoder stack includes a third sub‑layer that performs multi‑head attention over the output of the encoder stack, which the encoder stack does not have [AIAYN:3.1:c009].",
+     "not supported by the cited passage (clause: \"This the encoder stack does not have.\") (entailment 0.04 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The decoder stack includes a third sub‑layer that performs multi‑head attention over the output of the encoder stack, which the encoder stack does not have [AIAYN:3.1:c009].",
+     "ok": false,
+     "entailment": 0.03766809425162649,
+     "reasons": [
+      "not supported by the cited passage (clause: \"This the encoder stack does not have.\") (entailment 0.04 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "In the decoder, the self‑attention sub‑layer is masked to prevent positions from attending to subsequent positions, whereas the encoder’s self‑attention allows each position to attend to all positions in the previous encoder layer [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.9119713949349749,
+     "reasons": []
+    },
+    {
+     "sentence": "In encoder‑decoder attention layers, the queries are taken from the previous decoder layer [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.9891311811219918,
+     "reasons": []
+    },
+    {
+     "sentence": "The keys and values for these attention layers are taken from the output of the encoder [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.9879193209931673,
+     "reasons": []
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.3:c016"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "In addition to the two sub‑layers in each encoder layer, the decoder inserts a third sub‑layer, which performs multi‑head attention over the output of the encoder stack [AIAYN:3.1:c009].",
+     "ok": true,
+     "entailment": 0.9812652139920157,
+     "reasons": []
+    },
+    {
+     "sentence": "In the decoder, the self‑attention sub‑layer is masked to prevent positions from attending to subsequent positions, whereas the encoder’s self‑attention allows each position to attend to all positions in the previous encoder layer [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.9119713949349749,
+     "reasons": []
+    },
+    {
+     "sentence": "In encoder‑decoder attention layers, the queries come from the previous decoder layer [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.9844493279445856,
+     "reasons": []
+    },
+    {
+     "sentence": "The memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.9913646082915993,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-R2_p7_v47_c6-q07",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T15:16:42.049+00:00",
+  "question_id": "q07",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4197,
+  "tokens_out": 569,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1072.6,
+  "context_tokens": 1412,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "d_k"
+  ],
+  "retrieval_query": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from? [d_k]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3:c006",
+   "AIAYN:3.1:c009",
+   "AIAYN:3.3:c017",
+   "HNET:2.1.2:c017",
+   "HNET:3.3:c069",
+   "AIAYN:abstract:c001"
+  ],
+  "verification_ms": 7650.1,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 26791.2,
+  "model_ttft_ms": 867.4,
+  "first_byte_ms": 448.1,
+  "generation_ms": 2652.8,
+  "reasoning_tokens": 243,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1886,
+    "reserved": 2656,
+    "governor_wait_ms": 12310.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.318530287,
+     "prompt_tokens": 1885,
+     "prompt_time": 0.071789051,
+     "completion_tokens": 332,
+     "completion_time": 0.887137791,
+     "total_tokens": 2217,
+     "total_time": 0.958926842,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 169
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1885,
+    "tokens_out": 332,
+    "reasoning_tokens": 169,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 448.1,
+    "model_ttft_ms": 867.4,
+    "total_ms": 1386.9,
+    "max_gap_ms": 419.2,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "934",
+     "x-ratelimit-reset-requests": "1h35m2.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2038",
+     "x-ratelimit-reset-tokens": "44.715s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2311,
+    "reserved": 3081,
+    "governor_wait_ms": 14480.3,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.370408137,
+     "prompt_tokens": 2312,
+     "prompt_time": 0.183892455,
+     "completion_tokens": 237,
+     "completion_time": 0.58413931,
+     "total_tokens": 2549,
+     "total_time": 0.768031765,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 74
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2312,
+    "tokens_out": 237,
+    "reasoning_tokens": 74,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 533.9,
+    "model_ttft_ms": 944.9,
+    "total_ms": 1265.9,
+    "max_gap_ms": 410.8,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "933",
+     "x-ratelimit-reset-requests": "1h36m28.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2265",
+     "x-ratelimit-reset-tokens": "43.012s"
+    }
+   }
+  ],
+  "first_token_ms": 38195.2,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 38195.9
+ }
+}

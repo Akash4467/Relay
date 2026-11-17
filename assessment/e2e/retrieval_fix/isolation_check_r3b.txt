@@ -1,0 +1,4 @@
+context changed vs R1: [('A', 'q14'), ('B', 'q14'), ('C', 'q14')]
+A R3b q14 ctx ['AIAYN:5.1:c025', 'HNET:3:c041', 'AIAYN:T3:r02', 'HNET:2.1.2:c020', 'AIAYN:abstract:c001', 'HNET:3.2:c061', 'AIAYN:4:c022'] units [True, True, False]
+B R3b q14 ctx ['AIAYN:5.1:c025', 'AIAYN:T3:r09', 'HNET:3.2:c061', 'AIAYN:T3:r01', 'HNET:3.1:c053', 'AIAYN:T3:r02', 'AIAYN:T3:r07', 'HNET:2.1.2:c019'] units [True, True, False]
+C R3b q14 ctx ['AIAYN:abstract:c001', 'AIAYN:T3:r03', 'HNET:3.2:c035', 'AIAYN:T3:r02'] units [False, False, False]

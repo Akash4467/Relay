@@ -1,0 +1,44 @@
+{
+ "question_id": "q02",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:44:29.056+00:00",
+  "t_send_ns": 201119057154900,
+  "status": 200,
+  "t_first_byte_ns": 201119459122400,
+  "t_first_content_ns": 201119693188600,
+  "t_last_ns": 201119817061700,
+  "max_gap_ms": 234.0393,
+  "text": "The authors employ h = 8 parallel attention layers (heads) in their base Transformer model [AIAYN:3.2.2:c014]. For each head the authors use d_k = d_v = d_model / h = 64 as the key and value dimensions [AIAYN:3.2.2:c014].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.319536583,
+   "prompt_tokens": 2009,
+   "prompt_time": 0.088838095,
+   "completion_tokens": 132,
+   "completion_time": 0.274762221,
+   "total_tokens": 2141,
+   "total_time": 0.363600316,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 46
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "966",
+   "x-ratelimit-reset-requests": "48m57.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "1947",
+   "x-ratelimit-reset-tokens": "45.397s"
+  },
+  "error": null,
+  "first_byte_ms": 402.0,
+  "first_content_ms": 636.0,
+  "total_ms": 759.9
+ }
+}

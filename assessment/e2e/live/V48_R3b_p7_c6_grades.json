@@ -1,0 +1,9 @@
+{"about": "Grades against the papers (ASSISTANT grades). LIVE run: c6 + R3b + p7 + v4.8c (v4.7c + fix 1 mark condition + fix 2 label-aware absence), 2026-11-14 (V48_R3b_p7_c6/). 11 requests, 22,906 tokens (cap 35,000). Production unchanged.",
+ "grades": {
+  "q16": {"grade": "correctly_refused"},
+  "t29": {"grade": "incorrectly_refused (safe)", "why": "model declined (NOT_IN_PAPERS); gold row MOSHI:T17:r01 not retrieved on c6; fix 1 not exercised live"},
+  "q13": {"grade": "correct_and_fully_supported", "why": "55.5 (H-Net 2-stage) vs 53.3 (Transformer) at GPT-3 Large; Transformer at GPT-3 XL 55.5; fix 2 not exercised live (no absence sentence)"},
+  "q04": {"grade": "correct_and_fully_supported", "why": "12.5 Hz, 1.1 kbps, Q = 8, N_A = 2048; no false frame-rate absence this run"},
+  "t05": {"grade": "correct_and_fully_supported", "why": "64.0 +/- 1.7 (Row 6, all five checked): fix 1 passed the correct row"},
+  "t13": {"grade": "correct_and_fully_supported", "why": "36.8 (row with RQ-Transformer checked): fix 1 passed the correct row"},
+  "t01": {"grade": "correct_and_fully_supported", "why": "ByT5 Autoregressive = cross"}}}

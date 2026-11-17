@@ -1,0 +1,6 @@
+{"about": "ASSISTANT labels (not independent); rubric as assessment/improvement_loop/baseline drafts: correct / mixed / wrong / unsupported / uncertain.",
+ "labels": {"q01#0": "mixed", "q01#1": "correct", "q04#0": "mixed", "q04#1": "correct", "q07#0": "uncertain", "q07#1": "correct",
+            "q12#0": "mixed", "q12#1": "mixed", "q13#0": "mixed", "q13#1": "mixed", "q15#0": "correct", "q15#1": "correct",
+            "t05#0": "wrong", "t13#0": "wrong", "t13#1": "wrong", "n10#0": "mixed", "n10#1": "correct"},
+ "notes": {"q01#0": "'amplifying the inefficiency' not in AIAYN:1:c002", "q04#0": "false absence sentence (frame rate)", "q07#0": "truncated in review; not decided",
+           "q12#0": "false absence (with-IM row in context)", "q13#0": "comparison cites only HNET:T2:r11", "n10#0": "no citations", "t13#1": "135.4 is the wrong row"}}

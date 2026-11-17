@@ -1,0 +1,9 @@
+{
+ "about": "ASSISTANT judgments (not independent) for every ANSWERED reply to an answerable question in the baseline, against expected_answer in datasets/datasets.json. Keyed <run dir name>/<question_id>. Phase 12 c3 grades are copied from experiments/phase12/phase12c/answer_judgments.json unchanged.",
+ "judgments": {
+  "phase12_c3_reused/q01": {"grade": "correct_answer", "why": "copied from Phase 12: matches expected"},
+  "phase12_c3_reused/t05": {"grade": "incorrect", "why": "copied from Phase 12: 65.9 vs expected 64.0; verifier false acceptance (c3 rows carry no check marks)", "verifier_false_acceptance": true},
+  "live_ext/q03": {"grade": "correct_answer", "why": "Inner Monologue predicts time-aligned text tokens before audio tokens and improves factuality and linguistic quality (MOSHI:1:c007), almost tripling spoken QA accuracy (MOSHI:5.5:c091); the expected answer's ASR/TTS remark is not asked by the question"},
+  "live_ext/q06": {"grade": "partially_correct", "why": "the reply lists real tokenization limitations from HNET:A:c088 (vocabulary bias, adversarial fragility, character-level tasks) but not the expected motivation (tokenization as a barrier to end-to-end models; no tokenizer-free model had matched tokenized ones); expected gold not in context"}
+ }
+}

@@ -1,0 +1,377 @@
+{
+ "procedure": "re-run production search (G from config, setting B) per corpus via relay.corpus; gold matched by phase 11F code; metrics computed with explicit denominators",
+ "labels": {
+  "original": "project set; gold quotes assistant-located; NOT independently reviewed",
+  "table": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+  "new": "PROVISIONAL: assistant-written (phase 11A)"
+ },
+ "agreement_with_phase11e_rows": {
+  "questions_compared": 148,
+  "mismatches": [],
+  "identical": true
+ },
+ "metrics": {
+  "c3": {
+   "original": {
+    "questions": 15,
+    "gold_units": 34,
+    "recall@5": {
+     "numerator": 18,
+     "denominator": 34,
+     "value": 0.529
+    },
+    "recall@8": {
+     "numerator": 22,
+     "denominator": 34,
+     "value": 0.647
+    },
+    "mrr": {
+     "sum_of_reciprocal_ranks": 8.952,
+     "questions": 15,
+     "value": 0.597
+    },
+    "gold_units_found_in_context": {
+     "numerator": 22,
+     "denominator": 34,
+     "value": 0.647
+    },
+    "gold_units_complete_in_context": {
+     "numerator": 22,
+     "denominator": 34,
+     "value": 0.647
+    },
+    "questions_with_complete_gold_in_context": {
+     "numerator": 8,
+     "denominator": 15,
+     "value": 0.533
+    }
+   },
+   "original_nontable": {
+    "questions": 12,
+    "gold_units": 27,
+    "recall@5": {
+     "numerator": 16,
+     "denominator": 27,
+     "value": 0.593
+    },
+    "recall@8": {
+     "numerator": 16,
+     "denominator": 27,
+     "value": 0.593
+    },
+    "mrr": {
+     "sum_of_reciprocal_ranks": 6.7854,
+     "questions": 12,
+     "value": 0.565
+    },
+    "gold_units_found_in_context": {
+     "numerator": 16,
+     "denominator": 27,
+     "value": 0.593
+    },
+    "gold_units_complete_in_context": {
+     "numerator": 16,
+     "denominator": 27,
+     "value": 0.593
+    },
+    "questions_with_complete_gold_in_context": {
+     "numerator": 6,
+     "denominator": 12,
+     "value": 0.5
+    }
+   },
+   "table": {
+    "questions": 24,
+    "gold_units": 31,
+    "recall@5": {
+     "numerator": 30,
+     "denominator": 31,
+     "value": 0.968
+    },
+    "recall@8": {
+     "numerator": 31,
+     "denominator": 31,
+     "value": 1.0
+    },
+    "mrr": {
+     "sum_of_reciprocal_ranks": 18.4167,
+     "questions": 24,
+     "value": 0.767
+    },
+    "gold_units_found_in_context": {
+     "numerator": 31,
+     "denominator": 31,
+     "value": 1.0
+    },
+    "gold_units_complete_in_context": {
+     "numerator": 5,
+     "denominator": 31,
+     "value": 0.161
+    },
+    "questions_with_complete_gold_in_context": {
+     "numerator": 3,
+     "denominator": 24,
+     "value": 0.125
+    }
+   },
+   "new": {
+    "questions": 10,
+    "gold_units": 12,
+    "recall@5": {
+     "numerator": 11,
+     "denominator": 12,
+     "value": 0.917
+    },
+    "recall@8": {
+     "numerator": 11,
+     "denominator": 12,
+     "value": 0.917
+    },
+    "mrr": {
+     "sum_of_reciprocal_ranks": 5.6167,
+     "questions": 10,
+     "value": 0.562
+    },
+    "gold_units_found_in_context": {
+     "numerator": 11,
+     "denominator": 12,
+     "value": 0.917
+    },
+    "gold_units_complete_in_context": {
+     "numerator": 11,
+     "denominator": 12,
+     "value": 0.917
+    },
+    "questions_with_complete_gold_in_context": {
+     "numerator": 9,
+     "denominator": 10,
+     "value": 0.9
+    }
+   }
+  },
+  "c6": {
+   "original": {
+    "questions": 15,
+    "gold_units": 34,
+    "recall@5": {
+     "numerator": 18,
+     "denominator": 34,
+     "value": 0.529
+    },
+    "recall@8": {
+     "numerator": 22,
+     "denominator": 34,
+     "value": 0.647
+    },
+    "mrr": {
+     "sum_of_reciprocal_ranks": 8.9409,
+     "questions": 15,
+     "value": 0.596
+    },
+    "gold_units_found_in_context": {
+     "numerator": 22,
+     "denominator": 34,
+     "value": 0.647
+    },
+    "gold_units_complete_in_context": {
+     "numerator": 22,
+     "denominator": 34,
+     "value": 0.647
+    },
+    "questions_with_complete_gold_in_context": {
+     "numerator": 8,
+     "denominator": 15,
+     "value": 0.533
+    }
+   },
+   "original_nontable": {
+    "questions": 12,
+    "gold_units": 27,
+    "recall@5": {
+     "numerator": 16,
+     "denominator": 27,
+     "value": 0.593
+    },
+    "recall@8": {
+     "numerator": 16,
+     "denominator": 27,
+     "value": 0.593
+    },
+    "mrr": {
+     "sum_of_reciprocal_ranks": 6.7742,
+     "questions": 12,
+     "value": 0.565
+    },
+    "gold_units_found_in_context": {
+     "numerator": 16,
+     "denominator": 27,
+     "value": 0.593
+    },
+    "gold_units_complete_in_context": {
+     "numerator": 16,
+     "denominator": 27,
+     "value": 0.593
+    },
+    "questions_with_complete_gold_in_context": {
+     "numerator": 6,
+     "denominator": 12,
+     "value": 0.5
+    }
+   },
+   "table": {
+    "questions": 24,
+    "gold_units": 31,
+    "recall@5": {
+     "numerator": 25,
+     "denominator": 31,
+     "value": 0.806
+    },
+    "recall@8": {
+     "numerator": 27,
+     "denominator": 31,
+     "value": 0.871
+    },
+    "mrr": {
+     "sum_of_reciprocal_ranks": 16.0167,
+     "questions": 24,
+     "value": 0.667
+    },
+    "gold_units_found_in_context": {
+     "numerator": 27,
+     "denominator": 31,
+     "value": 0.871
+    },
+    "gold_units_complete_in_context": {
+     "numerator": 27,
+     "denominator": 31,
+     "value": 0.871
+    },
+    "questions_with_complete_gold_in_context": {
+     "numerator": 22,
+     "denominator": 24,
+     "value": 0.917
+    }
+   },
+   "new": {
+    "questions": 10,
+    "gold_units": 12,
+    "recall@5": {
+     "numerator": 11,
+     "denominator": 12,
+     "value": 0.917
+    },
+    "recall@8": {
+     "numerator": 11,
+     "denominator": 12,
+     "value": 0.917
+    },
+    "mrr": {
+     "sum_of_reciprocal_ranks": 5.6167,
+     "questions": 10,
+     "value": 0.562
+    },
+    "gold_units_found_in_context": {
+     "numerator": 11,
+     "denominator": 12,
+     "value": 0.917
+    },
+    "gold_units_complete_in_context": {
+     "numerator": 11,
+     "denominator": 12,
+     "value": 0.917
+    },
+    "questions_with_complete_gold_in_context": {
+     "numerator": 9,
+     "denominator": 10,
+     "value": 0.9
+    }
+   }
+  }
+ },
+ "stored_phase11e_summary": {
+  "c3": {
+   "original": {
+    "questions": 15,
+    "recall@5": 0.529,
+    "recall@8": 0.647,
+    "mrr": 0.597,
+    "coverage": 0.647,
+    "all_gold_questions": 8,
+    "multi_unit_all_gold": "5/12",
+    "budget_retention": 1.0
+   },
+   "original_nontable": {
+    "questions": 12,
+    "recall@5": 0.593,
+    "recall@8": 0.593,
+    "mrr": 0.565,
+    "coverage": 0.593,
+    "all_gold_questions": 6,
+    "multi_unit_all_gold": "3/9",
+    "budget_retention": 1.0
+   },
+   "table": {
+    "questions": 24,
+    "recall@5": 0.968,
+    "recall@8": 1.0,
+    "mrr": 0.767,
+    "coverage": 1.0,
+    "all_gold_questions": 3,
+    "multi_unit_all_gold": "0/5",
+    "budget_retention": 1.0
+   },
+   "new": {
+    "questions": 10,
+    "recall@5": 0.917,
+    "recall@8": 0.917,
+    "mrr": 0.562,
+    "coverage": 0.917,
+    "all_gold_questions": 9,
+    "multi_unit_all_gold": "1/2",
+    "budget_retention": 1.0
+   }
+  },
+  "c6": {
+   "original": {
+    "questions": 15,
+    "recall@5": 0.529,
+    "recall@8": 0.647,
+    "mrr": 0.596,
+    "coverage": 0.647,
+    "all_gold_questions": 8,
+    "multi_unit_all_gold": "5/12",
+    "budget_retention": 1.0
+   },
+   "original_nontable": {
+    "questions": 12,
+    "recall@5": 0.593,
+    "recall@8": 0.593,
+    "mrr": 0.565,
+    "coverage": 0.593,
+    "all_gold_questions": 6,
+    "multi_unit_all_gold": "3/9",
+    "budget_retention": 1.0
+   },
+   "table": {
+    "questions": 24,
+    "recall@5": 0.806,
+    "recall@8": 0.871,
+    "mrr": 0.667,
+    "coverage": 0.871,
+    "all_gold_questions": 22,
+    "multi_unit_all_gold": "4/5",
+    "budget_retention": 1.0
+   },
+   "new": {
+    "questions": 10,
+    "recall@5": 0.917,
+    "recall@8": 0.917,
+    "mrr": 0.562,
+    "coverage": 0.917,
+    "all_gold_questions": 9,
+    "multi_unit_all_gold": "1/2",
+    "budget_retention": 1.0
+   }
+  }
+ }
+}

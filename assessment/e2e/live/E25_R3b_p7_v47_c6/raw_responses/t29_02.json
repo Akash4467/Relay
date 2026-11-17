@@ -1,0 +1,41 @@
+{
+ "question_id": "t29",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:10:51.431+00:00",
+  "t_send_ns": 206301431825300,
+  "status": 200,
+  "t_first_byte_ns": 206301807071400,
+  "t_first_content_ns": 206302522660900,
+  "t_last_ns": 206302576048800,
+  "max_gap_ms": 715.5591,
+  "text": "Configuration Row 5 reports ABX (↓) = 29.1%[MOSHI:T17:r03].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.287898824,
+   "prompt_tokens": 2407,
+   "prompt_time": 0.105944884,
+   "completion_tokens": 317,
+   "completion_time": 0.666998755,
+   "total_tokens": 2724,
+   "total_time": 0.772943639,
+   "completion_tokens_details": {
+    "reasoning_tokens": 284
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "960",
+   "x-ratelimit-reset-requests": "57m36s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5246",
+   "x-ratelimit-reset-tokens": "20.655s"
+  },
+  "error": null,
+  "first_byte_ms": 375.2,
+  "first_content_ms": 1090.8,
+  "total_ms": 1144.2
+ }
+}

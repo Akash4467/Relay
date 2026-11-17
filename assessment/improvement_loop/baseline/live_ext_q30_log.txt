@@ -1,0 +1,1 @@
+q30 | ok refused model: not in papers | calls 1 | tok 1796 + 46 | run {'requests': 2, 'tokens': 1842, 'refused': 0}

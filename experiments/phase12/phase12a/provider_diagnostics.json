@@ -1,0 +1,1811 @@
+{
+ "phase12a_gate": {
+  "checks": {
+   "auth_ok_and_primary_model_listed": true,
+   "streaming_200_with_content_and_usage": true,
+   "rate_limit_headers_returned": true,
+   "token_accounting_within_15pct": true,
+   "p4_prompt_completed": true,
+   "invalid_key_rejected_401": true,
+   "timeout_raised_as_timeout": true
+  },
+  "passed": true
+ },
+ "model_list": {
+  "http": 200,
+  "n_models": 11,
+  "primary_listed": true,
+  "gpt_oss_models": [
+   "openai/gpt-oss-120b",
+   "openai/gpt-oss-20b",
+   "openai/gpt-oss-safeguard-20b"
+  ],
+  "client_ms": 801.0
+ },
+ "token_accounting": {
+  "local_prompt_estimate": 979,
+  "provider_prompt_tokens": 978,
+  "relative_error": -0.001
+ },
+ "phase12b_calls": {
+  "n": 38,
+  "status": {
+   "ok": 38
+  },
+  "http": {
+   "200": 38
+  },
+  "finish_reason": {
+   "stop": 38
+  },
+  "prompt_tokens_local_error": [
+   -1,
+   1,
+   -1,
+   1,
+   -1,
+   1,
+   -1,
+   1,
+   -1,
+   1,
+   -1,
+   -1,
+   1,
+   -1,
+   1,
+   -1,
+   -1,
+   1,
+   -1,
+   -1,
+   -1,
+   1,
+   -1,
+   1,
+   -1,
+   1,
+   -1,
+   1,
+   -1,
+   1,
+   -1,
+   -1,
+   -1,
+   -1,
+   -1,
+   1,
+   -1,
+   -1
+  ],
+  "reservation_overrun_tokens": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "usage_source": [
+   "usage"
+  ],
+  "min_remaining_tokens_per_minute_header": 2830,
+  "min_remaining_requests_header": 960
+ },
+ "calls": [
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1850,
+   "reserved": 2620,
+   "governor_wait_ms": 0.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.318215129,
+    "prompt_tokens": 1849,
+    "prompt_time": 0.107641647,
+    "completion_tokens": 140,
+    "completion_time": 0.291806216,
+    "total_tokens": 1989,
+    "total_time": 0.399447863,
+    "completion_tokens_details": {
+     "reasoning_tokens": 42
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1849,
+   "tokens_out": 140,
+   "reasoning_tokens": 42,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 420.5,
+   "model_ttft_ms": 628.9,
+   "total_ms": 815.2,
+   "max_gap_ms": 208.4,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "997",
+    "x-ratelimit-reset-requests": "4m19.2s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "6128",
+    "x-ratelimit-reset-tokens": "14.04s"
+   },
+   "corpus": "c3",
+   "question_id": "q01"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 2054,
+   "reserved": 2824,
+   "governor_wait_ms": 0.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.370183268,
+    "prompt_tokens": 2055,
+    "prompt_time": 0.109540366,
+    "completion_tokens": 118,
+    "completion_time": 0.247342369,
+    "total_tokens": 2173,
+    "total_time": 0.356882735,
+    "completion_tokens_details": {
+     "reasoning_tokens": 35
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 2055,
+   "tokens_out": 118,
+   "reasoning_tokens": 35,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 472.7,
+   "model_ttft_ms": 669.0,
+   "total_ms": 823.8,
+   "max_gap_ms": 196.3,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "996",
+    "x-ratelimit-reset-requests": "5m45.6s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "4084",
+    "x-ratelimit-reset-tokens": "29.37s"
+   },
+   "corpus": "c3",
+   "question_id": "q01"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1840,
+   "reserved": 2610,
+   "governor_wait_ms": 12516.5,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.158377302,
+    "prompt_tokens": 1839,
+    "prompt_time": 0.897539253,
+    "completion_tokens": 99,
+    "completion_time": 0.216747766,
+    "total_tokens": 1938,
+    "total_time": 1.114287019,
+    "prompt_tokens_details": {
+     "cached_tokens": 1792
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 56
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1839,
+   "tokens_out": 99,
+   "reasoning_tokens": 56,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 268.4,
+   "model_ttft_ms": 1306.0,
+   "total_ms": 1376.8,
+   "max_gap_ms": 1037.5,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "991",
+    "x-ratelimit-reset-requests": "12m57.599s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "2830",
+    "x-ratelimit-reset-tokens": "38.775s"
+   },
+   "corpus": "c3",
+   "question_id": "q02"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1974,
+   "reserved": 2744,
+   "governor_wait_ms": 13435.8,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.318275975,
+    "prompt_tokens": 1975,
+    "prompt_time": 0.075880302,
+    "completion_tokens": 133,
+    "completion_time": 0.290748592,
+    "total_tokens": 2108,
+    "total_time": 0.366628894,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 77
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 1975,
+   "tokens_out": 133,
+   "reasoning_tokens": 77,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 414.0,
+   "model_ttft_ms": 664.6,
+   "total_ms": 775.4,
+   "max_gap_ms": 250.5,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "990",
+    "x-ratelimit-reset-requests": "14m24s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "4623",
+    "x-ratelimit-reset-tokens": "25.327s"
+   },
+   "corpus": "c3",
+   "question_id": "q02"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1716,
+   "reserved": 2486,
+   "governor_wait_ms": 11504.7,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.305097425,
+    "prompt_tokens": 1715,
+    "prompt_time": 0.077178873,
+    "completion_tokens": 291,
+    "completion_time": 0.611230643,
+    "total_tokens": 2006,
+    "total_time": 0.688409516,
+    "completion_tokens_details": {
+     "reasoning_tokens": 77
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1715,
+   "tokens_out": 291,
+   "reasoning_tokens": 77,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 406.8,
+   "model_ttft_ms": 662.7,
+   "total_ms": 1090.2,
+   "max_gap_ms": 255.8,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "989",
+    "x-ratelimit-reset-requests": "15m50.4s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "4875",
+    "x-ratelimit-reset-tokens": "23.437s"
+   },
+   "corpus": "c3",
+   "question_id": "q07"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 2147,
+   "reserved": 2917,
+   "governor_wait_ms": 9459.9,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.317462676,
+    "prompt_tokens": 2148,
+    "prompt_time": 0.127173959,
+    "completion_tokens": 312,
+    "completion_time": 1.195958658,
+    "total_tokens": 2460,
+    "total_time": 1.323132617,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 133
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 2148,
+   "tokens_out": 312,
+   "reasoning_tokens": 133,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 397.4,
+   "model_ttft_ms": 813.5,
+   "total_ms": 1716.4,
+   "max_gap_ms": 416.0,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "988",
+    "x-ratelimit-reset-requests": "17m16.8s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "4953",
+    "x-ratelimit-reset-tokens": "22.852s"
+   },
+   "corpus": "c3",
+   "question_id": "q07"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1887,
+   "reserved": 2657,
+   "governor_wait_ms": 12485.7,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.318914806,
+    "prompt_tokens": 1886,
+    "prompt_time": 0.083502219,
+    "completion_tokens": 110,
+    "completion_time": 0.227482454,
+    "total_tokens": 1996,
+    "total_time": 0.310984673,
+    "completion_tokens_details": {
+     "reasoning_tokens": 53
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1886,
+   "tokens_out": 110,
+   "reasoning_tokens": 53,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 399.5,
+   "model_ttft_ms": 603.8,
+   "total_ms": 699.1,
+   "max_gap_ms": 204.3,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "983",
+    "x-ratelimit-reset-requests": "24m28.8s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "4950",
+    "x-ratelimit-reset-tokens": "22.875s"
+   },
+   "corpus": "c3",
+   "question_id": "q15"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 2017,
+   "reserved": 2787,
+   "governor_wait_ms": 13614.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.317552007,
+    "prompt_tokens": 2018,
+    "prompt_time": 0.011762802,
+    "completion_tokens": 157,
+    "completion_time": 0.326432833,
+    "total_tokens": 2175,
+    "total_time": 0.338195635,
+    "prompt_tokens_details": {
+     "cached_tokens": 1792
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 108
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 2018,
+   "tokens_out": 157,
+   "reasoning_tokens": 108,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 445.3,
+   "model_ttft_ms": 694.9,
+   "total_ms": 778.4,
+   "max_gap_ms": 249.6,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "982",
+    "x-ratelimit-reset-requests": "25m55.199s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "4976",
+    "x-ratelimit-reset-tokens": "22.68s"
+   },
+   "corpus": "c3",
+   "question_id": "q15"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1727,
+   "reserved": 2497,
+   "governor_wait_ms": 11173.7,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.367436905,
+    "prompt_tokens": 1726,
+    "prompt_time": 0.07629748,
+    "completion_tokens": 117,
+    "completion_time": 0.241596668,
+    "total_tokens": 1843,
+    "total_time": 0.317894148,
+    "completion_tokens_details": {
+     "reasoning_tokens": 81
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1726,
+   "tokens_out": 117,
+   "reasoning_tokens": 81,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 443.2,
+   "model_ttft_ms": 701.3,
+   "total_ms": 765.2,
+   "max_gap_ms": 258.1,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "981",
+    "x-ratelimit-reset-requests": "27m21.6s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5983",
+    "x-ratelimit-reset-tokens": "15.127s"
+   },
+   "corpus": "c3",
+   "question_id": "t01"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1833,
+   "reserved": 2603,
+   "governor_wait_ms": 12495.9,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.318109,
+    "prompt_tokens": 1834,
+    "prompt_time": 0.109857816,
+    "completion_tokens": 64,
+    "completion_time": 0.207300113,
+    "total_tokens": 1898,
+    "total_time": 0.317157929,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 50
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 1834,
+   "tokens_out": 64,
+   "reasoning_tokens": 50,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 404.9,
+   "model_ttft_ms": 693.8,
+   "total_ms": 717.9,
+   "max_gap_ms": 288.9,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "980",
+    "x-ratelimit-reset-requests": "28m48s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5854",
+    "x-ratelimit-reset-tokens": "16.094s"
+   },
+   "corpus": "c3",
+   "question_id": "t01"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1721,
+   "reserved": 2491,
+   "governor_wait_ms": 10460.2,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.319509279,
+    "prompt_tokens": 1720,
+    "prompt_time": 0.170161716,
+    "completion_tokens": 106,
+    "completion_time": 0.221207335,
+    "total_tokens": 1826,
+    "total_time": 0.391369051,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 61
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1720,
+   "tokens_out": 106,
+   "reasoning_tokens": 61,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 447.7,
+   "model_ttft_ms": 759.8,
+   "total_ms": 834.8,
+   "max_gap_ms": 312.2,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "976",
+    "x-ratelimit-reset-requests": "34m33.6s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5958",
+    "x-ratelimit-reset-tokens": "15.314s"
+   },
+   "corpus": "c3",
+   "question_id": "t05"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1841,
+   "reserved": 2611,
+   "governor_wait_ms": 11483.1,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.28817189,
+    "prompt_tokens": 1840,
+    "prompt_time": 0.258367822,
+    "completion_tokens": 173,
+    "completion_time": 0.54574575,
+    "total_tokens": 2013,
+    "total_time": 0.804113572,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 106
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1840,
+   "tokens_out": 173,
+   "reasoning_tokens": 106,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 431.2,
+   "model_ttft_ms": 1110.2,
+   "total_ms": 1230.1,
+   "max_gap_ms": 679.0,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "975",
+    "x-ratelimit-reset-requests": "36m0s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5869",
+    "x-ratelimit-reset-tokens": "15.982s"
+   },
+   "corpus": "c3",
+   "question_id": "t13"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 2030,
+   "reserved": 2800,
+   "governor_wait_ms": 14552.2,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.158625139,
+    "prompt_tokens": 2031,
+    "prompt_time": 0.090002243,
+    "completion_tokens": 51,
+    "completion_time": 0.106403507,
+    "total_tokens": 2082,
+    "total_time": 0.19640575,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 37
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 2031,
+   "tokens_out": 51,
+   "reasoning_tokens": 37,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 322.2,
+   "model_ttft_ms": 502.6,
+   "total_ms": 512.7,
+   "max_gap_ms": 180.3,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "974",
+    "x-ratelimit-reset-requests": "37m26.4s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5678",
+    "x-ratelimit-reset-tokens": "17.415s"
+   },
+   "corpus": "c3",
+   "question_id": "t13"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1909,
+   "reserved": 2679,
+   "governor_wait_ms": 13724.9,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.370165632,
+    "prompt_tokens": 1908,
+    "prompt_time": 0.099012823,
+    "completion_tokens": 204,
+    "completion_time": 0.425771606,
+    "total_tokens": 2112,
+    "total_time": 0.524784429,
+    "completion_tokens_details": {
+     "reasoning_tokens": 139
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1908,
+   "tokens_out": 204,
+   "reasoning_tokens": 139,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 526.1,
+   "model_ttft_ms": 930.0,
+   "total_ms": 1060.4,
+   "max_gap_ms": 403.9,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "971",
+    "x-ratelimit-reset-requests": "41m45.6s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5780",
+    "x-ratelimit-reset-tokens": "16.65s"
+   },
+   "corpus": "c3",
+   "question_id": "q11"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 2097,
+   "reserved": 2867,
+   "governor_wait_ms": 15147.1,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.286372784,
+    "prompt_tokens": 2098,
+    "prompt_time": 0.164238451,
+    "completion_tokens": 115,
+    "completion_time": 0.243210678,
+    "total_tokens": 2213,
+    "total_time": 0.407449129,
+    "completion_tokens_details": {
+     "reasoning_tokens": 101
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 2098,
+   "tokens_out": 115,
+   "reasoning_tokens": 101,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 436.3,
+   "model_ttft_ms": 829.4,
+   "total_ms": 839.7,
+   "max_gap_ms": 393.2,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "970",
+    "x-ratelimit-reset-requests": "43m12s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5611",
+    "x-ratelimit-reset-tokens": "17.917s"
+   },
+   "corpus": "c3",
+   "question_id": "q11"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1838,
+   "reserved": 2608,
+   "governor_wait_ms": 13050.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.370683238,
+    "prompt_tokens": 1837,
+    "prompt_time": 0.391718627,
+    "completion_tokens": 46,
+    "completion_time": 0.428399904,
+    "total_tokens": 1883,
+    "total_time": 0.820118531,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 32
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1837,
+   "tokens_out": 46,
+   "reasoning_tokens": 32,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 522.5,
+   "model_ttft_ms": 1141.9,
+   "total_ms": 1338.2,
+   "max_gap_ms": 619.4,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "969",
+    "x-ratelimit-reset-requests": "44m38.4s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5637",
+    "x-ratelimit-reset-tokens": "17.722s"
+   },
+   "corpus": "c3",
+   "question_id": "t10"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1720,
+   "reserved": 2490,
+   "governor_wait_ms": 11525.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.368294201,
+    "prompt_tokens": 1719,
+    "prompt_time": 0.097179395,
+    "completion_tokens": 152,
+    "completion_time": 0.316346242,
+    "total_tokens": 1871,
+    "total_time": 0.413525637,
+    "completion_tokens_details": {
+     "reasoning_tokens": 112
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1719,
+   "tokens_out": 152,
+   "reasoning_tokens": 112,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 517.1,
+   "model_ttft_ms": 862.1,
+   "total_ms": 927.8,
+   "max_gap_ms": 345.0,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "965",
+    "x-ratelimit-reset-requests": "50m24s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5910",
+    "x-ratelimit-reset-tokens": "15.674s"
+   },
+   "corpus": "c3",
+   "question_id": "t29"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1843,
+   "reserved": 2613,
+   "governor_wait_ms": 13513.1,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.374402224,
+    "prompt_tokens": 1844,
+    "prompt_time": 0.11013351,
+    "completion_tokens": 86,
+    "completion_time": 0.17764035,
+    "total_tokens": 1930,
+    "total_time": 0.28777386,
+    "completion_tokens_details": {
+     "reasoning_tokens": 46
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 1844,
+   "tokens_out": 86,
+   "reasoning_tokens": 46,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 507.2,
+   "model_ttft_ms": 725.9,
+   "total_ms": 788.9,
+   "max_gap_ms": 218.7,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "964",
+    "x-ratelimit-reset-requests": "51m50.399s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5892",
+    "x-ratelimit-reset-tokens": "15.81s"
+   },
+   "corpus": "c3",
+   "question_id": "t29"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1701,
+   "reserved": 2471,
+   "governor_wait_ms": 11380.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.370207049,
+    "prompt_tokens": 1700,
+    "prompt_time": 0.180033135,
+    "completion_tokens": 38,
+    "completion_time": 0.078638332,
+    "total_tokens": 1738,
+    "total_time": 0.258671467,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 24
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1700,
+   "tokens_out": 38,
+   "reasoning_tokens": 24,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 1516.8,
+   "model_ttft_ms": 1759.7,
+   "total_ms": 1770.6,
+   "max_gap_ms": 242.9,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "963",
+    "x-ratelimit-reset-requests": "53m16.799s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5979",
+    "x-ratelimit-reset-tokens": "15.157s"
+   },
+   "corpus": "c3",
+   "question_id": "q16"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1819,
+   "reserved": 2589,
+   "governor_wait_ms": 12498.9,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.317879839,
+    "prompt_tokens": 1818,
+    "prompt_time": 0.744751877,
+    "completion_tokens": 76,
+    "completion_time": 0.157848527,
+    "total_tokens": 1894,
+    "total_time": 0.902600404,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 62
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1818,
+   "tokens_out": 76,
+   "reasoning_tokens": 62,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 483.1,
+   "model_ttft_ms": 1370.7,
+   "total_ms": 1380.4,
+   "max_gap_ms": 887.6,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "960",
+    "x-ratelimit-reset-requests": "57m36s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5921",
+    "x-ratelimit-reset-tokens": "15.592s"
+   },
+   "corpus": "c3",
+   "question_id": "q27"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1850,
+   "reserved": 2620,
+   "governor_wait_ms": 0.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.371524732,
+    "prompt_tokens": 1849,
+    "prompt_time": 0.156020731,
+    "completion_tokens": 136,
+    "completion_time": 0.283923853,
+    "total_tokens": 1985,
+    "total_time": 0.439944584,
+    "prompt_tokens_details": {
+     "cached_tokens": 1792
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 42
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1849,
+   "tokens_out": 136,
+   "reasoning_tokens": 42,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 460.5,
+   "model_ttft_ms": 719.2,
+   "total_ms": 896.2,
+   "max_gap_ms": 258.7,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "995",
+    "x-ratelimit-reset-requests": "7m12s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "2924",
+    "x-ratelimit-reset-tokens": "38.07s"
+   },
+   "corpus": "c6",
+   "question_id": "q01"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 2042,
+   "reserved": 2812,
+   "governor_wait_ms": 0.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.31764961,
+    "prompt_tokens": 2043,
+    "prompt_time": 0.226905943,
+    "completion_tokens": 118,
+    "completion_time": 0.247094519,
+    "total_tokens": 2161,
+    "total_time": 0.474000462,
+    "completion_tokens_details": {
+     "reasoning_tokens": 38
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 2043,
+   "tokens_out": 118,
+   "reasoning_tokens": 38,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 400.3,
+   "model_ttft_ms": 724.2,
+   "total_ms": 870.0,
+   "max_gap_ms": 323.9,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "994",
+    "x-ratelimit-reset-requests": "8m38.4s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "3072",
+    "x-ratelimit-reset-tokens": "36.96s"
+   },
+   "corpus": "c6",
+   "question_id": "q01"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1840,
+   "reserved": 2610,
+   "governor_wait_ms": 9953.7,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.15864437,
+    "prompt_tokens": 1839,
+    "prompt_time": 0.432445571,
+    "completion_tokens": 99,
+    "completion_time": 0.20568395,
+    "total_tokens": 1938,
+    "total_time": 0.638129521,
+    "completion_tokens_details": {
+     "reasoning_tokens": 56
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1839,
+   "tokens_out": 99,
+   "reasoning_tokens": 56,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 254.0,
+   "model_ttft_ms": 818.2,
+   "total_ms": 889.4,
+   "max_gap_ms": 564.2,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "993",
+    "x-ratelimit-reset-requests": "10m4.8s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "2833",
+    "x-ratelimit-reset-tokens": "38.752s"
+   },
+   "corpus": "c6",
+   "question_id": "q02"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1974,
+   "reserved": 2744,
+   "governor_wait_ms": 13895.1,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.157926953,
+    "prompt_tokens": 1975,
+    "prompt_time": 0.114983328,
+    "completion_tokens": 133,
+    "completion_time": 0.280073101,
+    "total_tokens": 2108,
+    "total_time": 0.395056429,
+    "completion_tokens_details": {
+     "reasoning_tokens": 77
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 1975,
+   "tokens_out": 133,
+   "reasoning_tokens": 77,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 256.2,
+   "model_ttft_ms": 546.5,
+   "total_ms": 644.5,
+   "max_gap_ms": 290.3,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "992",
+    "x-ratelimit-reset-requests": "11m31.2s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "2830",
+    "x-ratelimit-reset-tokens": "38.775s"
+   },
+   "corpus": "c6",
+   "question_id": "q02"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1716,
+   "reserved": 2486,
+   "governor_wait_ms": 10817.6,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.209558397,
+    "prompt_tokens": 1715,
+    "prompt_time": 0.10437969,
+    "completion_tokens": 290,
+    "completion_time": 0.613042901,
+    "total_tokens": 2005,
+    "total_time": 0.717422591,
+    "completion_tokens_details": {
+     "reasoning_tokens": 100
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1715,
+   "tokens_out": 290,
+   "reasoning_tokens": 100,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 293.4,
+   "model_ttft_ms": 626.0,
+   "total_ms": 1007.5,
+   "max_gap_ms": 332.6,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "987",
+    "x-ratelimit-reset-requests": "18m43.2s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "4956",
+    "x-ratelimit-reset-tokens": "22.83s"
+   },
+   "corpus": "c6",
+   "question_id": "q07"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 2236,
+   "reserved": 3006,
+   "governor_wait_ms": 13377.8,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.370773154,
+    "prompt_tokens": 2237,
+    "prompt_time": 0.104869781,
+    "completion_tokens": 264,
+    "completion_time": 0.555569783,
+    "total_tokens": 2501,
+    "total_time": 0.660439564,
+    "completion_tokens_details": {
+     "reasoning_tokens": 101
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 2237,
+   "tokens_out": 264,
+   "reasoning_tokens": 101,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 462.1,
+   "model_ttft_ms": 792.8,
+   "total_ms": 1117.7,
+   "max_gap_ms": 330.7,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "986",
+    "x-ratelimit-reset-requests": "20m9.6s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5130",
+    "x-ratelimit-reset-tokens": "21.525s"
+   },
+   "corpus": "c6",
+   "question_id": "q07"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1887,
+   "reserved": 2657,
+   "governor_wait_ms": 9387.3,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.367383409,
+    "prompt_tokens": 1886,
+    "prompt_time": 0.093335385,
+    "completion_tokens": 110,
+    "completion_time": 0.229299088,
+    "total_tokens": 1996,
+    "total_time": 0.322634473,
+    "completion_tokens_details": {
+     "reasoning_tokens": 53
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1886,
+   "tokens_out": 110,
+   "reasoning_tokens": 53,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 495.1,
+   "model_ttft_ms": 713.4,
+   "total_ms": 812.7,
+   "max_gap_ms": 218.3,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "985",
+    "x-ratelimit-reset-requests": "21m36s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5007",
+    "x-ratelimit-reset-tokens": "22.447s"
+   },
+   "corpus": "c6",
+   "question_id": "q15"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 2017,
+   "reserved": 2787,
+   "governor_wait_ms": 13529.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.245108953,
+    "prompt_tokens": 2018,
+    "prompt_time": 0.085147994,
+    "completion_tokens": 147,
+    "completion_time": 0.304102579,
+    "total_tokens": 2165,
+    "total_time": 0.389250573,
+    "completion_tokens_details": {
+     "reasoning_tokens": 98
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 2018,
+   "tokens_out": 147,
+   "reasoning_tokens": 98,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 335.3,
+   "model_ttft_ms": 638.0,
+   "total_ms": 720.3,
+   "max_gap_ms": 302.7,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "984",
+    "x-ratelimit-reset-requests": "23m2.4s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "4953",
+    "x-ratelimit-reset-tokens": "22.852s"
+   },
+   "corpus": "c6",
+   "question_id": "q15"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1824,
+   "reserved": 2594,
+   "governor_wait_ms": 12126.8,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.317288749,
+    "prompt_tokens": 1823,
+    "prompt_time": 0.352900859,
+    "completion_tokens": 73,
+    "completion_time": 0.476259715,
+    "total_tokens": 1896,
+    "total_time": 0.829160574,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 23
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1823,
+   "tokens_out": 73,
+   "reasoning_tokens": 23,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 402.8,
+   "model_ttft_ms": 1140.3,
+   "total_ms": 1226.3,
+   "max_gap_ms": 737.4,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "979",
+    "x-ratelimit-reset-requests": "30m14.4s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5886",
+    "x-ratelimit-reset-tokens": "15.854s"
+   },
+   "corpus": "c6",
+   "question_id": "t01"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1958,
+   "reserved": 2728,
+   "governor_wait_ms": 12429.1,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.318017182,
+    "prompt_tokens": 1959,
+    "prompt_time": 0.713089524,
+    "completion_tokens": 84,
+    "completion_time": 0.50865454,
+    "total_tokens": 2043,
+    "total_time": 1.221744064,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 41
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 1959,
+   "tokens_out": 84,
+   "reasoning_tokens": 41,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 398.7,
+   "model_ttft_ms": 1486.6,
+   "total_ms": 1617.2,
+   "max_gap_ms": 1087.9,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "978",
+    "x-ratelimit-reset-requests": "31m40.8s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5777",
+    "x-ratelimit-reset-tokens": "16.672s"
+   },
+   "corpus": "c6",
+   "question_id": "t01"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1727,
+   "reserved": 2497,
+   "governor_wait_ms": 8868.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.28812766,
+    "prompt_tokens": 1726,
+    "prompt_time": 0.124763937,
+    "completion_tokens": 120,
+    "completion_time": 0.254592341,
+    "total_tokens": 1846,
+    "total_time": 0.379356278,
+    "completion_tokens_details": {
+     "reasoning_tokens": 75
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1726,
+   "tokens_out": 120,
+   "reasoning_tokens": 75,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 438.3,
+   "model_ttft_ms": 737.3,
+   "total_ms": 812.7,
+   "max_gap_ms": 298.9,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "977",
+    "x-ratelimit-reset-requests": "33m7.2s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "6010",
+    "x-ratelimit-reset-tokens": "14.925s"
+   },
+   "corpus": "c6",
+   "question_id": "t05"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1871,
+   "reserved": 2641,
+   "governor_wait_ms": 12604.7,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.368627348,
+    "prompt_tokens": 1870,
+    "prompt_time": 0.110594497,
+    "completion_tokens": 127,
+    "completion_time": 0.265160191,
+    "total_tokens": 1997,
+    "total_time": 0.375754688,
+    "completion_tokens_details": {
+     "reasoning_tokens": 61
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1870,
+   "tokens_out": 127,
+   "reasoning_tokens": 61,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 505.4,
+   "model_ttft_ms": 754.0,
+   "total_ms": 882.7,
+   "max_gap_ms": 248.6,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "973",
+    "x-ratelimit-reset-requests": "38m52.8s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5818",
+    "x-ratelimit-reset-tokens": "16.364s"
+   },
+   "corpus": "c6",
+   "question_id": "t13"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1909,
+   "reserved": 2679,
+   "governor_wait_ms": 12451.3,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.158415761,
+    "prompt_tokens": 1908,
+    "prompt_time": 0.080352981,
+    "completion_tokens": 210,
+    "completion_time": 0.437191735,
+    "total_tokens": 2118,
+    "total_time": 0.517544716,
+    "completion_tokens_details": {
+     "reasoning_tokens": 160
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1908,
+   "tokens_out": 210,
+   "reasoning_tokens": 160,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 289.8,
+   "model_ttft_ms": 715.1,
+   "total_ms": 802.3,
+   "max_gap_ms": 425.3,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "972",
+    "x-ratelimit-reset-requests": "40m19.2s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5828",
+    "x-ratelimit-reset-tokens": "16.29s"
+   },
+   "corpus": "c6",
+   "question_id": "q11"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1887,
+   "reserved": 2657,
+   "governor_wait_ms": 12392.8,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.320366005,
+    "prompt_tokens": 1886,
+    "prompt_time": 0.096469161,
+    "completion_tokens": 38,
+    "completion_time": 0.078763992,
+    "total_tokens": 1924,
+    "total_time": 0.175233153,
+    "completion_tokens_details": {
+     "reasoning_tokens": 24
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1886,
+   "tokens_out": 38,
+   "reasoning_tokens": 24,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 446.8,
+   "model_ttft_ms": 608.3,
+   "total_ms": 620.3,
+   "max_gap_ms": 161.5,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "968",
+    "x-ratelimit-reset-requests": "46m4.8s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5823",
+    "x-ratelimit-reset-tokens": "16.327s"
+   },
+   "corpus": "c6",
+   "question_id": "t10"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1917,
+   "reserved": 2687,
+   "governor_wait_ms": 13199.2,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.157747136,
+    "prompt_tokens": 1916,
+    "prompt_time": 0.077020017,
+    "completion_tokens": 187,
+    "completion_time": 0.390612383,
+    "total_tokens": 2103,
+    "total_time": 0.4676324,
+    "completion_tokens_details": {
+     "reasoning_tokens": 146
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1916,
+   "tokens_out": 187,
+   "reasoning_tokens": 146,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 306.6,
+   "model_ttft_ms": 703.2,
+   "total_ms": 769.5,
+   "max_gap_ms": 396.6,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "967",
+    "x-ratelimit-reset-requests": "47m31.2s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5793",
+    "x-ratelimit-reset-tokens": "16.552s"
+   },
+   "corpus": "c6",
+   "question_id": "t29"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 2033,
+   "reserved": 2803,
+   "governor_wait_ms": 15530.9,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.319163749,
+    "prompt_tokens": 2034,
+    "prompt_time": 0.156174125,
+    "completion_tokens": 79,
+    "completion_time": 0.163642329,
+    "total_tokens": 2113,
+    "total_time": 0.319816454,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 38
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": 1,
+   "tokens_in": 2034,
+   "tokens_out": 79,
+   "reasoning_tokens": 38,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 464.2,
+   "model_ttft_ms": 713.6,
+   "total_ms": 779.9,
+   "max_gap_ms": 249.4,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "966",
+    "x-ratelimit-reset-requests": "48m57.6s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5702",
+    "x-ratelimit-reset-tokens": "17.235s"
+   },
+   "corpus": "c6",
+   "question_id": "t29"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1701,
+   "reserved": 2471,
+   "governor_wait_ms": 10448.4,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.157351839,
+    "prompt_tokens": 1700,
+    "prompt_time": 0.081064128,
+    "completion_tokens": 38,
+    "completion_time": 0.079600904,
+    "total_tokens": 1738,
+    "total_time": 0.160665032,
+    "completion_tokens_details": {
+     "reasoning_tokens": 24
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1700,
+   "tokens_out": 38,
+   "reasoning_tokens": 24,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 295.3,
+   "model_ttft_ms": 440.8,
+   "total_ms": 450.1,
+   "max_gap_ms": 145.5,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "962",
+    "x-ratelimit-reset-requests": "54m43.2s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5988",
+    "x-ratelimit-reset-tokens": "15.09s"
+   },
+   "corpus": "c6",
+   "question_id": "q16"
+  },
+  {
+   "model": "openai/gpt-oss-120b",
+   "attempt": 0,
+   "tokens_in_local": 1819,
+   "reserved": 2589,
+   "governor_wait_ms": 12595.0,
+   "status": "ok",
+   "http": 200,
+   "usage": {
+    "queue_time": 0.371174021,
+    "prompt_tokens": 1818,
+    "prompt_time": 0.096707404,
+    "completion_tokens": 61,
+    "completion_time": 0.126848187,
+    "total_tokens": 1879,
+    "total_time": 0.223555591,
+    "prompt_tokens_details": {
+     "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+     "reasoning_tokens": 47
+    }
+   },
+   "usage_estimated": false,
+   "usage_source": "usage",
+   "prompt_tokens_local_error": -1,
+   "tokens_in": 1818,
+   "tokens_out": 61,
+   "reasoning_tokens": 47,
+   "reservation_overrun_tokens": 0,
+   "finish_reason": "stop",
+   "first_byte_ms": 522.5,
+   "model_ttft_ms": 732.3,
+   "total_ms": 742.0,
+   "max_gap_ms": 209.8,
+   "rate_headers": {
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-remaining-requests": "961",
+    "x-ratelimit-reset-requests": "56m9.6s",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-tokens": "5918",
+    "x-ratelimit-reset-tokens": "15.614s"
+   },
+   "corpus": "c6",
+   "question_id": "q27"
+  }
+ ]
+}

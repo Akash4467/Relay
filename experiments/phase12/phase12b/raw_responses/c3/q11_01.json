@@ -1,0 +1,43 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "corpus_version": "c3",
+ "question_id": "q11",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:02:11.872+00:00",
+  "t_send_ns": 176981872369100,
+  "status": 200,
+  "t_first_byte_ns": 176982398488900,
+  "t_first_content_ns": 176982802416800,
+  "t_last_ns": 176982932720400,
+  "max_gap_ms": 403.9014,
+  "text": "The single‑head attention configuration (h = 1) achieved a development BLEU of 24.9 [AIAYN:T3:r02]. The base configuration achieved a development BLEU of 25.8 [AIAYN:T3:r02].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.370165632,
+   "prompt_tokens": 1908,
+   "prompt_time": 0.099012823,
+   "completion_tokens": 204,
+   "completion_time": 0.425771606,
+   "total_tokens": 2112,
+   "total_time": 0.524784429,
+   "completion_tokens_details": {
+    "reasoning_tokens": 139
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "971",
+   "x-ratelimit-reset-requests": "41m45.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5780",
+   "x-ratelimit-reset-tokens": "16.65s"
+  },
+  "error": null,
+  "first_byte_ms": 526.1,
+  "first_content_ms": 930.0,
+  "total_ms": 1060.4
+ }
+}

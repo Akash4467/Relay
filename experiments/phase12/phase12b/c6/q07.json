@@ -1,0 +1,278 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "timestamp": "2026-11-14T07:57:55.875+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "retrieval_config": {
+  "setting": "B",
+  "cross_paper_reserve_per_paper": 2,
+  "symbolic_query_expansion": true,
+  "prompt_caption_sharing": true
+ },
+ "question_id": "q07",
+ "group": "ordinary_answerable",
+ "question": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §3.2.3 Applications of Attention in our Model; AIAYN §3 Model Architecture; AIAYN §3.1 Encoder and Decoder Stacks; AIAYN §3.3 Position-wise Feed-Forward Networks.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "p12-c6-q07"
+ },
+ "client_ms": 36064.1,
+ "evidence_ids": [
+  "AIAYN:3.2.3:c016",
+  "AIAYN:3:c006",
+  "AIAYN:3.1:c009",
+  "AIAYN:3.3:c017",
+  "HNET:2.1.2:c017",
+  "HNET:3.3:c069",
+  "AIAYN:abstract:c001"
+ ],
+ "retrieval_query": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from? [d_k]",
+ "query_expansion": [
+  "d_k"
+ ],
+ "caption_sharing": true,
+ "gold_units_in_context": [
+  true,
+  true,
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  true,
+  true
+ ],
+ "drafts": [
+  "The decoder stack adds a third sub‑layer that performs multi‑head attention over the encoder’s output, whereas the encoder stack contains only self‑attention and feed‑forward sub‑layers [AIAYN:3.1:c009]. In the decoder, the self‑attention sub‑layer is masked so that each position can attend only to earlier positions, preserving the auto‑regressive property [AIAYN:3.2.3:c016]. Encoder‑decoder attention uses queries that come from the previous decoder layer, while the keys and values are taken from the encoder’s output representations [AIAYN:3.2.3:c016]. This allows every decoder position to attend to all positions of the input sequence. The decoder therefore differs by having masked self‑attention and an additional encoder‑decoder attention layer. The retrieved passages do not state how the decoder’s output embeddings are offset.",
+  "The decoder stack inserts a third sub‑layer that performs multi‑head attention over the encoder output, while each encoder layer has only the two sub‑layers of self‑attention and feed‑forward network [AIAYN:3.1:c009]. In the decoder, the self‑attention sub‑layer is masked so that positions cannot attend to subsequent positions, preserving the auto‑regressive property [AIAYN:3.2.3:c016]. Encoder‑decoder attention uses queries that come from the previous decoder layer, and the keys and values come from the encoder’s output [AIAYN:3.2.3:c016]. The retrieved passages do not state how the decoder combines these attended representations with its own feed‑forward sub‑layer."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.3:c016"
+   ],
+   "failures": [
+    [
+     "The decoder stack adds a third sub‑layer that performs multi‑head attention over the encoder’s output, whereas the encoder stack contains only self‑attention and feed‑forward sub‑layers [AIAYN:3.1:c009].",
+     "not supported by the cited passage (clause: \"The encoder stack contains only self‑attention and feed‑forward sub‑layers.\") (entailment 0.00 < 0.9)"
+    ],
+    [
+     "In the decoder, the self‑attention sub‑layer is masked so that each position can attend only to earlier positions, preserving the auto‑regressive property [AIAYN:3.2.3:c016].",
+     "not supported by the cited passage (clause: \"Each position can attend only to earlier positions, preserving the auto‑regressive property.\") (entailment 0.03 < 0.9)"
+    ],
+    [
+     "Encoder‑decoder attention uses queries that come from the previous decoder layer, while the keys and values are taken from the encoder’s output representations [AIAYN:3.2.3:c016].",
+     "not supported by the cited passage (clause: \"The keys and values are taken from the encoder’s output representations.\") (entailment 0.76 < 0.9)"
+    ],
+    [
+     "This allows every decoder position to attend to all positions of the input sequence.",
+     "no citation"
+    ],
+    [
+     "The decoder therefore differs by having masked self‑attention and an additional encoder‑decoder attention layer.",
+     "no citation"
+    ]
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.3:c016"
+   ],
+   "failures": [
+    [
+     "The decoder stack inserts a third sub‑layer that performs multi‑head attention over the encoder output, while each encoder layer has only the two sub‑layers of self‑attention and feed‑forward network [AIAYN:3.1:c009].",
+     "not supported by the cited passage (clause: \"Each encoder layer has only the two sub‑layers of self‑attention and feed‑forward network.\") (entailment 0.02 < 0.9)"
+    ],
+    [
+     "In the decoder, the self‑attention sub‑layer is masked so that positions cannot attend to subsequent positions, preserving the auto‑regressive property [AIAYN:3.2.3:c016].",
+     "not supported by the cited passage (clause: \"Positions cannot attend to subsequent positions, preserving the auto‑regressive property.\") (entailment 0.62 < 0.9)"
+    ]
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "identity_checks": {
+  "evidence_equals_selected_corpus": true,
+  "original_question_in_every_prompt": true,
+  "expanded_query_not_in_prompt": true
+ },
+ "trace": {
+  "request_id": "p12-c6-q07",
+  "scenario": "phase12_live",
+  "source": "real",
+  "start_time": "2026-11-14T07:57:55.875+00:00",
+  "question_id": "q07",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3952,
+  "tokens_out": 554,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 729.1,
+  "context_tokens": 1412,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "d_k"
+  ],
+  "retrieval_query": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from? [d_k]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3:c006",
+   "AIAYN:3.1:c009",
+   "AIAYN:3.3:c017",
+   "HNET:2.1.2:c017",
+   "HNET:3.3:c069",
+   "AIAYN:abstract:c001"
+  ],
+  "verification_ms": 8973.1,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 24195.4,
+  "model_ttft_ms": 626.0,
+  "first_byte_ms": 293.4,
+  "generation_ms": 2125.2,
+  "reasoning_tokens": 201,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1716,
+    "reserved": 2486,
+    "governor_wait_ms": 10817.6,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.209558397,
+     "prompt_tokens": 1715,
+     "prompt_time": 0.10437969,
+     "completion_tokens": 290,
+     "completion_time": 0.613042901,
+     "total_tokens": 2005,
+     "total_time": 0.717422591,
+     "completion_tokens_details": {
+      "reasoning_tokens": 100
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1715,
+    "tokens_out": 290,
+    "reasoning_tokens": 100,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 293.4,
+    "model_ttft_ms": 626.0,
+    "total_ms": 1007.5,
+    "max_gap_ms": 332.6,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "987",
+     "x-ratelimit-reset-requests": "18m43.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4956",
+     "x-ratelimit-reset-tokens": "22.83s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2236,
+    "reserved": 3006,
+    "governor_wait_ms": 13377.8,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.370773154,
+     "prompt_tokens": 2237,
+     "prompt_time": 0.104869781,
+     "completion_tokens": 264,
+     "completion_time": 0.555569783,
+     "total_tokens": 2501,
+     "total_time": 0.660439564,
+     "completion_tokens_details": {
+      "reasoning_tokens": 101
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2237,
+    "tokens_out": 264,
+    "reasoning_tokens": 101,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 462.1,
+    "model_ttft_ms": 792.8,
+    "total_ms": 1117.7,
+    "max_gap_ms": 330.7,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "986",
+     "x-ratelimit-reset-requests": "20m9.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5130",
+     "x-ratelimit-reset-tokens": "21.525s"
+    }
+   }
+  ],
+  "first_token_ms": 36057.4,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 36058.1
+ },
+ "provider_token_usage": [
+  {
+   "queue_time": 0.209558397,
+   "prompt_tokens": 1715,
+   "prompt_time": 0.10437969,
+   "completion_tokens": 290,
+   "completion_time": 0.613042901,
+   "total_tokens": 2005,
+   "total_time": 0.717422591,
+   "completion_tokens_details": {
+    "reasoning_tokens": 100
+   }
+  },
+  {
+   "queue_time": 0.370773154,
+   "prompt_tokens": 2237,
+   "prompt_time": 0.104869781,
+   "completion_tokens": 264,
+   "completion_time": 0.555569783,
+   "total_tokens": 2501,
+   "total_time": 0.660439564,
+   "completion_tokens_details": {
+    "reasoning_tokens": 101
+   }
+  }
+ ]
+}

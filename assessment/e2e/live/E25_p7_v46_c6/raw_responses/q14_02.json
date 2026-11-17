@@ -1,0 +1,44 @@
+{
+ "question_id": "q14",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:51:51.082+00:00",
+  "t_send_ns": 201561082989200,
+  "status": 200,
+  "t_first_byte_ns": 201561604365400,
+  "t_first_content_ns": 201562002616200,
+  "t_last_ns": 201562102087300,
+  "max_gap_ms": 398.2107,
+  "text": "All models but Transformer take raw byte inputs, while the Transformer uses the GPT‑2 tokenizer [HNET:3.1:c053]. H‑Net takes raw byte inputs and learns a dynamic, content‑ and context‑dependent segmentation strategy [HNET:abstract:c001].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.317902722,
+   "prompt_tokens": 2334,
+   "prompt_time": 0.096586884,
+   "completion_tokens": 162,
+   "completion_time": 0.510297748,
+   "total_tokens": 2496,
+   "total_time": 0.606884632,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 95
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "942",
+   "x-ratelimit-reset-requests": "1h23m31.2s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5204",
+   "x-ratelimit-reset-tokens": "20.97s"
+  },
+  "error": null,
+  "first_byte_ms": 521.4,
+  "first_content_ms": 919.6,
+  "total_ms": 1019.1
+ }
+}

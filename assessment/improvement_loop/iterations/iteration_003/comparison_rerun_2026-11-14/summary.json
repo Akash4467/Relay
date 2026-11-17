@@ -1,0 +1,244 @@
+{
+ "stress": {
+  "n": 160,
+  "n_should_accept": 76,
+  "n_should_reject": 84,
+  "n_unlabelled_or_uncertain": 0,
+  "v4.2": {
+   "false_rejections": [
+    "stress:verifier_stress:s02",
+    "stress:verifier_stress:s08",
+    "stress:verifier_stress:s09",
+    "stress:verifier_stress:s11",
+    "stress:verifier_stress:s12",
+    "stress:verifier_stress:s14",
+    "stress:verifier_stress:s16",
+    "stress:verifier_stress_v2:s01",
+    "stress:verifier_stress_v2:s02",
+    "stress:verifier_stress_v2:s09",
+    "stress:verifier_stress_v2:s10",
+    "stress:verifier_stress_v2:s12",
+    "stress:verifier_stress_v2:s13",
+    "stress:verifier_stress_v2:s16",
+    "stress:verifier_stress_v2:s19",
+    "stress:verifier_v2_stress:c1",
+    "stress:verifier_v2_stress:c2",
+    "stress:verifier_v2_stress:l2",
+    "stress:verifier_v2_stress:p2",
+    "stress:verifier_v3_eval:m4",
+    "stress:verifier_v3_eval:p4",
+    "stress:verifier_v3b_targeted:f2"
+   ],
+   "false_acceptances": [
+    "stress:verifier_stress:u08",
+    "stress:verifier_stress_v2:u08",
+    "stress:verifier_v2_stress:p3",
+    "stress:verifier_v3_eval:a2",
+    "stress:verifier_v3_eval:a6",
+    "stress:verifier_v3b_targeted:u5"
+   ]
+  },
+  "v4.4c": {
+   "false_rejections": [
+    "stress:verifier_stress:s08",
+    "stress:verifier_stress:s11",
+    "stress:verifier_stress:s12",
+    "stress:verifier_stress_v2:s09",
+    "stress:verifier_stress_v2:s12",
+    "stress:verifier_stress_v2:s13",
+    "stress:verifier_v2_stress:c1",
+    "stress:verifier_v2_stress:c2",
+    "stress:verifier_v2_stress:l2",
+    "stress:verifier_v3_eval:p4"
+   ],
+   "false_acceptances": [
+    "stress:verifier_stress:u08",
+    "stress:verifier_stress:u11",
+    "stress:verifier_stress_v2:u05",
+    "stress:verifier_stress_v2:u08",
+    "stress:verifier_v2_stress:l3",
+    "stress:verifier_v2_stress:p3",
+    "stress:verifier_v3_eval:a2",
+    "stress:verifier_v3_eval:a6",
+    "stress:verifier_v3b_targeted:u5"
+   ]
+  },
+  "newly_rescued_correct": [
+   "stress:verifier_stress:s02",
+   "stress:verifier_stress:s09",
+   "stress:verifier_stress:s14",
+   "stress:verifier_stress:s16",
+   "stress:verifier_stress_v2:s01",
+   "stress:verifier_stress_v2:s02",
+   "stress:verifier_stress_v2:s10",
+   "stress:verifier_stress_v2:s16",
+   "stress:verifier_stress_v2:s19",
+   "stress:verifier_v2_stress:p2",
+   "stress:verifier_v3_eval:m4",
+   "stress:verifier_v3b_targeted:f2"
+  ],
+  "newly_rejected_correct": [],
+  "new_false_acceptances": [
+   "stress:verifier_stress:u11",
+   "stress:verifier_stress_v2:u05",
+   "stress:verifier_v2_stress:l3"
+  ],
+  "flips_on_unlabelled_or_uncertain": [],
+  "ms_p50": {
+   "v4.2": 526.1,
+   "v4.4c": 3913.0
+  }
+ },
+ "draft": {
+  "n": 92,
+  "n_should_accept": 47,
+  "n_should_reject": 42,
+  "n_unlabelled_or_uncertain": 3,
+  "v4.2": {
+   "false_rejections": [
+    "draft:assessment/improvement_loop/baseline/phase12_c3_reused:q02#0",
+    "draft:assessment/improvement_loop/baseline/phase12_c3_reused:q02#1",
+    "draft:assessment/improvement_loop/baseline/phase12_c3_reused:q15#0",
+    "draft:assessment/improvement_loop/baseline/phase12_c3_reused:q15#1",
+    "draft:assessment/improvement_loop/baseline/live_ext:q04#0",
+    "draft:assessment/improvement_loop/baseline/live_ext:q04#1",
+    "draft:assessment/improvement_loop/baseline/live_ext:q05#1",
+    "draft:assessment/improvement_loop/baseline/live_ext:q08#0",
+    "draft:assessment/improvement_loop/baseline/live_ext:q10#1",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q02#0",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q02#1",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q04#0",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q08#0",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q08#1",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q15#0",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q15#1",
+    "draft:assessment/e2e/live/B12:n10#1",
+    "draft:assessment/e2e/live/B12:q04#1",
+    "draft:assessment/e2e/live/B12:q07#1",
+    "draft:assessment/e2e/live/B12:q15#0",
+    "draft:assessment/e2e/live/B12:q15#1",
+    "draft:assessment/e2e/live/B12_fix_c3:q01#1",
+    "draft:assessment/e2e/live/B12_fix_c3:q04#0",
+    "draft:assessment/e2e/live/B12_fix_c3:q12#1",
+    "draft:assessment/e2e/live/B12_fix_c3:q15#0",
+    "draft:assessment/e2e/live/B12_fix_c3:q15#1",
+    "draft:assessment/e2e/live/B12_fix_c6:n10#1",
+    "draft:assessment/e2e/live/B12_fix_c6:q01#1",
+    "draft:assessment/e2e/live/B12_fix_c6:q04#0",
+    "draft:assessment/e2e/live/B12_fix_c6:q07#1",
+    "draft:assessment/e2e/live/B12_fix_c6:q12#1",
+    "draft:assessment/e2e/live/B12_fix_c6:q15#0",
+    "draft:assessment/e2e/live/B12_fix_c6:q15#1"
+   ],
+   "false_acceptances": [
+    "draft:assessment/improvement_loop/baseline/phase12_c3_reused:t05#0",
+    "draft:assessment/e2e/live/B12:t05#0"
+   ]
+  },
+  "v4.4c": {
+   "false_rejections": [
+    "draft:assessment/improvement_loop/baseline/phase12_c3_reused:q02#0",
+    "draft:assessment/improvement_loop/baseline/phase12_c3_reused:q15#0",
+    "draft:assessment/improvement_loop/baseline/phase12_c3_reused:q15#1",
+    "draft:assessment/improvement_loop/baseline/live_ext:q04#0",
+    "draft:assessment/improvement_loop/baseline/live_ext:q04#1",
+    "draft:assessment/improvement_loop/baseline/live_ext:q05#1",
+    "draft:assessment/improvement_loop/baseline/live_ext:q08#0",
+    "draft:assessment/improvement_loop/baseline/live_ext:q10#1",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q02#0",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q04#0",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q08#0",
+    "draft:assessment/improvement_loop/iterations/iteration_002/live:q15#0",
+    "draft:assessment/e2e/live/B12:n10#1",
+    "draft:assessment/e2e/live/B12:q04#1",
+    "draft:assessment/e2e/live/B12:q07#1",
+    "draft:assessment/e2e/live/B12:q15#0",
+    "draft:assessment/e2e/live/B12:q15#1",
+    "draft:assessment/e2e/live/B12_fix_c3:q04#0",
+    "draft:assessment/e2e/live/B12_fix_c3:q12#1",
+    "draft:assessment/e2e/live/B12_fix_c3:q15#0",
+    "draft:assessment/e2e/live/B12_fix_c3:q15#1",
+    "draft:assessment/e2e/live/B12_fix_c6:n10#1",
+    "draft:assessment/e2e/live/B12_fix_c6:q04#0",
+    "draft:assessment/e2e/live/B12_fix_c6:q07#1",
+    "draft:assessment/e2e/live/B12_fix_c6:q12#1",
+    "draft:assessment/e2e/live/B12_fix_c6:q15#0",
+    "draft:assessment/e2e/live/B12_fix_c6:q15#1"
+   ],
+   "false_acceptances": [
+    "draft:assessment/improvement_loop/baseline/phase12_c3_reused:t05#0",
+    "draft:assessment/e2e/live/B12:t05#0",
+    "draft:assessment/e2e/live/B12_fix_c3:q01#0"
+   ]
+  },
+  "newly_rescued_correct": [
+   "draft:assessment/improvement_loop/baseline/phase12_c3_reused:q02#1",
+   "draft:assessment/improvement_loop/iterations/iteration_002/live:q02#1",
+   "draft:assessment/improvement_loop/iterations/iteration_002/live:q08#1",
+   "draft:assessment/improvement_loop/iterations/iteration_002/live:q15#1",
+   "draft:assessment/e2e/live/B12_fix_c3:q01#1",
+   "draft:assessment/e2e/live/B12_fix_c6:q01#1"
+  ],
+  "newly_rejected_correct": [],
+  "new_false_acceptances": [
+   "draft:assessment/e2e/live/B12_fix_c3:q01#0"
+  ],
+  "flips_on_unlabelled_or_uncertain": [],
+  "ms_p50": {
+   "v4.2": 1404.3,
+   "v4.4c": 8596.8
+  },
+  "recorded_equals_v4.2_replay": "92/92"
+ },
+ "exact_copy_sentences_rejected": {
+  "v4.2": [
+   {
+    "case_id": "stress:verifier_stress:s02",
+    "verifier": "v4.2",
+    "sentence": "All models are trained on H100 GPUs, using FSDP and activation checkpointing [MOSHI:4.4:c062].",
+    "entailment": 0.4134437866313141,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.41 < 0.9)"
+    ]
+   },
+   {
+    "case_id": "stress:verifier_stress_v2:s02",
+    "verifier": "v4.2",
+    "sentence": "All the audio is resampled to 24kHz and downmixed to mono [MOSHI:4.2:c056].",
+    "entailment": 0.5919199062958982,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.59 < 0.9)"
+    ]
+   },
+   {
+    "case_id": "draft:assessment/improvement_loop/iterations/iteration_002/live:q02#1",
+    "verifier": "v4.2",
+    "sentence": "For each of these we use d_k=d_v=d_model/h=64 [AIAYN:3.2.2:c014].",
+    "entailment": 0.805789401294477,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.81 < 0.9)"
+    ]
+   },
+   {
+    "case_id": "draft:assessment/improvement_loop/iterations/iteration_002/live:q08#1",
+    "verifier": "v4.2",
+    "sentence": "We also experimented with using learned positional embeddings instead, and found that the two versions produced nearly identical results (see Table 3 row (E))[AIAYN:3.5:c020].",
+    "entailment": 0.5749294834264853,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.57 < 0.9)"
+    ]
+   },
+   {
+    "case_id": "draft:assessment/improvement_loop/iterations/iteration_002/live:q15#1",
+    "verifier": "v4.2",
+    "sentence": "All models are trained on H100 GPUs [MOSHI:4.4:c062].",
+    "entailment": 0.4849241885143415,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.48 < 0.9)"
+    ]
+   }
+  ],
+  "v4.4c": []
+ },
+ "exact_copy_sentences_total": 9
+}

@@ -1,0 +1,5 @@
+{"about": "Grades against the papers (ASSISTANT grades). Run: c6 + p7 + v4.7c (v4.6c + paper-coverage guard), 4 questions, 2026-11-14.",
+ "grades": {"q14": {"grade": "incorrectly_refused (safe)", "why": "D1 repeated the misleading H-Net-baseline answer (all sentences supported, 0.98); the guard rejected it because the question names AIAYN and no sentence cites AIAYN: refusal instead of a wrong answer. Retrieval still misses AIAYN:5.1:c025."},
+            "q15": {"grade": "correct_and_fully_supported", "why": "8 NVIDIA P100 (AIAYN:5.2:c026) and H100 (MOSHI:4.4:c062); the guard passes (both papers cited)"},
+            "q01": {"grade": "incorrectly_refused", "why": "near-verbatim paraphrases of AIAYN:1:c002 scored 0.66-0.73 (answered correctly in E25 with the same configuration: sampling variance); guard not involved"},
+            "q20": {"grade": "correctly_refused"}}}

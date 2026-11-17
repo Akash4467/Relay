@@ -1,0 +1,6 @@
+{"about": "Grades against the papers (ASSISTANT grades). Run: c6 + R3b + p7 + v4.7c, regression questions pending from R3b_p7_v47_c6 (stopped by Groq's daily limit), 2026-11-14, after the owner installed another Groq key. 9 requests, 18,566 tokens (cap 30,000).",
+ "grades": {
+  "q15": {"grade": "correct_and_fully_supported", "why": "8 NVIDIA P100 (AIAYN:5.2:c026); H100 (MOSHI:4.4:c062)"},
+  "q16": {"grade": "correctly_refused"}, "q20": {"grade": "correctly_refused"},
+  "q13": {"grade": "partially_correct", "why": "55.5 (H-Net 2-stage) vs 53.3 (Transformer) at GPT-3 Large, cited to rows r10 and r01; omits the GPT-3 XL Transformer match (55.5); adds 'The retrieved passages do not state the BPE Transformer', a confusing absence sentence (the Transformer row IS the BPE Transformer). E25: correct (same context: generation variance)"},
+  "q04": {"grade": "incorrectly_refused", "why": "both drafts correct except a FALSE absence sentence 'The retrieved passages do not state the frame rate' (12.5 Hz is in the answer and in MOSHI:3.3.1:c029/c030); the verifier correctly rejects it and the redraft repeats it unchanged. Same failure in R2_p7_v47_c6. E25: correct (same context)"}}}

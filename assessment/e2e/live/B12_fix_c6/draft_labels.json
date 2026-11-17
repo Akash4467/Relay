@@ -1,0 +1,6 @@
+{"about": "ASSISTANT labels (not independent); same rubric. 'irrelevant' = every sentence supported by its passage but the reply does not answer the question (excluded from verifier FR/FA counts).",
+ "labels": {"q01#0": "mixed", "q01#1": "correct", "q04#0": "correct", "q04#1": "correct", "q07#0": "mixed", "q07#1": "correct",
+            "q12#0": "mixed", "q12#1": "correct", "q13#0": "mixed", "q13#1": "correct", "q15#0": "correct", "q15#1": "correct",
+            "q14#0": "wrong", "q14#1": "irrelevant", "t05#0": "correct", "t13#0": "correct", "n10#0": "mixed", "n10#1": "correct"},
+ "notes": {"q01#0": "'reducing training efficiency' inference", "q07#0": "'encoder stack only has self-attention sub-layers'", "q12#0": "false absence",
+           "q13#0": "comparison cites only r11", "q14#0": "attributes the Llama-3 tokenizer to the original Transformer", "n10#0": "false absence (BLEU)"}}

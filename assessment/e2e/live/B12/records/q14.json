@@ -1,0 +1,154 @@
+{
+ "run": "assessment/e2e/live/B12",
+ "timestamp": "2026-11-14T12:30:33.932+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "question_id": "q14",
+ "dataset": [
+  "e2e_B12",
+  "terminology_mismatch"
+ ],
+ "question": "How is the input segmented in the original Transformer's translation experiments compared with H-Net?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.3 English Constituency Parsing; HNET §3.2 Alternate Language Datasets; AIAYN §1 Introduction; HNET §3.1 Language Modeling.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "model: not in papers",
+  "citations": [],
+  "request_id": "loop-B12-q14"
+ },
+ "client_ms": 14258.6,
+ "evidence_ids": [
+  "AIAYN:6.3:c032",
+  "HNET:3.2:c061",
+  "AIAYN:1:c003",
+  "HNET:3.1:c053",
+  "HNET:2.1.2:c019",
+  "HNET:F:c125",
+  "HNET:2.1.2:c020",
+  "HNET:abstract:c001"
+ ],
+ "gold_units_in_context": [
+  false,
+  false,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  false,
+  false,
+  false
+ ],
+ "drafts": [
+  "NOT_IN_PAPERS"
+ ],
+ "verification": [],
+ "pipeline_status": "refused",
+ "refusal_reason": "model: not in papers",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-B12-q14",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T12:30:33.932+00:00",
+  "question_id": "q14",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 1817,
+  "tokens_out": 72,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 729.5,
+  "context_tokens": 1527,
+  "retrieval_policy": "per_paper",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:6.3:c032",
+   "HNET:3.2:c061",
+   "AIAYN:1:c003",
+   "HNET:3.1:c053",
+   "HNET:2.1.2:c019",
+   "HNET:F:c125",
+   "HNET:2.1.2:c020",
+   "HNET:abstract:c001"
+  ],
+  "verification_ms": 0.0,
+  "answer_status": "refused",
+  "llm_calls": 1,
+  "initial_attempts": 1,
+  "redraft_attempts": 0,
+  "fallback_generations": 0,
+  "governor_wait_ms": 12391.1,
+  "model_ttft_ms": 1097.8,
+  "first_byte_ms": 476.1,
+  "generation_ms": 1108.3,
+  "reasoning_tokens": 58,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1818,
+    "reserved": 2588,
+    "governor_wait_ms": 12391.1,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.37041712,
+     "prompt_tokens": 1817,
+     "prompt_time": 0.490562601,
+     "completion_tokens": 72,
+     "completion_time": 0.149629715,
+     "total_tokens": 1889,
+     "total_time": 0.640192316,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 58
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1817,
+    "tokens_out": 72,
+    "reasoning_tokens": 58,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 476.1,
+    "model_ttft_ms": 1097.8,
+    "total_ms": 1108.3,
+    "max_gap_ms": 621.8,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "987",
+     "x-ratelimit-reset-requests": "18m43.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2122",
+     "x-ratelimit-reset-tokens": "44.085s"
+    }
+   }
+  ],
+  "first_token_ms": 14234.8,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "model: not in papers",
+  "total_ms": 14235.3
+ }
+}

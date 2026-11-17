@@ -1,0 +1,357 @@
+{
+ "label_note": "outcomes for answered answerable replies are ASSISTANT judgments (answer_judgments.json), not an independent review; question labels are project/provisional labels (questions.json)",
+ "per_corpus": {
+  "c3": {
+   "n": 12,
+   "outcomes": {
+    "correct_answer": 1,
+    "partially_correct": 0,
+    "incorrect": 1,
+    "unsupported": 0,
+    "correct_abstention": 2,
+    "false_refusal": 8,
+    "invalid_citation": 0,
+    "provider_failure": 0,
+    "incomplete_budget_or_timeout": 0
+   },
+   "answerable": {
+    "n": 10,
+    "correct": 1,
+    "correct_or_partial": 1,
+    "false_refusal": 8
+   },
+   "unanswerable": {
+    "n": 2,
+    "correct_abstention": 2
+   },
+   "drafts_with_citation_failures": 0,
+   "redrafted": 8,
+   "all_identity_checks_passed": true,
+   "by_group": {
+    "ordinary_answerable": {
+     "correct_answer": 1,
+     "false_refusal": 3
+    },
+    "table_heavy_c6_more_complete": {
+     "incorrect": 1,
+     "false_refusal": 2
+    },
+    "targeted": {
+     "false_refusal": 3
+    },
+    "unanswerable": {
+     "correct_abstention": 2
+    }
+   },
+   "complete_gold_in_context": "4/10",
+   "all_gold_in_context": "9/10"
+  },
+  "c6": {
+   "n": 12,
+   "outcomes": {
+    "correct_answer": 3,
+    "partially_correct": 1,
+    "incorrect": 0,
+    "unsupported": 0,
+    "correct_abstention": 2,
+    "false_refusal": 6,
+    "invalid_citation": 0,
+    "provider_failure": 0,
+    "incomplete_budget_or_timeout": 0
+   },
+   "answerable": {
+    "n": 10,
+    "correct": 3,
+    "correct_or_partial": 4,
+    "false_refusal": 6
+   },
+   "unanswerable": {
+    "n": 2,
+    "correct_abstention": 2
+   },
+   "drafts_with_citation_failures": 1,
+   "redrafted": 6,
+   "all_identity_checks_passed": true,
+   "by_group": {
+    "ordinary_answerable": {
+     "false_refusal": 4
+    },
+    "table_heavy_c6_more_complete": {
+     "correct_answer": 3
+    },
+    "targeted": {
+     "partially_correct": 1,
+     "false_refusal": 2
+    },
+    "unanswerable": {
+     "correct_abstention": 2
+    }
+   },
+   "complete_gold_in_context": "7/10",
+   "all_gold_in_context": "7/10"
+  }
+ },
+ "paired": {
+  "n_pairs": 12,
+  "c6_better": 4,
+  "c3_better": 1,
+  "same": 7,
+  "ordering": "correct_answer = correct_abstention > partially_correct > every other outcome",
+  "pairs": [
+   {
+    "question_id": "q01",
+    "group": "ordinary_answerable",
+    "c3": "correct_answer",
+    "c6": "false_refusal",
+    "better": "c3",
+    "c3_complete_gold": [
+     true
+    ],
+    "c6_complete_gold": [
+     true
+    ]
+   },
+   {
+    "question_id": "q02",
+    "group": "ordinary_answerable",
+    "c3": "false_refusal",
+    "c6": "false_refusal",
+    "better": "same",
+    "c3_complete_gold": [
+     true
+    ],
+    "c6_complete_gold": [
+     true
+    ]
+   },
+   {
+    "question_id": "q07",
+    "group": "ordinary_answerable",
+    "c3": "false_refusal",
+    "c6": "false_refusal",
+    "better": "same",
+    "c3_complete_gold": [
+     true,
+     true,
+     true
+    ],
+    "c6_complete_gold": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "question_id": "q15",
+    "group": "ordinary_answerable",
+    "c3": "false_refusal",
+    "c6": "false_refusal",
+    "better": "same",
+    "c3_complete_gold": [
+     true,
+     true
+    ],
+    "c6_complete_gold": [
+     true,
+     true
+    ]
+   },
+   {
+    "question_id": "t01",
+    "group": "table_heavy_c6_more_complete",
+    "c3": "false_refusal",
+    "c6": "correct_answer",
+    "better": "c6",
+    "c3_complete_gold": [
+     false
+    ],
+    "c6_complete_gold": [
+     true
+    ]
+   },
+   {
+    "question_id": "t05",
+    "group": "table_heavy_c6_more_complete",
+    "c3": "incorrect",
+    "c6": "correct_answer",
+    "better": "c6",
+    "c3_complete_gold": [
+     false
+    ],
+    "c6_complete_gold": [
+     true
+    ]
+   },
+   {
+    "question_id": "t13",
+    "group": "table_heavy_c6_more_complete",
+    "c3": "false_refusal",
+    "c6": "correct_answer",
+    "better": "c6",
+    "c3_complete_gold": [
+     false
+    ],
+    "c6_complete_gold": [
+     true
+    ]
+   },
+   {
+    "question_id": "q11",
+    "group": "targeted",
+    "c3": "false_refusal",
+    "c6": "partially_correct",
+    "better": "c6",
+    "c3_complete_gold": [
+     true,
+     false
+    ],
+    "c6_complete_gold": [
+     true,
+     false
+    ]
+   },
+   {
+    "question_id": "t10",
+    "group": "targeted",
+    "c3": "false_refusal",
+    "c6": "false_refusal",
+    "better": "same",
+    "c3_complete_gold": [
+     false,
+     false,
+     false
+    ],
+    "c6_complete_gold": [
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "question_id": "t29",
+    "group": "targeted",
+    "c3": "false_refusal",
+    "c6": "false_refusal",
+    "better": "same",
+    "c3_complete_gold": [
+     false
+    ],
+    "c6_complete_gold": [
+     false
+    ]
+   },
+   {
+    "question_id": "q16",
+    "group": "unanswerable",
+    "c3": "correct_abstention",
+    "c6": "correct_abstention",
+    "better": "same",
+    "c3_complete_gold": [],
+    "c6_complete_gold": []
+   },
+   {
+    "question_id": "q27",
+    "group": "unanswerable",
+    "c3": "correct_abstention",
+    "c6": "correct_abstention",
+    "better": "same",
+    "c3_complete_gold": [],
+    "c6_complete_gold": []
+   }
+  ],
+  "significance": "not tested and not claimed: 12 pairs, one sample per pair, model sampling at temperature 0.2"
+ },
+ "latency_and_tokens": {
+  "c3": {
+   "total_ms": {
+    "median": 28140.449999999997,
+    "p90_nearest_rank": 32635.2,
+    "max": 34173.7
+   },
+   "first_byte_ms": {
+    "median": 445.45,
+    "p90_nearest_rank": 526.1,
+    "max": 1516.8
+   },
+   "generation_ms": {
+    "median": 1677.85,
+    "p90_nearest_rank": 2152.2,
+    "max": 2806.6
+   },
+   "verification_ms": {
+    "median": 490.9,
+    "p90_nearest_rank": 5407.3,
+    "max": 9589.4
+   },
+   "retrieval_ms": {
+    "median": 827.4000000000001,
+    "p90_nearest_rank": 1192.6,
+    "max": 1308.5
+   },
+   "governor_wait_ms": {
+    "median": 22317.1,
+    "p90_nearest_rank": 26099.7,
+    "max": 28872.0
+   },
+   "tokens": {
+    "tokens_in": 37560,
+    "tokens_out": 2588,
+    "reasoning_tokens": 1432
+   },
+   "llm_calls": 20
+  },
+  "c6": {
+   "total_ms": {
+    "median": 15157.75,
+    "p90_nearest_rank": 31732.6,
+    "max": 36058.1
+   },
+   "first_byte_ms": {
+    "median": 420.55,
+    "p90_nearest_rank": 505.4,
+    "max": 522.5
+   },
+   "generation_ms": {
+    "median": 1207.85,
+    "p90_nearest_rank": 2125.2,
+    "max": 2843.5
+   },
+   "verification_ms": {
+    "median": 958.4000000000001,
+    "p90_nearest_rank": 4387.8,
+    "max": 8973.1
+   },
+   "retrieval_ms": {
+    "median": 815.35,
+    "p90_nearest_rank": 1218.9,
+    "max": 1468.1
+   },
+   "governor_wait_ms": {
+    "median": 12599.85,
+    "p90_nearest_rank": 24555.9,
+    "max": 28730.1
+   },
+   "tokens": {
+    "tokens_in": 34202,
+    "tokens_out": 2314,
+    "reasoning_tokens": 1204
+   },
+   "llm_calls": 18
+  }
+ },
+ "budget": {
+  "caps": {
+   "connectivity_requests": 5,
+   "initial_generation_calls": 24,
+   "generation_requests": 48,
+   "total_tokens": 100000
+  },
+  "connectivity_requests": 5,
+  "initial_generation_calls": 24,
+  "generation_requests": 38,
+  "tokens_12a": 1137,
+  "tokens_12b": 76664,
+  "refused_calls": 0,
+  "note": "Owner re-accepted the risk on 2026-11-14 for Phase 12 ('Accept risk again'): the current key is used although the earlier machine-security finding is unresolved (no full scan, key not rotated). Token cap raised by the owner from 30,000 to 100,000 ('Raise cap to 100,000')."
+ }
+}

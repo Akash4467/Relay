@@ -1,0 +1,43 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "corpus_version": "c6",
+ "question_id": "q15",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T07:58:42.502+00:00",
+  "t_send_ns": 176772503408500,
+  "status": 200,
+  "t_first_byte_ns": 176772998482500,
+  "t_first_content_ns": 176773216800700,
+  "t_last_ns": 176773316152800,
+  "max_gap_ms": 218.2946,
+  "text": "The original Transformer was trained on eight NVIDIA P100 GPUs [AIAYN:5.2:c026][AIAYN:1:c003]. Moshi was trained on H100 GPUs [MOSHI:4.4:c062].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.367383409,
+   "prompt_tokens": 1886,
+   "prompt_time": 0.093335385,
+   "completion_tokens": 110,
+   "completion_time": 0.229299088,
+   "total_tokens": 1996,
+   "total_time": 0.322634473,
+   "completion_tokens_details": {
+    "reasoning_tokens": 53
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "985",
+   "x-ratelimit-reset-requests": "21m36s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5007",
+   "x-ratelimit-reset-tokens": "22.447s"
+  },
+  "error": null,
+  "first_byte_ms": 495.1,
+  "first_content_ms": 713.4,
+  "total_ms": 812.7
+ }
+}

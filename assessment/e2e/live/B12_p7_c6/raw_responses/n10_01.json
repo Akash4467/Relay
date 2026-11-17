@@ -1,0 +1,41 @@
+{
+ "question_id": "n10",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:21:38.896+00:00",
+  "t_send_ns": 199748896494100,
+  "status": 200,
+  "t_first_byte_ns": 199749249449900,
+  "t_first_content_ns": 199749971234600,
+  "t_last_ns": 199750051580100,
+  "max_gap_ms": 721.7488,
+  "text": "The authors’ base Transformer uses eight attention heads [AIAYN:T3:r01]. The retrieved passages do not state the development BLEU for the base configuration in the variation table.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.248339693,
+   "prompt_tokens": 1975,
+   "prompt_time": 0.589808308,
+   "completion_tokens": 102,
+   "completion_time": 0.215601448,
+   "total_tokens": 2077,
+   "total_time": 0.805409756,
+   "completion_tokens_details": {
+    "reasoning_tokens": 56
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "982",
+   "x-ratelimit-reset-requests": "25m55.199s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "797",
+   "x-ratelimit-reset-tokens": "54.022s"
+  },
+  "error": null,
+  "first_byte_ms": 353.0,
+  "first_content_ms": 1074.7,
+  "total_ms": 1155.1
+ }
+}

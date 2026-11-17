@@ -1,0 +1,44 @@
+{
+ "question_id": "q10",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:49:26.114+00:00",
+  "t_send_ns": 201416115013100,
+  "status": 200,
+  "t_first_byte_ns": 201416362300900,
+  "t_first_content_ns": 201416955683800,
+  "t_last_ns": 201417785729900,
+  "max_gap_ms": 593.3599,
+  "text": "Figure 1 shows a two‑stage hierarchical design (S=2) and Dynamic Chunking (DC); the bottom‑right key components of a chunking layer are a routing module for dynamically drawing chunk boundaries and a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions [HNET:1:c012]. H‑Net (2-stage) is significantly better than H‑Net (1-stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively [HNET:3.1:c049].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.155977485,
+   "prompt_tokens": 2566,
+   "prompt_time": 0.181632642,
+   "completion_tokens": 315,
+   "completion_time": 1.247044719,
+   "total_tokens": 2881,
+   "total_time": 1.428677361,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 180
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "950",
+   "x-ratelimit-reset-requests": "1h12m0s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "4967",
+   "x-ratelimit-reset-tokens": "22.747s"
+  },
+  "error": null,
+  "first_byte_ms": 247.3,
+  "first_content_ms": 840.7,
+  "total_ms": 1670.7
+ }
+}

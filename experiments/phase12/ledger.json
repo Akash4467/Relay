@@ -1,0 +1,15 @@
+{
+ "caps": {
+  "connectivity_requests": 5,
+  "initial_generation_calls": 24,
+  "generation_requests": 48,
+  "total_tokens": 100000
+ },
+ "connectivity_requests": 5,
+ "initial_generation_calls": 24,
+ "generation_requests": 38,
+ "tokens_12a": 1137,
+ "tokens_12b": 76664,
+ "refused_calls": 0,
+ "note": "Owner re-accepted the risk on 2026-11-14 for Phase 12 ('Accept risk again'): the current key is used although the earlier machine-security finding is unresolved (no full scan, key not rotated). Token cap raised by the owner from 30,000 to 100,000 ('Raise cap to 100,000')."
+}

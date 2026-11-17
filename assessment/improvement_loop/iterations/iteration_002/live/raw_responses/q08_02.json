@@ -1,0 +1,44 @@
+{
+ "question_id": "q08",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:41:36.287+00:00",
+  "t_send_ns": 179346288214900,
+  "status": 200,
+  "t_first_byte_ns": 179346557010900,
+  "t_first_content_ns": 179347074817300,
+  "t_last_ns": 179347418263900,
+  "max_gap_ms": 517.7874,
+  "text": "We use sine and cosine functions of different frequencies and chose this function because we hypothesized it would allow the model to easily learn to attend by relative positions, since for any fixed offset k, PE_{pos+k} can be represented as a linear function of PE_{pos}[AIAYN:3.5:c020]. We also experimented with using learned positional embeddings instead, and found that the two versions produced nearly identical results (see Table 3 row (E))[AIAYN:3.5:c020]. In row (E) we replace our sinusoidal positional encoding with learned positional embeddings, and observe nearly identical results to the base model[AIAYN:6.2:c031].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.16004892,
+   "prompt_tokens": 2073,
+   "prompt_time": 0.084897572,
+   "completion_tokens": 335,
+   "completion_time": 0.7814277,
+   "total_tokens": 2408,
+   "total_time": 0.866325272,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 182
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "952",
+   "x-ratelimit-reset-requests": "1h9m7.2s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "1786",
+   "x-ratelimit-reset-tokens": "46.605s"
+  },
+  "error": null,
+  "first_byte_ms": 268.8,
+  "first_content_ms": 786.6,
+  "total_ms": 1130.0
+ }
+}

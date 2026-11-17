@@ -1,0 +1,1519 @@
+{
+ "summary": {
+  "A": {
+   "supported_accepted": 7,
+   "supported_rejected": 6,
+   "unsupported_accepted": 2,
+   "unsupported_rejected": 16,
+   "FAR": 0.111,
+   "FRR": 0.462
+  },
+  "B1": {
+   "supported_accepted": 10,
+   "supported_rejected": 3,
+   "unsupported_accepted": 3,
+   "unsupported_rejected": 15,
+   "FAR": 0.167,
+   "FRR": 0.231
+  },
+  "B2": {
+   "supported_accepted": 10,
+   "supported_rejected": 3,
+   "unsupported_accepted": 4,
+   "unsupported_rejected": 14,
+   "FAR": 0.222,
+   "FRR": 0.231
+  },
+  "C": {
+   "supported_accepted": 3,
+   "supported_rejected": 10,
+   "unsupported_accepted": 0,
+   "unsupported_rejected": 18,
+   "FAR": 0.0,
+   "FRR": 0.769,
+   "abstained": 27
+  },
+  "C+A": {
+   "supported_accepted": 7,
+   "supported_rejected": 6,
+   "unsupported_accepted": 2,
+   "unsupported_rejected": 16,
+   "FAR": 0.111,
+   "FRR": 0.462
+  },
+  "D1": {
+   "supported_accepted": 10,
+   "supported_rejected": 3,
+   "unsupported_accepted": 3,
+   "unsupported_rejected": 15,
+   "FAR": 0.167,
+   "FRR": 0.231
+  },
+  "D2": {
+   "supported_accepted": 10,
+   "supported_rejected": 3,
+   "unsupported_accepted": 4,
+   "unsupported_rejected": 14,
+   "FAR": 0.222,
+   "FRR": 0.231
+  }
+ },
+ "results": [
+  {
+   "id": "s01",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the related-architectures table, H-Net is marked with a check under Multi-stage / Hierarchy.",
+   "chunk": "HNET:T6:r05",
+   "A": {
+    "accepted": true,
+    "entailment": 0.992,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.99,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.963,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.99,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.963,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s02",
+   "label": "unsupported",
+   "category": "checkmark_incorrect",
+   "claim": "In the related-architectures table, H-Net is marked with a cross under Multi-stage / Hierarchy.",
+   "chunk": "HNET:T6:r05",
+   "A": {
+    "accepted": false,
+    "entailment": 0.603,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.60 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.992,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.987,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.992,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.987,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s03",
+   "label": "supported",
+   "category": "cross_correct",
+   "claim": "In the related-architectures table, MANTa is marked with a cross under Multi-stage / Hierarchy.",
+   "chunk": "HNET:T6:r04",
+   "A": {
+    "accepted": false,
+    "entailment": 0.787,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.79 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.983,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.972,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.983,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.972,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s04",
+   "label": "unsupported",
+   "category": "cross_incorrect",
+   "claim": "In the related-architectures table, MANTa is marked with a check under Multi-stage / Hierarchy.",
+   "chunk": "HNET:T6:r04",
+   "A": {
+    "accepted": true,
+    "entailment": 0.988,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.586,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.59 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.6,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.60 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.586,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.59 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.6,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.60 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s05",
+   "label": "supported",
+   "category": "cross_correct",
+   "claim": "In the related-architectures table, ByT5 is marked with a cross under Autoregressive.",
+   "chunk": "HNET:T6:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.506,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.51 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.877,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.88 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.709,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.71 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.877,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.88 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.709,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.71 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s06",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the related-architectures table, MambaByte is marked with a check under Autoregressive.",
+   "chunk": "HNET:T6:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.829,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.83 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.725,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.73 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.2,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.20 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.725,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.73 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.2,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.20 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s07",
+   "label": "unsupported",
+   "category": "wrong_row",
+   "claim": "In the related-architectures table, ByT5 is marked with a check under Autoregressive.",
+   "chunk": "HNET:T6:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.834,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.83 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.422,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.42 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.32,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.32 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.422,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.42 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.32,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.32 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s08",
+   "label": "unsupported",
+   "category": "wrong_column",
+   "claim": "In the related-architectures table, MANTa is marked with a cross under Autoregressive.",
+   "chunk": "HNET:T6:r04",
+   "A": {
+    "accepted": false,
+    "entailment": 0.553,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.55 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.797,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.80 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.599,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.60 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.797,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.80 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.599,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.60 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s09",
+   "label": "unsupported",
+   "category": "correct_symbol_wrong_configuration",
+   "claim": "In the related-architectures table, BLT is marked with a check under Multi-stage / Hierarchy.",
+   "chunk": "HNET:T6:r04",
+   "A": {
+    "accepted": true,
+    "entailment": 0.985,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.693,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.69 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.712,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.71 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.693,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.69 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.712,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.71 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s10",
+   "label": "unsupported",
+   "category": "cross_interpreted_as_false",
+   "claim": "MANTa does not support multi-stage hierarchies.",
+   "chunk": "HNET:T6:r04",
+   "A": {
+    "accepted": false,
+    "entailment": 0.815,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.82 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.131,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.13 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.118,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.12 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.131,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.13 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.118,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.12 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: not a single literal mark claim"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s11",
+   "label": "unsupported",
+   "category": "unsupported_comparison",
+   "claim": "H-Net has a stronger multi-stage hierarchy than MANTa.",
+   "chunk": "HNET:T6:r05",
+   "A": {
+    "accepted": false,
+    "entailment": 0.001,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.00 < 0.9); term 'manta' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.001,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.00 < 0.9); term 'manta' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.001,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.00 < 0.9); term 'manta' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.001,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.00 < 0.9); term 'manta' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.001,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.00 < 0.9); term 'manta' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: not a single literal mark claim"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s12",
+   "label": "supported",
+   "category": "caption_supported_interpretation",
+   "claim": "H-Net enables dynamic, multi-stage hierarchies.",
+   "chunk": "HNET:T6:r05",
+   "A": {
+    "accepted": true,
+    "entailment": 0.999,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.999,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.999,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.999,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.999,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: not a single literal mark claim"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s13",
+   "label": "supported",
+   "category": "blank_described_as_blank",
+   "claim": "In the audio quality table, the causal cell for RVQGAN is blank.",
+   "chunk": "MOSHI:T4:r01",
+   "A": {
+    "accepted": true,
+    "entailment": 0.997,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.998,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.997,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.998,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.997,
+    "reasons": []
+   },
+   "C": {
+    "accepted": true,
+    "abstained": false,
+    "why": "cell causal = '(blank)'; claim says blank"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "s14",
+   "label": "unsupported",
+   "category": "blank_interpreted_as_false",
+   "claim": "According to the audio quality table, RVQGAN is not causal.",
+   "chunk": "MOSHI:T4:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.647,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.65 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.231,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.23 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.988,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.231,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.23 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.988,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: not a single literal mark claim"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s15",
+   "label": "unsupported",
+   "category": "blank_interpreted_as_zero",
+   "claim": "In the audio quality table, RVQGAN has a causal value of 0.",
+   "chunk": "MOSHI:T4:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.899,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.90 < 0.9); number 0 not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.157,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.16 < 0.9); number 0 not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.995,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.157,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.16 < 0.9); number 0 not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.995,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: not a single literal mark claim"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s16",
+   "label": "supported",
+   "category": "blank_described_as_unspecified",
+   "claim": "The audio quality table leaves the causal cell for RVQGAN unspecified.",
+   "chunk": "MOSHI:T4:r01",
+   "A": {
+    "accepted": true,
+    "entailment": 0.996,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.995,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.996,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.995,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.996,
+    "reasons": []
+   },
+   "C": {
+    "accepted": true,
+    "abstained": false,
+    "why": "cell causal = '(blank)'; claim says blank"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "s17",
+   "label": "unsupported",
+   "category": "blank_interpreted_as_true",
+   "claim": "According to the audio quality table, RVQGAN is causal.",
+   "chunk": "MOSHI:T4:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.893,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.89 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.943,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.158,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.16 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.943,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.158,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.16 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: not a single literal mark claim"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s18",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the audio quality table, Mimi, adv. loss only is marked with a check under causal.",
+   "chunk": "MOSHI:T4:r03",
+   "A": {
+    "accepted": true,
+    "entailment": 0.922,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.952,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.967,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.952,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.967,
+    "reasons": []
+   },
+   "C": {
+    "accepted": true,
+    "abstained": false,
+    "why": "cell causal = '✓'; claim says check"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "s19",
+   "label": "unsupported",
+   "category": "wrong_row",
+   "claim": "In the audio quality table, SemantiCodec is marked with a check under causal.",
+   "chunk": "MOSHI:T4:r02",
+   "A": {
+    "accepted": false,
+    "entailment": 0.196,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.20 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.422,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.42 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.051,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.05 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.422,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.42 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.051,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.05 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": false,
+    "why": "cell causal = '(blank)'; claim says check"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "s20",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the Mimi ablation table with MUSHRA scores, the row with ABX 6.5% is marked with a check under WavLM distillation.",
+   "chunk": "MOSHI:T3:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.363,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.36 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.948,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.91,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.948,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.91,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['WavLM / distillation', 'ABX (↓)', 'MUSHRA (↑)'])"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s21",
+   "label": "unsupported",
+   "category": "wrong_column",
+   "claim": "In the Mimi ablation table with MUSHRA scores, the row with ABX 6.5% is marked with a check under Split quantizer.",
+   "chunk": "MOSHI:T3:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.375,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.38 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.753,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.75 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.063,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.06 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.753,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.75 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.063,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.06 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['Split / quantizer', 'ABX (↓)', 'MUSHRA (↑)'])"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s22",
+   "label": "supported",
+   "category": "blank_described_as_blank",
+   "claim": "In the Mimi ablation table with MUSHRA scores, the row with ABX 6.5% has a blank Split quantizer cell.",
+   "chunk": "MOSHI:T3:r01",
+   "A": {
+    "accepted": true,
+    "entailment": 0.96,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.972,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.986,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.972,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.986,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['Split / quantizer', 'ABX (↓)', 'MUSHRA (↑)'])"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s23",
+   "label": "unsupported",
+   "category": "blank_interpreted_as_false",
+   "claim": "The Mimi configuration with ABX 6.5% does not use a split quantizer.",
+   "chunk": "MOSHI:T3:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.104,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.10 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.043,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.04 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.924,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.043,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.04 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.924,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: not a single literal mark claim"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s24",
+   "label": "unsupported",
+   "category": "correct_symbol_wrong_configuration",
+   "claim": "In the Mimi ablation table with MUSHRA scores, the row with ABX 8.0% is marked with a check under Quantization Rate.",
+   "chunk": "MOSHI:T3:r03",
+   "A": {
+    "accepted": false,
+    "entailment": 0.28,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.28 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.461,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.46 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.123,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.12 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.461,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.46 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.123,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.12 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['Quantization / Rate', 'ABX (↓)', 'MUSHRA (↑)'])"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s25",
+   "label": "unsupported",
+   "category": "unsupported_comparison",
+   "claim": "In the Mimi ablation table, the row checked under WavLM distillation with ABX 6.5% has the best MUSHRA score of all configurations.",
+   "chunk": "MOSHI:T3:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.002,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.00 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.002,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.00 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.003,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.00 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.002,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.00 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.003,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.00 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['WavLM / distillation', 'ABX (↓)', 'MUSHRA (↑)'])"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s26",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the regurgitation table, the single-stream row with a regurgitation rate of 100.00 is marked with a check under prompted (3s).",
+   "chunk": "MOSHI:T13:r01",
+   "A": {
+    "accepted": true,
+    "entailment": 0.976,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.991,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.985,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.991,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.985,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['prompted (3s)', 'regurgitation rate (%)'])"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s27",
+   "label": "unsupported",
+   "category": "wrong_column",
+   "claim": "In the regurgitation table, the single-stream row with a regurgitation rate of 100.00 is marked with a check under deduplicated.",
+   "chunk": "MOSHI:T13:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.584,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.58 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.975,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.545,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.54 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.975,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.545,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.54 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['deduplicated', 'regurgitation rate (%)'])"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s28",
+   "label": "supported",
+   "category": "empty_cell_described_as_blank",
+   "claim": "In the regurgitation table, the single-stream row with a regurgitation rate of 100.00 has no mark under deduplicated.",
+   "chunk": "MOSHI:T13:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.863,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.86 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.516,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.52 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.869,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.87 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.516,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.52 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.869,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.87 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['deduplicated', 'regurgitation rate (%)'])"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s29",
+   "label": "unsupported",
+   "category": "blank_interpreted_as_false",
+   "claim": "The single-stream model with a regurgitation rate of 100.00 was trained without deduplication.",
+   "chunk": "MOSHI:T13:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.051,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.05 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.045,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.05 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.345,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.34 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.045,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.05 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.345,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.34 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: not a single literal mark claim"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s30",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the token idempotence table, the Mimi row with ΔT = 40ms and k=1 probability 0.450 is marked with a check under the RVQGAN attack.",
+   "chunk": "MOSHI:T16:r08",
+   "A": {
+    "accepted": false,
+    "entailment": 0.759,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.76 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.951,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.952,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.951,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.952,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['attack', 'probability', 'token']"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "s31",
+   "label": "unsupported",
+   "category": "correct_symbol_wrong_configuration",
+   "claim": "In the token idempotence table, the Basic row with ΔT = 0 and k=8 probability 0.404 is marked with a check under the RVQGAN attack.",
+   "chunk": "MOSHI:T16:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.087,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.09 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.79,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.79 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.775,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.77 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.79,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.79 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.775,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.77 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: row not unique (2)"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   }
+  }
+ ],
+ "threshold": 0.9
+}

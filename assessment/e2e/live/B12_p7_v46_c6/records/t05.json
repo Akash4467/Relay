@@ -1,0 +1,164 @@
+{
+ "run": "assessment/e2e/live/B12_p7_v46_c6",
+ "timestamp": "2026-11-14T14:37:56.542+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.6c",
+ "question_id": "t05",
+ "dataset": [
+  "e2e_B12",
+  "table_set"
+ ],
+ "question": "In the Moshi paper's Mimi codec ablation table that reports ABX, VisQOL, MOSNet and MUSHRA, what MUSHRA score does the configuration with a check mark in all five component columns obtain?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "In Table 3, the configuration where Quantization / Rate, Transformer / in encoder, Transformer / in decoder, WavLM / distillation, and Split / quantizer are all checked has a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "MOSHI:T3:r03"
+  ],
+  "request_id": "loop-B12_p7_v46_c6-t05"
+ },
+ "client_ms": 16059.6,
+ "evidence_ids": [
+  "MOSHI:T3:r01",
+  "MOSHI:T3:r03",
+  "MOSHI:T3:r02",
+  "MOSHI:T17:r07",
+  "MOSHI:T17:r05",
+  "MOSHI:T17:r06"
+ ],
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true
+ ],
+ "drafts": [
+  "In Table 3, the configuration where Quantization / Rate, Transformer / in encoder, Transformer / in decoder, WavLM / distillation, and Split / quantizer are all checked has a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03]."
+ ],
+ "verification": [
+  {
+   "ok": true,
+   "cited": [
+    "MOSHI:T3:r03"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "In Table 3, the configuration where Quantization / Rate, Transformer / in encoder, Transformer / in decoder, WavLM / distillation, and Split / quantizer are all checked has a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03].",
+     "ok": true,
+     "entailment": 0.9711247013824108,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-B12_p7_v46_c6-t05",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T14:37:56.542+00:00",
+  "question_id": "t05",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 1896,
+  "tokens_out": 176,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1283.0,
+  "context_tokens": 1398,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:T3:r01",
+   "MOSHI:T3:r03",
+   "MOSHI:T3:r02",
+   "MOSHI:T17:r07",
+   "MOSHI:T17:r05",
+   "MOSHI:T17:r06"
+  ],
+  "verification_ms": 1365.4,
+  "answer_status": "answered",
+  "llm_calls": 1,
+  "initial_attempts": 1,
+  "redraft_attempts": 0,
+  "fallback_generations": 0,
+  "governor_wait_ms": 12409.4,
+  "model_ttft_ms": 833.1,
+  "first_byte_ms": 425.3,
+  "generation_ms": 967.1,
+  "reasoning_tokens": 92,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1897,
+    "reserved": 2667,
+    "governor_wait_ms": 12409.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.159427518,
+     "prompt_tokens": 1896,
+     "prompt_time": 0.280282438,
+     "completion_tokens": 176,
+     "completion_time": 0.365447419,
+     "total_tokens": 2072,
+     "total_time": 0.645729857,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 92
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1896,
+    "tokens_out": 176,
+    "reasoning_tokens": 92,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 425.3,
+    "model_ttft_ms": 833.1,
+    "total_ms": 967.1,
+    "max_gap_ms": 407.8,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "973",
+     "x-ratelimit-reset-requests": "38m52.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4013",
+     "x-ratelimit-reset-tokens": "29.902s"
+    }
+   }
+  ],
+  "first_token_ms": 16033.8,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 16034.6
+ }
+}

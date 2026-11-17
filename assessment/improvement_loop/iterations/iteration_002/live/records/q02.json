@@ -1,0 +1,257 @@
+{
+ "run": "assessment/improvement_loop/iterations/iteration_002/live",
+ "timestamp": "2026-11-14T08:40:55.877+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p5r",
+ "verifier_version": "v4.2",
+ "question_id": "q02",
+ "dataset": [
+  "A_fixed_regression",
+  "B_failure_focused"
+ ],
+ "question": "How many attention heads does the base Transformer use, and what key and value dimension does each head get?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.2 Model Variations; AIAYN §3.2.2 Multi-Head Attention; AIAYN §3.2.3 Applications of Attention in our Model; AIAYN §3.2.1 Scaled Dot-Product Attention.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-live-q02"
+ },
+ "client_ms": 4657.9,
+ "evidence_ids": [
+  "AIAYN:6.2:c031",
+  "AIAYN:3.2.2:c014",
+  "AIAYN:3.2.2:c013",
+  "AIAYN:3.2.3:c016",
+  "AIAYN:3.2.1:c011",
+  "HNET:B:c107",
+  "AIAYN:AttentionVisualizations:c037"
+ ],
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true
+ ],
+ "drafts": [
+  "The base Transformer employs eight parallel attention heads [h=8] [AIAYN:3.2.2:c014]. Each head receives key and value dimensions of 64, i.e., d_k = d_v = 64 [AIAYN:3.2.2:c014].",
+  "In this work we employ h=8 parallel attention layers, or heads [AIAYN:3.2.2:c014]. For each of these we use d_k=d_v=d_model/h=64 [AIAYN:3.2.2:c014]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.2.2:c014"
+   ],
+   "failures": [
+    [
+     "The base Transformer employs eight parallel attention heads [h=8] [AIAYN:3.2.2:c014].",
+     "not supported by the cited passage (entailment 0.03 < 0.9)"
+    ],
+    [
+     "Each head receives key and value dimensions of 64, i.e., d_k = d_v = 64 [AIAYN:3.2.2:c014].",
+     "not supported by the cited passage (entailment 0.38 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The base Transformer employs eight parallel attention heads [h=8] [AIAYN:3.2.2:c014].",
+     "ok": false,
+     "entailment": 0.029633226403659396,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.03 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "Each head receives key and value dimensions of 64, i.e., d_k = d_v = 64 [AIAYN:3.2.2:c014].",
+     "ok": false,
+     "entailment": 0.3802784304740554,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.38 < 0.9)"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.2.2:c014"
+   ],
+   "failures": [
+    [
+     "For each of these we use d_k=d_v=d_model/h=64 [AIAYN:3.2.2:c014].",
+     "not supported by the cited passage (entailment 0.81 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "In this work we employ h=8 parallel attention layers, or heads [AIAYN:3.2.2:c014].",
+     "ok": true,
+     "entailment": 0.9914191889709211,
+     "reasons": []
+    },
+    {
+     "sentence": "For each of these we use d_k=d_v=d_model/h=64 [AIAYN:3.2.2:c014].",
+     "ok": false,
+     "entailment": 0.805789401294477,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.81 < 0.9)"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-live-q02",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T08:40:55.877+00:00",
+  "question_id": "q02",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3955,
+  "tokens_out": 223,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1202.3,
+  "context_tokens": 1541,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "h",
+   "d_k",
+   "d_v"
+  ],
+  "retrieval_query": "How many attention heads does the base Transformer use, and what key and value dimension does each head get? [h; d_k; d_v]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:3.2.2:c014",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3.2.1:c011",
+   "HNET:B:c107",
+   "AIAYN:AttentionVisualizations:c037"
+  ],
+  "verification_ms": 1036.4,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 0.0,
+  "model_ttft_ms": 860.3,
+  "first_byte_ms": 582.7,
+  "generation_ms": 2347.8,
+  "reasoning_tokens": 82,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1840,
+    "reserved": 2610,
+    "governor_wait_ms": 0.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.473713264,
+     "prompt_tokens": 1839,
+     "prompt_time": 0.186278385,
+     "completion_tokens": 111,
+     "completion_time": 0.236458779,
+     "total_tokens": 1950,
+     "total_time": 0.422737164,
+     "completion_tokens_details": {
+      "reasoning_tokens": 36
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1839,
+    "tokens_out": 111,
+    "reasoning_tokens": 36,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 582.7,
+    "model_ttft_ms": 860.3,
+    "total_ms": 1000.1,
+    "max_gap_ms": 277.6,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "957",
+     "x-ratelimit-reset-requests": "1h1m55.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5753",
+     "x-ratelimit-reset-tokens": "16.852s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2115,
+    "reserved": 2885,
+    "governor_wait_ms": 0.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.15976207,
+     "prompt_tokens": 2116,
+     "prompt_time": 0.192970408,
+     "completion_tokens": 112,
+     "completion_time": 0.254334761,
+     "total_tokens": 2228,
+     "total_time": 0.447305169,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 46
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2116,
+    "tokens_out": 112,
+    "reasoning_tokens": 46,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 244.1,
+    "model_ttft_ms": 1343.6,
+    "total_ms": 1347.7,
+    "max_gap_ms": 1099.5,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "956",
+     "x-ratelimit-reset-requests": "1h3m21.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "3730",
+     "x-ratelimit-reset-tokens": "32.025s"
+    }
+   }
+  ],
+  "first_token_ms": 4616.9,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 4617.5
+ }
+}

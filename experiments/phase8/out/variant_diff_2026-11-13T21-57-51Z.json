@@ -1,0 +1,393 @@
+{
+ "full_caption": [
+  {
+   "q": "q11",
+   "setting": "A",
+   "metric": "quotes_in",
+   "base": 1,
+   "full_caption": 2
+  },
+  {
+   "q": "q13",
+   "setting": "A",
+   "metric": "quotes_in",
+   "base": 2,
+   "full_caption": 1
+  },
+  {
+   "q": "t06",
+   "setting": "A",
+   "metric": "table_in",
+   "base": false,
+   "full_caption": true
+  },
+  {
+   "q": "t06",
+   "setting": "A",
+   "metric": "rows_in",
+   "base": 0,
+   "full_caption": 1
+  },
+  {
+   "q": "t06",
+   "setting": "A",
+   "metric": "complete",
+   "base": false,
+   "full_caption": true
+  },
+  {
+   "q": "t10",
+   "setting": "A",
+   "metric": "table_in",
+   "base": false,
+   "full_caption": true
+  },
+  {
+   "q": "t29",
+   "setting": "A",
+   "metric": "rows_in",
+   "base": 1,
+   "full_caption": 0
+  },
+  {
+   "q": "t29",
+   "setting": "A",
+   "metric": "complete",
+   "base": true,
+   "full_caption": false
+  },
+  {
+   "q": "t32",
+   "setting": "A",
+   "metric": "rows_in",
+   "base": 1,
+   "full_caption": 0
+  },
+  {
+   "q": "t32",
+   "setting": "A",
+   "metric": "complete",
+   "base": true,
+   "full_caption": false
+  },
+  {
+   "q": "q13",
+   "setting": "B",
+   "metric": "quotes_in",
+   "base": 2,
+   "full_caption": 1
+  },
+  {
+   "q": "t10",
+   "setting": "B",
+   "metric": "table_in",
+   "base": false,
+   "full_caption": true
+  },
+  {
+   "q": "t10",
+   "setting": "B",
+   "metric": "rows_in",
+   "base": 0,
+   "full_caption": 3
+  },
+  {
+   "q": "t10",
+   "setting": "B",
+   "metric": "complete",
+   "base": false,
+   "full_caption": true
+  },
+  {
+   "q": "t11",
+   "setting": "B",
+   "metric": "rows_in",
+   "base": 1,
+   "full_caption": 0
+  },
+  {
+   "q": "t11",
+   "setting": "B",
+   "metric": "complete",
+   "base": true,
+   "full_caption": false
+  },
+  {
+   "q": "t28",
+   "setting": "B",
+   "metric": "rows_in",
+   "base": 2,
+   "full_caption": 1
+  },
+  {
+   "q": "t28",
+   "setting": "B",
+   "metric": "complete",
+   "base": true,
+   "full_caption": false
+  },
+  {
+   "q": "t30",
+   "setting": "B",
+   "metric": "rows_in",
+   "base": 1,
+   "full_caption": 0
+  },
+  {
+   "q": "t30",
+   "setting": "B",
+   "metric": "complete",
+   "base": true,
+   "full_caption": false
+  }
+ ],
+ "metadata": [
+  {
+   "q": "q13",
+   "setting": "A",
+   "metric": "quotes_in",
+   "base": 2,
+   "metadata": 1
+  },
+  {
+   "q": "t10",
+   "setting": "A",
+   "metric": "table_in",
+   "base": false,
+   "metadata": true
+  },
+  {
+   "q": "t10",
+   "setting": "A",
+   "metric": "rows_in",
+   "base": 0,
+   "metadata": 1
+  },
+  {
+   "q": "q11",
+   "setting": "B",
+   "metric": "any_gold",
+   "base": false,
+   "metadata": true
+  },
+  {
+   "q": "q11",
+   "setting": "B",
+   "metric": "quotes_in",
+   "base": 0,
+   "metadata": 1
+  },
+  {
+   "q": "t10",
+   "setting": "B",
+   "metric": "table_in",
+   "base": false,
+   "metadata": true
+  },
+  {
+   "q": "t10",
+   "setting": "B",
+   "metric": "rows_in",
+   "base": 0,
+   "metadata": 3
+  },
+  {
+   "q": "t10",
+   "setting": "B",
+   "metric": "complete",
+   "base": false,
+   "metadata": true
+  },
+  {
+   "q": "t29",
+   "setting": "B",
+   "metric": "rows_in",
+   "base": 0,
+   "metadata": 1
+  },
+  {
+   "q": "t29",
+   "setting": "B",
+   "metric": "complete",
+   "base": false,
+   "metadata": true
+  },
+  {
+   "q": "t30",
+   "setting": "B",
+   "metric": "rows_in",
+   "base": 1,
+   "metadata": 0
+  },
+  {
+   "q": "t30",
+   "setting": "B",
+   "metric": "complete",
+   "base": true,
+   "metadata": false
+  },
+  {
+   "q": "t25",
+   "setting": "C",
+   "metric": "rows_in",
+   "base": 1,
+   "metadata": 0
+  },
+  {
+   "q": "t25",
+   "setting": "C",
+   "metric": "complete",
+   "base": true,
+   "metadata": false
+  },
+  {
+   "q": "t30",
+   "setting": "C",
+   "metric": "rows_in",
+   "base": 0,
+   "metadata": 1
+  },
+  {
+   "q": "t30",
+   "setting": "C",
+   "metric": "complete",
+   "base": false,
+   "metadata": true
+  }
+ ],
+ "whole_table": [
+  {
+   "q": "q11",
+   "setting": "A",
+   "metric": "quotes_in",
+   "base": 1,
+   "whole_table": 2
+  },
+  {
+   "q": "q13",
+   "setting": "A",
+   "metric": "quotes_in",
+   "base": 2,
+   "whole_table": 1
+  },
+  {
+   "q": "t05",
+   "setting": "A",
+   "metric": "table_in",
+   "base": true,
+   "whole_table": false
+  },
+  {
+   "q": "t05",
+   "setting": "A",
+   "metric": "rows_in",
+   "base": 1,
+   "whole_table": 0
+  },
+  {
+   "q": "t05",
+   "setting": "A",
+   "metric": "complete",
+   "base": true,
+   "whole_table": false
+  },
+  {
+   "q": "t10",
+   "setting": "A",
+   "metric": "table_in",
+   "base": false,
+   "whole_table": true
+  },
+  {
+   "q": "q11",
+   "setting": "B",
+   "metric": "any_gold",
+   "base": false,
+   "whole_table": true
+  },
+  {
+   "q": "q11",
+   "setting": "B",
+   "metric": "quotes_in",
+   "base": 0,
+   "whole_table": 2
+  },
+  {
+   "q": "q13",
+   "setting": "B",
+   "metric": "quotes_in",
+   "base": 2,
+   "whole_table": 1
+  },
+  {
+   "q": "t10",
+   "setting": "B",
+   "metric": "table_in",
+   "base": false,
+   "whole_table": true
+  },
+  {
+   "q": "t10",
+   "setting": "B",
+   "metric": "rows_in",
+   "base": 0,
+   "whole_table": 3
+  },
+  {
+   "q": "t10",
+   "setting": "B",
+   "metric": "complete",
+   "base": false,
+   "whole_table": true
+  },
+  {
+   "q": "t30",
+   "setting": "B",
+   "metric": "rows_in",
+   "base": 1,
+   "whole_table": 0
+  },
+  {
+   "q": "t30",
+   "setting": "B",
+   "metric": "complete",
+   "base": true,
+   "whole_table": false
+  },
+  {
+   "q": "q11",
+   "setting": "C",
+   "metric": "any_gold",
+   "base": true,
+   "whole_table": false
+  },
+  {
+   "q": "q11",
+   "setting": "C",
+   "metric": "quotes_in",
+   "base": 2,
+   "whole_table": 0
+  },
+  {
+   "q": "q13",
+   "setting": "C",
+   "metric": "quotes_in",
+   "base": 1,
+   "whole_table": 2
+  },
+  {
+   "q": "t32",
+   "setting": "C",
+   "metric": "rows_in",
+   "base": 1,
+   "whole_table": 0
+  },
+  {
+   "q": "t32",
+   "setting": "C",
+   "metric": "complete",
+   "base": true,
+   "whole_table": false
+  }
+ ]
+}

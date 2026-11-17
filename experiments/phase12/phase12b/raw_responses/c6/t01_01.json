@@ -1,0 +1,46 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "corpus_version": "c6",
+ "question_id": "t01",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:00:12.590+00:00",
+  "t_send_ns": 176862591234600,
+  "status": 200,
+  "t_first_byte_ns": 176862994044300,
+  "t_first_content_ns": 176863731498100,
+  "t_last_ns": 176863817565500,
+  "max_gap_ms": 737.4179,
+  "text": "The table shows that for the Isotropic configuration with Example Architecture = ByT5, the Autoregressive column is marked with a cross (✗) [HNET:T6:r01].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.317288749,
+   "prompt_tokens": 1823,
+   "prompt_time": 0.352900859,
+   "completion_tokens": 73,
+   "completion_time": 0.476259715,
+   "total_tokens": 1896,
+   "total_time": 0.829160574,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 23
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "979",
+   "x-ratelimit-reset-requests": "30m14.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5886",
+   "x-ratelimit-reset-tokens": "15.854s"
+  },
+  "error": null,
+  "first_byte_ms": 402.8,
+  "first_content_ms": 1140.3,
+  "total_ms": 1226.3
+ }
+}

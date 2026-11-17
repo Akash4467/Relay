@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2500.24it/s]
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 1987.97it/s]
+Traceback (most recent call last):
+  File "D:\The Relay\experiments\phase11\run_ablation.py", line 33, in <module>
+    main()
+  File "D:\The Relay\experiments\phase11\run_ablation.py", line 18, in main
+    rows = L.evaluate(lab, configs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\The Relay\experiments/phase11\retrieval_lab.py", line 195, in evaluate
+    units = [{"kind": "quote", "ids": g} for g in gold_chunks(q, lab.index[size].chunks)]
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\The Relay\relay\eval\retrieval_recall.py", line 46, in gold_chunks
+    raise ValueError(f"{question['question_id']}: quote not in corpus: {quote!r}")
+ValueError: q09: quote not in corpus: 'lower than the 230 average in natural conversations measured over 10 languages'

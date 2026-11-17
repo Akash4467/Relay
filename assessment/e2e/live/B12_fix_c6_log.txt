@@ -1,0 +1,12 @@
+q01 | ok refused verification failed after redraft | calls 2 | tok 4277 + 284 | run {'requests': 3, 'tokens': 4561, 'refused': 0}
+q04 | ok normal None | calls 2 | tok 4238 + 510 | run {'requests': 5, 'tokens': 9309, 'refused': 0}
+q07 | ok refused verification failed after redraft | calls 2 | tok 4302 + 787 | run {'requests': 7, 'tokens': 14398, 'refused': 0}
+q12 | ok refused verification failed after redraft | calls 2 | tok 4054 + 373 | run {'requests': 9, 'tokens': 18825, 'refused': 0}
+q13 | ok normal None | calls 2 | tok 4477 + 497 | run {'requests': 11, 'tokens': 23799, 'refused': 0}
+q15 | ok refused verification failed after redraft | calls 2 | tok 4374 + 355 | run {'requests': 13, 'tokens': 28528, 'refused': 0}
+q14 | ok normal None | calls 2 | tok 4322 + 395 | run {'requests': 15, 'tokens': 33245, 'refused': 0}
+t05 | ok normal None | calls 1 | tok 1896 + 177 | run {'requests': 16, 'tokens': 35318, 'refused': 0}
+t13 | ok normal None | calls 1 | tok 2040 + 141 | run {'requests': 17, 'tokens': 37499, 'refused': 0}
+n10 | ok refused verification failed after redraft | calls 2 | tok 4161 + 379 | run {'requests': 19, 'tokens': 42039, 'refused': 0}
+q16 | error unavailable upstream_error | calls 1 | tok 0 + 0 | run {'requests': 19, 'tokens': 42039, 'refused': 1}
+q20 | error unavailable upstream_error | calls 1 | tok 0 + 0 | run {'requests': 19, 'tokens': 42039, 'refused': 2}

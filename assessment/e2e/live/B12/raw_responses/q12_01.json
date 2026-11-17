@@ -1,0 +1,44 @@
+{
+ "question_id": "q12",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T12:29:10.755+00:00",
+  "t_send_ns": 193000755966600,
+  "status": 200,
+  "t_first_byte_ns": 193001226341900,
+  "t_first_content_ns": 193001451018700,
+  "t_last_ns": 193001651869600,
+  "max_gap_ms": 224.6545,
+  "text": "Moshi without Inner Monologue achieves 9.2 % accuracy on Web Questions, 21.0 % on LlaMA Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02]. The retrieved passages do not state the accuracies for Moshi with Inner Monologue.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.370937188,
+   "prompt_tokens": 1736,
+   "prompt_time": 0.089789757,
+   "completion_tokens": 134,
+   "completion_time": 0.342935595,
+   "total_tokens": 1870,
+   "total_time": 0.432725352,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 59
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "993",
+   "x-ratelimit-reset-requests": "10m4.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "667",
+   "x-ratelimit-reset-tokens": "54.997s"
+  },
+  "error": null,
+  "first_byte_ms": 470.4,
+  "first_content_ms": 695.1,
+  "total_ms": 895.9
+ }
+}

@@ -28,7 +28,7 @@ class Reservation:
 
 
 class Governor:
-    def __init__(self, limits: dict[str, dict], clock=time.monotonic):
+    def __init__(self, limits: dict[str, dict], clock=time.perf_counter):
         self.clock = clock
         self.lock = threading.RLock()
         self.buckets = {
@@ -37,7 +37,7 @@ class Governor:
             for model, l in limits.items()}
 
     @classmethod
-    def from_config(cls, path: Path = LIMITS, clock=time.monotonic) -> "Governor":
+    def from_config(cls, path: Path = LIMITS, clock=time.perf_counter) -> "Governor":
         return cls(yaml.safe_load(path.read_text(encoding="utf-8"))["models"], clock)
 
     def wait_estimate(self, model: str, tokens: int) -> float:

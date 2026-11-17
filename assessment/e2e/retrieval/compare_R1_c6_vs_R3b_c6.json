@@ -1,0 +1,26 @@
+{
+ "A": {
+  "complete_gained": [],
+  "complete_lost": [],
+  "any_gold_gained": [],
+  "any_gold_lost": [],
+  "units_in_context_lost": [],
+  "rr_drop_over_0.25": []
+ },
+ "B": {
+  "complete_gained": [],
+  "complete_lost": [],
+  "any_gold_gained": [],
+  "any_gold_lost": [],
+  "units_in_context_lost": [],
+  "rr_drop_over_0.25": []
+ },
+ "C": {
+  "complete_gained": [],
+  "complete_lost": [],
+  "any_gold_gained": [],
+  "any_gold_lost": [],
+  "units_in_context_lost": [],
+  "rr_drop_over_0.25": []
+ }
+}

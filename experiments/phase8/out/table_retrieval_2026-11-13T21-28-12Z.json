@@ -1,0 +1,2366 @@
+{
+ "queries": [
+  {
+   "id": "a1",
+   "gold": "T3",
+   "question": "In the Moshi Mimi codec ablation that includes human MUSHRA judgments, which configuration has the highest MUSHRA score?"
+  },
+  {
+   "id": "a2",
+   "gold": "T3",
+   "question": "Which Mimi codec ablation in the Moshi paper reports MUSHRA alongside ABX, VisQOL and MOSNet?"
+  },
+  {
+   "id": "a3",
+   "gold": "T3",
+   "question": "In the Mimi ablation with MUSHRA scores, what MUSHRA does the configuration without a Transformer in the decoder get?"
+  },
+  {
+   "id": "a4",
+   "gold": "T3",
+   "question": "What MUSHRA score does the Mimi ablation report for the configuration with WavLM distillation but no split quantizer?"
+  },
+  {
+   "id": "a5",
+   "gold": "T17",
+   "question": "In the additional appendix ablation on the Mimi codec, what ABX error does the configuration without any of the five components get?"
+  },
+  {
+   "id": "a6",
+   "gold": "T17",
+   "question": "In the Moshi appendix's additional ablation on the Mimi codec, what VisQOL does the configuration with only a Transformer in the encoder get?"
+  },
+  {
+   "id": "a7",
+   "gold": "T17",
+   "question": "In the additional ablation on the Mimi codec, which configuration with quantization rate only is listed, and what is its MOSNet?"
+  },
+  {
+   "id": "a8",
+   "gold": "T17",
+   "question": "In the extended Mimi codec ablation without MUSHRA, what ABX does the configuration with Transformers in both encoder and decoder but no quantization rate get?"
+  },
+  {
+   "id": "t05",
+   "gold": "T3",
+   "question": "In the Moshi paper's Mimi codec ablation table that reports ABX, VisQOL, MOSNet and MUSHRA, what MUSHRA score does the configuration with a check mark in all five component columns obtain?"
+  },
+  {
+   "id": "t06",
+   "gold": "T3",
+   "question": "In that Mimi codec ablation table with MUSHRA scores, which component column has no mark in the row whose ABX error is 6.5%?"
+  },
+  {
+   "id": "t07",
+   "gold": "T3",
+   "question": "In the Mimi codec ablation table with MUSHRA scores, what ABX error and MUSHRA score does the row with no mark under Quantization Rate report?"
+  },
+  {
+   "id": "t08",
+   "gold": "T3",
+   "question": "How long did training take for each configuration in the Moshi paper's Mimi codec ablation table?"
+  },
+  {
+   "id": "t29",
+   "gold": "T17",
+   "question": "In the Moshi paper's extended Mimi codec ablation (the table reporting only ABX, VisQOL and MOSNet), what ABX error does the configuration with no marks in any of the five component columns report?"
+  },
+  {
+   "id": "t30",
+   "gold": "T17",
+   "question": "In the Moshi paper's extended Mimi codec ablation, what ABX error does the row with a check mark only under 'Transformer in decoder' report?"
+  },
+  {
+   "id": "t31",
+   "gold": "T17",
+   "question": "What MUSHRA score does the Moshi paper's extended Mimi codec ablation (the table without a MUSHRA column) report for the configuration checked in all five component columns?"
+  },
+  {
+   "id": "t32",
+   "gold": "T17",
+   "question": "In the Moshi paper's extended Mimi codec ablation, what VisQOL does the row with check marks under Quantization Rate and both Transformer columns, and no marks under WavLM distillation and Split quantizer, report?"
+  }
+ ],
+ "variants": {
+  "base": {
+   "t3_t17": {
+    "A": {
+     "correct_ahead": "9/16",
+     "gold_in_context": "10/16",
+     "other_in_context": "9/16"
+    },
+    "B": {
+     "correct_ahead": "14/16",
+     "gold_in_context": "16/16",
+     "other_in_context": "13/16"
+    },
+    "C": {
+     "correct_ahead": "9/16",
+     "gold_in_context": "13/16",
+     "other_in_context": "11/16"
+    }
+   },
+   "per_query": [
+    {
+     "id": "a1",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 5,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 2,
+       "other": 9
+      },
+      "dense": {
+       "gold": 17,
+       "other": 4
+      },
+      "rrf": {
+       "gold": 5,
+       "other": 6
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 8
+      },
+      "context": {
+       "gold": 1,
+       "other": null
+      }
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 7,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a2",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 7,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 5,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 1,
+       "other": 4
+      },
+      "dense": {
+       "gold": 10,
+       "other": 1
+      },
+      "rrf": {
+       "gold": 7,
+       "other": 1
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 5
+      },
+      "context": {
+       "gold": 1,
+       "other": 5
+      }
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a3",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 4,
+      "other_rank": 2,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 1,
+       "other": 8
+      },
+      "dense": {
+       "gold": 20,
+       "other": 5
+      },
+      "rrf": {
+       "gold": 4,
+       "other": 2
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 4
+      },
+      "context": {
+       "gold": 1,
+       "other": 4
+      }
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a4",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 8,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 1,
+       "other": 4
+      },
+      "dense": {
+       "gold": 14,
+       "other": 2
+      },
+      "rrf": {
+       "gold": 8,
+       "other": 1
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 4
+      },
+      "context": {
+       "gold": 1,
+       "other": 4
+      }
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a5",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 2,
+      "other_rank": 16,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 2,
+       "other": 12
+      },
+      "dense": {
+       "gold": 3,
+       "other": null
+      },
+      "rrf": {
+       "gold": 2,
+       "other": 16
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 3
+      },
+      "context": {
+       "gold": 1,
+       "other": 3
+      }
+     },
+     "C": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a6",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 9,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 1,
+       "other": 9
+      },
+      "dense": {
+       "gold": 1,
+       "other": 9
+      },
+      "rrf": {
+       "gold": 1,
+       "other": 9
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 6
+      },
+      "context": {
+       "gold": 1,
+       "other": 6
+      }
+     },
+     "C": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a7",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 2,
+      "other_rank": 10,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 2,
+       "other": 10
+      },
+      "dense": {
+       "gold": 2,
+       "other": 10
+      },
+      "rrf": {
+       "gold": 2,
+       "other": 10
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 8
+      },
+      "context": {
+       "gold": 1,
+       "other": null
+      }
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 2,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a8",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 7,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 4,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 4,
+       "other": 1
+      },
+      "dense": {
+       "gold": 2,
+       "other": 15
+      },
+      "rrf": {
+       "gold": 1,
+       "other": 7
+      },
+      "rerank": {
+       "gold": 4,
+       "other": 1
+      },
+      "context": {
+       "gold": 4,
+       "other": 1
+      }
+     },
+     "C": {
+      "gold_rank": 5,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t05",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 3,
+      "other_rank": 10,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 1,
+       "other": 5
+      },
+      "dense": {
+       "gold": null,
+       "other": null
+      },
+      "rrf": {
+       "gold": 3,
+       "other": 10
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 4
+      },
+      "context": {
+       "gold": 1,
+       "other": 4
+      }
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t06",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 9,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 1,
+       "other": 2
+      },
+      "dense": {
+       "gold": null,
+       "other": 4
+      },
+      "rrf": {
+       "gold": 9,
+       "other": 1
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 4
+      },
+      "context": {
+       "gold": 1,
+       "other": 4
+      }
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 5,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "t07",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 8,
+      "other_rank": 4,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 5,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 1,
+       "other": 5
+      },
+      "dense": {
+       "gold": 17,
+       "other": 5
+      },
+      "rrf": {
+       "gold": 8,
+       "other": 4
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 5
+      },
+      "context": {
+       "gold": 1,
+       "other": 5
+      }
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "t08",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 9,
+      "other_rank": 2,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 3,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 12,
+       "other": 1
+      },
+      "dense": {
+       "gold": 10,
+       "other": 1
+      },
+      "rrf": {
+       "gold": 9,
+       "other": 2
+      },
+      "rerank": {
+       "gold": 3,
+       "other": 4
+      },
+      "context": {
+       "gold": 3,
+       "other": 4
+      }
+     },
+     "C": {
+      "gold_rank": 4,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t29",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 2,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 3,
+       "other": 10
+      },
+      "dense": {
+       "gold": 2,
+       "other": 11
+      },
+      "rrf": {
+       "gold": 2,
+       "other": 8
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 4
+      },
+      "context": {
+       "gold": 1,
+       "other": 4
+      }
+     },
+     "C": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t30",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 9,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 7,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 1,
+       "other": 8
+      },
+      "dense": {
+       "gold": 2,
+       "other": 13
+      },
+      "rrf": {
+       "gold": 1,
+       "other": 9
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 7
+      },
+      "context": {
+       "gold": 1,
+       "other": null
+      }
+     },
+     "C": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t31",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 16,
+      "other_rank": 2,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 5,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 9,
+       "other": 1
+      },
+      "dense": {
+       "gold": null,
+       "other": null
+      },
+      "rrf": {
+       "gold": 16,
+       "other": 2
+      },
+      "rerank": {
+       "gold": 5,
+       "other": 1
+      },
+      "context": {
+       "gold": 5,
+       "other": 1
+      }
+     },
+     "C": {
+      "gold_rank": 6,
+      "other_rank": 3,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t32",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "trace_B": {
+      "bm25": {
+       "gold": 1,
+       "other": 8
+      },
+      "dense": {
+       "gold": 1,
+       "other": 8
+      },
+      "rrf": {
+       "gold": 1,
+       "other": 8
+      },
+      "rerank": {
+       "gold": 1,
+       "other": 4
+      },
+      "context": {
+       "gold": 1,
+       "other": 4
+      }
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    }
+   ],
+   "side_effects": {
+    "original A": {
+     "context_tokens_mean": 1473.7,
+     "duplicate_table_chunk_rate": 0.099,
+     "any_gold": "13/15",
+     "quote_recall": "22/34",
+     "mrr": 0.602,
+     "missing": [
+      "q03",
+      "q14"
+     ]
+    },
+    "original B": {
+     "context_tokens_mean": 1460.9,
+     "duplicate_table_chunk_rate": 0.126,
+     "any_gold": "11/15",
+     "quote_recall": "20/34",
+     "mrr": 0.582,
+     "missing": [
+      "q06",
+      "q10",
+      "q11",
+      "q14"
+     ]
+    },
+    "original C": {
+     "context_tokens_mean": 1270.7,
+     "duplicate_table_chunk_rate": 0.062,
+     "any_gold": "14/15",
+     "quote_recall": "23/34",
+     "mrr": 0.644,
+     "missing": [
+      "q14"
+     ]
+    },
+    "table A": {
+     "context_tokens_mean": 1495.2,
+     "duplicate_table_chunk_rate": 0.357,
+     "table_in": "21/24",
+     "rows_in": "26/31",
+     "complete": "18/24"
+    },
+    "table B": {
+     "context_tokens_mean": 1503.0,
+     "duplicate_table_chunk_rate": 0.453,
+     "table_in": "23/24",
+     "rows_in": "27/31",
+     "complete": "19/24"
+    },
+    "table C": {
+     "context_tokens_mean": 1403.8,
+     "duplicate_table_chunk_rate": 0.279,
+     "table_in": "24/24",
+     "rows_in": "29/31",
+     "complete": "19/24"
+    }
+   },
+   "chunks": {
+    "256": 465,
+    "512": 260
+   }
+  },
+  "full_caption": {
+   "t3_t17": {
+    "A": {
+     "correct_ahead": "10/16",
+     "gold_in_context": "10/16",
+     "other_in_context": "5/16"
+    },
+    "B": {
+     "correct_ahead": "12/16",
+     "gold_in_context": "13/16",
+     "other_in_context": "5/16"
+    },
+    "C": {
+     "correct_ahead": "9/16",
+     "gold_in_context": "13/16",
+     "other_in_context": "11/16"
+    }
+   },
+   "per_query": [
+    {
+     "id": "a1",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 5,
+      "other_rank": null,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": null,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 7,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a2",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 14,
+      "other_rank": 4,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 11,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a3",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 9,
+      "other_rank": null,
+      "correct_ahead": true,
+      "gold_in_context": false,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": null,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a4",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 13,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 7,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a5",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 17,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 4,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a6",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 14,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a7",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 14,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 14,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 2,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a8",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 7,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 5,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t05",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": null,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": null,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t06",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 7,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 5,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "t07",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 14,
+      "other_rank": 9,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 7,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "t08",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 18,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 14,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 4,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t29",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 14,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 13,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t30",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 17,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 14,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t31",
+     "gold": "T17",
+     "A": {
+      "gold_rank": null,
+      "other_rank": 17,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": null,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 6,
+      "other_rank": 3,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t32",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 14,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 14,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    }
+   ],
+   "side_effects": {
+    "original A": {
+     "context_tokens_mean": 1488.3,
+     "duplicate_table_chunk_rate": 0.116,
+     "any_gold": "13/15",
+     "quote_recall": "22/34",
+     "mrr": 0.574,
+     "missing": [
+      "q03",
+      "q14"
+     ]
+    },
+    "original B": {
+     "context_tokens_mean": 1459.1,
+     "duplicate_table_chunk_rate": 0.146,
+     "any_gold": "11/15",
+     "quote_recall": "19/34",
+     "mrr": 0.579,
+     "missing": [
+      "q06",
+      "q10",
+      "q11",
+      "q14"
+     ]
+    },
+    "original C": {
+     "context_tokens_mean": 1290.3,
+     "duplicate_table_chunk_rate": 0.055,
+     "any_gold": "14/15",
+     "quote_recall": "23/34",
+     "mrr": 0.65,
+     "missing": [
+      "q14"
+     ]
+    },
+    "table A": {
+     "context_tokens_mean": 1452.6,
+     "duplicate_table_chunk_rate": 0.572,
+     "table_in": "23/24",
+     "rows_in": "25/31",
+     "complete": "17/24"
+    },
+    "table B": {
+     "context_tokens_mean": 1456.4,
+     "duplicate_table_chunk_rate": 0.641,
+     "table_in": "24/24",
+     "rows_in": "27/31",
+     "complete": "17/24"
+    },
+    "table C": {
+     "context_tokens_mean": 1419.2,
+     "duplicate_table_chunk_rate": 0.314,
+     "table_in": "24/24",
+     "rows_in": "29/31",
+     "complete": "19/24"
+    }
+   },
+   "chunks": {
+    "256": 506,
+    "512": 261
+   }
+  },
+  "metadata": {
+   "t3_t17": {
+    "A": {
+     "correct_ahead": "8/16",
+     "gold_in_context": "11/16",
+     "other_in_context": "8/16"
+    },
+    "B": {
+     "correct_ahead": "13/16",
+     "gold_in_context": "15/16",
+     "other_in_context": "9/16"
+    },
+    "C": {
+     "correct_ahead": "13/16",
+     "gold_in_context": "14/16",
+     "other_in_context": "7/16"
+    }
+   },
+   "per_query": [
+    {
+     "id": "a1",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 7,
+      "other_rank": 3,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 2,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 7,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a2",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 5,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 5,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a3",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 4,
+      "other_rank": 2,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a4",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a5",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 9,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 5,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a6",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 9,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a7",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 10,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 5,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a8",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 7,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 4,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 5,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t05",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 6,
+      "other_rank": 11,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t06",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 8,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "t07",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 8,
+      "other_rank": 3,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 5,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 5,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "t08",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 9,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 10,
+      "other_rank": 2,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t29",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 2,
+      "other_rank": 9,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 2,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t30",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 9,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "t31",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 14,
+      "other_rank": 4,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 7,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 6,
+      "other_rank": 3,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t32",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 9,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    }
+   ],
+   "side_effects": {
+    "original A": {
+     "context_tokens_mean": 1493.7,
+     "duplicate_table_chunk_rate": 0.085,
+     "any_gold": "13/15",
+     "quote_recall": "21/34",
+     "mrr": 0.593,
+     "missing": [
+      "q03",
+      "q14"
+     ]
+    },
+    "original B": {
+     "context_tokens_mean": 1465.1,
+     "duplicate_table_chunk_rate": 0.103,
+     "any_gold": "12/15",
+     "quote_recall": "21/34",
+     "mrr": 0.552,
+     "missing": [
+      "q06",
+      "q10",
+      "q14"
+     ]
+    },
+    "original C": {
+     "context_tokens_mean": 1259.5,
+     "duplicate_table_chunk_rate": 0.045,
+     "any_gold": "14/15",
+     "quote_recall": "23/34",
+     "mrr": 0.644,
+     "missing": [
+      "q14"
+     ]
+    },
+    "table A": {
+     "context_tokens_mean": 1506.7,
+     "duplicate_table_chunk_rate": 0.414,
+     "table_in": "22/24",
+     "rows_in": "27/31",
+     "complete": "18/24"
+    },
+    "table B": {
+     "context_tokens_mean": 1512.4,
+     "duplicate_table_chunk_rate": 0.468,
+     "table_in": "24/24",
+     "rows_in": "30/31",
+     "complete": "20/24"
+    },
+    "table C": {
+     "context_tokens_mean": 1428.3,
+     "duplicate_table_chunk_rate": 0.279,
+     "table_in": "24/24",
+     "rows_in": "29/31",
+     "complete": "19/24"
+    }
+   },
+   "chunks": {
+    "256": 465,
+    "512": 260
+   }
+  },
+  "whole_table": {
+   "t3_t17": {
+    "A": {
+     "correct_ahead": "9/16",
+     "gold_in_context": "7/16",
+     "other_in_context": "4/16"
+    },
+    "B": {
+     "correct_ahead": "9/16",
+     "gold_in_context": "13/16",
+     "other_in_context": "11/16"
+    },
+    "C": {
+     "correct_ahead": "7/16",
+     "gold_in_context": "13/16",
+     "other_in_context": "11/16"
+    }
+   },
+   "per_query": [
+    {
+     "id": "a1",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 7,
+      "other_rank": 16,
+      "correct_ahead": true,
+      "gold_in_context": false,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 8,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 5,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a2",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 5,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a3",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 6,
+      "other_rank": 5,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "a4",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 7,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 2,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a5",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 2,
+      "other_rank": 10,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a6",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 10,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a7",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 9,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 2,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "a8",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 13,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 5,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t05",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 7,
+      "other_rank": 13,
+      "correct_ahead": true,
+      "gold_in_context": false,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 2,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t06",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 7,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "t07",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 7,
+      "other_rank": 6,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 6,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "C": {
+      "gold_rank": 1,
+      "other_rank": 4,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     }
+    },
+    {
+     "id": "t08",
+     "gold": "T3",
+     "A": {
+      "gold_rank": 13,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "B": {
+      "gold_rank": 4,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t29",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 9,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 3,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t30",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 10,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t31",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 17,
+      "other_rank": 6,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 7,
+      "other_rank": 3,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 4,
+      "other_rank": 2,
+      "correct_ahead": false,
+      "gold_in_context": false,
+      "other_in_context": true
+     }
+    },
+    {
+     "id": "t32",
+     "gold": "T17",
+     "A": {
+      "gold_rank": 1,
+      "other_rank": 7,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": false
+     },
+     "B": {
+      "gold_rank": 1,
+      "other_rank": 3,
+      "correct_ahead": true,
+      "gold_in_context": true,
+      "other_in_context": true
+     },
+     "C": {
+      "gold_rank": 2,
+      "other_rank": 1,
+      "correct_ahead": false,
+      "gold_in_context": true,
+      "other_in_context": true
+     }
+    }
+   ],
+   "side_effects": {
+    "original A": {
+     "context_tokens_mean": 1473.8,
+     "duplicate_table_chunk_rate": 0.036,
+     "any_gold": "13/15",
+     "quote_recall": "22/34",
+     "mrr": 0.663,
+     "missing": [
+      "q03",
+      "q14"
+     ]
+    },
+    "original B": {
+     "context_tokens_mean": 1496.3,
+     "duplicate_table_chunk_rate": 0.034,
+     "any_gold": "12/15",
+     "quote_recall": "21/34",
+     "mrr": 0.559,
+     "missing": [
+      "q06",
+      "q10",
+      "q14"
+     ]
+    },
+    "original C": {
+     "context_tokens_mean": 1230.1,
+     "duplicate_table_chunk_rate": 0.0,
+     "any_gold": "13/15",
+     "quote_recall": "22/34",
+     "mrr": 0.65,
+     "missing": [
+      "q11",
+      "q14"
+     ]
+    },
+    "table A": {
+     "context_tokens_mean": 1496.9,
+     "duplicate_table_chunk_rate": 0.17,
+     "table_in": "21/24",
+     "rows_in": "25/31",
+     "complete": "17/24"
+    },
+    "table B": {
+     "context_tokens_mean": 1514.7,
+     "duplicate_table_chunk_rate": 0.203,
+     "table_in": "24/24",
+     "rows_in": "29/31",
+     "complete": "19/24"
+    },
+    "table C": {
+     "context_tokens_mean": 1326.1,
+     "duplicate_table_chunk_rate": 0.064,
+     "table_in": "24/24",
+     "rows_in": "28/31",
+     "complete": "18/24"
+    }
+   },
+   "chunks": {
+    "256": 390,
+    "512": 232
+   }
+  }
+ },
+ "base_reproduces_stored_c4": true
+}

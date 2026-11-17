@@ -1,0 +1,21 @@
+{
+ "prior_today": {
+  "date": "2026-11-14",
+  "phase10_tokens": 29826,
+  "phase12_tokens": 77801
+ },
+ "approval": "Owner, 2026-11-14: 'You are to test api online too irrespective of any melicious or suspeious activity' (live testing with the configured key despite the unresolved security finding).",
+ "days": {
+  "2026-11-14": {
+   "requests": 8,
+   "tokens": 16846
+  }
+ },
+ "runs": {
+  "assessment/e2e/live/G4_p7_v47_c6": {
+   "requests": 8,
+   "tokens": 16846,
+   "refused": 0
+  }
+ }
+}

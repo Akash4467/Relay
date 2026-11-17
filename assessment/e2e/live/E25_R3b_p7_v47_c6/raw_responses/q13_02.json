@@ -1,0 +1,41 @@
+{
+ "question_id": "q13",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:08:00.986+00:00",
+  "t_send_ns": 206130986864200,
+  "status": 200,
+  "t_first_byte_ns": 206131448772400,
+  "t_first_content_ns": 206131841128800,
+  "t_last_ns": 206131973834600,
+  "max_gap_ms": 392.3219,
+  "text": "The authors report that the H‑Net (2‑stage) configuration (#FLOPs matched to GPT‑3 Large) has Average / acc ↑ = 55.5 % [HNET:T2:r10]. The retrieved passages do not state the average zero‑shot accuracy of the BPE Transformer.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.325348874,
+   "prompt_tokens": 2606,
+   "prompt_time": 0.18396494,
+   "completion_tokens": 165,
+   "completion_time": 0.34432805,
+   "total_tokens": 2771,
+   "total_time": 0.52829299,
+   "completion_tokens_details": {
+    "reasoning_tokens": 93
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "970",
+   "x-ratelimit-reset-requests": "43m12s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5047",
+   "x-ratelimit-reset-tokens": "22.147s"
+  },
+  "error": null,
+  "first_byte_ms": 461.9,
+  "first_content_ms": 854.3,
+  "total_ms": 987.0
+ }
+}

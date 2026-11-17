@@ -1,0 +1,30 @@
+{
+ "about": "ASSISTANT labels (not independent), same rubric as baseline/phase12_c3_reused/draft_labels.json: correct = every sentence right and supported by ITS cited chunks; mixed = at least one sentence inaccurate, uncited or unsupported by its own citation; wrong = the answer is wrong; uncertain = not confidently decidable (excluded from false-acceptance/false-rejection counts). A verifier should accept only 'correct'.",
+ "labels": {
+  "q03#0": "mixed", "q03#1": "correct",
+  "q04#0": "correct", "q04#1": "correct",
+  "q05#0": "uncertain", "q05#1": "correct",
+  "q06#0": "correct",
+  "q08#0": "correct", "q08#1": "mixed",
+  "q09#0": "mixed", "q09#1": "mixed",
+  "q10#0": "mixed", "q10#1": "correct",
+  "q12#0": "mixed", "q12#1": "mixed",
+  "q13#0": "mixed", "q13#1": "mixed",
+  "q14#0": "wrong", "q14#1": "wrong"
+ },
+ "notes": {
+  "q03#0": "'text tokens as a per-timestep prefix to the semantic token' is not in the cited MOSHI:1:c007",
+  "q04#0": "frame rate 12.5 Hz, Q = 8, N_A = 2048, 1.1 kbps: all in MOSHI:3.3.1:c030 (which says 'we', never 'Mimi')",
+  "q05#0": "the third sentence's 'contextual or semantic shift' gloss was not checked against HNET:2.2.1:c023 closely enough",
+  "q06#0": "supported by HNET:A:c088 (tokenization biases, adversarial fragility, character-level tasks) though not the expected answer's motivation",
+  "q08#0": "learned positional embeddings: dev PPL 4.92, BLEU 25.7 is AIAYN:T3:r08, which this draft cites",
+  "q08#1": "same numbers but T3:r08 no longer cited: 'number not in the cited passage'",
+  "q09#0": "'which together set the target delay' and 'a few hundred milliseconds' are not in the cited chunks",
+  "q09#1": "last sentence has no citation",
+  "q10#0": "'output of one stage becomes the input to a second' is not in HNET:3.1:c049",
+  "q10#1": "S=2 nested stages in HNET:1:c012; '2-stage significantly better than 1-stage' verbatim in HNET:3.1:c049",
+  "q12#0": "'the retrieved passages do not state the accuracies with Inner Monologue' is contradicted by retrieved MOSHI:5.5:c091",
+  "q13#0": "the comparison sentence cites only HNET:T2:r11, but H-Net's 55.5 is in r10",
+  "q14#0": "says the original Transformer used the Llama-3 tokenizer: wrong (AIAYN used BPE / word-piece)"
+ }
+}

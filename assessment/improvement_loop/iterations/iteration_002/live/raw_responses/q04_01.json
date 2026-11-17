@@ -1,0 +1,44 @@
+{
+ "question_id": "q04",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:41:01.226+00:00",
+  "t_send_ns": 179311226391500,
+  "status": 200,
+  "t_first_byte_ns": 179311674947700,
+  "t_first_content_ns": 179311969810100,
+  "t_last_ns": 179312091074500,
+  "max_gap_ms": 294.8377,
+  "text": "Mimi operates at a frame rate of 12.5 Hz, uses 8 quantizers each with a codebook size of 2048, and this configuration yields a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.369646024,
+   "prompt_tokens": 1659,
+   "prompt_time": 0.157968999,
+   "completion_tokens": 125,
+   "completion_time": 0.264346022,
+   "total_tokens": 1784,
+   "total_time": 0.422315021,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 59
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "955",
+   "x-ratelimit-reset-requests": "1h4m48s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2853",
+   "x-ratelimit-reset-tokens": "38.602s"
+  },
+  "error": null,
+  "first_byte_ms": 448.6,
+  "first_content_ms": 743.4,
+  "total_ms": 864.7
+ }
+}

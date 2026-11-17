@@ -1,0 +1,3108 @@
+{
+ "summary": {
+  "original": {
+   "complete_evidence": {
+    "same": [
+     "q01",
+     "q02",
+     "q03",
+     "q04",
+     "q05",
+     "q06",
+     "q07",
+     "q08",
+     "q09",
+     "q10",
+     "q11",
+     "q12",
+     "q13",
+     "q14",
+     "q15"
+    ]
+   },
+   "found_rows": {
+    "same": [
+     "q01",
+     "q02",
+     "q03",
+     "q04",
+     "q05",
+     "q06",
+     "q07",
+     "q08",
+     "q09",
+     "q10",
+     "q11",
+     "q12",
+     "q13",
+     "q14",
+     "q15"
+    ]
+   },
+   "first_gold_rank": {
+    "same": [
+     "q01",
+     "q02",
+     "q03",
+     "q04",
+     "q05",
+     "q06",
+     "q07",
+     "q08",
+     "q09",
+     "q11",
+     "q12",
+     "q13",
+     "q14",
+     "q15"
+    ],
+    "worse": [
+     "q10"
+    ]
+   },
+   "identical_final_evidence": [
+    "q01",
+    "q02",
+    "q03",
+    "q06",
+    "q07",
+    "q08",
+    "q09",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15"
+   ]
+  },
+  "table": {
+   "complete_evidence": {
+    "gained": [
+     "t01",
+     "t02",
+     "t03",
+     "t05",
+     "t06",
+     "t07",
+     "t11",
+     "t13",
+     "t14",
+     "t15",
+     "t17",
+     "t19",
+     "t21",
+     "t22",
+     "t23",
+     "t25",
+     "t28",
+     "t30",
+     "t32"
+    ],
+    "same": [
+     "t09",
+     "t10",
+     "t18",
+     "t26",
+     "t29"
+    ]
+   },
+   "found_rows": {
+    "fewer": [
+     "t10",
+     "t29"
+    ],
+    "same": [
+     "t01",
+     "t02",
+     "t03",
+     "t05",
+     "t06",
+     "t07",
+     "t09",
+     "t11",
+     "t13",
+     "t14",
+     "t15",
+     "t17",
+     "t18",
+     "t19",
+     "t21",
+     "t22",
+     "t23",
+     "t25",
+     "t26",
+     "t28",
+     "t30",
+     "t32"
+    ]
+   },
+   "first_gold_rank": {
+    "better": [
+     "t03",
+     "t17",
+     "t23",
+     "t25"
+    ],
+    "same": [
+     "t02",
+     "t05",
+     "t07",
+     "t09",
+     "t11",
+     "t13",
+     "t14",
+     "t15",
+     "t19",
+     "t21",
+     "t22",
+     "t26",
+     "t28"
+    ],
+    "worse": [
+     "t01",
+     "t06",
+     "t10",
+     "t18",
+     "t29",
+     "t30",
+     "t32"
+    ]
+   },
+   "identical_final_evidence": [
+    "t13",
+    "t14",
+    "t15",
+    "t19"
+   ]
+  },
+  "new": {
+   "complete_evidence": {
+    "same": [
+     "n01",
+     "n02",
+     "n03",
+     "n04",
+     "n05",
+     "n06",
+     "n07",
+     "n08",
+     "n09",
+     "n10"
+    ]
+   },
+   "found_rows": {
+    "same": [
+     "n01",
+     "n02",
+     "n03",
+     "n04",
+     "n05",
+     "n06",
+     "n07",
+     "n08",
+     "n09",
+     "n10"
+    ]
+   },
+   "first_gold_rank": {
+    "same": [
+     "n01",
+     "n02",
+     "n03",
+     "n04",
+     "n05",
+     "n06",
+     "n07",
+     "n08",
+     "n09",
+     "n10"
+    ]
+   },
+   "identical_final_evidence": [
+    "n01",
+    "n02",
+    "n03",
+    "n04",
+    "n05",
+    "n06",
+    "n07",
+    "n08",
+    "n09",
+    "n10"
+   ]
+  },
+  "unanswerable": {
+   "q16": [
+    null,
+    null
+   ],
+   "q17": [
+    null,
+    null
+   ],
+   "q18": [
+    null,
+    null
+   ],
+   "q19": [
+    null,
+    null
+   ],
+   "q20": [
+    null,
+    null
+   ],
+   "q21": [
+    null,
+    null
+   ],
+   "q22": [
+    null,
+    null
+   ],
+   "q23": [
+    null,
+    null
+   ],
+   "q24": [
+    null,
+    null
+   ],
+   "q25": [
+    null,
+    null
+   ],
+   "q26": [
+    null,
+    null
+   ],
+   "q27": [
+    null,
+    null
+   ],
+   "q28": [
+    null,
+    null
+   ],
+   "q29": [
+    null,
+    null
+   ],
+   "q30": [
+    null,
+    null
+   ],
+   "t04": [
+    true,
+    true
+   ],
+   "t08": [
+    true,
+    true
+   ],
+   "t12": [
+    true,
+    true
+   ],
+   "t16": [
+    true,
+    true
+   ],
+   "t20": [
+    true,
+    true
+   ],
+   "t24": [
+    true,
+    true
+   ],
+   "t27": [
+    true,
+    true
+   ],
+   "t31": [
+    true,
+    true
+   ],
+   "n11": [
+    true,
+    true
+   ],
+   "n12": [
+    true,
+    true
+   ]
+  }
+ },
+ "questions": [
+  {
+   "dataset": "original",
+   "question_id": "q01",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:1:c002",
+    "AIAYN:1:c003",
+    "AIAYN:abstract:c001",
+    "AIAYN:6.3:c033",
+    "HNET:1:c010",
+    "MOSHI:6.2:c111",
+    "HNET:4:c081",
+    "HNET:1:c004"
+   ],
+   "c6_final": [
+    "AIAYN:1:c002",
+    "AIAYN:1:c003",
+    "AIAYN:abstract:c001",
+    "AIAYN:6.3:c033",
+    "HNET:1:c010",
+    "MOSHI:6.2:c111",
+    "HNET:4:c081",
+    "HNET:1:c004"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q02",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c014",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.2.1:c011",
+    "HNET:B:c107",
+    "AIAYN:AttentionVisualizations:c037"
+   ],
+   "c6_final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c014",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.2.1:c011",
+    "HNET:B:c107",
+    "AIAYN:AttentionVisualizations:c037"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    2
+   ],
+   "c6_gold_ranks": [
+    2
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q03",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:5.5:c091",
+    "MOSHI:abstract:c002",
+    "MOSHI:1:c007",
+    "MOSHI:2:c015",
+    "MOSHI:2:c013",
+    "MOSHI:5.3:c083",
+    "MOSHI:7:c126"
+   ],
+   "c6_final": [
+    "MOSHI:5.5:c091",
+    "MOSHI:abstract:c002",
+    "MOSHI:1:c007",
+    "MOSHI:2:c015",
+    "MOSHI:2:c013",
+    "MOSHI:5.3:c083",
+    "MOSHI:7:c126"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    3,
+    null
+   ],
+   "c6_gold_ranks": [
+    3,
+    null
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": false,
+   "c3_reciprocal_rank": 0.3333,
+   "c6_reciprocal_rank": 0.3333,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q04",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:3.3.1:c030",
+    "MOSHI:3.3.1:c028",
+    "MOSHI:3.3.1:c029",
+    "MOSHI:T17:r03",
+    "MOSHI:5.1:c071",
+    "MOSHI:T17:r02"
+   ],
+   "c6_final": [
+    "MOSHI:3.3.1:c030",
+    "MOSHI:3.3.1:c028",
+    "MOSHI:3.3.1:c029",
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06",
+    "MOSHI:5.1:c071"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q05",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:1:c007",
+    "HNET:2.1.1:c015",
+    "HNET:1:c012",
+    "HNET:2.2.1:c023",
+    "HNET:1:c008",
+    "HNET:3.1:c052",
+    "HNET:E:c112"
+   ],
+   "c6_final": [
+    "HNET:1:c007",
+    "HNET:2.1.1:c015",
+    "HNET:1:c012",
+    "HNET:2.2.1:c023",
+    "HNET:3.1:c052",
+    "HNET:E:c112",
+    "HNET:2.2.2:c029"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    4,
+    null
+   ],
+   "c6_gold_ranks": [
+    4,
+    null
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": false,
+   "c3_reciprocal_rank": 0.25,
+   "c6_reciprocal_rank": 0.25,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q06",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:A:c088",
+    "HNET:A.1:c090",
+    "HNET:3:c047",
+    "HNET:A.1.3:c094",
+    "HNET:1:c009",
+    "HNET:A.3:c103",
+    "HNET:4:c080",
+    "HNET:A.3:c105"
+   ],
+   "c6_final": [
+    "HNET:A:c088",
+    "HNET:A.1:c090",
+    "HNET:3:c047",
+    "HNET:A.1.3:c094",
+    "HNET:1:c009",
+    "HNET:A.3:c103",
+    "HNET:4:c080",
+    "HNET:A.3:c105"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    null,
+    11
+   ],
+   "c6_gold_ranks": [
+    null,
+    11
+   ],
+   "c3_found": 0,
+   "c6_found": 0,
+   "c3_complete": false,
+   "c6_complete": false,
+   "c3_reciprocal_rank": 0.0909,
+   "c6_reciprocal_rank": 0.0909,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q07",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3:c006",
+    "AIAYN:3.1:c009",
+    "AIAYN:3.3:c017",
+    "HNET:2.1.2:c017",
+    "HNET:3.3:c069",
+    "AIAYN:abstract:c001"
+   ],
+   "c6_final": [
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3:c006",
+    "AIAYN:3.1:c009",
+    "AIAYN:3.3:c017",
+    "HNET:2.1.2:c017",
+    "HNET:3.3:c069",
+    "AIAYN:abstract:c001"
+   ],
+   "units": 3,
+   "c3_gold_ranks": [
+    3,
+    3,
+    1
+   ],
+   "c6_gold_ranks": [
+    3,
+    3,
+    1
+   ],
+   "c3_found": 3,
+   "c6_found": 3,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q08",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:3.5:c019",
+    "AIAYN:3.5:c020",
+    "AIAYN:T3:r08",
+    "AIAYN:6.2:c031",
+    "AIAYN:3.4:c018",
+    "AIAYN:5.4:c028",
+    "MOSHI:3.2.1:c019"
+   ],
+   "c6_final": [
+    "AIAYN:3.5:c019",
+    "AIAYN:3.5:c020",
+    "AIAYN:T3:r08",
+    "AIAYN:6.2:c031",
+    "AIAYN:3.4:c018",
+    "AIAYN:5.4:c028",
+    "MOSHI:3.2.1:c019"
+   ],
+   "units": 3,
+   "c3_gold_ranks": [
+    2,
+    2,
+    4
+   ],
+   "c6_gold_ranks": [
+    2,
+    2,
+    4
+   ],
+   "c3_found": 3,
+   "c6_found": 3,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q09",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:1:c005",
+    "MOSHI:abstract:c002",
+    "MOSHI:5.3:c083",
+    "MOSHI:7:c125",
+    "MOSHI:1:c004",
+    "MOSHI:abstract:c001",
+    "MOSHI:5.4:c088"
+   ],
+   "c6_final": [
+    "MOSHI:1:c005",
+    "MOSHI:abstract:c002",
+    "MOSHI:5.3:c083",
+    "MOSHI:7:c125",
+    "MOSHI:1:c004",
+    "MOSHI:abstract:c001",
+    "MOSHI:5.4:c088"
+   ],
+   "units": 4,
+   "c3_gold_ranks": [
+    9,
+    3,
+    2,
+    1
+   ],
+   "c6_gold_ranks": [
+    9,
+    3,
+    2,
+    1
+   ],
+   "c3_found": 3,
+   "c6_found": 3,
+   "c3_complete": false,
+   "c6_complete": false,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q10",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:3.1:c052",
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:1:c012",
+    "HNET:3.1:c049",
+    "HNET:T6:r02",
+    "HNET:3:c043"
+   ],
+   "c6_final": [
+    "HNET:T6:r05",
+    "HNET:T6:r02",
+    "HNET:T6:r01",
+    "HNET:T6:r04",
+    "HNET:T6:r03",
+    "HNET:1:c012",
+    "HNET:3.1:c049"
+   ],
+   "units": 3,
+   "c3_gold_ranks": [
+    11,
+    9,
+    null
+   ],
+   "c6_gold_ranks": [
+    null,
+    10,
+    null
+   ],
+   "c3_found": 0,
+   "c6_found": 0,
+   "c3_complete": false,
+   "c6_complete": false,
+   "c3_reciprocal_rank": 0.1111,
+   "c6_reciprocal_rank": 0.1,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "worse"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q11",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04"
+   ],
+   "c6_final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    6,
+    9
+   ],
+   "c6_gold_ranks": [
+    6,
+    9
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": false,
+   "c3_reciprocal_rank": 0.1667,
+   "c6_reciprocal_rank": 0.1667,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q12",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T8:r02",
+    "MOSHI:5.5:c090",
+    "MOSHI:5.4:c089",
+    "MOSHI:5.5:c091",
+    "MOSHI:5.5:c092",
+    "MOSHI:T8:r01",
+    "MOSHI:4.3:c061",
+    "MOSHI:1:c008"
+   ],
+   "c6_final": [
+    "MOSHI:T8:r02",
+    "MOSHI:5.5:c090",
+    "MOSHI:5.4:c089",
+    "MOSHI:5.5:c091",
+    "MOSHI:5.5:c092",
+    "MOSHI:T8:r01",
+    "MOSHI:4.3:c061",
+    "MOSHI:1:c008"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    6,
+    1
+   ],
+   "c6_gold_ranks": [
+    6,
+    1
+   ],
+   "c3_found": 2,
+   "c6_found": 2,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q13",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:T2:r10",
+    "HNET:T2:r09",
+    "HNET:T2:r08",
+    "HNET:T2:r07",
+    "HNET:T2:r15",
+    "HNET:T2:r01",
+    "HNET:T2:r11"
+   ],
+   "c6_final": [
+    "HNET:T2:r10",
+    "HNET:T2:r09",
+    "HNET:T2:r08",
+    "HNET:T2:r07",
+    "HNET:T2:r15",
+    "HNET:T2:r01",
+    "HNET:T2:r11"
+   ],
+   "units": 3,
+   "c3_gold_ranks": [
+    1,
+    6,
+    8
+   ],
+   "c6_gold_ranks": [
+    1,
+    6,
+    8
+   ],
+   "c3_found": 3,
+   "c6_found": 3,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q14",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:6.3:c032",
+    "HNET:3.2:c061",
+    "AIAYN:1:c003",
+    "HNET:3.1:c053",
+    "HNET:2.1.2:c019",
+    "HNET:F:c125",
+    "HNET:2.1.2:c020",
+    "HNET:abstract:c001"
+   ],
+   "c6_final": [
+    "AIAYN:6.3:c032",
+    "HNET:3.2:c061",
+    "AIAYN:1:c003",
+    "HNET:3.1:c053",
+    "HNET:2.1.2:c019",
+    "HNET:F:c125",
+    "HNET:2.1.2:c020",
+    "HNET:abstract:c001"
+   ],
+   "units": 3,
+   "c3_gold_ranks": [
+    null,
+    null,
+    null
+   ],
+   "c6_gold_ranks": [
+    null,
+    null,
+    null
+   ],
+   "c3_found": 0,
+   "c6_found": 0,
+   "c3_complete": false,
+   "c6_complete": false,
+   "c3_reciprocal_rank": 0.0,
+   "c6_reciprocal_rank": 0.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q15",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:5.2:c026",
+    "MOSHI:4.4:c062",
+    "AIAYN:1:c003",
+    "MOSHI:3.1:c017",
+    "MOSHI:3.4.1:c040",
+    "MOSHI:4.4:c064",
+    "AIAYN:6.1:c029",
+    "MOSHI:3.1:c016"
+   ],
+   "c6_final": [
+    "AIAYN:5.2:c026",
+    "MOSHI:4.4:c062",
+    "AIAYN:1:c003",
+    "MOSHI:3.1:c017",
+    "MOSHI:3.4.1:c040",
+    "MOSHI:4.4:c064",
+    "AIAYN:6.1:c029",
+    "MOSHI:3.1:c016"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    3,
+    1
+   ],
+   "c6_gold_ranks": [
+    3,
+    1
+   ],
+   "c3_found": 2,
+   "c6_found": 2,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "original",
+   "question_id": "q16",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:T2:r05",
+    "AIAYN:6.1:c029",
+    "AIAYN:T2:r02",
+    "AIAYN:T2:r04",
+    "AIAYN:T2:r03",
+    "AIAYN:T2:r01",
+    "AIAYN:T3:r09"
+   ],
+   "c6_final": [
+    "AIAYN:T2:r05",
+    "AIAYN:6.1:c029",
+    "AIAYN:T2:r02",
+    "AIAYN:T2:r04",
+    "AIAYN:T2:r03",
+    "AIAYN:T2:r01",
+    "AIAYN:T3:r09"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q17",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:6.1:c029",
+    "AIAYN:abstract:c001",
+    "AIAYN:T2:r03",
+    "AIAYN:T2:r05",
+    "AIAYN:T2:r01",
+    "AIAYN:T2:r04",
+    "AIAYN:T2:r02"
+   ],
+   "c6_final": [
+    "AIAYN:6.1:c029",
+    "AIAYN:abstract:c001",
+    "AIAYN:T2:r03",
+    "AIAYN:T2:r05",
+    "AIAYN:T2:r01",
+    "AIAYN:T2:r04",
+    "AIAYN:T2:r02"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q18",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:1:c003",
+    "AIAYN:6.1:c029",
+    "AIAYN:6.1:c030",
+    "AIAYN:5.2:c026",
+    "AIAYN:6.3:c032",
+    "AIAYN:6.3:c033",
+    "MOSHI:3.4.1:c035",
+    "HNET:2.4:c040"
+   ],
+   "c6_final": [
+    "AIAYN:1:c003",
+    "AIAYN:6.1:c029",
+    "AIAYN:6.1:c030",
+    "AIAYN:5.2:c026",
+    "AIAYN:6.3:c032",
+    "AIAYN:6.3:c033",
+    "MOSHI:3.4.1:c035",
+    "HNET:2.4:c040"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q19",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:3.2.2:c013",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.2:c015",
+    "AIAYN:7:c034",
+    "AIAYN:3.1:c008",
+    "AIAYN:2:c004",
+    "AIAYN:3.2.2:c014"
+   ],
+   "c6_final": [
+    "AIAYN:3.2.2:c013",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.2:c015",
+    "AIAYN:7:c034",
+    "AIAYN:3.1:c008",
+    "AIAYN:2:c004",
+    "AIAYN:3.2.2:c014"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q20",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:5.8:c103",
+    "AIAYN:1:c003",
+    "AIAYN:T4:r01",
+    "HNET:3.3:c070",
+    "AIAYN:6.1:c029",
+    "HNET:E.3:c115",
+    "AIAYN:T4:r02",
+    "AIAYN:6.3:c033"
+   ],
+   "c6_final": [
+    "MOSHI:5.8:c103",
+    "AIAYN:1:c003",
+    "AIAYN:T4:r01",
+    "HNET:3.3:c070",
+    "AIAYN:6.1:c029",
+    "HNET:E.3:c115",
+    "AIAYN:T4:r02",
+    "AIAYN:6.3:c033"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q21",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:4.4:c062",
+    "AIAYN:5.2:c026",
+    "MOSHI:6.1:c110",
+    "MOSHI:3.2.1:c020",
+    "MOSHI:4.4:c064",
+    "AIAYN:6.1:c030",
+    "AIAYN:1:c003",
+    "MOSHI:T1:r06"
+   ],
+   "c6_final": [
+    "MOSHI:4.4:c062",
+    "AIAYN:5.2:c026",
+    "MOSHI:6.1:c110",
+    "MOSHI:3.2.1:c020",
+    "MOSHI:4.4:c064",
+    "AIAYN:6.1:c030",
+    "AIAYN:1:c003",
+    "MOSHI:T1:r06"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q22",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:3.1:c016",
+    "MOSHI:7:c125",
+    "MOSHI:abstract:c001",
+    "MOSHI:1:c007",
+    "MOSHI:2:c015",
+    "MOSHI:2:c013"
+   ],
+   "c6_final": [
+    "MOSHI:3.1:c016",
+    "MOSHI:7:c125",
+    "MOSHI:abstract:c001",
+    "MOSHI:1:c007",
+    "MOSHI:2:c015",
+    "MOSHI:2:c013"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q23",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T18:r17",
+    "MOSHI:6.1:c110",
+    "MOSHI:6.1:c109",
+    "MOSHI:5.5:c090",
+    "MOSHI:5.5:c092",
+    "MOSHI:5.4:c085",
+    "MOSHI:5.8:c103"
+   ],
+   "c6_final": [
+    "MOSHI:T18:r17",
+    "MOSHI:6.1:c110",
+    "MOSHI:6.1:c109",
+    "MOSHI:5.5:c090",
+    "MOSHI:5.5:c092",
+    "MOSHI:5.4:c085",
+    "MOSHI:5.8:c103"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q24",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:5.5:c091",
+    "MOSHI:abstract:c001",
+    "MOSHI:2:c015",
+    "MOSHI:5.4:c088",
+    "MOSHI:5.8:c103",
+    "MOSHI:3.1:c016",
+    "MOSHI:abstract:c002",
+    "MOSHI:5.4:c087"
+   ],
+   "c6_final": [
+    "MOSHI:5.5:c091",
+    "MOSHI:abstract:c001",
+    "MOSHI:2:c015",
+    "MOSHI:5.4:c088",
+    "MOSHI:5.8:c103",
+    "MOSHI:3.1:c016",
+    "MOSHI:abstract:c002",
+    "MOSHI:5.4:c087"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q25",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T18:r03",
+    "MOSHI:T18:r08",
+    "MOSHI:T18:r10",
+    "MOSHI:T18:r09",
+    "MOSHI:T18:r02",
+    "MOSHI:T18:r01"
+   ],
+   "c6_final": [
+    "MOSHI:T18:r03",
+    "MOSHI:T18:r08",
+    "MOSHI:T18:r10",
+    "MOSHI:T18:r09",
+    "MOSHI:T18:r02",
+    "MOSHI:T18:r01"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q26",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:3.2:c066",
+    "HNET:3.1:c051",
+    "HNET:3.2:c061",
+    "HNET:1:c010",
+    "HNET:3.1:c053",
+    "HNET:E.2:c114",
+    "HNET:abstract:c001"
+   ],
+   "c6_final": [
+    "HNET:3.2:c066",
+    "HNET:3.1:c051",
+    "HNET:3.2:c061",
+    "HNET:1:c010",
+    "HNET:3.1:c053",
+    "HNET:E.2:c114",
+    "HNET:abstract:c001"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q27",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:5.2:c026",
+    "HNET:E.2:c114",
+    "HNET:3.1:c051",
+    "HNET:3.1:c053",
+    "HNET:3:c043",
+    "HNET:3.1:c050",
+    "HNET:T2:r15"
+   ],
+   "c6_final": [
+    "AIAYN:5.2:c026",
+    "HNET:E.2:c114",
+    "HNET:3.1:c051",
+    "HNET:3.1:c053",
+    "HNET:3:c043",
+    "HNET:3.1:c050",
+    "HNET:T2:r15"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q28",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:F:c125",
+    "HNET:3.2:c065",
+    "HNET:3.1:c051",
+    "HNET:3.3:c074",
+    "HNET:3:c043",
+    "HNET:3.3:c067",
+    "HNET:3.1:c049",
+    "HNET:3.2:c061"
+   ],
+   "c6_final": [
+    "HNET:F:c125",
+    "HNET:3.2:c065",
+    "HNET:3.1:c051",
+    "HNET:3.3:c074",
+    "HNET:3:c043",
+    "HNET:3.3:c067",
+    "HNET:3.1:c049",
+    "HNET:3.2:c061"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q29",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:3.3:c078",
+    "HNET:2.1.2:c021",
+    "HNET:4:c080",
+    "HNET:3.2:c061",
+    "HNET:abstract:c002",
+    "HNET:2.3:c036",
+    "HNET:3:c043",
+    "HNET:3.2:c065"
+   ],
+   "c6_final": [
+    "HNET:3.3:c078",
+    "HNET:2.1.2:c021",
+    "HNET:4:c080",
+    "HNET:3.2:c061",
+    "HNET:abstract:c002",
+    "HNET:2.3:c036",
+    "HNET:3:c043",
+    "HNET:3.2:c065"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "original",
+   "question_id": "q30",
+   "labels": "project set; gold quotes assistant-located; NOT independently reviewed",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:3:c047",
+    "HNET:2.1.1:c015",
+    "HNET:2.2.2:c025",
+    "HNET:1:c012",
+    "HNET:A.1.4:c098",
+    "HNET:A.1.2:c092",
+    "HNET:A.1.3:c094"
+   ],
+   "c6_final": [
+    "HNET:3:c047",
+    "HNET:2.1.1:c015",
+    "HNET:2.2.2:c025",
+    "HNET:1:c012",
+    "HNET:A.1.4:c098",
+    "HNET:A.1.2:c092",
+    "HNET:A.1.3:c094"
+   ],
+   "c3_target_table_in_context": null,
+   "c6_target_table_in_context": null
+  },
+  {
+   "dataset": "table",
+   "question_id": "t01",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:T6:r01",
+    "HNET:T6:r03",
+    "HNET:T6:r02",
+    "HNET:A:c089",
+    "HNET:A.2:c100",
+    "HNET:2.1.2:c020"
+   ],
+   "c6_final": [
+    "HNET:T6:r05",
+    "HNET:T6:r04",
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:A:c089",
+    "HNET:2.1.2:c020"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    4
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 0.25,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "worse"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t02",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:3.1:c049",
+    "HNET:2:c013",
+    "HNET:3:c043",
+    "HNET:1:c007"
+   ],
+   "c6_final": [
+    "HNET:T6:r05",
+    "HNET:T6:r04",
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:3.1:c049",
+    "HNET:2:c013"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t03",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:T6:r02",
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:2.1.1:c014",
+    "HNET:1:c006",
+    "HNET:1:c010",
+    "HNET:4:c080"
+   ],
+   "c6_final": [
+    "HNET:T6:r05",
+    "HNET:T6:r04",
+    "HNET:T6:r03",
+    "HNET:T6:r02",
+    "HNET:T6:r01",
+    "HNET:2.1.1:c014",
+    "HNET:1:c010"
+   ],
+   "units": 3,
+   "c3_gold_ranks": [
+    2,
+    2,
+    2
+   ],
+   "c6_gold_ranks": [
+    2,
+    2,
+    1
+   ],
+   "c3_found": 3,
+   "c6_found": 3,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "better"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t04",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:4:c083",
+    "HNET:2.1.2:c020",
+    "HNET:T7:r01"
+   ],
+   "c6_final": [
+    "HNET:T6:r04",
+    "HNET:T6:r05",
+    "HNET:T6:r03",
+    "HNET:T6:r02",
+    "HNET:T6:r01",
+    "HNET:4:c083",
+    "HNET:2.1.2:c020"
+   ],
+   "c3_target_table_in_context": true,
+   "c6_target_table_in_context": true
+  },
+  {
+   "dataset": "table",
+   "question_id": "t05",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:5.1:c070",
+    "MOSHI:A:c127"
+   ],
+   "c6_final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r03",
+    "MOSHI:T3:r02",
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    2
+   ],
+   "c6_gold_ranks": [
+    2
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t06",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r01",
+    "MOSHI:5.1:c070",
+    "MOSHI:T4:r04"
+   ],
+   "c6_final": [
+    "MOSHI:T3:r03",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r03"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    2
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "worse"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t07",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:5.1:c070",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:A:c127"
+   ],
+   "c6_final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r03",
+    "MOSHI:T3:r02",
+    "MOSHI:5.1:c070",
+    "MOSHI:T17:r04",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r07"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    2
+   ],
+   "c6_gold_ranks": [
+    2
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t08",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T1:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r02",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:A:c127"
+   ],
+   "c6_final": [
+    "MOSHI:T1:r02",
+    "MOSHI:A:c127",
+    "MOSHI:T3:r03",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01"
+   ],
+   "c3_target_table_in_context": true,
+   "c6_target_table_in_context": true
+  },
+  {
+   "dataset": "table",
+   "question_id": "t09",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:5.1:c071",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r01",
+    "MOSHI:5.2:c076",
+    "MOSHI:5.8:c103"
+   ],
+   "c6_final": [
+    "MOSHI:5.1:c071",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r04",
+    "MOSHI:5.2:c076",
+    "MOSHI:T4:r01",
+    "MOSHI:5.8:c103"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    2
+   ],
+   "c6_gold_ranks": [
+    2
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t10",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r03",
+    "MOSHI:E:c147",
+    "MOSHI:5.2:c076",
+    "MOSHI:6.4:c117",
+    "MOSHI:5.8:c103",
+    "MOSHI:5.8:c100"
+   ],
+   "c6_final": [
+    "MOSHI:E:c147",
+    "MOSHI:5.2:c076",
+    "MOSHI:6.4:c117",
+    "MOSHI:5.8:c103",
+    "MOSHI:6.1:c109",
+    "MOSHI:5.8:c107",
+    "MOSHI:5.4:c088",
+    "MOSHI:T18:r16"
+   ],
+   "units": 3,
+   "c3_gold_ranks": [
+    2,
+    1,
+    1
+   ],
+   "c6_gold_ranks": [
+    null,
+    null,
+    null
+   ],
+   "c3_found": 3,
+   "c6_found": 0,
+   "c3_complete": false,
+   "c6_complete": false,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 0.0,
+   "complete_evidence": "same",
+   "found_rows": "fewer",
+   "first_gold_rank": "worse"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t11",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T4:r01",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r04",
+    "MOSHI:5.2:c076",
+    "MOSHI:T4:r02",
+    "MOSHI:5.1:c071",
+    "MOSHI:5.2:c074",
+    "MOSHI:E:c147"
+   ],
+   "c6_final": [
+    "MOSHI:T4:r01",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r02",
+    "MOSHI:5.2:c076",
+    "MOSHI:5.1:c071",
+    "MOSHI:5.2:c074"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t12",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:5.2:c076",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r01",
+    "MOSHI:5.1:c071",
+    "MOSHI:T15:r02",
+    "MOSHI:5.2:c073"
+   ],
+   "c6_final": [
+    "MOSHI:5.2:c076",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r01",
+    "MOSHI:5.1:c071",
+    "MOSHI:T15:r02",
+    "MOSHI:5.2:c073"
+   ],
+   "c3_target_table_in_context": true,
+   "c6_target_table_in_context": true
+  },
+  {
+   "dataset": "table",
+   "question_id": "t13",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.2:c079",
+    "MOSHI:3.4.2:c044"
+   ],
+   "c6_final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.2:c079",
+    "MOSHI:3.4.2:c044"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t14",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.3:c083"
+   ],
+   "c6_final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.3:c083"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t15",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.2:c079",
+    "MOSHI:3.4.2:c044"
+   ],
+   "c6_final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.2:c079",
+    "MOSHI:3.4.2:c044"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    1,
+    1
+   ],
+   "c6_gold_ranks": [
+    1,
+    1
+   ],
+   "c3_found": 2,
+   "c6_found": 2,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t16",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.3:c083"
+   ],
+   "c6_final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.3:c083"
+   ],
+   "c3_target_table_in_context": true,
+   "c6_target_table_in_context": true
+  },
+  {
+   "dataset": "table",
+   "question_id": "t17",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T6:r01",
+    "MOSHI:T6:r02",
+    "MOSHI:T6:r03",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c083"
+   ],
+   "c6_final": [
+    "MOSHI:T6:r02",
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r01",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c083"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    3
+   ],
+   "c6_gold_ranks": [
+    2
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.3333,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "better"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t18",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T6:r02",
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r01",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.3:c083",
+    "MOSHI:5.3:c080"
+   ],
+   "c6_final": [
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r02",
+    "MOSHI:T6:r01",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.3:c083",
+    "MOSHI:5.3:c080"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    2
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "worse"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t19",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T6:r01",
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r02",
+    "MOSHI:5.3:c083",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c080"
+   ],
+   "c6_final": [
+    "MOSHI:T6:r01",
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r02",
+    "MOSHI:5.3:c083",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c080"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t20",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T6:r01",
+    "MOSHI:T6:r02",
+    "MOSHI:T6:r03",
+    "MOSHI:5.3:c082",
+    "MOSHI:T11:r02",
+    "MOSHI:T11:r01",
+    "MOSHI:5.3:c083"
+   ],
+   "c6_final": [
+    "MOSHI:T6:r02",
+    "MOSHI:5.3:c082",
+    "MOSHI:T11:r02",
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r01",
+    "MOSHI:T11:r01",
+    "MOSHI:5.3:c083"
+   ],
+   "c3_target_table_in_context": true,
+   "c6_target_table_in_context": true
+  },
+  {
+   "dataset": "table",
+   "question_id": "t21",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02",
+    "MOSHI:6.2:c113",
+    "MOSHI:6.2:c114",
+    "MOSHI:5.4:c087",
+    "MOSHI:5.4:c086",
+    "MOSHI:4.4:c062"
+   ],
+   "c6_final": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r03",
+    "MOSHI:6.2:c113",
+    "MOSHI:6.2:c114",
+    "MOSHI:5.4:c087",
+    "MOSHI:5.4:c086"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t22",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r01",
+    "MOSHI:4.4:c065",
+    "MOSHI:T18:r13",
+    "MOSHI:T18:r16",
+    "MOSHI:T18:r01"
+   ],
+   "c6_final": [
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r03",
+    "MOSHI:T13:r01",
+    "MOSHI:4.4:c065",
+    "MOSHI:E:c147",
+    "MOSHI:T18:r13",
+    "MOSHI:T18:r16"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t23",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r01",
+    "MOSHI:6.2:c113",
+    "MOSHI:5.2:c076",
+    "MOSHI:6.2:c114",
+    "MOSHI:E:c147",
+    "MOSHI:4.4:c062"
+   ],
+   "c6_final": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r03",
+    "MOSHI:6.2:c113",
+    "MOSHI:6.2:c114",
+    "MOSHI:E:c147",
+    "MOSHI:4.4:c062",
+    "MOSHI:C:c135"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    2,
+    2
+   ],
+   "c6_gold_ranks": [
+    1,
+    1
+   ],
+   "c3_found": 2,
+   "c6_found": 2,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "better"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t24",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r01",
+    "MOSHI:6.2:c113",
+    "MOSHI:6.2:c114",
+    "MOSHI:5.7:c096",
+    "MOSHI:5.4:c086",
+    "MOSHI:T7:r06"
+   ],
+   "c6_final": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r03",
+    "MOSHI:6.2:c113",
+    "MOSHI:6.2:c114",
+    "MOSHI:5.7:c096",
+    "MOSHI:5.4:c086",
+    "MOSHI:T7:r06"
+   ],
+   "c3_target_table_in_context": true,
+   "c6_target_table_in_context": true
+  },
+  {
+   "dataset": "table",
+   "question_id": "t25",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r01"
+   ],
+   "c6_final": [
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r08",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r07",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r02"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    4
+   ],
+   "c6_gold_ranks": [
+    3
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.25,
+   "c6_reciprocal_rank": 0.3333,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "better"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t26",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r06"
+   ],
+   "c6_final": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r07",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r08",
+    "MOSHI:T16:r03"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t27",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r03"
+   ],
+   "c6_final": [
+    "MOSHI:T16:r07",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r08",
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r04"
+   ],
+   "c3_target_table_in_context": true,
+   "c6_target_table_in_context": true
+  },
+  {
+   "dataset": "table",
+   "question_id": "t28",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r05"
+   ],
+   "c6_final": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r07",
+    "MOSHI:T16:r08",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r03"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    1,
+    6
+   ],
+   "c6_gold_ranks": [
+    1,
+    5
+   ],
+   "c3_found": 2,
+   "c6_found": 2,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t29",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r03",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:A:c127",
+    "MOSHI:5.1:c070"
+   ],
+   "c6_final": [
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r06",
+    "MOSHI:T3:r03",
+    "MOSHI:T17:r03",
+    "MOSHI:T3:r01",
+    "MOSHI:T17:r04"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    2
+   ],
+   "c6_gold_ranks": [
+    10
+   ],
+   "c3_found": 1,
+   "c6_found": 0,
+   "c3_complete": false,
+   "c6_complete": false,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 0.1,
+   "complete_evidence": "same",
+   "found_rows": "fewer",
+   "first_gold_rank": "worse"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t30",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:A:c127",
+    "MOSHI:5.1:c070"
+   ],
+   "c6_final": [
+    "MOSHI:T17:r04",
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r07"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    3
+   ],
+   "c6_gold_ranks": [
+    6
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.3333,
+   "c6_reciprocal_rank": 0.1667,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "worse"
+  },
+  {
+   "dataset": "table",
+   "question_id": "t31",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:5.2:c076",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r01"
+   ],
+   "c6_final": [
+    "MOSHI:T3:r02",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r03",
+    "MOSHI:5.2:c076",
+    "MOSHI:T17:r07",
+    "MOSHI:5.1:c070",
+    "MOSHI:T18:r17"
+   ],
+   "c3_target_table_in_context": true,
+   "c6_target_table_in_context": true
+  },
+  {
+   "dataset": "table",
+   "question_id": "t32",
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled (eval/phase7)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:A:c127",
+    "MOSHI:5.1:c070"
+   ],
+   "c6_final": [
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06",
+    "MOSHI:T3:r03",
+    "MOSHI:T3:r01",
+    "MOSHI:T17:r04",
+    "MOSHI:T17:r03"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    2
+   ],
+   "c6_gold_ranks": [
+    6
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 0.1667,
+   "complete_evidence": "gained",
+   "found_rows": "same",
+   "first_gold_rank": "worse"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n01",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r08",
+    "AIAYN:T3:r04"
+   ],
+   "c6_final": [
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r08",
+    "AIAYN:T3:r04"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    5
+   ],
+   "c6_gold_ranks": [
+    5
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.2,
+   "c6_reciprocal_rank": 0.2,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n02",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r09"
+   ],
+   "c6_final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r09"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    2
+   ],
+   "c6_gold_ranks": [
+    2
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n03",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r08"
+   ],
+   "c6_final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r08"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    3
+   ],
+   "c6_gold_ranks": [
+    3
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.3333,
+   "c6_reciprocal_rank": 0.3333,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n04",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r08"
+   ],
+   "c6_final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r08"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    3
+   ],
+   "c6_gold_ranks": [
+    3
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.3333,
+   "c6_reciprocal_rank": 0.3333,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n05",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:5.4:c028",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r03"
+   ],
+   "c6_final": [
+    "AIAYN:5.4:c028",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r03"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    2
+   ],
+   "c6_gold_ranks": [
+    2
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n06",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r08",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02"
+   ],
+   "c6_final": [
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r08",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n07",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "MOSHI:5.1:c071",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r01",
+    "MOSHI:5.2:c076",
+    "MOSHI:5.2:c074"
+   ],
+   "c6_final": [
+    "MOSHI:5.1:c071",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r01",
+    "MOSHI:5.2:c076",
+    "MOSHI:5.2:c074"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    3,
+    2
+   ],
+   "c6_gold_ranks": [
+    3,
+    2
+   ],
+   "c3_found": 2,
+   "c6_found": 2,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 0.5,
+   "c6_reciprocal_rank": 0.5,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n08",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r01"
+   ],
+   "c6_final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r01"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n09",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r06"
+   ],
+   "c6_final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r06"
+   ],
+   "units": 1,
+   "c3_gold_ranks": [
+    1
+   ],
+   "c6_gold_ranks": [
+    1
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": true,
+   "c6_complete": true,
+   "c3_reciprocal_rank": 1.0,
+   "c6_reciprocal_rank": 1.0,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n10",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": true,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03"
+   ],
+   "c6_final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03"
+   ],
+   "units": 2,
+   "c3_gold_ranks": [
+    4,
+    13
+   ],
+   "c6_gold_ranks": [
+    4,
+    13
+   ],
+   "c3_found": 1,
+   "c6_found": 1,
+   "c3_complete": false,
+   "c6_complete": false,
+   "c3_reciprocal_rank": 0.25,
+   "c6_reciprocal_rank": 0.25,
+   "complete_evidence": "same",
+   "found_rows": "same",
+   "first_gold_rank": "same"
+  },
+  {
+   "dataset": "new",
+   "question_id": "n11",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04"
+   ],
+   "c6_final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04"
+   ],
+   "c3_target_table_in_context": true,
+   "c6_target_table_in_context": true
+  },
+  {
+   "dataset": "new",
+   "question_id": "n12",
+   "labels": "PROVISIONAL: assistant-written (phase 11A)",
+   "answerable": false,
+   "excluded_unknown_provenance": false,
+   "c3_final": [
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r09"
+   ],
+   "c6_final": [
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r09"
+   ],
+   "c3_target_table_in_context": true,
+   "c6_target_table_in_context": true
+  }
+ ]
+}

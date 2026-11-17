@@ -1,0 +1,809 @@
+{
+ "tables": [
+  {
+   "table": "AIAYN:T1",
+   "caption": "Maximum path lengths, per-layer complexity and minimum number of seque",
+   "rows_e1": 4,
+   "rows_e2": 4,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 0,
+   "numbers_e2": 0,
+   "changed_rows": 0
+  },
+  {
+   "table": "AIAYN:T2",
+   "caption": "The Transformer achieves better BLEU scores than previous state-of-the",
+   "rows_e1": 10,
+   "rows_e2": 10,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 17,
+   "numbers_e2": 17,
+   "changed_rows": 10
+  },
+  {
+   "table": "AIAYN:T3",
+   "caption": "Variations on the Transformer architecture. Unlisted values are identi",
+   "rows_e1": 20,
+   "rows_e2": 20,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 93,
+   "numbers_e2": 93,
+   "changed_rows": 19
+  },
+  {
+   "table": "AIAYN:T4",
+   "caption": "The Transformer generalizes well to English constituency parsing (Resu",
+   "rows_e1": 12,
+   "rows_e2": 12,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 12,
+   "numbers_e2": 12,
+   "changed_rows": 0
+  },
+  {
+   "table": "MOSHI:T1",
+   "caption": "Models' hyperparameters. Hyperparameters for the architecture and trai",
+   "rows_e1": 20,
+   "rows_e2": 20,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 37,
+   "numbers_e2": 37,
+   "changed_rows": 3
+  },
+  {
+   "table": "MOSHI:T2",
+   "caption": "Text language model evaluation. Performance on standard benchmarks for",
+   "rows_e1": 7,
+   "rows_e2": 7,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 60,
+   "numbers_e2": 60,
+   "changed_rows": 0
+  },
+  {
+   "table": "MOSHI:T3",
+   "caption": "Ablation study on hyperparameters of the Mimi codec. We evaluate seman",
+   "rows_e1": 6,
+   "rows_e2": 6,
+   "affected": true,
+   "multi_tabular": false,
+   "marks_e2": 30,
+   "numbers_e1": 18,
+   "numbers_e2": 18,
+   "changed_rows": 6
+  },
+  {
+   "table": "MOSHI:T4",
+   "caption": "Audio quality evaluation. Objective and subjective (MUSHRA) evaluation",
+   "rows_e1": 8,
+   "rows_e2": 8,
+   "affected": true,
+   "multi_tabular": false,
+   "marks_e2": 7,
+   "numbers_e1": 18,
+   "numbers_e2": 18,
+   "changed_rows": 7
+  },
+  {
+   "table": "MOSHI:T5",
+   "caption": "Ablation study on the use of the RQ-Transformer. All models are initia",
+   "rows_e1": 4,
+   "rows_e2": 4,
+   "affected": true,
+   "multi_tabular": false,
+   "marks_e2": 4,
+   "numbers_e1": 4,
+   "numbers_e2": 4,
+   "changed_rows": 4
+  },
+  {
+   "table": "MOSHI:T6",
+   "caption": "Ablation study on delay patterns, weight of the semantic token and Inn",
+   "rows_e1": 6,
+   "rows_e2": 6,
+   "affected": true,
+   "multi_tabular": false,
+   "marks_e2": 7,
+   "numbers_e1": 18,
+   "numbers_e2": 18,
+   "changed_rows": 6
+  },
+  {
+   "table": "MOSHI:T7",
+   "caption": "Performance of audio and text language modeling. We report accuracies ",
+   "rows_e1": 13,
+   "rows_e2": 13,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 48,
+   "numbers_e2": 48,
+   "changed_rows": 0
+  },
+  {
+   "table": "MOSHI:T8",
+   "caption": "Evaluation of spoken question answering. Spoken question answering (0-",
+   "rows_e1": 8,
+   "rows_e2": 8,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 20,
+   "numbers_e2": 20,
+   "changed_rows": 0
+  },
+  {
+   "table": "MOSHI:T9",
+   "caption": "Linguistic quality and turn-taking statistics of generated dialogues. ",
+   "rows_e1": 7,
+   "rows_e2": 7,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 19,
+   "numbers_e2": 19,
+   "changed_rows": 0
+  },
+  {
+   "table": "MOSHI:T10",
+   "caption": "Linguistic impact of model compression on Helium, as measured by MMLU.",
+   "rows_e1": 7,
+   "rows_e2": 7,
+   "affected": false,
+   "multi_tabular": true,
+   "marks_e2": 0,
+   "numbers_e1": 7,
+   "numbers_e2": 7,
+   "changed_rows": 0
+  },
+  {
+   "table": "MOSHI:T11",
+   "caption": "Linguistic impact of model compression on Moshi, measured by MMLU for ",
+   "rows_e1": 14,
+   "rows_e2": 14,
+   "affected": false,
+   "multi_tabular": true,
+   "marks_e2": 0,
+   "numbers_e1": 14,
+   "numbers_e2": 14,
+   "changed_rows": 0
+  },
+  {
+   "table": "MOSHI:T12",
+   "caption": "Distribution of audio artifacts caused by model compression. Percentag",
+   "rows_e1": 7,
+   "rows_e2": 7,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 30,
+   "numbers_e2": 30,
+   "changed_rows": 4
+  },
+  {
+   "table": "MOSHI:T13",
+   "caption": "Regurgitation of training data with condition-free generation from dif",
+   "rows_e1": 14,
+   "rows_e2": 14,
+   "affected": true,
+   "multi_tabular": false,
+   "marks_e2": 16,
+   "numbers_e1": 28,
+   "numbers_e2": 28,
+   "changed_rows": 14
+  },
+  {
+   "table": "MOSHI:T14",
+   "caption": "Speaker consistency along time. We measure how often the speaker embed",
+   "rows_e1": 2,
+   "rows_e2": 2,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 10,
+   "numbers_e2": 10,
+   "changed_rows": 0
+  },
+  {
+   "table": "MOSHI:T15",
+   "caption": "Evaluation of Audioseal for watermarking the speech produced by Moshi.",
+   "rows_e1": 5,
+   "rows_e2": 5,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 10,
+   "numbers_e2": 10,
+   "changed_rows": 0
+  },
+  {
+   "table": "MOSHI:T16",
+   "caption": "Idempotence of tokens. Probabilities that quantization indices remain ",
+   "rows_e1": 12,
+   "rows_e2": 12,
+   "affected": true,
+   "multi_tabular": false,
+   "marks_e2": 4,
+   "numbers_e1": 99,
+   "numbers_e2": 99,
+   "changed_rows": 12
+  },
+  {
+   "table": "MOSHI:T17",
+   "caption": "Ablation study on hyperparameters of the Mimi codec. We evaluate seman",
+   "rows_e1": 13,
+   "rows_e2": 13,
+   "affected": true,
+   "multi_tabular": false,
+   "marks_e2": 65,
+   "numbers_e1": 39,
+   "numbers_e2": 39,
+   "changed_rows": 13
+  },
+  {
+   "table": "MOSHI:T18",
+   "caption": "Adding Moshi to the ALERT benchmark, original table under CC BY. Each ",
+   "rows_e1": 33,
+   "rows_e2": 33,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 363,
+   "numbers_e2": 363,
+   "changed_rows": 0
+  },
+  {
+   "table": "MOSHI:T19",
+   "caption": "Speaking styles used to fine-tune Moshi.",
+   "rows_e1": 22,
+   "rows_e2": 22,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 0,
+   "numbers_e2": 0,
+   "changed_rows": 0
+  },
+  {
+   "table": "HNET:T1",
+   "caption": "Architectures for main language models, all data-/FLOP-matched. E^0,D^",
+   "rows_e1": 14,
+   "rows_e2": 14,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 22,
+   "numbers_e2": 24,
+   "changed_rows": 10
+  },
+  {
+   "table": "HNET:T2",
+   "caption": "Zero-shot performance comparison across multiple benchmarks, all data-",
+   "rows_e1": 15,
+   "rows_e2": 15,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 150,
+   "numbers_e2": 150,
+   "changed_rows": 11
+  },
+  {
+   "table": "HNET:T3",
+   "caption": "Robustness evaluation on HellaSwag with textual perturbations, all dat",
+   "rows_e1": 15,
+   "rows_e2": 15,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 105,
+   "numbers_e2": 105,
+   "changed_rows": 11
+  },
+  {
+   "table": "HNET:T4",
+   "caption": "Architecture details and model benchmarks for Chinese and code models.",
+   "rows_e1": 3,
+   "rows_e2": 3,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 15,
+   "numbers_e2": 15,
+   "changed_rows": 3
+  },
+  {
+   "table": "HNET:T5",
+   "caption": "Model details and final performance on HG38. We trained two isotropic ",
+   "rows_e1": 4,
+   "rows_e2": 4,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 4,
+   "numbers_e2": 4,
+   "changed_rows": 0
+  },
+  {
+   "table": "HNET:T6",
+   "caption": "Related architectures. Comparison of related architectures, particular",
+   "rows_e1": 22,
+   "rows_e2": 22,
+   "affected": true,
+   "multi_tabular": false,
+   "marks_e2": 42,
+   "numbers_e1": 0,
+   "numbers_e2": 0,
+   "changed_rows": 22
+  },
+  {
+   "table": "HNET:T7",
+   "caption": "Encoder architecture ablations on HG38. Switching the encoder architec",
+   "rows_e1": 5,
+   "rows_e2": 5,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 5,
+   "numbers_e2": 5,
+   "changed_rows": 0
+  },
+  {
+   "table": "HNET:T8",
+   "caption": "Distilling Llama 3.2 3B to a byte level model. Average acc indicates a",
+   "rows_e1": 2,
+   "rows_e2": 2,
+   "affected": false,
+   "multi_tabular": false,
+   "marks_e2": 0,
+   "numbers_e1": 18,
+   "numbers_e2": 18,
+   "changed_rows": 0
+  }
+ ],
+ "examples": [
+  {
+   "table": "AIAYN:T2",
+   "caption": "The Transformer achieves better BLEU scores than previous state-of-the-art models on the E",
+   "headers": [
+    "Model",
+    "BLEU / EN-DE",
+    "BLEU / EN-FR",
+    "col4",
+    "Training Cost (FLOPs) / EN-DE",
+    "Training Cost (FLOPs) / EN-FR"
+   ],
+   "e1_row": {
+    "row_header": "ByteNet",
+    "cells": {
+     "BLEU / EN-DE": "23.75"
+    }
+   },
+   "e2_row": {
+    "row_header": "ByteNet",
+    "cells": {
+     "BLEU / EN-DE": "23.75",
+     "BLEU / EN-FR": "",
+     "col4": "",
+     "Training Cost (FLOPs) / EN-DE": "",
+     "Training Cost (FLOPs) / EN-FR": ""
+    }
+   }
+  },
+  {
+   "table": "AIAYN:T3",
+   "caption": "Variations on the Transformer architecture. Unlisted values are identical to those of the ",
+   "headers": [
+    "col1",
+    "N",
+    "d_model",
+    "d_ff",
+    "h",
+    "d_k",
+    "d_v",
+    "P_drop",
+    "ε_ls",
+    "train / steps",
+    "PPL / (dev)",
+    "BLEU / (dev)",
+    "params / ×10^6"
+   ],
+   "e1_row": {
+    "row_header": "(A)",
+    "cells": {
+     "h": "1",
+     "d_k": "512",
+     "d_v": "512",
+     "PPL / (dev)": "5.29",
+     "BLEU / (dev)": "24.9"
+    }
+   },
+   "e2_row": {
+    "row_header": "(A)",
+    "cells": {
+     "N": "",
+     "d_model": "",
+     "d_ff": "",
+     "h": "1",
+     "d_k": "512",
+     "d_v": "512",
+     "P_drop": "",
+     "ε_ls": "",
+     "train / steps": "",
+     "PPL / (dev)": "5.29",
+     "BLEU / (dev)": "24.9",
+     "params / ×10^6": ""
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T1",
+   "caption": "Models' hyperparameters. Hyperparameters for the architecture and training of our 7B-param",
+   "headers": [
+    "Hyper-parameter",
+    "Helium training / pre-training",
+    "Moshi training / pre-training",
+    "Moshi training / post-training",
+    "Moshi training / fisher",
+    "Moshi training / fine"
+   ],
+   "e1_row": {
+    "row_header": "MLP dimension (Temporal Transformer)",
+    "cells": {
+     "Helium training / pre-training": "11264"
+    }
+   },
+   "e2_row": {
+    "row_header": "MLP dimension (Temporal Transformer)",
+    "cells": {
+     "Helium training / pre-training": "11264",
+     "Moshi training / pre-training": "",
+     "Moshi training / post-training": "",
+     "Moshi training / fisher": "",
+     "Moshi training / fine": ""
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T3",
+   "caption": "Ablation study on hyperparameters of the Mimi codec. We evaluate semantic modeling by repo",
+   "headers": [
+    "Quantization / Rate",
+    "Transformer / in encoder",
+    "Transformer / in decoder",
+    "WavLM / distillation",
+    "Split / quantizer",
+    "ABX (↓)",
+    "VisQOL (↑)",
+    "MOSNet (↑)",
+    "MUSHRA (↑)"
+   ],
+   "e1_row": {
+    "row_header": "",
+    "cells": {
+     "ABX (↓)": "23.3%",
+     "VisQOL (↑)": "2.91",
+     "MOSNet (↑)": "2.89",
+     "MUSHRA (↑)": "65.9±1.7"
+    }
+   },
+   "e2_row": {
+    "row_header": "Row 1",
+    "cells": {
+     "Quantization / Rate": "✓",
+     "Transformer / in encoder": "✓",
+     "Transformer / in decoder": "✓",
+     "WavLM / distillation": "(blank)",
+     "Split / quantizer": "(blank)",
+     "ABX (↓)": "23.3%",
+     "VisQOL (↑)": "2.91",
+     "MOSNet (↑)": "2.89",
+     "MUSHRA (↑)": "65.9±1.7"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T4",
+   "caption": "Audio quality evaluation. Objective and subjective (MUSHRA) evaluation of audio quality fo",
+   "headers": [
+    "Model",
+    "f_s",
+    "f_r",
+    "bitrate",
+    "causal",
+    "ABX (↓)",
+    "VisQOL (↑)",
+    "MOSNet (↑)",
+    "MUSHRA (↑)"
+   ],
+   "e1_row": {
+    "row_header": "RVQGAN",
+    "cells": {
+     "f_s": "24kHz",
+     "f_r": "75Hz",
+     "bitrate": "1.5kbps",
+     "ABX (↓)": "-",
+     "VisQOL (↑)": "1.74",
+     "MOSNet (↑)": "2.74",
+     "MUSHRA (↑)": "31.3±1.3"
+    }
+   },
+   "e2_row": {
+    "row_header": "RVQGAN",
+    "cells": {
+     "f_s": "24kHz",
+     "f_r": "75Hz",
+     "bitrate": "1.5kbps",
+     "causal": "(blank)",
+     "ABX (↓)": "-",
+     "VisQOL (↑)": "1.74",
+     "MOSNet (↑)": "2.74",
+     "MUSHRA (↑)": "31.3±1.3"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T5",
+   "caption": "Ablation study on the use of the RQ-Transformer. All models are initialized with Helium an",
+   "headers": [
+    "Acoustic Delay",
+    "RQ-Transformer",
+    "Perplexity"
+   ],
+   "e1_row": {
+    "row_header": "[0, 1, 2, 3, 4, 5, 6, 7]",
+    "cells": {
+     "Perplexity": "142.2"
+    }
+   },
+   "e2_row": {
+    "row_header": "[0, 1, 2, 3, 4, 5, 6, 7]",
+    "cells": {
+     "RQ-Transformer": "(blank)",
+     "Perplexity": "142.2"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T6",
+   "caption": "Ablation study on delay patterns, weight of the semantic token and Inner Monologue. All mo",
+   "headers": [
+    "Acoustic / Delay",
+    "Semantic Token / Weight",
+    "Depthwise / Parametrization",
+    "Inner / Monologue",
+    "Transcript / NLL (↓)",
+    "Transcript / Length (↑)"
+   ],
+   "e1_row": {
+    "row_header": "[0, 0, 0, 0, 0, 0, 0, 0]",
+    "cells": {
+     "Semantic Token / Weight": "001.0",
+     "Depthwise / Parametrization": "51",
+     "Transcript / NLL (↓)": "4.36",
+     "Transcript / Length (↑)": "486"
+    }
+   },
+   "e2_row": {
+    "row_header": "[0, 0, 0, 0, 0, 0, 0, 0]",
+    "cells": {
+     "Semantic Token / Weight": "001.0",
+     "Depthwise / Parametrization": "✓",
+     "Inner / Monologue": "(blank)",
+     "Transcript / NLL (↓)": "4.36",
+     "Transcript / Length (↑)": "486"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T12",
+   "caption": "Distribution of audio artifacts caused by model compression. Percentage of audio artifacts",
+   "headers": [
+    "Model / Artifacts",
+    "Gibberish / audio",
+    "Noisy / audio",
+    "Background / noise",
+    "Repetitive / text",
+    "No artifacts"
+   ],
+   "e1_row": {
+    "row_header": "unquant",
+    "cells": {
+     "Noisy / audio": "4.1",
+     "Background / noise": "0.1",
+     "Repetitive / text": "0.1",
+     "No artifacts": "95.8"
+    }
+   },
+   "e2_row": {
+    "row_header": "unquant",
+    "cells": {
+     "Gibberish / audio": "",
+     "Noisy / audio": "4.1",
+     "Background / noise": "0.1",
+     "Repetitive / text": "0.1",
+     "No artifacts": "95.8"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T13",
+   "caption": "Regurgitation of training data with condition-free generation from different models. We me",
+   "headers": [
+    "col1",
+    "prompted (3s)",
+    "deduplicated",
+    "fine-tuned",
+    "temp.",
+    "regurgitation rate (%)"
+   ],
+   "e1_row": {
+    "row_header": "single-stream",
+    "cells": {
+     "temp.": "0",
+     "regurgitation rate (%)": "0.00"
+    }
+   },
+   "e2_row": {
+    "row_header": "single-stream",
+    "cells": {
+     "prompted (3s)": "",
+     "deduplicated": "",
+     "fine-tuned": "",
+     "temp.": "0",
+     "regurgitation rate (%)": "0.00"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T16",
+   "caption": "Idempotence of tokens. Probabilities that quantization indices remain identical after deco",
+   "headers": [
+    "↓ codec",
+    "attacks / Δ T",
+    "attacks / RVQGAN",
+    "RQ level →",
+    "k=1 / (semantic)",
+    "k=2",
+    "k=3",
+    "k=4",
+    "k=5",
+    "k=6",
+    "k=7",
+    "k=8"
+   ],
+   "e1_row": {
+    "row_header": "Basic",
+    "cells": {
+     "attacks / Δ T": "0",
+     "k=1 / (semantic)": "0.798",
+     "k=2": "0.783",
+     "k=3": "0.560",
+     "k=4": "0.483",
+     "k=5": "0.421",
+     "k=6": "0.407",
+     "k=7": "0.369",
+     "k=8": "0.404"
+    }
+   },
+   "e2_row": {
+    "row_header": "Basic",
+    "cells": {
+     "attacks / Δ T": "0",
+     "attacks / RVQGAN": "",
+     "RQ level →": "",
+     "k=1 / (semantic)": "0.798",
+     "k=2": "0.783",
+     "k=3": "0.560",
+     "k=4": "0.483",
+     "k=5": "0.421",
+     "k=6": "0.407",
+     "k=7": "0.369",
+     "k=8": "0.404"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T17",
+   "caption": "Ablation study on hyperparameters of the Mimi codec. We evaluate semantic modeling by repo",
+   "headers": [
+    "Quantization / Rate",
+    "Transformer / in encoder",
+    "Transformer / in decoder",
+    "WavLM / distillation",
+    "Split / quantizer",
+    "ABX (↓)",
+    "VisQOL (↑)",
+    "MOSNet (↑)"
+   ],
+   "e1_row": {
+    "row_header": "",
+    "cells": {
+     "ABX (↓)": "31.3%",
+     "VisQOL (↑)": "2.37",
+     "MOSNet (↑)": "2.85"
+    }
+   },
+   "e2_row": {
+    "row_header": "Row 1",
+    "cells": {
+     "Quantization / Rate": "(blank)",
+     "Transformer / in encoder": "(blank)",
+     "Transformer / in decoder": "(blank)",
+     "WavLM / distillation": "(blank)",
+     "Split / quantizer": "(blank)",
+     "ABX (↓)": "31.3%",
+     "VisQOL (↑)": "2.37",
+     "MOSNet (↑)": "2.85"
+    }
+   }
+  },
+  {
+   "table": "HNET:T1",
+   "caption": "Architectures for main language models, all data-/FLOP-matched. E^0,D^0, E^1,D^1, M. T and",
+   "headers": [
+    "Model / (L^S / L^0)",
+    "Input / #Params",
+    "Tokenizer / Architecture",
+    "L^0 / (D)",
+    "2BPIC",
+    "col6",
+    "col7",
+    "col8"
+   ],
+   "e1_row": {
+    "row_header": "LlamaByte (#FLOPs matched to GPT-3 Large)",
+    "cells": {
+     "Tokenizer / Architecture": "—",
+     "2BPIC": "1.0",
+     "col6": "210M",
+     "col7": "T16",
+     "col8": "1024"
+    }
+   },
+   "e2_row": {
+    "row_header": "LlamaByte (#FLOPs matched to GPT-3 Large)",
+    "cells": {
+     "Input / #Params": "",
+     "Tokenizer / Architecture": "—",
+     "L^0 / (D)": "",
+     "2BPIC": "1.0",
+     "col6": "210M",
+     "col7": "T16",
+     "col8": "1024"
+    }
+   }
+  }
+ ],
+ "prose_changes": [],
+ "phase5_rows_reidentified": 53,
+ "mark_macros_per_paper": {
+  "AIAYN": [],
+  "MOSHI": [
+   "cmark",
+   "xmark"
+  ],
+  "HNET": [
+   "lipsum",
+   "cmark",
+   "xmark"
+  ]
+ },
+ "preexisting_duplicate_headers": [
+  "MOSHI:T10",
+  "MOSHI:T11"
+ ],
+ "checks_failed": []
+}

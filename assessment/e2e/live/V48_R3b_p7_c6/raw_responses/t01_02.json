@@ -1,0 +1,44 @@
+{
+ "question_id": "t01",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:43:48.863+00:00",
+  "t_send_ns": 208278864024900,
+  "status": 200,
+  "t_first_byte_ns": 208279107456300,
+  "t_first_content_ns": 208280136470800,
+  "t_last_ns": 208280208984800,
+  "max_gap_ms": 1028.9792,
+  "text": "In Table 6, the Isotropic configuration has Autoregressive = ✗ for ByT5 [HNET:T6:r01].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.157298127,
+   "prompt_tokens": 2256,
+   "prompt_time": 0.856652871,
+   "completion_tokens": 99,
+   "completion_time": 0.248916766,
+   "total_tokens": 2355,
+   "total_time": 1.1055696369999999,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 62
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "971",
+   "x-ratelimit-reset-requests": "41m45.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "4320",
+   "x-ratelimit-reset-tokens": "27.6s"
+  },
+  "error": null,
+  "first_byte_ms": 243.4,
+  "first_content_ms": 1272.4,
+  "total_ms": 1345.0
+ }
+}

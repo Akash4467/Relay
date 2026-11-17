@@ -1,0 +1,44 @@
+{
+ "question_id": "q13",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:07:39.830+00:00",
+  "t_send_ns": 206109831487900,
+  "status": 200,
+  "t_first_byte_ns": 206110076670100,
+  "t_first_content_ns": 206110453107500,
+  "t_last_ns": 206110802964100,
+  "max_gap_ms": 376.4031,
+  "text": "The authors report that the 2‑stage H‑Net configuration matched to GPT‑3 Large achieves an average zero‑shot accuracy of 55.5 % [HNET:T2:r10]. The authors’ Transformer model matched to GPT‑3 Large obtains an average zero‑shot accuracy of 53.3 % [HNET:T2:r01]. The authors note that the 2‑stage H‑Net’s average accuracy matches that of the larger Transformer configuration matched to GPT‑3 XL, which also has an average zero‑shot accuracy of 55.5 % [HNET:T2:r11].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.155054864,
+   "prompt_tokens": 2066,
+   "prompt_time": 0.095864223,
+   "completion_tokens": 217,
+   "completion_time": 0.634673608,
+   "total_tokens": 2283,
+   "total_time": 0.730537831,
+   "prompt_tokens_details": {
+    "cached_tokens": 2048
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 81
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "971",
+   "x-ratelimit-reset-requests": "41m45.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "4035",
+   "x-ratelimit-reset-tokens": "29.737s"
+  },
+  "error": null,
+  "first_byte_ms": 245.2,
+  "first_content_ms": 621.6,
+  "total_ms": 971.5
+ }
+}

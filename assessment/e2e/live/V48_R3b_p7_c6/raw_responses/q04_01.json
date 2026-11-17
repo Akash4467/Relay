@@ -1,0 +1,44 @@
+{
+ "question_id": "q04",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:42:22.630+00:00",
+  "t_send_ns": 208192630342500,
+  "status": 200,
+  "t_first_byte_ns": 208193044381600,
+  "t_first_content_ns": 208193372504300,
+  "t_last_ns": 208193642951600,
+  "max_gap_ms": 328.1036,
+  "text": "The authors state that Mimi operates at a frame rate of 12.5 Hz [MOSHI:3.3.1:c030][MOSHI:3.3.1:c029].  \nThe authors use Q = 8 quantizers [MOSHI:3.3.1:c030].  \nThe authors set each quantizer’s codebook size to N_A = 2048 [MOSHI:3.3.1:c030].  \nThe authors report that at 12.5 Hz this configuration represents a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.319688445,
+   "prompt_tokens": 1994,
+   "prompt_time": 0.102091751,
+   "completion_tokens": 243,
+   "completion_time": 0.502231667,
+   "total_tokens": 2237,
+   "total_time": 0.604323418,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 103
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "976",
+   "x-ratelimit-reset-requests": "34m33.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "1518",
+   "x-ratelimit-reset-tokens": "48.615s"
+  },
+  "error": null,
+  "first_byte_ms": 414.0,
+  "first_content_ms": 742.2,
+  "total_ms": 1012.6
+ }
+}

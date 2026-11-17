@@ -1,0 +1,41 @@
+{
+ "question_id": "t01",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:57:02.381+00:00",
+  "t_send_ns": 209072381835700,
+  "status": 200,
+  "t_first_byte_ns": 209072622933700,
+  "t_first_content_ns": 209072989302800,
+  "t_last_ns": 209073048053800,
+  "max_gap_ms": 366.3439,
+  "text": "The Autoregressive column is marked with a cross (✗) for ByT5 [HNET:T6:r01].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.164693675,
+   "prompt_tokens": 1993,
+   "prompt_time": 0.297639091,
+   "completion_tokens": 62,
+   "completion_time": 0.132477348,
+   "total_tokens": 2055,
+   "total_time": 0.430116439,
+   "completion_tokens_details": {
+    "reasoning_tokens": 27
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "938",
+   "x-ratelimit-reset-requests": "1h29m16.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5183",
+   "x-ratelimit-reset-tokens": "21.127s"
+  },
+  "error": null,
+  "first_byte_ms": 241.1,
+  "first_content_ms": 607.5,
+  "total_ms": 666.2
+ }
+}

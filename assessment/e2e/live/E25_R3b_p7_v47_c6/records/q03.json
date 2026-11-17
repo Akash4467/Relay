@@ -1,0 +1,289 @@
+{
+ "run": "assessment/e2e/live/E25_R3b_p7_v47_c6",
+ "timestamp": "2026-11-14T16:01:40.745+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "q03",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "What is Inner Monologue in Moshi, and what does it improve?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "In Section 3.4.4, the authors introduce Inner Monologue, a new training and inference setup for audio language models that significantly improves the factuality and linguistic quality of generated speech by predicting time‑aligned text tokens before audio tokens [MOSHI:1:c007]. The most striking result is the impact of Inner Monologue on Moshi’s performance, almost tripling its accuracy on all benchmarks, and significantly improving over previous work [MOSHI:5.5:c091]. This improvement comes while Inner Monologue only marginally increases inference cost (each multi‑stream timestep requires generating 17 tokens, instead of 16 without Inner Monologue) [MOSHI:5.5:c091]. The authors also state that the most drastic improvement to the quality and length of generated speech comes from enabling Inner Monologue [MOSHI:5.3:c083]. The retrieved passages do not state the exact architectural changes introduced by Inner Monologue.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "MOSHI:1:c007",
+   "MOSHI:5.5:c091",
+   "MOSHI:5.3:c083"
+  ],
+  "request_id": "loop-E25_R3b_p7_v47_c6-q03"
+ },
+ "client_ms": 36234.8,
+ "evidence_ids": [
+  "MOSHI:5.5:c091",
+  "MOSHI:abstract:c002",
+  "MOSHI:1:c007",
+  "MOSHI:2:c015",
+  "MOSHI:2:c013",
+  "MOSHI:5.3:c083",
+  "MOSHI:7:c126"
+ ],
+ "gold_units_in_context": [
+  true,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  false
+ ],
+ "drafts": [
+  "Inner Monologue is a new training and inference setup for audio language models that predicts time‑aligned text tokens before audio tokens, using text tokens as a per‑timestep prefix to the semantic token [MOSHI:1:c007]. It significantly improves the factuality and linguistic quality of generated speech [MOSHI:1:c007]. The most striking result is that Inner Monologue almost triples Moshi’s accuracy on spoken question‑answering benchmarks, while only marginally increasing inference cost (each multi‑stream timestep requires generating 17 tokens instead of 16) [MOSHI:5.5:c091]. The authors also note that enabling Inner Monologue provides the most drastic improvement to the quality and length of generated speech [MOSHI:5.3:c083]. The retrieved passages do not state how Inner Monologue is implemented at the architectural level.",
+  "In Section 3.4.4, the authors introduce Inner Monologue, a new training and inference setup for audio language models that significantly improves the factuality and linguistic quality of generated speech by predicting time‑aligned text tokens before audio tokens [MOSHI:1:c007]. The most striking result is the impact of Inner Monologue on Moshi’s performance, almost tripling its accuracy on all benchmarks, and significantly improving over previous work [MOSHI:5.5:c091]. This improvement comes while Inner Monologue only marginally increases inference cost (each multi‑stream timestep requires generating 17 tokens, instead of 16 without Inner Monologue) [MOSHI:5.5:c091]. The authors also state that the most drastic improvement to the quality and length of generated speech comes from enabling Inner Monologue [MOSHI:5.3:c083]. The retrieved passages do not state the exact architectural changes introduced by Inner Monologue."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:1:c007",
+    "MOSHI:5.5:c091",
+    "MOSHI:5.3:c083"
+   ],
+   "failures": [
+    [
+     "Inner Monologue is a new training and inference setup for audio language models that predicts time‑aligned text tokens before audio tokens, using text tokens as a per‑timestep prefix to the semantic token [MOSHI:1:c007].",
+     "not supported by the cited passage (entailment 0.87 < 0.9)"
+    ],
+    [
+     "It significantly improves the factuality and linguistic quality of generated speech [MOSHI:1:c007].",
+     "not supported by the cited passage (entailment 0.28 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "Inner Monologue is a new training and inference setup for audio language models that predicts time‑aligned text tokens before audio tokens, using text tokens as a per‑timestep prefix to the semantic token [MOSHI:1:c007].",
+     "ok": false,
+     "entailment": 0.8680617824450988,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.87 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "It significantly improves the factuality and linguistic quality of generated speech [MOSHI:1:c007].",
+     "ok": false,
+     "entailment": 0.2808855306395058,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.28 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The most striking result is that Inner Monologue almost triples Moshi’s accuracy on spoken question‑answering benchmarks, while only marginally increasing inference cost (each multi‑stream timestep requires generating 17 tokens instead of 16) [MOSHI:5.5:c091].",
+     "ok": true,
+     "entailment": 0.9819939810078556,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors also note that enabling Inner Monologue provides the most drastic improvement to the quality and length of generated speech [MOSHI:5.3:c083].",
+     "ok": true,
+     "entailment": 0.9968383908397707,
+     "reasons": []
+    },
+    {
+     "sentence": "The retrieved passages do not state how Inner Monologue is implemented at the architectural level.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "MOSHI:1:c007",
+    "MOSHI:5.5:c091",
+    "MOSHI:5.3:c083"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "In Section 3.4.4, the authors introduce Inner Monologue, a new training and inference setup for audio language models that significantly improves the factuality and linguistic quality of generated speech by predicting time‑aligned text tokens before audio tokens [MOSHI:1:c007].",
+     "ok": true,
+     "entailment": 0.9832634244694445,
+     "reasons": []
+    },
+    {
+     "sentence": "The most striking result is the impact of Inner Monologue on Moshi’s performance, almost tripling its accuracy on all benchmarks, and significantly improving over previous work [MOSHI:5.5:c091].",
+     "ok": true,
+     "entailment": 0.9910485030241702,
+     "reasons": []
+    },
+    {
+     "sentence": "This improvement comes while Inner Monologue only marginally increases inference cost (each multi‑stream timestep requires generating 17 tokens, instead of 16 without Inner Monologue) [MOSHI:5.5:c091].",
+     "ok": true,
+     "entailment": 0.9967124635636274,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors also state that the most drastic improvement to the quality and length of generated speech comes from enabling Inner Monologue [MOSHI:5.3:c083].",
+     "ok": true,
+     "entailment": 0.9213175360864121,
+     "reasons": []
+    },
+    {
+     "sentence": "The retrieved passages do not state the exact architectural changes introduced by Inner Monologue.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_R3b_p7_v47_c6-q03",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T16:01:40.745+00:00",
+  "question_id": "q03",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4189,
+  "tokens_out": 553,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1079.6,
+  "context_tokens": 1346,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:5.5:c091",
+   "MOSHI:abstract:c002",
+   "MOSHI:1:c007",
+   "MOSHI:2:c015",
+   "MOSHI:2:c013",
+   "MOSHI:5.3:c083",
+   "MOSHI:7:c126"
+  ],
+  "verification_ms": 5016.3,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 27861.0,
+  "model_ttft_ms": 459.0,
+  "first_byte_ms": 256.6,
+  "generation_ms": 2215.5,
+  "reasoning_tokens": 172,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1808,
+    "reserved": 2578,
+    "governor_wait_ms": 11847.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.156450731,
+     "prompt_tokens": 1807,
+     "prompt_time": 0.078907471,
+     "completion_tokens": 233,
+     "completion_time": 0.489090916,
+     "total_tokens": 2040,
+     "total_time": 0.567998387,
+     "completion_tokens_details": {
+      "reasoning_tokens": 52
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1807,
+    "tokens_out": 233,
+    "reasoning_tokens": 52,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 256.6,
+    "model_ttft_ms": 459.0,
+    "total_ms": 818.7,
+    "max_gap_ms": 202.3,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "990",
+     "x-ratelimit-reset-requests": "14m24s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "1737",
+     "x-ratelimit-reset-tokens": "46.972s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2381,
+    "reserved": 3151,
+    "governor_wait_ms": 16013.1,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.378440871,
+     "prompt_tokens": 2382,
+     "prompt_time": 0.267933072,
+     "completion_tokens": 320,
+     "completion_time": 0.670856323,
+     "total_tokens": 2702,
+     "total_time": 0.938789395,
+     "completion_tokens_details": {
+      "reasoning_tokens": 120
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2382,
+    "tokens_out": 320,
+    "reasoning_tokens": 120,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 462.9,
+    "model_ttft_ms": 998.7,
+    "total_ms": 1396.8,
+    "max_gap_ms": 535.7,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "989",
+     "x-ratelimit-reset-requests": "15m50.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "1872",
+     "x-ratelimit-reset-tokens": "45.96s"
+    }
+   }
+  ],
+  "first_token_ms": 36199.9,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 36200.7
+ }
+}

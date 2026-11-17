@@ -198,6 +198,8 @@ def verification(df: pd.DataFrame) -> str:
 
 def main() -> str:
     df = pd.read_csv(CSV)
+    if "verification_policy_version" in df:  # these tables are the v2 measurements; later versions are reported apart
+        df = df[df["verification_policy_version"] == "v2"]
     for c in ("tokens_in", "tokens_out", "retries"):
         df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0)
     ta, tb = table2(df)

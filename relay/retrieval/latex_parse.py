@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import re
 import unicodedata
+from contextvars import ContextVar
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -43,6 +44,22 @@ _LAYOUT = re.compile(
 _CAPTION = re.compile(r"\\caption(?:of\s*\{(table|figure)\})?(?!\s*\*)\s*(?:\[[^\]]*\])?\s*(?=\{)")
 _RULES = re.compile(r"\\(?:hline|toprule|midrule|bottomrule|addlinespace|specialrule(?:\s*\{[^}]*\}){3}|cline\{[^}]*\}|cmidrule(?:\[[^\]]*\])?(?:\([^)]*\))?\{[^}]*\}|rowcolor(?:\[[^\]]*\])?\{[^}]*\})")
 _EQ_SLOT = "\x00EQ{}\x00"
+
+# Extraction versions. "e1" (default) is the behaviour that built corpora c1-c3, unchanged. "e2" (corpus c4, opt-in):
+# dingbat ticks/crosses and \checkmark become ✓/✗ (pylatexenc renders \ding{51} as "51" and \checkmark as nothing);
+# a table cell made of a paper macro defined as empty (MOSHI's \xmark) is kept as an explicit blank mark; \multirow
+# values carry down for their exact span in every column; empty cells keep their column in the table record; a first
+# column made only of marks stays a column instead of becoming the row label.
+EXTRACTION: ContextVar[str] = ContextVar("extraction", default="e1")
+_BLANK = "\x00BLANK\x00"  # stands for a paper macro whose definition is empty, until the cell or prose is rendered
+BLANK_MARK = "(blank)"
+_MARKS = {"51": "✓", "52": "✓", "55": "✗", "56": "✗"}  # pifont \ding: 51/52 check marks, 55/56 crosses
+
+
+def map_symbols(tex: str) -> str:
+    """e2: \\ding ticks and crosses as ✓/✗, \\checkmark as ✓; any other \\ding{N} as [symbol], never the bare N."""
+    tex = re.sub(r"\\ding\s*\{\s*(\d+)\s*\}", lambda m: _MARKS.get(m.group(1), "[symbol]"), tex)
+    return re.sub(r"\\checkmark(?![A-Za-z])", "✓", tex)
 
 
 # ---------- low-level helpers ----------
@@ -160,7 +177,9 @@ def expand_macros(tex: str, macros: dict[str, tuple[int, str]], passes: int = 3)
 
 # ---------- text conversion ----------
 
-def to_text(tex: str, labels: dict[str, str]) -> str:
+def to_text(tex: str, labels: dict[str, str], keep_blank: bool = False) -> str:
+    if EXTRACTION.get() == "e2":
+        tex = map_symbols(tex)
     tex = _HYPERREF.sub("", _CITE.sub("", tex))
     tex = _HREF.sub(r"\1", _URL.sub(lambda m: m.group(1).replace("_", r"\_"), tex))  # pylatexenc crashes on \href
     tex = _REF.sub(lambda m: _ref_text(m.group(1), m.group(2), labels), tex)
@@ -181,6 +200,8 @@ def to_text(tex: str, labels: dict[str, str]) -> str:
     # NFKC folds math alphabets (\ud835\udda2\ud835\uddc1\ud835\uddce\ud835\uddc7\ud835\uddc4 -> Chunk) so BM25 and the verifier see plain words
     text = unicodedata.normalize("NFKC", text)
     text = re.sub(r"\s*\n(?!- |\[EQ\])\s*", " ", text)  # source line breaks are not meaningful; list items are
+    if not keep_blank:
+        text = text.replace(_BLANK, "")  # only e2 ever inserts it; prose and captions show the PDF's blank
     return re.sub(r"[ \t]+", " ", re.sub(r" *\n *", "\n", text)).strip()
 
 
@@ -252,8 +273,82 @@ def _cell(tex: str, labels: dict[str, str]) -> list[str]:
     return [to_text(tex, labels)]
 
 
+def _cell_spans(tex: str, labels: dict[str, str]) -> list[tuple[str, int]]:
+    """e2: like _cell, with the rows each value spans: \\multirow{n} -> n (downward), \\multirow{-n} -> -n (this row and
+    the n-1 rows above, as LaTeX draws it), otherwise 1."""
+    tex = _LAYOUT.sub("", tex).strip()
+    m = re.match(r"\\multicolumn\s*\{(\d+)\}\s*\{[^}]*\}\s*(?=\{)", tex)
+    if m:
+        content, _ = group(tex, m.end())
+        return [(to_text(content, labels, keep_blank=True), 1)] * int(m.group(1))
+    m = re.match(r"\\multirow\s*\{\s*(-?\d+)\s*\}\s*(?:\[[^\]]*\])?\s*(?:\{[^}]*\}|\*)\s*(?=\{)", tex)
+    if m:
+        return [(to_text(group(tex, m.end())[0], labels, keep_blank=True), int(m.group(1)) or 1)]
+    return [(to_text(tex, labels, keep_blank=True), 1)]
+
+
+_MARK_VALUES = {"✓", "✗", BLANK_MARK, ""}
+
+
+def parse_tabular_e2(body: str, labels: dict[str, str]) -> tuple[list[str], list[dict]]:
+    """e2 version of parse_tabular: same header/data split and headers; \\multirow values carry down for their span in
+    every column; every column keeps its place in each row's cells ("" when empty; "(blank)" for an empty-defined
+    mark macro); a first column of only marks stays a column and the row is labelled "Row k"."""
+    spec_end = group(body, body.index("{"))[1] if body.lstrip().startswith("{") else 0
+    body = body[spec_end:]
+    header_rows: list[list[tuple[str, int]]] = []
+    data_rows: list[list[tuple[str, int]]] = []
+    in_data = False
+    for raw in re.split(r"\\\\(?:\s*\[[^\]]*\])?", body):
+        if header_rows and re.search(r"\\(?:midrule|hline)", raw):
+            in_data = True
+        cells = [c for part in re.split(r"(?<!\\)&", _RULES.sub("", raw)) for c in _cell_spans(part, labels)]
+        if not any(t for t, _ in cells):
+            continue
+        (data_rows if in_data else header_rows).append(cells)
+    if not data_rows and header_rows:
+        header_rows, data_rows = header_rows[:1], header_rows[1:]
+    ncols = max((len(r) for r in header_rows + data_rows), default=0)
+    headers = []
+    for i in range(ncols):
+        parts = []
+        for hr in header_rows:
+            h = (hr[i][0] if i < len(hr) else "").replace(_BLANK, "")
+            if h and (not parts or parts[-1] != h):
+                parts.append(h)
+        headers.append(" / ".join(parts) or f"col{i + 1}")
+    grid = [[t for t, _ in r] + [""] * (ncols - len(r)) for r in data_rows]
+    spans = [[n for _, n in r] + [1] * (ncols - len(r)) for r in data_rows]
+    for j, row in enumerate(grid):  # a \multirow value fills the empty cells it spans, downward or upward
+        for i, n in enumerate(spans[j]):
+            if not row[i] or n == 1:
+                continue
+            for k in (range(j + 1, min(len(grid), j + n)) if n > 1 else range(max(0, j + n + 1), j)):
+                if grid[k][i] == "":
+                    grid[k][i] = row[i]
+    col0 = [r[0] for r in grid]
+    mark_first = bool(grid) and all(t in _MARK_VALUES or t == _BLANK for t in col0) and any(col0)
+    rows, prev0, group_label = [], "", ""
+    for j, texts in enumerate(grid):
+        filled = [c for c in texts if c]
+        if ncols > 2 and len(set(filled)) == 1 and len(filled) >= 2 and spans[j][0] == 1 and not mark_first:
+            group_label = texts[0]  # a \multicolumn spanning the whole row labels the rows below it
+            continue
+        texts = list(texts)
+        if not mark_first and not texts[0] and prev0:  # as in e1: an empty row header continues the one above
+            texts[0] = prev0
+        prev0 = texts[0]
+        texts = [BLANK_MARK if t == _BLANK else t for t in texts]
+        start = 0 if mark_first else 1
+        label = f"Row {len(rows) + 1}" if mark_first else texts[0]
+        header = f"{label} ({group_label})" if group_label else label
+        rows.append({"row_header": header, "cells": {headers[i]: texts[i] for i in range(start, ncols)}})
+    return headers, rows
+
+
 def row_text(row: dict) -> str:
-    cells = "; ".join(f"{h} = {v}" for h, v in row["cells"].items())
+    # an empty cell keeps its place in the record but is not spelled out (e1 rows never hold one)
+    cells = "; ".join(f"{h} = {v}" for h, v in row["cells"].items() if v != "")
     return f"{row['row_header']}: {cells}" if cells else row["row_header"]
 
 
@@ -383,11 +478,23 @@ def _label_map(sections: list[Section]) -> dict[str, str]:
     return labels
 
 
-def parse_paper(code: str, raw_dir: Path = RAW_DIR) -> Parsed:
+def parse_paper(code: str, raw_dir: Path = RAW_DIR, extraction: str = "e1") -> Parsed:
+    if extraction not in ("e1", "e2"):
+        raise ValueError(f"unknown extraction version {extraction!r}")
+    token = EXTRACTION.set(extraction)
+    try:
+        return _parse_paper(code, raw_dir)
+    finally:
+        EXTRACTION.reset(token)
+
+
+def _parse_paper(code: str, raw_dir: Path) -> Parsed:
     src = raw_dir / code / "src"
     main = find_main(src)
     tex = load_tex(main)
     macros, tex = collect_macros(tex)
+    if EXTRACTION.get() == "e2":  # an argument-less macro defined as empty (\newcommand{\xmark}{}) is a blank mark
+        macros = {k: ((n, _BLANK) if n == 0 and not body.strip() else (n, body)) for k, (n, body) in macros.items()}
     m = re.search(r"\\begin\{document\}(.*)\\end\{document\}", tex, re.S)
     body = m.group(1) if m else tex
 
@@ -416,8 +523,9 @@ def parse_paper(code: str, raw_dir: Path = RAW_DIR) -> Parsed:
                 if kind == "table":
                     t_no += 1
                     headers, rows = [], []
+                    parse = parse_tabular_e2 if EXTRACTION.get() == "e2" else parse_tabular
                     for tab in _TABULAR.finditer(inner):
-                        h, r = parse_tabular(tab.group(1), labels)
+                        h, r = parse(tab.group(1), labels)
                         headers = headers or h
                         rows += r
                     out.tables.append({"paper": code, "table_id": f"T{t_no}", "label": label,
@@ -468,8 +576,8 @@ def write_jsonl(path: Path, records: list[dict]) -> None:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
 
-def main(raw_dir: Path = RAW_DIR, out_dir: Path = PROCESSED_DIR) -> dict[str, Parsed]:
-    parsed = {code: parse_paper(code, raw_dir) for code in PAPERS}
+def main(raw_dir: Path = RAW_DIR, out_dir: Path = PROCESSED_DIR, extraction: str = "e1") -> dict[str, Parsed]:
+    parsed = {code: parse_paper(code, raw_dir, extraction) for code in PAPERS}
     for kind in ("sections", "paragraphs", "tables", "figures"):
         write_jsonl(out_dir / f"{kind}.jsonl", [r for p in parsed.values() for r in getattr(p, kind)])
     for code, p in parsed.items():

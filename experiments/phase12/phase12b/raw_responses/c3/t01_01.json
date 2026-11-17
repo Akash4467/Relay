@@ -1,0 +1,43 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "corpus_version": "c3",
+ "question_id": "t01",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T07:59:43.792+00:00",
+  "t_send_ns": 176833793488600,
+  "status": 200,
+  "t_first_byte_ns": 176834236700300,
+  "t_first_content_ns": 176834494837700,
+  "t_last_ns": 176834558686800,
+  "max_gap_ms": 258.1093,
+  "text": "The table marks the Autoregressive entry for ByT5 with a check mark (✓) [HNET:T6:r01].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.367436905,
+   "prompt_tokens": 1726,
+   "prompt_time": 0.07629748,
+   "completion_tokens": 117,
+   "completion_time": 0.241596668,
+   "total_tokens": 1843,
+   "total_time": 0.317894148,
+   "completion_tokens_details": {
+    "reasoning_tokens": 81
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "981",
+   "x-ratelimit-reset-requests": "27m21.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5983",
+   "x-ratelimit-reset-tokens": "15.127s"
+  },
+  "error": null,
+  "first_byte_ms": 443.2,
+  "first_content_ms": 701.3,
+  "total_ms": 765.2
+ }
+}

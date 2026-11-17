@@ -1,0 +1,344 @@
+{
+ "n_shown_answers": 45,
+ "blocked": [
+  {
+   "file": "assessment/e2e/live\\B12_fix_c6\\records\\q14.json",
+   "question_id": "q14",
+   "blocked": true,
+   "uncovered": [
+    "AIAYN"
+   ],
+   "answer": "The Transformers use the Llama‑3 tokenizer which was designed for multilingual, while H‑Net (space) and H‑Net (2‑stage) are byte‑level [HNET:3.2:c061]. The authors introduce a dynamic chunking mechanism which automatically learns content‑ and context‑dependent segmentation strategies learned jointly with the rest of the model [HNET:abstract:c001]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q14.json",
+   "question_id": "q14",
+   "blocked": true,
+   "uncovered": [
+    "AIAYN"
+   ],
+   "answer": "All models but Transformer take raw byte inputs, while the Transformer uses the GPT‑2 tokenizer [HNET:3.1:c053]. H‑Net takes raw byte inputs and learns a dynamic, content‑ and context‑dependent segmentation strategy [HNET:abstract:c001]."
+  }
+ ],
+ "rows": [
+  {
+   "file": "assessment/e2e/live\\B12\\records\\q01.json",
+   "question_id": "q01",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The inherently sequential nature of recurrent models—computing each hidden state from the previous one—precludes parallelization within training examples, and this becomes critical at longer sequence lengths because memory constraints limit batching across examples [AIAYN:1:c002]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12\\records\\t05.json",
+   "question_id": "t05",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The configuration with a check mark in all five component columns obtains a MUSHRA score of 65.9±1.7 % [MOSHI:T3:r01]"
+  },
+  {
+   "file": "assessment/e2e/live\\B12_fix_c3\\records\\q04.json",
+   "question_id": "q04",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The authors use Q = 8 quantizers, each with a codebook size of N_A = 2048 [MOSHI:3.3.1:c030]. At 12.5Hz this represents a bitrate of 1.1 kbps [MOSHI:3.3.1:c030]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_fix_c3\\records\\q07.json",
+   "question_id": "q07",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The decoder inserts a third sub‑layer that performs multi‑head attention over the output of the encoder stack [AIAYN:3.1:c009]. In encoder‑decoder attention layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016]. In a self‑attention layer all of the keys, values and queries come from the same place, namely the output of the previous layer in the encoder [AIAYN:3.2.3:c016]. Self‑attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position, and masking is used to prevent leftward information flow [AIAYN:3.2.3:c016]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_fix_c3\\records\\q13.json",
+   "question_id": "q13",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The authors report that the 2‑stage H‑Net configuration (#FLOPs matched to GPT‑3 Large) has an average zero‑shot accuracy of 55.5 % [HNET:T2:r10]. The authors report that the Transformer configuration (#FLOPs matched to GPT‑3 Large) has an average zero‑shot accuracy of 53.3 % [HNET:T2:r01]. The authors report that the Transformer configuration (#FLOPs matched to GPT‑3 XL) has an average zero‑shot accuracy of 55.5 % [HNET:T2:r11]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_fix_c6\\records\\q04.json",
+   "question_id": "q04",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The authors use Q = 8 quantizers, each with a codebook size of N_A = 2048, and at 12.5Hz this represents a bitrate of 1.1kbps [MOSHI:3.3.1:c030]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_fix_c6\\records\\q13.json",
+   "question_id": "q13",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The authors report that the 2‑stage H‑Net configuration (#FLOPs matched to GPT‑3 Large) has an average zero‑shot accuracy of 55.5 % [HNET:T2:r10]. The authors also report that the Transformer configuration (#FLOPs matched to GPT‑3 XL) has an average zero‑shot accuracy of 55.5 % [HNET:T2:r11]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_fix_c6\\records\\q14.json",
+   "question_id": "q14",
+   "blocked": true,
+   "uncovered": [
+    "AIAYN"
+   ],
+   "answer": "The Transformers use the Llama‑3 tokenizer which was designed for multilingual, while H‑Net (space) and H‑Net (2‑stage) are byte‑level [HNET:3.2:c061]. The authors introduce a dynamic chunking mechanism which automatically learns content‑ and context‑dependent segmentation strategies learned jointly with the rest of the model [HNET:abstract:c001]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_fix_c6\\records\\t05.json",
+   "question_id": "t05",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "In Table 3, the configuration where Quantization / Rate, Transformer / in encoder, Transformer / in decoder, WavLM / distillation, and Split / quantizer are all checked has a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_fix_c6\\records\\t13.json",
+   "question_id": "t13",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The row with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] and a check mark under RQ‑Transformer reports a perplexity of 36.8 [MOSHI:T5:r01]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_p7_c6\\records\\q04.json",
+   "question_id": "q04",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "We use Q = 8 quantizers, each with a codebook size of N_A = 2048 [MOSHI:3.3.1:c030]. At 12.5Hz, this represents a bitrate of 1.1kbps [MOSHI:3.3.1:c030]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_p7_c6\\records\\t05.json",
+   "question_id": "t05",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "In Table 3, the configuration where Quantization / Rate, Transformer / in encoder, Transformer / in decoder, WavLM / distillation, and Split / quantizer are all checked has a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_p7_c6\\records\\t13.json",
+   "question_id": "t13",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The row with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] and a check mark under RQ‑Transformer reports a perplexity of 36.8[MOSHI:T5:r01]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_p7_v46_c6\\records\\n10.json",
+   "question_id": "n10",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The base configuration has h = 8 [AIAYN:T3:r01]. The base configuration has BLEU / (dev) = 25.8 [AIAYN:T3:r01]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_p7_v46_c6\\records\\q04.json",
+   "question_id": "q04",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The authors use Q = 8 quantizers, each with a codebook size of N_A = 2048, and at 12.5 Hz this represents a bitrate of 1.1 kbps [MOSHI:3.3.1:c030]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_p7_v46_c6\\records\\q07.json",
+   "question_id": "q07",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The decoder inserts a third sub‑layer which performs multi‑head attention over the output of the encoder stack [AIAYN:3.1:c009]. The decoder self‑attention sub‑layer is modified to prevent positions from attending to subsequent positions by masking out illegal connections [AIAYN:3.2.3:c016]. In encoder‑decoder attention layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016]. In a self‑attention layer all of the keys, values and queries come from the same place, in this case the output of the previous layer in the encoder [AIAYN:3.2.3:c016]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_p7_v46_c6\\records\\q13.json",
+   "question_id": "q13",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "In Table 2, the H‑Net (2‑stage) configuration (#FLOPs matched to GPT‑3 Large) has Average / acc ↑ = 55.5 [HNET:T2:r10].  \nIn Table 2, the Transformer (#FLOPs matched to GPT‑3 Large) has Average / acc ↑ = 53.3 [HNET:T2:r01].  \nIn Table 2, the Transformer (#FLOPs matched to GPT‑3 XL) has Average / acc ↑ = 55.5 [HNET:T2:r11]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_p7_v46_c6\\records\\t05.json",
+   "question_id": "t05",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "In Table 3, the configuration where Quantization / Rate, Transformer / in encoder, Transformer / in decoder, WavLM / distillation, and Split / quantizer are all checked has a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03]."
+  },
+  {
+   "file": "assessment/e2e/live\\B12_p7_v46_c6\\records\\t13.json",
+   "question_id": "t13",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The row with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] and a check mark under RQ‑Transformer reports a perplexity of 36.8 [MOSHI:T5:r01]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q01.json",
+   "question_id": "q01",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "Recurrent models factor computation along symbol positions, generating hidden states h_t as a function of the previous hidden state h_t‑1 and the input at position t, which makes the computation inherently sequential and thus precludes parallelization within training examples [AIAYN:1:c002]. This sequential nature becomes critical at longer sequence lengths because memory constraints limit batching across examples, making the lack of parallelization more problematic for long sequences [AIAYN:1:c002]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q02.json",
+   "question_id": "q02",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "In this work we employ h=8 parallel attention layers, or heads [AIAYN:3.2.2:c014]. For each of these we use d_k=d_v=d_model/h=64 [AIAYN:3.2.2:c014]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q03.json",
+   "question_id": "q03",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "Inner Monologue is a new training and inference setup for audio language models that significantly improves the factuality and linguistic quality of generated speech by predicting time‑aligned text tokens before audio tokens [MOSHI:1:c007]. The authors report that Inner Monologue almost triples Moshi’s accuracy on all benchmarks and significantly improves over previous work [MOSHI:5.5:c091]. The retrieved passages do not state how Inner Monologue improves any other metric."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q04.json",
+   "question_id": "q04",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The authors use Q = 8 quantizers, each with a codebook size of N_A = 2048, and at 12.5Hz this represents a bitrate of 1.1 kbps [MOSHI:3.3.1:c030]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q06.json",
+   "question_id": "q06",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "Traditional tokenization approaches in language models suffer from fundamental limitations because fixed vocabularies exhibit biases toward high‑resource languages, are fragile when handling adversarial inputs, and show lower performance on character‑level tasks, stemming from their static nature that cannot adapt chunking strategies to input content or context [HNET:A:c088]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q07.json",
+   "question_id": "q07",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "In addition to the two sub‑layers in each encoder layer, the decoder inserts a third sub‑layer, which performs multi‑head attention over the output of the encoder stack [AIAYN:3.1:c009]. Self‑attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position, and we prevent leftward information flow by masking out (setting to -∞) all values in the input of the softmax which correspond to illegal connections [AIAYN:3.2.3:c016]. In “encoder‑decoder attention” layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q09.json",
+   "question_id": "q09",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The authors settle on a theoretical latency of 160 ms by pretraining Moshi with an acoustic delay of 2 and finetuning it with an acoustic delay of 1[MOSHI:5.3:c083]. The authors’ model has a theoretical latency of 160 ms, 200 ms in practice[MOSHI:abstract:c002]. The authors design a streaming, hierarchical architecture, with a theoretical latency of 160 ms—lower than the 230 ms average in natural conversations measured over 10 languages[MOSHI:1:c005]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q13.json",
+   "question_id": "q13",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "In Table 2, the H‑Net (2‑stage) configuration (#FLOPs matched to GPT‑3 Large) has Average / acc ↑ = 55.5 % [HNET:T2:r10]. In Table 2, the Transformer configuration (#FLOPs matched to GPT‑3 Large) has Average / acc ↑ = 53.3 % [HNET:T2:r01]. In Table 2, the Transformer configuration (#FLOPs matched to GPT‑3 XL) has Average / acc ↑ = 55.5 % [HNET:T2:r11]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q14.json",
+   "question_id": "q14",
+   "blocked": true,
+   "uncovered": [
+    "AIAYN"
+   ],
+   "answer": "All models but Transformer take raw byte inputs, while the Transformer uses the GPT‑2 tokenizer [HNET:3.1:c053]. H‑Net takes raw byte inputs and learns a dynamic, content‑ and context‑dependent segmentation strategy [HNET:abstract:c001]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\q15.json",
+   "question_id": "q15",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The authors trained their models on one machine with 8 NVIDIA P100 GPUs [AIAYN:5.2:c026]. All models are trained on H100 GPUs [MOSHI:4.4:c062]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\t01.json",
+   "question_id": "t01",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The authors' table shows that the Isotropic configuration with Example Architecture ByT5 has Autoregressive = ✗[HNET:T6:r01]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\t05.json",
+   "question_id": "t05",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "In Table 3, the configuration where Quantization / Rate, Transformer / in encoder, Transformer / in decoder, WavLM / distillation, and Split / quantizer are all checked has a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03]."
+  },
+  {
+   "file": "assessment/e2e/live\\E25_p7_v46_c6\\records\\t13.json",
+   "question_id": "t13",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The row with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] and a check mark under RQ‑Transformer reports a perplexity of 36.8 [MOSHI:T5:r01]."
+  },
+  {
+   "file": "assessment/improvement_loop/baseline\\live_ext\\records\\q03.json",
+   "question_id": "q03",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "Inner Monologue is a new training and inference setup for audio language models that significantly improves the factuality and linguistic quality of generated speech by predicting time‑aligned text tokens before audio tokens [MOSHI:1:c007]. It almost triples Moshi’s accuracy on spoken question‑answering benchmarks, markedly improving performance over previous work while only marginally increasing inference cost [MOSHI:5.5:c091]."
+  },
+  {
+   "file": "assessment/improvement_loop/baseline\\live_ext\\records\\q06.json",
+   "question_id": "q06",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "Traditional tokenization uses fixed vocabularies that are biased toward high‑resource languages, are fragile when handling adversarial inputs, and perform poorly on character‑level tasks because the static chunking cannot adapt to input content or context[HNET:A:c088]. The retrieved passages do not state any additional limitation."
+  },
+  {
+   "file": "assessment/improvement_loop/baseline\\phase12_c3_reused\\records\\q01.json",
+   "question_id": "q01",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "Recurrent models generate hidden states h_t from the previous hidden state h_t‑1 and the input at position t, which makes their computation inherently sequential and prevents parallelization within training examples [AIAYN:1:c002]. This lack of parallelism becomes critical at longer sequence lengths, where memory constraints limit batching across examples [AIAYN:1:c002]."
+  },
+  {
+   "file": "assessment/improvement_loop/baseline\\phase12_c3_reused\\records\\t05.json",
+   "question_id": "t05",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The configuration with a check mark in all five component columns obtains a MUSHRA score of 65.9±1.7 %[MOSHI:T3:r01]"
+  },
+  {
+   "file": "assessment/improvement_loop/iterations\\iteration_002\\live\\records\\q03.json",
+   "question_id": "q03",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "Inner Monologue is a new training and inference setup for audio language models that significantly improves the factuality and linguistic quality of generated speech by predicting time‑aligned text tokens before audio tokens [MOSHI:1:c007]. The impact of Inner Monologue on Moshi’s performance is to almost triple its accuracy on all benchmarks and significantly improve over previous work [MOSHI:5.5:c091]."
+  },
+  {
+   "file": "assessment/improvement_loop/iterations\\iteration_002\\live\\records\\q04.json",
+   "question_id": "q04",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "We use Q = 8 quantizers, each with a codebook size of N_A = 2048, and at 12.5Hz this represents a bitrate of 1.1kbps [MOSHI:3.3.1:c030]."
+  },
+  {
+   "file": "assessment/improvement_loop/iterations\\iteration_002\\live\\records\\q13.json",
+   "question_id": "q13",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "Configuration H‑Net (2‑stage) (#FLOPs matched to GPT‑3 Large) has Average / acc ↑ = 55.5[HNET:T2:r10].  \nConfiguration Transformer (#FLOPs matched to GPT‑3 Large) has Average / acc ↑ = 53.3[HNET:T2:r01].  \nConfiguration Transformer (#FLOPs matched to GPT‑3 XL) has Average / acc ↑ = 55.5[HNET:T2:r11]."
+  },
+  {
+   "file": "experiments/phase12/phase12b\\c3\\q01.json",
+   "question_id": "q01",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "Recurrent models generate hidden states h_t from the previous hidden state h_t‑1 and the input at position t, which makes their computation inherently sequential and prevents parallelization within training examples [AIAYN:1:c002]. This lack of parallelism becomes critical at longer sequence lengths, where memory constraints limit batching across examples [AIAYN:1:c002]."
+  },
+  {
+   "file": "experiments/phase12/phase12b\\c3\\t05.json",
+   "question_id": "t05",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The configuration with a check mark in all five component columns obtains a MUSHRA score of 65.9±1.7 %[MOSHI:T3:r01]"
+  },
+  {
+   "file": "experiments/phase12/phase12b\\c6\\q11.json",
+   "question_id": "q11",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The model with a single attention head achieved a development BLEU of 24.9 [AIAYN:T3:r02]. The retrieved passages do not state the base configuration’s development BLEU."
+  },
+  {
+   "file": "experiments/phase12/phase12b\\c6\\t01.json",
+   "question_id": "t01",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "In the table, the Isotropic configuration with Example Architecture = ByT5 has Autoregressive = ✗ [HNET:T6:r01]."
+  },
+  {
+   "file": "experiments/phase12/phase12b\\c6\\t05.json",
+   "question_id": "t05",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The configuration with a check mark in all five component columns obtains a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03]."
+  },
+  {
+   "file": "experiments/phase12/phase12b\\c6\\t13.json",
+   "question_id": "t13",
+   "blocked": false,
+   "uncovered": [],
+   "answer": "The row with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] and a check mark under RQ‑Transformer reports a perplexity of 36.8 [MOSHI:T5:r01]."
+  }
+ ]
+}

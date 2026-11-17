@@ -1,0 +1,44 @@
+{
+ "question_id": "q04",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T12:58:08.505+00:00",
+  "t_send_ns": 194738506530600,
+  "status": 200,
+  "t_first_byte_ns": 194739019604200,
+  "t_first_content_ns": 194739803703600,
+  "t_last_ns": 194739929422400,
+  "max_gap_ms": 784.0794,
+  "text": "The Mimi codec operates at a frame rate of 12.5 Hz, uses 8 quantizers each with a codebook size of 2048, and at this rate yields a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.370384338,
+   "prompt_tokens": 1994,
+   "prompt_time": 0.077759317,
+   "completion_tokens": 344,
+   "completion_time": 0.835036286,
+   "total_tokens": 2338,
+   "total_time": 0.912795603,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 276
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "994",
+   "x-ratelimit-reset-requests": "8m38.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2590",
+   "x-ratelimit-reset-tokens": "40.575s"
+  },
+  "error": null,
+  "first_byte_ms": 513.1,
+  "first_content_ms": 1297.2,
+  "total_ms": 1422.9
+ }
+}

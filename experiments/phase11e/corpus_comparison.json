@@ -1,0 +1,4900 @@
+{
+ "kind": "REAL-PAPER OFFLINE retrieval + MOCKED citation/evidence outcomes (scripted provider; not model performance)",
+ "procedure": "production search(expand=True, share_captions=True), setting B, Phase 11A metrics, identical questions",
+ "labels": {
+  "original": "eval/questions.jsonl: project set, gold quotes assistant-located; NOT independently reviewed",
+  "table": "eval/phase7/table_question_set.json: PROVISIONAL (assistant-written and -labelled)",
+  "new": "experiments/phase11/new_cases.json: PROVISIONAL (assistant-written)"
+ },
+ "metrics": {
+  "c3": {
+   "original": {
+    "questions": 15,
+    "recall@5": 0.529,
+    "recall@8": 0.647,
+    "mrr": 0.597,
+    "coverage": 0.647,
+    "all_gold_questions": 8,
+    "multi_unit_all_gold": "5/12",
+    "budget_retention": 1.0
+   },
+   "original_nontable": {
+    "questions": 12,
+    "recall@5": 0.593,
+    "recall@8": 0.593,
+    "mrr": 0.565,
+    "coverage": 0.593,
+    "all_gold_questions": 6,
+    "multi_unit_all_gold": "3/9",
+    "budget_retention": 1.0
+   },
+   "table": {
+    "questions": 24,
+    "recall@5": 0.968,
+    "recall@8": 1.0,
+    "mrr": 0.767,
+    "coverage": 1.0,
+    "all_gold_questions": 3,
+    "multi_unit_all_gold": "0/5",
+    "budget_retention": 1.0
+   },
+   "new": {
+    "questions": 10,
+    "recall@5": 0.917,
+    "recall@8": 0.917,
+    "mrr": 0.562,
+    "coverage": 0.917,
+    "all_gold_questions": 9,
+    "multi_unit_all_gold": "1/2",
+    "budget_retention": 1.0
+   }
+  },
+  "c6": {
+   "original": {
+    "questions": 15,
+    "recall@5": 0.529,
+    "recall@8": 0.647,
+    "mrr": 0.596,
+    "coverage": 0.647,
+    "all_gold_questions": 8,
+    "multi_unit_all_gold": "5/12",
+    "budget_retention": 1.0
+   },
+   "original_nontable": {
+    "questions": 12,
+    "recall@5": 0.593,
+    "recall@8": 0.593,
+    "mrr": 0.565,
+    "coverage": 0.593,
+    "all_gold_questions": 6,
+    "multi_unit_all_gold": "3/9",
+    "budget_retention": 1.0
+   },
+   "table": {
+    "questions": 24,
+    "recall@5": 0.806,
+    "recall@8": 0.871,
+    "mrr": 0.667,
+    "coverage": 0.871,
+    "all_gold_questions": 22,
+    "multi_unit_all_gold": "4/5",
+    "budget_retention": 1.0
+   },
+   "new": {
+    "questions": 10,
+    "recall@5": 0.917,
+    "recall@8": 0.917,
+    "mrr": 0.562,
+    "coverage": 0.917,
+    "all_gold_questions": 9,
+    "multi_unit_all_gold": "1/2",
+    "budget_retention": 1.0
+   }
+  }
+ },
+ "complete_evidence": {
+  "gained_in_c6": [
+   "table:t01",
+   "table:t02",
+   "table:t03",
+   "table:t05",
+   "table:t06",
+   "table:t07",
+   "table:t11",
+   "table:t13",
+   "table:t14",
+   "table:t15",
+   "table:t17",
+   "table:t19",
+   "table:t21",
+   "table:t22",
+   "table:t23",
+   "table:t25",
+   "table:t28",
+   "table:t30",
+   "table:t32"
+  ],
+  "lost_in_c6": []
+ },
+ "unanswerable_target_table_in_context": {
+  "c3": {
+   "original:q16": null,
+   "original:q17": null,
+   "original:q18": null,
+   "original:q19": null,
+   "original:q20": null,
+   "original:q21": null,
+   "original:q22": null,
+   "original:q23": null,
+   "original:q24": null,
+   "original:q25": null,
+   "original:q26": null,
+   "original:q27": null,
+   "original:q28": null,
+   "original:q29": null,
+   "original:q30": null,
+   "table:t04": true,
+   "table:t08": true,
+   "table:t12": true,
+   "table:t16": true,
+   "table:t20": true,
+   "table:t24": true,
+   "table:t27": true,
+   "table:t31": true,
+   "new:n11": true,
+   "new:n12": true
+  },
+  "c6": {
+   "original:q16": null,
+   "original:q17": null,
+   "original:q18": null,
+   "original:q19": null,
+   "original:q20": null,
+   "original:q21": null,
+   "original:q22": null,
+   "original:q23": null,
+   "original:q24": null,
+   "original:q25": null,
+   "original:q26": null,
+   "original:q27": null,
+   "original:q28": null,
+   "original:q29": null,
+   "original:q30": null,
+   "table:t04": true,
+   "table:t08": true,
+   "table:t12": true,
+   "table:t16": true,
+   "table:t20": true,
+   "table:t24": true,
+   "table:t27": true,
+   "table:t31": true,
+   "new:n11": true,
+   "new:n12": true
+  }
+ },
+ "citation_evidence_validation_mocked": {
+  "c3": {
+   "q02_faithful": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "q09_units": {
+    "outcome": "normal",
+    "reason": null
+   },
+   "q11_partial": {
+    "outcome": "normal",
+    "reason": null
+   },
+   "q11_unretrieved_base": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "q12_both_rows": {
+    "outcome": "normal",
+    "reason": null
+   },
+   "t10_marks": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "q18_refusal": {
+    "outcome": "refused",
+    "reason": "model: not in papers"
+   },
+   "q20_refusal": {
+    "outcome": "refused",
+    "reason": "model: not in papers"
+   },
+   "q30_refusal": {
+    "outcome": "refused",
+    "reason": "model: not in papers"
+   },
+   "q20_fabricated": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "q30_fabricated": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "q12_false_absence": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "invalid_citation": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "unretrieved_citation": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "redraft_then_faithful": {
+    "outcome": "normal",
+    "reason": null
+   }
+  },
+  "c6": {
+   "q02_faithful": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "q09_units": {
+    "outcome": "normal",
+    "reason": null
+   },
+   "q11_partial": {
+    "outcome": "normal",
+    "reason": null
+   },
+   "q11_unretrieved_base": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "q12_both_rows": {
+    "outcome": "normal",
+    "reason": null
+   },
+   "t10_marks": {
+    "outcome": "refused",
+    "reason": "model: not in papers"
+   },
+   "q18_refusal": {
+    "outcome": "refused",
+    "reason": "model: not in papers"
+   },
+   "q20_refusal": {
+    "outcome": "refused",
+    "reason": "model: not in papers"
+   },
+   "q30_refusal": {
+    "outcome": "refused",
+    "reason": "model: not in papers"
+   },
+   "q20_fabricated": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "q30_fabricated": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "q12_false_absence": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "invalid_citation": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "unretrieved_citation": {
+    "outcome": "refused",
+    "reason": "verification failed after redraft"
+   },
+   "redraft_then_faithful": {
+    "outcome": "normal",
+    "reason": null
+   }
+  }
+ },
+ "q11": {
+  "c3": {
+   "expanded_query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get? [h = 1]",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04"
+   ],
+   "tokens": 1599,
+   "AIAYN:T3:r01": {
+    "holds": "base (h = 8): BLEU 25.8",
+    "row_in_chunk": true,
+    "bm25_rank": 16,
+    "dense_rank": 6,
+    "fused_rank": 5,
+    "rerank_rank": 9,
+    "score_ce": -0.435,
+    "in_final_context": false
+   },
+   "AIAYN:T3:r02": {
+    "holds": "(A) h = 1: BLEU 24.9",
+    "row_in_chunk": true,
+    "bm25_rank": 5,
+    "dense_rank": 9,
+    "fused_rank": 3,
+    "rerank_rank": 6,
+    "score_ce": -0.081,
+    "in_final_context": true
+   }
+  },
+  "c6": {
+   "expanded_query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get? [h = 1]",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04"
+   ],
+   "tokens": 1599,
+   "AIAYN:T3:r01": {
+    "holds": "base (h = 8): BLEU 25.8",
+    "row_in_chunk": true,
+    "bm25_rank": 16,
+    "dense_rank": 6,
+    "fused_rank": 5,
+    "rerank_rank": 9,
+    "score_ce": -0.435,
+    "in_final_context": false
+   },
+   "AIAYN:T3:r02": {
+    "holds": "(A) h = 1: BLEU 24.9",
+    "row_in_chunk": true,
+    "bm25_rank": 5,
+    "dense_rank": 9,
+    "fused_rank": 3,
+    "rerank_rank": 6,
+    "score_ce": -0.081,
+    "in_final_context": true
+   }
+  }
+ },
+ "latency_ms": {
+  "c3": {
+   "median": 714.7,
+   "p95": 783.8
+  },
+  "c6": {
+   "median": 706.6,
+   "p95": 776.0
+  }
+ },
+ "context_tokens": {
+  "c3": {
+   "mean": 1489.1,
+   "max": 1599
+  },
+  "c6": {
+   "mean": 1502.8,
+   "max": 1599
+  }
+ },
+ "rows": [
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q01",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "AIAYN:1:c002",
+    "AIAYN:1:c003",
+    "AIAYN:abstract:c001",
+    "AIAYN:6.3:c033",
+    "HNET:1:c010",
+    "MOSHI:6.2:c111",
+    "HNET:4:c081",
+    "HNET:1:c004"
+   ],
+   "tokens": 1548,
+   "rerank_ms": 1099.0,
+   "total_ms": 1099.1,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q02",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c014",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.2.1:c011",
+    "HNET:B:c107",
+    "AIAYN:AttentionVisualizations:c037"
+   ],
+   "tokens": 1541,
+   "rerank_ms": 839.8,
+   "total_ms": 839.8,
+   "expansion": [
+    "h",
+    "d_k",
+    "d_v"
+   ],
+   "expanded_query": "How many attention heads does the base Transformer use, and what key and value dimension does each head get? [h; d_k; d_v]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q03",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "MOSHI:5.5:c091",
+    "MOSHI:abstract:c002",
+    "MOSHI:1:c007",
+    "MOSHI:2:c015",
+    "MOSHI:2:c013",
+    "MOSHI:5.3:c083",
+    "MOSHI:7:c126"
+   ],
+   "tokens": 1346,
+   "rerank_ms": 675.4,
+   "total_ms": 675.4,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 0.5,
+   "recall@8": 0.5,
+   "mrr": 0.3333,
+   "coverage": 0.5,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    3,
+    null
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q04",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "MOSHI:3.3.1:c030",
+    "MOSHI:3.3.1:c028",
+    "MOSHI:3.3.1:c029",
+    "MOSHI:T17:r03",
+    "MOSHI:5.1:c071",
+    "MOSHI:T17:r02"
+   ],
+   "tokens": 1361,
+   "rerank_ms": 674.4,
+   "total_ms": 674.4,
+   "expansion": [
+    "f_r"
+   ],
+   "expanded_query": "What frame rate, number of quantizers, codebook size and bitrate does the Mimi codec use? [f_r]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q05",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "HNET:1:c007",
+    "HNET:2.1.1:c015",
+    "HNET:1:c012",
+    "HNET:2.2.1:c023",
+    "HNET:1:c008",
+    "HNET:3.1:c052",
+    "HNET:E:c112"
+   ],
+   "tokens": 1400,
+   "rerank_ms": 758.1,
+   "total_ms": 758.1,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 0.5,
+   "recall@8": 0.5,
+   "mrr": 0.25,
+   "coverage": 0.5,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    4,
+    null
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q06",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "HNET:A:c088",
+    "HNET:A.1:c090",
+    "HNET:3:c047",
+    "HNET:A.1.3:c094",
+    "HNET:1:c009",
+    "HNET:A.3:c103",
+    "HNET:4:c080",
+    "HNET:A.3:c105"
+   ],
+   "tokens": 1520,
+   "rerank_ms": 731.2,
+   "total_ms": 731.2,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 0.0,
+   "recall@8": 0.0,
+   "mrr": 0.0909,
+   "coverage": 0.0,
+   "all_gold": false,
+   "retained": 0,
+   "in_top": 0,
+   "gold_ranks": [
+    null,
+    11
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q07",
+   "answerable": true,
+   "category": "multi_section",
+   "final": [
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3:c006",
+    "AIAYN:3.1:c009",
+    "AIAYN:3.3:c017",
+    "HNET:2.1.2:c017",
+    "HNET:3.3:c069",
+    "AIAYN:abstract:c001"
+   ],
+   "tokens": 1412,
+   "rerank_ms": 747.4,
+   "total_ms": 747.5,
+   "expansion": [
+    "d_k"
+   ],
+   "expanded_query": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from? [d_k]",
+   "units": 3,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    3,
+    3,
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q08",
+   "answerable": true,
+   "category": "multi_section",
+   "final": [
+    "AIAYN:3.5:c019",
+    "AIAYN:3.5:c020",
+    "AIAYN:T3:r08",
+    "AIAYN:6.2:c031",
+    "AIAYN:3.4:c018",
+    "AIAYN:5.4:c028",
+    "MOSHI:3.2.1:c019"
+   ],
+   "tokens": 1341,
+   "rerank_ms": 672.0,
+   "total_ms": 672.0,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    2,
+    2,
+    4
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q09",
+   "answerable": true,
+   "category": "multi_section",
+   "final": [
+    "MOSHI:1:c005",
+    "MOSHI:abstract:c002",
+    "MOSHI:5.3:c083",
+    "MOSHI:7:c125",
+    "MOSHI:1:c004",
+    "MOSHI:abstract:c001",
+    "MOSHI:5.4:c088"
+   ],
+   "tokens": 1530,
+   "rerank_ms": 671.5,
+   "total_ms": 671.5,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 4,
+   "recall@5": 0.75,
+   "recall@8": 0.75,
+   "mrr": 1.0,
+   "coverage": 0.75,
+   "all_gold": false,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    9,
+    3,
+    2,
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q10",
+   "answerable": true,
+   "category": "multi_section",
+   "final": [
+    "HNET:3.1:c052",
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:1:c012",
+    "HNET:3.1:c049",
+    "HNET:T6:r02",
+    "HNET:3:c043"
+   ],
+   "tokens": 1527,
+   "rerank_ms": 670.8,
+   "total_ms": 670.9,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 0.0,
+   "recall@8": 0.0,
+   "mrr": 0.1111,
+   "coverage": 0.0,
+   "all_gold": false,
+   "retained": 0,
+   "in_top": 0,
+   "gold_ranks": [
+    11,
+    9,
+    null
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q11",
+   "answerable": true,
+   "category": "numerical_table",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04"
+   ],
+   "tokens": 1599,
+   "rerank_ms": 738.7,
+   "total_ms": 738.7,
+   "expansion": [
+    "h = 1"
+   ],
+   "expanded_query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get? [h = 1]",
+   "units": 2,
+   "recall@5": 0.0,
+   "recall@8": 0.5,
+   "mrr": 0.1667,
+   "coverage": 0.5,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    6,
+    9
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q12",
+   "answerable": true,
+   "category": "numerical_table",
+   "final": [
+    "MOSHI:T8:r02",
+    "MOSHI:5.5:c090",
+    "MOSHI:5.4:c089",
+    "MOSHI:5.5:c091",
+    "MOSHI:5.5:c092",
+    "MOSHI:T8:r01",
+    "MOSHI:4.3:c061",
+    "MOSHI:1:c008"
+   ],
+   "tokens": 1433,
+   "rerank_ms": 680.7,
+   "total_ms": 680.8,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 0.5,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    6,
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q13",
+   "answerable": true,
+   "category": "numerical_table",
+   "final": [
+    "HNET:T2:r10",
+    "HNET:T2:r09",
+    "HNET:T2:r08",
+    "HNET:T2:r07",
+    "HNET:T2:r15",
+    "HNET:T2:r01",
+    "HNET:T2:r11"
+   ],
+   "tokens": 1578,
+   "rerank_ms": 765.9,
+   "total_ms": 765.9,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 0.3333333333333333,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    1,
+    6,
+    8
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q14",
+   "answerable": true,
+   "category": "cross_paper",
+   "final": [
+    "AIAYN:6.3:c032",
+    "HNET:3.2:c061",
+    "AIAYN:1:c003",
+    "HNET:3.1:c053",
+    "HNET:2.1.2:c019",
+    "HNET:F:c125",
+    "HNET:2.1.2:c020",
+    "HNET:abstract:c001"
+   ],
+   "tokens": 1527,
+   "rerank_ms": 706.8,
+   "total_ms": 706.8,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 0.0,
+   "recall@8": 0.0,
+   "mrr": 0.0,
+   "coverage": 0.0,
+   "all_gold": false,
+   "retained": 0,
+   "in_top": 0,
+   "gold_ranks": [
+    null,
+    null,
+    null
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q15",
+   "answerable": true,
+   "category": "cross_paper",
+   "final": [
+    "AIAYN:5.2:c026",
+    "MOSHI:4.4:c062",
+    "AIAYN:1:c003",
+    "MOSHI:3.1:c017",
+    "MOSHI:3.4.1:c040",
+    "MOSHI:4.4:c064",
+    "AIAYN:6.1:c029",
+    "MOSHI:3.1:c016"
+   ],
+   "tokens": 1599,
+   "rerank_ms": 677.7,
+   "total_ms": 677.8,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    3,
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q16",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:T2:r05",
+    "AIAYN:6.1:c029",
+    "AIAYN:T2:r02",
+    "AIAYN:T2:r04",
+    "AIAYN:T2:r03",
+    "AIAYN:T2:r01",
+    "AIAYN:T3:r09"
+   ],
+   "tokens": 1403,
+   "rerank_ms": 663.9,
+   "total_ms": 663.9,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q17",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:6.1:c029",
+    "AIAYN:abstract:c001",
+    "AIAYN:T2:r03",
+    "AIAYN:T2:r05",
+    "AIAYN:T2:r01",
+    "AIAYN:T2:r04",
+    "AIAYN:T2:r02"
+   ],
+   "tokens": 1451,
+   "rerank_ms": 672.4,
+   "total_ms": 672.4,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q18",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:1:c003",
+    "AIAYN:6.1:c029",
+    "AIAYN:6.1:c030",
+    "AIAYN:5.2:c026",
+    "AIAYN:6.3:c032",
+    "AIAYN:6.3:c033",
+    "MOSHI:3.4.1:c035",
+    "HNET:2.4:c040"
+   ],
+   "tokens": 1437,
+   "rerank_ms": 684.8,
+   "total_ms": 684.8,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q19",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:3.2.2:c013",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.2:c015",
+    "AIAYN:7:c034",
+    "AIAYN:3.1:c008",
+    "AIAYN:2:c004",
+    "AIAYN:3.2.2:c014"
+   ],
+   "tokens": 1536,
+   "rerank_ms": 771.5,
+   "total_ms": 771.5,
+   "expansion": [
+    "h"
+   ],
+   "expanded_query": "Which file in the tensor2tensor repository implements multi-head attention? [h]",
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q20",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:5.8:c103",
+    "AIAYN:1:c003",
+    "AIAYN:T4:r01",
+    "HNET:3.3:c070",
+    "AIAYN:6.1:c029",
+    "HNET:E.3:c115",
+    "AIAYN:T4:r02",
+    "AIAYN:6.3:c033"
+   ],
+   "tokens": 1448,
+   "rerank_ms": 676.6,
+   "total_ms": 676.6,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q21",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:4.4:c062",
+    "AIAYN:5.2:c026",
+    "MOSHI:6.1:c110",
+    "MOSHI:3.2.1:c020",
+    "MOSHI:4.4:c064",
+    "AIAYN:6.1:c030",
+    "AIAYN:1:c003",
+    "MOSHI:T1:r06"
+   ],
+   "tokens": 1542,
+   "rerank_ms": 632.1,
+   "total_ms": 632.2,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q22",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:3.1:c016",
+    "MOSHI:7:c125",
+    "MOSHI:abstract:c001",
+    "MOSHI:1:c007",
+    "MOSHI:2:c015",
+    "MOSHI:2:c013"
+   ],
+   "tokens": 1416,
+   "rerank_ms": 688.3,
+   "total_ms": 688.3,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q23",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T18:r17",
+    "MOSHI:6.1:c110",
+    "MOSHI:6.1:c109",
+    "MOSHI:5.5:c090",
+    "MOSHI:5.5:c092",
+    "MOSHI:5.4:c085",
+    "MOSHI:5.8:c103"
+   ],
+   "tokens": 1441,
+   "rerank_ms": 632.9,
+   "total_ms": 632.9,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q24",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:5.5:c091",
+    "MOSHI:abstract:c001",
+    "MOSHI:2:c015",
+    "MOSHI:5.4:c088",
+    "MOSHI:5.8:c103",
+    "MOSHI:3.1:c016",
+    "MOSHI:abstract:c002",
+    "MOSHI:5.4:c087"
+   ],
+   "tokens": 1577,
+   "rerank_ms": 630.1,
+   "total_ms": 630.1,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q25",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T18:r03",
+    "MOSHI:T18:r08",
+    "MOSHI:T18:r10",
+    "MOSHI:T18:r09",
+    "MOSHI:T18:r02",
+    "MOSHI:T18:r01"
+   ],
+   "tokens": 1560,
+   "rerank_ms": 610.6,
+   "total_ms": 610.6,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q26",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "HNET:3.2:c066",
+    "HNET:3.1:c051",
+    "HNET:3.2:c061",
+    "HNET:1:c010",
+    "HNET:3.1:c053",
+    "HNET:E.2:c114",
+    "HNET:abstract:c001"
+   ],
+   "tokens": 1387,
+   "rerank_ms": 698.7,
+   "total_ms": 698.7,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q27",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:5.2:c026",
+    "HNET:E.2:c114",
+    "HNET:3.1:c051",
+    "HNET:3.1:c053",
+    "HNET:3:c043",
+    "HNET:3.1:c050",
+    "HNET:T2:r15"
+   ],
+   "tokens": 1521,
+   "rerank_ms": 721.0,
+   "total_ms": 721.0,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q28",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "HNET:F:c125",
+    "HNET:3.2:c065",
+    "HNET:3.1:c051",
+    "HNET:3.3:c074",
+    "HNET:3:c043",
+    "HNET:3.3:c067",
+    "HNET:3.1:c049",
+    "HNET:3.2:c061"
+   ],
+   "tokens": 1536,
+   "rerank_ms": 683.2,
+   "total_ms": 683.3,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q29",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "HNET:3.3:c078",
+    "HNET:2.1.2:c021",
+    "HNET:4:c080",
+    "HNET:3.2:c061",
+    "HNET:abstract:c002",
+    "HNET:2.3:c036",
+    "HNET:3:c043",
+    "HNET:3.2:c065"
+   ],
+   "tokens": 1098,
+   "rerank_ms": 686.0,
+   "total_ms": 686.0,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q30",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "HNET:3:c047",
+    "HNET:2.1.1:c015",
+    "HNET:2.2.2:c025",
+    "HNET:1:c012",
+    "HNET:A.1.4:c098",
+    "HNET:A.1.2:c092",
+    "HNET:A.1.3:c094"
+   ],
+   "tokens": 1506,
+   "rerank_ms": 726.7,
+   "total_ms": 726.7,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t01",
+   "answerable": true,
+   "category": "symbol_cell",
+   "final": [
+    "HNET:T6:r01",
+    "HNET:T6:r03",
+    "HNET:T6:r02",
+    "HNET:A:c089",
+    "HNET:A.2:c100",
+    "HNET:2.1.2:c020"
+   ],
+   "tokens": 1409,
+   "rerank_ms": 772.5,
+   "total_ms": 772.5,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t02",
+   "answerable": true,
+   "category": "row_column_symbol",
+   "final": [
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:3.1:c049",
+    "HNET:2:c013",
+    "HNET:3:c043",
+    "HNET:1:c007"
+   ],
+   "tokens": 1516,
+   "rerank_ms": 727.1,
+   "total_ms": 727.2,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t03",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "HNET:T6:r02",
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:2.1.1:c014",
+    "HNET:1:c006",
+    "HNET:1:c010",
+    "HNET:4:c080"
+   ],
+   "tokens": 1552,
+   "rerank_ms": 707.1,
+   "total_ms": 707.2,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    2,
+    2,
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t04",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:4:c083",
+    "HNET:2.1.2:c020",
+    "HNET:T7:r01"
+   ],
+   "tokens": 1454,
+   "rerank_ms": 707.3,
+   "total_ms": 707.3,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t05",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:5.1:c070",
+    "MOSHI:A:c127"
+   ],
+   "tokens": 1394,
+   "rerank_ms": 807.6,
+   "total_ms": 807.6,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t06",
+   "answerable": true,
+   "category": "blank_cell",
+   "final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r01",
+    "MOSHI:5.1:c070",
+    "MOSHI:T4:r04"
+   ],
+   "tokens": 1514,
+   "rerank_ms": 754.2,
+   "total_ms": 754.2,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t07",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:5.1:c070",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:A:c127"
+   ],
+   "tokens": 1394,
+   "rerank_ms": 727.4,
+   "total_ms": 727.5,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t08",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T1:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r02",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:A:c127"
+   ],
+   "tokens": 1512,
+   "rerank_ms": 701.3,
+   "total_ms": 701.3,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t09",
+   "answerable": true,
+   "category": "row_column_value",
+   "final": [
+    "MOSHI:5.1:c071",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r01",
+    "MOSHI:5.2:c076",
+    "MOSHI:5.8:c103"
+   ],
+   "tokens": 1493,
+   "rerank_ms": 734.2,
+   "total_ms": 734.3,
+   "expansion": [
+    "f_s",
+    "f_r"
+   ],
+   "expanded_query": "In the Moshi paper's audio quality evaluation table of neural audio codecs, what frame rate and bitrate are listed for SemantiCodec? [f_s; f_r]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t10",
+   "answerable": true,
+   "category": "symbol_column",
+   "final": [
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r03",
+    "MOSHI:E:c147",
+    "MOSHI:5.2:c076",
+    "MOSHI:6.4:c117",
+    "MOSHI:5.8:c103",
+    "MOSHI:5.8:c100"
+   ],
+   "tokens": 1535,
+   "rerank_ms": 677.0,
+   "total_ms": 677.0,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    2,
+    1,
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t11",
+   "answerable": true,
+   "category": "blank_cell",
+   "final": [
+    "MOSHI:T4:r01",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r04",
+    "MOSHI:5.2:c076",
+    "MOSHI:T4:r02",
+    "MOSHI:5.1:c071",
+    "MOSHI:5.2:c074",
+    "MOSHI:E:c147"
+   ],
+   "tokens": 1597,
+   "rerank_ms": 648.6,
+   "total_ms": 648.6,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t12",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:5.2:c076",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r01",
+    "MOSHI:5.1:c071",
+    "MOSHI:T15:r02",
+    "MOSHI:5.2:c073"
+   ],
+   "tokens": 1559,
+   "rerank_ms": 698.5,
+   "total_ms": 698.5,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t13",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.2:c079",
+    "MOSHI:3.4.2:c044"
+   ],
+   "tokens": 1509,
+   "rerank_ms": 784.7,
+   "total_ms": 784.7,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t14",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.3:c083"
+   ],
+   "tokens": 1459,
+   "rerank_ms": 750.5,
+   "total_ms": 750.5,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t15",
+   "answerable": true,
+   "category": "supported_comparison",
+   "final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.2:c079",
+    "MOSHI:3.4.2:c044"
+   ],
+   "tokens": 1509,
+   "rerank_ms": 736.1,
+   "total_ms": 736.1,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    1,
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t16",
+   "answerable": false,
+   "category": "unsupported_comparison",
+   "final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.3:c083"
+   ],
+   "tokens": 1459,
+   "rerank_ms": 647.5,
+   "total_ms": 647.6,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t17",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T6:r01",
+    "MOSHI:T6:r02",
+    "MOSHI:T6:r03",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c083"
+   ],
+   "tokens": 1508,
+   "rerank_ms": 746.1,
+   "total_ms": 746.1,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.3333,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    3
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t18",
+   "answerable": true,
+   "category": "blank_cell",
+   "final": [
+    "MOSHI:T6:r02",
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r01",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.3:c083",
+    "MOSHI:5.3:c080"
+   ],
+   "tokens": 1508,
+   "rerank_ms": 715.9,
+   "total_ms": 715.9,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t19",
+   "answerable": true,
+   "category": "symbol_cell",
+   "final": [
+    "MOSHI:T6:r01",
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r02",
+    "MOSHI:5.3:c083",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c080"
+   ],
+   "tokens": 1508,
+   "rerank_ms": 796.0,
+   "total_ms": 796.1,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t20",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T6:r01",
+    "MOSHI:T6:r02",
+    "MOSHI:T6:r03",
+    "MOSHI:5.3:c082",
+    "MOSHI:T11:r02",
+    "MOSHI:T11:r01",
+    "MOSHI:5.3:c083"
+   ],
+   "tokens": 1509,
+   "rerank_ms": 678.2,
+   "total_ms": 678.2,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t21",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02",
+    "MOSHI:6.2:c113",
+    "MOSHI:6.2:c114",
+    "MOSHI:5.4:c087",
+    "MOSHI:5.4:c086",
+    "MOSHI:4.4:c062"
+   ],
+   "tokens": 1593,
+   "rerank_ms": 692.1,
+   "total_ms": 692.1,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t22",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r01",
+    "MOSHI:4.4:c065",
+    "MOSHI:T18:r13",
+    "MOSHI:T18:r16",
+    "MOSHI:T18:r01"
+   ],
+   "tokens": 1481,
+   "rerank_ms": 722.6,
+   "total_ms": 722.7,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t23",
+   "answerable": true,
+   "category": "supported_comparison",
+   "final": [
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r01",
+    "MOSHI:6.2:c113",
+    "MOSHI:5.2:c076",
+    "MOSHI:6.2:c114",
+    "MOSHI:E:c147",
+    "MOSHI:4.4:c062"
+   ],
+   "tokens": 1452,
+   "rerank_ms": 717.5,
+   "total_ms": 717.5,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    2,
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t24",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r01",
+    "MOSHI:6.2:c113",
+    "MOSHI:6.2:c114",
+    "MOSHI:5.7:c096",
+    "MOSHI:5.4:c086",
+    "MOSHI:T7:r06"
+   ],
+   "tokens": 1422,
+   "rerank_ms": 696.8,
+   "total_ms": 696.8,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t25",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r01"
+   ],
+   "tokens": 1579,
+   "rerank_ms": 728.3,
+   "total_ms": 728.3,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.25,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    4
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t26",
+   "answerable": true,
+   "category": "row_column_value",
+   "final": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r06"
+   ],
+   "tokens": 1579,
+   "rerank_ms": 693.7,
+   "total_ms": 693.7,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t27",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r03"
+   ],
+   "tokens": 1579,
+   "rerank_ms": 667.5,
+   "total_ms": 667.5,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t28",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r05"
+   ],
+   "tokens": 1579,
+   "rerank_ms": 685.5,
+   "total_ms": 685.5,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 0.5,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    1,
+    6
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t29",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r03",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:A:c127",
+    "MOSHI:5.1:c070"
+   ],
+   "tokens": 1394,
+   "rerank_ms": 777.6,
+   "total_ms": 777.6,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t30",
+   "answerable": true,
+   "category": "symbol_column",
+   "final": [
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:A:c127",
+    "MOSHI:5.1:c070"
+   ],
+   "tokens": 1394,
+   "rerank_ms": 747.7,
+   "total_ms": 747.8,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.3333,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    3
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t31",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:5.2:c076",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r01"
+   ],
+   "tokens": 1437,
+   "rerank_ms": 739.1,
+   "total_ms": 739.1,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t32",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:A:c127",
+    "MOSHI:5.1:c070"
+   ],
+   "tokens": 1394,
+   "rerank_ms": 789.8,
+   "total_ms": 789.8,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n01",
+   "answerable": true,
+   "category": "symbolic_header",
+   "final": [
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r08",
+    "AIAYN:T3:r04"
+   ],
+   "tokens": 1585,
+   "rerank_ms": 773.5,
+   "total_ms": 773.5,
+   "expansion": [
+    "h = 4"
+   ],
+   "expanded_query": "In the Transformer paper's table of model variations, what development BLEU and perplexity does the variant with 4 attention heads get? [h = 4]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.2,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    5
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n02",
+   "answerable": true,
+   "category": "symbolic_header",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r09"
+   ],
+   "tokens": 1481,
+   "rerank_ms": 768.7,
+   "total_ms": 768.7,
+   "expansion": [
+    "d_k = 16"
+   ],
+   "expanded_query": "In the Transformer paper's model variations, what development BLEU does the (B) variant that only reduces the attention key dimension to 16 obtain? [d_k = 16]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n03",
+   "answerable": true,
+   "category": "symbolic_header",
+   "final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r08"
+   ],
+   "tokens": 1552,
+   "rerank_ms": 718.6,
+   "total_ms": 718.7,
+   "expansion": [
+    "d_ff = 4096"
+   ],
+   "expanded_query": "Which development BLEU does the Transformer variant whose inner-layer dimensionality is 4096 reach in the model variation experiments? [d_ff = 4096]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.3333,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    3
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n04",
+   "answerable": true,
+   "category": "symbolic_header",
+   "final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r08"
+   ],
+   "tokens": 1548,
+   "rerank_ms": 695.0,
+   "total_ms": 695.1,
+   "expansion": [
+    "P_drop = 0.0"
+   ],
+   "expanded_query": "In the Transformer model variations, what development BLEU and perplexity result from a dropout rate of 0.0? [P_drop = 0.0]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.3333,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    3
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n05",
+   "answerable": true,
+   "category": "symbolic_header",
+   "final": [
+    "AIAYN:5.4:c028",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r03"
+   ],
+   "tokens": 1513,
+   "rerank_ms": 715.1,
+   "total_ms": 715.1,
+   "expansion": [
+    "ε_ls = 0.2"
+   ],
+   "expanded_query": "What development BLEU does the Transformer get with label smoothing of 0.2 in the variation experiments? [ε_ls = 0.2]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n06",
+   "answerable": true,
+   "category": "symbolic_header_multi_value",
+   "final": [
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r08",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02"
+   ],
+   "tokens": 1397,
+   "rerank_ms": 719.9,
+   "total_ms": 719.9,
+   "expansion": [
+    "N = 2"
+   ],
+   "expanded_query": "In the Transformer variation experiments, what perplexity and BLEU does a model with a stack of only 2 identical layers get? [N = 2]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n07",
+   "answerable": true,
+   "category": "symbolic_header_multi_row",
+   "final": [
+    "MOSHI:5.1:c071",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r01",
+    "MOSHI:5.2:c076",
+    "MOSHI:5.2:c074"
+   ],
+   "tokens": 1483,
+   "rerank_ms": 730.5,
+   "total_ms": 730.5,
+   "expansion": [
+    "f_r"
+   ],
+   "expanded_query": "In the Moshi paper's audio quality evaluation, at what codec frame rate do the two SpeechTokenizer configurations run? [f_r]",
+   "units": 2,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    3,
+    2
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n08",
+   "answerable": true,
+   "category": "similar_metrics",
+   "final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r01"
+   ],
+   "tokens": 1577,
+   "rerank_ms": 665.8,
+   "total_ms": 665.8,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n09",
+   "answerable": true,
+   "category": "caption_required",
+   "final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r06"
+   ],
+   "tokens": 1577,
+   "rerank_ms": 676.6,
+   "total_ms": 676.6,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n10",
+   "answerable": true,
+   "category": "prose_and_table",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03"
+   ],
+   "tokens": 1500,
+   "rerank_ms": 681.9,
+   "total_ms": 682.0,
+   "expansion": [
+    "h"
+   ],
+   "expanded_query": "How many attention heads does the base Transformer use, and what development BLEU does the base configuration reach in the variation table? [h]",
+   "units": 2,
+   "recall@5": 0.5,
+   "recall@8": 0.5,
+   "mrr": 0.25,
+   "coverage": 0.5,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    4,
+    13
+   ],
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n11",
+   "answerable": false,
+   "category": "misleading_premise",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04"
+   ],
+   "tokens": 1500,
+   "rerank_ms": 700.2,
+   "total_ms": 700.3,
+   "expansion": [
+    "h = 64"
+   ],
+   "expanded_query": "In Table 3 of the Transformer paper, what development BLEU does the variant with 64 attention heads achieve? [h = 64]",
+   "table_in_context": true,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n12",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r09"
+   ],
+   "tokens": 1577,
+   "rerank_ms": 660.0,
+   "total_ms": 660.0,
+   "expansion": [
+    "N = 12"
+   ],
+   "expanded_query": "What test-set BLEU does the Transformer variant with 12 identical layers get in the model variation table? [N = 12]",
+   "table_in_context": true,
+   "corpus": "c3"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q01",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "AIAYN:1:c002",
+    "AIAYN:1:c003",
+    "AIAYN:abstract:c001",
+    "AIAYN:6.3:c033",
+    "HNET:1:c010",
+    "MOSHI:6.2:c111",
+    "HNET:4:c081",
+    "HNET:1:c004"
+   ],
+   "tokens": 1548,
+   "rerank_ms": 751.0,
+   "total_ms": 751.0,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q02",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c014",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.2.1:c011",
+    "HNET:B:c107",
+    "AIAYN:AttentionVisualizations:c037"
+   ],
+   "tokens": 1541,
+   "rerank_ms": 813.5,
+   "total_ms": 813.5,
+   "expansion": [
+    "h",
+    "d_k",
+    "d_v"
+   ],
+   "expanded_query": "How many attention heads does the base Transformer use, and what key and value dimension does each head get? [h; d_k; d_v]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q03",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "MOSHI:5.5:c091",
+    "MOSHI:abstract:c002",
+    "MOSHI:1:c007",
+    "MOSHI:2:c015",
+    "MOSHI:2:c013",
+    "MOSHI:5.3:c083",
+    "MOSHI:7:c126"
+   ],
+   "tokens": 1346,
+   "rerank_ms": 698.2,
+   "total_ms": 698.2,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 0.5,
+   "recall@8": 0.5,
+   "mrr": 0.3333,
+   "coverage": 0.5,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    3,
+    null
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q04",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "MOSHI:3.3.1:c030",
+    "MOSHI:3.3.1:c028",
+    "MOSHI:3.3.1:c029",
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06",
+    "MOSHI:5.1:c071"
+   ],
+   "tokens": 1526,
+   "rerank_ms": 663.8,
+   "total_ms": 663.8,
+   "expansion": [
+    "f_r"
+   ],
+   "expanded_query": "What frame rate, number of quantizers, codebook size and bitrate does the Mimi codec use? [f_r]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q05",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "HNET:1:c007",
+    "HNET:2.1.1:c015",
+    "HNET:1:c012",
+    "HNET:2.2.1:c023",
+    "HNET:3.1:c052",
+    "HNET:E:c112",
+    "HNET:2.2.2:c029"
+   ],
+   "tokens": 1510,
+   "rerank_ms": 736.3,
+   "total_ms": 736.4,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 0.5,
+   "recall@8": 0.5,
+   "mrr": 0.25,
+   "coverage": 0.5,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    4,
+    null
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q06",
+   "answerable": true,
+   "category": "direct",
+   "final": [
+    "HNET:A:c088",
+    "HNET:A.1:c090",
+    "HNET:3:c047",
+    "HNET:A.1.3:c094",
+    "HNET:1:c009",
+    "HNET:A.3:c103",
+    "HNET:4:c080",
+    "HNET:A.3:c105"
+   ],
+   "tokens": 1520,
+   "rerank_ms": 731.6,
+   "total_ms": 731.6,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 0.0,
+   "recall@8": 0.0,
+   "mrr": 0.0909,
+   "coverage": 0.0,
+   "all_gold": false,
+   "retained": 0,
+   "in_top": 0,
+   "gold_ranks": [
+    null,
+    11
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q07",
+   "answerable": true,
+   "category": "multi_section",
+   "final": [
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3:c006",
+    "AIAYN:3.1:c009",
+    "AIAYN:3.3:c017",
+    "HNET:2.1.2:c017",
+    "HNET:3.3:c069",
+    "AIAYN:abstract:c001"
+   ],
+   "tokens": 1412,
+   "rerank_ms": 759.8,
+   "total_ms": 759.9,
+   "expansion": [
+    "d_k"
+   ],
+   "expanded_query": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from? [d_k]",
+   "units": 3,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    3,
+    3,
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q08",
+   "answerable": true,
+   "category": "multi_section",
+   "final": [
+    "AIAYN:3.5:c019",
+    "AIAYN:3.5:c020",
+    "AIAYN:T3:r08",
+    "AIAYN:6.2:c031",
+    "AIAYN:3.4:c018",
+    "AIAYN:5.4:c028",
+    "MOSHI:3.2.1:c019"
+   ],
+   "tokens": 1341,
+   "rerank_ms": 696.1,
+   "total_ms": 696.2,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    2,
+    2,
+    4
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q09",
+   "answerable": true,
+   "category": "multi_section",
+   "final": [
+    "MOSHI:1:c005",
+    "MOSHI:abstract:c002",
+    "MOSHI:5.3:c083",
+    "MOSHI:7:c125",
+    "MOSHI:1:c004",
+    "MOSHI:abstract:c001",
+    "MOSHI:5.4:c088"
+   ],
+   "tokens": 1532,
+   "rerank_ms": 716.9,
+   "total_ms": 716.9,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 4,
+   "recall@5": 0.75,
+   "recall@8": 0.75,
+   "mrr": 1.0,
+   "coverage": 0.75,
+   "all_gold": false,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    9,
+    3,
+    2,
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q10",
+   "answerable": true,
+   "category": "multi_section",
+   "final": [
+    "HNET:T6:r05",
+    "HNET:T6:r02",
+    "HNET:T6:r01",
+    "HNET:T6:r04",
+    "HNET:T6:r03",
+    "HNET:1:c012",
+    "HNET:3.1:c049"
+   ],
+   "tokens": 1453,
+   "rerank_ms": 666.8,
+   "total_ms": 666.8,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 0.0,
+   "recall@8": 0.0,
+   "mrr": 0.1,
+   "coverage": 0.0,
+   "all_gold": false,
+   "retained": 0,
+   "in_top": 0,
+   "gold_ranks": [
+    null,
+    10,
+    null
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q11",
+   "answerable": true,
+   "category": "numerical_table",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04"
+   ],
+   "tokens": 1599,
+   "rerank_ms": 732.4,
+   "total_ms": 732.5,
+   "expansion": [
+    "h = 1"
+   ],
+   "expanded_query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get? [h = 1]",
+   "units": 2,
+   "recall@5": 0.0,
+   "recall@8": 0.5,
+   "mrr": 0.1667,
+   "coverage": 0.5,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    6,
+    9
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q12",
+   "answerable": true,
+   "category": "numerical_table",
+   "final": [
+    "MOSHI:T8:r02",
+    "MOSHI:5.5:c090",
+    "MOSHI:5.4:c089",
+    "MOSHI:5.5:c091",
+    "MOSHI:5.5:c092",
+    "MOSHI:T8:r01",
+    "MOSHI:4.3:c061",
+    "MOSHI:1:c008"
+   ],
+   "tokens": 1434,
+   "rerank_ms": 687.2,
+   "total_ms": 687.2,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 0.5,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    6,
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q13",
+   "answerable": true,
+   "category": "numerical_table",
+   "final": [
+    "HNET:T2:r10",
+    "HNET:T2:r09",
+    "HNET:T2:r08",
+    "HNET:T2:r07",
+    "HNET:T2:r15",
+    "HNET:T2:r01",
+    "HNET:T2:r11"
+   ],
+   "tokens": 1578,
+   "rerank_ms": 761.4,
+   "total_ms": 761.4,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 0.3333333333333333,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    1,
+    6,
+    8
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q14",
+   "answerable": true,
+   "category": "cross_paper",
+   "final": [
+    "AIAYN:6.3:c032",
+    "HNET:3.2:c061",
+    "AIAYN:1:c003",
+    "HNET:3.1:c053",
+    "HNET:2.1.2:c019",
+    "HNET:F:c125",
+    "HNET:2.1.2:c020",
+    "HNET:abstract:c001"
+   ],
+   "tokens": 1527,
+   "rerank_ms": 723.5,
+   "total_ms": 723.5,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 0.0,
+   "recall@8": 0.0,
+   "mrr": 0.0,
+   "coverage": 0.0,
+   "all_gold": false,
+   "retained": 0,
+   "in_top": 0,
+   "gold_ranks": [
+    null,
+    null,
+    null
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q15",
+   "answerable": true,
+   "category": "cross_paper",
+   "final": [
+    "AIAYN:5.2:c026",
+    "MOSHI:4.4:c062",
+    "AIAYN:1:c003",
+    "MOSHI:3.1:c017",
+    "MOSHI:3.4.1:c040",
+    "MOSHI:4.4:c064",
+    "AIAYN:6.1:c029",
+    "MOSHI:3.1:c016"
+   ],
+   "tokens": 1599,
+   "rerank_ms": 672.1,
+   "total_ms": 672.2,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    3,
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q16",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:T2:r05",
+    "AIAYN:6.1:c029",
+    "AIAYN:T2:r02",
+    "AIAYN:T2:r04",
+    "AIAYN:T2:r03",
+    "AIAYN:T2:r01",
+    "AIAYN:T3:r09"
+   ],
+   "tokens": 1403,
+   "rerank_ms": 687.3,
+   "total_ms": 687.4,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q17",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:6.1:c029",
+    "AIAYN:abstract:c001",
+    "AIAYN:T2:r03",
+    "AIAYN:T2:r05",
+    "AIAYN:T2:r01",
+    "AIAYN:T2:r04",
+    "AIAYN:T2:r02"
+   ],
+   "tokens": 1451,
+   "rerank_ms": 702.7,
+   "total_ms": 702.7,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q18",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:1:c003",
+    "AIAYN:6.1:c029",
+    "AIAYN:6.1:c030",
+    "AIAYN:5.2:c026",
+    "AIAYN:6.3:c032",
+    "AIAYN:6.3:c033",
+    "MOSHI:3.4.1:c035",
+    "HNET:2.4:c040"
+   ],
+   "tokens": 1437,
+   "rerank_ms": 710.1,
+   "total_ms": 710.1,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q19",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:3.2.2:c013",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.2:c015",
+    "AIAYN:7:c034",
+    "AIAYN:3.1:c008",
+    "AIAYN:2:c004",
+    "AIAYN:3.2.2:c014"
+   ],
+   "tokens": 1536,
+   "rerank_ms": 773.4,
+   "total_ms": 773.5,
+   "expansion": [
+    "h"
+   ],
+   "expanded_query": "Which file in the tensor2tensor repository implements multi-head attention? [h]",
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q20",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:5.8:c103",
+    "AIAYN:1:c003",
+    "AIAYN:T4:r01",
+    "HNET:3.3:c070",
+    "AIAYN:6.1:c029",
+    "HNET:E.3:c115",
+    "AIAYN:T4:r02",
+    "AIAYN:6.3:c033"
+   ],
+   "tokens": 1448,
+   "rerank_ms": 685.6,
+   "total_ms": 685.6,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q21",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:4.4:c062",
+    "AIAYN:5.2:c026",
+    "MOSHI:6.1:c110",
+    "MOSHI:3.2.1:c020",
+    "MOSHI:4.4:c064",
+    "AIAYN:6.1:c030",
+    "AIAYN:1:c003",
+    "MOSHI:T1:r06"
+   ],
+   "tokens": 1542,
+   "rerank_ms": 636.9,
+   "total_ms": 636.9,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q22",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:3.1:c016",
+    "MOSHI:7:c125",
+    "MOSHI:abstract:c001",
+    "MOSHI:1:c007",
+    "MOSHI:2:c015",
+    "MOSHI:2:c013"
+   ],
+   "tokens": 1416,
+   "rerank_ms": 696.3,
+   "total_ms": 696.3,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q23",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T18:r17",
+    "MOSHI:6.1:c110",
+    "MOSHI:6.1:c109",
+    "MOSHI:5.5:c090",
+    "MOSHI:5.5:c092",
+    "MOSHI:5.4:c085",
+    "MOSHI:5.8:c103"
+   ],
+   "tokens": 1441,
+   "rerank_ms": 627.4,
+   "total_ms": 627.4,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q24",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:5.5:c091",
+    "MOSHI:abstract:c001",
+    "MOSHI:2:c015",
+    "MOSHI:5.4:c088",
+    "MOSHI:5.8:c103",
+    "MOSHI:3.1:c016",
+    "MOSHI:abstract:c002",
+    "MOSHI:5.4:c087"
+   ],
+   "tokens": 1577,
+   "rerank_ms": 614.6,
+   "total_ms": 614.7,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q25",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T18:r03",
+    "MOSHI:T18:r08",
+    "MOSHI:T18:r10",
+    "MOSHI:T18:r09",
+    "MOSHI:T18:r02",
+    "MOSHI:T18:r01"
+   ],
+   "tokens": 1560,
+   "rerank_ms": 638.0,
+   "total_ms": 638.1,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q26",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "HNET:3.2:c066",
+    "HNET:3.1:c051",
+    "HNET:3.2:c061",
+    "HNET:1:c010",
+    "HNET:3.1:c053",
+    "HNET:E.2:c114",
+    "HNET:abstract:c001"
+   ],
+   "tokens": 1387,
+   "rerank_ms": 705.9,
+   "total_ms": 705.9,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q27",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:5.2:c026",
+    "HNET:E.2:c114",
+    "HNET:3.1:c051",
+    "HNET:3.1:c053",
+    "HNET:3:c043",
+    "HNET:3.1:c050",
+    "HNET:T2:r15"
+   ],
+   "tokens": 1521,
+   "rerank_ms": 705.0,
+   "total_ms": 705.0,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q28",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "HNET:F:c125",
+    "HNET:3.2:c065",
+    "HNET:3.1:c051",
+    "HNET:3.3:c074",
+    "HNET:3:c043",
+    "HNET:3.3:c067",
+    "HNET:3.1:c049",
+    "HNET:3.2:c061"
+   ],
+   "tokens": 1536,
+   "rerank_ms": 717.0,
+   "total_ms": 717.0,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q29",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "HNET:3.3:c078",
+    "HNET:2.1.2:c021",
+    "HNET:4:c080",
+    "HNET:3.2:c061",
+    "HNET:abstract:c002",
+    "HNET:2.3:c036",
+    "HNET:3:c043",
+    "HNET:3.2:c065"
+   ],
+   "tokens": 1098,
+   "rerank_ms": 693.8,
+   "total_ms": 693.9,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "original",
+   "question_id": "q30",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "HNET:3:c047",
+    "HNET:2.1.1:c015",
+    "HNET:2.2.2:c025",
+    "HNET:1:c012",
+    "HNET:A.1.4:c098",
+    "HNET:A.1.2:c092",
+    "HNET:A.1.3:c094"
+   ],
+   "tokens": 1506,
+   "rerank_ms": 737.6,
+   "total_ms": 737.7,
+   "expansion": [],
+   "expanded_query": null,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t01",
+   "answerable": true,
+   "category": "symbol_cell",
+   "final": [
+    "HNET:T6:r05",
+    "HNET:T6:r04",
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:A:c089",
+    "HNET:2.1.2:c020"
+   ],
+   "tokens": 1506,
+   "rerank_ms": 753.9,
+   "total_ms": 753.9,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.25,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    4
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t02",
+   "answerable": true,
+   "category": "row_column_symbol",
+   "final": [
+    "HNET:T6:r05",
+    "HNET:T6:r04",
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:3.1:c049",
+    "HNET:2:c013"
+   ],
+   "tokens": 1429,
+   "rerank_ms": 735.0,
+   "total_ms": 735.0,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t03",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "HNET:T6:r05",
+    "HNET:T6:r04",
+    "HNET:T6:r03",
+    "HNET:T6:r02",
+    "HNET:T6:r01",
+    "HNET:2.1.1:c014",
+    "HNET:1:c010"
+   ],
+   "tokens": 1485,
+   "rerank_ms": 735.5,
+   "total_ms": 735.6,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 3,
+   "in_top": 3,
+   "gold_ranks": [
+    2,
+    2,
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t04",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "HNET:T6:r04",
+    "HNET:T6:r05",
+    "HNET:T6:r03",
+    "HNET:T6:r02",
+    "HNET:T6:r01",
+    "HNET:4:c083",
+    "HNET:2.1.2:c020"
+   ],
+   "tokens": 1590,
+   "rerank_ms": 714.3,
+   "total_ms": 714.4,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t05",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r03",
+    "MOSHI:T3:r02",
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06"
+   ],
+   "tokens": 1398,
+   "rerank_ms": 771.7,
+   "total_ms": 771.7,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t06",
+   "answerable": true,
+   "category": "blank_cell",
+   "final": [
+    "MOSHI:T3:r03",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r03"
+   ],
+   "tokens": 1403,
+   "rerank_ms": 727.9,
+   "total_ms": 727.9,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t07",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r03",
+    "MOSHI:T3:r02",
+    "MOSHI:5.1:c070",
+    "MOSHI:T17:r04",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r07"
+   ],
+   "tokens": 1523,
+   "rerank_ms": 715.0,
+   "total_ms": 715.0,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t08",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T1:r02",
+    "MOSHI:A:c127",
+    "MOSHI:T3:r03",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01"
+   ],
+   "tokens": 1544,
+   "rerank_ms": 692.6,
+   "total_ms": 692.6,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t09",
+   "answerable": true,
+   "category": "row_column_value",
+   "final": [
+    "MOSHI:5.1:c071",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r04",
+    "MOSHI:5.2:c076",
+    "MOSHI:T4:r01",
+    "MOSHI:5.8:c103"
+   ],
+   "tokens": 1525,
+   "rerank_ms": 773.8,
+   "total_ms": 773.9,
+   "expansion": [
+    "f_s",
+    "f_r"
+   ],
+   "expanded_query": "In the Moshi paper's audio quality evaluation table of neural audio codecs, what frame rate and bitrate are listed for SemantiCodec? [f_s; f_r]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t10",
+   "answerable": true,
+   "category": "symbol_column",
+   "final": [
+    "MOSHI:E:c147",
+    "MOSHI:5.2:c076",
+    "MOSHI:6.4:c117",
+    "MOSHI:5.8:c103",
+    "MOSHI:6.1:c109",
+    "MOSHI:5.8:c107",
+    "MOSHI:5.4:c088",
+    "MOSHI:T18:r16"
+   ],
+   "tokens": 1588,
+   "rerank_ms": 647.3,
+   "total_ms": 647.3,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 3,
+   "recall@5": 0.0,
+   "recall@8": 0.0,
+   "mrr": 0.0,
+   "coverage": 0.0,
+   "all_gold": false,
+   "retained": 0,
+   "in_top": 0,
+   "gold_ranks": [
+    null,
+    null,
+    null
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t11",
+   "answerable": true,
+   "category": "blank_cell",
+   "final": [
+    "MOSHI:T4:r01",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r02",
+    "MOSHI:5.2:c076",
+    "MOSHI:5.1:c071",
+    "MOSHI:5.2:c074"
+   ],
+   "tokens": 1515,
+   "rerank_ms": 643.1,
+   "total_ms": 643.2,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t12",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:5.2:c076",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r01",
+    "MOSHI:5.1:c071",
+    "MOSHI:T15:r02",
+    "MOSHI:5.2:c073"
+   ],
+   "tokens": 1591,
+   "rerank_ms": 697.8,
+   "total_ms": 697.8,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t13",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.2:c079",
+    "MOSHI:3.4.2:c044"
+   ],
+   "tokens": 1539,
+   "rerank_ms": 792.9,
+   "total_ms": 792.9,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t14",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.3:c083"
+   ],
+   "tokens": 1489,
+   "rerank_ms": 761.6,
+   "total_ms": 761.7,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t15",
+   "answerable": true,
+   "category": "supported_comparison",
+   "final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.2:c079",
+    "MOSHI:3.4.2:c044"
+   ],
+   "tokens": 1539,
+   "rerank_ms": 787.2,
+   "total_ms": 787.2,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    1,
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t16",
+   "answerable": false,
+   "category": "unsupported_comparison",
+   "final": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.3:c083"
+   ],
+   "tokens": 1489,
+   "rerank_ms": 665.1,
+   "total_ms": 665.1,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t17",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T6:r02",
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r01",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c083"
+   ],
+   "tokens": 1510,
+   "rerank_ms": 761.6,
+   "total_ms": 761.7,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t18",
+   "answerable": true,
+   "category": "blank_cell",
+   "final": [
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r02",
+    "MOSHI:T6:r01",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.3:c083",
+    "MOSHI:5.3:c080"
+   ],
+   "tokens": 1510,
+   "rerank_ms": 732.6,
+   "total_ms": 732.6,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t19",
+   "answerable": true,
+   "category": "symbol_cell",
+   "final": [
+    "MOSHI:T6:r01",
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r02",
+    "MOSHI:5.3:c083",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c079",
+    "MOSHI:5.3:c080"
+   ],
+   "tokens": 1510,
+   "rerank_ms": 781.3,
+   "total_ms": 781.4,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t20",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T6:r02",
+    "MOSHI:5.3:c082",
+    "MOSHI:T11:r02",
+    "MOSHI:T6:r03",
+    "MOSHI:T6:r01",
+    "MOSHI:T11:r01",
+    "MOSHI:5.3:c083"
+   ],
+   "tokens": 1511,
+   "rerank_ms": 715.1,
+   "total_ms": 715.1,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t21",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r03",
+    "MOSHI:6.2:c113",
+    "MOSHI:6.2:c114",
+    "MOSHI:5.4:c087",
+    "MOSHI:5.4:c086"
+   ],
+   "tokens": 1470,
+   "rerank_ms": 698.4,
+   "total_ms": 698.4,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t22",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r03",
+    "MOSHI:T13:r01",
+    "MOSHI:4.4:c065",
+    "MOSHI:E:c147",
+    "MOSHI:T18:r13",
+    "MOSHI:T18:r16"
+   ],
+   "tokens": 1492,
+   "rerank_ms": 709.3,
+   "total_ms": 709.3,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t23",
+   "answerable": true,
+   "category": "supported_comparison",
+   "final": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r03",
+    "MOSHI:6.2:c113",
+    "MOSHI:6.2:c114",
+    "MOSHI:E:c147",
+    "MOSHI:4.4:c062",
+    "MOSHI:C:c135"
+   ],
+   "tokens": 1513,
+   "rerank_ms": 738.3,
+   "total_ms": 738.3,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    1,
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t24",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r03",
+    "MOSHI:6.2:c113",
+    "MOSHI:6.2:c114",
+    "MOSHI:5.7:c096",
+    "MOSHI:5.4:c086",
+    "MOSHI:T7:r06"
+   ],
+   "tokens": 1579,
+   "rerank_ms": 664.9,
+   "total_ms": 664.9,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t25",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r08",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r07",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r02"
+   ],
+   "tokens": 1522,
+   "rerank_ms": 669.7,
+   "total_ms": 669.7,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.3333,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    3
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t26",
+   "answerable": true,
+   "category": "row_column_value",
+   "final": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r07",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r08",
+    "MOSHI:T16:r03"
+   ],
+   "tokens": 1521,
+   "rerank_ms": 700.6,
+   "total_ms": 700.6,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t27",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T16:r07",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r08",
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r04"
+   ],
+   "tokens": 1522,
+   "rerank_ms": 688.4,
+   "total_ms": 688.5,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t28",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r07",
+    "MOSHI:T16:r08",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r03"
+   ],
+   "tokens": 1521,
+   "rerank_ms": 670.9,
+   "total_ms": 670.9,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 2,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    1,
+    5
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t29",
+   "answerable": true,
+   "category": "symbol_configuration_value",
+   "final": [
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r06",
+    "MOSHI:T3:r03",
+    "MOSHI:T17:r03",
+    "MOSHI:T3:r01",
+    "MOSHI:T17:r04"
+   ],
+   "tokens": 1590,
+   "rerank_ms": 806.8,
+   "total_ms": 806.9,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 0.0,
+   "recall@8": 0.0,
+   "mrr": 0.1,
+   "coverage": 0.0,
+   "all_gold": false,
+   "retained": 0,
+   "in_top": 0,
+   "gold_ranks": [
+    10
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t30",
+   "answerable": true,
+   "category": "symbol_column",
+   "final": [
+    "MOSHI:T17:r04",
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r07"
+   ],
+   "tokens": 1511,
+   "rerank_ms": 730.0,
+   "total_ms": 730.0,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 0.0,
+   "recall@8": 1.0,
+   "mrr": 0.1667,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    6
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t31",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "MOSHI:T3:r02",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r03",
+    "MOSHI:5.2:c076",
+    "MOSHI:T17:r07",
+    "MOSHI:5.1:c070",
+    "MOSHI:T18:r17"
+   ],
+   "tokens": 1532,
+   "rerank_ms": 748.1,
+   "total_ms": 748.1,
+   "expansion": [],
+   "expanded_query": null,
+   "table_in_context": true,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "table",
+   "question_id": "t32",
+   "answerable": true,
+   "category": "distinguish_configurations",
+   "final": [
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06",
+    "MOSHI:T3:r03",
+    "MOSHI:T3:r01",
+    "MOSHI:T17:r04",
+    "MOSHI:T17:r03"
+   ],
+   "tokens": 1590,
+   "rerank_ms": 805.6,
+   "total_ms": 805.7,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 0.0,
+   "recall@8": 1.0,
+   "mrr": 0.1667,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    6
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n01",
+   "answerable": true,
+   "category": "symbolic_header",
+   "final": [
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r08",
+    "AIAYN:T3:r04"
+   ],
+   "tokens": 1585,
+   "rerank_ms": 729.9,
+   "total_ms": 730.0,
+   "expansion": [
+    "h = 4"
+   ],
+   "expanded_query": "In the Transformer paper's table of model variations, what development BLEU and perplexity does the variant with 4 attention heads get? [h = 4]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.2,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    5
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n02",
+   "answerable": true,
+   "category": "symbolic_header",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r09"
+   ],
+   "tokens": 1481,
+   "rerank_ms": 707.9,
+   "total_ms": 707.9,
+   "expansion": [
+    "d_k = 16"
+   ],
+   "expanded_query": "In the Transformer paper's model variations, what development BLEU does the (B) variant that only reduces the attention key dimension to 16 obtain? [d_k = 16]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n03",
+   "answerable": true,
+   "category": "symbolic_header",
+   "final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r08"
+   ],
+   "tokens": 1552,
+   "rerank_ms": 732.2,
+   "total_ms": 732.3,
+   "expansion": [
+    "d_ff = 4096"
+   ],
+   "expanded_query": "Which development BLEU does the Transformer variant whose inner-layer dimensionality is 4096 reach in the model variation experiments? [d_ff = 4096]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.3333,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    3
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n04",
+   "answerable": true,
+   "category": "symbolic_header",
+   "final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r08"
+   ],
+   "tokens": 1548,
+   "rerank_ms": 716.8,
+   "total_ms": 716.9,
+   "expansion": [
+    "P_drop = 0.0"
+   ],
+   "expanded_query": "In the Transformer model variations, what development BLEU and perplexity result from a dropout rate of 0.0? [P_drop = 0.0]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.3333,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    3
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n05",
+   "answerable": true,
+   "category": "symbolic_header",
+   "final": [
+    "AIAYN:5.4:c028",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r03"
+   ],
+   "tokens": 1513,
+   "rerank_ms": 716.5,
+   "total_ms": 716.5,
+   "expansion": [
+    "ε_ls = 0.2"
+   ],
+   "expanded_query": "What development BLEU does the Transformer get with label smoothing of 0.2 in the variation experiments? [ε_ls = 0.2]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    2
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n06",
+   "answerable": true,
+   "category": "symbolic_header_multi_value",
+   "final": [
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r08",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02"
+   ],
+   "tokens": 1397,
+   "rerank_ms": 710.7,
+   "total_ms": 710.8,
+   "expansion": [
+    "N = 2"
+   ],
+   "expanded_query": "In the Transformer variation experiments, what perplexity and BLEU does a model with a stack of only 2 identical layers get? [N = 2]",
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n07",
+   "answerable": true,
+   "category": "symbolic_header_multi_row",
+   "final": [
+    "MOSHI:5.1:c071",
+    "MOSHI:T4:r03",
+    "MOSHI:T4:r02",
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r01",
+    "MOSHI:5.2:c076",
+    "MOSHI:5.2:c074"
+   ],
+   "tokens": 1515,
+   "rerank_ms": 702.7,
+   "total_ms": 702.7,
+   "expansion": [
+    "f_r"
+   ],
+   "expanded_query": "In the Moshi paper's audio quality evaluation, at what codec frame rate do the two SpeechTokenizer configurations run? [f_r]",
+   "units": 2,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 0.5,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 2,
+   "in_top": 2,
+   "gold_ranks": [
+    3,
+    2
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n08",
+   "answerable": true,
+   "category": "similar_metrics",
+   "final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r01"
+   ],
+   "tokens": 1577,
+   "rerank_ms": 674.6,
+   "total_ms": 674.6,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n09",
+   "answerable": true,
+   "category": "caption_required",
+   "final": [
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r06"
+   ],
+   "tokens": 1577,
+   "rerank_ms": 683.9,
+   "total_ms": 683.9,
+   "expansion": [],
+   "expanded_query": null,
+   "units": 1,
+   "recall@5": 1.0,
+   "recall@8": 1.0,
+   "mrr": 1.0,
+   "coverage": 1.0,
+   "all_gold": true,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    1
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n10",
+   "answerable": true,
+   "category": "prose_and_table",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03"
+   ],
+   "tokens": 1500,
+   "rerank_ms": 679.2,
+   "total_ms": 679.2,
+   "expansion": [
+    "h"
+   ],
+   "expanded_query": "How many attention heads does the base Transformer use, and what development BLEU does the base configuration reach in the variation table? [h]",
+   "units": 2,
+   "recall@5": 0.5,
+   "recall@8": 0.5,
+   "mrr": 0.25,
+   "coverage": 0.5,
+   "all_gold": false,
+   "retained": 1,
+   "in_top": 1,
+   "gold_ranks": [
+    4,
+    13
+   ],
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n11",
+   "answerable": false,
+   "category": "misleading_premise",
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04"
+   ],
+   "tokens": 1500,
+   "rerank_ms": 685.3,
+   "total_ms": 685.3,
+   "expansion": [
+    "h = 64"
+   ],
+   "expanded_query": "In Table 3 of the Transformer paper, what development BLEU does the variant with 64 attention heads achieve? [h = 64]",
+   "table_in_context": true,
+   "corpus": "c6"
+  },
+  {
+   "config": "PROD-G",
+   "dataset": "new",
+   "question_id": "n12",
+   "answerable": false,
+   "category": "unanswerable",
+   "final": [
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r09"
+   ],
+   "tokens": 1577,
+   "rerank_ms": 681.0,
+   "total_ms": 681.0,
+   "expansion": [
+    "N = 12"
+   ],
+   "expanded_query": "What test-set BLEU does the Transformer variant with 12 identical layers get in the model variation table? [N = 12]",
+   "table_in_context": true,
+   "corpus": "c6"
+  }
+ ]
+}

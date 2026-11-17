@@ -1,0 +1,41 @@
+{
+ "question_id": "n10",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T12:31:45.833+00:00",
+  "t_send_ns": 193155833583600,
+  "status": 200,
+  "t_first_byte_ns": 193156198595900,
+  "t_first_content_ns": 193156369364500,
+  "t_last_ns": 193156422436000,
+  "max_gap_ms": 170.7485,
+  "text": "The base Transformer uses 8 attention heads, and its development BLEU score is 25.8.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.286638312,
+   "prompt_tokens": 1805,
+   "prompt_time": 0.089168404,
+   "completion_tokens": 62,
+   "completion_time": 0.129691977,
+   "total_tokens": 1867,
+   "total_time": 0.218860381,
+   "completion_tokens_details": {
+    "reasoning_tokens": 32
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "983",
+   "x-ratelimit-reset-requests": "24m28.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2281",
+   "x-ratelimit-reset-tokens": "42.892s"
+  },
+  "error": null,
+  "first_byte_ms": 365.0,
+  "first_content_ms": 535.8,
+  "total_ms": 588.9
+ }
+}

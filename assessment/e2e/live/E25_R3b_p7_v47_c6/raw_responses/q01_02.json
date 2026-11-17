@@ -1,0 +1,41 @@
+{
+ "question_id": "q01",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:01:04.420+00:00",
+  "t_send_ns": 205714421513500,
+  "status": 200,
+  "t_first_byte_ns": 205714815341900,
+  "t_first_content_ns": 205715054275600,
+  "t_last_ns": 205715236550600,
+  "max_gap_ms": 238.909,
+  "text": "Recurrent models factor computation along the symbol positions of the input and output sequences and generate a sequence of hidden states h_t as a function of the previous hidden state h_t‑1 and the input for position t [AIAYN:1:c002]. This inherently sequential nature precludes parallelization within training examples, which becomes critical at longer sequence lengths, as memory constraints limit batching across examples [AIAYN:1:c002].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.319213301,
+   "prompt_tokens": 2386,
+   "prompt_time": 0.135822804,
+   "completion_tokens": 139,
+   "completion_time": 0.289349721,
+   "total_tokens": 2525,
+   "total_time": 0.425172525,
+   "completion_tokens_details": {
+    "reasoning_tokens": 43
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "993",
+   "x-ratelimit-reset-requests": "10m4.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "1784",
+   "x-ratelimit-reset-tokens": "46.62s"
+  },
+  "error": null,
+  "first_byte_ms": 393.8,
+  "first_content_ms": 632.8,
+  "total_ms": 815.0
+ }
+}

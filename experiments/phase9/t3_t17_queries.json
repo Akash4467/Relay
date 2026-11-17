@@ -1,0 +1,15 @@
+{
+ "about": "MOSHI Table 3 vs Table 17 probe queries. a1-a8 are copied verbatim from experiments/phase8/table_retrieval.py (written by the assistant after inspecting the tables; not an independent test set). The 8 table-set questions about T3/T17 (t05-t08, t29-t32) are read from eval/phase7/table_question_set.json at run time. 'exclusion' marks queries that identify the table by what it lacks; 'mentions_mushra_to_exclude' marks those that name MUSHRA in order to exclude it.",
+ "queries": [
+  {"id": "a1", "gold": "T3", "question": "In the Moshi Mimi codec ablation that includes human MUSHRA judgments, which configuration has the highest MUSHRA score?"},
+  {"id": "a2", "gold": "T3", "question": "Which Mimi codec ablation in the Moshi paper reports MUSHRA alongside ABX, VisQOL and MOSNet?"},
+  {"id": "a3", "gold": "T3", "question": "In the Mimi ablation with MUSHRA scores, what MUSHRA does the configuration without a Transformer in the decoder get?"},
+  {"id": "a4", "gold": "T3", "question": "What MUSHRA score does the Mimi ablation report for the configuration with WavLM distillation but no split quantizer?"},
+  {"id": "a5", "gold": "T17", "question": "In the additional appendix ablation on the Mimi codec, what ABX error does the configuration without any of the five components get?"},
+  {"id": "a6", "gold": "T17", "question": "In the Moshi appendix's additional ablation on the Mimi codec, what VisQOL does the configuration with only a Transformer in the encoder get?"},
+  {"id": "a7", "gold": "T17", "question": "In the additional ablation on the Mimi codec, which configuration with quantization rate only is listed, and what is its MOSNet?"},
+  {"id": "a8", "gold": "T17", "question": "In the extended Mimi codec ablation without MUSHRA, what ABX does the configuration with Transformers in both encoder and decoder but no quantization rate get?"}
+ ],
+ "exclusion": ["a8", "t29", "t31"],
+ "mentions_mushra_to_exclude": ["a8", "t31"]
+}

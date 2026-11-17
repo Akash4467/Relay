@@ -1,0 +1,2679 @@
+{
+ "meta": {
+  "at": "2026-11-13T19-08-52Z",
+  "json": "results/candidate_v5/comparison_2026-11-13T19-08-52Z.json",
+  "threshold": 0.9,
+  "verification_policy_version_frozen": "v4",
+  "raw": "results/raw/answer_quality/real_2026-11-13T18-06-56Z.jsonl"
+ },
+ "labelled": {
+  "v3_eval (calibration + evaluation)": {
+   "v4": {
+    "supported_accepted": 16,
+    "supported": 18,
+    "unsupported_accepted": 2,
+    "unsupported": 24,
+    "decisions": {
+     "d1": true,
+     "d2": true,
+     "d3": true,
+     "d4": true,
+     "d5": true,
+     "d6": true,
+     "m1": true,
+     "m2": false,
+     "m3": true,
+     "m4": false,
+     "m5": true,
+     "m6": false,
+     "t1": true,
+     "t2": false,
+     "t3": true,
+     "t4": true,
+     "t5": true,
+     "t6": false,
+     "p1": true,
+     "p2": false,
+     "p3": true,
+     "p4": false,
+     "p5": true,
+     "p6": false,
+     "k1": false,
+     "k2": false,
+     "k3": false,
+     "k4": false,
+     "k5": false,
+     "k6": false,
+     "n1": false,
+     "n2": false,
+     "n3": false,
+     "n4": false,
+     "n5": false,
+     "n6": false,
+     "a1": false,
+     "a2": true,
+     "a3": false,
+     "a4": false,
+     "a5": false,
+     "a6": true
+    }
+   },
+   "v5 P1": {
+    "supported_accepted": 16,
+    "supported": 18,
+    "unsupported_accepted": 2,
+    "unsupported": 24,
+    "decisions": {
+     "d1": true,
+     "d2": true,
+     "d3": true,
+     "d4": true,
+     "d5": true,
+     "d6": true,
+     "m1": true,
+     "m2": false,
+     "m3": true,
+     "m4": false,
+     "m5": true,
+     "m6": false,
+     "t1": true,
+     "t2": false,
+     "t3": true,
+     "t4": true,
+     "t5": true,
+     "t6": false,
+     "p1": true,
+     "p2": false,
+     "p3": true,
+     "p4": false,
+     "p5": true,
+     "p6": false,
+     "k1": false,
+     "k2": false,
+     "k3": false,
+     "k4": false,
+     "k5": false,
+     "k6": false,
+     "n1": false,
+     "n2": false,
+     "n3": false,
+     "n4": false,
+     "n5": false,
+     "n6": false,
+     "a1": false,
+     "a2": true,
+     "a3": false,
+     "a4": false,
+     "a5": false,
+     "a6": true
+    },
+    "changed_vs_v4": []
+   },
+   "v5 P1+P6": {
+    "supported_accepted": 16,
+    "supported": 18,
+    "unsupported_accepted": 2,
+    "unsupported": 24,
+    "decisions": {
+     "d1": true,
+     "d2": true,
+     "d3": true,
+     "d4": true,
+     "d5": true,
+     "d6": true,
+     "m1": true,
+     "m2": false,
+     "m3": true,
+     "m4": false,
+     "m5": true,
+     "m6": false,
+     "t1": true,
+     "t2": false,
+     "t3": true,
+     "t4": true,
+     "t5": true,
+     "t6": false,
+     "p1": true,
+     "p2": false,
+     "p3": true,
+     "p4": false,
+     "p5": true,
+     "p6": false,
+     "k1": false,
+     "k2": false,
+     "k3": false,
+     "k4": false,
+     "k5": false,
+     "k6": false,
+     "n1": false,
+     "n2": false,
+     "n3": false,
+     "n4": false,
+     "n5": false,
+     "n6": false,
+     "a1": false,
+     "a2": true,
+     "a3": false,
+     "a4": false,
+     "a5": false,
+     "a6": true
+    },
+    "changed_vs_v4": []
+   }
+  },
+  "v3b_targeted": {
+   "v4": {
+    "supported_accepted": 7,
+    "supported": 8,
+    "unsupported_accepted": 2,
+    "unsupported": 10,
+    "decisions": {
+     "f1": true,
+     "f2": false,
+     "f3": true,
+     "f4": true,
+     "f5": false,
+     "f6": false,
+     "f7": false,
+     "f8": false,
+     "f9": false,
+     "s1": true,
+     "s2": true,
+     "s3": true,
+     "s4": true,
+     "u1": false,
+     "u2": true,
+     "u3": false,
+     "u4": false,
+     "u5": true
+    }
+   },
+   "v5 P1": {
+    "supported_accepted": 7,
+    "supported": 8,
+    "unsupported_accepted": 2,
+    "unsupported": 10,
+    "decisions": {
+     "f1": true,
+     "f2": false,
+     "f3": true,
+     "f4": true,
+     "f5": false,
+     "f6": false,
+     "f7": false,
+     "f8": false,
+     "f9": false,
+     "s1": true,
+     "s2": true,
+     "s3": true,
+     "s4": true,
+     "u1": false,
+     "u2": true,
+     "u3": false,
+     "u4": false,
+     "u5": true
+    },
+    "changed_vs_v4": []
+   },
+   "v5 P1+P6": {
+    "supported_accepted": 7,
+    "supported": 8,
+    "unsupported_accepted": 2,
+    "unsupported": 10,
+    "decisions": {
+     "f1": true,
+     "f2": false,
+     "f3": true,
+     "f4": true,
+     "f5": false,
+     "f6": false,
+     "f7": false,
+     "f8": false,
+     "f9": false,
+     "s1": true,
+     "s2": true,
+     "s3": true,
+     "s4": true,
+     "u1": false,
+     "u2": true,
+     "u3": false,
+     "u4": false,
+     "u5": true
+    },
+    "changed_vs_v4": []
+   }
+  },
+  "v2_stress calibration": {
+   "v4": {
+    "supported_accepted": 5,
+    "supported": 6,
+    "unsupported_accepted": 1,
+    "unsupported": 6,
+    "decisions": {
+     "t1": true,
+     "t3": false,
+     "c1": false,
+     "l1": true,
+     "l3": false,
+     "p1": true,
+     "p3": true,
+     "a1": true,
+     "a2": true,
+     "a3": false,
+     "d1": false,
+     "d3": false
+    }
+   },
+   "v5 P1": {
+    "supported_accepted": 5,
+    "supported": 6,
+    "unsupported_accepted": 1,
+    "unsupported": 6,
+    "decisions": {
+     "t1": true,
+     "t3": false,
+     "c1": false,
+     "l1": true,
+     "l3": false,
+     "p1": true,
+     "p3": true,
+     "a1": true,
+     "a2": true,
+     "a3": false,
+     "d1": false,
+     "d3": false
+    },
+    "changed_vs_v4": []
+   },
+   "v5 P1+P6": {
+    "supported_accepted": 5,
+    "supported": 6,
+    "unsupported_accepted": 1,
+    "unsupported": 6,
+    "decisions": {
+     "t1": true,
+     "t3": false,
+     "c1": false,
+     "l1": true,
+     "l3": false,
+     "p1": true,
+     "p3": true,
+     "a1": true,
+     "a2": true,
+     "a3": false,
+     "d1": false,
+     "d3": false
+    },
+    "changed_vs_v4": []
+   }
+  },
+  "held-out (evaluation only)": {
+   "v4": {
+    "supported_accepted": 1,
+    "supported": 4,
+    "unsupported_accepted": 0,
+    "unsupported": 4,
+    "decisions": {
+     "t2": true,
+     "c2": false,
+     "c3": false,
+     "l2": false,
+     "l4": false,
+     "p2": false,
+     "p4": false,
+     "d2": false
+    }
+   },
+   "v5 P1": {
+    "supported_accepted": 1,
+    "supported": 4,
+    "unsupported_accepted": 0,
+    "unsupported": 4,
+    "decisions": {
+     "t2": true,
+     "c2": false,
+     "c3": false,
+     "l2": false,
+     "l4": false,
+     "p2": false,
+     "p4": false,
+     "d2": false
+    },
+    "changed_vs_v4": []
+   },
+   "v5 P1+P6": {
+    "supported_accepted": 1,
+    "supported": 4,
+    "unsupported_accepted": 0,
+    "unsupported": 4,
+    "decisions": {
+     "t2": true,
+     "c2": false,
+     "c3": false,
+     "l2": false,
+     "l4": false,
+     "p2": false,
+     "p4": false,
+     "d2": false
+    },
+    "changed_vs_v4": []
+   }
+  }
+ },
+ "real": {
+  "drafts": [
+   {
+    "question_id": "q02",
+    "draft": 1,
+    "variant": "v4",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q02",
+    "draft": 2,
+    "variant": "v4",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q02",
+    "draft": 1,
+    "variant": "v5 P1",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.80 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q02",
+    "draft": 2,
+    "variant": "v5 P1",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"The base Transformer employs eight parallel attention heads.\") (entailment 0.01 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q02",
+    "draft": 1,
+    "variant": "v5 P1+P6",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.80 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q02",
+    "draft": 2,
+    "variant": "v5 P1+P6",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"The base Transformer employs eight parallel attention heads.\") (entailment 0.01 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q04",
+    "draft": 1,
+    "variant": "v4",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.40 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q04",
+    "draft": 2,
+    "variant": "v4",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.02 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q04",
+    "draft": 1,
+    "variant": "v5 P1",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.40 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q04",
+    "draft": 2,
+    "variant": "v5 P1",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.02 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q04",
+    "draft": 1,
+    "variant": "v5 P1+P6",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.40 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q04",
+    "draft": 2,
+    "variant": "v5 P1+P6",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.02 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q06",
+    "draft": 1,
+    "variant": "v4",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q06",
+    "draft": 2,
+    "variant": "v4",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q06",
+    "draft": 1,
+    "variant": "v5 P1",
+    "label": "partially_correct",
+    "accepted": true,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q06",
+    "draft": 2,
+    "variant": "v5 P1",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.56 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q06",
+    "draft": 1,
+    "variant": "v5 P1+P6",
+    "label": "partially_correct",
+    "accepted": true,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q06",
+    "draft": 2,
+    "variant": "v5 P1+P6",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.56 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q07",
+    "draft": 1,
+    "variant": "v4",
+    "label": "correct_partially_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"The encoder stack contains only self‑attention and feed‑forward sub‑layers.\") (entailment 0.00 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"Each position can attend only to earlier positions, preserving the auto‑regressive property.\") (entailment 0.03 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 4,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "unsupported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q07",
+    "draft": 2,
+    "variant": "v4",
+    "label": "correct_partially_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"The encoder stack does not have this layer.\") (entailment 0.04 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.48 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 4,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q07",
+    "draft": 1,
+    "variant": "v5 P1",
+    "label": "correct_partially_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"The encoder stack contains only self‑attention and feed‑forward sub‑layers.\") (entailment 0.00 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"Each position can attend only to earlier positions, preserving the auto‑regressive property.\") (entailment 0.03 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 4,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "unsupported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q07",
+    "draft": 2,
+    "variant": "v5 P1",
+    "label": "correct_partially_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"The encoder stack does not have this layer.\") (entailment 0.04 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.48 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 4,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q07",
+    "draft": 1,
+    "variant": "v5 P1+P6",
+    "label": "correct_partially_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"The encoder stack contains only self‑attention and feed‑forward sub‑layers.\") (entailment 0.00 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"Each position can attend only to earlier positions, preserving the auto‑regressive property.\") (entailment 0.03 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 4,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "unsupported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q07",
+    "draft": 2,
+    "variant": "v5 P1+P6",
+    "label": "correct_partially_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"The encoder stack does not have this layer.\") (entailment 0.04 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.48 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 4,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q08",
+    "draft": 1,
+    "variant": "v4",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.02 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.52 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q08",
+    "draft": 2,
+    "variant": "v4",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.13 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 4,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q08",
+    "draft": 1,
+    "variant": "v5 P1",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.02 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.52 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q08",
+    "draft": 2,
+    "variant": "v5 P1",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.13 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 4,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q08",
+    "draft": 1,
+    "variant": "v5 P1+P6",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.02 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.52 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q08",
+    "draft": 2,
+    "variant": "v5 P1+P6",
+    "label": "correct_full_cited",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.13 < 0.9)"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 4,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q09",
+    "draft": 1,
+    "variant": "v4",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q09",
+    "draft": 2,
+    "variant": "v4",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q09",
+    "draft": 1,
+    "variant": "v5 P1",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"Moshi’s theoretical latency of 160 ms is achieved by the model’s streaming, hierarchical architecture.\") (entailment 0.01 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"Natural conversations have an average response time of 230 ms.\") (entailment 0.83 < 0.9); number 230 ms not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q09",
+    "draft": 2,
+    "variant": "v5 P1",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"This is higher than Moshi’s practical latency.\") (entailment 0.10 < 0.9); number 230 ms not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q09",
+    "draft": 1,
+    "variant": "v5 P1+P6",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"Moshi’s theoretical latency of 160 ms is achieved by the model’s streaming, hierarchical architecture.\") (entailment 0.01 < 0.9)"
+      ],
+      "support": "partly_supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"Natural conversations have an average response time of 230 ms.\") (entailment 0.83 < 0.9); number 230 ms not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q09",
+    "draft": 2,
+    "variant": "v5 P1+P6",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"This is higher than Moshi’s practical latency.\") (entailment 0.10 < 0.9); number 230 ms not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q10",
+    "draft": 1,
+    "variant": "v4",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q10",
+    "draft": 2,
+    "variant": "v4",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q10",
+    "draft": 1,
+    "variant": "v5 P1",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.61 < 0.9); term 'net' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.01 < 0.9); term 'net' not in the cited passage; term 'h' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q10",
+    "draft": 2,
+    "variant": "v5 P1",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.52 < 0.9); term 'net' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.00 < 0.9); term 'net' not in the cited passage; term 'h' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q10",
+    "draft": 1,
+    "variant": "v5 P1+P6",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.61 < 0.9); term 'net' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.01 < 0.9); term 'net' not in the cited passage; term 'h' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q10",
+    "draft": 2,
+    "variant": "v5 P1+P6",
+    "label": "partially_correct",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.52 < 0.9); term 'net' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 3,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.00 < 0.9); term 'net' not in the cited passage; term 'h' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q12",
+    "draft": 1,
+    "variant": "v4",
+    "label": "factually_wrong",
+    "accepted": true,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "false",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q12",
+    "draft": 1,
+    "variant": "v5 P1",
+    "label": "factually_wrong",
+    "accepted": true,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "false",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q12",
+    "draft": 1,
+    "variant": "v5 P1+P6",
+    "label": "factually_wrong",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "absence contradicted by retrieved table MOSHI:T8 row 'Moshi': Audio Trivia QA = 22.8, LlaMA Q. = 62.3, Web Q. = 26.6"
+      ],
+      "support": "absence_sentence",
+      "factual": "false",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q13",
+    "draft": 1,
+    "variant": "v4",
+    "label": "factually_wrong",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "unsupported",
+      "factual": "false",
+      "parse_failure": true
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q13",
+    "draft": 2,
+    "variant": "v4",
+    "label": "factually_wrong",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": true
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "unsupported",
+      "factual": "false",
+      "parse_failure": true
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q13",
+    "draft": 1,
+    "variant": "v5 P1",
+    "label": "factually_wrong",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.16 < 0.9); number 55.5 % not in the cited passage; number 53.3 % not in the cited passage; term 'h' not in the cited passage; term 'net' not in the cited passage; term 'gpt' not in the cited passage; term 'bpe' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"It matches the performance of a larger Transformer that is FLOP‑matched to GPT‑3 XL.\") (entailment 0.05 < 0.9); number 58.2 % not in the cited passage; term 'transformer' not in the cited passage; term 'gpt' not in the cited passage"
+      ],
+      "support": "unsupported",
+      "factual": "false",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q13",
+    "draft": 2,
+    "variant": "v5 P1",
+    "label": "factually_wrong",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.89 < 0.9); number 55.5 % not in the cited passage; number 53.3 % not in the cited passage; term 'h' not in the cited passage; term 'net' not in the cited passage; term 'gpt' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"This 2‑stage H‑Net also matches the performance of a larger Transformer that is FLOP‑matched to GPT‑3 XL.\") (entailment 0.00 < 0.9); number 58.2 % not in the cited passage; term 'h' not in the cited passage; term 'net' not in the cited passage; term 'transformer' not in the cited passage; term 'gpt' not in the cited passage"
+      ],
+      "support": "unsupported",
+      "factual": "false",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q13",
+    "draft": 1,
+    "variant": "v5 P1+P6",
+    "label": "factually_wrong",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.16 < 0.9); number 55.5 % not in the cited passage; number 53.3 % not in the cited passage; term 'h' not in the cited passage; term 'net' not in the cited passage; term 'gpt' not in the cited passage; term 'bpe' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"It matches the performance of a larger Transformer that is FLOP‑matched to GPT‑3 XL.\") (entailment 0.05 < 0.9); number 58.2 % not in the cited passage; term 'transformer' not in the cited passage; term 'gpt' not in the cited passage"
+      ],
+      "support": "unsupported",
+      "factual": "false",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q13",
+    "draft": 2,
+    "variant": "v5 P1+P6",
+    "label": "factually_wrong",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (entailment 0.89 < 0.9); number 55.5 % not in the cited passage; number 53.3 % not in the cited passage; term 'h' not in the cited passage; term 'net' not in the cited passage; term 'gpt' not in the cited passage"
+      ],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": false,
+      "reasons": [
+       "not supported by the cited passage (clause: \"This 2‑stage H‑Net also matches the performance of a larger Transformer that is FLOP‑matched to GPT‑3 XL.\") (entailment 0.00 < 0.9); number 58.2 % not in the cited passage; term 'h' not in the cited passage; term 'net' not in the cited passage; term 'transformer' not in the cited passage; term 'gpt' not in the cited passage"
+      ],
+      "support": "unsupported",
+      "factual": "false",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q26",
+    "draft": 1,
+    "variant": "v4",
+    "label": "correct_refusal",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "unsupported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q26",
+    "draft": 2,
+    "variant": "v4",
+    "label": "correct_refusal",
+    "accepted": true,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q26",
+    "draft": 1,
+    "variant": "v5 P1",
+    "label": "correct_refusal",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "unsupported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q26",
+    "draft": 2,
+    "variant": "v5 P1",
+    "label": "correct_refusal",
+    "accepted": true,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q26",
+    "draft": 1,
+    "variant": "v5 P1+P6",
+    "label": "correct_refusal",
+    "accepted": false,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": false,
+      "reasons": [
+       "no citation"
+      ],
+      "support": "unsupported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   },
+   {
+    "question_id": "q26",
+    "draft": 2,
+    "variant": "v5 P1+P6",
+    "label": "correct_refusal",
+    "accepted": true,
+    "sentences": [
+     {
+      "n": 1,
+      "accepted": true,
+      "reasons": [],
+      "support": "supported",
+      "factual": "true",
+      "parse_failure": false
+     },
+     {
+      "n": 2,
+      "accepted": true,
+      "reasons": [],
+      "support": "absence_sentence",
+      "factual": "true",
+      "parse_failure": false
+     }
+    ],
+    "sentence_count_matches": true
+   }
+  ],
+  "questions": [
+   {
+    "question_id": "q02",
+    "answerable": true,
+    "v4": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1": {
+     "result": "draft 1 rejected for other reasons than v4; saved redraft not valid",
+     "grade": "unknown_needs_live_redraft",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "draft 1 rejected for other reasons than v4; saved redraft not valid",
+     "grade": "unknown_needs_live_redraft",
+     "drafts": [
+      false,
+      false
+     ]
+    }
+   },
+   {
+    "question_id": "q04",
+    "answerable": true,
+    "v4": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    }
+   },
+   {
+    "question_id": "q06",
+    "answerable": true,
+    "v4": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1": {
+     "result": "delivered draft 1",
+     "grade": "partially_correct",
+     "drafts": [
+      true,
+      false
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "delivered draft 1",
+     "grade": "partially_correct",
+     "drafts": [
+      true,
+      false
+     ]
+    }
+   },
+   {
+    "question_id": "q07",
+    "answerable": true,
+    "v4": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    }
+   },
+   {
+    "question_id": "q08",
+    "answerable": true,
+    "v4": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    }
+   },
+   {
+    "question_id": "q09",
+    "answerable": true,
+    "v4": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1": {
+     "result": "draft 1 rejected for other reasons than v4; saved redraft not valid",
+     "grade": "unknown_needs_live_redraft",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "draft 1 rejected for other reasons than v4; saved redraft not valid",
+     "grade": "unknown_needs_live_redraft",
+     "drafts": [
+      false,
+      false
+     ]
+    }
+   },
+   {
+    "question_id": "q10",
+    "answerable": true,
+    "v4": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1": {
+     "result": "draft 1 rejected for other reasons than v4; saved redraft not valid",
+     "grade": "unknown_needs_live_redraft",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "draft 1 rejected for other reasons than v4; saved redraft not valid",
+     "grade": "unknown_needs_live_redraft",
+     "drafts": [
+      false,
+      false
+     ]
+    }
+   },
+   {
+    "question_id": "q12",
+    "answerable": true,
+    "v4": {
+     "result": "delivered draft 1",
+     "grade": "factually_wrong",
+     "drafts": [
+      true
+     ]
+    },
+    "v5 P1": {
+     "result": "delivered draft 1",
+     "grade": "factually_wrong",
+     "drafts": [
+      true
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "draft 1 rejected; no saved redraft",
+     "grade": "unknown_needs_live_redraft",
+     "drafts": [
+      false
+     ]
+    }
+   },
+   {
+    "question_id": "q13",
+    "answerable": true,
+    "v4": {
+     "result": "refused (verification failed)",
+     "grade": "false_refusal",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1": {
+     "result": "draft 1 rejected for other reasons than v4; saved redraft not valid",
+     "grade": "unknown_needs_live_redraft",
+     "drafts": [
+      false,
+      false
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "draft 1 rejected for other reasons than v4; saved redraft not valid",
+     "grade": "unknown_needs_live_redraft",
+     "drafts": [
+      false,
+      false
+     ]
+    }
+   },
+   {
+    "question_id": "q14",
+    "answerable": true,
+    "v4": {
+     "result": "refused (model declined)",
+     "grade": "false_refusal",
+     "drafts": [
+      null
+     ]
+    },
+    "v5 P1": {
+     "result": "refused (model declined)",
+     "grade": "false_refusal",
+     "drafts": [
+      null
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "refused (model declined)",
+     "grade": "false_refusal",
+     "drafts": [
+      null
+     ]
+    }
+   },
+   {
+    "question_id": "q17",
+    "answerable": false,
+    "v4": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    },
+    "v5 P1": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    }
+   },
+   {
+    "question_id": "q20",
+    "answerable": false,
+    "v4": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    },
+    "v5 P1": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    }
+   },
+   {
+    "question_id": "q21",
+    "answerable": false,
+    "v4": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    },
+    "v5 P1": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    }
+   },
+   {
+    "question_id": "q25",
+    "answerable": false,
+    "v4": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    },
+    "v5 P1": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "refused (model declined)",
+     "grade": "correct_refusal",
+     "drafts": [
+      null
+     ]
+    }
+   },
+   {
+    "question_id": "q26",
+    "answerable": false,
+    "v4": {
+     "result": "delivered draft 2",
+     "grade": "correct_refusal",
+     "drafts": [
+      false,
+      true
+     ]
+    },
+    "v5 P1": {
+     "result": "delivered draft 2",
+     "grade": "correct_refusal",
+     "drafts": [
+      false,
+      true
+     ]
+    },
+    "v5 P1+P6": {
+     "result": "delivered draft 2",
+     "grade": "correct_refusal",
+     "drafts": [
+      false,
+      true
+     ]
+    }
+   }
+  ]
+ },
+ "summary": {
+  "v4": {
+   "drafts_accepted": 2,
+   "drafts_rejected": 17,
+   "responses_delivered": 2,
+   "correct_drafts_accepted": 0,
+   "correct_drafts": 8,
+   "wrong_drafts_accepted": 1,
+   "wrong_drafts": 3,
+   "partially_correct_drafts_accepted": 0,
+   "supported_true_sentences_accepted": 9,
+   "supported_true_sentences": 33,
+   "unsupported_or_false_sentences_accepted": 1,
+   "unsupported_or_false_sentences": 5,
+   "citation_parse_failures": 21,
+   "sentence_count_mismatches": 0,
+   "correct_refusals": 5,
+   "false_refusals": 9,
+   "wrong_delivered": 1,
+   "correct_delivered": 0,
+   "partially_correct_delivered": 0,
+   "needs_live_redraft": 0
+  },
+  "v5 P1": {
+   "drafts_accepted": 3,
+   "drafts_rejected": 16,
+   "responses_delivered": 3,
+   "correct_drafts_accepted": 0,
+   "correct_drafts": 8,
+   "wrong_drafts_accepted": 1,
+   "wrong_drafts": 3,
+   "partially_correct_drafts_accepted": 1,
+   "supported_true_sentences_accepted": 16,
+   "supported_true_sentences": 33,
+   "unsupported_or_false_sentences_accepted": 1,
+   "unsupported_or_false_sentences": 5,
+   "citation_parse_failures": 0,
+   "sentence_count_mismatches": 0,
+   "correct_refusals": 5,
+   "false_refusals": 4,
+   "wrong_delivered": 1,
+   "correct_delivered": 0,
+   "partially_correct_delivered": 1,
+   "needs_live_redraft": 4
+  },
+  "v5 P1+P6": {
+   "drafts_accepted": 2,
+   "drafts_rejected": 17,
+   "responses_delivered": 2,
+   "correct_drafts_accepted": 0,
+   "correct_drafts": 8,
+   "wrong_drafts_accepted": 0,
+   "wrong_drafts": 3,
+   "partially_correct_drafts_accepted": 1,
+   "supported_true_sentences_accepted": 16,
+   "supported_true_sentences": 33,
+   "unsupported_or_false_sentences_accepted": 0,
+   "unsupported_or_false_sentences": 5,
+   "citation_parse_failures": 0,
+   "sentence_count_mismatches": 0,
+   "correct_refusals": 5,
+   "false_refusals": 4,
+   "wrong_delivered": 0,
+   "correct_delivered": 0,
+   "partially_correct_delivered": 1,
+   "needs_live_redraft": 5
+  }
+ }
+}

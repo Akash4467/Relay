@@ -1,0 +1,5 @@
+{"about": "ASSISTANT labels (not independent); same rubric.",
+ "labels": {"q01#0": "mixed", "q01#1": "correct", "q04#0": "correct", "q04#1": "correct", "q07#0": "mixed", "q07#1": "correct",
+            "q12#0": "mixed", "q12#1": "correct", "q13#0": "mixed", "q13#1": "correct", "q15#0": "correct", "q15#1": "correct"},
+ "notes": {"q01#0": "'making the lack of parallelization more problematic' inference", "q07#0": "'encoder stack only has self-attention sub-layers'; one uncited sentence",
+           "q12#0": "false absence", "q13#0": "comparison cites only r11"}}

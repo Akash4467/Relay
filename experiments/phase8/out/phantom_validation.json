@@ -1,0 +1,61 @@
+{
+ "cells": [
+  {
+   "table": "MOSHI:T5",
+   "row": "[0, 1, 2, 3, 4, 5, 6, 7]",
+   "column": "Perplexity",
+   "e2": "142.2",
+   "e3": "42.2",
+   "e3_numbers_in_pdf_text": true,
+   "e2_numbers_in_pdf_text": false
+  },
+  {
+   "table": "MOSHI:T5",
+   "row": "[0, 1, 2, 3, 4, 5, 6, 7]",
+   "column": "Perplexity",
+   "e2": "140.3",
+   "e3": "40.3",
+   "e3_numbers_in_pdf_text": true,
+   "e2_numbers_in_pdf_text": false
+  },
+  {
+   "table": "MOSHI:T5",
+   "row": "[0, 2, 2, 2, 2, 2, 2, 2]",
+   "column": "Perplexity",
+   "e2": "136.8",
+   "e3": "36.8",
+   "e3_numbers_in_pdf_text": true,
+   "e2_numbers_in_pdf_text": false
+  },
+  {
+   "table": "MOSHI:T6",
+   "row": "[0, 0, 0, 0, 0, 0, 0, 0]",
+   "column": "Semantic Token / Weight",
+   "e2": "001.0",
+   "e3": "1.0",
+   "e3_numbers_in_pdf_text": true,
+   "e2_numbers_in_pdf_text": false
+  },
+  {
+   "table": "MOSHI:T6",
+   "row": "[0, 1, 1, 1, 1, 1, 1, 1]",
+   "column": "Semantic Token / Weight",
+   "e2": "001.0",
+   "e3": "1.0",
+   "e3_numbers_in_pdf_text": true,
+   "e2_numbers_in_pdf_text": false
+  },
+  {
+   "table": "MOSHI:T6",
+   "row": "[0, 2, 2, 2, 2, 2, 2, 2]",
+   "column": "Semantic Token / Weight",
+   "e2": "001.0",
+   "e3": "1.0",
+   "e3_numbers_in_pdf_text": true,
+   "e2_numbers_in_pdf_text": false
+  }
+ ],
+ "prose_changes": [],
+ "row_headers": [],
+ "checks_failed": []
+}

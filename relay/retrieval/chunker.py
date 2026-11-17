@@ -81,7 +81,7 @@ def structured_row(row: dict) -> dict:
     Rows of the same table stay separate records, so siblings are never read as competing values."""
     return {"configuration": row["row_header"],
             "values": [dict(zip(("metric", "split"), metric_split(col)), column=col, value=val)
-                       for col, val in row["cells"].items()]}
+                       for col, val in row["cells"].items() if val != ""]}  # e2 keeps empty cells' places; e1 has none
 
 
 def table_chunks(table: dict, size: int) -> list[dict]:

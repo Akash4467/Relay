@@ -18,6 +18,7 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
+from relay import corpus
 from relay.config import app_config, retrieval_settings
 from relay.retrieval.index_build import load_model
 from relay.retrieval.rerank import load_reranker
@@ -122,7 +123,10 @@ def main(split: str = "dev", settings: tuple[str, ...] = ("A", "B", "C"), out: s
     results = []
     for name in settings:
         size = retrieval_settings()[name].piece_tokens
-        indexes.setdefault(size, Index(size, embedder))
+        if size not in indexes:  # phase 11D: the configured corpus, validated
+            selected = corpus.selected(app_config())
+            corpus.validate(selected, [size])
+            indexes[size] = corpus.load_indexes(selected, [size], embedder)[size]
         results.append(evaluate(questions, name, indexes[size], cap, reranker))
     REPORTS.mkdir(parents=True, exist_ok=True)
     report = {"meta": meta, "results": results}

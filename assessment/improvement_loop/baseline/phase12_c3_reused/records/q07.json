@@ -1,0 +1,268 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "timestamp": "2026-11-14T07:57:21.632+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "retrieval_config": {
+  "setting": "B",
+  "cross_paper_reserve_per_paper": 2,
+  "symbolic_query_expansion": true,
+  "prompt_caption_sharing": true
+ },
+ "question_id": "q07",
+ "group": "ordinary_answerable",
+ "question": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §3.2.3 Applications of Attention in our Model; AIAYN §3 Model Architecture; AIAYN §3.1 Encoder and Decoder Stacks; AIAYN §3.3 Position-wise Feed-Forward Networks.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "p12-c3-q07"
+ },
+ "client_ms": 34179.3,
+ "evidence_ids": [
+  "AIAYN:3.2.3:c016",
+  "AIAYN:3:c006",
+  "AIAYN:3.1:c009",
+  "AIAYN:3.3:c017",
+  "HNET:2.1.2:c017",
+  "HNET:3.3:c069",
+  "AIAYN:abstract:c001"
+ ],
+ "retrieval_query": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from? [d_k]",
+ "query_expansion": [
+  "d_k"
+ ],
+ "caption_sharing": true,
+ "gold_units_in_context": [
+  true,
+  true,
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  true,
+  true
+ ],
+ "drafts": [
+  "The decoder stack adds a third sub‑layer that performs multi‑head attention over the encoder’s output, whereas the encoder stack contains only self‑attention sub‑layers that attend to its own previous layer outputs [AIAYN:3.1:c009][AIAYN:3.2.3:c016]. In the encoder‑decoder attention, the queries are taken from the preceding decoder layer, while the keys and values are taken from the encoder’s output representations [AIAYN:3.2.3:c016]. The decoder also masks its self‑attention to prevent positions from attending to subsequent positions, preserving the auto‑regressive property [AIAYN:3.2.3:c016][AIAYN:3.1:c009]. The encoder’s self‑attention uses the same source for queries, keys, and values—the output of its previous encoder layer [AIAYN:3.2.3:c016]. The retrieved passages do not state any additional architectural differences beyond these points.",
+  "The decoder stack includes an additional sub‑layer that performs multi‑head attention over the encoder’s output, while the encoder stack consists only of self‑attention sub‑layers [AIAYN:3.1:c009]. In encoder‑decoder attention the queries come from the previous decoder layer and the keys and values come from the encoder’s output [AIAYN:3.2.3:c016]. Self‑attention in the encoder uses the same source for queries, keys and values—the output of the previous encoder layer [AIAYN:3.2.3:c016]. In the decoder, self‑attention is masked to prevent positions from attending to subsequent positions, preserving the auto‑regressive property [AIAYN:3.2.3:c016]. The retrieved passages do not state any further differences between encoder and decoder."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.3:c016"
+   ],
+   "failures": [
+    [
+     "The decoder stack adds a third sub‑layer that performs multi‑head attention over the encoder’s output, whereas the encoder stack contains only self‑attention sub‑layers that attend to its own previous layer outputs [AIAYN:3.1:c009][AIAYN:3.2.3:c016].",
+     "not supported by the cited passage (clause: \"The encoder stack contains only self‑attention sub‑layers that attend to its own previous layer outputs.\") (entailment 0.01 < 0.9)"
+    ],
+    [
+     "In the encoder‑decoder attention, the queries are taken from the preceding decoder layer, while the keys and values are taken from the encoder’s output representations [AIAYN:3.2.3:c016].",
+     "not supported by the cited passage (clause: \"The keys and values are taken from the encoder’s output representations.\") (entailment 0.76 < 0.9)"
+    ]
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.3:c016"
+   ],
+   "failures": [
+    [
+     "The decoder stack includes an additional sub‑layer that performs multi‑head attention over the encoder’s output, while the encoder stack consists only of self‑attention sub‑layers [AIAYN:3.1:c009].",
+     "not supported by the cited passage (clause: \"The encoder stack consists only of self‑attention sub‑layers.\") (entailment 0.00 < 0.9)"
+    ]
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "identity_checks": {
+  "evidence_equals_selected_corpus": true,
+  "original_question_in_every_prompt": true,
+  "expanded_query_not_in_prompt": true
+ },
+ "trace": {
+  "request_id": "p12-c3-q07",
+  "scenario": "phase12_live",
+  "source": "real",
+  "start_time": "2026-11-14T07:57:21.632+00:00",
+  "question_id": "q07",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3863,
+  "tokens_out": 603,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 789.2,
+  "context_tokens": 1412,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "d_k"
+  ],
+  "retrieval_query": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from? [d_k]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3:c006",
+   "AIAYN:3.1:c009",
+   "AIAYN:3.3:c017",
+   "HNET:2.1.2:c017",
+   "HNET:3.3:c069",
+   "AIAYN:abstract:c001"
+  ],
+  "verification_ms": 9589.4,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 20964.6,
+  "model_ttft_ms": 662.7,
+  "first_byte_ms": 406.8,
+  "generation_ms": 2806.6,
+  "reasoning_tokens": 210,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1716,
+    "reserved": 2486,
+    "governor_wait_ms": 11504.7,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.305097425,
+     "prompt_tokens": 1715,
+     "prompt_time": 0.077178873,
+     "completion_tokens": 291,
+     "completion_time": 0.611230643,
+     "total_tokens": 2006,
+     "total_time": 0.688409516,
+     "completion_tokens_details": {
+      "reasoning_tokens": 77
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1715,
+    "tokens_out": 291,
+    "reasoning_tokens": 77,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 406.8,
+    "model_ttft_ms": 662.7,
+    "total_ms": 1090.2,
+    "max_gap_ms": 255.8,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "989",
+     "x-ratelimit-reset-requests": "15m50.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4875",
+     "x-ratelimit-reset-tokens": "23.437s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2147,
+    "reserved": 2917,
+    "governor_wait_ms": 9459.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.317462676,
+     "prompt_tokens": 2148,
+     "prompt_time": 0.127173959,
+     "completion_tokens": 312,
+     "completion_time": 1.195958658,
+     "total_tokens": 2460,
+     "total_time": 1.323132617,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 133
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2148,
+    "tokens_out": 312,
+    "reasoning_tokens": 133,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 397.4,
+    "model_ttft_ms": 813.5,
+    "total_ms": 1716.4,
+    "max_gap_ms": 416.0,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "988",
+     "x-ratelimit-reset-requests": "17m16.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4953",
+     "x-ratelimit-reset-tokens": "22.852s"
+    }
+   }
+  ],
+  "first_token_ms": 34173.2,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 34173.7
+ },
+ "provider_token_usage": [
+  {
+   "queue_time": 0.305097425,
+   "prompt_tokens": 1715,
+   "prompt_time": 0.077178873,
+   "completion_tokens": 291,
+   "completion_time": 0.611230643,
+   "total_tokens": 2006,
+   "total_time": 0.688409516,
+   "completion_tokens_details": {
+    "reasoning_tokens": 77
+   }
+  },
+  {
+   "queue_time": 0.317462676,
+   "prompt_tokens": 2148,
+   "prompt_time": 0.127173959,
+   "completion_tokens": 312,
+   "completion_time": 1.195958658,
+   "total_tokens": 2460,
+   "total_time": 1.323132617,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 133
+   }
+  }
+ ]
+}

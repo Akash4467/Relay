@@ -1,0 +1,424 @@
+{
+ "question": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+ "expected_answer": "With h = 1 (d_k = d_v = 512) dev BLEU was 24.9 (perplexity 5.29); the base model (h = 8) scored 25.8 (perplexity 4.92). Single-head attention is 0.9 BLEU worse than the best setting.",
+ "gold": {
+  "AIAYN:T3:r01": "base row (h = 8): BLEU 25.8, PPL 4.92",
+  "AIAYN:T3:r02": "(A) rows incl. h = 1: BLEU 24.9, PPL 5.29"
+ },
+ "runs": {
+  "c3/A": {
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r01"
+   ],
+   "context_tokens": 1537,
+   "search_ms": 556.7,
+   "dropped_by_budget": [
+    "AIAYN:T3:r04",
+    "AIAYN:abstract:c001"
+   ],
+   "gold": {
+    "AIAYN:T3:r01": {
+     "bm25_rank": 18,
+     "dense_rank": 9,
+     "in_fused_top": 6,
+     "after_rerank": 6,
+     "in_context": true
+    },
+    "AIAYN:T3:r02": {
+     "bm25_rank": 7,
+     "dense_rank": 11,
+     "in_fused_top": 3,
+     "after_rerank": 3,
+     "in_context": true
+    }
+   },
+   "table3_in_context": [
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r01"
+   ],
+   "ranked_after_rerank": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r04",
+    "AIAYN:abstract:c001",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r06",
+    "MOSHI:5.5:c092",
+    "AIAYN:3:c007"
+   ],
+   "ce_scores_top12": null,
+   "gold_ce": null,
+   "final_evidence": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r01"
+   ]
+  },
+  "c3/B": {
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r05"
+   ],
+   "context_tokens": 1506,
+   "search_ms": 1260.2,
+   "dropped_by_budget": [
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r03"
+   ],
+   "gold": {
+    "AIAYN:T3:r01": {
+     "bm25_rank": 18,
+     "dense_rank": 9,
+     "in_fused_top": 6,
+     "after_rerank": 10,
+     "in_context": false
+    },
+    "AIAYN:T3:r02": {
+     "bm25_rank": 7,
+     "dense_rank": 11,
+     "in_fused_top": 3,
+     "after_rerank": 9,
+     "in_context": false
+    }
+   },
+   "table3_in_context": [
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r05"
+   ],
+   "ranked_after_rerank": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r05",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r01",
+    "AIAYN:abstract:c001",
+    "AIAYN:3.2.2:c014"
+   ],
+   "ce_scores_top12": {
+    "AIAYN:6.2:c031": 3.67,
+    "AIAYN:6.1:c029": 0.51,
+    "AIAYN:3.2.2:c013": 0.125,
+    "AIAYN:T3:r07": 0.017,
+    "AIAYN:T3:r04": -0.076,
+    "AIAYN:T3:r05": -0.084,
+    "AIAYN:T3:r06": -0.09,
+    "AIAYN:T3:r03": -0.204,
+    "AIAYN:T3:r02": -0.21,
+    "AIAYN:T3:r01": -0.523,
+    "AIAYN:abstract:c001": -1.535,
+    "AIAYN:3.2.2:c014": -3.074
+   },
+   "gold_ce": {
+    "AIAYN:T3:r01": -0.523,
+    "AIAYN:T3:r02": -0.21
+   },
+   "final_evidence": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r05"
+   ]
+  },
+  "c3/C": {
+   "final": [
+    "AIAYN:6.2:c023",
+    "AIAYN:6.1:c022",
+    "AIAYN:T3:r01"
+   ],
+   "context_tokens": 1194,
+   "search_ms": 2003.7,
+   "dropped_by_budget": [
+    "AIAYN:T3:r02"
+   ],
+   "gold": {
+    "AIAYN:T3:r01": {
+     "bm25_rank": 6,
+     "dense_rank": 4,
+     "in_fused_top": 3,
+     "after_rerank": 3,
+     "in_context": true
+    },
+    "AIAYN:T3:r02": {
+     "bm25_rank": 11,
+     "dense_rank": 5,
+     "in_fused_top": 4,
+     "after_rerank": 4,
+     "in_context": false
+    }
+   },
+   "table3_in_context": [
+    "AIAYN:T3:r01"
+   ],
+   "ranked_after_rerank": [
+    "AIAYN:6.2:c023",
+    "AIAYN:6.1:c022",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03",
+    "AIAYN:3.2.2:c009",
+    "AIAYN:abstract:c001",
+    "AIAYN:T2:r02",
+    "AIAYN:T2:r01",
+    "HNET:3.3:c040",
+    "AIAYN:2:c003",
+    "AIAYN:3.2.3:c011"
+   ],
+   "ce_scores_top12": {
+    "AIAYN:6.2:c023": 3.67,
+    "AIAYN:6.1:c022": 0.965,
+    "AIAYN:T3:r01": -0.529,
+    "AIAYN:T3:r02": -0.662,
+    "AIAYN:T3:r03": -0.678,
+    "AIAYN:3.2.2:c009": -0.955,
+    "AIAYN:abstract:c001": -1.535,
+    "AIAYN:T2:r02": -1.96,
+    "AIAYN:T2:r01": -2.697,
+    "HNET:3.3:c040": -3.329,
+    "AIAYN:2:c003": -5.405,
+    "AIAYN:3.2.3:c011": -5.463
+   },
+   "gold_ce": {
+    "AIAYN:T3:r01": -0.529,
+    "AIAYN:T3:r02": -0.662
+   },
+   "final_evidence": [
+    "AIAYN:6.2:c023",
+    "AIAYN:6.1:c022",
+    "AIAYN:T3:r01"
+   ]
+  },
+  "c6/A": {
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:3.2.2:c014",
+    "AIAYN:T3:r03"
+   ],
+   "context_tokens": 1447,
+   "search_ms": 39.3,
+   "dropped_by_budget": [
+    "AIAYN:T3:r01",
+    "AIAYN:abstract:c001"
+   ],
+   "gold": {
+    "AIAYN:T3:r01": {
+     "bm25_rank": 19,
+     "dense_rank": 9,
+     "in_fused_top": 7,
+     "after_rerank": 7,
+     "in_context": false
+    },
+    "AIAYN:T3:r02": {
+     "bm25_rank": 7,
+     "dense_rank": 11,
+     "in_fused_top": 3,
+     "after_rerank": 3,
+     "in_context": true
+    }
+   },
+   "table3_in_context": [
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03"
+   ],
+   "ranked_after_rerank": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:3.2.2:c014",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r01",
+    "AIAYN:abstract:c001",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r06",
+    "MOSHI:5.5:c092",
+    "AIAYN:3:c007"
+   ],
+   "ce_scores_top12": null,
+   "gold_ce": null,
+   "final_evidence": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r07",
+    "AIAYN:3.2.2:c014",
+    "AIAYN:T3:r03"
+   ]
+  },
+  "c6/B": {
+   "final": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r06"
+   ],
+   "context_tokens": 1519,
+   "search_ms": 1146.3,
+   "dropped_by_budget": [
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02"
+   ],
+   "gold": {
+    "AIAYN:T3:r01": {
+     "bm25_rank": 19,
+     "dense_rank": 9,
+     "in_fused_top": 7,
+     "after_rerank": 10,
+     "in_context": false
+    },
+    "AIAYN:T3:r02": {
+     "bm25_rank": 7,
+     "dense_rank": 11,
+     "in_fused_top": 3,
+     "after_rerank": 8,
+     "in_context": false
+    }
+   },
+   "table3_in_context": [
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r06"
+   ],
+   "ranked_after_rerank": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r06",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r09",
+    "AIAYN:T3:r01",
+    "AIAYN:abstract:c001",
+    "AIAYN:3.2.2:c014"
+   ],
+   "ce_scores_top12": {
+    "AIAYN:6.2:c031": 3.67,
+    "AIAYN:6.1:c029": 0.51,
+    "AIAYN:3.2.2:c013": 0.125,
+    "AIAYN:T3:r07": 0.017,
+    "AIAYN:T3:r04": -0.076,
+    "AIAYN:T3:r06": -0.09,
+    "AIAYN:T3:r03": -0.204,
+    "AIAYN:T3:r02": -0.21,
+    "AIAYN:T3:r09": -0.439,
+    "AIAYN:T3:r01": -0.523,
+    "AIAYN:abstract:c001": -1.535,
+    "AIAYN:3.2.2:c014": -3.074
+   },
+   "gold_ce": {
+    "AIAYN:T3:r01": -0.523,
+    "AIAYN:T3:r02": -0.21
+   },
+   "final_evidence": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r06"
+   ]
+  },
+  "c6/C": {
+   "final": [
+    "AIAYN:6.2:c023",
+    "AIAYN:6.1:c022",
+    "AIAYN:T3:r01"
+   ],
+   "context_tokens": 1194,
+   "search_ms": 1363.6,
+   "dropped_by_budget": [
+    "AIAYN:T3:r02"
+   ],
+   "gold": {
+    "AIAYN:T3:r01": {
+     "bm25_rank": 7,
+     "dense_rank": 4,
+     "in_fused_top": 3,
+     "after_rerank": 3,
+     "in_context": true
+    },
+    "AIAYN:T3:r02": {
+     "bm25_rank": 11,
+     "dense_rank": 5,
+     "in_fused_top": 4,
+     "after_rerank": 4,
+     "in_context": false
+    }
+   },
+   "table3_in_context": [
+    "AIAYN:T3:r01"
+   ],
+   "ranked_after_rerank": [
+    "AIAYN:6.2:c023",
+    "AIAYN:6.1:c022",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r03",
+    "AIAYN:3.2.2:c009",
+    "AIAYN:abstract:c001",
+    "AIAYN:T2:r02",
+    "AIAYN:T2:r01",
+    "HNET:3.3:c040",
+    "AIAYN:2:c003",
+    "AIAYN:3.2.3:c011"
+   ],
+   "ce_scores_top12": {
+    "AIAYN:6.2:c023": 3.67,
+    "AIAYN:6.1:c022": 0.965,
+    "AIAYN:T3:r01": -0.529,
+    "AIAYN:T3:r02": -0.662,
+    "AIAYN:T3:r03": -0.678,
+    "AIAYN:3.2.2:c009": -0.955,
+    "AIAYN:abstract:c001": -1.535,
+    "AIAYN:T2:r02": -1.96,
+    "AIAYN:T2:r01": -2.697,
+    "HNET:3.3:c040": -3.329,
+    "AIAYN:2:c003": -5.405,
+    "AIAYN:3.2.3:c011": -5.463
+   },
+   "gold_ce": {
+    "AIAYN:T3:r01": -0.529,
+    "AIAYN:T3:r02": -0.662
+   },
+   "final_evidence": [
+    "AIAYN:6.2:c023",
+    "AIAYN:6.1:c022",
+    "AIAYN:T3:r01"
+   ]
+  }
+ },
+ "matches_phase10c": true
+}

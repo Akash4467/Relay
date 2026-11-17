@@ -1,0 +1,25 @@
+q16 | ok refused model: not in papers | calls 1 | tok 1870 + 37 | run {'requests': 2, 'tokens': 1907, 'refused': 0}
+q20 | ok refused model: not in papers | calls 1 | tok 1914 + 58 | run {'requests': 3, 'tokens': 3879, 'refused': 0}
+q22 | ok refused model: not in papers | calls 1 | tok 1884 + 52 | run {'requests': 4, 'tokens': 5815, 'refused': 0}
+q27 | ok refused model: not in papers | calls 1 | tok 1988 + 45 | run {'requests': 5, 'tokens': 7848, 'refused': 0}
+q30 | ok refused model: not in papers | calls 1 | tok 1966 + 47 | run {'requests': 6, 'tokens': 9861, 'refused': 0}
+q01 | ok normal None | calls 1 | tok 2019 + 148 | run {'requests': 7, 'tokens': 12028, 'refused': 0}
+q02 | ok normal None | calls 2 | tok 4489 + 254 | run {'requests': 9, 'tokens': 16771, 'refused': 0}
+q03 | ok normal None | calls 2 | tok 4004 + 422 | run {'requests': 11, 'tokens': 21197, 'refused': 0}
+q04 | ok normal None | calls 2 | tok 4398 + 541 | run {'requests': 13, 'tokens': 26136, 'refused': 0}
+q05 | ok refused verification failed after redraft | calls 2 | tok 4914 + 724 | run {'requests': 15, 'tokens': 31774, 'refused': 0}
+q06 | ok normal None | calls 1 | tok 1975 + 125 | run {'requests': 16, 'tokens': 33874, 'refused': 0}
+q07 | ok normal None | calls 2 | tok 4182 + 775 | run {'requests': 18, 'tokens': 38831, 'refused': 0}
+q08 | ok refused verification failed after redraft | calls 2 | tok 4429 + 547 | run {'requests': 20, 'tokens': 43807, 'refused': 0}
+q09 | ok normal None | calls 2 | tok 4648 + 543 | run {'requests': 22, 'tokens': 48998, 'refused': 0}
+q10 | ok refused verification failed after redraft | calls 2 | tok 4489 + 475 | run {'requests': 24, 'tokens': 53962, 'refused': 0}
+q11 | ok refused verification failed after redraft | calls 2 | tok 4497 + 394 | run {'requests': 26, 'tokens': 58853, 'refused': 0}
+q12 | ok refused verification failed after redraft | calls 2 | tok 4079 + 330 | run {'requests': 28, 'tokens': 63262, 'refused': 0}
+q13 | ok normal None | calls 2 | tok 4673 + 519 | run {'requests': 30, 'tokens': 68454, 'refused': 0}
+q14 | ok normal None | calls 2 | tok 4321 + 363 | run {'requests': 32, 'tokens': 73138, 'refused': 0}
+q15 | ok normal None | calls 2 | tok 4547 + 290 | run {'requests': 34, 'tokens': 77975, 'refused': 0}
+t01 | ok normal None | calls 1 | tok 1993 + 67 | run {'requests': 35, 'tokens': 80035, 'refused': 0}
+t05 | ok normal None | calls 1 | tok 1896 + 177 | run {'requests': 36, 'tokens': 82108, 'refused': 0}
+t10 | ok refused model: not in papers | calls 1 | tok 2056 + 39 | run {'requests': 37, 'tokens': 84203, 'refused': 0}
+t13 | ok normal None | calls 1 | tok 2040 + 128 | run {'requests': 38, 'tokens': 86371, 'refused': 0}
+t29 | ok refused model: not in papers | calls 1 | tok 2086 + 173 | run {'requests': 39, 'tokens': 88630, 'refused': 0}

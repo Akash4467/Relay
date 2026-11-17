@@ -1,0 +1,57 @@
+{
+ "run": "assessment/e2e/live/B12_fix_c3",
+ "started_at": "2026-11-14T13:04:10.627+00:00",
+ "verifier": "v4.5c",
+ "verifier_module": "relay.candidate_v4_5.verifier",
+ "caps": {
+  "requests": 26,
+  "tokens": 43000
+ },
+ "prompt": "p6",
+ "prompt_module": "relay.candidate_p6.prompts",
+ "question_ids": [
+  "q16",
+  "q20",
+  "q01",
+  "q04",
+  "q07",
+  "q12",
+  "q13",
+  "q15",
+  "q14",
+  "t05",
+  "t13",
+  "n10"
+ ],
+ "model_check": {
+  "http": 200,
+  "primary_listed": true
+ },
+ "config": {
+  "model": {
+   "id": "openai/gpt-oss-120b",
+   "reasoning_effort": "low",
+   "max_tokens": 900,
+   "temperature": 0.2
+  },
+  "prompt_version": "p4",
+  "production_verifier": "v4.2",
+  "corpus_version": "c3",
+  "production_corpus": "c3",
+  "retrieval": {
+   "setting": "B",
+   "cross_paper_reserve_per_paper": 2,
+   "symbolic_query_expansion": true,
+   "prompt_caption_sharing": true
+  }
+ },
+ "git_head": "4688baf449321a4f24a49cb509edbf6b040a7a23",
+ "approval": "Owner, 2026-11-14: 'You are to test api online too irrespective of any melicious or suspeious activity' (live testing with the configured key despite the unresolved security finding).",
+ "stopped": "Groq daily limit (429) at q14; remaining questions not run",
+ "finished_at": "2026-11-14T13:07:36.739+00:00",
+ "ledger_after": {
+  "requests": 16,
+  "tokens": 31988,
+  "refused": 0
+ }
+}

@@ -1,0 +1,345 @@
+{
+ "fixed_at": "2026-11-14T12:27:35+00:00",
+ "rule": "proposed in assessment/e2e/report.md section 4 before any result; owner approved setting B only, 12 questions, 50,000-token hard cap (2026-11-14)",
+ "questions": [
+  {
+   "question_id": "q01",
+   "sets": [
+    "e2e_B12",
+    "direct"
+   ],
+   "dataset": "original",
+   "question": "According to the Transformer paper, what property of recurrent models prevents parallelization within training examples, and why does it matter more for long sequences?",
+   "answerable": true,
+   "expected_answer": "Recurrent models compute each hidden state h_t from the previous hidden state h_(t-1) and the input at position t; this inherently sequential computation precludes parallelization within training examples, which becomes critical at longer sequence lengths because memory constraints limit batching across examples.",
+   "category": "direct",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "AIAYN §1",
+     "page": 2,
+     "quote": "This inherently sequential nature precludes parallelization within training examples"
+    }
+   ],
+   "paper": "AIAYN",
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, NOT independently reviewed"
+  },
+  {
+   "question_id": "q04",
+   "sets": [
+    "e2e_B12",
+    "direct"
+   ],
+   "dataset": "original",
+   "question": "What frame rate, number of quantizers, codebook size and bitrate does the Mimi codec use?",
+   "answerable": true,
+   "expected_answer": "Mimi encodes 24 kHz audio into frames at 12.5 Hz with Q = 8 quantizers, each with a codebook of N_A = 2048 entries, which gives a bitrate of 1.1 kbps.",
+   "category": "direct",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "MOSHI §3.3.1",
+     "page": 11,
+     "quote": "each with a codebook size of N_A = 2048. At 12.5Hz, this represents a bitrate of 1.1kbps."
+    }
+   ],
+   "paper": "MOSHI",
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, NOT independently reviewed"
+  },
+  {
+   "question_id": "q07",
+   "sets": [
+    "e2e_B12",
+    "multi_section"
+   ],
+   "dataset": "original",
+   "question": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from?",
+   "answerable": true,
+   "expected_answer": "Both are stacks of N = 6 identical layers. The decoder adds a third sub-layer that performs multi-head attention over the encoder output, and its self-attention is masked so a position cannot attend to subsequent positions. In encoder-decoder attention the queries come from the previous decoder layer and the keys and values come from the encoder output.",
+   "category": "multi_section",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "AIAYN §3.1",
+     "page": 3,
+     "quote": "the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack"
+    },
+    {
+     "section": "AIAYN §3.1",
+     "page": 3,
+     "quote": "to prevent positions from attending to subsequent positions"
+    },
+    {
+     "section": "AIAYN §3.2.3",
+     "page": 5,
+     "quote": "the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder"
+    }
+   ],
+   "paper": "AIAYN",
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, NOT independently reviewed"
+  },
+  {
+   "question_id": "q12",
+   "sets": [
+    "e2e_B12",
+    "numerical_table"
+   ],
+   "dataset": "original",
+   "question": "What spoken question answering accuracy does Moshi reach on Web Questions, Llama Questions and Audio TriviaQA, with and without Inner Monologue?",
+   "answerable": true,
+   "expected_answer": "With Inner Monologue: 26.6 (Web Q.), 62.3 (Llama Q.), 22.8 (Audio TriviaQA). Without it: 9.2, 21.0 and 7.3, so Inner Monologue roughly triples accuracy.",
+   "category": "numerical_table",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "MOSHI Table 8",
+     "page": null,
+     "quote": "Moshi: Web Q. = 26.6; LlaMA Q. = 62.3; Audio Trivia QA = 22.8"
+    },
+    {
+     "section": "MOSHI Table 8",
+     "page": null,
+     "quote": "Moshi (no Inner Monologue): Web Q. = 9.2; LlaMA Q. = 21.0; Audio Trivia QA = 7.3"
+    }
+   ],
+   "paper": "MOSHI",
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, NOT independently reviewed"
+  },
+  {
+   "question_id": "q13",
+   "sets": [
+    "e2e_B12",
+    "numerical_table"
+   ],
+   "dataset": "original",
+   "question": "At compute matched to GPT-3 Large, what average zero-shot accuracy does the 2-stage H-Net reach compared with the BPE Transformer, and which larger Transformer does it match?",
+   "answerable": true,
+   "expected_answer": "The 2-stage H-Net averages 55.5 versus 53.3 for the tokenized Transformer at GPT-3 Large compute; 55.5 equals the Transformer's average at the larger GPT-3 XL compute.",
+   "category": "numerical_table",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "HNET Table 2",
+     "page": null,
+     "quote": "H-Net (2-stage) (#FLOPs matched to GPT-3 Large): "
+    },
+    {
+     "section": "HNET Table 2",
+     "page": null,
+     "quote": "Transformer (#FLOPs matched to GPT-3 Large): Input = Token"
+    },
+    {
+     "section": "HNET Table 2",
+     "page": null,
+     "quote": "Transformer (#FLOPs matched to GPT-3 XL): Input = Token"
+    }
+   ],
+   "paper": "HNET",
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, NOT independently reviewed"
+  },
+  {
+   "question_id": "q15",
+   "sets": [
+    "e2e_B12",
+    "cross_paper"
+   ],
+   "dataset": "original",
+   "question": "Which NVIDIA GPUs were used to train the original Transformer and Moshi?",
+   "answerable": true,
+   "expected_answer": "The Transformer was trained on one machine with 8 NVIDIA P100 GPUs (12 hours for base, 3.5 days for big). All Moshi models were trained on H100 GPUs using FSDP and activation checkpointing; the Moshi paper does not give a GPU count.",
+   "category": "cross_paper",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "AIAYN §5.2",
+     "page": 7,
+     "quote": "We trained our models on one machine with 8 NVIDIA P100 GPUs."
+    },
+    {
+     "section": "MOSHI §4.4",
+     "page": 20,
+     "quote": "All models are trained on H100 GPUs, using FSDP and activation checkpointing."
+    }
+   ],
+   "paper": "AIAYN|MOSHI",
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, NOT independently reviewed"
+  },
+  {
+   "question_id": "q14",
+   "sets": [
+    "e2e_B12",
+    "terminology_mismatch"
+   ],
+   "dataset": "original",
+   "question": "How is the input segmented in the original Transformer's translation experiments compared with H-Net?",
+   "answerable": true,
+   "expected_answer": "The Transformer used fixed subword vocabularies: byte-pair encoding with a shared vocabulary of about 37000 tokens for English-German and a 32000 word-piece vocabulary for English-French. H-Net reads raw bytes and learns its own segmentation with dynamic chunking; its tokenized Transformer baseline uses 1792 GPT-2 tokens, roughly 8192 bytes.",
+   "category": "cross_paper",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "AIAYN §5.1",
+     "page": 7,
+     "quote": "which has a shared source-target vocabulary of about 37000 tokens"
+    },
+    {
+     "section": "AIAYN §5.1",
+     "page": 7,
+     "quote": "split tokens into a 32000 word-piece vocabulary"
+    },
+    {
+     "section": "HNET §3",
+     "page": 11,
+     "quote": "the Transformer uses 1792 tokens from the GPT2 tokenizer (roughly equivalent to 8192 bytes)"
+    }
+   ],
+   "paper": "AIAYN|HNET",
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, NOT independently reviewed"
+  },
+  {
+   "question_id": "t05",
+   "sets": [
+    "e2e_B12",
+    "table_set"
+   ],
+   "dataset": "table",
+   "question": "In the Moshi paper's Mimi codec ablation table that reports ABX, VisQOL, MOSNet and MUSHRA, what MUSHRA score does the configuration with a check mark in all five component columns obtain?",
+   "answerable": true,
+   "expected_answer": "64.0 ± 1.7.",
+   "category": "symbol_configuration_value",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "MUSHRA (↑) = 64.0±1.7"
+      ],
+      "cells": [
+       "Quantization / Rate = ✓",
+       "Transformer / in encoder = ✓",
+       "Transformer / in decoder = ✓",
+       "WavLM / distillation = ✓",
+       "Split / quantizer = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "MUSHRA (↑)"
+    ]
+   },
+   "evidence": null,
+   "paper": "MOSHI",
+   "table_id": "T3",
+   "label_provenance": "eval/phase7: PROVISIONAL assistant labels"
+  },
+  {
+   "question_id": "t13",
+   "sets": [
+    "e2e_B12",
+    "table_set"
+   ],
+   "dataset": "table",
+   "question": "In the Moshi RQ-Transformer ablation, with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2], what perplexity does the row with a check mark under RQ-Transformer report?",
+   "answerable": true,
+   "expected_answer": "36.8.",
+   "category": "symbol_configuration_value",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "[0, 2, 2, 2, 2, 2, 2, 2]",
+       "Perplexity = 136.8"
+      ],
+      "cells": [
+       "RQ-Transformer = ✓"
+      ],
+      "paper_cells": [
+       "Perplexity = 36.8"
+      ]
+     }
+    ],
+    "columns": [
+     "Perplexity"
+    ]
+   },
+   "evidence": null,
+   "paper": "MOSHI",
+   "table_id": "T5",
+   "label_provenance": "eval/phase7: PROVISIONAL assistant labels"
+  },
+  {
+   "question_id": "n10",
+   "sets": [
+    "e2e_B12",
+    "prose_and_table"
+   ],
+   "dataset": "new",
+   "question": "How many attention heads does the base Transformer use, and what development BLEU does the base configuration reach in the variation table?",
+   "answerable": true,
+   "expected_answer": "8 heads (Section 3.2.2); base development BLEU 25.8 (Table 3).",
+   "category": "prose_and_table",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Configuration base:"
+      ],
+      "cells": [
+       "BLEU / (dev) = 25.8"
+      ]
+     }
+    ],
+    "quotes": [
+     {
+      "section": "AIAYN §3.2.2",
+      "quote": "In this work we employ h=8 parallel attention layers, or heads."
+     }
+    ]
+   },
+   "evidence": null,
+   "paper": "AIAYN",
+   "table_id": "T3",
+   "label_provenance": "experiments/phase11/new_cases.json: PROVISIONAL assistant labels"
+  },
+  {
+   "question_id": "q16",
+   "sets": [
+    "e2e_B12",
+    "unanswerable"
+   ],
+   "dataset": "original",
+   "question": "How many US dollars did it cost to train the big Transformer on English-German?",
+   "answerable": false,
+   "expected_answer": "Refuse: the paper reports training cost in FLOPs and as 3.5 days on 8 P100 GPUs, never in dollars.",
+   "category": "unanswerable",
+   "gold": null,
+   "evidence": [],
+   "paper": "AIAYN",
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, NOT independently reviewed"
+  },
+  {
+   "question_id": "q20",
+   "sets": [
+    "e2e_B12",
+    "unanswerable"
+   ],
+   "dataset": "original",
+   "question": "According to Vaswani et al., how does the Transformer compare with GPT-4 on MMLU?",
+   "answerable": false,
+   "expected_answer": "Refuse: the Transformer paper has no MMLU or GPT-4 results. MMLU and GPT-4 appear only in the Moshi paper, which must not be attributed to AIAYN.",
+   "category": "unanswerable",
+   "gold": null,
+   "evidence": [],
+   "paper": "AIAYN",
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, NOT independently reviewed"
+  }
+ ]
+}

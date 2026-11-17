@@ -1,0 +1,41 @@
+{
+ "question_id": "q05",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:50:54.642+00:00",
+  "t_send_ns": 208704643550200,
+  "status": 200,
+  "t_first_byte_ns": 208705157858700,
+  "t_first_content_ns": 208706005470000,
+  "t_last_ns": 208706303300300,
+  "max_gap_ms": 847.5902,
+  "text": "The routing module predicts boundaries between adjacent elements through a similarity score [HNET:1:c007]. The routing module implements this intuition through cosine similarity between adjacent encoder outputs and computes boundary probabilities p_t = ½ (1 − (q_tᵀ k_{t‑1}) / ‖q_t‖ ‖k_{t‑1}‖) ∈ [0, 1] and boundary indicators b_t = 𝟙_{ {p_t ≥ 0.5} } with p_1 = 1.0 by definition [HNET:2.2.1:c023].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.391879591,
+   "prompt_tokens": 2821,
+   "prompt_time": 0.295006997,
+   "completion_tokens": 409,
+   "completion_time": 0.855397134,
+   "total_tokens": 3230,
+   "total_time": 1.150404131,
+   "completion_tokens_details": {
+    "reasoning_tokens": 257
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "958",
+   "x-ratelimit-reset-requests": "1h0m28.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "4158",
+   "x-ratelimit-reset-tokens": "28.815s"
+  },
+  "error": null,
+  "first_byte_ms": 514.3,
+  "first_content_ms": 1361.9,
+  "total_ms": 1659.8
+ }
+}

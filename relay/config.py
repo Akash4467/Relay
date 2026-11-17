@@ -7,7 +7,7 @@ from pathlib import Path
 import yaml
 from pydantic import BaseModel
 
-CONFIG_DIR = Path("config")
+CONFIG_DIR = Path(__file__).resolve().parents[1] / "config"  # repository root, whatever the working directory
 
 
 class RetrievalSetting(BaseModel):

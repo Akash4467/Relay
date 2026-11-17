@@ -10,6 +10,7 @@ without any request header, so the API key never reaches a log.
 from __future__ import annotations
 
 import json
+import re
 import os
 import time
 from dataclasses import asdict, dataclass, field
@@ -58,6 +59,18 @@ class Call:
             return None
 
 
+_DAILY = re.compile(r"per day|\((?:TPD|RPD)\)|\b(?:TPD|RPD)\b|\bdaily\b", re.I)
+
+
+def is_daily_429(e: LLMError) -> bool:
+    """A 429 for the daily quota, not the per-minute one (F4). Either the message names a per-day limit (Groq:
+    "... on tokens per day (TPD)" / "requests per day (RPD)"), or the request-quota header, which Groq reports per
+    day, says none are left."""
+    if e.kind != "rate_limited":
+        return False
+    return bool(_DAILY.search(e.call.error or "")) or e.call.headers.get("x-ratelimit-remaining-requests") == "0"
+
+
 def from_env(timeouts_ms: dict, raw_dir: Path | None = RAW_DIR) -> "ChatClient":
     """LLM_PROVIDER=groq for real calls; anything else (the default) is the stand-in, so a missing variable
     never spends real quota. The key comes from the environment (uv run --env-file .env), never from code."""
@@ -77,8 +90,11 @@ class ChatClient:
             raise ValueError("source must be 'real' or 'standin'")
         self.base_url, self.source, self.raw_dir = base_url.rstrip("/"), source, raw_dir
         self.total_ms = timeouts_ms["total_call_ms"]
-        # shortcut: the first-byte limit also bounds the gap between chunks (one httpx read timeout);
-        # split them when the stand-in tests mid-stream stalls (phase 5)
+        # stream_idle_ms is intentionally not enforced on its own (phase 10B, F5): httpx has one read timeout, which
+        # bounds both the wait for the first byte and every gap between chunks, so a stalled stream is cut after
+        # first_byte_ms (15 s). A separate 8 s idle check could only fire after the next chunk had already arrived,
+        # i.e. it would discard a stream that recovered, never cut one that stalled. config keeps
+        # stream_idle_ms <= first_byte_ms (tested), so the effective idle bound is first_byte_ms.
         timeout = httpx.Timeout(connect=timeouts_ms["connect_ms"] / 1000, read=timeouts_ms["first_byte_ms"] / 1000,
                                 write=10.0, pool=10.0)
         self.http = httpx.Client(timeout=timeout, transport=transport,
@@ -128,7 +144,11 @@ class ChatClient:
             data = line[5:].strip()
             if data == "[DONE]":
                 break
-            chunk = json.loads(data)
+            try:
+                chunk = json.loads(data)
+            except json.JSONDecodeError as e:  # a provider fault, not our bug: recorded, settled, retryable (F3)
+                call.error, call.t_last_ns = f"malformed stream chunk: {e.msg}", time.perf_counter_ns()
+                raise LLMError("upstream_error", call) from e
             # usage location is not documented for streams: accept the OpenAI place or Groq's x_groq
             if chunk.get("usage"):
                 call.usage, call.usage_source = chunk["usage"], "usage"

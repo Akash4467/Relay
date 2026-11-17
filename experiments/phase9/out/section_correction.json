@@ -1,0 +1,410 @@
+{
+ "version": "s1",
+ "corrections": [
+  {
+   "paper": "MOSHI",
+   "table_id": "T3",
+   "label": "tab:mimi_ablations",
+   "section_id_original": "5.1",
+   "section_id_corrected": "5.2",
+   "version": "s1"
+  }
+ ],
+ "evidence": {
+  "source": {
+   "file": "sections/evaluation.tex",
+   "label_line": 47,
+   "heading_before_float": [
+    26,
+    "\\subsection{Text Language Modeling}"
+   ],
+   "heading_after_float": [
+    90,
+    "\\subsection{Audio Tokenization}"
+   ]
+  },
+  "pdf": {
+   "table_3_caption_page": 22,
+   "heading_5_1_page": 21,
+   "heading_5_2_page": 23,
+   "table_17_caption_page": 53
+  },
+  "citations_of_table_3": {
+   "3.3.1": 2,
+   "3.3.2": 1,
+   "5.2": 3
+  },
+  "citations_of_table_17": {}
+ },
+ "checks": {
+  "only_table_3_changed": true,
+  "table_3_identity_caption_rows_unchanged": true,
+  "table_17_unchanged": true,
+  "target_section_cites_table_3": true,
+  "original_section_does_not_cite_table_3": true
+ },
+ "same_defect_not_corrected": [
+  {
+   "table_id": "T1",
+   "label": "tab:hparams",
+   "assigned": "3.2.1",
+   "cited_in": {
+    "3.4.1": 1,
+    "4.4": 1,
+    "5.3": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "3.4.1"
+   ]
+  },
+  {
+   "table_id": "T2",
+   "label": "tab:llm_eval",
+   "assigned": "5",
+   "cited_in": {
+    "5.1": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.1"
+   ]
+  },
+  {
+   "table_id": "T4",
+   "label": "tab:mimi_baselines",
+   "assigned": "5.1",
+   "cited_in": {
+    "3.3.1": 1,
+    "5.2": 2
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.2"
+   ]
+  },
+  {
+   "table_id": "T5",
+   "label": "tab:ablation-rq",
+   "assigned": "5.2",
+   "cited_in": {
+    "5.3": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.3"
+   ]
+  },
+  {
+   "table_id": "T6",
+   "label": "tab:ablation-delays",
+   "assigned": "5.2",
+   "cited_in": {
+    "3.4.1": 1,
+    "5.3": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.3"
+   ]
+  },
+  {
+   "table_id": "T7",
+   "label": "tab:textless",
+   "assigned": "5.3",
+   "cited_in": {
+    "3.4.4": 1,
+    "5.4": 1,
+    "5.5": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.4",
+    "5.5"
+   ]
+  },
+  {
+   "table_id": "T8",
+   "label": "tab:qa",
+   "assigned": "5.4",
+   "cited_in": {
+    "5.5": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.5"
+   ]
+  },
+  {
+   "table_id": "T9",
+   "label": "tab:multistream",
+   "assigned": "5.5",
+   "cited_in": {
+    "5.6": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.6"
+   ]
+  }
+ ],
+ "moshi_table_scan": [
+  {
+   "table_id": "T1",
+   "label": "tab:hparams",
+   "assigned": "3.2.1",
+   "cited_in": {
+    "3.4.1": 1,
+    "4.4": 1,
+    "5.3": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "3.4.1"
+   ]
+  },
+  {
+   "table_id": "T2",
+   "label": "tab:llm_eval",
+   "assigned": "5",
+   "cited_in": {
+    "5.1": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.1"
+   ]
+  },
+  {
+   "table_id": "T3",
+   "label": "tab:mimi_ablations",
+   "assigned": "5.1",
+   "cited_in": {
+    "3.3.1": 2,
+    "3.3.2": 1,
+    "5.2": 3
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": true,
+   "same_top_level_citing_sections": [
+    "5.2"
+   ]
+  },
+  {
+   "table_id": "T4",
+   "label": "tab:mimi_baselines",
+   "assigned": "5.1",
+   "cited_in": {
+    "3.3.1": 1,
+    "5.2": 2
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.2"
+   ]
+  },
+  {
+   "table_id": "T5",
+   "label": "tab:ablation-rq",
+   "assigned": "5.2",
+   "cited_in": {
+    "5.3": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.3"
+   ]
+  },
+  {
+   "table_id": "T6",
+   "label": "tab:ablation-delays",
+   "assigned": "5.2",
+   "cited_in": {
+    "3.4.1": 1,
+    "5.3": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.3"
+   ]
+  },
+  {
+   "table_id": "T7",
+   "label": "tab:textless",
+   "assigned": "5.3",
+   "cited_in": {
+    "3.4.4": 1,
+    "5.4": 1,
+    "5.5": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.4",
+    "5.5"
+   ]
+  },
+  {
+   "table_id": "T8",
+   "label": "tab:qa",
+   "assigned": "5.4",
+   "cited_in": {
+    "5.5": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.5"
+   ]
+  },
+  {
+   "table_id": "T9",
+   "label": "tab:multistream",
+   "assigned": "5.5",
+   "cited_in": {
+    "5.6": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.6"
+   ]
+  },
+  {
+   "table_id": "T10",
+   "label": "tab:quanthelium",
+   "assigned": "5.8",
+   "cited_in": {
+    "5.8": 1
+   },
+   "assigned_section_cites_it": true,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.8"
+   ]
+  },
+  {
+   "table_id": "T11",
+   "label": "tab:quantmoshi",
+   "assigned": "5.8",
+   "cited_in": {
+    "5.8": 1
+   },
+   "assigned_section_cites_it": true,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.8"
+   ]
+  },
+  {
+   "table_id": "T12",
+   "label": "tab:artifactssummary",
+   "assigned": "5.8",
+   "cited_in": {
+    "5.8": 1
+   },
+   "assigned_section_cites_it": true,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "5.8"
+   ]
+  },
+  {
+   "table_id": "T13",
+   "label": "tab:regurgitation",
+   "assigned": "6.2",
+   "cited_in": {
+    "6.2": 2
+   },
+   "assigned_section_cites_it": true,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "6.2"
+   ]
+  },
+  {
+   "table_id": "T14",
+   "label": "tab:speaker_consistency",
+   "assigned": "6.3",
+   "cited_in": {
+    "6.3": 1
+   },
+   "assigned_section_cites_it": true,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "6.3"
+   ]
+  },
+  {
+   "table_id": "T15",
+   "label": "tab:audioseal",
+   "assigned": "6.4",
+   "cited_in": {
+    "6.4": 1
+   },
+   "assigned_section_cites_it": true,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "6.4"
+   ]
+  },
+  {
+   "table_id": "T16",
+   "label": "tab:idempotence",
+   "assigned": "6.4",
+   "cited_in": {
+    "6.4": 1
+   },
+   "assigned_section_cites_it": true,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": [
+    "6.4"
+   ]
+  },
+  {
+   "table_id": "T17",
+   "label": "tab:mimi_ablations_appendix",
+   "assigned": "A",
+   "cited_in": {},
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": []
+  },
+  {
+   "table_id": "T18",
+   "label": "tab:results_toxicity",
+   "assigned": "E",
+   "cited_in": {
+    "6.1": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": []
+  },
+  {
+   "table_id": "T19",
+   "label": "tab:list_voices",
+   "assigned": "F.3",
+   "cited_in": {
+    "4.3": 1
+   },
+   "assigned_section_cites_it": false,
+   "corrected_in_s1": false,
+   "same_top_level_citing_sections": []
+  }
+ ],
+ "all_checks_passed": true
+}

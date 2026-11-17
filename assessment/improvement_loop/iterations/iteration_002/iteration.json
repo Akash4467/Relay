@@ -1,0 +1,24 @@
+{
+ "iteration_id": "iteration_002",
+ "git_head": "4688baf449321a4f24a49cb509edbf6b040a7a23",
+ "working_tree_snapshot": "relay/ + config/ sha256 = 1b0f5b1d2c62e5fc (production files unchanged; candidates added under relay/candidate_*)",
+ "candidate": {"name": "prompt p5r", "module": "relay.candidate_p5r.prompts", "verifier": "v4.2 (production)",
+               "change": "redraft instruction only: delete or restate each rejected sentence in the cited passage's own words; no added qualifiers, names, comparisons or interpretations; cite the passage holding every number; never repeat a listed sentence unchanged. System prompt and first-draft messages identical to p4."},
+ "targeted_failures": ["F-GEN-REDRAFT: q02, q04, q08, q13, q15"],
+ "regression_subset": ["q03 (A, baseline correct after redraft)", "q16 (C, unanswerable)"],
+ "offline_regression": {"file": "offline_tests.json", "all_exit_zero": true, "full_python_suite": "502 passed (493 + 9 candidate tests)",
+                        "experiments": "phase11e 11, phase11a 24, phase11b 12, phase11c 6, phase10 31, phase9b 63 passed",
+                        "offline_integration": "31/31", "go": "vet + tests ok (standin, loadgen)"},
+ "live": {"run": "live/", "questions": 7, "requests": 14, "model_checks_included": 1, "tokens": 27131, "provider_errors": 0, "timeouts": 0},
+ "results_vs_baseline_same_7_questions": {
+   "baseline": {"correct": "1/6 answerable (q03)", "false_refusal": "5/6", "correct_refusal": "1/1", "redraft_success": "1/6"},
+   "p5r": {"correct": "3/6 (q03, q04, q13)", "false_refusal": "3/6 (q02, q08, q15)", "wrong": "0/6", "correct_refusal": "1/1", "unsupported": "0/1", "redraft_success": "3/6", "citation_validity": "6/6"},
+   "attribution": "first drafts were near-identical to the baseline's (q04, q15 byte-identical), so the change in outcome comes from the redraft",
+   "latency": "ttft p50 743 ms (baseline 799); total p50 29.7 s (baseline 28.6 s; governor-dominated)",
+   "tokens_per_question_in_p50": "3,711 (baseline 3,639)"},
+ "regressions": "none observed in the 2-question regression subset",
+ "trade_off": "readability: redrafts restate passages in the papers' own voice ('We use Q = 8 quantizers ...') or as raw table-row lines (q13). The content is correct and cited, but it reads as the authors speaking. Flagged for the owner.",
+ "remaining_failure_root_cause": "F-VER-PREMISE: verbatim sentences from the cited chunk are rejected (q15 'All models are trained on H100 GPUs' 0.48; q02 'For each of these we use d_k=d_v=d_model/h=64' 0.81; q08 0.57-0.69): whole-chunk premise + anaphora",
+ "decision": "accepted (provisional candidate; not production)",
+ "reason": "fixes a demonstrated reliability defect (wasted redraft: redraft success 1/6 -> 3/6 on the same questions) with no observed increase in wrong, unsupported or uncited answers; small sample (directional only); readability trade-off needs owner approval before any production use"
+}

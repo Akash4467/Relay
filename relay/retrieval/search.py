@@ -17,6 +17,7 @@ import faiss
 import numpy as np
 
 from relay.config import RetrievalSetting, app_config
+from relay.retrieval import glossary
 from relay.retrieval.context import fill
 from relay.retrieval.index_build import INDEX_DIR, QUERY_PREFIX, tokenize
 from relay.retrieval.latex_parse import PROCESSED_DIR
@@ -34,6 +35,8 @@ class Evidence:
     policy: str = "global"                       # "global" | "per_paper"
     named_papers: list[str] = field(default_factory=list)
     candidates: list[dict] = field(default_factory=list)  # fused (and reranked) list before the cap, for analysis
+    expansion: dict | None = None                 # phase 11B: glossary.expand() result when expansion was on
+    caption_sharing: bool = False                 # phase 11B: tokens counted on the caption-shared model view
 
 
 class Index:
@@ -87,27 +90,40 @@ def reserve(candidates: list[dict], papers: list[str], per_paper: int) -> list[d
     return picked + [c for c in candidates if c not in picked]
 
 
+def policy_flags(cfg: dict) -> dict:
+    """The phase 11B switches from config retrieval_policy, as search() keyword arguments (production callers)."""
+    pol = cfg.get("retrieval_policy") or {}  # absent switches are off
+    return {"expand": bool(pol.get("symbolic_query_expansion", False)),
+            "share_captions": bool(pol.get("prompt_caption_sharing", False))}
+
+
 def search(question: str, setting: RetrievalSetting, context_cap: int, index: Index, reranker=None,
-           reserve_per_paper: int | None = None) -> Evidence:
-    """context_cap is the pressure level's cap; the tighter of it and setting.context_budget applies."""
+           reserve_per_paper: int | None = None, expand: bool = False, share_captions: bool = False) -> Evidence:
+    """context_cap is the pressure level's cap; the tighter of it and setting.context_budget applies.
+    Phase 11B (Configuration G, off unless the caller passes the config flags): expand=True retrieves (BM25, dense,
+    cross-encoder) with glossary.expand()'s query; the ORIGINAL question still decides the paper policy, and is what
+    generation and verification see. share_captions=True counts the evidence budget on the caption-shared model view.
+    Limits, scores and the returned chunks are otherwise unchanged."""
     if setting.rerank and reranker is None:
         raise ValueError("setting needs a reranker")
+    expansion = glossary.expand(question) if expand else None
+    query = expansion["expanded"] if expansion else question
     papers = named_papers(question)
     per_paper = len(papers) >= 2
-    qvec = index.embed_query(question)
+    qvec = index.embed_query(query)
     if per_paper:
         k = max(1, setting.candidates // len(papers))
-        candidates = sorted((c for p in papers for c in index.fused(question, qvec, k, p)),
+        candidates = sorted((c for p in papers for c in index.fused(query, qvec, k, p)),
                             key=lambda c: -c["score_rrf"])
     else:
-        candidates = index.fused(question, qvec, setting.candidates)
+        candidates = index.fused(query, qvec, setting.candidates)
     if setting.rerank:
-        candidates = rerank(question, candidates, reranker)  # global rerank across papers
+        candidates = rerank(query, candidates, reranker)  # global rerank across papers
     ordered = candidates
     if per_paper:
         n = reserve_per_paper if reserve_per_paper is not None else app_config()["retrieval_policy"]["cross_paper_reserve_per_paper"]
         ordered = reserve(candidates, papers, n)
-    passages, tokens = fill(ordered[:setting.final_passages], min(context_cap, setting.context_budget))
+    passages, tokens = fill(ordered[:setting.final_passages], min(context_cap, setting.context_budget), share_captions)
     cos = [c["dense_cos"] for c in candidates if c["dense_cos"] is not None]
     return Evidence(
         passages=passages,
@@ -117,4 +133,6 @@ def search(question: str, setting: RetrievalSetting, context_cap: int, index: In
         policy="per_paper" if per_paper else "global",
         named_papers=papers,
         candidates=candidates,
+        expansion=expansion,
+        caption_sharing=share_captions,
     )

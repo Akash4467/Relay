@@ -24,9 +24,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from fastapi import FastAPI
-from fastapi.responses import StreamingResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel
 
+from relay import corpus
 from relay.config import app_config, retrieval_settings
 from relay.governor.governor import Governor
 from relay.llm import prompts
@@ -35,7 +36,7 @@ from relay.llm.hosted import DailyExhausted, GovernorReject, HostedLLM, RetryBud
 from relay.pipeline import Verifier, answer_from_evidence
 from relay.retrieval.index_build import load_model
 from relay.retrieval.rerank import load_reranker
-from relay.retrieval.search import Index, search
+from relay.retrieval.search import Index, policy_flags, search
 from relay.verify import nli
 
 TRACE_DIR = Path(os.environ.get("TRACE_DIR", "results/raw/traces"))
@@ -60,13 +61,19 @@ class State:
         self.client = from_env(self.cfg["timeouts"])
         if self.client.source == "real" and os.environ.get("ALLOW_REAL") != "1":
             raise SystemExit("refusing to serve real Groq without ALLOW_REAL=1 (every real call needs approval)")
+        sizes = {s.piece_tokens for s in self.settings.values()}
+        try:  # phase 11D: the configured corpus, validated against its manifest before anything is served
+            self.corpus = corpus.selected(self.cfg)
+            self.corpus_check = corpus.validate(self.corpus, sizes)
+        except corpus.CorpusError as e:
+            raise SystemExit(f"corpus check failed: {e}") from e
         embedder = load_model()
-        self.indexes = {size: Index(size, embedder) for size in {s.piece_tokens for s in self.settings.values()}}
+        self.indexes = corpus.load_indexes(self.corpus, sizes, embedder)
         self.reranker = load_reranker() if any(s.rerank for s in self.settings.values()) else None
         ver = self.cfg["verification"]
         self.verifier = Verifier(nli.load_nli(ver["nli_model"]), ver["entail_min"], ver["entail_min_flagged"])
         self.governor = Governor.from_config()
-        self.budget = RetryBudget(self.cfg["retry"]["budget_frac_of_initial_per_min"])
+        self.budget = RetryBudget.from_config(self.cfg["retry"])
         q = self.cfg["queue"]
         self.workers, self.max_queue = q["semaphore_inflight_hosted_calls"], q["max_length"]
         self.executor = ThreadPoolExecutor(max_workers=self.workers)
@@ -127,8 +134,11 @@ def work(s: State, req: AskRequest, deadline: float, rec: dict) -> tuple[str, di
     setting = s.settings[req.retrieval_setting or s.default_setting]
     t0 = time.perf_counter_ns()
     ev = search(req.question, setting, s.cfg["pressure"]["L0"]["context_cap"], s.indexes[setting.piece_tokens],
-                s.reranker if setting.rerank else None)
-    rec.update(retrieval_ms=ms_since(t0), context_tokens=ev.tokens, retrieval_policy=ev.policy)
+                s.reranker if setting.rerank else None, **policy_flags(s.cfg))
+    rec.update(retrieval_ms=ms_since(t0), context_tokens=ev.tokens, retrieval_policy=ev.policy,
+               query_expansion=ev.expansion["terms"] if ev.expansion else [],
+               retrieval_query=ev.expansion["expanded"] if ev.expansion and ev.expansion["terms"] else None,
+               caption_sharing=ev.caption_sharing, evidence_ids=[p["chunk_id"] for p in ev.passages])
     retry = s.cfg["retry"]
     llm = HostedLLM(s.client, s.governor, s.primary, s.output_reserve,
                     request_overhead=s.cfg["reservation"]["request_overhead_tokens"], question_id=req.question_id,
@@ -178,7 +188,25 @@ async def ask(req: AskRequest):
            "start_time": datetime.now(timezone.utc).isoformat(timespec="milliseconds"),
            "question_id": req.question_id, "retrieval_setting": req.retrieval_setting or s.default_setting,
            "deadline_ms": req.deadline_ms, "queue_length_at_arrival": s.waiting, "busy_at_arrival": s.busy,
-           "degradation_level": "L0", "cache_hit": False, "retries": 0, "tokens_in": 0, "tokens_out": 0}
+           "degradation_level": "L0", "cache_hit": False, "retries": 0, "tokens_in": 0, "tokens_out": 0,
+           "verification_policy_version": s.cfg["verification_policy_version"],
+           "corpus_version": getattr(getattr(s, "corpus", None), "corpus_version", s.cfg.get("corpus_version"))}
+
+    # input validation (phase 10B, F1/F6): reject before retrieval or any model call, with HTTP 400; still traced
+    question_chars, limit = len(req.question), s.cfg["input"]["max_question_chars"]
+    bad = None
+    if not req.question.strip():
+        bad = ("invalid_question", "the question is empty")
+    elif question_chars > limit:
+        bad = ("invalid_question", f"the question is too long ({question_chars} characters; the limit is {limit})")
+    elif req.retrieval_setting is not None and req.retrieval_setting not in s.settings:
+        bad = ("invalid_retrieval_setting", f"unknown retrieval_setting {req.retrieval_setting!r}; "
+                                            f"use one of {sorted(s.settings)}")
+    if bad:
+        rec.update(admitted=False, queue_wait_ms=0.0, status="bad_request", failure_reason=bad[0], answer_tier=None,
+                   reply_reason=bad[0], question_chars=question_chars, total_ms=ms_since(arrival))
+        s.trace(rec)
+        return JSONResponse({"error": bad[0], "detail": bad[1], "request_id": rec["request_id"]}, status_code=400)
 
     def finish(text: str, done: dict) -> None:
         rec.update(status=done["status"], failure_reason=done.get("reason") if done["status"] != "ok" else None,
@@ -261,7 +289,7 @@ async def admin_reset():
     if s.client.source != "standin":
         return {"reset": False, "reason": "only allowed against the stand-in"}
     s.governor = Governor.from_config()
-    s.budget = RetryBudget(s.cfg["retry"]["budget_frac_of_initial_per_min"])
+    s.budget = RetryBudget.from_config(s.cfg["retry"])
     s.peak_waiting, s.service_ema_s = s.waiting, 5.0
     return {"reset": True}
 
@@ -270,6 +298,7 @@ async def admin_reset():
 async def health():
     s = STATE
     return {"indexes": sorted(s.indexes), "source": s.client.source, "queue_waiting": s.waiting, "busy": s.busy,
+            "corpus": getattr(s, "corpus_check", None),
             "peak_waiting": s.peak_waiting, "service_ema_s": round(s.service_ema_s, 2),
             "daily_exhausted_for_s": s.governor.daily_exhausted_for_s(s.primary["id"]),
             "primary_tpm_available": round(s.governor.buckets[s.primary["id"]]["tpm"].available(s.governor.clock()))}

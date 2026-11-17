@@ -1,0 +1,272 @@
+{
+ "inventory_counts": {
+  "unknown": 7,
+  "recorded": 15,
+  "established": 9
+ },
+ "all_classifications_verified": true,
+ "unknown_excluded_from_comparisons": true,
+ "fixture_citation_chunks": {
+  "HNET:2.2.1:c023": {
+   "text_identical_in_c3_and_c6": true
+  },
+  "AIAYN:T3:r02": {
+   "text_identical_in_c3_and_c6": true
+  }
+ },
+ "fixture_sha256_now": {
+  "q05.json": "3a13bd85eca1535eb31297a596a7ad3c7225645e9ad8cb7c980a1095ac62d923",
+  "q11.json": "5224641c8c59661312b94e8581ceac5be31de3feb9c9bcbecbbb8c38b6e8206d",
+  "q16.json": "2edaa0c328a873eab2b3316ce85f7a7a8f9c066582db7d213027d66f121458c2"
+ },
+ "artifacts": [
+  {
+   "path": "fixtures/perf/q05.json",
+   "classified": "unknown",
+   "corpus": "unknown",
+   "verified": true,
+   "evidence_checked": "1 records; corpus-related keys: none",
+   "excluded_from_comparisons": true
+  },
+  {
+   "path": "fixtures/perf/q11.json",
+   "classified": "unknown",
+   "corpus": "unknown",
+   "verified": true,
+   "evidence_checked": "1 records; corpus-related keys: none",
+   "excluded_from_comparisons": true
+  },
+  {
+   "path": "fixtures/perf/q16.json",
+   "classified": "unknown",
+   "corpus": "unknown",
+   "verified": true,
+   "evidence_checked": "1 records; corpus-related keys: none",
+   "excluded_from_comparisons": true
+  },
+  {
+   "path": "results/raw/real/2026-11-12.jsonl",
+   "classified": "unknown",
+   "corpus": "unknown",
+   "verified": true,
+   "evidence_checked": "7 records; corpus-related keys: none",
+   "excluded_from_comparisons": true
+  },
+  {
+   "path": "results/raw/real/2026-11-13.jsonl",
+   "classified": "unknown",
+   "corpus": "unknown",
+   "verified": true,
+   "evidence_checked": "24 records; corpus-related keys: none",
+   "excluded_from_comparisons": true
+  },
+  {
+   "path": "results/raw/e2e/2026-11-12.jsonl",
+   "classified": "unknown",
+   "corpus": "unknown",
+   "verified": true,
+   "evidence_checked": "3 records; corpus-related keys: none",
+   "excluded_from_comparisons": true
+  },
+  {
+   "path": "results/raw/traces/2026-11-12.jsonl",
+   "classified": "unknown",
+   "corpus": "unknown",
+   "verified": true,
+   "evidence_checked": "174 records; corpus-related keys: none",
+   "excluded_from_comparisons": true
+  },
+  {
+   "path": "results/raw/answer_quality/real_2026-11-13T18-06-56Z.jsonl",
+   "classified": "recorded",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "corpus_version on every question/run record: ['c3'] (16 records); bookkeeping records without the field: ['end', 'started']",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase10/out/live/pipeline_2026-11-14T02-41-18Z.json",
+   "classified": "established",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "no corpus field in artifact: True; c3 unchanged since 9A: True",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase10/out/live/pipeline_2026-11-14T03-19-29Z.json",
+   "classified": "recorded",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "versions.corpus_version = c3",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase10/out/offline_integration_2026-11-14T02-23-43Z.json",
+   "classified": "established",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "no corpus field in artifact: True; c3 unchanged since 9A: True",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase10/out/offline_integration_2026-11-14T02-34-02Z.json",
+   "classified": "established",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "no corpus field in artifact: True; c3 unchanged since 9A: True",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase10/out/offline_integration_2026-11-14T02-35-09Z.json",
+   "classified": "established",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "no corpus field in artifact: True; c3 unchanged since 9A: True",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase10/out/offline_integration_2026-11-14T03-13-24Z.json",
+   "classified": "established",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "no corpus field in artifact: True; c3 unchanged since 9A: True",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase10/out/offline_integration_2026-11-14T04-01-41Z.json",
+   "classified": "established",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "no corpus field in artifact: True; c3 unchanged since 9A: True",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase10/out/offline_integration_2026-11-14T05-29-37Z.json",
+   "classified": "established",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "no corpus field in artifact: True; c3 unchanged since 9A: True",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase10/out/offline_integration_2026-11-14T06-34-25Z.json",
+   "classified": "established",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "no corpus field in artifact: True; c3 unchanged since 9A: True",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase10/out/offline_integration_2026-11-14T06-50-54Z.json",
+   "classified": "established",
+   "corpus": "c3",
+   "verified": true,
+   "evidence_checked": "no corpus field in artifact: True; c3 unchanged since 9A: True",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase11/out/ablation_2026-11-14T04-39-44Z.json",
+   "classified": "recorded",
+   "corpus": "c6",
+   "verified": true,
+   "evidence_checked": "corpus = c6",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase11/out/ablation_2026-11-14T04-59-09Z.json",
+   "classified": "recorded",
+   "corpus": "c6",
+   "verified": true,
+   "evidence_checked": "corpus = c6",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase11b/out/compare_2026-11-14T05-22-24Z.json",
+   "classified": "recorded",
+   "corpus": "c3 and c6 (separate sections)",
+   "verified": true,
+   "evidence_checked": "top-level sections: ['c3', 'c6']",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase11c/out/compare_corpora_2026-11-14T05-43-15Z.json",
+   "classified": "recorded",
+   "corpus": "c3 and c6 (per row 'corpus')",
+   "verified": true,
+   "evidence_checked": "every row carries 'corpus'",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase11c/out/corpus_audit_2026-11-14T05-36-24Z.json",
+   "classified": "recorded",
+   "corpus": "c3 and c6 (per row 'corpus')",
+   "verified": true,
+   "evidence_checked": "c3-vs-c6 diff: every difference carries explicit 'c3' and 'c6' values (no per-row corpus field)",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase11c/out/corpus_audit_2026-11-14T05-36-51Z.json",
+   "classified": "recorded",
+   "corpus": "c3 and c6 (per row 'corpus')",
+   "verified": true,
+   "evidence_checked": "c3-vs-c6 diff: every difference carries explicit 'c3' and 'c6' values (no per-row corpus field)",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase11c/out/e2e_offline_2026-11-14T05-46-21Z.json",
+   "classified": "recorded",
+   "corpus": "c3 and c6 (per row 'corpus')",
+   "verified": true,
+   "evidence_checked": "every row carries 'corpus'",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase11c/out/e2e_offline_2026-11-14T05-48-48Z.json",
+   "classified": "recorded",
+   "corpus": "c3 and c6 (per row 'corpus')",
+   "verified": true,
+   "evidence_checked": "every row carries 'corpus'",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "eval/phase7/table_question_set.json",
+   "classified": "recorded",
+   "corpus": "c4",
+   "verified": true,
+   "evidence_checked": "author: assistant (Claude); questions and gold written from the LaTeX source tables and the c4 extraction",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "eval/questions.jsonl",
+   "classified": "recorded",
+   "corpus": "corpus-independent text, c3-era",
+   "verified": true,
+   "evidence_checked": "verbatim quotes; corpus-independent except q09 (matches c3 text only; see reconciliation)",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase11/new_cases.json",
+   "classified": "recorded",
+   "corpus": "c6",
+   "verified": true,
+   "evidence_checked": "author: assistant; written from corpus c6 tables (AIAYN Table 3, MOSHI Table 4) and checked against the LaTe",
+   "excluded_from_comparisons": false
+  },
+  {
+   "path": "experiments/phase8/table_semantics_cases.json",
+   "classified": "recorded",
+   "corpus": "c4",
+   "verified": true,
+   "evidence_checked": "about mentions c4: 'ut real table cells in corpus c4. Labels'",
+   "excluded_from_comparisons": true
+  },
+  {
+   "path": "experiments/phase8/table_semantics_heldout.json",
+   "classified": "recorded",
+   "corpus": "c4",
+   "verified": true,
+   "evidence_checked": "about mentions c4: 'constructed claims about real c4 rows; l'",
+   "excluded_from_comparisons": true
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  69%|██████▉   | 138/199 [00:00<00:00, 1338.20it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1865.79it/s]
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 1836.41it/s]
+c6 transfer check (production G == Phase 11A G): True [] []
+c6 G:expand+pack/original   {'recall@5': 0.529, 'recall@8': 0.647, 'mrr': 0.596, 'coverage': 0.647, 'all_gold_questions': 8, 'multi_unit_all_gold': '5/12', 'budget_retention': 1.0, 'total_ms_mean': 1179.1, 'expanded_questions': 4}
+c6 G:expand+pack/original_nontable {'recall@5': 0.593, 'recall@8': 0.593, 'mrr': 0.565, 'coverage': 0.593, 'all_gold_questions': 6, 'multi_unit_all_gold': '3/9', 'budget_retention': 1.0, 'total_ms_mean': 1168.5, 'expanded_questions': 3}
+c6 G:expand+pack/table      {'recall@5': 0.806, 'recall@8': 0.871, 'mrr': 0.667, 'coverage': 0.871, 'all_gold_questions': 22, 'multi_unit_all_gold': '4/5', 'budget_retention': 1.0, 'total_ms_mean': 1347.2, 'expanded_questions': 1}
+c6 G:expand+pack/new        {'recall@5': 0.917, 'recall@8': 0.917, 'mrr': 0.562, 'coverage': 0.917, 'all_gold_questions': 9, 'multi_unit_all_gold': '1/2', 'budget_retention': 1.0, 'total_ms_mean': 1437.0, 'expanded_questions': 8}
+c6 PROD-G/original          {'recall@5': 0.529, 'recall@8': 0.647, 'mrr': 0.596, 'coverage': 0.647, 'all_gold_questions': 8, 'multi_unit_all_gold': '5/12', 'budget_retention': 1.0, 'total_ms_mean': 1233.5, 'expanded_questions': 4}
+c6 PROD-G/original_nontable {'recall@5': 0.593, 'recall@8': 0.593, 'mrr': 0.565, 'coverage': 0.593, 'all_gold_questions': 6, 'multi_unit_all_gold': '3/9', 'budget_retention': 1.0, 'total_ms_mean': 1275.2, 'expanded_questions': 3}
+c6 PROD-G/table             {'recall@5': 0.806, 'recall@8': 0.871, 'mrr': 0.667, 'coverage': 0.871, 'all_gold_questions': 22, 'multi_unit_all_gold': '4/5', 'budget_retention': 1.0, 'total_ms_mean': 1128.6, 'expanded_questions': 1}
+c6 PROD-G/new               {'recall@5': 0.917, 'recall@8': 0.917, 'mrr': 0.562, 'coverage': 0.917, 'all_gold_questions': 9, 'multi_unit_all_gold': '1/2', 'budget_retention': 1.0, 'total_ms_mean': 1009.9, 'expanded_questions': 8}
+c3 PROD-B/original          {'recall@5': 0.529, 'recall@8': 0.618, 'mrr': 0.582, 'coverage': 0.588, 'all_gold_questions': 7, 'multi_unit_all_gold': '4/12', 'budget_retention': 0.952, 'total_ms_mean': 723.2, 'expanded_questions': 0}
+c3 PROD-B/original_nontable {'recall@5': 0.593, 'recall@8': 0.593, 'mrr': 0.552, 'coverage': 0.593, 'all_gold_questions': 6, 'multi_unit_all_gold': '3/9', 'budget_retention': 1.0, 'total_ms_mean': 723.0, 'expanded_questions': 0}
+c3 PROD-B/table             {'recall@5': 0.968, 'recall@8': 1.0, 'mrr': 0.767, 'coverage': 0.968, 'all_gold_questions': 3, 'multi_unit_all_gold': '0/5', 'budget_retention': 0.968, 'total_ms_mean': 1096.3, 'expanded_questions': 0}
+c3 PROD-B/new               {'recall@5': 0.667, 'recall@8': 0.917, 'mrr': 0.449, 'coverage': 0.75, 'all_gold_questions': 7, 'multi_unit_all_gold': '1/2', 'budget_retention': 0.818, 'total_ms_mean': 1050.1, 'expanded_questions': 0}
+c3 PROD-G/original          {'recall@5': 0.529, 'recall@8': 0.647, 'mrr': 0.597, 'coverage': 0.647, 'all_gold_questions': 8, 'multi_unit_all_gold': '5/12', 'budget_retention': 1.0, 'total_ms_mean': 1015.9, 'expanded_questions': 4}
+c3 PROD-G/original_nontable {'recall@5': 0.593, 'recall@8': 0.593, 'mrr': 0.565, 'coverage': 0.593, 'all_gold_questions': 6, 'multi_unit_all_gold': '3/9', 'budget_retention': 1.0, 'total_ms_mean': 995.8, 'expanded_questions': 3}
+c3 PROD-G/table             {'recall@5': 0.968, 'recall@8': 1.0, 'mrr': 0.767, 'coverage': 1.0, 'all_gold_questions': 3, 'multi_unit_all_gold': '0/5', 'budget_retention': 1.0, 'total_ms_mean': 1063.2, 'expanded_questions': 1}
+c3 PROD-G/new               {'recall@5': 0.917, 'recall@8': 0.917, 'mrr': 0.562, 'coverage': 0.917, 'all_gold_questions': 9, 'multi_unit_all_gold': '1/2', 'budget_retention': 1.0, 'total_ms_mean': 1028.7, 'expanded_questions': 8}
+experiments/phase11b/out/compare_2026-11-14T05-22-24Z.json
+EXIT 0

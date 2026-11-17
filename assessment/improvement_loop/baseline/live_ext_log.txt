@@ -1,0 +1,13 @@
+q03 | ok normal None | calls 2 | tok 3480 + 339 | run {'requests': 3, 'tokens': 3819, 'refused': 0}
+q04 | ok refused verification failed after redraft | calls 2 | tok 3486 + 280 | run {'requests': 5, 'tokens': 7585, 'refused': 0}
+q05 | ok refused verification failed after redraft | calls 2 | tok 3803 + 541 | run {'requests': 7, 'tokens': 11929, 'refused': 0}
+q06 | ok normal None | calls 1 | tok 1805 + 129 | run {'requests': 8, 'tokens': 13863, 'refused': 0}
+q08 | ok refused verification failed after redraft | calls 2 | tok 3676 + 424 | run {'requests': 10, 'tokens': 17963, 'refused': 0}
+q09 | ok refused verification failed after redraft | calls 2 | tok 4164 + 504 | run {'requests': 12, 'tokens': 22631, 'refused': 0}
+q10 | ok refused verification failed after redraft | calls 2 | tok 4123 + 488 | run {'requests': 14, 'tokens': 27242, 'refused': 0}
+q12 | ok refused verification failed after redraft | calls 2 | tok 3639 + 294 | run {'requests': 16, 'tokens': 31175, 'refused': 0}
+q13 | ok refused verification failed after redraft | calls 2 | tok 4146 + 478 | run {'requests': 18, 'tokens': 35799, 'refused': 0}
+q14 | ok refused verification failed after redraft | calls 2 | tok 3926 + 402 | run {'requests': 20, 'tokens': 40127, 'refused': 0}
+q20 | ok refused model: not in papers | calls 1 | tok 1744 + 64 | run {'requests': 21, 'tokens': 41935, 'refused': 0}
+q22 | ok refused model: not in papers | calls 1 | tok 1714 + 44 | run {'requests': 22, 'tokens': 43693, 'refused': 0}
+q30 | error unavailable upstream_error | calls 1 | tok 0 + 0 | run {'requests': 22, 'tokens': 43693, 'refused': 1}

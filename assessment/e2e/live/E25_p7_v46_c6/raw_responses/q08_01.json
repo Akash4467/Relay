@@ -1,0 +1,44 @@
+{
+ "question_id": "q08",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:47:48.558+00:00",
+  "t_send_ns": 201318558621000,
+  "status": 200,
+  "t_first_byte_ns": 201319024818800,
+  "t_first_content_ns": 201319835780900,
+  "t_last_ns": 201320277333400,
+  "max_gap_ms": 810.9393,
+  "text": "The authors chose sinusoidal positional encodings because they hypothesized that the functions would allow the model to easily learn to attend by relative positions, since for any fixed offset k the encoding at position pos + k can be represented as a linear function of the encoding at position pos, and because the sinusoidal version may allow the model to extrapolate to sequence lengths longer than those encountered during training [AIAYN:3.5:c020]. The authors also experimented with learned positional embeddings and found that the two versions produced nearly identical results, with the learned version yielding a dev perplexity of 4.92 and BLEU of 25.7, matching the base model’s performance [AIAYN:3.5:c020][AIAYN:T3:r08][AIAYN:6.2:c031].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.367818951,
+   "prompt_tokens": 1808,
+   "prompt_time": 0.692642945,
+   "completion_tokens": 228,
+   "completion_time": 0.56388457,
+   "total_tokens": 2036,
+   "total_time": 1.256527515,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 50
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "955",
+   "x-ratelimit-reset-requests": "1h4m48s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "3868",
+   "x-ratelimit-reset-tokens": "30.99s"
+  },
+  "error": null,
+  "first_byte_ms": 466.2,
+  "first_content_ms": 1277.2,
+  "total_ms": 1718.7
+ }
+}

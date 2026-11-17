@@ -7,7 +7,6 @@ dependencies = [
     "fastapi",
     "uvicorn",
     "httpx",
-    "langgraph",
     "pydantic",
     "pyyaml",
     "rank-bm25",
@@ -18,7 +17,6 @@ dependencies = [
     "tiktoken",
     "pandas",
     "numpy",
-    "orjson",
 ]
 
 [dependency-groups]

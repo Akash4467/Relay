@@ -1,0 +1,222 @@
+{
+ "status": "DIAGNOSTIC MODEL AUDIT - NOT INDEPENDENT HUMAN REVIEW; never to be frozen or placed under eval/phase9b_human_review/reviews/",
+ "reviewer_id": "chatgpt_model_assisted_audit_NOT_INDEPENDENT",
+ "source": "eval/phase9b_human_review/reviewer/Akash",
+ "mapping_rule": "starts with 'yes' -> yes; starts with 'no' -> no; otherwise MANUAL",
+ "manual": {
+  "s13": {
+   "value": "no",
+   "reason": "the claim only describes the cell as blank; the audit's own explanation says only the literal blank-cell observation is supported, so no legend was needed to decide this claim"
+  }
+ },
+ "files": {
+  "development": {
+   "rows": 31,
+   "as_submitted_sha256": "0e16820c6c65b4fd14fc071ef299d33f203d5a6e44e5c8d019b0621b874ebee6",
+   "normalized_sha256": "07a2371fbe86230a5891129abf9ad3d78a51985fc9e45f6b7b511f7d5d36153a",
+   "case_order_matches_template": true,
+   "validation_errors": []
+  },
+  "heldout": {
+   "rows": 16,
+   "as_submitted_sha256": "5fb8b8f50152f083b42313c8bd419d99cfc940105cf84243bf062a984f963ecf",
+   "normalized_sha256": "8b65e5387eebf920c3d63e3c6f7c47c6bfe67bf576347f3504f5e43d05398b81",
+   "case_order_matches_template": true,
+   "validation_errors": []
+  }
+ },
+ "changed": {
+  "development": {
+   "s01": {
+    "from": "No semantic legend needed for literal symbol claim.",
+    "to": "no"
+   },
+   "s02": {
+    "from": "No",
+    "to": "no"
+   },
+   "s03": {
+    "from": "No semantic legend needed for literal symbol claim.",
+    "to": "no"
+   },
+   "s04": {
+    "from": "No",
+    "to": "no"
+   },
+   "s05": {
+    "from": "No semantic legend needed for literal symbol claim.",
+    "to": "no"
+   },
+   "s06": {
+    "from": "No semantic legend needed for literal symbol claim.",
+    "to": "no"
+   },
+   "s07": {
+    "from": "No",
+    "to": "no"
+   },
+   "s08": {
+    "from": "No",
+    "to": "no"
+   },
+   "s09": {
+    "from": "No",
+    "to": "no"
+   },
+   "s10": {
+    "from": "Yes, meaning of ✓ and ✗",
+    "to": "yes"
+   },
+   "s11": {
+    "from": "Yes, operational definition of stronger hierarchy",
+    "to": "yes"
+   },
+   "s12": {
+    "from": "No",
+    "to": "no"
+   },
+   "s13": {
+    "from": "Blank-cell semantics required for any negative interpretation.",
+    "to": "no"
+   },
+   "s14": {
+    "from": "Yes, definition of blank / xmark",
+    "to": "yes"
+   },
+   "s15": {
+    "from": "Yes, explicit numeric definition",
+    "to": "yes"
+   },
+   "s16": {
+    "from": "No for literal blankness; yes for semantic interpretation.",
+    "to": "no"
+   },
+   "s17": {
+    "from": "Yes, mark convention",
+    "to": "yes"
+   },
+   "s18": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "s19": {
+    "from": "No",
+    "to": "no"
+   },
+   "s20": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "s21": {
+    "from": "No for literal blank observation.",
+    "to": "no"
+   },
+   "s22": {
+    "from": "No for literal blank observation.",
+    "to": "no"
+   },
+   "s23": {
+    "from": "Yes, table legend or explicit prose mapping blank to absence.",
+    "to": "yes"
+   },
+   "s24": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "s25": {
+    "from": "No",
+    "to": "no"
+   },
+   "s26": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "s27": {
+    "from": "No for literal mark observation.",
+    "to": "no"
+   },
+   "s28": {
+    "from": "No for literal blank observation.",
+    "to": "no"
+   },
+   "s29": {
+    "from": "Yes, blank-cell convention or explicit prose.",
+    "to": "yes"
+   },
+   "s30": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "s31": {
+    "from": "No for literal blank observation.",
+    "to": "no"
+   }
+  },
+  "heldout": {
+   "h01": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "h02": {
+    "from": "No",
+    "to": "no"
+   },
+   "h03": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "h04": {
+    "from": "No",
+    "to": "no"
+   },
+   "h05": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "h06": {
+    "from": "No for literal blank observation.",
+    "to": "no"
+   },
+   "h07": {
+    "from": "No",
+    "to": "no"
+   },
+   "h08": {
+    "from": "No for literal blank observation.",
+    "to": "no"
+   },
+   "h09": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "h10": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "h11": {
+    "from": "No",
+    "to": "no"
+   },
+   "h12": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "h13": {
+    "from": "No",
+    "to": "no"
+   },
+   "h14": {
+    "from": "No for literal symbol claim.",
+    "to": "no"
+   },
+   "h15": {
+    "from": "Yes, table legend for symbol semantics.",
+    "to": "yes"
+   },
+   "h16": {
+    "from": "No",
+    "to": "no"
+   }
+  }
+ }
+}

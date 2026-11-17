@@ -1,0 +1,41 @@
+{
+ "question_id": "q15",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:09:12.888+00:00",
+  "t_send_ns": 206202889699000,
+  "status": 200,
+  "t_first_byte_ns": 206203494612400,
+  "t_first_content_ns": 206204046706400,
+  "t_last_ns": 206204138045900,
+  "max_gap_ms": 552.0735,
+  "text": "The authors trained their models on one machine with 8 NVIDIA P100 GPUs [AIAYN:5.2:c026]. All models are trained on H100 GPUs [MOSHI:4.4:c062].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.517188016,
+   "prompt_tokens": 2491,
+   "prompt_time": 0.362991217,
+   "completion_tokens": 136,
+   "completion_time": 0.285626227,
+   "total_tokens": 2627,
+   "total_time": 0.648617444,
+   "completion_tokens_details": {
+    "reasoning_tokens": 83
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "966",
+   "x-ratelimit-reset-requests": "48m57.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5167",
+   "x-ratelimit-reset-tokens": "21.247s"
+  },
+  "error": null,
+  "first_byte_ms": 604.9,
+  "first_content_ms": 1157.0,
+  "total_ms": 1248.3
+ }
+}

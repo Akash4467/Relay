@@ -75,6 +75,7 @@ def main() -> None:
     summary = {
         "at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "source": client.source,
         "question_id": qid, "question": question, "setting": args.setting, "policy": ev.policy,
+        "verification_policy_version": cfg["verification_policy_version"],
         "passages": [p["chunk_id"] for p in ev.passages], "context_tokens": ev.tokens,
         "status": result.status if result else "error", "error": error,
         "refusal_reason": result.refusal_reason if result else None,

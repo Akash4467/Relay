@@ -1,0 +1,232 @@
+{
+ "run": "assessment/e2e/live/B12",
+ "timestamp": "2026-11-14T12:31:05.087+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "question_id": "t13",
+ "dataset": [
+  "e2e_B12",
+  "table_set"
+ ],
+ "question": "In the Moshi RQ-Transformer ablation, with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2], what perplexity does the row with a check mark under RQ-Transformer report?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §5.2 Audio Tokenization; MOSHI §5.3 Ablations on generative modeling; MOSHI §3.4.2 Audio modeling.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-B12-t13"
+ },
+ "client_ms": 27413.5,
+ "evidence_ids": [
+  "MOSHI:T5:r01",
+  "MOSHI:5.3:c081",
+  "MOSHI:5.3:c080",
+  "MOSHI:5.3:c082",
+  "MOSHI:5.2:c078",
+  "MOSHI:5.2:c079",
+  "MOSHI:3.4.2:c044"
+ ],
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  false
+ ],
+ "drafts": [
+  "The row with a check mark under RQ‑Transformer for the acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] reports a perplexity of 135.4 [MOSHI:T5:r01].",
+  "The configuration with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] reports a perplexity of 135.4 [MOSHI:T5:r01]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:T5:r01"
+   ],
+   "failures": [
+    [
+     "The row with a check mark under RQ‑Transformer for the acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] reports a perplexity of 135.4 [MOSHI:T5:r01].",
+     "not supported by the cited passage (entailment 0.47 < 0.9); term 'rq' not in the cited passage; term 'transformer' not in the cited passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The row with a check mark under RQ‑Transformer for the acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] reports a perplexity of 135.4 [MOSHI:T5:r01].",
+     "ok": false,
+     "entailment": 0.47186225985116487,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.47 < 0.9); term 'rq' not in the cited passage; term 'transformer' not in the cited passage"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:T5:r01"
+   ],
+   "failures": [
+    [
+     "The configuration with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] reports a perplexity of 135.4 [MOSHI:T5:r01].",
+     "not supported by the cited passage (entailment 0.06 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The configuration with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] reports a perplexity of 135.4 [MOSHI:T5:r01].",
+     "ok": false,
+     "entailment": 0.06217380495560591,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.06 < 0.9)"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-B12-t13",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T12:31:05.087+00:00",
+  "question_id": "t13",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3867,
+  "tokens_out": 280,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 773.9,
+  "context_tokens": 1509,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:T5:r01",
+   "MOSHI:5.3:c081",
+   "MOSHI:5.3:c080",
+   "MOSHI:5.3:c082",
+   "MOSHI:5.2:c078",
+   "MOSHI:5.2:c079",
+   "MOSHI:3.4.2:c044"
+  ],
+  "verification_ms": 861.3,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 24096.1,
+  "model_ttft_ms": 754.0,
+  "first_byte_ms": 467.4,
+  "generation_ms": 1638.2,
+  "reasoning_tokens": 160,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1841,
+    "reserved": 2611,
+    "governor_wait_ms": 9128.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.374075241,
+     "prompt_tokens": 1840,
+     "prompt_time": 0.095298604,
+     "completion_tokens": 149,
+     "completion_time": 0.314541451,
+     "total_tokens": 1989,
+     "total_time": 0.409840055,
+     "completion_tokens_details": {
+      "reasoning_tokens": 84
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1840,
+    "tokens_out": 149,
+    "reasoning_tokens": 84,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 467.4,
+    "model_ttft_ms": 754.0,
+    "total_ms": 870.9,
+    "max_gap_ms": 286.6,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "985",
+     "x-ratelimit-reset-requests": "21m36s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2453",
+     "x-ratelimit-reset-tokens": "41.602s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2026,
+    "reserved": 2796,
+    "governor_wait_ms": 14967.2,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.287312694,
+     "prompt_tokens": 2027,
+     "prompt_time": 0.090711563,
+     "completion_tokens": 131,
+     "completion_time": 0.277346342,
+     "total_tokens": 2158,
+     "total_time": 0.368057905,
+     "completion_tokens_details": {
+      "reasoning_tokens": 76
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2027,
+    "tokens_out": 131,
+    "reasoning_tokens": 76,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 403.3,
+    "model_ttft_ms": 673.1,
+    "total_ms": 767.3,
+    "max_gap_ms": 269.7,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "984",
+     "x-ratelimit-reset-requests": "23m2.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2456",
+     "x-ratelimit-reset-tokens": "41.58s"
+    }
+   }
+  ],
+  "first_token_ms": 27395.8,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 27396.3
+ }
+}

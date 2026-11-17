@@ -1,0 +1,314 @@
+{
+ "benchmark": "Phase 9B table-mark verifier benchmark",
+ "status": "awaiting_independent_review",
+ "version": null,
+ "frozen_at": null,
+ "benchmark_files": {},
+ "note": "Not frozen. Original labels are the Phase 8 assistant labels (not independent). Reviewers work only from eval/phase9b_human_review/reviewer/ and save to reviews/<reviewer_id>/. Then: `evaluate_verifiers.py disagreements`, adjudication in disagreement_log.csv, `evaluate_verifiers.py freeze`.",
+ "splits": {
+  "development": {
+   "n": 31,
+   "supported": 13,
+   "unsupported": 18
+  },
+  "heldout": {
+   "n": 16,
+   "supported": 8,
+   "unsupported": 8
+  }
+ },
+ "verifier": {
+  "v4_nli_model": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+  "entail_min": 0.9,
+  "evidence_corpus": "c4 chunks_256"
+ },
+ "pre_review_sha256": {
+  "experiments/phase8/table_semantics_cases.json": "ffdcadc4a8f665ceebd31fcf2c7cbd2ec55edcdbc0534d9e571c3f94fa3467df",
+  "experiments/phase8/table_semantics_heldout.json": "be2d8e8906734eb353795b121c8fa7eb52977bef319f5e62c0c4f7f634540187",
+  "experiments/phase8/table_semantics.py": "0bab1c3d989ff81c00e83d76dbc45d30a72f69f522d6f6cd9ea60f085f5f5212",
+  "experiments/phase9b/review_targets.json": "23dff9807df696c4ce08afc92a30bd0fd70cc6be508995b6839a204fd3380cb4",
+  "experiments/phase9b/build_review_package.py": "8464436304aa447cd55eccd6f7ea081de0acefceafe41fc3735d6167bbfe1aa5",
+  "experiments/phase9b/evaluate_verifiers.py": "d9464e2e9267c70d0812e4886e923329bd1ed81d66f543e6711ec7b09264c9af",
+  "eval/phase9b_human_review/development_review.csv": "4967b00b13e0e96cbbd7c89577e7f8f7733e470657b2004c9ce9cfce43796737",
+  "eval/phase9b_human_review/heldout_review.csv": "44832dbe31eafa55551c34916da75b69b5608c64b569b182dba7455875946ca4",
+  "eval/phase9b_human_review/disagreement_log.csv": "4822a86cb4c08609892fa5b9bbc86ee223dadb8f23e47f4a762db7c62eebf8c7",
+  "eval/phase9b_human_review/reviewer/template_development.csv": "25537d0e52f6c9f3983f90572949c24f03216f3952b226bec7f9667a11a856cb",
+  "eval/phase9b_human_review/reviewer/template_heldout.csv": "bb2ad5cb1342ed978098a7860c3fc07e511e0a58a4eff71c6b0666a1f88b3c9a",
+  "eval/phase9b_human_review/reviewer/table_evidence.md": "7b6d6b92d0ae9efcd1b1be3f19a9a21f85e8072339b9d5da0e25e69995b9f607",
+  "eval/phase9b_human_review/reviewer/review_instructions.md": "829836ec0e62851ff794671471a059ef86ac38240a3eeddfce06b3b80fdbb2ed",
+  "data/corpus/c4/processed/chunks_256.jsonl": "aa6a6735be3ab345496e0ac53612708a5b6c2d9c5c4931805467bbab68c3e7b7",
+  "data/corpus/c4/processed/tables.jsonl": "bd674d1fc09be1e91a939c5a7270dffa850fc869c7e8b46187188f4206c74e8c"
+ },
+ "created_at": "2026-11-14",
+ "protocol": "two-level review v2 (table_only + whole_paper)",
+ "min_reviewers": 1,
+ "excluded_reviewer_ids": [],
+ "excluded_reviewer_ids_note": "Always excluded (built in): assistant, claude, self, developer, case-author. Add the IDs of anyone who wrote or labelled the cases before review starts.",
+ "pre_review_sha256_v1": {
+  "experiments/phase8/table_semantics_cases.json": "ffdcadc4a8f665ceebd31fcf2c7cbd2ec55edcdbc0534d9e571c3f94fa3467df",
+  "experiments/phase8/table_semantics_heldout.json": "be2d8e8906734eb353795b121c8fa7eb52977bef319f5e62c0c4f7f634540187",
+  "experiments/phase8/table_semantics.py": "0bab1c3d989ff81c00e83d76dbc45d30a72f69f522d6f6cd9ea60f085f5f5212",
+  "experiments/phase9b/review_targets.json": "95376de89ea6cd91822286efd0b5d2e3cb566b0e73060ff342df9f0d29d558dc",
+  "experiments/phase9b/build_review_package.py": "6f4af9fe09e7650323e3165a38624e3b94c805826b8c554f9ec2623608b0b34b",
+  "eval/phase9b_human_review/development_review.csv": "4967b00b13e0e96cbbd7c89577e7f8f7733e470657b2004c9ce9cfce43796737",
+  "eval/phase9b_human_review/heldout_review.csv": "44832dbe31eafa55551c34916da75b69b5608c64b569b182dba7455875946ca4",
+  "eval/phase9b_human_review/disagreement_log.csv": "4ba85e47caa9dd3a0cb2ebd74db34d0df3b043a61258bd6de53b290a320b956b",
+  "eval/phase9b_human_review/table_evidence.md": "8c7d3a474af4355d25183f7407e206178f036dc80047521147d052c4d7fe0ba6",
+  "data/corpus/c4/processed/chunks_256.jsonl": "aa6a6735be3ab345496e0ac53612708a5b6c2d9c5c4931805467bbab68c3e7b7",
+  "data/corpus/c4/processed/tables.jsonl": "bd674d1fc09be1e91a939c5a7270dffa850fc869c7e8b46187188f4206c74e8c"
+ },
+ "review_provenance": {
+  "Akash": {
+   "kind": "project-owner review, model-assisted, NOT independent",
+   "how": "ChatGPT model-assisted audit (experiments/phase9b/model_audit), adopted by Akash after checking all 47 cases; only reviewer_id changed from chatgpt_model_assisted_audit_NOT_INDEPENDENT to Akash",
+   "owner_statement": "I checked all 47 audit cases and adopt them as my review",
+   "exposure": "reviewer is the project owner and had seen the original Phase 8 labels, the preparer flags and verifier results before reviewing",
+   "recorded_at": "2026-11-14T01:42:27+00:00",
+   "files": {
+    "development": {
+     "sha256": "b3cd806a202fe673774db34481d24102703c46997508ccfe9b4cc7d39da93f82",
+     "source": "experiments/phase9b/model_audit/development.csv",
+     "source_sha256": "07a2371fbe86230a5891129abf9ad3d78a51985fc9e45f6b7b511f7d5d36153a"
+    },
+    "heldout": {
+     "sha256": "fb19fade3d7a6dc2133e570aa2cb062c0c854802573f3c440281afb6434ed737",
+     "source": "experiments/phase9b/model_audit/heldout.csv",
+     "source_sha256": "8b65e5387eebf920c3d63e3c6f7c47c6bfe67bf576347f3504f5e43d05398b81"
+    }
+   },
+   "active": false,
+   "withdrawn_at": "2026-11-14T02:10:31+00:00",
+   "withdrawn_reason": "owner instruction 2026-11-14: removed from active reviewer submissions; the benchmark rests on the independent review",
+   "archived_to": "experiments/phase9b/model_audit/owner_adopted_review/ (byte-identical; hashes in files)"
+  },
+  "rahul": {
+   "kind": "independent human review",
+   "independent": true,
+   "human": true,
+   "model_assisted": false,
+   "owner": false,
+   "authored_cases_or_labels": false,
+   "attested_by": "Akash (project owner), 2026-11-14: 'reviewed by rahul ... put it as a independent review'",
+   "reviewer_signed_declaration": "RECEIVED BUT INCOMPLETE (see declaration_received.gaps_against_required_statement); freeze stays blocked",
+   "intake_checks": {
+    "validator_errors": 0,
+    "copy_of_model_audit": false,
+    "rows_with_all_assessment_fields_equal_to_model_audit": 0,
+    "outcome_pairs_equal_to_model_audit": {
+     "development": "25/31",
+     "heldout": "16/16"
+    },
+    "moshi_table_numbers_correct": "29/29 (model audit: 0/29)",
+    "spot_checked_quotes": [
+     "'Mimi is causal' methods.tex:134 (found)",
+     "'improving MUSHRA from 57.8 to 64.0 ... ABX from 6.5% to 8.1%' PDF p.24 (found)"
+    ]
+   },
+   "received_from": "project root (development.csv, heldout.csv), moved unchanged",
+   "recorded_at": "2026-11-14T02:07:47+00:00",
+   "files": {
+    "development": {
+     "sha256": "579f72d00d2db428f4cea64b77c1aa4da9dd6132ee21f07fa58add255dc53706"
+    },
+    "heldout": {
+     "sha256": "7bcd3a0905d3915592912c6624cee56949e6c684d9f1b7e86b25179876dd4c2f"
+    }
+   },
+   "signed_declaration_on_file": false,
+   "declaration_received": {
+    "received_at": "2026-11-14T02:13:51+00:00",
+    "relayed_by": "Akash (project owner)",
+    "text": [
+     "I independently reviewed all 31 development cases and 16 held-out cases in The Relay Phase 9B human-review benchmark.",
+     "I was not involved in writing, selecting, preparing, or labelling the original 47 review cases.",
+     "I did not have access to the original benchmark labels, preparation rationales, or ChatGPT model-assisted audit while conducting my review.",
+     "I completed both review templates based on the supplied research papers and supporting evidence.",
+     "My submitted assessments represent my own independent judgement."
+    ],
+    "name": "Rahul Kumar",
+    "reviewer_id": "rahul",
+    "date_as_written": "03/09/2005",
+    "signature": "Rahul Kumar",
+    "accepted": false,
+    "gaps_against_required_statement": [
+     "no statement that no AI tools were used (required: 'without AI tools')",
+     "no statement that he had not seen other reviews or verifier results (required)",
+     "no statement that development and held-out were reviewed separately (required)",
+     "date '03/09/2005' is not a valid date for this review (files dated 2026-11-14; required format YYYY-MM-DD)"
+    ]
+   }
+  }
+ },
+ "results_must_be_labelled": "owner-reviewed (model-assisted), not independently validated",
+ "package_changes": [
+  {
+   "date": "2026-11-14",
+   "file": "eval/phase9b_human_review/reviewer/review_instructions.md",
+   "from_sha256": "45cd607586e6026d40e90b442c7f80c016d558e6093c70ce76d5070030a686c3",
+   "to_sha256": "829836ec0e62851ff794671471a059ef86ac38240a3eeddfce06b3b80fdbb2ed",
+   "change": "added independence declaration (no AI tools, no involvement, no prior exposure) and hand-in paths; no case content changed"
+  }
+ ],
+ "independence_declaration_required": true,
+ "evidence_corrections": {
+  "recorded_at": "2026-11-14T02:10:31+00:00",
+  "note": "Recorded only; no submitted file was modified.",
+  "akash_owner_review_and_model_audit": {
+   "incorrect_moshi_table_references": [
+    {
+     "case_id": "s13",
+     "cited": "MOSHI Table 2, p.23",
+     "correct": "MOSHI Table 4, PDF p.23"
+    },
+    {
+     "case_id": "s14",
+     "cited": "MOSHI Table 2, p.23",
+     "correct": "MOSHI Table 4, PDF p.23"
+    },
+    {
+     "case_id": "s15",
+     "cited": "MOSHI Table 2, p.23",
+     "correct": "MOSHI Table 4, PDF p.23"
+    },
+    {
+     "case_id": "s16",
+     "cited": "MOSHI Table 2, p.23",
+     "correct": "MOSHI Table 4, PDF p.23"
+    },
+    {
+     "case_id": "s17",
+     "cited": "MOSHI Table 2, p.23",
+     "correct": "MOSHI Table 4, PDF p.23"
+    },
+    {
+     "case_id": "s18",
+     "cited": "MOSHI Table 2, p.23",
+     "correct": "MOSHI Table 4, PDF p.23"
+    },
+    {
+     "case_id": "s19",
+     "cited": "MOSHI Table 2, p.23",
+     "correct": "MOSHI Table 4, PDF p.23"
+    },
+    {
+     "case_id": "s20",
+     "cited": "MOSHI Table 1, p.22",
+     "correct": "MOSHI Table 3, PDF p.22"
+    },
+    {
+     "case_id": "s21",
+     "cited": "MOSHI Table 1, p.22",
+     "correct": "MOSHI Table 3, PDF p.22"
+    },
+    {
+     "case_id": "s22",
+     "cited": "MOSHI Table 1, p.22",
+     "correct": "MOSHI Table 3, PDF p.22"
+    },
+    {
+     "case_id": "s23",
+     "cited": "MOSHI Table 1, p.22",
+     "correct": "MOSHI Table 3, PDF p.22"
+    },
+    {
+     "case_id": "s24",
+     "cited": "MOSHI Table 1, p.22",
+     "correct": "MOSHI Table 3, PDF p.22"
+    },
+    {
+     "case_id": "s25",
+     "cited": "MOSHI Table 1, p.22",
+     "correct": "MOSHI Table 3, PDF p.22"
+    },
+    {
+     "case_id": "s26",
+     "cited": "MOSHI Table 5, p.37",
+     "correct": "MOSHI Table 13, PDF p.37"
+    },
+    {
+     "case_id": "s27",
+     "cited": "MOSHI Table 5, p.37",
+     "correct": "MOSHI Table 13, PDF p.37"
+    },
+    {
+     "case_id": "s28",
+     "cited": "MOSHI Table 5, p.37",
+     "correct": "MOSHI Table 13, PDF p.37"
+    },
+    {
+     "case_id": "s29",
+     "cited": "MOSHI Table 5, p.37",
+     "correct": "MOSHI Table 13, PDF p.37"
+    },
+    {
+     "case_id": "s30",
+     "cited": "MOSHI Table 6, p.40",
+     "correct": "MOSHI Table 16, PDF p.40"
+    },
+    {
+     "case_id": "s31",
+     "cited": "MOSHI Table 6, p.40",
+     "correct": "MOSHI Table 16, PDF p.40"
+    },
+    {
+     "case_id": "h06",
+     "cited": "MOSHI Table 2, p.23",
+     "correct": "MOSHI Table 4, PDF p.23"
+    },
+    {
+     "case_id": "h07",
+     "cited": "MOSHI Table 2, p.23",
+     "correct": "MOSHI Table 4, PDF p.23"
+    },
+    {
+     "case_id": "h08",
+     "cited": "MOSHI Table 1, p.22",
+     "correct": "MOSHI Table 3, PDF p.22"
+    },
+    {
+     "case_id": "h09",
+     "cited": "MOSHI Table 1, p.22",
+     "correct": "MOSHI Table 3, PDF p.22"
+    },
+    {
+     "case_id": "h10",
+     "cited": "MOSHI Table 3, p.25",
+     "correct": "MOSHI Table 6, PDF p.25"
+    },
+    {
+     "case_id": "h11",
+     "cited": "MOSHI Table 3, p.25",
+     "correct": "MOSHI Table 6, PDF p.25"
+    },
+    {
+     "case_id": "h12",
+     "cited": "MOSHI Table 5, p.37",
+     "correct": "MOSHI Table 13, PDF p.37"
+    },
+    {
+     "case_id": "h13",
+     "cited": "MOSHI Table 5, p.37",
+     "correct": "MOSHI Table 13, PDF p.37"
+    },
+    {
+     "case_id": "h14",
+     "cited": "MOSHI Table 6, p.40",
+     "correct": "MOSHI Table 16, PDF p.40"
+    },
+    {
+     "case_id": "h15",
+     "cited": "MOSHI Table 6, p.40; Section 3.3",
+     "correct": "MOSHI Table 4, PDF p.23"
+    }
+   ],
+   "h15": {
+    "table": "MOSHI Table 4, PDF p.23 (not 'Table 6, p.40')",
+    "prose": "Section 5.2 (evaluation.tex line 108: 'Mimi is fully causal'); Section 3.3 states the causal convolutions/masking (methods.tex 128-134)"
+   }
+  },
+  "adjudication_evidence": {
+   "s14": "Section 5.2, 'Results - Acoustic tokens' (evaluation.tex line 108): 'both RVQGAN and SemantiCodec are non-causal'",
+   "s23": "Section 5.2 evaluation discussion, PDF p.24: split RVQ 'improves the trade-off ... improving MUSHRA from 57.8 to 64.0 while moderately degrading ABX from 6.5% to 8.1%'"
+  }
+ }
+}

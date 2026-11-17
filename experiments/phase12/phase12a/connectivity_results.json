@@ -1,0 +1,183 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "phase": "12A",
+ "run_at": "2026-11-14T07:55:26.320+00:00",
+ "model_id": "openai/gpt-oss-120b",
+ "note": "Owner re-accepted the risk on 2026-11-14 for Phase 12 ('Accept risk again'): the current key is used although the earlier machine-security finding is unresolved (no full scan, key not rotated). Token cap raised by the owner from 30,000 to 100,000 ('Raise cap to 100,000').",
+ "results": {
+  "1_auth_and_model_availability": {
+   "http": 200,
+   "n_models": 11,
+   "primary_listed": true,
+   "gpt_oss_models": [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
+    "openai/gpt-oss-safeguard-20b"
+   ],
+   "client_ms": 801.0
+  },
+  "2_streaming_completion": {
+   "call": {
+    "model": "openai/gpt-oss-120b",
+    "started_at": "2026-11-14T07:55:23.966+00:00",
+    "t_send_ns": 176573967708400,
+    "status": 200,
+    "t_first_byte_ns": 176574371454200,
+    "t_first_content_ns": 176574426233100,
+    "t_last_ns": 176574426649100,
+    "max_gap_ms": 54.7559,
+    "text": "pong",
+    "finish_reason": "stop",
+    "usage": {
+     "queue_time": 0.318412684,
+     "prompt_tokens": 78,
+     "prompt_time": 0.003321895,
+     "completion_tokens": 23,
+     "completion_time": 0.048727145,
+     "total_tokens": 101,
+     "total_time": 0.05204904,
+     "completion_tokens_details": {
+      "reasoning_tokens": 13
+     }
+    },
+    "usage_source": "usage",
+    "headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "999",
+     "x-ratelimit-reset-requests": "1m26.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "7858",
+     "x-ratelimit-reset-tokens": "1.065s"
+    },
+    "error": null,
+    "first_byte_ms": 403.7,
+    "first_content_ms": 458.5,
+    "total_ms": 458.9
+   },
+   "streamed_content": true,
+   "usage_present": true,
+   "client_ms": 764.5
+  },
+  "3_token_accounting_p4_prompt": {
+   "call": {
+    "model": "openai/gpt-oss-120b",
+    "started_at": "2026-11-14T07:55:25.087+00:00",
+    "t_send_ns": 176575087261700,
+    "status": 200,
+    "t_first_byte_ns": 176575502677100,
+    "t_first_content_ns": 176575632632100,
+    "t_last_ns": 176575664635200,
+    "max_gap_ms": 129.927,
+    "text": "The base Transformer uses 8 attention heads [AIAYN:T3:r01].",
+    "finish_reason": "stop",
+    "usage": {
+     "queue_time": 0.317204851,
+     "prompt_tokens": 978,
+     "prompt_time": 0.046430925,
+     "completion_tokens": 58,
+     "completion_time": 0.120143841,
+     "total_tokens": 1036,
+     "total_time": 0.166574766,
+     "completion_tokens_details": {
+      "reasoning_tokens": 32
+     }
+    },
+    "usage_source": "usage",
+    "headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "998",
+     "x-ratelimit-reset-requests": "2m52.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "6722",
+     "x-ratelimit-reset-tokens": "9.585s"
+    },
+    "error": null,
+    "first_byte_ms": 415.4,
+    "first_content_ms": 545.4,
+    "total_ms": 577.4
+   },
+   "passages": [
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r01",
+    "AIAYN:T3:r02"
+   ],
+   "local_prompt_estimate": 979,
+   "provider_prompt_tokens": 978,
+   "relative_error": -0.001,
+   "client_ms": 1230.9
+  },
+  "4_invalid_key_rejected": {
+   "llm_error": "bad_request",
+   "call": {
+    "model": "openai/gpt-oss-120b",
+    "started_at": "2026-11-14T07:55:25.924+00:00",
+    "t_send_ns": 176575925034200,
+    "status": 401,
+    "t_first_byte_ns": null,
+    "t_first_content_ns": null,
+    "t_last_ns": 176576020300500,
+    "max_gap_ms": 0.0,
+    "text": "",
+    "finish_reason": null,
+    "usage": null,
+    "usage_source": null,
+    "headers": {},
+    "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+    "first_byte_ms": null,
+    "first_content_ms": null,
+    "total_ms": 95.3
+   },
+   "client_ms": 346.6
+  },
+  "5_timeout_enforced": {
+   "llm_error": "timeout",
+   "call": {
+    "model": "openai/gpt-oss-120b",
+    "started_at": "2026-11-14T07:55:26.287+00:00",
+    "t_send_ns": 176576287808900,
+    "status": null,
+    "t_first_byte_ns": null,
+    "t_first_content_ns": null,
+    "t_last_ns": 176576313210900,
+    "max_gap_ms": 0.0,
+    "text": "",
+    "finish_reason": null,
+    "usage": null,
+    "usage_source": null,
+    "headers": {},
+    "error": "timeout: ReadTimeout",
+    "first_byte_ms": null,
+    "first_content_ms": null,
+    "total_ms": 25.4
+   },
+   "client_ms": 286.4
+  }
+ },
+ "gate": {
+  "checks": {
+   "auth_ok_and_primary_model_listed": true,
+   "streaming_200_with_content_and_usage": true,
+   "rate_limit_headers_returned": true,
+   "token_accounting_within_15pct": true,
+   "p4_prompt_completed": true,
+   "invalid_key_rejected_401": true,
+   "timeout_raised_as_timeout": true
+  },
+  "passed": true
+ },
+ "ledger_after": {
+  "caps": {
+   "connectivity_requests": 5,
+   "initial_generation_calls": 24,
+   "generation_requests": 48,
+   "total_tokens": 100000
+  },
+  "connectivity_requests": 5,
+  "initial_generation_calls": 0,
+  "generation_requests": 0,
+  "tokens_12a": 1137,
+  "tokens_12b": 0,
+  "refused_calls": 0,
+  "note": "Owner re-accepted the risk on 2026-11-14 for Phase 12 ('Accept risk again'): the current key is used although the earlier machine-security finding is unresolved (no full scan, key not rotated). Token cap raised by the owner from 30,000 to 100,000 ('Raise cap to 100,000')."
+ }
+}

@@ -27,7 +27,7 @@ import re
 from dataclasses import dataclass
 
 from relay.retrieval.index_build import PAPER_TITLES, index_text
-from relay.verify import absence, citations, evidence, formulas, nli, tables
+from relay.verify import absence, absence_tables, citations, evidence, formulas, nli, tables
 from relay.verify.claims import atomic_claims
 from relay.verify.mathnorm import plain_math
 from relay.verify.citations import SentenceCheck, strip_citations
@@ -93,13 +93,16 @@ def _support(claim: str, prem: list[str], contexts: list[str], nli_model) -> flo
 def verify(answer: str, passages: list[dict], corpus_ids: set[str], nli_model,
            entail_min: float, entail_min_flagged: float) -> Report:
     by_id = {p["chunk_id"]: p for p in passages}
+    answer = citations.normalize_brackets(answer)  # v4.1: 【ID】 read as [ID]; every check below is unchanged
     sentences = citations.check(answer, set(by_id), corpus_ids)
     evidence.check(sentences, by_id)
     previous_accepted: str | None = None
     for s in sentences:
         if s.ok and s.absence:
             s.reasons += [f"absence contradicted: {r}" for r in
-                          tables.absence_contradicted(s.sentence, passages) + absence.contradicted(s.sentence, passages)]
+                          tables.absence_contradicted(s.sentence, passages) + absence.contradicted(s.sentence, passages)
+                          + absence_tables.table_absence_contradicted(s.sentence, passages)]  # v4.2: P6 promoted
+            s.reasons += absence.vague(s.sentence, passages)  # v4.2: fail closed on an uncheckable absence claim
         if not s.ok or s.absence:
             previous_accepted = None
             continue

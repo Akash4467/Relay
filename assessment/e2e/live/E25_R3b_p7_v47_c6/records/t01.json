@@ -1,0 +1,163 @@
+{
+ "run": "assessment/e2e/live/E25_R3b_p7_v47_c6",
+ "timestamp": "2026-11-14T16:09:15.058+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "t01",
+ "dataset": [
+  "B_failure_focused"
+ ],
+ "question": "In the H-Net paper's table comparing related architectures, is the Autoregressive column marked with a check mark (✓) or a cross (✗) for ByT5?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "The authors list ByT5 under the Isotropic configuration with Autoregressive = ✗ [HNET:T6:r01].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "HNET:T6:r01"
+  ],
+  "request_id": "loop-E25_R3b_p7_v47_c6-t01"
+ },
+ "client_ms": 15944.6,
+ "evidence_ids": [
+  "HNET:T6:r05",
+  "HNET:T6:r04",
+  "HNET:T6:r03",
+  "HNET:T6:r01",
+  "HNET:T6:r02",
+  "HNET:A:c089",
+  "HNET:2.1.2:c020"
+ ],
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true
+ ],
+ "drafts": [
+  "The authors list ByT5 under the Isotropic configuration with Autoregressive = ✗ [HNET:T6:r01]."
+ ],
+ "verification": [
+  {
+   "ok": true,
+   "cited": [
+    "HNET:T6:r01"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "The authors list ByT5 under the Isotropic configuration with Autoregressive = ✗ [HNET:T6:r01].",
+     "ok": true,
+     "entailment": 0.9934634712713912,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_R3b_p7_v47_c6-t01",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T16:09:15.058+00:00",
+  "question_id": "t01",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 1993,
+  "tokens_out": 71,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1190.2,
+  "context_tokens": 1506,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "HNET:T6:r05",
+   "HNET:T6:r04",
+   "HNET:T6:r03",
+   "HNET:T6:r01",
+   "HNET:T6:r02",
+   "HNET:A:c089",
+   "HNET:2.1.2:c020"
+  ],
+  "verification_ms": 1445.2,
+  "answer_status": "answered",
+  "llm_calls": 1,
+  "initial_attempts": 1,
+  "redraft_attempts": 0,
+  "fallback_generations": 0,
+  "governor_wait_ms": 12591.8,
+  "model_ttft_ms": 625.5,
+  "first_byte_ms": 403.3,
+  "generation_ms": 683.0,
+  "reasoning_tokens": 36,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1994,
+    "reserved": 2764,
+    "governor_wait_ms": 12591.8,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.321100059,
+     "prompt_tokens": 1993,
+     "prompt_time": 0.133562096,
+     "completion_tokens": 71,
+     "completion_time": 0.150215949,
+     "total_tokens": 2064,
+     "total_time": 0.283778045,
+     "completion_tokens_details": {
+      "reasoning_tokens": 36
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1993,
+    "tokens_out": 71,
+    "reasoning_tokens": 36,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 403.3,
+    "model_ttft_ms": 625.5,
+    "total_ms": 683.0,
+    "max_gap_ms": 222.2,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "965",
+     "x-ratelimit-reset-requests": "50m24s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5064",
+     "x-ratelimit-reset-tokens": "22.02s"
+    }
+   }
+  ],
+  "first_token_ms": 15918.6,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 15919.5
+ }
+}

@@ -1,0 +1,252 @@
+{
+ "run": "assessment/e2e/live/E25_V48",
+ "timestamp": "2026-11-14T16:53:10.704+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "q10",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "How is H-Net's hierarchy built from dynamic chunking, and did adding a second stage help?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions, and a second stage applies the same dynamic chunking process to the compressed representation to form a nested hierarchy of chunks [HNET:1:c012]. H‑Net (2‑stage) is significantly better than H‑Net (1‑stage) [HNET:3.1:c049].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "HNET:1:c012",
+   "HNET:3.1:c049"
+  ],
+  "request_id": "loop-E25_V48-q10"
+ },
+ "client_ms": 33605.8,
+ "evidence_ids": [
+  "HNET:T6:r05",
+  "HNET:T6:r02",
+  "HNET:T6:r01",
+  "HNET:T6:r04",
+  "HNET:T6:r03",
+  "HNET:1:c012",
+  "HNET:3.1:c049"
+ ],
+ "gold_units_in_context": [
+  false,
+  false,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  false,
+  false,
+  false
+ ],
+ "drafts": [
+  "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler retains vectors based on those indicators, forming the first level of hierarchy, and a second level is created by applying the same dynamic chunking process to the already compressed representation, yielding a nested hierarchy of chunks [HNET:1:c012]. The authors report that H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), indicating that adding a second dynamic‑chunking stage improves performance [HNET:3.1:c049].",
+  "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions, and a second stage applies the same dynamic chunking process to the compressed representation to form a nested hierarchy of chunks [HNET:1:c012]. H‑Net (2‑stage) is significantly better than H‑Net (1‑stage) [HNET:3.1:c049]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "HNET:1:c012",
+    "HNET:3.1:c049"
+   ],
+   "failures": [
+    [
+     "The authors report that H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), indicating that adding a second dynamic‑chunking stage improves performance [HNET:3.1:c049].",
+     "not supported by the cited passage (entailment 0.06 < 0.9); term 'h' not in the cited passage; term 'net' not in the cited passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler retains vectors based on those indicators, forming the first level of hierarchy, and a second level is created by applying the same dynamic chunking process to the already compressed representation, yielding a nested hierarchy of chunks [HNET:1:c012].",
+     "ok": true,
+     "entailment": 0.9479391846225154,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors report that H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), indicating that adding a second dynamic‑chunking stage improves performance [HNET:3.1:c049].",
+     "ok": false,
+     "entailment": 0.05580472095731264,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.06 < 0.9); term 'h' not in the cited passage; term 'net' not in the cited passage"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "HNET:1:c012",
+    "HNET:3.1:c049"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions, and a second stage applies the same dynamic chunking process to the compressed representation to form a nested hierarchy of chunks [HNET:1:c012].",
+     "ok": true,
+     "entailment": 0.9272490897290375,
+     "reasons": []
+    },
+    {
+     "sentence": "H‑Net (2‑stage) is significantly better than H‑Net (1‑stage) [HNET:3.1:c049].",
+     "ok": true,
+     "entailment": 0.9281677141196589,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_V48-q10",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T16:53:10.704+00:00",
+  "question_id": "q10",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4359,
+  "tokens_out": 452,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 695.6,
+  "context_tokens": 1453,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "HNET:T6:r05",
+   "HNET:T6:r02",
+   "HNET:T6:r01",
+   "HNET:T6:r04",
+   "HNET:T6:r03",
+   "HNET:1:c012",
+   "HNET:3.1:c049"
+  ],
+  "verification_ms": 1518.3,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 28336.3,
+  "model_ttft_ms": 970.3,
+  "first_byte_ms": 467.7,
+  "generation_ms": 3002.2,
+  "reasoning_tokens": 212,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1924,
+    "reserved": 2694,
+    "governor_wait_ms": 11098.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.368288808,
+     "prompt_tokens": 1923,
+     "prompt_time": 0.360388339,
+     "completion_tokens": 190,
+     "completion_time": 0.903236125,
+     "total_tokens": 2113,
+     "total_time": 1.263624464,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 62
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1923,
+    "tokens_out": 190,
+    "reasoning_tokens": 62,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 467.7,
+    "model_ttft_ms": 970.3,
+    "total_ms": 1727.6,
+    "max_gap_ms": 502.5,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "950",
+     "x-ratelimit-reset-requests": "1h12m0s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4794",
+     "x-ratelimit-reset-tokens": "24.045s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2435,
+    "reserved": 3205,
+    "governor_wait_ms": 17237.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.156296745,
+     "prompt_tokens": 2436,
+     "prompt_time": 0.462219709,
+     "completion_tokens": 262,
+     "completion_time": 0.546885545,
+     "total_tokens": 2698,
+     "total_time": 1.009105254,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 150
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2436,
+    "tokens_out": 262,
+    "reasoning_tokens": 150,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 269.7,
+    "model_ttft_ms": 1057.8,
+    "total_ms": 1274.6,
+    "max_gap_ms": 788.1,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "949",
+     "x-ratelimit-reset-requests": "1h13m26.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5162",
+     "x-ratelimit-reset-tokens": "21.285s"
+    }
+   }
+  ],
+  "first_token_ms": 33576.2,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 33576.7
+ }
+}

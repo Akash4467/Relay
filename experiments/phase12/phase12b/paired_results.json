@@ -1,0 +1,788 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "finished_at": "2026-11-14T08:04:53.946+00:00",
+ "rows": [
+  {
+   "question_id": "q01",
+   "group": "ordinary_answerable",
+   "order": [
+    "c3",
+    "c6"
+   ],
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "normal",
+     "reason": null,
+     "citations": [
+      "AIAYN:1:c002"
+     ],
+     "request_id": "p12-c3-q01"
+    },
+    "pipeline_status": "answered",
+    "refusal_reason": null,
+    "evidence_ids": [
+     "AIAYN:1:c002",
+     "AIAYN:1:c003",
+     "AIAYN:abstract:c001",
+     "AIAYN:6.3:c033",
+     "HNET:1:c010",
+     "MOSHI:6.2:c111",
+     "HNET:4:c081",
+     "HNET:1:c004"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true
+    ]
+   },
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "verification failed after redraft",
+     "citations": [],
+     "request_id": "p12-c6-q01"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "verification failed after redraft",
+    "evidence_ids": [
+     "AIAYN:1:c002",
+     "AIAYN:1:c003",
+     "AIAYN:abstract:c001",
+     "AIAYN:6.3:c033",
+     "HNET:1:c010",
+     "MOSHI:6.2:c111",
+     "HNET:4:c081",
+     "HNET:1:c004"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true
+    ]
+   }
+  },
+  {
+   "question_id": "q02",
+   "group": "ordinary_answerable",
+   "order": [
+    "c6",
+    "c3"
+   ],
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "verification failed after redraft",
+     "citations": [],
+     "request_id": "p12-c6-q02"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "verification failed after redraft",
+    "evidence_ids": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:3.2.3:c016",
+     "AIAYN:3.2.1:c011",
+     "HNET:B:c107",
+     "AIAYN:AttentionVisualizations:c037"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true
+    ]
+   },
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "verification failed after redraft",
+     "citations": [],
+     "request_id": "p12-c3-q02"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "verification failed after redraft",
+    "evidence_ids": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:3.2.3:c016",
+     "AIAYN:3.2.1:c011",
+     "HNET:B:c107",
+     "AIAYN:AttentionVisualizations:c037"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true
+    ]
+   }
+  },
+  {
+   "question_id": "q07",
+   "group": "ordinary_answerable",
+   "order": [
+    "c3",
+    "c6"
+   ],
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "verification failed after redraft",
+     "citations": [],
+     "request_id": "p12-c3-q07"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "verification failed after redraft",
+    "evidence_ids": [
+     "AIAYN:3.2.3:c016",
+     "AIAYN:3:c006",
+     "AIAYN:3.1:c009",
+     "AIAYN:3.3:c017",
+     "HNET:2.1.2:c017",
+     "HNET:3.3:c069",
+     "AIAYN:abstract:c001"
+    ],
+    "gold_units_in_context": [
+     true,
+     true,
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true,
+     true,
+     true
+    ]
+   },
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "verification failed after redraft",
+     "citations": [],
+     "request_id": "p12-c6-q07"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "verification failed after redraft",
+    "evidence_ids": [
+     "AIAYN:3.2.3:c016",
+     "AIAYN:3:c006",
+     "AIAYN:3.1:c009",
+     "AIAYN:3.3:c017",
+     "HNET:2.1.2:c017",
+     "HNET:3.3:c069",
+     "AIAYN:abstract:c001"
+    ],
+    "gold_units_in_context": [
+     true,
+     true,
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true,
+     true,
+     true
+    ]
+   }
+  },
+  {
+   "question_id": "q15",
+   "group": "ordinary_answerable",
+   "order": [
+    "c6",
+    "c3"
+   ],
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "verification failed after redraft",
+     "citations": [],
+     "request_id": "p12-c6-q15"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "verification failed after redraft",
+    "evidence_ids": [
+     "AIAYN:5.2:c026",
+     "MOSHI:4.4:c062",
+     "AIAYN:1:c003",
+     "MOSHI:3.1:c017",
+     "MOSHI:3.4.1:c040",
+     "MOSHI:4.4:c064",
+     "AIAYN:6.1:c029",
+     "MOSHI:3.1:c016"
+    ],
+    "gold_units_in_context": [
+     true,
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true,
+     true
+    ]
+   },
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "verification failed after redraft",
+     "citations": [],
+     "request_id": "p12-c3-q15"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "verification failed after redraft",
+    "evidence_ids": [
+     "AIAYN:5.2:c026",
+     "MOSHI:4.4:c062",
+     "AIAYN:1:c003",
+     "MOSHI:3.1:c017",
+     "MOSHI:3.4.1:c040",
+     "MOSHI:4.4:c064",
+     "AIAYN:6.1:c029",
+     "MOSHI:3.1:c016"
+    ],
+    "gold_units_in_context": [
+     true,
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true,
+     true
+    ]
+   }
+  },
+  {
+   "question_id": "t01",
+   "group": "table_heavy_c6_more_complete",
+   "order": [
+    "c3",
+    "c6"
+   ],
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "model: not in papers",
+     "citations": [],
+     "request_id": "p12-c3-t01"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "model: not in papers",
+    "evidence_ids": [
+     "HNET:T6:r01",
+     "HNET:T6:r03",
+     "HNET:T6:r02",
+     "HNET:A:c089",
+     "HNET:A.2:c100",
+     "HNET:2.1.2:c020"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     false
+    ]
+   },
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "normal",
+     "reason": null,
+     "citations": [
+      "HNET:T6:r01"
+     ],
+     "request_id": "p12-c6-t01"
+    },
+    "pipeline_status": "answered",
+    "refusal_reason": null,
+    "evidence_ids": [
+     "HNET:T6:r05",
+     "HNET:T6:r04",
+     "HNET:T6:r03",
+     "HNET:T6:r01",
+     "HNET:T6:r02",
+     "HNET:A:c089",
+     "HNET:2.1.2:c020"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true
+    ]
+   }
+  },
+  {
+   "question_id": "t05",
+   "group": "table_heavy_c6_more_complete",
+   "order": [
+    "c6",
+    "c3"
+   ],
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "normal",
+     "reason": null,
+     "citations": [
+      "MOSHI:T3:r03"
+     ],
+     "request_id": "p12-c6-t05"
+    },
+    "pipeline_status": "answered",
+    "refusal_reason": null,
+    "evidence_ids": [
+     "MOSHI:T3:r01",
+     "MOSHI:T3:r03",
+     "MOSHI:T3:r02",
+     "MOSHI:T17:r07",
+     "MOSHI:T17:r05",
+     "MOSHI:T17:r06"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true
+    ]
+   },
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "normal",
+     "reason": null,
+     "citations": [
+      "MOSHI:T3:r01"
+     ],
+     "request_id": "p12-c3-t05"
+    },
+    "pipeline_status": "answered",
+    "refusal_reason": null,
+    "evidence_ids": [
+     "MOSHI:T3:r01",
+     "MOSHI:T3:r02",
+     "MOSHI:T17:r03",
+     "MOSHI:T17:r02",
+     "MOSHI:T17:r01",
+     "MOSHI:5.1:c070",
+     "MOSHI:A:c127"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     false
+    ]
+   }
+  },
+  {
+   "question_id": "t13",
+   "group": "table_heavy_c6_more_complete",
+   "order": [
+    "c3",
+    "c6"
+   ],
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "model: not in papers",
+     "citations": [],
+     "request_id": "p12-c3-t13"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "model: not in papers",
+    "evidence_ids": [
+     "MOSHI:T5:r01",
+     "MOSHI:5.3:c081",
+     "MOSHI:5.3:c080",
+     "MOSHI:5.3:c082",
+     "MOSHI:5.2:c078",
+     "MOSHI:5.2:c079",
+     "MOSHI:3.4.2:c044"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     false
+    ]
+   },
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "normal",
+     "reason": null,
+     "citations": [
+      "MOSHI:T5:r01"
+     ],
+     "request_id": "p12-c6-t13"
+    },
+    "pipeline_status": "answered",
+    "refusal_reason": null,
+    "evidence_ids": [
+     "MOSHI:T5:r01",
+     "MOSHI:5.3:c081",
+     "MOSHI:5.3:c080",
+     "MOSHI:5.3:c082",
+     "MOSHI:5.2:c078",
+     "MOSHI:5.2:c079",
+     "MOSHI:3.4.2:c044"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     true
+    ]
+   }
+  },
+  {
+   "question_id": "q11",
+   "group": "targeted",
+   "order": [
+    "c6",
+    "c3"
+   ],
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "normal",
+     "reason": null,
+     "citations": [
+      "AIAYN:T3:r02"
+     ],
+     "request_id": "p12-c6-q11"
+    },
+    "pipeline_status": "answered",
+    "refusal_reason": null,
+    "evidence_ids": [
+     "AIAYN:6.2:c031",
+     "AIAYN:6.1:c029",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:T3:r07",
+     "AIAYN:T3:r03",
+     "AIAYN:T3:r02",
+     "AIAYN:T3:r04"
+    ],
+    "gold_units_in_context": [
+     true,
+     false
+    ],
+    "gold_units_complete_in_context": [
+     true,
+     false
+    ]
+   },
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "model: not in papers",
+     "citations": [],
+     "request_id": "p12-c3-q11"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "model: not in papers",
+    "evidence_ids": [
+     "AIAYN:6.2:c031",
+     "AIAYN:6.1:c029",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:T3:r07",
+     "AIAYN:T3:r03",
+     "AIAYN:T3:r02",
+     "AIAYN:T3:r04"
+    ],
+    "gold_units_in_context": [
+     true,
+     false
+    ],
+    "gold_units_complete_in_context": [
+     true,
+     false
+    ]
+   }
+  },
+  {
+   "question_id": "t10",
+   "group": "targeted",
+   "order": [
+    "c3",
+    "c6"
+   ],
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "model: not in papers",
+     "citations": [],
+     "request_id": "p12-c3-t10"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "model: not in papers",
+    "evidence_ids": [
+     "MOSHI:T4:r04",
+     "MOSHI:T4:r03",
+     "MOSHI:E:c147",
+     "MOSHI:5.2:c076",
+     "MOSHI:6.4:c117",
+     "MOSHI:5.8:c103",
+     "MOSHI:5.8:c100"
+    ],
+    "gold_units_in_context": [
+     true,
+     true,
+     true
+    ],
+    "gold_units_complete_in_context": [
+     false,
+     false,
+     false
+    ]
+   },
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "model: not in papers",
+     "citations": [],
+     "request_id": "p12-c6-t10"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "model: not in papers",
+    "evidence_ids": [
+     "MOSHI:E:c147",
+     "MOSHI:5.2:c076",
+     "MOSHI:6.4:c117",
+     "MOSHI:5.8:c103",
+     "MOSHI:6.1:c109",
+     "MOSHI:5.8:c107",
+     "MOSHI:5.4:c088",
+     "MOSHI:T18:r16"
+    ],
+    "gold_units_in_context": [
+     false,
+     false,
+     false
+    ],
+    "gold_units_complete_in_context": [
+     false,
+     false,
+     false
+    ]
+   }
+  },
+  {
+   "question_id": "t29",
+   "group": "targeted",
+   "order": [
+    "c6",
+    "c3"
+   ],
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "verification failed after redraft",
+     "citations": [],
+     "request_id": "p12-c6-t29"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "verification failed after redraft",
+    "evidence_ids": [
+     "MOSHI:T17:r05",
+     "MOSHI:T17:r07",
+     "MOSHI:T17:r06",
+     "MOSHI:T3:r03",
+     "MOSHI:T17:r03",
+     "MOSHI:T3:r01",
+     "MOSHI:T17:r04"
+    ],
+    "gold_units_in_context": [
+     false
+    ],
+    "gold_units_complete_in_context": [
+     false
+    ]
+   },
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "verification failed after redraft",
+     "citations": [],
+     "request_id": "p12-c3-t29"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "verification failed after redraft",
+    "evidence_ids": [
+     "MOSHI:T17:r02",
+     "MOSHI:T17:r01",
+     "MOSHI:T17:r03",
+     "MOSHI:T3:r01",
+     "MOSHI:T3:r02",
+     "MOSHI:A:c127",
+     "MOSHI:5.1:c070"
+    ],
+    "gold_units_in_context": [
+     true
+    ],
+    "gold_units_complete_in_context": [
+     false
+    ]
+   }
+  },
+  {
+   "question_id": "q16",
+   "group": "unanswerable",
+   "order": [
+    "c3",
+    "c6"
+   ],
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "model: not in papers",
+     "citations": [],
+     "request_id": "p12-c3-q16"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "model: not in papers",
+    "evidence_ids": [
+     "AIAYN:T2:r05",
+     "AIAYN:6.1:c029",
+     "AIAYN:T2:r02",
+     "AIAYN:T2:r04",
+     "AIAYN:T2:r03",
+     "AIAYN:T2:r01",
+     "AIAYN:T3:r09"
+    ],
+    "gold_units_in_context": [],
+    "gold_units_complete_in_context": []
+   },
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "model: not in papers",
+     "citations": [],
+     "request_id": "p12-c6-q16"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "model: not in papers",
+    "evidence_ids": [
+     "AIAYN:T2:r05",
+     "AIAYN:6.1:c029",
+     "AIAYN:T2:r02",
+     "AIAYN:T2:r04",
+     "AIAYN:T2:r03",
+     "AIAYN:T2:r01",
+     "AIAYN:T3:r09"
+    ],
+    "gold_units_in_context": [],
+    "gold_units_complete_in_context": []
+   }
+  },
+  {
+   "question_id": "q27",
+   "group": "unanswerable",
+   "order": [
+    "c6",
+    "c3"
+   ],
+   "c6": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "model: not in papers",
+     "citations": [],
+     "request_id": "p12-c6-q27"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "model: not in papers",
+    "evidence_ids": [
+     "AIAYN:5.2:c026",
+     "HNET:E.2:c114",
+     "HNET:3.1:c051",
+     "HNET:3.1:c053",
+     "HNET:3:c043",
+     "HNET:3.1:c050",
+     "HNET:T2:r15"
+    ],
+    "gold_units_in_context": [],
+    "gold_units_complete_in_context": []
+   },
+   "c3": {
+    "done": {
+     "model": "openai/gpt-oss-120b",
+     "status": "ok",
+     "tier": "refused",
+     "reason": "model: not in papers",
+     "citations": [],
+     "request_id": "p12-c3-q27"
+    },
+    "pipeline_status": "refused",
+    "refusal_reason": "model: not in papers",
+    "evidence_ids": [
+     "AIAYN:5.2:c026",
+     "HNET:E.2:c114",
+     "HNET:3.1:c051",
+     "HNET:3.1:c053",
+     "HNET:3:c043",
+     "HNET:3.1:c050",
+     "HNET:T2:r15"
+    ],
+    "gold_units_in_context": [],
+    "gold_units_complete_in_context": []
+   }
+  }
+ ],
+ "ledger_after": {
+  "caps": {
+   "connectivity_requests": 5,
+   "initial_generation_calls": 24,
+   "generation_requests": 48,
+   "total_tokens": 100000
+  },
+  "connectivity_requests": 5,
+  "initial_generation_calls": 24,
+  "generation_requests": 38,
+  "tokens_12a": 1137,
+  "tokens_12b": 76664,
+  "refused_calls": 0,
+  "note": "Owner re-accepted the risk on 2026-11-14 for Phase 12 ('Accept risk again'): the current key is used although the earlier machine-security finding is unresolved (no full scan, key not rotated). Token cap raised by the owner from 30,000 to 100,000 ('Raise cap to 100,000')."
+ }
+}

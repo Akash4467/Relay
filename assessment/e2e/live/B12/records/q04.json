@@ -1,0 +1,244 @@
+{
+ "run": "assessment/e2e/live/B12",
+ "timestamp": "2026-11-14T12:28:21.231+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "question_id": "q04",
+ "dataset": [
+  "e2e_B12",
+  "direct"
+ ],
+ "question": "What frame rate, number of quantizers, codebook size and bitrate does the Mimi codec use?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §3.3.1 Architecture; MOSHI §A Additional ablation on Mimi codec; MOSHI §5.1 Text Language Modeling.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-B12-q04"
+ },
+ "client_ms": 3768.7,
+ "evidence_ids": [
+  "MOSHI:3.3.1:c030",
+  "MOSHI:3.3.1:c028",
+  "MOSHI:3.3.1:c029",
+  "MOSHI:T17:r03",
+  "MOSHI:5.1:c071",
+  "MOSHI:T17:r02"
+ ],
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true
+ ],
+ "drafts": [
+  "Mimi uses 8 quantizers, each with a codebook size of 2048, and at 12.5 Hz this corresponds to a bitrate of 1.1 kbps [MOSHI:3.3.1:c030]. The retrieved passages do not state the frame rate.",
+  "Mimi operates at a frame rate of 12.5 Hz, uses 8 quantizers each with a codebook size of 2048, and this configuration yields a bitrate of 1.1 kbps [MOSHI:3.3.1:c030]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:3.3.1:c030"
+   ],
+   "failures": [
+    [
+     "Mimi uses 8 quantizers, each with a codebook size of 2048, and at 12.5 Hz this corresponds to a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+     "not supported by the cited passage (entailment 0.24 < 0.9)"
+    ],
+    [
+     "The retrieved passages do not state the frame rate.",
+     "absence contradicted: MOSHI:5.1:c071 says: \"For a fair comparison with SemantiCodec and SpeechTokenizer, we also include a downsampled version of our codec in the M…\""
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "Mimi uses 8 quantizers, each with a codebook size of 2048, and at 12.5 Hz this corresponds to a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+     "ok": false,
+     "entailment": 0.23776954068222753,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.24 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The retrieved passages do not state the frame rate.",
+     "ok": false,
+     "entailment": null,
+     "reasons": [
+      "absence contradicted: MOSHI:5.1:c071 says: \"For a fair comparison with SemantiCodec and SpeechTokenizer, we also include a downsampled version of our codec in the M…\""
+     ]
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:3.3.1:c030"
+   ],
+   "failures": [
+    [
+     "Mimi operates at a frame rate of 12.5 Hz, uses 8 quantizers each with a codebook size of 2048, and this configuration yields a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+     "not supported by the cited passage (entailment 0.40 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "Mimi operates at a frame rate of 12.5 Hz, uses 8 quantizers each with a codebook size of 2048, and this configuration yields a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+     "ok": false,
+     "entailment": 0.4012390760960393,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.40 < 0.9)"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-B12-q04",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T12:28:21.231+00:00",
+  "question_id": "q04",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3542,
+  "tokens_out": 344,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1055.6,
+  "context_tokens": 1361,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "f_r"
+  ],
+  "retrieval_query": "What frame rate, number of quantizers, codebook size and bitrate does the Mimi codec use? [f_r]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:3.3.1:c030",
+   "MOSHI:3.3.1:c028",
+   "MOSHI:3.3.1:c029",
+   "MOSHI:T17:r03",
+   "MOSHI:5.1:c071",
+   "MOSHI:T17:r02"
+  ],
+  "verification_ms": 1045.1,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 0.0,
+  "model_ttft_ms": 702.9,
+  "first_byte_ms": 476.7,
+  "generation_ms": 1615.4,
+  "reasoning_tokens": 207,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1660,
+    "reserved": 2430,
+    "governor_wait_ms": 0.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.368557636,
+     "prompt_tokens": 1659,
+     "prompt_time": 0.06857512,
+     "completion_tokens": 140,
+     "completion_time": 0.292594447,
+     "total_tokens": 1799,
+     "total_time": 0.361169567,
+     "completion_tokens_details": {
+      "reasoning_tokens": 69
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1659,
+    "tokens_out": 140,
+    "reasoning_tokens": 69,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 476.7,
+    "model_ttft_ms": 702.9,
+    "total_ms": 832.4,
+    "max_gap_ms": 226.2,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "997",
+     "x-ratelimit-reset-requests": "4m19.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2904",
+     "x-ratelimit-reset-tokens": "38.22s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1882,
+    "reserved": 2652,
+    "governor_wait_ms": 0.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.159944732,
+     "prompt_tokens": 1883,
+     "prompt_time": 0.096823615,
+     "completion_tokens": 204,
+     "completion_time": 0.449977946,
+     "total_tokens": 2087,
+     "total_time": 0.546801561,
+     "completion_tokens_details": {
+      "reasoning_tokens": 138
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 1883,
+    "tokens_out": 204,
+    "reasoning_tokens": 138,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 240.9,
+    "model_ttft_ms": 645.6,
+    "total_ms": 783.0,
+    "max_gap_ms": 404.7,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "996",
+     "x-ratelimit-reset-requests": "5m45.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "1060",
+     "x-ratelimit-reset-tokens": "52.05s"
+    }
+   }
+  ],
+  "first_token_ms": 3740.8,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 3741.4
+ }
+}

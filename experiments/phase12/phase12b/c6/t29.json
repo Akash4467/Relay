@@ -1,0 +1,254 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "timestamp": "2026-11-14T08:02:58.943+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "retrieval_config": {
+  "setting": "B",
+  "cross_paper_reserve_per_paper": 2,
+  "symbolic_query_expansion": true,
+  "prompt_caption_sharing": true
+ },
+ "question_id": "t29",
+ "group": "targeted",
+ "question": "In the Moshi paper's extended Mimi codec ablation (the table reporting only ABX, VisQOL and MOSNet), what ABX error does the configuration with no marks in any of the five component columns report?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §A Additional ablation on Mimi codec; MOSHI §5.1 Text Language Modeling.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "p12-c6-t29"
+ },
+ "client_ms": 31735.4,
+ "evidence_ids": [
+  "MOSHI:T17:r05",
+  "MOSHI:T17:r07",
+  "MOSHI:T17:r06",
+  "MOSHI:T3:r03",
+  "MOSHI:T17:r03",
+  "MOSHI:T3:r01",
+  "MOSHI:T17:r04"
+ ],
+ "retrieval_query": null,
+ "query_expansion": [],
+ "caption_sharing": true,
+ "gold_units_in_context": [
+  false
+ ],
+ "gold_units_complete_in_context": [
+  false
+ ],
+ "drafts": [
+  "The configuration with no marks in any of the five component columns reports an ABX error of 29.1% [ MOSHI:T17:r03 ].",
+  "The configuration with no marks in any of the five component columns reports an ABX error of 29.1% [MOSHI:T17:r03]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:T17:r03"
+   ],
+   "failures": [
+    [
+     "The configuration with no marks in any of the five component columns reports an ABX error of 29.1% [ MOSHI:T17:r03 ].",
+     "not supported by the cited passage (entailment 0.85 < 0.9)"
+    ]
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:T17:r03"
+   ],
+   "failures": [
+    [
+     "The configuration with no marks in any of the five component columns reports an ABX error of 29.1% [MOSHI:T17:r03].",
+     "not supported by the cited passage (entailment 0.85 < 0.9)"
+    ]
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "identity_checks": {
+  "evidence_equals_selected_corpus": true,
+  "original_question_in_every_prompt": true,
+  "expanded_query_not_in_prompt": true
+ },
+ "trace": {
+  "request_id": "p12-c6-t29",
+  "scenario": "phase12_live",
+  "source": "real",
+  "start_time": "2026-11-14T08:02:58.943+00:00",
+  "question_id": "t29",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3950,
+  "tokens_out": 266,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 775.7,
+  "context_tokens": 1590,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:T17:r05",
+   "MOSHI:T17:r07",
+   "MOSHI:T17:r06",
+   "MOSHI:T3:r03",
+   "MOSHI:T17:r03",
+   "MOSHI:T3:r01",
+   "MOSHI:T17:r04"
+  ],
+  "verification_ms": 651.3,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 28730.1,
+  "model_ttft_ms": 703.2,
+  "first_byte_ms": 306.6,
+  "generation_ms": 1549.4,
+  "reasoning_tokens": 184,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1917,
+    "reserved": 2687,
+    "governor_wait_ms": 13199.2,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.157747136,
+     "prompt_tokens": 1916,
+     "prompt_time": 0.077020017,
+     "completion_tokens": 187,
+     "completion_time": 0.390612383,
+     "total_tokens": 2103,
+     "total_time": 0.4676324,
+     "completion_tokens_details": {
+      "reasoning_tokens": 146
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1916,
+    "tokens_out": 187,
+    "reasoning_tokens": 146,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 306.6,
+    "model_ttft_ms": 703.2,
+    "total_ms": 769.5,
+    "max_gap_ms": 396.6,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "967",
+     "x-ratelimit-reset-requests": "47m31.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5793",
+     "x-ratelimit-reset-tokens": "16.552s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2033,
+    "reserved": 2803,
+    "governor_wait_ms": 15530.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.319163749,
+     "prompt_tokens": 2034,
+     "prompt_time": 0.156174125,
+     "completion_tokens": 79,
+     "completion_time": 0.163642329,
+     "total_tokens": 2113,
+     "total_time": 0.319816454,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 38
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2034,
+    "tokens_out": 79,
+    "reasoning_tokens": 38,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 464.2,
+    "model_ttft_ms": 713.6,
+    "total_ms": 779.9,
+    "max_gap_ms": 249.4,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "966",
+     "x-ratelimit-reset-requests": "48m57.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5702",
+     "x-ratelimit-reset-tokens": "17.235s"
+    }
+   }
+  ],
+  "first_token_ms": 31730.0,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 31730.6
+ },
+ "provider_token_usage": [
+  {
+   "queue_time": 0.157747136,
+   "prompt_tokens": 1916,
+   "prompt_time": 0.077020017,
+   "completion_tokens": 187,
+   "completion_time": 0.390612383,
+   "total_tokens": 2103,
+   "total_time": 0.4676324,
+   "completion_tokens_details": {
+    "reasoning_tokens": 146
+   }
+  },
+  {
+   "queue_time": 0.319163749,
+   "prompt_tokens": 2034,
+   "prompt_time": 0.156174125,
+   "completion_tokens": 79,
+   "completion_time": 0.163642329,
+   "total_tokens": 2113,
+   "total_time": 0.319816454,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 38
+   }
+  }
+ ]
+}

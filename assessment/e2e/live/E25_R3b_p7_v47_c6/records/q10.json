@@ -1,0 +1,249 @@
+{
+ "run": "assessment/e2e/live/E25_R3b_p7_v47_c6",
+ "timestamp": "2026-11-14T16:05:41.497+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "q10",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "How is H-Net's hierarchy built from dynamic chunking, and did adding a second stage help?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler selectively retains vectors based on boundary indicators, while a de‑chunking layer includes a smoothing module and an upsampler that restores compressed vectors to their original resolution [HNET:1:c012]. H‑Net (2-stage) is significantly better than H‑Net (1-stage) [HNET:3.1:c049].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "HNET:1:c012",
+   "HNET:3.1:c049"
+  ],
+  "request_id": "loop-E25_R3b_p7_v47_c6-q10"
+ },
+ "client_ms": 35554.0,
+ "evidence_ids": [
+  "HNET:T6:r05",
+  "HNET:T6:r02",
+  "HNET:T6:r01",
+  "HNET:T6:r04",
+  "HNET:T6:r03",
+  "HNET:1:c012",
+  "HNET:3.1:c049"
+ ],
+ "gold_units_in_context": [
+  false,
+  false,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  false,
+  false,
+  false
+ ],
+ "drafts": [
+  "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler retains vectors based on those indicators, forming the first level of hierarchy, and a de‑chunking layer with a smoothing module and upsampler restores the compressed vectors, forming the second level [HNET:1:c012]. The authors report that H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), indicating that adding a second stage helps [HNET:3.1:c049].",
+  "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler selectively retains vectors based on boundary indicators, while a de‑chunking layer includes a smoothing module and an upsampler that restores compressed vectors to their original resolution [HNET:1:c012]. H‑Net (2-stage) is significantly better than H‑Net (1-stage) [HNET:3.1:c049]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "HNET:1:c012",
+    "HNET:3.1:c049"
+   ],
+   "failures": [
+    [
+     "The authors report that H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), indicating that adding a second stage helps [HNET:3.1:c049].",
+     "not supported by the cited passage (entailment 0.01 < 0.9); term 'h' not in the cited passage; term 'net' not in the cited passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler retains vectors based on those indicators, forming the first level of hierarchy, and a de‑chunking layer with a smoothing module and upsampler restores the compressed vectors, forming the second level [HNET:1:c012].",
+     "ok": true,
+     "entailment": 0.9708536970821003,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors report that H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), indicating that adding a second stage helps [HNET:3.1:c049].",
+     "ok": false,
+     "entailment": 0.005588089510146067,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.01 < 0.9); term 'h' not in the cited passage; term 'net' not in the cited passage"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "HNET:1:c012",
+    "HNET:3.1:c049"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler selectively retains vectors based on boundary indicators, while a de‑chunking layer includes a smoothing module and an upsampler that restores compressed vectors to their original resolution [HNET:1:c012].",
+     "ok": true,
+     "entailment": 0.9794372914614675,
+     "reasons": []
+    },
+    {
+     "sentence": "H‑Net (2-stage) is significantly better than H‑Net (1-stage) [HNET:3.1:c049].",
+     "ok": true,
+     "entailment": 0.9281677141196589,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_R3b_p7_v47_c6-q10",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T16:05:41.497+00:00",
+  "question_id": "q10",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4349,
+  "tokens_out": 352,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1112.1,
+  "context_tokens": 1453,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "HNET:T6:r05",
+   "HNET:T6:r02",
+   "HNET:T6:r01",
+   "HNET:T6:r04",
+   "HNET:T6:r03",
+   "HNET:1:c012",
+   "HNET:3.1:c049"
+  ],
+  "verification_ms": 2939.3,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 29028.7,
+  "model_ttft_ms": 636.4,
+  "first_byte_ms": 392.1,
+  "generation_ms": 2391.7,
+  "reasoning_tokens": 129,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1924,
+    "reserved": 2694,
+    "governor_wait_ms": 11378.1,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.301916805,
+     "prompt_tokens": 1923,
+     "prompt_time": 0.096028223,
+     "completion_tokens": 185,
+     "completion_time": 0.387969988,
+     "total_tokens": 2108,
+     "total_time": 0.483998211,
+     "completion_tokens_details": {
+      "reasoning_tokens": 64
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1923,
+    "tokens_out": 185,
+    "reasoning_tokens": 64,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 392.1,
+    "model_ttft_ms": 636.4,
+    "total_ms": 870.3,
+    "max_gap_ms": 244.3,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "977",
+     "x-ratelimit-reset-requests": "33m7.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "3370",
+     "x-ratelimit-reset-tokens": "34.725s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2425,
+    "reserved": 3195,
+    "governor_wait_ms": 17650.6,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.156649178,
+     "prompt_tokens": 2426,
+     "prompt_time": 0.128595019,
+     "completion_tokens": 167,
+     "completion_time": 1.154491042,
+     "total_tokens": 2593,
+     "total_time": 1.283086061,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 65
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2426,
+    "tokens_out": 167,
+    "reasoning_tokens": 65,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 242.7,
+    "model_ttft_ms": 1088.1,
+    "total_ms": 1521.4,
+    "max_gap_ms": 845.4,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "976",
+     "x-ratelimit-reset-requests": "34m33.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "3269",
+     "x-ratelimit-reset-tokens": "35.482s"
+    }
+   }
+  ],
+  "first_token_ms": 35513.2,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 35514.0
+ }
+}

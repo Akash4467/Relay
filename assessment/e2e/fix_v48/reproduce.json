@@ -1,0 +1,86 @@
+{
+ "t29#0": {
+  "draft": "The configuration with no marks in any of the five component columns reports an ABX error of 29.1%[MOSHI:T17:r03].",
+  "v4.7c": {
+   "ok": false,
+   "new_reasons": []
+  },
+  "v4.8a_fix1": {
+   "ok": false,
+   "new_reasons": []
+  },
+  "v4.8b_fix2": {
+   "ok": false,
+   "new_reasons": []
+  },
+  "v4.8c_both": {
+   "ok": false,
+   "new_reasons": []
+  }
+ },
+ "t29#1": {
+  "draft": "Configuration Row 5 reports ABX (↓) = 29.1%[MOSHI:T17:r03].",
+  "v4.7c": {
+   "ok": true,
+   "new_reasons": []
+  },
+  "v4.8a_fix1": {
+   "ok": false,
+   "new_reasons": [
+    "the question selects the row by its check marks, but the cited row (Row 5) in MOSHI:T17:r03 does not have those marks: it is a different row"
+   ]
+  },
+  "v4.8b_fix2": {
+   "ok": true,
+   "new_reasons": []
+  },
+  "v4.8c_both": {
+   "ok": false,
+   "new_reasons": [
+    "the question selects the row by its check marks, but the cited row (Row 5) in MOSHI:T17:r03 does not have those marks: it is a different row"
+   ]
+  }
+ },
+ "q13#0": {
+  "draft": "The authors report that the 2‑stage H‑Net configuration matched to GPT‑3 Large achieves an average zero‑shot accuracy of 55.5 % [HNET:T2:r10]. The authors’ Transformer model matched to GPT‑3 Large obtains an average zero‑shot accuracy of 53.3 % [HNET:T2:r01]. The authors note that the 2‑stage H‑Net’s average accuracy matches that of the larger Transformer configuration matched to GPT‑3 XL, which also has an average zero‑shot accuracy of 55.5 % [HNET:T2:r11].",
+  "v4.7c": {
+   "ok": false,
+   "new_reasons": []
+  },
+  "v4.8a_fix1": {
+   "ok": false,
+   "new_reasons": []
+  },
+  "v4.8b_fix2": {
+   "ok": false,
+   "new_reasons": []
+  },
+  "v4.8c_both": {
+   "ok": false,
+   "new_reasons": []
+  }
+ },
+ "q13#1": {
+  "draft": "The authors report that the H‑Net (2‑stage) configuration (#FLOPs matched to GPT‑3 Large) has Average / acc ↑ = 55.5 % [HNET:T2:r10]. The retrieved passages do not state the average zero‑shot accuracy of the BPE Transformer.",
+  "v4.7c": {
+   "ok": true,
+   "new_reasons": []
+  },
+  "v4.8a_fix1": {
+   "ok": true,
+   "new_reasons": []
+  },
+  "v4.8b_fix2": {
+   "ok": false,
+   "new_reasons": [
+    "absence contradicted: retrieved row 'Transformer (#FLOPs matched to GPT-3 Large)' (HNET:T2:r01) reports Average / acc ↑ = 53.3"
+   ]
+  },
+  "v4.8c_both": {
+   "ok": false,
+   "new_reasons": [
+    "absence contradicted: retrieved row 'Transformer (#FLOPs matched to GPT-3 Large)' (HNET:T2:r01) reports Average / acc ↑ = 53.3"
+   ]
+  }
+ }
+}

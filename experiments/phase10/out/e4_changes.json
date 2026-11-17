@@ -1,0 +1,33 @@
+{
+ "version": "e4",
+ "changed_paragraphs": [
+  {
+   "paper": "MOSHI",
+   "paragraph": "1#1",
+   "inserted": [
+    "ms",
+    "ms",
+    "min"
+   ],
+   "e3_excerpt": "In this work we introduce Moshi, a speech-text foundation model and real-time spoken dialogue system that aims at solving the aforementioned limitations: latency, textual information bottleneck and tu",
+   "e4_excerpt": "In this work we introduce Moshi, a speech-text foundation model and real-time spoken dialogue system that aims at solving the aforementioned limitations: latency, textual information bottleneck and tu"
+  },
+  {
+   "paper": "MOSHI",
+   "paragraph": "3.3.1#3",
+   "inserted": [
+    "s"
+   ],
+   "e3_excerpt": "Optimization. Unlike purely convolutional codecs that use Adam, the introduction of Transformers into the architecture requires additional regularization with weight decay along with using the AdamW o",
+   "e4_excerpt": "Optimization. Unlike purely convolutional codecs that use Adam, the introduction of Transformers into the architecture requires additional regularization with weight decay along with using the AdamW o"
+  }
+ ],
+ "inserted_tokens": [
+  "min",
+  "ms",
+  "s"
+ ],
+ "unknown_unit_macros": [],
+ "problems": [],
+ "all_checks_passed": true
+}

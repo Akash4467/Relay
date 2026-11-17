@@ -1,0 +1,27 @@
+{
+ "about": "ASSISTANT judgments (Claude), written 2026-11-14 after reading every reply and draft in experiments/phase12/phase12b/{c3,c6}/*.json against expected_answer in phase12b/questions.json. NOT an independent review; the question labels themselves are project/provisional labels. 'judgments' grades every ANSWERED reply to an answerable question (the only outcomes that need a correctness call). 'draft_notes' records, for refused answerable replies, whether the rejected drafts were correct (used to tell verification false rejections from correct rejections). 'verifier_false_acceptance' marks an accepted reply that is wrong.",
+ "judgments": {
+  "c3/q01": {"grade": "correct_answer", "why": "sequential h_t from h_(t-1) precludes parallelization; critical at long lengths because memory limits batching: matches expected."},
+  "c3/t05": {"grade": "incorrect", "why": "reports 65.9 +/- 1.7; expected 64.0 +/- 1.7. c3's MOSHI:T3 rows carry no check marks, so the model picked the first row (all-check configuration cannot be identified on c3).", "verifier_false_acceptance": true},
+  "c6/t01": {"grade": "correct_answer", "why": "cross for ByT5 under Autoregressive: matches expected."},
+  "c6/t05": {"grade": "correct_answer", "why": "64.0 +/- 1.7 from MOSHI:T3:r03: matches expected."},
+  "c6/t13": {"grade": "correct_answer", "why": "36.8: matches expected."},
+  "c6/q11": {"grade": "partially_correct", "why": "single head 24.9 correct; base configuration value (25.8) not given: the reply states the retrieved passages do not give it (AIAYN:T3:r01 not in context on either corpus)."}
+ },
+ "draft_notes": {
+  "c6/q01": {"drafts_correct": true, "rejection": "false rejection: final draft restates the passage, entailment 0.89 < 0.9. Same first prompt as c3, where the redraft was accepted: the difference is sampling."},
+  "c3/q02": {"drafts_correct": true, "rejection": "false rejection: 'h=8 parallel attention layers, or heads ... d_k=d_v=d_model/h=64' is in AIAYN:3.2.2:c014; NLI 0.01 and 0.31."},
+  "c6/q02": {"drafts_correct": true, "rejection": "false rejection, identical drafts and scores to c3."},
+  "c3/q07": {"drafts_correct": "mostly", "rejection": "mixed: 'encoder consists only of self-attention sub-layers' is inaccurate (encoder layers also have a feed-forward sub-layer) and correctly rejected; 'keys and values come from the encoder output' was rejected at 0.76 (false rejection)."},
+  "c6/q07": {"drafts_correct": true, "rejection": "false rejection: the final draft is correct ('two sub-layers of self-attention and feed-forward'; masking; Q/K/V sources) and was rejected (entailment 0.00 on the encoder sentence)."},
+  "c3/q15": {"drafts_correct": true, "rejection": "false rejection: 'eight NVIDIA P100 GPUs' vs passage '8 NVIDIA P100 GPUs' (AIAYN:5.2:c026), entailment 0.01."},
+  "c6/q15": {"drafts_correct": true, "rejection": "false rejection, identical to c3."},
+  "c3/t01": {"drafts_correct": false, "rejection": "correct rejection: first draft said check mark (wrong; c3 rows carry no marks); redraft declined (NOT_IN_PAPERS)."},
+  "c3/t13": {"drafts_correct": false, "rejection": "correct rejection: first draft said 135.4 (wrong row; c3 rows carry no marks); redraft declined."},
+  "c3/q11": {"drafts_correct": "values right, citation wrong", "rejection": "mixed: 25.8 was cited to AIAYN:T3:r02, which does not hold the base row (correct rejection); the 24.9 sentence cites the right row but scored 0.07 (false rejection). Redraft declined."},
+  "c3/t10": {"drafts_correct": null, "rejection": "no draft: model declined; T4 rows in context but without the causal marks (extraction)."},
+  "c6/t10": {"drafts_correct": null, "rejection": "no draft: model declined; no T4 row in context (retrieval)."},
+  "c3/t29": {"drafts_correct": "value right, not derivable", "rejection": "31.3% is the expected value, but c3 rows carry no marks, so the 'no marks' configuration cannot be identified from the evidence (same first-row guess that was wrong for t05 on c3). Rejected (0.76; 'number 5' from 'five component columns'). Not counted as a verifier false rejection."},
+  "c6/t29": {"drafts_correct": false, "rejection": "correct rejection: 29.1% (MOSHI:T17:r03) is wrong; the gold row MOSHI:T17:r01 is not in context."}
+ }
+}

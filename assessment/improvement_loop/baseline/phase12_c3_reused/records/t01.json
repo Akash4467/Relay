@@ -1,0 +1,240 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "timestamp": "2026-11-14T07:59:31.425+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "retrieval_config": {
+  "setting": "B",
+  "cross_paper_reserve_per_paper": 2,
+  "symbolic_query_expansion": true,
+  "prompt_caption_sharing": true
+ },
+ "question_id": "t01",
+ "group": "table_heavy_c6_more_complete",
+ "question": "In the H-Net paper's table comparing related architectures, is the Autoregressive column marked with a check mark (✓) or a cross (✗) for ByT5?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: HNET §3.3 Ablation Studies; HNET §A Related Work; HNET §A.2 Non-Autoregressive Tokenizer-free Architectures; HNET §2.1.2 Design Principles.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "model: not in papers",
+  "citations": [],
+  "request_id": "p12-c3-t01"
+ },
+ "client_ms": 27726.2,
+ "evidence_ids": [
+  "HNET:T6:r01",
+  "HNET:T6:r03",
+  "HNET:T6:r02",
+  "HNET:A:c089",
+  "HNET:A.2:c100",
+  "HNET:2.1.2:c020"
+ ],
+ "retrieval_query": null,
+ "query_expansion": [],
+ "caption_sharing": true,
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  false
+ ],
+ "drafts": [
+  "The table marks the Autoregressive entry for ByT5 with a check mark (✓) [HNET:T6:r01].",
+  "NOT_IN_PAPERS"
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "HNET:T6:r01"
+   ],
+   "failures": [
+    [
+     "The table marks the Autoregressive entry for ByT5 with a check mark (✓) [HNET:T6:r01].",
+     "not supported by the cited passage (entailment 0.01 < 0.9)"
+    ]
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "model: not in papers",
+ "identity_checks": {
+  "evidence_equals_selected_corpus": true,
+  "original_question_in_every_prompt": true,
+  "expanded_query_not_in_prompt": true
+ },
+ "trace": {
+  "request_id": "p12-c3-t01",
+  "scenario": "phase12_live",
+  "source": "real",
+  "start_time": "2026-11-14T07:59:31.425+00:00",
+  "question_id": "t01",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3560,
+  "tokens_out": 181,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1189.6,
+  "context_tokens": 1409,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "HNET:T6:r01",
+   "HNET:T6:r03",
+   "HNET:T6:r02",
+   "HNET:A:c089",
+   "HNET:A.2:c100",
+   "HNET:2.1.2:c020"
+  ],
+  "verification_ms": 0.0,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 23669.6,
+  "model_ttft_ms": 701.3,
+  "first_byte_ms": 443.2,
+  "generation_ms": 1483.1,
+  "reasoning_tokens": 131,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1727,
+    "reserved": 2497,
+    "governor_wait_ms": 11173.7,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.367436905,
+     "prompt_tokens": 1726,
+     "prompt_time": 0.07629748,
+     "completion_tokens": 117,
+     "completion_time": 0.241596668,
+     "total_tokens": 1843,
+     "total_time": 0.317894148,
+     "completion_tokens_details": {
+      "reasoning_tokens": 81
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1726,
+    "tokens_out": 117,
+    "reasoning_tokens": 81,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 443.2,
+    "model_ttft_ms": 701.3,
+    "total_ms": 765.2,
+    "max_gap_ms": 258.1,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "981",
+     "x-ratelimit-reset-requests": "27m21.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5983",
+     "x-ratelimit-reset-tokens": "15.127s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1833,
+    "reserved": 2603,
+    "governor_wait_ms": 12495.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.318109,
+     "prompt_tokens": 1834,
+     "prompt_time": 0.109857816,
+     "completion_tokens": 64,
+     "completion_time": 0.207300113,
+     "total_tokens": 1898,
+     "total_time": 0.317157929,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 50
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 1834,
+    "tokens_out": 64,
+    "reasoning_tokens": 50,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 404.9,
+    "model_ttft_ms": 693.8,
+    "total_ms": 717.9,
+    "max_gap_ms": 288.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "980",
+     "x-ratelimit-reset-requests": "28m48s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5854",
+     "x-ratelimit-reset-tokens": "16.094s"
+    }
+   }
+  ],
+  "first_token_ms": 27718.0,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "model: not in papers",
+  "total_ms": 27718.8
+ },
+ "provider_token_usage": [
+  {
+   "queue_time": 0.367436905,
+   "prompt_tokens": 1726,
+   "prompt_time": 0.07629748,
+   "completion_tokens": 117,
+   "completion_time": 0.241596668,
+   "total_tokens": 1843,
+   "total_time": 0.317894148,
+   "completion_tokens_details": {
+    "reasoning_tokens": 81
+   }
+  },
+  {
+   "queue_time": 0.318109,
+   "prompt_tokens": 1834,
+   "prompt_time": 0.109857816,
+   "completion_tokens": 64,
+   "completion_time": 0.207300113,
+   "total_tokens": 1898,
+   "total_time": 0.317157929,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 50
+   }
+  }
+ ]
+}

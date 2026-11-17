@@ -1,0 +1,246 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "timestamp": "2026-11-14T08:01:57.341+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "retrieval_config": {
+  "setting": "B",
+  "cross_paper_reserve_per_paper": 2,
+  "symbolic_query_expansion": true,
+  "prompt_caption_sharing": true
+ },
+ "question_id": "q11",
+ "group": "targeted",
+ "question": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.2 Model Variations; AIAYN §6.1 Machine Translation; AIAYN §3.2.2 Multi-Head Attention.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "model: not in papers",
+  "citations": [],
+  "request_id": "p12-c3-q11"
+ },
+ "client_ms": 32641.2,
+ "evidence_ids": [
+  "AIAYN:6.2:c031",
+  "AIAYN:6.1:c029",
+  "AIAYN:3.2.2:c013",
+  "AIAYN:T3:r07",
+  "AIAYN:T3:r03",
+  "AIAYN:T3:r02",
+  "AIAYN:T3:r04"
+ ],
+ "retrieval_query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get? [h = 1]",
+ "query_expansion": [
+  "h = 1"
+ ],
+ "caption_sharing": true,
+ "gold_units_in_context": [
+  true,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  false
+ ],
+ "drafts": [
+  "The single‑head attention configuration (h = 1) achieved a development BLEU of 24.9 [AIAYN:T3:r02]. The base configuration achieved a development BLEU of 25.8 [AIAYN:T3:r02].",
+  "NOT_IN_PAPERS"
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:T3:r02"
+   ],
+   "failures": [
+    [
+     "The single‑head attention configuration (h = 1) achieved a development BLEU of 24.9 [AIAYN:T3:r02].",
+     "not supported by the cited passage (entailment 0.07 < 0.9)"
+    ],
+    [
+     "The base configuration achieved a development BLEU of 25.8 [AIAYN:T3:r02].",
+     "not supported by the cited passage (entailment 0.06 < 0.9)"
+    ]
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "model: not in papers",
+ "identity_checks": {
+  "evidence_equals_selected_corpus": true,
+  "original_question_in_every_prompt": true,
+  "expanded_query_not_in_prompt": true
+ },
+ "trace": {
+  "request_id": "p12-c3-q11",
+  "scenario": "phase12_live",
+  "source": "real",
+  "start_time": "2026-11-14T08:01:57.341+00:00",
+  "question_id": "q11",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4006,
+  "tokens_out": 319,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 802.2,
+  "context_tokens": 1599,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "h = 1"
+  ],
+  "retrieval_query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get? [h = 1]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:6.1:c029",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:T3:r07",
+   "AIAYN:T3:r03",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r04"
+  ],
+  "verification_ms": 0.0,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 28872.0,
+  "model_ttft_ms": 930.0,
+  "first_byte_ms": 526.1,
+  "generation_ms": 1900.1,
+  "reasoning_tokens": 240,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1909,
+    "reserved": 2679,
+    "governor_wait_ms": 13724.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.370165632,
+     "prompt_tokens": 1908,
+     "prompt_time": 0.099012823,
+     "completion_tokens": 204,
+     "completion_time": 0.425771606,
+     "total_tokens": 2112,
+     "total_time": 0.524784429,
+     "completion_tokens_details": {
+      "reasoning_tokens": 139
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1908,
+    "tokens_out": 204,
+    "reasoning_tokens": 139,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 526.1,
+    "model_ttft_ms": 930.0,
+    "total_ms": 1060.4,
+    "max_gap_ms": 403.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "971",
+     "x-ratelimit-reset-requests": "41m45.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5780",
+     "x-ratelimit-reset-tokens": "16.65s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2097,
+    "reserved": 2867,
+    "governor_wait_ms": 15147.1,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.286372784,
+     "prompt_tokens": 2098,
+     "prompt_time": 0.164238451,
+     "completion_tokens": 115,
+     "completion_time": 0.243210678,
+     "total_tokens": 2213,
+     "total_time": 0.407449129,
+     "completion_tokens_details": {
+      "reasoning_tokens": 101
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2098,
+    "tokens_out": 115,
+    "reasoning_tokens": 101,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 436.3,
+    "model_ttft_ms": 829.4,
+    "total_ms": 839.7,
+    "max_gap_ms": 393.2,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "970",
+     "x-ratelimit-reset-requests": "43m12s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5611",
+     "x-ratelimit-reset-tokens": "17.917s"
+    }
+   }
+  ],
+  "first_token_ms": 32634.6,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "model: not in papers",
+  "total_ms": 32635.2
+ },
+ "provider_token_usage": [
+  {
+   "queue_time": 0.370165632,
+   "prompt_tokens": 1908,
+   "prompt_time": 0.099012823,
+   "completion_tokens": 204,
+   "completion_time": 0.425771606,
+   "total_tokens": 2112,
+   "total_time": 0.524784429,
+   "completion_tokens_details": {
+    "reasoning_tokens": 139
+   }
+  },
+  {
+   "queue_time": 0.286372784,
+   "prompt_tokens": 2098,
+   "prompt_time": 0.164238451,
+   "completion_tokens": 115,
+   "completion_time": 0.243210678,
+   "total_tokens": 2213,
+   "total_time": 0.407449129,
+   "completion_tokens_details": {
+    "reasoning_tokens": 101
+   }
+  }
+ ]
+}

@@ -15,6 +15,7 @@ import re
 from dataclasses import dataclass, field
 
 from relay.llm.prompts import NOT_STATED
+from relay.verify import absence
 from relay.verify.sentences import split_sentences
 
 CHUNK_ID = re.compile(r"[A-Z]+:[0-9A-Za-z.]+:[cr]\d+")
@@ -39,6 +40,20 @@ class SentenceCheck:
         return not self.reasons
 
 
+_LENTICULAR = re.compile(r"【([^【】]+)】")
+
+
+def normalize_brackets(text: str) -> str:
+    """Verifier v4.1 (phase 10, L1): gpt-oss often cites as 【MOSHI:5.3:c083】 (10 of 19 real drafts on 2026-11-13).
+    Rewrite such a bracket to [MOSHI:5.3:c083] only when everything inside is chunk IDs, by the same rule as
+    citations_in; any other 【...】 is left as text. Nothing else changes: the IDs still have to exist, be retrieved
+    and support the sentence."""
+    def swap(m: re.Match) -> str:
+        parts = [p.strip() for p in re.split(r"[,;]", m.group(1))]
+        return f"[{m.group(1)}]" if parts and all(CHUNK_ID.fullmatch(p) for p in parts) else m.group(0)
+    return _LENTICULAR.sub(swap, text)
+
+
 def citations_in(sentence: str) -> list[str]:
     """Chunk IDs inside [...] brackets; brackets that hold no chunk ID (e.g. "[0, 1]") are not citations."""
     ids: list[str] = []
@@ -60,12 +75,17 @@ def check(answer: str, retrieved_ids: set[str], corpus_ids: set[str]) -> list[Se
     for sent in split_sentences(answer):
         c = SentenceCheck(sent, citations_in(sent))
         claim = strip_citations(sent)
-        if claim.startswith(NOT_STATED):
+        scope = absence.classify(claim, bool(c.citations))  # v4.2: by meaning, not one exact phrase
+        if scope == "retrieved":
             c.absence = True
             if c.citations:
                 c.reasons.append("an absence sentence must not cite a passage")
             if re.search(r"\d", claim):
                 c.reasons.append("an absence sentence must not contain a value: a value is a claim that needs a citation")
+        elif scope in ("paper", "unscoped"):
+            c.reasons.append(f"claims information is missing from {'the paper' if scope == 'paper' else 'the sources'}; "
+                             "only the retrieved passages were seen, so whole-paper absence cannot be established: "
+                             f"write \"{NOT_STATED} ...\" or answer from the passages")
         elif _UNSCOPED_ABSENCE.match(claim):
             c.reasons.append("claims the papers do not state something; only the retrieved passages were seen, "
                              f"so write \"{NOT_STATED} ...\"")

@@ -1,0 +1,44 @@
+{
+ "question_id": "t05",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T12:31:00.495+00:00",
+  "t_send_ns": 193110495995600,
+  "status": 200,
+  "t_first_byte_ns": 193110964098400,
+  "t_first_content_ns": 193114343085600,
+  "t_last_ns": 193114417223400,
+  "max_gap_ms": 3378.9682,
+  "text": "The configuration with a check mark in all five component columns obtains a MUSHRA score of 65.9±1.7 % [MOSHI:T3:r01]",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.36983485,
+   "prompt_tokens": 1720,
+   "prompt_time": 3.2657562110000002,
+   "completion_tokens": 93,
+   "completion_time": 0.19360996,
+   "total_tokens": 1813,
+   "total_time": 3.459366171,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 48
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "986",
+   "x-ratelimit-reset-requests": "20m9.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2030",
+   "x-ratelimit-reset-tokens": "44.775s"
+  },
+  "error": null,
+  "first_byte_ms": 468.1,
+  "first_content_ms": 3847.1,
+  "total_ms": 3921.2
+ }
+}

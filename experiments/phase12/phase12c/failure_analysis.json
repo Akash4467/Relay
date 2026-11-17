@@ -1,0 +1,1074 @@
+{
+ "by_corpus_and_layer": {
+  "c3": {
+   "verification (every draft rejected although complete evidence was in context)": [
+    "q02",
+    "q07",
+    "q15"
+   ],
+   "retrieval/extraction (gold rows in context but not complete: answering cells missing)": [
+    "t01",
+    "t05",
+    "t13",
+    "t10",
+    "t29"
+   ],
+   "retrieval (a gold unit not in the final context)": [
+    "q11"
+   ]
+  },
+  "c6": {
+   "verification (every draft rejected although complete evidence was in context)": [
+    "q01",
+    "q02",
+    "q07",
+    "q15"
+   ],
+   "retrieval (a gold unit not in the final context)": [
+    "q11",
+    "t10",
+    "t29"
+   ]
+  }
+ },
+ "records": [
+  {
+   "corpus": "c3",
+   "question_id": "q01",
+   "group": "ordinary_answerable",
+   "answerable": true,
+   "outcome": "correct_answer",
+   "failure_layer": null,
+   "refusal_reason": null,
+   "evidence_ids": [
+    "AIAYN:1:c002",
+    "AIAYN:1:c003",
+    "AIAYN:abstract:c001",
+    "AIAYN:6.3:c033",
+    "HNET:1:c010",
+    "MOSHI:6.2:c111",
+    "HNET:4:c081",
+    "HNET:1:c004"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": {
+    "grade": "correct_answer",
+    "why": "sequential h_t from h_(t-1) precludes parallelization; critical at long lengths because memory limits batching: matches expected."
+   },
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3904,
+   "tokens_out": 258,
+   "reasoning_tokens": 77,
+   "total_ms": 8176.1,
+   "first_byte_ms": 420.5,
+   "generation_ms": 1639.0,
+   "verification_ms": 5407.3,
+   "retrieval_ms": 1106.7,
+   "governor_wait_ms": 0.0
+  },
+  {
+   "corpus": "c3",
+   "question_id": "q02",
+   "group": "ordinary_answerable",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "verification (every draft rejected although complete evidence was in context)",
+   "refusal_reason": "verification failed after redraft",
+   "evidence_ids": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c014",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.2.1:c011",
+    "HNET:B:c107",
+    "AIAYN:AttentionVisualizations:c037"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3814,
+   "tokens_out": 232,
+   "reasoning_tokens": 133,
+   "total_ms": 30431.5,
+   "first_byte_ms": 268.4,
+   "generation_ms": 2152.2,
+   "verification_ms": 1448.1,
+   "retrieval_ms": 851.6,
+   "governor_wait_ms": 25952.3
+  },
+  {
+   "corpus": "c3",
+   "question_id": "q07",
+   "group": "ordinary_answerable",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "verification (every draft rejected although complete evidence was in context)",
+   "refusal_reason": "verification failed after redraft",
+   "evidence_ids": [
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3:c006",
+    "AIAYN:3.1:c009",
+    "AIAYN:3.3:c017",
+    "HNET:2.1.2:c017",
+    "HNET:3.3:c069",
+    "AIAYN:abstract:c001"
+   ],
+   "gold_units_in_context": [
+    true,
+    true,
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true,
+    true,
+    true
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3863,
+   "tokens_out": 603,
+   "reasoning_tokens": 210,
+   "total_ms": 34173.7,
+   "first_byte_ms": 406.8,
+   "generation_ms": 2806.6,
+   "verification_ms": 9589.4,
+   "retrieval_ms": 789.2,
+   "governor_wait_ms": 20964.6
+  },
+  {
+   "corpus": "c3",
+   "question_id": "q15",
+   "group": "ordinary_answerable",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "verification (every draft rejected although complete evidence was in context)",
+   "refusal_reason": "verification failed after redraft",
+   "evidence_ids": [
+    "AIAYN:5.2:c026",
+    "MOSHI:4.4:c062",
+    "AIAYN:1:c003",
+    "MOSHI:3.1:c017",
+    "MOSHI:3.4.1:c040",
+    "MOSHI:4.4:c064",
+    "AIAYN:6.1:c029",
+    "MOSHI:3.1:c016"
+   ],
+   "gold_units_in_context": [
+    true,
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true,
+    true
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3904,
+   "tokens_out": 267,
+   "reasoning_tokens": 161,
+   "total_ms": 31204.5,
+   "first_byte_ms": 399.5,
+   "generation_ms": 1477.5,
+   "verification_ms": 2517.0,
+   "retrieval_ms": 1086.4,
+   "governor_wait_ms": 26099.7
+  },
+  {
+   "corpus": "c3",
+   "question_id": "t01",
+   "group": "table_heavy_c6_more_complete",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "retrieval/extraction (gold rows in context but not complete: answering cells missing)",
+   "refusal_reason": "model: not in papers",
+   "evidence_ids": [
+    "HNET:T6:r01",
+    "HNET:T6:r03",
+    "HNET:T6:r02",
+    "HNET:A:c089",
+    "HNET:A.2:c100",
+    "HNET:2.1.2:c020"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    false
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3560,
+   "tokens_out": 181,
+   "reasoning_tokens": 131,
+   "total_ms": 27718.8,
+   "first_byte_ms": 443.2,
+   "generation_ms": 1483.1,
+   "verification_ms": 0.0,
+   "retrieval_ms": 1189.6,
+   "governor_wait_ms": 23669.6
+  },
+  {
+   "corpus": "c3",
+   "question_id": "t05",
+   "group": "table_heavy_c6_more_complete",
+   "answerable": true,
+   "outcome": "incorrect",
+   "failure_layer": "retrieval/extraction (gold rows in context but not complete: answering cells missing)",
+   "refusal_reason": null,
+   "evidence_ids": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:5.1:c070",
+    "MOSHI:A:c127"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    false
+   ],
+   "llm_calls": 1,
+   "redraft": false,
+   "draft_citation_failures": 0,
+   "judgment": {
+    "grade": "incorrect",
+    "why": "reports 65.9 +/- 1.7; expected 64.0 +/- 1.7. c3's MOSHI:T3 rows carry no check marks, so the model picked the first row (all-check configuration cannot be identified on c3).",
+    "verifier_false_acceptance": true
+   },
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 1720,
+   "tokens_out": 106,
+   "reasoning_tokens": 61,
+   "total_ms": 13626.6,
+   "first_byte_ms": 447.7,
+   "generation_ms": 834.8,
+   "verification_ms": 1014.3,
+   "retrieval_ms": 1308.5,
+   "governor_wait_ms": 10460.2
+  },
+  {
+   "corpus": "c3",
+   "question_id": "t13",
+   "group": "table_heavy_c6_more_complete",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "retrieval/extraction (gold rows in context but not complete: answering cells missing)",
+   "refusal_reason": "model: not in papers",
+   "evidence_ids": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.2:c079",
+    "MOSHI:3.4.2:c044"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    false
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3871,
+   "tokens_out": 224,
+   "reasoning_tokens": 143,
+   "total_ms": 29722.9,
+   "first_byte_ms": 431.2,
+   "generation_ms": 1742.8,
+   "verification_ms": 0.0,
+   "retrieval_ms": 1192.6,
+   "governor_wait_ms": 26035.3
+  },
+  {
+   "corpus": "c3",
+   "question_id": "q11",
+   "group": "targeted",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "retrieval (a gold unit not in the final context)",
+   "refusal_reason": "model: not in papers",
+   "evidence_ids": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04"
+   ],
+   "gold_units_in_context": [
+    true,
+    false
+   ],
+   "gold_units_complete_in_context": [
+    true,
+    false
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 4006,
+   "tokens_out": 319,
+   "reasoning_tokens": 240,
+   "total_ms": 32635.2,
+   "first_byte_ms": 526.1,
+   "generation_ms": 1900.1,
+   "verification_ms": 0.0,
+   "retrieval_ms": 802.2,
+   "governor_wait_ms": 28872.0
+  },
+  {
+   "corpus": "c3",
+   "question_id": "t10",
+   "group": "targeted",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "retrieval/extraction (gold rows in context but not complete: answering cells missing)",
+   "refusal_reason": "model: not in papers",
+   "evidence_ids": [
+    "MOSHI:T4:r04",
+    "MOSHI:T4:r03",
+    "MOSHI:E:c147",
+    "MOSHI:5.2:c076",
+    "MOSHI:6.4:c117",
+    "MOSHI:5.8:c103",
+    "MOSHI:5.8:c100"
+   ],
+   "gold_units_in_context": [
+    true,
+    true,
+    true
+   ],
+   "gold_units_complete_in_context": [
+    false,
+    false,
+    false
+   ],
+   "llm_calls": 1,
+   "redraft": false,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 1837,
+   "tokens_out": 46,
+   "reasoning_tokens": 32,
+   "total_ms": 15067.7,
+   "first_byte_ms": 522.5,
+   "generation_ms": 1338.2,
+   "verification_ms": 0.0,
+   "retrieval_ms": 673.7,
+   "governor_wait_ms": 13050.0
+  },
+  {
+   "corpus": "c3",
+   "question_id": "t29",
+   "group": "targeted",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "retrieval/extraction (gold rows in context but not complete: answering cells missing)",
+   "refusal_reason": "verification failed after redraft",
+   "evidence_ids": [
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r03",
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:A:c127",
+    "MOSHI:5.1:c070"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    false
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3563,
+   "tokens_out": 238,
+   "reasoning_tokens": 158,
+   "total_ms": 28562.1,
+   "first_byte_ms": 517.1,
+   "generation_ms": 1716.7,
+   "verification_ms": 981.8,
+   "retrieval_ms": 803.2,
+   "governor_wait_ms": 25038.1
+  },
+  {
+   "corpus": "c3",
+   "question_id": "q16",
+   "group": "unanswerable",
+   "answerable": false,
+   "outcome": "correct_abstention",
+   "failure_layer": null,
+   "refusal_reason": "model: not in papers",
+   "evidence_ids": [
+    "AIAYN:T2:r05",
+    "AIAYN:6.1:c029",
+    "AIAYN:T2:r02",
+    "AIAYN:T2:r04",
+    "AIAYN:T2:r03",
+    "AIAYN:T2:r01",
+    "AIAYN:T3:r09"
+   ],
+   "gold_units_in_context": [],
+   "gold_units_complete_in_context": [],
+   "llm_calls": 1,
+   "redraft": false,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 1700,
+   "tokens_out": 38,
+   "reasoning_tokens": 24,
+   "total_ms": 13851.9,
+   "first_byte_ms": 1516.8,
+   "generation_ms": 1770.6,
+   "verification_ms": 0.0,
+   "retrieval_ms": 695.3,
+   "governor_wait_ms": 11380.0
+  },
+  {
+   "corpus": "c3",
+   "question_id": "q27",
+   "group": "unanswerable",
+   "answerable": false,
+   "outcome": "correct_abstention",
+   "failure_layer": null,
+   "refusal_reason": "model: not in papers",
+   "evidence_ids": [
+    "AIAYN:5.2:c026",
+    "HNET:E.2:c114",
+    "HNET:3.1:c051",
+    "HNET:3.1:c053",
+    "HNET:3:c043",
+    "HNET:3.1:c050",
+    "HNET:T2:r15"
+   ],
+   "gold_units_in_context": [],
+   "gold_units_complete_in_context": [],
+   "llm_calls": 1,
+   "redraft": false,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 1818,
+   "tokens_out": 76,
+   "reasoning_tokens": 62,
+   "total_ms": 14662.6,
+   "first_byte_ms": 483.1,
+   "generation_ms": 1380.4,
+   "verification_ms": 0.0,
+   "retrieval_ms": 776.3,
+   "governor_wait_ms": 12498.9
+  },
+  {
+   "corpus": "c6",
+   "question_id": "q01",
+   "group": "ordinary_answerable",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "verification (every draft rejected although complete evidence was in context)",
+   "refusal_reason": "verification failed after redraft",
+   "evidence_ids": [
+    "AIAYN:1:c002",
+    "AIAYN:1:c003",
+    "AIAYN:abstract:c001",
+    "AIAYN:6.3:c033",
+    "HNET:1:c010",
+    "MOSHI:6.2:c111",
+    "HNET:4:c081",
+    "HNET:1:c004"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3892,
+   "tokens_out": 254,
+   "reasoning_tokens": 80,
+   "total_ms": 6977.4,
+   "first_byte_ms": 460.5,
+   "generation_ms": 1766.2,
+   "verification_ms": 4387.8,
+   "retrieval_ms": 801.8,
+   "governor_wait_ms": 0.0
+  },
+  {
+   "corpus": "c6",
+   "question_id": "q02",
+   "group": "ordinary_answerable",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "verification (every draft rejected although complete evidence was in context)",
+   "refusal_reason": "verification failed after redraft",
+   "evidence_ids": [
+    "AIAYN:6.2:c031",
+    "AIAYN:3.2.2:c014",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.2.1:c011",
+    "HNET:B:c107",
+    "AIAYN:AttentionVisualizations:c037"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3814,
+   "tokens_out": 232,
+   "reasoning_tokens": 133,
+   "total_ms": 27708.5,
+   "first_byte_ms": 254.0,
+   "generation_ms": 1533.9,
+   "verification_ms": 1458.9,
+   "retrieval_ms": 828.2,
+   "governor_wait_ms": 23848.8
+  },
+  {
+   "corpus": "c6",
+   "question_id": "q07",
+   "group": "ordinary_answerable",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "verification (every draft rejected although complete evidence was in context)",
+   "refusal_reason": "verification failed after redraft",
+   "evidence_ids": [
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3:c006",
+    "AIAYN:3.1:c009",
+    "AIAYN:3.3:c017",
+    "HNET:2.1.2:c017",
+    "HNET:3.3:c069",
+    "AIAYN:abstract:c001"
+   ],
+   "gold_units_in_context": [
+    true,
+    true,
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true,
+    true,
+    true
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 2,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3952,
+   "tokens_out": 554,
+   "reasoning_tokens": 201,
+   "total_ms": 36058.1,
+   "first_byte_ms": 293.4,
+   "generation_ms": 2125.2,
+   "verification_ms": 8973.1,
+   "retrieval_ms": 729.1,
+   "governor_wait_ms": 24195.4
+  },
+  {
+   "corpus": "c6",
+   "question_id": "q15",
+   "group": "ordinary_answerable",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "verification (every draft rejected although complete evidence was in context)",
+   "refusal_reason": "verification failed after redraft",
+   "evidence_ids": [
+    "AIAYN:5.2:c026",
+    "MOSHI:4.4:c062",
+    "AIAYN:1:c003",
+    "MOSHI:3.1:c017",
+    "MOSHI:3.4.1:c040",
+    "MOSHI:4.4:c064",
+    "AIAYN:6.1:c029",
+    "MOSHI:3.1:c016"
+   ],
+   "gold_units_in_context": [
+    true,
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true,
+    true
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3904,
+   "tokens_out": 257,
+   "reasoning_tokens": 151,
+   "total_ms": 28018.8,
+   "first_byte_ms": 495.1,
+   "generation_ms": 1533.0,
+   "verification_ms": 2447.7,
+   "retrieval_ms": 1080.8,
+   "governor_wait_ms": 22916.3
+  },
+  {
+   "corpus": "c6",
+   "question_id": "t01",
+   "group": "table_heavy_c6_more_complete",
+   "answerable": true,
+   "outcome": "correct_answer",
+   "failure_layer": null,
+   "refusal_reason": null,
+   "evidence_ids": [
+    "HNET:T6:r05",
+    "HNET:T6:r04",
+    "HNET:T6:r03",
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:A:c089",
+    "HNET:2.1.2:c020"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": {
+    "grade": "correct_answer",
+    "why": "cross for ByT5 under Autoregressive: matches expected."
+   },
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3782,
+   "tokens_out": 157,
+   "reasoning_tokens": 64,
+   "total_ms": 31732.6,
+   "first_byte_ms": 402.8,
+   "generation_ms": 2843.5,
+   "verification_ms": 3075.1,
+   "retrieval_ms": 1215.7,
+   "governor_wait_ms": 24555.9
+  },
+  {
+   "corpus": "c6",
+   "question_id": "t05",
+   "group": "table_heavy_c6_more_complete",
+   "answerable": true,
+   "outcome": "correct_answer",
+   "failure_layer": null,
+   "refusal_reason": null,
+   "evidence_ids": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r03",
+    "MOSHI:T3:r02",
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true
+   ],
+   "llm_calls": 1,
+   "redraft": false,
+   "draft_citation_failures": 0,
+   "judgment": {
+    "grade": "correct_answer",
+    "why": "64.0 +/- 1.7 from MOSHI:T3:r03: matches expected."
+   },
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 1726,
+   "tokens_out": 120,
+   "reasoning_tokens": 75,
+   "total_ms": 12308.2,
+   "first_byte_ms": 438.3,
+   "generation_ms": 812.7,
+   "verification_ms": 1151.2,
+   "retrieval_ms": 1468.1,
+   "governor_wait_ms": 8868.0
+  },
+  {
+   "corpus": "c6",
+   "question_id": "t13",
+   "group": "table_heavy_c6_more_complete",
+   "answerable": true,
+   "outcome": "correct_answer",
+   "failure_layer": null,
+   "refusal_reason": null,
+   "evidence_ids": [
+    "MOSHI:T5:r01",
+    "MOSHI:5.3:c081",
+    "MOSHI:5.3:c080",
+    "MOSHI:5.3:c082",
+    "MOSHI:5.2:c078",
+    "MOSHI:5.2:c079",
+    "MOSHI:3.4.2:c044"
+   ],
+   "gold_units_in_context": [
+    true
+   ],
+   "gold_units_complete_in_context": [
+    true
+   ],
+   "llm_calls": 1,
+   "redraft": false,
+   "draft_citation_failures": 0,
+   "judgment": {
+    "grade": "correct_answer",
+    "why": "36.8: matches expected."
+   },
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 1870,
+   "tokens_out": 127,
+   "reasoning_tokens": 61,
+   "total_ms": 15480.3,
+   "first_byte_ms": 505.4,
+   "generation_ms": 882.7,
+   "verification_ms": 765.6,
+   "retrieval_ms": 1218.9,
+   "governor_wait_ms": 12604.7
+  },
+  {
+   "corpus": "c6",
+   "question_id": "q11",
+   "group": "targeted",
+   "answerable": true,
+   "outcome": "partially_correct",
+   "failure_layer": "retrieval (a gold unit not in the final context)",
+   "refusal_reason": null,
+   "evidence_ids": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r03",
+    "AIAYN:T3:r02",
+    "AIAYN:T3:r04"
+   ],
+   "gold_units_in_context": [
+    true,
+    false
+   ],
+   "gold_units_complete_in_context": [
+    true,
+    false
+   ],
+   "llm_calls": 1,
+   "redraft": false,
+   "draft_citation_failures": 0,
+   "judgment": {
+    "grade": "partially_correct",
+    "why": "single head 24.9 correct; base configuration value (25.8) not given: the reply states the retrieved passages do not give it (AIAYN:T3:r01 not in context on either corpus)."
+   },
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 1908,
+   "tokens_out": 210,
+   "reasoning_tokens": 160,
+   "total_ms": 14835.2,
+   "first_byte_ms": 289.8,
+   "generation_ms": 802.3,
+   "verification_ms": 483.9,
+   "retrieval_ms": 1090.1,
+   "governor_wait_ms": 12451.3
+  },
+  {
+   "corpus": "c6",
+   "question_id": "t10",
+   "group": "targeted",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "retrieval (a gold unit not in the final context)",
+   "refusal_reason": "model: not in papers",
+   "evidence_ids": [
+    "MOSHI:E:c147",
+    "MOSHI:5.2:c076",
+    "MOSHI:6.4:c117",
+    "MOSHI:5.8:c103",
+    "MOSHI:6.1:c109",
+    "MOSHI:5.8:c107",
+    "MOSHI:5.4:c088",
+    "MOSHI:T18:r16"
+   ],
+   "gold_units_in_context": [
+    false,
+    false,
+    false
+   ],
+   "gold_units_complete_in_context": [
+    false,
+    false,
+    false
+   ],
+   "llm_calls": 1,
+   "redraft": false,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 1886,
+   "tokens_out": 38,
+   "reasoning_tokens": 24,
+   "total_ms": 13717.0,
+   "first_byte_ms": 446.8,
+   "generation_ms": 620.3,
+   "verification_ms": 0.0,
+   "retrieval_ms": 696.8,
+   "governor_wait_ms": 12392.8
+  },
+  {
+   "corpus": "c6",
+   "question_id": "t29",
+   "group": "targeted",
+   "answerable": true,
+   "outcome": "false_refusal",
+   "failure_layer": "retrieval (a gold unit not in the final context)",
+   "refusal_reason": "verification failed after redraft",
+   "evidence_ids": [
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r07",
+    "MOSHI:T17:r06",
+    "MOSHI:T3:r03",
+    "MOSHI:T17:r03",
+    "MOSHI:T3:r01",
+    "MOSHI:T17:r04"
+   ],
+   "gold_units_in_context": [
+    false
+   ],
+   "gold_units_complete_in_context": [
+    false
+   ],
+   "llm_calls": 2,
+   "redraft": true,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 3950,
+   "tokens_out": 266,
+   "reasoning_tokens": 184,
+   "total_ms": 31730.6,
+   "first_byte_ms": 306.6,
+   "generation_ms": 1549.4,
+   "verification_ms": 651.3,
+   "retrieval_ms": 775.7,
+   "governor_wait_ms": 28730.1
+  },
+  {
+   "corpus": "c6",
+   "question_id": "q16",
+   "group": "unanswerable",
+   "answerable": false,
+   "outcome": "correct_abstention",
+   "failure_layer": null,
+   "refusal_reason": "model: not in papers",
+   "evidence_ids": [
+    "AIAYN:T2:r05",
+    "AIAYN:6.1:c029",
+    "AIAYN:T2:r02",
+    "AIAYN:T2:r04",
+    "AIAYN:T2:r03",
+    "AIAYN:T2:r01",
+    "AIAYN:T3:r09"
+   ],
+   "gold_units_in_context": [],
+   "gold_units_complete_in_context": [],
+   "llm_calls": 1,
+   "redraft": false,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 1700,
+   "tokens_out": 38,
+   "reasoning_tokens": 24,
+   "total_ms": 11665.0,
+   "first_byte_ms": 295.3,
+   "generation_ms": 450.1,
+   "verification_ms": 0.0,
+   "retrieval_ms": 759.9,
+   "governor_wait_ms": 10448.4
+  },
+  {
+   "corpus": "c6",
+   "question_id": "q27",
+   "group": "unanswerable",
+   "answerable": false,
+   "outcome": "correct_abstention",
+   "failure_layer": null,
+   "refusal_reason": "model: not in papers",
+   "evidence_ids": [
+    "AIAYN:5.2:c026",
+    "HNET:E.2:c114",
+    "HNET:3.1:c051",
+    "HNET:3.1:c053",
+    "HNET:3:c043",
+    "HNET:3.1:c050",
+    "HNET:T2:r15"
+   ],
+   "gold_units_in_context": [],
+   "gold_units_complete_in_context": [],
+   "llm_calls": 1,
+   "redraft": false,
+   "draft_citation_failures": 0,
+   "judgment": null,
+   "identity_checks": {
+    "evidence_equals_selected_corpus": true,
+    "original_question_in_every_prompt": true,
+    "expanded_query_not_in_prompt": true
+   },
+   "tokens_in": 1818,
+   "tokens_out": 61,
+   "reasoning_tokens": 47,
+   "total_ms": 14145.7,
+   "first_byte_ms": 522.5,
+   "generation_ms": 742.0,
+   "verification_ms": 0.0,
+   "retrieval_ms": 802.5,
+   "governor_wait_ms": 12595.0
+  }
+ ]
+}

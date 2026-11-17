@@ -1,0 +1,41 @@
+{
+ "question_id": "q01",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T12:28:17.432+00:00",
+  "t_send_ns": 192947433056100,
+  "status": 200,
+  "t_first_byte_ns": 192948304516300,
+  "t_first_content_ns": 192948428509000,
+  "t_last_ns": 192948473157600,
+  "max_gap_ms": 123.9735,
+  "text": "The inherently sequential nature of recurrent models—computing each hidden state from the previous one—precludes parallelization within training examples, and this becomes critical at longer sequence lengths because memory constraints limit batching across examples [AIAYN:1:c002].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.371235853,
+   "prompt_tokens": 2197,
+   "prompt_time": 0.113246851,
+   "completion_tokens": 136,
+   "completion_time": 0.284770181,
+   "total_tokens": 2333,
+   "total_time": 0.398017032,
+   "completion_tokens_details": {
+    "reasoning_tokens": 77
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "998",
+   "x-ratelimit-reset-requests": "2m52.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "4325",
+   "x-ratelimit-reset-tokens": "27.562s"
+  },
+  "error": null,
+  "first_byte_ms": 871.5,
+  "first_content_ms": 995.5,
+  "total_ms": 1040.1
+ }
+}

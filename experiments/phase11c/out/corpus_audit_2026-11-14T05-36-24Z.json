@@ -1,0 +1,2293 @@
+{
+ "sources": {
+  "AIAYN": {
+   "current": {
+    "manifest.json": "1ff22e2f37a9cb705d187e8039b8a1b44580d17d3e66e30b0dd032de06c2ad66",
+    "paper.pdf": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+    "source.tar.gz": "2e7a7d9ee2520d22eb23dae0cb148e167be02a30d6cb3f11b1c67723194339c6"
+   },
+   "equal_to_c4_manifest": true,
+   "c6_src_tree_equals_c4": true
+  },
+  "MOSHI": {
+   "current": {
+    "manifest.json": "14d79caf9a570a8254381f5a62b9a0933f6a3c2242a71d5a4bbb5e0fa9510044",
+    "paper.pdf": "a687144cc77bea86b0c60ae800ccb1d3e0816033fa5c7960388fe29a0dbfcfac",
+    "source.tar.gz": "576fa1a44e754cb44eef8f2acc2c837833751207c9cbd6d21ba554f6323fafa5"
+   },
+   "equal_to_c4_manifest": true,
+   "c6_src_tree_equals_c4": true
+  },
+  "HNET": {
+   "current": {
+    "manifest.json": "8da680a227d068d76c7d8e181319f1b9e617a134dff066f2216bc608f4f33dc0",
+    "paper.pdf": "04a2b32e6e82853cfc23c5db132750874a86cde99219ec6f664128f4aa83122f",
+    "source.tar.gz": "7bf92afea86a348ecab9ef6fbd82b87408604082bb83bce376510dd6262fa708"
+   },
+   "equal_to_c4_manifest": true,
+   "c6_src_tree_equals_c4": true
+  }
+ },
+ "counts": {
+  "sections": {
+   "c3": 105,
+   "c6": 105,
+   "missing_in_c6": [],
+   "new_in_c6": []
+  },
+  "paragraphs": {
+   "c3": 363,
+   "c6": 363,
+   "missing_in_c6": [],
+   "new_in_c6": []
+  },
+  "figures": {
+   "c3": 32,
+   "c6": 32,
+   "missing_in_c6": [],
+   "new_in_c6": []
+  },
+  "tables": {
+   "c3": 31,
+   "c6": 31,
+   "same_ids": true
+  },
+  "table_cells_checked": 2142,
+  "chunks_256": {
+   "c3": 455,
+   "c6": 465,
+   "duplicate_ids": [
+    0,
+    0
+   ],
+   "c3_ids_missing_in_c6": [],
+   "new_ids_in_c6": [
+    "HNET:T6:r04",
+    "HNET:T6:r05",
+    "MOSHI:T13:r03",
+    "MOSHI:T16:r07",
+    "MOSHI:T16:r08",
+    "MOSHI:T17:r04",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06",
+    "MOSHI:T17:r07",
+    "MOSHI:T3:r03"
+   ],
+   "duplicate_texts_c6": 0,
+   "prose_ids_identical": true
+  },
+  "chunks_512": {
+   "c3": 255,
+   "c6": 260,
+   "duplicate_ids": [
+    0,
+    0
+   ],
+   "c3_ids_missing_in_c6": [],
+   "new_ids_in_c6": [
+    "MOSHI:T13:r02",
+    "MOSHI:T16:r04",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r04",
+    "MOSHI:T3:r02"
+   ],
+   "duplicate_texts_c6": 0,
+   "prose_ids_identical": true
+  }
+ },
+ "differences": [
+  {
+   "what": "paragraphs",
+   "key": "('MOSHI', '1', 1)",
+   "field": "text",
+   "class": "UNEXPLAINED",
+   "c3": "In this work we introduce Moshi, a speech-text foundation model and real-time spoken dialogue system that aims at solving the aforementioned limitations: latency, textual information bottleneck and turn-based modeling. Moshi augments a text",
+   "c6": "In this work we introduce Moshi, a speech-text foundation model and real-time spoken dialogue system that aims at solving the aforementioned limitations: latency, textual information bottleneck and turn-based modeling. Moshi augments a text"
+  },
+  {
+   "what": "paragraphs",
+   "key": "('MOSHI', '3.3.1', 3)",
+   "field": "text",
+   "class": "e4_units",
+   "c3": "Optimization. Unlike purely convolutional codecs that use Adam, the introduction of Transformers into the architecture requires additional regularization with weight decay along with using the AdamW optimizer. More precisely, we apply weigh",
+   "c6": "Optimization. Unlike purely convolutional codecs that use Adam, the introduction of Transformers into the architecture requires additional regularization with weight decay along with using the AdamW optimizer. More precisely, we apply weigh"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T1#4",
+   "row": "SpaceByte++ (#FLOPs matched to GPT-3 Large)",
+   "column": "Input / #Params",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "Byte"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T1#4",
+   "row": "SpaceByte++ (#FLOPs matched to GPT-3 Large)",
+   "column": "L^0 / (D)",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "8192"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T1#11",
+   "row": "H-Net (space) (#FLOPs matched to GPT-3 XL)",
+   "column": "Input / #Params",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "Byte"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T1#11",
+   "row": "H-Net (space) (#FLOPs matched to GPT-3 XL)",
+   "column": "L^0 / (D)",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "8192"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T2#12",
+   "row": "H-Net (space) (#FLOPs matched to GPT-3 XL)",
+   "column": "Input",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "Byte"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T3#12",
+   "row": "H-Net (space) (#FLOPs matched to GPT-3 XL)",
+   "column": "Input",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "Byte"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#0",
+   "row": "Isotropic",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": "55",
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#1",
+   "row": "Isotropic",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#2",
+   "row": "Hierarchical (static)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": "55",
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#2",
+   "row": "Hierarchical (static)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#3",
+   "row": "Hierarchical (static)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#3",
+   "row": "Hierarchical (static)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "k-width pooling"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#3",
+   "row": "Hierarchical (static)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#4",
+   "row": "Hierarchical (static)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#4",
+   "row": "Hierarchical (static)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "k-width pooling"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#4",
+   "row": "Hierarchical (static)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#5",
+   "row": "Hierarchical (static)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#5",
+   "row": "Hierarchical (static)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#6",
+   "row": "Hierarchical (static)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#6",
+   "row": "Hierarchical (static)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "k-width pooling"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#6",
+   "row": "Hierarchical (static)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#7",
+   "row": "Hierarchical (static)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#7",
+   "row": "Hierarchical (static)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "k-width pooling"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#7",
+   "row": "Hierarchical (static)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#8",
+   "row": "Hierarchical (static)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#8",
+   "row": "Hierarchical (static)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "k-width pooling"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#8",
+   "row": "Hierarchical (static)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#9",
+   "row": "Hierarchical (static)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#9",
+   "row": "Hierarchical (static)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "k-width pooling"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#9",
+   "row": "Hierarchical (static)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#10",
+   "row": "Hierarchical (static)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#10",
+   "row": "Hierarchical (static)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "k-width pooling"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#10",
+   "row": "Hierarchical (static)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#11",
+   "row": "Hierarchical (external)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": "55",
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#11",
+   "row": "Hierarchical (external)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": "55",
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#12",
+   "row": "Hierarchical (external)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#12",
+   "row": "Hierarchical (external)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "delimiters"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#12",
+   "row": "Hierarchical (external)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#13",
+   "row": "Hierarchical (external)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#13",
+   "row": "Hierarchical (external)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": "55",
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#14",
+   "row": "Hierarchical (external)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#14",
+   "row": "Hierarchical (external)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "delimiters"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#14",
+   "row": "Hierarchical (external)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#15",
+   "row": "Hierarchical (external)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#15",
+   "row": "Hierarchical (external)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "delimiters"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#15",
+   "row": "Hierarchical (external)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#16",
+   "row": "Hierarchical (external)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#16",
+   "row": "Hierarchical (external)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": "55",
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#17",
+   "row": "Hierarchical (external)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#17",
+   "row": "Hierarchical (external)",
+   "column": "Chunking Mechanism",
+   "class": "e2_multirow",
+   "c3": null,
+   "c6": "entropy"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#17",
+   "row": "Hierarchical (external)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#18",
+   "row": "Hierarchical (dynamic)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#18",
+   "row": "Hierarchical (dynamic)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": "55",
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#19",
+   "row": "Hierarchical (dynamic)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#19",
+   "row": "Hierarchical (dynamic)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": "55",
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#20",
+   "row": "Hierarchical (dynamic)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#20",
+   "row": "Hierarchical (dynamic)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": "55",
+   "c6": "✗"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#21",
+   "row": "Hierarchical (dynamic)",
+   "column": "Autoregressive",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "HNET:T6#21",
+   "row": "Hierarchical (dynamic)",
+   "column": "Multi-stage / Hierarchy",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#4",
+   "row": "single-stream",
+   "column": "prompted (3s)",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#5",
+   "row": "single-stream",
+   "column": "prompted (3s)",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#6",
+   "row": "single-stream",
+   "column": "deduplicated",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#7",
+   "row": "single-stream",
+   "column": "deduplicated",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#8",
+   "row": "single-stream",
+   "column": "prompted (3s)",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#8",
+   "row": "single-stream",
+   "column": "deduplicated",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#9",
+   "row": "single-stream",
+   "column": "prompted (3s)",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#9",
+   "row": "single-stream",
+   "column": "deduplicated",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#10",
+   "row": "multi-stream",
+   "column": "fine-tuned",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#11",
+   "row": "multi-stream",
+   "column": "prompted (3s)",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#11",
+   "row": "multi-stream",
+   "column": "fine-tuned",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#12",
+   "row": "multi-stream",
+   "column": "deduplicated",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#12",
+   "row": "multi-stream",
+   "column": "fine-tuned",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#13",
+   "row": "multi-stream",
+   "column": "prompted (3s)",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#13",
+   "row": "multi-stream",
+   "column": "deduplicated",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T13#13",
+   "row": "multi-stream",
+   "column": "fine-tuned",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T16#8",
+   "row": "Mimi",
+   "column": "attacks / RVQGAN",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T16#9",
+   "row": "Mimi",
+   "column": "attacks / RVQGAN",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T16#10",
+   "row": "Mimi",
+   "column": "attacks / RVQGAN",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T16#11",
+   "row": "Mimi",
+   "column": "attacks / RVQGAN",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#0",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 1"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#0",
+   "row": "Row 1",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#0",
+   "row": "Row 1",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#0",
+   "row": "Row 1",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#0",
+   "row": "Row 1",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#0",
+   "row": "Row 1",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#1",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 2"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#1",
+   "row": "Row 2",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#1",
+   "row": "Row 2",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#1",
+   "row": "Row 2",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#1",
+   "row": "Row 2",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#1",
+   "row": "Row 2",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#2",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 3"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#2",
+   "row": "Row 3",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#2",
+   "row": "Row 3",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#2",
+   "row": "Row 3",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#2",
+   "row": "Row 3",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#2",
+   "row": "Row 3",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#3",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 4"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#3",
+   "row": "Row 4",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#3",
+   "row": "Row 4",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#3",
+   "row": "Row 4",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#3",
+   "row": "Row 4",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#3",
+   "row": "Row 4",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#4",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 5"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#4",
+   "row": "Row 5",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#4",
+   "row": "Row 5",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#4",
+   "row": "Row 5",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#4",
+   "row": "Row 5",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#4",
+   "row": "Row 5",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#5",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 6"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#5",
+   "row": "Row 6",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#5",
+   "row": "Row 6",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#5",
+   "row": "Row 6",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#5",
+   "row": "Row 6",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#5",
+   "row": "Row 6",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#6",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 7"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#6",
+   "row": "Row 7",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#6",
+   "row": "Row 7",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#6",
+   "row": "Row 7",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#6",
+   "row": "Row 7",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#6",
+   "row": "Row 7",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#7",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 8"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#7",
+   "row": "Row 8",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#7",
+   "row": "Row 8",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#7",
+   "row": "Row 8",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#7",
+   "row": "Row 8",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#7",
+   "row": "Row 8",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#8",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 9"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#8",
+   "row": "Row 9",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#8",
+   "row": "Row 9",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#8",
+   "row": "Row 9",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#8",
+   "row": "Row 9",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#8",
+   "row": "Row 9",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#9",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 10"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#9",
+   "row": "Row 10",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#9",
+   "row": "Row 10",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#9",
+   "row": "Row 10",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#9",
+   "row": "Row 10",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#9",
+   "row": "Row 10",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#10",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 11"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#10",
+   "row": "Row 11",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#10",
+   "row": "Row 11",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#10",
+   "row": "Row 11",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#10",
+   "row": "Row 11",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#10",
+   "row": "Row 11",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#11",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 12"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#11",
+   "row": "Row 12",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#11",
+   "row": "Row 12",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#11",
+   "row": "Row 12",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#11",
+   "row": "Row 12",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#11",
+   "row": "Row 12",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T17#12",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 13"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#12",
+   "row": "Row 13",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#12",
+   "row": "Row 13",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#12",
+   "row": "Row 13",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#12",
+   "row": "Row 13",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T17#12",
+   "row": "Row 13",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "table",
+   "key": "MOSHI:T18",
+   "field": "caption",
+   "class": "UNEXPLAINED",
+   "c3": "Adding Moshi to the ALERT benchmark, original table under CC BY. Each column depicts an LLM under evaluation. Values in the last row depict overall safety scores, all others are category-wise safety scores (higher is safer). Safe scores S(Φ",
+   "c6": "Adding Moshi to the ALERT benchmark, original table under CC BY. Each column depicts an LLM under evaluation. Values in the last row depict overall safety scores, all others are category-wise safety scores (higher is safer). Safe scores S(Φ"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T3#0",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 1"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#0",
+   "row": "Row 1",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#0",
+   "row": "Row 1",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#0",
+   "row": "Row 1",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#0",
+   "row": "Row 1",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#0",
+   "row": "Row 1",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T3#1",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 2"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#1",
+   "row": "Row 2",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#1",
+   "row": "Row 2",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#1",
+   "row": "Row 2",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#1",
+   "row": "Row 2",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#1",
+   "row": "Row 2",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T3#2",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 3"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#2",
+   "row": "Row 3",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#2",
+   "row": "Row 3",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#2",
+   "row": "Row 3",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#2",
+   "row": "Row 3",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#2",
+   "row": "Row 3",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T3#3",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 4"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#3",
+   "row": "Row 4",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#3",
+   "row": "Row 4",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#3",
+   "row": "Row 4",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#3",
+   "row": "Row 4",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#3",
+   "row": "Row 4",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T3#4",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 5"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#4",
+   "row": "Row 5",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#4",
+   "row": "Row 5",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#4",
+   "row": "Row 5",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#4",
+   "row": "Row 5",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#4",
+   "row": "Row 5",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "row label",
+   "key": "MOSHI:T3#5",
+   "class": "e2_mark",
+   "c3": "",
+   "c6": "Row 6"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#5",
+   "row": "Row 6",
+   "column": "Quantization / Rate",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#5",
+   "row": "Row 6",
+   "column": "Transformer / in encoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#5",
+   "row": "Row 6",
+   "column": "Transformer / in decoder",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#5",
+   "row": "Row 6",
+   "column": "WavLM / distillation",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T3#5",
+   "row": "Row 6",
+   "column": "Split / quantizer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T4#1",
+   "row": "RVQGAN",
+   "column": "causal",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T4#2",
+   "row": "SemantiCodec",
+   "column": "causal",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T4#3",
+   "row": "SpeechTokenizer",
+   "column": "causal",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T4#4",
+   "row": "SpeechTokenizer",
+   "column": "causal",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T4#5",
+   "row": "Mimi, adv. loss only",
+   "column": "causal",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T4#6",
+   "row": "Same, downsampled at 16kHz",
+   "column": "causal",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T4#7",
+   "row": "Mimi, non adv. only",
+   "column": "causal",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T5#0",
+   "row": "[0, 1, 2, 3, 4, 5, 6, 7]",
+   "column": "RQ-Transformer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T5#0",
+   "row": "[0, 1, 2, 3, 4, 5, 6, 7]",
+   "column": "Perplexity",
+   "class": "e3_phantom",
+   "c3": "142.2",
+   "c6": "42.2"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T5#1",
+   "row": "[0, 1, 2, 3, 4, 5, 6, 7]",
+   "column": "RQ-Transformer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T5#1",
+   "row": "[0, 1, 2, 3, 4, 5, 6, 7]",
+   "column": "Perplexity",
+   "class": "e3_phantom",
+   "c3": "140.3",
+   "c6": "40.3"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T5#2",
+   "row": "[0, 2, 2, 2, 2, 2, 2, 2]",
+   "column": "RQ-Transformer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T5#3",
+   "row": "[0, 2, 2, 2, 2, 2, 2, 2]",
+   "column": "RQ-Transformer",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T5#3",
+   "row": "[0, 2, 2, 2, 2, 2, 2, 2]",
+   "column": "Perplexity",
+   "class": "e3_phantom",
+   "c3": "136.8",
+   "c6": "36.8"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T6#0",
+   "row": "[0, 0, 0, 0, 0, 0, 0, 0]",
+   "column": "Semantic Token / Weight",
+   "class": "e3_phantom",
+   "c3": "001.0",
+   "c6": "1.0"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T6#0",
+   "row": "[0, 0, 0, 0, 0, 0, 0, 0]",
+   "column": "Depthwise / Parametrization",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T6#0",
+   "row": "[0, 0, 0, 0, 0, 0, 0, 0]",
+   "column": "Inner / Monologue",
+   "class": "e2_mark",
+   "c3": null,
+   "c6": "(blank)"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T6#1",
+   "row": "[0, 1, 1, 1, 1, 1, 1, 1]",
+   "column": "Semantic Token / Weight",
+   "class": "e3_phantom",
+   "c3": "001.0",
+   "c6": "1.0"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T6#1",
+   "row": "[0, 1, 1, 1, 1, 1, 1, 1]",
+   "column": "Depthwise / Parametrization",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T6#2",
+   "row": "[0, 2, 2, 2, 2, 2, 2, 2]",
+   "column": "Semantic Token / Weight",
+   "class": "e3_phantom",
+   "c3": "001.0",
+   "c6": "1.0"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T6#2",
+   "row": "[0, 2, 2, 2, 2, 2, 2, 2]",
+   "column": "Depthwise / Parametrization",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T6#4",
+   "row": "[0, 2, 2, 2, 2, 2, 2, 2]",
+   "column": "Depthwise / Parametrization",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T6#5",
+   "row": "[0, 2, 2, 2, 2, 2, 2, 2]",
+   "column": "Depthwise / Parametrization",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "cell",
+   "key": "MOSHI:T6#5",
+   "row": "[0, 2, 2, 2, 2, 2, 2, 2]",
+   "column": "Inner / Monologue",
+   "class": "e2_mark",
+   "c3": "51",
+   "c6": "✓"
+  },
+  {
+   "what": "chunk_256",
+   "key": "MOSHI:1:c005",
+   "class": "UNEXPLAINED",
+   "c3": "In this work we introduce Moshi, a speech-text foundation model and real-time spoken dialogue system that aims at solving the aforementioned limitations: latency, textual information bottleneck and tu",
+   "c6": "In this work we introduce Moshi, a speech-text foundation model and real-time spoken dialogue system that aims at solving the aforementioned limitations: latency, textual information bottleneck and tu"
+  },
+  {
+   "what": "chunk_256",
+   "key": "MOSHI:1:c008",
+   "class": "UNEXPLAINED",
+   "c3": "Our experiments show that not only this drastically improves the length and quality of generated speech, but we also show how forcing a delay between text and audio tokens allows deriving streaming AS",
+   "c6": "Our experiments show that not only this drastically improves the length and quality of generated speech, but we also show how forcing a delay between text and audio tokens allows deriving streaming AS"
+  },
+  {
+   "what": "chunk_256",
+   "key": "MOSHI:3.3.1:c029",
+   "class": "e4_units",
+   "c3": "Causality and streaming. With the mentioned hyper-parameters, Mimi is causal and can be used in a streaming fashion, both for encoding and decoding. Both its initial frame size and overall stride corr",
+   "c6": "Causality and streaming. With the mentioned hyper-parameters, Mimi is causal and can be used in a streaming fashion, both for encoding and decoding. Both its initial frame size and overall stride corr"
+  },
+  {
+   "what": "chunk_256",
+   "key": "MOSHI:E:c147",
+   "class": "UNEXPLAINED",
+   "c3": "Table 18: Adding Moshi to the ALERT benchmark, original table under CC BY. Each column depicts an LLM under evaluation. Values in the last row depict overall safety scores, all others are category-wis",
+   "c6": "Table 18: Adding Moshi to the ALERT benchmark, original table under CC BY. Each column depicts an LLM under evaluation. Values in the last row depict overall safety scores, all others are category-wis"
+  },
+  {
+   "what": "table_chunks_256",
+   "key": "HNET:T6",
+   "class": "rechunk",
+   "c3": [
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:T6:r03"
+   ],
+   "c6": [
+    "HNET:T6:r01",
+    "HNET:T6:r02",
+    "HNET:T6:r03",
+    "HNET:T6:r04",
+    "HNET:T6:r05"
+   ]
+  },
+  {
+   "what": "table_chunks_256",
+   "key": "MOSHI:T13",
+   "class": "rechunk",
+   "c3": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02"
+   ],
+   "c6": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02",
+    "MOSHI:T13:r03"
+   ]
+  },
+  {
+   "what": "table_chunks_256",
+   "key": "MOSHI:T16",
+   "class": "rechunk",
+   "c3": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r06"
+   ],
+   "c6": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r04",
+    "MOSHI:T16:r05",
+    "MOSHI:T16:r06",
+    "MOSHI:T16:r07",
+    "MOSHI:T16:r08"
+   ]
+  },
+  {
+   "what": "table_chunks_256",
+   "key": "MOSHI:T17",
+   "class": "rechunk",
+   "c3": [
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r03"
+   ],
+   "c6": [
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r04",
+    "MOSHI:T17:r05",
+    "MOSHI:T17:r06",
+    "MOSHI:T17:r07"
+   ]
+  },
+  {
+   "what": "table_chunks_256",
+   "key": "MOSHI:T3",
+   "class": "rechunk",
+   "c3": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02"
+   ],
+   "c6": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02",
+    "MOSHI:T3:r03"
+   ]
+  },
+  {
+   "what": "chunk_512",
+   "key": "MOSHI:1:c003",
+   "class": "UNEXPLAINED",
+   "c3": "This removes the information bottleneck of text by understanding inputs and generating outputs directly in the audio domain, while benefiting from the knowledge and reasoning abilities of the underlyi",
+   "c6": "This removes the information bottleneck of text by understanding inputs and generating outputs directly in the audio domain, while benefiting from the knowledge and reasoning abilities of the underlyi"
+  },
+  {
+   "what": "chunk_512",
+   "key": "MOSHI:1:c004",
+   "class": "UNEXPLAINED",
+   "c3": "Moshi is a speech-to-speech model as it allows reasoning about non-linguistic information, both from the user audio and from Moshi's audio. Yet, this is not incompatible with Moshi producing text alon",
+   "c6": "Moshi is a speech-to-speech model as it allows reasoning about non-linguistic information, both from the user audio and from Moshi's audio. Yet, this is not incompatible with Moshi producing text alon"
+  },
+  {
+   "what": "chunk_512",
+   "key": "MOSHI:3.3.1:c016",
+   "class": "e4_units",
+   "c3": "Causality and streaming. With the mentioned hyper-parameters, Mimi is causal and can be used in a streaming fashion, both for encoding and decoding. Both its initial frame size and overall stride corr",
+   "c6": "Causality and streaming. With the mentioned hyper-parameters, Mimi is causal and can be used in a streaming fashion, both for encoding and decoding. Both its initial frame size and overall stride corr"
+  },
+  {
+   "what": "table_chunks_512",
+   "key": "MOSHI:T13",
+   "class": "rechunk",
+   "c3": [
+    "MOSHI:T13:r01"
+   ],
+   "c6": [
+    "MOSHI:T13:r01",
+    "MOSHI:T13:r02"
+   ]
+  },
+  {
+   "what": "table_chunks_512",
+   "key": "MOSHI:T16",
+   "class": "rechunk",
+   "c3": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r03"
+   ],
+   "c6": [
+    "MOSHI:T16:r01",
+    "MOSHI:T16:r02",
+    "MOSHI:T16:r03",
+    "MOSHI:T16:r04"
+   ]
+  },
+  {
+   "what": "table_chunks_512",
+   "key": "MOSHI:T17",
+   "class": "rechunk",
+   "c3": [
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r02"
+   ],
+   "c6": [
+    "MOSHI:T17:r01",
+    "MOSHI:T17:r02",
+    "MOSHI:T17:r03",
+    "MOSHI:T17:r04"
+   ]
+  },
+  {
+   "what": "table_chunks_512",
+   "key": "MOSHI:T3",
+   "class": "rechunk",
+   "c3": [
+    "MOSHI:T3:r01"
+   ],
+   "c6": [
+    "MOSHI:T3:r01",
+    "MOSHI:T3:r02"
+   ]
+  }
+ ],
+ "classes": {
+  "UNEXPLAINED": 7,
+  "e4_units": 3,
+  "e2_empty_kept": 262,
+  "e2_multirow": 17,
+  "e2_mark": 194,
+  "e3_phantom": 6,
+  "rechunk": 9
+ },
+ "unexplained": [
+  {
+   "what": "paragraphs",
+   "key": "('MOSHI', '1', 1)",
+   "field": "text",
+   "class": "UNEXPLAINED",
+   "c3": "In this work we introduce Moshi, a speech-text foundation model and real-time spoken dialogue system that aims at solving the aforementioned limitations: latency, textual information bottleneck and turn-based modeling. Moshi augments a text",
+   "c6": "In this work we introduce Moshi, a speech-text foundation model and real-time spoken dialogue system that aims at solving the aforementioned limitations: latency, textual information bottleneck and turn-based modeling. Moshi augments a text"
+  },
+  {
+   "what": "table",
+   "key": "MOSHI:T18",
+   "field": "caption",
+   "class": "UNEXPLAINED",
+   "c3": "Adding Moshi to the ALERT benchmark, original table under CC BY. Each column depicts an LLM under evaluation. Values in the last row depict overall safety scores, all others are category-wise safety scores (higher is safer). Safe scores S(Φ",
+   "c6": "Adding Moshi to the ALERT benchmark, original table under CC BY. Each column depicts an LLM under evaluation. Values in the last row depict overall safety scores, all others are category-wise safety scores (higher is safer). Safe scores S(Φ"
+  },
+  {
+   "what": "chunk_256",
+   "key": "MOSHI:1:c005",
+   "class": "UNEXPLAINED",
+   "c3": "In this work we introduce Moshi, a speech-text foundation model and real-time spoken dialogue system that aims at solving the aforementioned limitations: latency, textual information bottleneck and tu",
+   "c6": "In this work we introduce Moshi, a speech-text foundation model and real-time spoken dialogue system that aims at solving the aforementioned limitations: latency, textual information bottleneck and tu"
+  },
+  {
+   "what": "chunk_256",
+   "key": "MOSHI:1:c008",
+   "class": "UNEXPLAINED",
+   "c3": "Our experiments show that not only this drastically improves the length and quality of generated speech, but we also show how forcing a delay between text and audio tokens allows deriving streaming AS",
+   "c6": "Our experiments show that not only this drastically improves the length and quality of generated speech, but we also show how forcing a delay between text and audio tokens allows deriving streaming AS"
+  },
+  {
+   "what": "chunk_256",
+   "key": "MOSHI:E:c147",
+   "class": "UNEXPLAINED",
+   "c3": "Table 18: Adding Moshi to the ALERT benchmark, original table under CC BY. Each column depicts an LLM under evaluation. Values in the last row depict overall safety scores, all others are category-wis",
+   "c6": "Table 18: Adding Moshi to the ALERT benchmark, original table under CC BY. Each column depicts an LLM under evaluation. Values in the last row depict overall safety scores, all others are category-wis"
+  },
+  {
+   "what": "chunk_512",
+   "key": "MOSHI:1:c003",
+   "class": "UNEXPLAINED",
+   "c3": "This removes the information bottleneck of text by understanding inputs and generating outputs directly in the audio domain, while benefiting from the knowledge and reasoning abilities of the underlyi",
+   "c6": "This removes the information bottleneck of text by understanding inputs and generating outputs directly in the audio domain, while benefiting from the knowledge and reasoning abilities of the underlyi"
+  },
+  {
+   "what": "chunk_512",
+   "key": "MOSHI:1:c004",
+   "class": "UNEXPLAINED",
+   "c3": "Moshi is a speech-to-speech model as it allows reasoning about non-linguistic information, both from the user audio and from Moshi's audio. Yet, this is not incompatible with Moshi producing text alon",
+   "c6": "Moshi is a speech-to-speech model as it allows reasoning about non-linguistic information, both from the user audio and from Moshi's audio. Yet, this is not incompatible with Moshi producing text alon"
+  }
+ ],
+ "passed": false
+}

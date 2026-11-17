@@ -1,0 +1,44 @@
+{
+ "question_id": "q09",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:05:38.169+00:00",
+  "t_send_ns": 205988170923300,
+  "status": 200,
+  "t_first_byte_ns": 205988445175200,
+  "t_first_content_ns": 205989465763200,
+  "t_last_ns": 205990052657900,
+  "max_gap_ms": 1020.5646,
+  "text": "The authors settle on a theoretical latency of 160 ms by pretraining Moshi with an acoustic delay of 2 and finetuning it with an acoustic delay of 1[MOSHI:5.3:c083]. The authors report a practical latency of 200 ms[MOSHI:abstract:c002]. The authors note that the 160 ms theoretical latency is lower than the 230 ms average in natural conversations measured over 10 languages[MOSHI:1:c005].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.156843502,
+   "prompt_tokens": 2656,
+   "prompt_time": 0.161012638,
+   "completion_tokens": 186,
+   "completion_time": 1.4596322769999999,
+   "total_tokens": 2842,
+   "total_time": 1.620644915,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 76
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "978",
+   "x-ratelimit-reset-requests": "31m40.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "3112",
+   "x-ratelimit-reset-tokens": "36.66s"
+  },
+  "error": null,
+  "first_byte_ms": 274.3,
+  "first_content_ms": 1294.8,
+  "total_ms": 1881.7
+ }
+}

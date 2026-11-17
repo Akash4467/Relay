@@ -1,0 +1,44 @@
+{
+ "question_id": "q05",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:03:06.081+00:00",
+  "t_send_ns": 205836082607800,
+  "status": 200,
+  "t_first_byte_ns": 205836327947200,
+  "t_first_content_ns": 205836689565300,
+  "t_last_ns": 205837263766100,
+  "max_gap_ms": 361.5901,
+  "text": "The routing module decides chunk boundaries by measuring cosine similarity between adjacent encoder outputs and converting the similarity into a boundary probability p_t that ranges from 0 to 1 [HNET:2.2.1:c023]. Specifically, it computes query and key vectors q_t = W_q \\hat{x}_t and k_t = W_k \\hat{x}_t, then sets p_t = ½ (1 − (q_t^⊤ k_{t‑1}) / ‖q_t‖‖k_{t‑1}‖) [HNET:2.2.1:c023]. A hard boundary indicator b_t is obtained by thresholding p_t at 0.5, i.e., b_t = 1 if p_t ≥ 0.5 and 0 otherwise, with p_1 defined as 1.0 to start the sequence with a boundary [HNET:2.2.1:c023]. This mechanism implements the intuition that lower similarity between consecutive vectors signals a contextual or semantic shift, prompting a boundary [HNET:1:c007]. The routing module thus dynamically draws chunk boundaries based on these similarity‑derived probabilities.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.158621875,
+   "prompt_tokens": 1969,
+   "prompt_time": 0.109385317,
+   "completion_tokens": 347,
+   "completion_time": 0.830224068,
+   "total_tokens": 2316,
+   "total_time": 0.939609385,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 61
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "986",
+   "x-ratelimit-reset-requests": "20m9.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2292",
+   "x-ratelimit-reset-tokens": "42.81s"
+  },
+  "error": null,
+  "first_byte_ms": 245.3,
+  "first_content_ms": 607.0,
+  "total_ms": 1181.2
+ }
+}

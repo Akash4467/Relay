@@ -1,0 +1,258 @@
+{
+ "run": "assessment/improvement_loop/iterations/iteration_002/live",
+ "timestamp": "2026-11-14T08:42:47.136+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p5r",
+ "verifier_version": "v4.2",
+ "question_id": "q03",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "What is Inner Monologue in Moshi, and what does it improve?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "Inner Monologue is a new training and inference setup for audio language models that significantly improves the factuality and linguistic quality of generated speech by predicting time‑aligned text tokens before audio tokens [MOSHI:1:c007]. The impact of Inner Monologue on Moshi’s performance is to almost triple its accuracy on all benchmarks and significantly improve over previous work [MOSHI:5.5:c091].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "MOSHI:1:c007",
+   "MOSHI:5.5:c091"
+  ],
+  "request_id": "loop-live-q03"
+ },
+ "client_ms": 29724.0,
+ "evidence_ids": [
+  "MOSHI:5.5:c091",
+  "MOSHI:abstract:c002",
+  "MOSHI:1:c007",
+  "MOSHI:2:c015",
+  "MOSHI:2:c013",
+  "MOSHI:5.3:c083",
+  "MOSHI:7:c126"
+ ],
+ "gold_units_in_context": [
+  true,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  false
+ ],
+ "drafts": [
+  "Inner Monologue is a new training and inference setup for audio language models that predicts time‑aligned text tokens before audio tokens, using text tokens as a per‑timestep prefix to the semantic token [MOSHI:1:c007]. It improves the factuality and linguistic quality of generated speech [MOSHI:1:c007] and dramatically boosts performance, almost tripling Moshi’s accuracy on spoken question‑answering benchmarks [MOSHI:5.5:c091]. The retrieved passages do not state any other specific improvements.",
+  "Inner Monologue is a new training and inference setup for audio language models that significantly improves the factuality and linguistic quality of generated speech by predicting time‑aligned text tokens before audio tokens [MOSHI:1:c007]. The impact of Inner Monologue on Moshi’s performance is to almost triple its accuracy on all benchmarks and significantly improve over previous work [MOSHI:5.5:c091]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:1:c007",
+    "MOSHI:5.5:c091"
+   ],
+   "failures": [
+    [
+     "Inner Monologue is a new training and inference setup for audio language models that predicts time‑aligned text tokens before audio tokens, using text tokens as a per‑timestep prefix to the semantic token [MOSHI:1:c007].",
+     "not supported by the cited passage (entailment 0.87 < 0.9)"
+    ],
+    [
+     "The retrieved passages do not state any other specific improvements.",
+     "absence claim names one term that MOSHI:5.3:c083 mentions: cannot establish it is missing"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "Inner Monologue is a new training and inference setup for audio language models that predicts time‑aligned text tokens before audio tokens, using text tokens as a per‑timestep prefix to the semantic token [MOSHI:1:c007].",
+     "ok": false,
+     "entailment": 0.8680617824450988,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.87 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "It improves the factuality and linguistic quality of generated speech [MOSHI:1:c007] and dramatically boosts performance, almost tripling Moshi’s accuracy on spoken question‑answering benchmarks [MOSHI:5.5:c091].",
+     "ok": true,
+     "entailment": 0.9897881352914899,
+     "reasons": []
+    },
+    {
+     "sentence": "The retrieved passages do not state any other specific improvements.",
+     "ok": false,
+     "entailment": null,
+     "reasons": [
+      "absence claim names one term that MOSHI:5.3:c083 mentions: cannot establish it is missing"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "MOSHI:1:c007",
+    "MOSHI:5.5:c091"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "Inner Monologue is a new training and inference setup for audio language models that significantly improves the factuality and linguistic quality of generated speech by predicting time‑aligned text tokens before audio tokens [MOSHI:1:c007].",
+     "ok": true,
+     "entailment": 0.9121454497414364,
+     "reasons": []
+    },
+    {
+     "sentence": "The impact of Inner Monologue on Moshi’s performance is to almost triple its accuracy on all benchmarks and significantly improve over previous work [MOSHI:5.5:c091].",
+     "ok": true,
+     "entailment": 0.9934215094820451,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-live-q03",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T08:42:47.136+00:00",
+  "question_id": "q03",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3588,
+  "tokens_out": 376,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 705.5,
+  "context_tokens": 1346,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:5.5:c091",
+   "MOSHI:abstract:c002",
+   "MOSHI:1:c007",
+   "MOSHI:2:c015",
+   "MOSHI:2:c013",
+   "MOSHI:5.3:c083",
+   "MOSHI:7:c126"
+  ],
+  "verification_ms": 2425.9,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 24687.0,
+  "model_ttft_ms": 767.2,
+  "first_byte_ms": 443.3,
+  "generation_ms": 1856.2,
+  "reasoning_tokens": 167,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1638,
+    "reserved": 2408,
+    "governor_wait_ms": 11627.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.368678351,
+     "prompt_tokens": 1637,
+     "prompt_time": 0.21360426,
+     "completion_tokens": 165,
+     "completion_time": 0.339924844,
+     "total_tokens": 1802,
+     "total_time": 0.553529104,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 47
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1637,
+    "tokens_out": 165,
+    "reasoning_tokens": 47,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 443.3,
+    "model_ttft_ms": 767.2,
+    "total_ms": 991.1,
+    "max_gap_ms": 323.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "947",
+     "x-ratelimit-reset-requests": "1h16m19.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2902",
+     "x-ratelimit-reset-tokens": "38.235s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1950,
+    "reserved": 2720,
+    "governor_wait_ms": 13060.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.246564056,
+     "prompt_tokens": 1951,
+     "prompt_time": 0.095633413,
+     "completion_tokens": 211,
+     "completion_time": 0.44650956,
+     "total_tokens": 2162,
+     "total_time": 0.542142973,
+     "completion_tokens_details": {
+      "reasoning_tokens": 120
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 1951,
+    "tokens_out": 211,
+    "reasoning_tokens": 120,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 327.0,
+    "model_ttft_ms": 692.6,
+    "total_ms": 865.1,
+    "max_gap_ms": 365.6,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "946",
+     "x-ratelimit-reset-requests": "1h17m45.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "3205",
+     "x-ratelimit-reset-tokens": "35.962s"
+    }
+   }
+  ],
+  "first_token_ms": 29700.1,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 29700.9
+ }
+}

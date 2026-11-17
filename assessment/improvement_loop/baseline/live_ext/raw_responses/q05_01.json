@@ -1,0 +1,44 @@
+{
+ "question_id": "q05",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:21:40.939+00:00",
+  "t_send_ns": 178150940303500,
+  "status": 200,
+  "t_first_byte_ns": 178151360594200,
+  "t_first_content_ns": 178151565324000,
+  "t_last_ns": 178151999704000,
+  "max_gap_ms": 204.7038,
+  "text": "The routing module measures the similarity between adjacent encoder outputs by computing cosine similarity of learned query and key projections for each position, forming a boundary probability p_t = ½ (1 − (q_t^⊤ k_{t‑1})/(‖q_t‖‖k_{t‑1}‖)) that lies in [0, 1] [HNET:2.2.1:c023]. A hard boundary indicator b_t is then set to 1 when p_t ≥ 0.5 and 0 otherwise, with p_1 defined as 1.0 to start the sequence with a boundary [HNET:2.2.1:c023]. The module therefore places chunk boundaries at positions where the cosine similarity between consecutive representations drops enough to make p_t ≥ 0.5, reflecting a contextual or semantic shift [HNET:2.2.1:c023].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.30989633,
+   "prompt_tokens": 1689,
+   "prompt_time": 0.086038407,
+   "completion_tokens": 263,
+   "completion_time": 0.55879172,
+   "total_tokens": 1952,
+   "total_time": 0.644830127,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 49
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "966",
+   "x-ratelimit-reset-requests": "48m57.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2834",
+   "x-ratelimit-reset-tokens": "38.745s"
+  },
+  "error": null,
+  "first_byte_ms": 420.3,
+  "first_content_ms": 625.0,
+  "total_ms": 1059.4
+ }
+}

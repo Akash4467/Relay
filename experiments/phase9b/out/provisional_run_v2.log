@@ -1,0 +1,10 @@
+D:\The Relay\.venv\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 65/202 [00:00<00:00, 644.42it/s]Loading weights:  77%|███████▋  | 156/202 [00:00<00:00, 785.80it/s]Loading weights: 100%|██████████| 202/202 [00:00<00:00, 810.49it/s]
+A {'TA': 7, 'FR': 6, 'FA': 2, 'TR': 16, 'abstain_supported': 0, 'abstain_unsupported': 0, 'FAR': 0.111, 'FRR': 0.462, 'FRR_incl_abstain': 0.462}
+B1 {'TA': 10, 'FR': 3, 'FA': 3, 'TR': 15, 'abstain_supported': 0, 'abstain_unsupported': 0, 'FAR': 0.167, 'FRR': 0.231, 'FRR_incl_abstain': 0.231}
+B2 {'TA': 10, 'FR': 3, 'FA': 4, 'TR': 14, 'abstain_supported': 0, 'abstain_unsupported': 0, 'FAR': 0.222, 'FRR': 0.231, 'FRR_incl_abstain': 0.231}
+C {'TA': 8, 'FR': 0, 'FA': 0, 'TR': 7, 'abstain_supported': 5, 'abstain_unsupported': 11, 'FAR': 0.0, 'FRR': 0.0, 'FRR_incl_abstain': 0.385}
+D {'TA': 9, 'FR': 4, 'FA': 0, 'TR': 18, 'abstain_supported': 0, 'abstain_unsupported': 0, 'FAR': 0.0, 'FRR': 0.308, 'FRR_incl_abstain': 0.308}
+reproduction identical: True []
+experiments/phase9b/out/verifiers_provisional_development_2026-11-14T00-18-31Z.json

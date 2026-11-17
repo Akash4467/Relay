@@ -1,0 +1,41 @@
+{
+ "question_id": "q11",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:06:49.839+00:00",
+  "t_send_ns": 206059840528900,
+  "status": 200,
+  "t_first_byte_ns": 206060093378700,
+  "t_first_content_ns": 206060523913600,
+  "t_last_ns": 206060661271200,
+  "max_gap_ms": 430.4985,
+  "text": "In Table 3, Configuration (A) with h = 1, d_k = 512, d_v = 512 has BLEU / (dev) = 24.9 [AIAYN:T3:r02]. The retrieved passages do not state the development BLEU for the base configuration.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.158231355,
+   "prompt_tokens": 2419,
+   "prompt_time": 0.123188186,
+   "completion_tokens": 217,
+   "completion_time": 0.448966726,
+   "total_tokens": 2636,
+   "total_time": 0.572154912,
+   "completion_tokens_details": {
+    "reasoning_tokens": 141
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "974",
+   "x-ratelimit-reset-requests": "37m26.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "3881",
+   "x-ratelimit-reset-tokens": "30.892s"
+  },
+  "error": null,
+  "first_byte_ms": 252.8,
+  "first_content_ms": 683.4,
+  "total_ms": 820.7
+ }
+}

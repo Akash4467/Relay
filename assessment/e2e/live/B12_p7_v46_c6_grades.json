@@ -1,0 +1,17 @@
+{"about": "Grades against the papers (ASSISTANT grades, not an independent review). Run: c6 + prompt p7 + verifier v4.6c, setting B, real Groq, 2026-11-14 (B12_p7_v46_c6/).",
+ "grades": {
+  "q16": {"grade": "correctly_refused"}, "q20": {"grade": "correctly_refused"},
+  "q04": {"grade": "correct_and_fully_supported", "why": "Q = 8, N_A = 2048, 12.5 Hz, 1.1 kbps (MOSHI:3.3.1:c030)"},
+  "q07": {"grade": "correct_and_fully_supported", "why": "third sub-layer over encoder output (3.1); masked decoder self-attention; Q from previous decoder layer, K/V from encoder output; encoder self-attention Q/K/V from previous encoder layer (3.2.3)"},
+  "q13": {"grade": "correct_and_fully_supported", "why": "55.5 (H-Net 2-stage, GPT-3 Large) vs 53.3 (Transformer, GPT-3 Large); Transformer at GPT-3 XL 55.5 (rows r10, r01, r11). Readability: raw table-row phrasing; the match is shown by the equal values"},
+  "t05": {"grade": "correct_and_fully_supported", "why": "64.0 +/- 1.7 from MOSHI:T3:r03"},
+  "t13": {"grade": "correct_and_fully_supported", "why": "36.8 from MOSHI:T5:r01"},
+  "n10": {"grade": "correct_and_fully_supported", "why": "h = 8 and BLEU (dev) 25.8 from the base row AIAYN:T3:r01"},
+  "q01": {"grade": "incorrectly_refused", "trace": "verification (paraphrase mixing two passage sentences, 0.24-0.83)"},
+  "q12": {"grade": "incorrectly_refused", "trace": "generation adds '(with Inner Monologue)' to the row labelled 'Moshi'; the exact-support rule correctly does not accept a label the row lacks; NLI 0.01"},
+  "q15": {"grade": "incorrectly_refused", "trace": "generation keeps 'the original Transformer' despite the p7 hint; NLI 0.00"},
+  "q14": {"grade": "incorrectly_refused", "trace": "retrieval (byte-pair / word-piece passage not retrieved); safe decline"}
+ },
+ "judgments": {"B12_p7_v46_c6/q04": {"grade": "correct_answer"}, "B12_p7_v46_c6/q07": {"grade": "correct_answer"},
+               "B12_p7_v46_c6/q13": {"grade": "correct_answer"}, "B12_p7_v46_c6/t05": {"grade": "correct_answer"},
+               "B12_p7_v46_c6/t13": {"grade": "correct_answer"}, "B12_p7_v46_c6/n10": {"grade": "correct_answer"}}}

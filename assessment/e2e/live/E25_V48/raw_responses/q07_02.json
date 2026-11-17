@@ -1,0 +1,41 @@
+{
+ "question_id": "q07",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:51:47.410+00:00",
+  "t_send_ns": 208757411682700,
+  "status": 200,
+  "t_first_byte_ns": 208757856540100,
+  "t_first_content_ns": 208758798945000,
+  "t_last_ns": 208759292304700,
+  "max_gap_ms": 942.3801,
+  "text": "In addition to the two sub‑layers in each encoder layer, the decoder inserts a third sub‑layer, which performs multi‑head attention over the output of the encoder stack [AIAYN:3.1:c009]. In encoder‑decoder attention layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016]. In a self‑attention layer all of the keys, values and queries come from the same place, in this case, the output of the previous layer in the encoder [AIAYN:3.2.3:c016]. Similarly, self‑attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position [AIAYN:3.2.3:c016]. We need to prevent leftward information flow in the decoder to preserve the auto‑regressive property, and we implement this by masking out (setting to -∞) all values in the input of the softmax which correspond to illegal connections [AIAYN:3.2.3:c016].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.318084924,
+   "prompt_tokens": 2331,
+   "prompt_time": 0.129198642,
+   "completion_tokens": 623,
+   "completion_time": 1.310696354,
+   "total_tokens": 2954,
+   "total_time": 1.439894996,
+   "completion_tokens_details": {
+    "reasoning_tokens": 378
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "955",
+   "x-ratelimit-reset-requests": "1h4m48s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "4306",
+   "x-ratelimit-reset-tokens": "27.705s"
+  },
+  "error": null,
+  "first_byte_ms": 444.9,
+  "first_content_ms": 1387.3,
+  "total_ms": 1880.6
+ }
+}

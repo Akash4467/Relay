@@ -11,17 +11,36 @@ The brief's twelve columns come first, in order; extra columns follow. answer_gr
 a manual grade file (eval/grades/*.csv: request_id,answer_grade) and stand-in rows are never graded (their
 replies are recorded fixtures, CLAUDE.md rule 10).
 
+Verifier versions (2026-11-13): the last column, verification_policy_version, says which verifier served each row.
+It comes from the server trace (or the ask.py record); the raw files of the original v2 measurements predate that
+field and are listed in HISTORICAL_V2_FILES. A row with no version that is not in that list stops the build. The
+v2 rows, written with the original columns, must hash to HISTORICAL_V2_SHA256 (the results.csv measured with
+verifier v2), so no later run, grade file or code change can silently alter them. Stand-in load-test rows of any
+other version are also written to results/v4_load_test_results.csv (results/{version}_load_test_results.csv).
+answer-quality runs (results/raw/answer_quality/) are request-level evaluations of their own and are not read here.
+
     uv run python scripts/make_results_csv.py
 """
 from __future__ import annotations
 
 import csv
+import hashlib
+import io
 import json
 import re
 from pathlib import Path
 
 RAW = Path("results/raw")
 OUT = Path("results/results.csv")
+HISTORICAL_V2_FILES = frozenset({
+    "loadgen/burst_2026-11-12T19-58-39.jsonl", "loadgen/daily_exhausted_2026-11-12T20-20-01.jsonl",
+    "loadgen/overload_2026-11-12T20-03-02.jsonl", "loadgen/retrieval_A_2026-11-12T20-28-05.jsonl",
+    "loadgen/retrieval_B_2026-11-12T20-33-49.jsonl", "loadgen/retrieval_C_2026-11-12T20-39-29.jsonl",
+    "loadgen/rpm_halved_2026-11-12T20-11-20.jsonl", "loadgen/smoke_2026-11-12T19-47-10.jsonl",
+    "loadgen/steady_2026-11-12T19-50-05.jsonl", "e2e/2026-11-12.jsonl", "real/2026-11-12.jsonl"})
+# sha256 of results.csv as built from the v2 measurements with the original REQUIRED + EXTRA columns
+HISTORICAL_V2_SHA256 = "84fc38ffd3fd12f7ecdd4f5d4a4742cedadedb7a3bfc255577768b76fe0ae0a7"
+VERSION = "verification_policy_version"
 SKIP_SCENARIOS = {"smoke"}  # pipeline smoke tests, not a load shape
 
 REQUIRED = ["request_id", "scenario", "source", "start_time", "first_token_ms", "total_ms", "status", "retries",
@@ -36,7 +55,20 @@ EXTRA = ["failure_reason", "model", "answer_tier", "degradation_level", "cache_h
 
 
 def jsonl(pattern: str) -> list[dict]:
-    return [json.loads(l) for f in sorted(RAW.glob(pattern)) for l in f.read_text(encoding="utf-8").splitlines() if l]
+    """Records of every matching raw file, each tagged with its file (relative to RAW) as _file."""
+    return [json.loads(l) | {"_file": f.relative_to(RAW).as_posix()}
+            for f in sorted(RAW.glob(pattern)) for l in f.read_text(encoding="utf-8").splitlines() if l]
+
+
+def version_of(own: str | None, file: str, default: str | None = None) -> str:
+    """The verifier version of one row: its own field, else v2 for the historical files, else the default."""
+    historical = file in HISTORICAL_V2_FILES
+    if own and historical and own != "v2":
+        raise SystemExit(f"{file} is a historical v2 file but a record says {own}")
+    v = own or ("v2" if historical else default)
+    if not v:
+        raise SystemExit(f"{file}: a row has no {VERSION} and the file is not a historical v2 file")
+    return v
 
 
 def seconds(groq: str | None) -> float | None:
@@ -118,8 +150,17 @@ def load_rows() -> list[dict]:
                                      "context_tokens", "llm_calls", "initial_attempts", "redraft_attempts",
                                      "fallback_generations", "reasoning_tokens", "reservation_overrun_tokens")},
             **headers_cols(t.get("calls", [])),
+            "_file": r["_file"], "_trace_version": t.get(VERSION),
         }
         rows.append(row)
+    for file in {r["_file"] for r in rows}:  # one version per load-test run; requests without a trace inherit it
+        seen = {r["_trace_version"] for r in rows if r["_file"] == file} - {None}
+        if len(seen) > 1:
+            raise SystemExit(f"{file}: mixed verifier versions {sorted(seen)}")
+        v = version_of(next(iter(seen), None), file)
+        for r in rows:
+            if r["_file"] == file:
+                r[VERSION] = v
 
     for e in jsonl("e2e/*.jsonl"):  # real requests through scripts/ask.py
         calls = e["llm_calls"]
@@ -140,7 +181,8 @@ def load_rows() -> list[dict]:
             "context_tokens": e["context_tokens"], "llm_calls": len(calls), "initial_attempts": 1,
             "redraft_attempts": max(0, len(calls) - 1), "fallback_generations": 0,
             "reasoning_tokens": sum((c["usage"].get("completion_tokens_details") or {}).get("reasoning_tokens", 0) for c in ok),
-            "reservation_overrun_tokens": sum(c["reservation_overrun_tokens"] for c in ok), **headers_cols(calls)})
+            "reservation_overrun_tokens": sum(c["reservation_overrun_tokens"] for c in ok), **headers_cols(calls),
+            VERSION: version_of(e.get(VERSION), e["_file"])})
 
     for c in jsonl("real/*.jsonl"):  # the one-token model checks (priority-0 probes)
         if c["request"]["max_completion_tokens"] > 16:
@@ -153,21 +195,42 @@ def load_rows() -> list[dict]:
             "tokens_in": u.get("prompt_tokens", 0), "tokens_out": u.get("completion_tokens", 0), "retrieval_setting": "",
             "model": c["model"], "first_byte_ms": c.get("first_byte_ms"), "model_ttft_ms": c.get("first_content_ms"),
             "reasoning_tokens": (u.get("completion_tokens_details") or {}).get("reasoning_tokens"), "llm_calls": 1,
-            "initial_attempts": 1, **headers_cols([c | {"http": c["status"]}])})
+            "initial_attempts": 1, **headers_cols([c | {"http": c["status"]}]),
+            VERSION: version_of(None, c["_file"], default="n/a")})  # a probe involves no verifier
 
     for row in rows:
         row["answer_grade"] = grade(row, questions, manual)
     return rows
 
 
+def write(f, rows: list[dict], columns: list[str]) -> None:
+    w = csv.DictWriter(f, fieldnames=columns, extrasaction="ignore")
+    w.writeheader()
+    for row in rows:
+        w.writerow({k: ("" if row.get(k) is None else row.get(k)) for k in columns})
+
+
+def v2_digest(rows: list[dict]) -> str:
+    """sha256 of the v2 rows written exactly as results.csv was before the version column existed."""
+    buf = io.StringIO(newline="")
+    write(buf, [r for r in rows if r[VERSION] == "v2"], REQUIRED + EXTRA)
+    return hashlib.sha256(buf.getvalue().encode("utf-8")).hexdigest()
+
+
 def main() -> list[dict]:
     rows = load_rows()
+    digest = v2_digest(rows)
+    if digest != HISTORICAL_V2_SHA256:
+        raise SystemExit(f"the historical v2 rows changed (sha256 {digest}, frozen {HISTORICAL_V2_SHA256}); "
+                         "results.csv was not written")
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with OUT.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=REQUIRED + EXTRA, extrasaction="ignore")
-        w.writeheader()
-        for row in rows:
-            w.writerow({k: ("" if row.get(k) is None else row.get(k)) for k in REQUIRED + EXTRA})
+        write(f, rows, REQUIRED + EXTRA + [VERSION])
+    for v in sorted({r[VERSION] for r in rows} - {"v2", "n/a"}):
+        load = [r for r in rows if r[VERSION] == v and r["source"] == "stand-in"]
+        if load:
+            with (OUT.parent / f"{v}_load_test_results.csv").open("w", newline="", encoding="utf-8") as f:
+                write(f, load, REQUIRED + EXTRA + [VERSION])
     return rows
 
 

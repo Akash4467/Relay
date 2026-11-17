@@ -4,8 +4,9 @@ retry policy of DESIGN §15:
 - backoff = max(retry-after, uniform(0, min(cap, base * 2**k))) (full jitter, never shorter than retry-after);
 - never retry a per-day 429 (the daily budget is gone: GovernorReject-like DailyExhausted) or a 4xx;
 - never retry past the request's deadline;
-- a shared budget: retries in the last minute <= 10% of first attempts in that minute, but at least 1, so a quiet
-  system can still retry once (100 first attempts -> 10 retries);
+- a shared budget: retries in the last minute <= 10% of first attempts in that minute, but at least
+  max_transport_retries_per_call, so a quiet system can use every retry one call is allowed (100 first attempts
+  -> 10 retries); phase 10B (F9): the floor was 1, which silently capped every call at one retry;
 - every retry reserves through the governor again.
 """
 from __future__ import annotations
@@ -17,10 +18,11 @@ from collections import deque
 from dataclasses import dataclass, field
 
 from relay.governor.governor import Governor
-from relay.llm.client import ChatClient, LLMError
+from relay.llm.client import ChatClient, LLMError, is_daily_429
 from relay.llm.tokenizer import count
 
 MESSAGE_OVERHEAD_TOKENS = 4  # role/format tokens per chat message
+MIN_WAIT_S = 0.02  # shortest governor re-check sleep (L2): the wait loop can never spin
 
 
 class GovernorReject(Exception):
@@ -35,11 +37,20 @@ class DailyExhausted(Exception):
         self.model, self.reset_in_s = model, reset_in_s
 
 
+class TruncatedOutput(Exception):
+    """The provider stopped at max_completion_tokens (finish_reason "length"): the draft is incomplete and must not be
+    verified or shown (F2). The call is already recorded and settled; the pipeline decides what to do next."""
+
+    def __init__(self, text: str):
+        super().__init__("model output truncated at the token limit")
+        self.text = text
+
+
 class RetryBudget:
     """Rolling one-minute window of first attempts and retries, shared by all requests."""
 
-    def __init__(self, fraction: float = 0.10, window_s: float = 60.0, clock=time.monotonic):
-        self.fraction, self.window_s, self.clock = fraction, window_s, clock
+    def __init__(self, fraction: float = 0.10, window_s: float = 60.0, clock=time.monotonic, min_retries: int = 1):
+        self.fraction, self.window_s, self.clock, self.min_retries = fraction, window_s, clock, min_retries
         self.initial: deque[float] = deque()
         self.retries: deque[float] = deque()
         self.lock = threading.Lock()
@@ -48,6 +59,11 @@ class RetryBudget:
         for q in (self.initial, self.retries):
             while q and q[0] < now - self.window_s:
                 q.popleft()
+
+    @classmethod
+    def from_config(cls, retry: dict) -> "RetryBudget":
+        """config retry section: the floor equals the retries one call may make (F9)."""
+        return cls(retry["budget_frac_of_initial_per_min"], min_retries=retry["max_transport_retries_per_call"])
 
     def first_attempt(self) -> None:
         with self.lock:
@@ -59,7 +75,7 @@ class RetryBudget:
         with self.lock:
             now = self.clock()
             self._trim(now)
-            if len(self.retries) >= max(1, int(self.fraction * len(self.initial))):
+            if len(self.retries) >= max(self.min_retries, int(self.fraction * len(self.initial))):
                 return False
             self.retries.append(now)
             return True
@@ -94,8 +110,7 @@ class HostedLLM:
             try:
                 return self._attempt(messages, attempt)
             except LLMError as e:
-                per_day = e.kind == "rate_limited" and "per day" in (e.call.error or "")
-                if per_day:
+                if is_daily_429(e):
                     self.governor.on_daily_429(self.model["id"], e.call.retry_after_s)
                     raise DailyExhausted(self.model["id"], self.governor.daily_exhausted_for_s(self.model["id"])) from e
                 retryable = e.kind in ("rate_limited", "upstream_error", "timeout")
@@ -119,18 +134,23 @@ class HostedLLM:
         wait = self.governor.wait_estimate(self.model["id"], reserve)
         if wait > min(self.max_wait_s, self._left()):
             raise GovernorReject(f"{self.model['id']}: estimated wait {wait:.1f}s exceeds what the request allows")
-        if wait > 0:
+        # Phase 10 L2: after sleeping the estimate, capacity can still be a hair short (clock ticks, rounding, other
+        # requests), so re-estimate and keep waiting instead of rejecting. Bounded: every pass sleeps at least
+        # MIN_WAIT_S and the total never exceeds the request's allowance (max_wait_s and its deadline).
+        waited, allowance = 0.0, min(self.max_wait_s, self._left())  # fixed once: the loop cannot extend it
+        while (res := self.governor.try_reserve(self.model["id"], reserve)) is None:
+            wait = max(MIN_WAIT_S, self.governor.wait_estimate(self.model["id"], reserve))
+            if waited + wait > allowance or wait > self._left():
+                raise GovernorReject(f"{self.model['id']}: no capacity after waiting {waited:.1f}s")
             self.sleep(wait)
-        res = self.governor.try_reserve(self.model["id"], reserve)
-        if res is None:
-            raise GovernorReject(f"{self.model['id']}: no capacity after waiting {wait:.1f}s")
+            waited += wait
         record = {"model": self.model["id"], "attempt": attempt, "tokens_in_local": tokens_in, "reserved": reserve,
                   "governor_wait_ms": round((time.perf_counter_ns() - t0) / 1e6, 1)}
         try:
             call = self.client.complete(self.model["id"], messages, self.model["max_tokens"], self.model["temperature"],
                                         self.model["reasoning_effort"], self.question_id)
         except LLMError as e:
-            if e.kind == "rate_limited" and "per day" not in (e.call.error or ""):
+            if e.kind == "rate_limited" and not is_daily_429(e):
                 self.governor.on_429(self.model["id"], e.call.retry_after_s)
             self.governor.settle(res, res.tokens, e.call.headers)  # unknown usage: keep the reservation
             self.calls.append(record | {"status": e.kind, "http": e.call.status, "error": e.call.error,
@@ -149,4 +169,6 @@ class HostedLLM:
             "first_byte_ms": call.ms(call.t_first_byte_ns), "model_ttft_ms": call.ms(call.t_first_content_ns),
             "total_ms": call.ms(call.t_last_ns), "max_gap_ms": round(call.max_gap_ms, 1),
             "rate_headers": call.headers})
+        if call.finish_reason == "length":  # recorded and settled above; an incomplete draft is never returned
+            raise TruncatedOutput(call.text)
         return call.text

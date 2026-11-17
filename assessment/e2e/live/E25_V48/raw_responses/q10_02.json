@@ -1,0 +1,44 @@
+{
+ "question_id": "q10",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:53:42.194+00:00",
+  "t_send_ns": 208872194685000,
+  "status": 200,
+  "t_first_byte_ns": 208872464428200,
+  "t_first_content_ns": 208873252522600,
+  "t_last_ns": 208873469324200,
+  "max_gap_ms": 788.0644,
+  "text": "The authors’ architecture uses a two‑stage hierarchical design in which a routing module dynamically draws chunk boundaries and a downsampler selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions, and a second stage applies the same dynamic chunking process to the compressed representation to form a nested hierarchy of chunks [HNET:1:c012]. H‑Net (2‑stage) is significantly better than H‑Net (1‑stage) [HNET:3.1:c049].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.156296745,
+   "prompt_tokens": 2436,
+   "prompt_time": 0.462219709,
+   "completion_tokens": 262,
+   "completion_time": 0.546885545,
+   "total_tokens": 2698,
+   "total_time": 1.009105254,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 150
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "949",
+   "x-ratelimit-reset-requests": "1h13m26.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5162",
+   "x-ratelimit-reset-tokens": "21.285s"
+  },
+  "error": null,
+  "first_byte_ms": 269.7,
+  "first_content_ms": 1057.8,
+  "total_ms": 1274.6
+ }
+}

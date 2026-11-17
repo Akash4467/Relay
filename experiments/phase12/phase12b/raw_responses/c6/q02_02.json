@@ -1,0 +1,43 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "corpus_version": "c6",
+ "question_id": "q02",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T07:56:49.710+00:00",
+  "t_send_ns": 176659710692600,
+  "status": 200,
+  "t_first_byte_ns": 176659966906200,
+  "t_first_content_ns": 176660257213900,
+  "t_last_ns": 176660355149300,
+  "max_gap_ms": 290.2825,
+  "text": "The model uses h = 8 parallel attention heads, and for each head the key and value dimensions are d_k = d_v = 64 [AIAYN:3.2.2:c014].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.157926953,
+   "prompt_tokens": 1975,
+   "prompt_time": 0.114983328,
+   "completion_tokens": 133,
+   "completion_time": 0.280073101,
+   "total_tokens": 2108,
+   "total_time": 0.395056429,
+   "completion_tokens_details": {
+    "reasoning_tokens": 77
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "992",
+   "x-ratelimit-reset-requests": "11m31.2s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2830",
+   "x-ratelimit-reset-tokens": "38.775s"
+  },
+  "error": null,
+  "first_byte_ms": 256.2,
+  "first_content_ms": 546.5,
+  "total_ms": 644.5
+ }
+}

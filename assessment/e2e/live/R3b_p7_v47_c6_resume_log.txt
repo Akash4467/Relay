@@ -1,0 +1,5 @@
+q15 | ok normal None | calls 2 | tok 4547 + 332 | run {'requests': 3, 'tokens': 4879, 'refused': 0}
+q16 | ok refused model: not in papers | calls 1 | tok 1870 + 37 | run {'requests': 4, 'tokens': 6786, 'refused': 0}
+q20 | ok refused model: not in papers | calls 1 | tok 1914 + 52 | run {'requests': 5, 'tokens': 8752, 'refused': 0}
+q04 | ok refused verification failed after redraft | calls 2 | tok 4228 + 339 | run {'requests': 7, 'tokens': 13319, 'refused': 0}
+q13 | ok normal None | calls 2 | tok 4712 + 535 | run {'requests': 9, 'tokens': 18566, 'refused': 0}

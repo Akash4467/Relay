@@ -1,0 +1,10 @@
+{
+ "baseline": {"dir": "baseline/", "config": "c3, prompt p4, verifier v4.2, model openai/gpt-oss-120b (low, T=0.2, 900), retrieval B + Configuration G",
+              "questions": 25, "live_tokens": "Phase 12 c3 runs reused (copied) + 45,535 new", "metrics": "baseline/baseline_metrics.json"},
+ "iterations": [
+  {"id": "iteration_001", "candidate": "verifier v4.3c (self-reference premise)", "targets": "F-VER-SUBJ", "live_tokens": 0, "decision": "rejected (offline)"},
+  {"id": "iteration_002", "candidate": "prompt p5r (redraft instruction)", "targets": "F-GEN-REDRAFT", "live_tokens": 27131, "decision": "accepted (provisional, not production)"},
+  {"id": "iteration_003", "candidate": "verifier v4.4c (sentence-level premises) + p5r", "targets": "F-VER-PREMISE", "live_tokens": 0, "decision": "REJECTED offline: false acceptances 6 -> 9 (stress), 2 -> 3 (live drafts)"}
+ ],
+ "loop_ledger": "ledger.json (day 2026-11-14: 38 requests, 72,666 tokens of the loop's 77,000 daily cap)"
+}

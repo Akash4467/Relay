@@ -1,0 +1,256 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "timestamp": "2026-11-14T07:56:16.331+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "retrieval_config": {
+  "setting": "B",
+  "cross_paper_reserve_per_paper": 2,
+  "symbolic_query_expansion": true,
+  "prompt_caption_sharing": true
+ },
+ "question_id": "q01",
+ "group": "ordinary_answerable",
+ "question": "According to the Transformer paper, what property of recurrent models prevents parallelization within training examples, and why does it matter more for long sequences?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §1 Introduction; AIAYN §abstract Abstract; AIAYN §6.3 English Constituency Parsing; HNET §1 Introduction.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "p12-c6-q01"
+ },
+ "client_ms": 6983.8,
+ "evidence_ids": [
+  "AIAYN:1:c002",
+  "AIAYN:1:c003",
+  "AIAYN:abstract:c001",
+  "AIAYN:6.3:c033",
+  "HNET:1:c010",
+  "MOSHI:6.2:c111",
+  "HNET:4:c081",
+  "HNET:1:c004"
+ ],
+ "retrieval_query": null,
+ "query_expansion": [],
+ "caption_sharing": true,
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true
+ ],
+ "drafts": [
+  "Recurrent models compute hidden states h_t as a function of the previous hidden state h_t‑1 and the input at position t, which makes their computation inherently sequential and thus precludes parallelization within training examples [AIAYN:1:c002]. This sequential nature becomes especially critical for longer sequences because memory constraints then limit the ability to batch across examples, reducing overall training efficiency [AIAYN:1:c002].",
+  "Recurrent models generate hidden states h_t from the previous hidden state h_t‑1 and the input at position t, making their computation inherently sequential and preventing parallelization within training examples [AIAYN:1:c002]. This sequential nature becomes critical at longer sequence lengths, as memory constraints limit batching across examples [AIAYN:1:c002]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:1:c002"
+   ],
+   "failures": [
+    [
+     "This sequential nature becomes especially critical for longer sequences because memory constraints then limit the ability to batch across examples, reducing overall training efficiency [AIAYN:1:c002].",
+     "not supported by the cited passage (clause: \"Memory constraints then limit the ability to batch across examples, reducing overall training efficiency.\") (entailment 0.16 < 0.9)"
+    ]
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:1:c002"
+   ],
+   "failures": [
+    [
+     "This sequential nature becomes critical at longer sequence lengths, as memory constraints limit batching across examples [AIAYN:1:c002].",
+     "not supported by the cited passage (entailment 0.89 < 0.9)"
+    ]
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "identity_checks": {
+  "evidence_equals_selected_corpus": true,
+  "original_question_in_every_prompt": true,
+  "expanded_query_not_in_prompt": true
+ },
+ "trace": {
+  "request_id": "p12-c6-q01",
+  "scenario": "phase12_live",
+  "source": "real",
+  "start_time": "2026-11-14T07:56:16.331+00:00",
+  "question_id": "q01",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3892,
+  "tokens_out": 254,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 801.8,
+  "context_tokens": 1548,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:1:c002",
+   "AIAYN:1:c003",
+   "AIAYN:abstract:c001",
+   "AIAYN:6.3:c033",
+   "HNET:1:c010",
+   "MOSHI:6.2:c111",
+   "HNET:4:c081",
+   "HNET:1:c004"
+  ],
+  "verification_ms": 4387.8,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 0.0,
+  "model_ttft_ms": 719.2,
+  "first_byte_ms": 460.5,
+  "generation_ms": 1766.2,
+  "reasoning_tokens": 80,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1850,
+    "reserved": 2620,
+    "governor_wait_ms": 0.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.371524732,
+     "prompt_tokens": 1849,
+     "prompt_time": 0.156020731,
+     "completion_tokens": 136,
+     "completion_time": 0.283923853,
+     "total_tokens": 1985,
+     "total_time": 0.439944584,
+     "prompt_tokens_details": {
+      "cached_tokens": 1792
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 42
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1849,
+    "tokens_out": 136,
+    "reasoning_tokens": 42,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 460.5,
+    "model_ttft_ms": 719.2,
+    "total_ms": 896.2,
+    "max_gap_ms": 258.7,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "995",
+     "x-ratelimit-reset-requests": "7m12s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2924",
+     "x-ratelimit-reset-tokens": "38.07s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2042,
+    "reserved": 2812,
+    "governor_wait_ms": 0.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.31764961,
+     "prompt_tokens": 2043,
+     "prompt_time": 0.226905943,
+     "completion_tokens": 118,
+     "completion_time": 0.247094519,
+     "total_tokens": 2161,
+     "total_time": 0.474000462,
+     "completion_tokens_details": {
+      "reasoning_tokens": 38
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2043,
+    "tokens_out": 118,
+    "reasoning_tokens": 38,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 400.3,
+    "model_ttft_ms": 724.2,
+    "total_ms": 870.0,
+    "max_gap_ms": 323.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "994",
+     "x-ratelimit-reset-requests": "8m38.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "3072",
+     "x-ratelimit-reset-tokens": "36.96s"
+    }
+   }
+  ],
+  "first_token_ms": 6976.8,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 6977.4
+ },
+ "provider_token_usage": [
+  {
+   "queue_time": 0.371524732,
+   "prompt_tokens": 1849,
+   "prompt_time": 0.156020731,
+   "completion_tokens": 136,
+   "completion_time": 0.283923853,
+   "total_tokens": 1985,
+   "total_time": 0.439944584,
+   "prompt_tokens_details": {
+    "cached_tokens": 1792
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 42
+   }
+  },
+  {
+   "queue_time": 0.31764961,
+   "prompt_tokens": 2043,
+   "prompt_time": 0.226905943,
+   "completion_tokens": 118,
+   "completion_time": 0.247094519,
+   "total_tokens": 2161,
+   "total_time": 0.474000462,
+   "completion_tokens_details": {
+    "reasoning_tokens": 38
+   }
+  }
+ ]
+}

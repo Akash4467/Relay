@@ -1,0 +1,829 @@
+{
+ "runs": [
+  "assessment/e2e/live/B12"
+ ],
+ "judgments": "assessment\\e2e\\live\\B12_judgments_for_metrics.json",
+ "p95_note": "nearest-rank percentile",
+ "all": {
+  "n_questions": 12,
+  "correct_answer": {
+   "n": 1,
+   "d": 10,
+   "pct": 10.0
+  },
+  "partially_correct": {
+   "n": 0,
+   "d": 10,
+   "pct": 0.0
+  },
+  "wrong_answer": {
+   "n": 1,
+   "d": 10,
+   "pct": 10.0
+  },
+  "false_refusal": {
+   "n": 8,
+   "d": 10,
+   "pct": 80.0
+  },
+  "correct_refusal": {
+   "n": 2,
+   "d": 2,
+   "pct": 100.0
+  },
+  "unsupported_answer": {
+   "n": 0,
+   "d": 2,
+   "pct": 0.0
+  },
+  "incomplete_budget_or_timeout": {
+   "n": 0,
+   "d": 12,
+   "pct": 0.0
+  },
+  "citation_validity_shown_answers": {
+   "n": 2,
+   "d": 2,
+   "pct": 100.0
+  },
+  "evidence_complete_in_context": {
+   "n": 6,
+   "d": 10,
+   "pct": 60.0
+  },
+  "claim_sentences_accepted": {
+   "n": 12,
+   "d": 29,
+   "pct": 41.4
+  },
+  "claim_entailment_median": 0.656,
+  "redraft_success": {
+   "n": 1,
+   "d": 8,
+   "pct": 12.5
+  },
+  "ttft_ms": {
+   "n": 12,
+   "p50": 754.0,
+   "p95": 1870.9
+  },
+  "total_ms": {
+   "n": 12,
+   "p50": 27396.3,
+   "p95": 32482.5
+  },
+  "governor_wait_ms_p50": 22487.8,
+  "tokens_per_question": {
+   "in_p50": 3688,
+   "out_p50": 280,
+   "in_total": 37607,
+   "out_total": 3143
+  },
+  "llm_calls": 20,
+  "provider_errors": 0,
+  "timeouts": 0,
+  "cap_refused_calls": 0
+ },
+ "by_set": {
+  "A_fixed_regression": {
+   "n_questions": 0,
+   "correct_answer": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "partially_correct": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "wrong_answer": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "false_refusal": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "correct_refusal": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "unsupported_answer": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "incomplete_budget_or_timeout": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "citation_validity_shown_answers": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "evidence_complete_in_context": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "claim_sentences_accepted": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "claim_entailment_median": null,
+   "redraft_success": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "ttft_ms": {
+    "n": 0,
+    "p50": null,
+    "p95": null
+   },
+   "total_ms": {
+    "n": 0,
+    "p50": null,
+    "p95": null
+   },
+   "governor_wait_ms_p50": null,
+   "tokens_per_question": {
+    "in_p50": null,
+    "out_p50": null,
+    "in_total": 0,
+    "out_total": 0
+   },
+   "llm_calls": 0,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  "B_failure_focused": {
+   "n_questions": 0,
+   "correct_answer": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "partially_correct": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "wrong_answer": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "false_refusal": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "correct_refusal": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "unsupported_answer": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "incomplete_budget_or_timeout": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "citation_validity_shown_answers": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "evidence_complete_in_context": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "claim_sentences_accepted": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "claim_entailment_median": null,
+   "redraft_success": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "ttft_ms": {
+    "n": 0,
+    "p50": null,
+    "p95": null
+   },
+   "total_ms": {
+    "n": 0,
+    "p50": null,
+    "p95": null
+   },
+   "governor_wait_ms_p50": null,
+   "tokens_per_question": {
+    "in_p50": null,
+    "out_p50": null,
+    "in_total": 0,
+    "out_total": 0
+   },
+   "llm_calls": 0,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  "C_unanswerable": {
+   "n_questions": 0,
+   "correct_answer": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "partially_correct": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "wrong_answer": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "false_refusal": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "correct_refusal": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "unsupported_answer": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "incomplete_budget_or_timeout": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "citation_validity_shown_answers": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "evidence_complete_in_context": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "claim_sentences_accepted": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "claim_entailment_median": null,
+   "redraft_success": {
+    "n": 0,
+    "d": 0,
+    "pct": null
+   },
+   "ttft_ms": {
+    "n": 0,
+    "p50": null,
+    "p95": null
+   },
+   "total_ms": {
+    "n": 0,
+    "p50": null,
+    "p95": null
+   },
+   "governor_wait_ms_p50": null,
+   "tokens_per_question": {
+    "in_p50": null,
+    "out_p50": null,
+    "in_total": 0,
+    "out_total": 0
+   },
+   "llm_calls": 0,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  }
+ },
+ "rows": [
+  {
+   "question_id": "n10",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "prose_and_table"
+   ],
+   "answerable": true,
+   "outcome": "false_refusal",
+   "answered": false,
+   "refusal_reason": "verification failed after redraft",
+   "redrafted": true,
+   "llm_calls": 2,
+   "evidence_complete": false,
+   "evidence_all_in_context": false,
+   "shown_citations": 0,
+   "shown_citations_valid": 0,
+   "sentences": [
+    {
+     "ok": false,
+     "entailment": null,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.04391646104753131,
+     "absence": false
+    },
+    {
+     "ok": true,
+     "entailment": 0.9780862816117483,
+     "absence": false
+    }
+   ],
+   "ttft_ms": 535.8,
+   "total_ms": 29602.1,
+   "governor_wait_ms": 26603.2,
+   "tokens_in": 3688,
+   "tokens_out": 135,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "q01",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "direct"
+   ],
+   "answerable": true,
+   "outcome": "correct_answer",
+   "answered": true,
+   "refusal_reason": null,
+   "redrafted": true,
+   "llm_calls": 2,
+   "evidence_complete": true,
+   "evidence_all_in_context": true,
+   "shown_citations": 1,
+   "shown_citations_valid": 1,
+   "sentences": [
+    {
+     "ok": false,
+     "entailment": 0.6563785585302981,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.10360739864698586,
+     "absence": false
+    },
+    {
+     "ok": true,
+     "entailment": 0.9087078161197588,
+     "absence": false
+    }
+   ],
+   "ttft_ms": 791.5,
+   "total_ms": 10887.9,
+   "governor_wait_ms": 0.1,
+   "tokens_in": 4046,
+   "tokens_out": 294,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "q04",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "direct"
+   ],
+   "answerable": true,
+   "outcome": "false_refusal",
+   "answered": false,
+   "refusal_reason": "verification failed after redraft",
+   "redrafted": true,
+   "llm_calls": 2,
+   "evidence_complete": true,
+   "evidence_all_in_context": true,
+   "shown_citations": 0,
+   "shown_citations_valid": 0,
+   "sentences": [
+    {
+     "ok": false,
+     "entailment": 0.23776954068222753,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": null,
+     "absence": true
+    },
+    {
+     "ok": false,
+     "entailment": 0.4012390760960393,
+     "absence": false
+    }
+   ],
+   "ttft_ms": 702.9,
+   "total_ms": 3741.4,
+   "governor_wait_ms": 0.0,
+   "tokens_in": 3542,
+   "tokens_out": 344,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "q07",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "multi_section"
+   ],
+   "answerable": true,
+   "outcome": "false_refusal",
+   "answered": false,
+   "refusal_reason": "verification failed after redraft",
+   "redrafted": true,
+   "llm_calls": 2,
+   "evidence_complete": true,
+   "evidence_all_in_context": true,
+   "shown_citations": 0,
+   "shown_citations_valid": 0,
+   "sentences": [
+    {
+     "ok": false,
+     "entailment": 0.0034782691037772433,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.030553691596100795,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.5815952711147485,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.45550051882236364,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.7443432716574522,
+     "absence": false
+    },
+    {
+     "ok": true,
+     "entailment": 0.9724971188405029,
+     "absence": false
+    },
+    {
+     "ok": true,
+     "entailment": 0.9772820101586978,
+     "absence": false
+    }
+   ],
+   "ttft_ms": 682.6,
+   "total_ms": 32482.5,
+   "governor_wait_ms": 22487.8,
+   "tokens_in": 3885,
+   "tokens_out": 775,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "q12",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "numerical_table"
+   ],
+   "answerable": true,
+   "outcome": "false_refusal",
+   "answered": false,
+   "refusal_reason": "verification failed after redraft",
+   "redrafted": true,
+   "llm_calls": 2,
+   "evidence_complete": true,
+   "evidence_all_in_context": true,
+   "shown_citations": 0,
+   "shown_citations_valid": 0,
+   "sentences": [
+    {
+     "ok": true,
+     "entailment": 0.939695911381672,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": null,
+     "absence": true
+    },
+    {
+     "ok": true,
+     "entailment": 0.9673620806313878,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": null,
+     "absence": true
+    }
+   ],
+   "ttft_ms": 695.1,
+   "total_ms": 30469.8,
+   "governor_wait_ms": 26765.2,
+   "tokens_in": 3630,
+   "tokens_out": 283,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "q13",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "numerical_table"
+   ],
+   "answerable": true,
+   "outcome": "false_refusal",
+   "answered": false,
+   "refusal_reason": "verification failed after redraft",
+   "redrafted": true,
+   "llm_calls": 2,
+   "evidence_complete": true,
+   "evidence_all_in_context": true,
+   "shown_citations": 0,
+   "shown_citations_valid": 0,
+   "sentences": [
+    {
+     "ok": true,
+     "entailment": 0.9673474783369178,
+     "absence": false
+    },
+    {
+     "ok": true,
+     "entailment": 0.9049907638146865,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.20245910368328918,
+     "absence": false
+    },
+    {
+     "ok": true,
+     "entailment": 0.9443530245857621,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.8928730192600387,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.06500330869761987,
+     "absence": false
+    }
+   ],
+   "ttft_ms": 912.6,
+   "total_ms": 37294.3,
+   "governor_wait_ms": 27075.2,
+   "tokens_in": 4064,
+   "tokens_out": 559,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "q14",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "terminology_mismatch"
+   ],
+   "answerable": true,
+   "outcome": "false_refusal",
+   "answered": false,
+   "refusal_reason": "model: not in papers",
+   "redrafted": false,
+   "llm_calls": 1,
+   "evidence_complete": false,
+   "evidence_all_in_context": false,
+   "shown_citations": 0,
+   "shown_citations_valid": 0,
+   "sentences": [],
+   "ttft_ms": 1097.8,
+   "total_ms": 14235.3,
+   "governor_wait_ms": 12391.1,
+   "tokens_in": 1817,
+   "tokens_out": 72,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "q15",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "cross_paper"
+   ],
+   "answerable": true,
+   "outcome": "false_refusal",
+   "answered": false,
+   "refusal_reason": "verification failed after redraft",
+   "redrafted": true,
+   "llm_calls": 2,
+   "evidence_complete": true,
+   "evidence_all_in_context": true,
+   "shown_citations": 0,
+   "shown_citations_valid": 0,
+   "sentences": [
+    {
+     "ok": false,
+     "entailment": 0.010299845773026296,
+     "absence": false
+    },
+    {
+     "ok": true,
+     "entailment": 0.9906983721555015,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.005100200144212748,
+     "absence": false
+    },
+    {
+     "ok": true,
+     "entailment": 0.9906983721555015,
+     "absence": false
+    }
+   ],
+   "ttft_ms": 655.1,
+   "total_ms": 28520.4,
+   "governor_wait_ms": 24351.6,
+   "tokens_in": 3904,
+   "tokens_out": 229,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "q16",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "unanswerable"
+   ],
+   "answerable": false,
+   "outcome": "correct_abstention",
+   "answered": false,
+   "refusal_reason": "model: not in papers",
+   "redrafted": false,
+   "llm_calls": 1,
+   "evidence_complete": null,
+   "evidence_all_in_context": null,
+   "shown_citations": 0,
+   "shown_citations_valid": 0,
+   "sentences": [],
+   "ttft_ms": 618.0,
+   "total_ms": 12222.1,
+   "governor_wait_ms": 10876.7,
+   "tokens_in": 1700,
+   "tokens_out": 37,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "q20",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "unanswerable"
+   ],
+   "answerable": false,
+   "outcome": "correct_abstention",
+   "answered": false,
+   "refusal_reason": "model: not in papers",
+   "redrafted": false,
+   "llm_calls": 1,
+   "evidence_complete": null,
+   "evidence_all_in_context": null,
+   "shown_citations": 0,
+   "shown_citations_valid": 0,
+   "sentences": [],
+   "ttft_ms": 1870.9,
+   "total_ms": 14548.4,
+   "governor_wait_ms": 11998.7,
+   "tokens_in": 1744,
+   "tokens_out": 42,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "t05",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "table_set"
+   ],
+   "answerable": true,
+   "outcome": "incorrect",
+   "answered": true,
+   "refusal_reason": null,
+   "redrafted": false,
+   "llm_calls": 1,
+   "evidence_complete": false,
+   "evidence_all_in_context": true,
+   "shown_citations": 1,
+   "shown_citations_valid": 1,
+   "sentences": [
+    {
+     "ok": true,
+     "entailment": 0.9128212642170047,
+     "absence": false
+    }
+   ],
+   "ttft_ms": 3847.1,
+   "total_ms": 16856.6,
+   "governor_wait_ms": 11465.0,
+   "tokens_in": 1720,
+   "tokens_out": 93,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  },
+  {
+   "question_id": "t13",
+   "run": "B12",
+   "sets": [
+    "e2e_B12",
+    "table_set"
+   ],
+   "answerable": true,
+   "outcome": "false_refusal",
+   "answered": false,
+   "refusal_reason": "verification failed after redraft",
+   "redrafted": true,
+   "llm_calls": 2,
+   "evidence_complete": false,
+   "evidence_all_in_context": true,
+   "shown_citations": 0,
+   "shown_citations_valid": 0,
+   "sentences": [
+    {
+     "ok": false,
+     "entailment": 0.47186225985116487,
+     "absence": false
+    },
+    {
+     "ok": false,
+     "entailment": 0.06217380495560591,
+     "absence": false
+    }
+   ],
+   "ttft_ms": 754.0,
+   "total_ms": 27396.3,
+   "governor_wait_ms": 24096.1,
+   "tokens_in": 3867,
+   "tokens_out": 280,
+   "provider_errors": 0,
+   "timeouts": 0,
+   "cap_refused_calls": 0
+  }
+ ]
+}

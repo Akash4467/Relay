@@ -1,0 +1,1670 @@
+{
+ "identity_equals_baseline": true,
+ "summary": {
+  "baseline": {
+   "original A": {
+    "context_tokens_mean": 1473.7,
+    "duplicate_table_chunk_rate": 0.099,
+    "any_gold": "13/15",
+    "quote_recall": "22/34",
+    "mrr": 0.602,
+    "missing": [
+     "q03",
+     "q14"
+    ]
+   },
+   "original B": {
+    "context_tokens_mean": 1460.9,
+    "duplicate_table_chunk_rate": 0.126,
+    "any_gold": "11/15",
+    "quote_recall": "20/34",
+    "mrr": 0.582,
+    "missing": [
+     "q06",
+     "q10",
+     "q11",
+     "q14"
+    ]
+   },
+   "original C": {
+    "context_tokens_mean": 1270.7,
+    "duplicate_table_chunk_rate": 0.062,
+    "any_gold": "14/15",
+    "quote_recall": "23/34",
+    "mrr": 0.644,
+    "missing": [
+     "q14"
+    ]
+   },
+   "table A": {
+    "context_tokens_mean": 1495.2,
+    "duplicate_table_chunk_rate": 0.357,
+    "table_in": "21/24",
+    "rows_in": "26/31",
+    "complete": "18/24"
+   },
+   "table B": {
+    "context_tokens_mean": 1503.0,
+    "duplicate_table_chunk_rate": 0.453,
+    "table_in": "23/24",
+    "rows_in": "27/31",
+    "complete": "19/24"
+   },
+   "table C": {
+    "context_tokens_mean": 1403.8,
+    "duplicate_table_chunk_rate": 0.279,
+    "table_in": "24/24",
+    "rows_in": "29/31",
+    "complete": "19/24"
+   }
+  },
+  "identity": {
+   "original A": {
+    "context_tokens_mean": 1473.7,
+    "duplicate_table_chunk_rate": 0.099,
+    "any_gold": "13/15",
+    "quote_recall": "22/34",
+    "mrr": 0.602,
+    "missing": [
+     "q03",
+     "q14"
+    ]
+   },
+   "original B": {
+    "context_tokens_mean": 1460.9,
+    "duplicate_table_chunk_rate": 0.126,
+    "any_gold": "11/15",
+    "quote_recall": "20/34",
+    "mrr": 0.582,
+    "missing": [
+     "q06",
+     "q10",
+     "q11",
+     "q14"
+    ]
+   },
+   "original C": {
+    "context_tokens_mean": 1270.7,
+    "duplicate_table_chunk_rate": 0.062,
+    "any_gold": "14/15",
+    "quote_recall": "23/34",
+    "mrr": 0.644,
+    "missing": [
+     "q14"
+    ]
+   },
+   "table A": {
+    "context_tokens_mean": 1495.2,
+    "duplicate_table_chunk_rate": 0.357,
+    "table_in": "21/24",
+    "rows_in": "26/31",
+    "complete": "18/24"
+   },
+   "table B": {
+    "context_tokens_mean": 1503.0,
+    "duplicate_table_chunk_rate": 0.453,
+    "table_in": "23/24",
+    "rows_in": "27/31",
+    "complete": "19/24"
+   },
+   "table C": {
+    "context_tokens_mean": 1403.8,
+    "duplicate_table_chunk_rate": 0.279,
+    "table_in": "24/24",
+    "rows_in": "29/31",
+    "complete": "19/24"
+   }
+  },
+  "max2_per_table": {
+   "original A": {
+    "context_tokens_mean": 1476.1,
+    "duplicate_table_chunk_rate": 0.047,
+    "any_gold": "13/15",
+    "quote_recall": "21/34",
+    "mrr": 0.602,
+    "missing": [
+     "q03",
+     "q14"
+    ]
+   },
+   "original B": {
+    "context_tokens_mean": 1472.7,
+    "duplicate_table_chunk_rate": 0.041,
+    "any_gold": "12/15",
+    "quote_recall": "20/34",
+    "mrr": 0.582,
+    "missing": [
+     "q06",
+     "q11",
+     "q14"
+    ]
+   },
+   "original C": {
+    "context_tokens_mean": 1258.5,
+    "duplicate_table_chunk_rate": 0.045,
+    "any_gold": "14/15",
+    "quote_recall": "23/34",
+    "mrr": 0.644,
+    "missing": [
+     "q14"
+    ]
+   },
+   "table A": {
+    "context_tokens_mean": 1482.7,
+    "duplicate_table_chunk_rate": 0.143,
+    "table_in": "23/24",
+    "rows_in": "23/31",
+    "complete": "15/24"
+   },
+   "table B": {
+    "context_tokens_mean": 1502.8,
+    "duplicate_table_chunk_rate": 0.165,
+    "table_in": "23/24",
+    "rows_in": "21/31",
+    "complete": "13/24"
+   },
+   "table C": {
+    "context_tokens_mean": 1405.4,
+    "duplicate_table_chunk_rate": 0.231,
+    "table_in": "24/24",
+    "rows_in": "28/31",
+    "complete": "18/24"
+   }
+  },
+  "max1_per_table": {
+   "original A": {
+    "context_tokens_mean": 1476.8,
+    "duplicate_table_chunk_rate": 0.0,
+    "any_gold": "13/15",
+    "quote_recall": "20/34",
+    "mrr": 0.602,
+    "missing": [
+     "q03",
+     "q14"
+    ]
+   },
+   "original B": {
+    "context_tokens_mean": 1485.0,
+    "duplicate_table_chunk_rate": 0.0,
+    "any_gold": "12/15",
+    "quote_recall": "19/34",
+    "mrr": 0.582,
+    "missing": [
+     "q06",
+     "q11",
+     "q14"
+    ]
+   },
+   "original C": {
+    "context_tokens_mean": 1247.2,
+    "duplicate_table_chunk_rate": 0.0,
+    "any_gold": "14/15",
+    "quote_recall": "23/34",
+    "mrr": 0.644,
+    "missing": [
+     "q14"
+    ]
+   },
+   "table A": {
+    "context_tokens_mean": 1475.6,
+    "duplicate_table_chunk_rate": 0.0,
+    "table_in": "23/24",
+    "rows_in": "20/31",
+    "complete": "11/24"
+   },
+   "table B": {
+    "context_tokens_mean": 1491.1,
+    "duplicate_table_chunk_rate": 0.0,
+    "table_in": "23/24",
+    "rows_in": "16/31",
+    "complete": "8/24"
+   },
+   "table C": {
+    "context_tokens_mean": 1404.3,
+    "duplicate_table_chunk_rate": 0.0,
+    "table_in": "24/24",
+    "rows_in": "25/31",
+    "complete": "15/24"
+   }
+  },
+  "table_half_budget": {
+   "original A": {
+    "context_tokens_mean": 1482.3,
+    "duplicate_table_chunk_rate": 0.075,
+    "any_gold": "13/15",
+    "quote_recall": "23/34",
+    "mrr": 0.602,
+    "missing": [
+     "q03",
+     "q14"
+    ]
+   },
+   "original B": {
+    "context_tokens_mean": 1477.9,
+    "duplicate_table_chunk_rate": 0.068,
+    "any_gold": "11/15",
+    "quote_recall": "19/34",
+    "mrr": 0.582,
+    "missing": [
+     "q06",
+     "q10",
+     "q11",
+     "q14"
+    ]
+   },
+   "original C": {
+    "context_tokens_mean": 1250.5,
+    "duplicate_table_chunk_rate": 0.009,
+    "any_gold": "14/15",
+    "quote_recall": "23/34",
+    "mrr": 0.644,
+    "missing": [
+     "q14"
+    ]
+   },
+   "table A": {
+    "context_tokens_mean": 1499.1,
+    "duplicate_table_chunk_rate": 0.209,
+    "table_in": "21/24",
+    "rows_in": "23/31",
+    "complete": "15/24"
+   },
+   "table B": {
+    "context_tokens_mean": 1494.3,
+    "duplicate_table_chunk_rate": 0.21,
+    "table_in": "23/24",
+    "rows_in": "23/31",
+    "complete": "15/24"
+   },
+   "table C": {
+    "context_tokens_mean": 1355.1,
+    "duplicate_table_chunk_rate": 0.057,
+    "table_in": "24/24",
+    "rows_in": "25/31",
+    "complete": "15/24"
+   }
+  },
+  "whole_table_index": {
+   "original A": {
+    "context_tokens_mean": 1473.8,
+    "duplicate_table_chunk_rate": 0.036,
+    "any_gold": "13/15",
+    "quote_recall": "22/34",
+    "mrr": 0.663,
+    "missing": [
+     "q03",
+     "q14"
+    ]
+   },
+   "original B": {
+    "context_tokens_mean": 1496.3,
+    "duplicate_table_chunk_rate": 0.034,
+    "any_gold": "12/15",
+    "quote_recall": "21/34",
+    "mrr": 0.559,
+    "missing": [
+     "q06",
+     "q10",
+     "q14"
+    ]
+   },
+   "original C": {
+    "context_tokens_mean": 1230.1,
+    "duplicate_table_chunk_rate": 0.0,
+    "any_gold": "13/15",
+    "quote_recall": "22/34",
+    "mrr": 0.65,
+    "missing": [
+     "q11",
+     "q14"
+    ]
+   },
+   "table A": {
+    "context_tokens_mean": 1496.9,
+    "duplicate_table_chunk_rate": 0.17,
+    "table_in": "21/24",
+    "rows_in": "25/31",
+    "complete": "17/24"
+   },
+   "table B": {
+    "context_tokens_mean": 1514.7,
+    "duplicate_table_chunk_rate": 0.203,
+    "table_in": "24/24",
+    "rows_in": "29/31",
+    "complete": "19/24"
+   },
+   "table C": {
+    "context_tokens_mean": 1326.1,
+    "duplicate_table_chunk_rate": 0.064,
+    "table_in": "24/24",
+    "rows_in": "28/31",
+    "complete": "18/24"
+   }
+  }
+ },
+ "detail": {
+  "baseline": {
+   "q10 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:4:c080",
+     "HNET:T6:r05",
+     "HNET:T6:r02",
+     "HNET:T6:r01",
+     "HNET:T6:r03",
+     "HNET:T6:r04"
+    ],
+    "context_tokens": 1482,
+    "duplicate_table_chunks": 4,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 1.0
+   },
+   "q10 B": {
+    "dataset": "original",
+    "setting": "B",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:T6:r05",
+     "HNET:T6:r02",
+     "HNET:T6:r01",
+     "HNET:T6:r04",
+     "HNET:T6:r03",
+     "HNET:1:c012"
+    ],
+    "context_tokens": 1418,
+    "duplicate_table_chunks": 4,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 0,
+    "any_gold": false,
+    "mrr": 0.1
+   },
+   "q11 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q11",
+    "answerable": true,
+    "context": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:T3:r02",
+     "AIAYN:T3:r07",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:T3:r03"
+    ],
+    "context_tokens": 1447,
+    "duplicate_table_chunks": 2,
+    "corrupted_lines": 0,
+    "quotes": 2,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "identity": {
+   "q10 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:4:c080",
+     "HNET:T6:r05",
+     "HNET:T6:r02",
+     "HNET:T6:r01",
+     "HNET:T6:r03",
+     "HNET:T6:r04"
+    ],
+    "context_tokens": 1482,
+    "duplicate_table_chunks": 4,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 1.0
+   },
+   "q10 B": {
+    "dataset": "original",
+    "setting": "B",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:T6:r05",
+     "HNET:T6:r02",
+     "HNET:T6:r01",
+     "HNET:T6:r04",
+     "HNET:T6:r03",
+     "HNET:1:c012"
+    ],
+    "context_tokens": 1418,
+    "duplicate_table_chunks": 4,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 0,
+    "any_gold": false,
+    "mrr": 0.1
+   },
+   "q11 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q11",
+    "answerable": true,
+    "context": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:T3:r02",
+     "AIAYN:T3:r07",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:T3:r03"
+    ],
+    "context_tokens": 1447,
+    "duplicate_table_chunks": 2,
+    "corrupted_lines": 0,
+    "quotes": 2,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "max2_per_table": {
+   "q10 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:4:c080",
+     "HNET:T6:r05",
+     "HNET:T6:r02",
+     "HNET:3.1:c049",
+     "HNET:1:c009",
+     "HNET:1:c007",
+     "HNET:2.1.1:c016"
+    ],
+    "context_tokens": 1472,
+    "duplicate_table_chunks": 1,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 1.0
+   },
+   "q10 B": {
+    "dataset": "original",
+    "setting": "B",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:T6:r05",
+     "HNET:T6:r02",
+     "HNET:1:c012",
+     "HNET:3.1:c049",
+     "HNET:3:c043",
+     "HNET:1:c009",
+     "HNET:4:c080"
+    ],
+    "context_tokens": 1453,
+    "duplicate_table_chunks": 1,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 0.1
+   },
+   "q11 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q11",
+    "answerable": true,
+    "context": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:T3:r02",
+     "AIAYN:T3:r07",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:abstract:c001",
+     "AIAYN:3:c007"
+    ],
+    "context_tokens": 1469,
+    "duplicate_table_chunks": 1,
+    "corrupted_lines": 0,
+    "quotes": 2,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "max1_per_table": {
+   "q10 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:4:c080",
+     "HNET:T6:r05",
+     "HNET:3.1:c049",
+     "HNET:1:c009",
+     "HNET:1:c007",
+     "HNET:2.1.1:c016",
+     "MOSHI:7:c126",
+     "HNET:2.1.2:c021"
+    ],
+    "context_tokens": 1489,
+    "duplicate_table_chunks": 0,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 1.0
+   },
+   "q10 B": {
+    "dataset": "original",
+    "setting": "B",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:T6:r05",
+     "HNET:1:c012",
+     "HNET:3.1:c049",
+     "HNET:3:c043",
+     "HNET:1:c009",
+     "HNET:4:c080",
+     "HNET:1:c007"
+    ],
+    "context_tokens": 1416,
+    "duplicate_table_chunks": 0,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 0.1
+   },
+   "q11 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q11",
+    "answerable": true,
+    "context": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:T3:r02",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:abstract:c001",
+     "MOSHI:5.5:c092",
+     "AIAYN:3:c007"
+    ],
+    "context_tokens": 1474,
+    "duplicate_table_chunks": 0,
+    "corrupted_lines": 0,
+    "quotes": 2,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "table_half_budget": {
+   "q10 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:4:c080",
+     "HNET:T6:r05",
+     "HNET:T6:r02",
+     "HNET:T6:r01",
+     "HNET:3.1:c049",
+     "HNET:1:c009",
+     "HNET:1:c007"
+    ],
+    "context_tokens": 1576,
+    "duplicate_table_chunks": 2,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 1.0
+   },
+   "q10 B": {
+    "dataset": "original",
+    "setting": "B",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:T6:r05",
+     "HNET:T6:r02",
+     "HNET:T6:r01",
+     "HNET:1:c012",
+     "HNET:3.1:c049",
+     "HNET:3:c043",
+     "HNET:1:c009"
+    ],
+    "context_tokens": 1484,
+    "duplicate_table_chunks": 2,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 0,
+    "any_gold": false,
+    "mrr": 0.1
+   },
+   "q11 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q11",
+    "answerable": true,
+    "context": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:T3:r02",
+     "AIAYN:T3:r07",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:T3:r01"
+    ],
+    "context_tokens": 1410,
+    "duplicate_table_chunks": 2,
+    "corrupted_lines": 0,
+    "quotes": 2,
+    "quotes_in": 2,
+    "any_gold": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "whole_table_index": {
+   "q10 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:4:c080",
+     "HNET:T6:r01",
+     "HNET:T6:r02",
+     "HNET:3.1:c049",
+     "HNET:3.1:c054"
+    ],
+    "context_tokens": 1593,
+    "duplicate_table_chunks": 1,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 1,
+    "any_gold": true,
+    "mrr": 1.0
+   },
+   "q10 B": {
+    "dataset": "original",
+    "setting": "B",
+    "question_id": "q10",
+    "answerable": true,
+    "context": [
+     "HNET:3.1:c052",
+     "HNET:T6:r01",
+     "HNET:T6:r02",
+     "HNET:1:c012",
+     "HNET:3.1:c049"
+    ],
+    "context_tokens": 1588,
+    "duplicate_table_chunks": 1,
+    "corrupted_lines": 0,
+    "quotes": 3,
+    "quotes_in": 0,
+    "any_gold": false,
+    "mrr": 0.125
+   },
+   "q11 A": {
+    "dataset": "original",
+    "setting": "A",
+    "question_id": "q11",
+    "answerable": true,
+    "context": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:T3:r01",
+     "AIAYN:T3:r02"
+    ],
+    "context_tokens": 1513,
+    "duplicate_table_chunks": 1,
+    "corrupted_lines": 0,
+    "quotes": 2,
+    "quotes_in": 2,
+    "any_gold": true,
+    "mrr": 0.3333333333333333
+   }
+  }
+ },
+ "changes_vs_baseline": {
+  "identity": [],
+  "max2_per_table": [
+   {
+    "q": "q13",
+    "setting": "A",
+    "metric": "quotes_in",
+    "baseline": 2,
+    "max2_per_table": 1
+   },
+   {
+    "q": "t02",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max2_per_table": 0
+   },
+   {
+    "q": "t02",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "t03",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 3,
+    "max2_per_table": 2
+   },
+   {
+    "q": "t03",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "t06",
+    "setting": "A",
+    "metric": "table_in",
+    "baseline": false,
+    "max2_per_table": true
+   },
+   {
+    "q": "t06",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 0,
+    "max2_per_table": 1
+   },
+   {
+    "q": "t06",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": false,
+    "max2_per_table": true
+   },
+   {
+    "q": "t07",
+    "setting": "A",
+    "metric": "table_in",
+    "baseline": false,
+    "max2_per_table": true
+   },
+   {
+    "q": "t07",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 0,
+    "max2_per_table": 1
+   },
+   {
+    "q": "t07",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": false,
+    "max2_per_table": true
+   },
+   {
+    "q": "t28",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 2,
+    "max2_per_table": 1
+   },
+   {
+    "q": "t28",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "t29",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max2_per_table": 0
+   },
+   {
+    "q": "t29",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "t32",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max2_per_table": 0
+   },
+   {
+    "q": "t32",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "q10",
+    "setting": "B",
+    "metric": "any_gold",
+    "baseline": false,
+    "max2_per_table": true
+   },
+   {
+    "q": "q10",
+    "setting": "B",
+    "metric": "quotes_in",
+    "baseline": 0,
+    "max2_per_table": 1
+   },
+   {
+    "q": "q13",
+    "setting": "B",
+    "metric": "quotes_in",
+    "baseline": 2,
+    "max2_per_table": 1
+   },
+   {
+    "q": "t01",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max2_per_table": 0
+   },
+   {
+    "q": "t01",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "t17",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max2_per_table": 0
+   },
+   {
+    "q": "t17",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "t25",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max2_per_table": 0
+   },
+   {
+    "q": "t25",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "t28",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 2,
+    "max2_per_table": 1
+   },
+   {
+    "q": "t28",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "t30",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max2_per_table": 0
+   },
+   {
+    "q": "t30",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "t32",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max2_per_table": 0
+   },
+   {
+    "q": "t32",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   },
+   {
+    "q": "t25",
+    "setting": "C",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max2_per_table": 0
+   },
+   {
+    "q": "t25",
+    "setting": "C",
+    "metric": "complete",
+    "baseline": true,
+    "max2_per_table": false
+   }
+  ],
+  "max1_per_table": [
+   {
+    "q": "q12",
+    "setting": "A",
+    "metric": "quotes_in",
+    "baseline": 2,
+    "max1_per_table": 1
+   },
+   {
+    "q": "q13",
+    "setting": "A",
+    "metric": "quotes_in",
+    "baseline": 2,
+    "max1_per_table": 1
+   },
+   {
+    "q": "t02",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t02",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t03",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 3,
+    "max1_per_table": 2
+   },
+   {
+    "q": "t03",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t06",
+    "setting": "A",
+    "metric": "table_in",
+    "baseline": false,
+    "max1_per_table": true
+   },
+   {
+    "q": "t06",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 0,
+    "max1_per_table": 1
+   },
+   {
+    "q": "t06",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": false,
+    "max1_per_table": true
+   },
+   {
+    "q": "t07",
+    "setting": "A",
+    "metric": "table_in",
+    "baseline": false,
+    "max1_per_table": true
+   },
+   {
+    "q": "t17",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t17",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t22",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t25",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t25",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t28",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 2,
+    "max1_per_table": 1
+   },
+   {
+    "q": "t28",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t29",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t29",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t32",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t32",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "q10",
+    "setting": "B",
+    "metric": "any_gold",
+    "baseline": false,
+    "max1_per_table": true
+   },
+   {
+    "q": "q10",
+    "setting": "B",
+    "metric": "quotes_in",
+    "baseline": 0,
+    "max1_per_table": 1
+   },
+   {
+    "q": "q12",
+    "setting": "B",
+    "metric": "quotes_in",
+    "baseline": 2,
+    "max1_per_table": 1
+   },
+   {
+    "q": "q13",
+    "setting": "B",
+    "metric": "quotes_in",
+    "baseline": 2,
+    "max1_per_table": 1
+   },
+   {
+    "q": "t01",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t01",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t03",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 3,
+    "max1_per_table": 1
+   },
+   {
+    "q": "t03",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t05",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t05",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t06",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t06",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t07",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t07",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t17",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t17",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t22",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t25",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t25",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t28",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 2,
+    "max1_per_table": 1
+   },
+   {
+    "q": "t28",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t30",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t30",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t32",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t32",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t01",
+    "setting": "C",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t01",
+    "setting": "C",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t09",
+    "setting": "C",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t09",
+    "setting": "C",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t25",
+    "setting": "C",
+    "metric": "rows_in",
+    "baseline": 1,
+    "max1_per_table": 0
+   },
+   {
+    "q": "t25",
+    "setting": "C",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   },
+   {
+    "q": "t28",
+    "setting": "C",
+    "metric": "rows_in",
+    "baseline": 2,
+    "max1_per_table": 1
+   },
+   {
+    "q": "t28",
+    "setting": "C",
+    "metric": "complete",
+    "baseline": true,
+    "max1_per_table": false
+   }
+  ],
+  "table_half_budget": [
+   {
+    "q": "q11",
+    "setting": "A",
+    "metric": "quotes_in",
+    "baseline": 1,
+    "table_half_budget": 2
+   },
+   {
+    "q": "t28",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 2,
+    "table_half_budget": 1
+   },
+   {
+    "q": "t28",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   },
+   {
+    "q": "t29",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "table_half_budget": 0
+   },
+   {
+    "q": "t29",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   },
+   {
+    "q": "t32",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "table_half_budget": 0
+   },
+   {
+    "q": "t32",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   },
+   {
+    "q": "q13",
+    "setting": "B",
+    "metric": "quotes_in",
+    "baseline": 2,
+    "table_half_budget": 1
+   },
+   {
+    "q": "t01",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "table_half_budget": 0
+   },
+   {
+    "q": "t01",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   },
+   {
+    "q": "t28",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 2,
+    "table_half_budget": 1
+   },
+   {
+    "q": "t28",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   },
+   {
+    "q": "t30",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "table_half_budget": 0
+   },
+   {
+    "q": "t30",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   },
+   {
+    "q": "t32",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "table_half_budget": 0
+   },
+   {
+    "q": "t32",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   },
+   {
+    "q": "t01",
+    "setting": "C",
+    "metric": "rows_in",
+    "baseline": 1,
+    "table_half_budget": 0
+   },
+   {
+    "q": "t01",
+    "setting": "C",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   },
+   {
+    "q": "t09",
+    "setting": "C",
+    "metric": "rows_in",
+    "baseline": 1,
+    "table_half_budget": 0
+   },
+   {
+    "q": "t09",
+    "setting": "C",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   },
+   {
+    "q": "t25",
+    "setting": "C",
+    "metric": "rows_in",
+    "baseline": 1,
+    "table_half_budget": 0
+   },
+   {
+    "q": "t25",
+    "setting": "C",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   },
+   {
+    "q": "t28",
+    "setting": "C",
+    "metric": "rows_in",
+    "baseline": 2,
+    "table_half_budget": 1
+   },
+   {
+    "q": "t28",
+    "setting": "C",
+    "metric": "complete",
+    "baseline": true,
+    "table_half_budget": false
+   }
+  ],
+  "whole_table_index": [
+   {
+    "q": "q11",
+    "setting": "A",
+    "metric": "quotes_in",
+    "baseline": 1,
+    "whole_table_index": 2
+   },
+   {
+    "q": "q13",
+    "setting": "A",
+    "metric": "quotes_in",
+    "baseline": 2,
+    "whole_table_index": 1
+   },
+   {
+    "q": "t05",
+    "setting": "A",
+    "metric": "table_in",
+    "baseline": true,
+    "whole_table_index": false
+   },
+   {
+    "q": "t05",
+    "setting": "A",
+    "metric": "rows_in",
+    "baseline": 1,
+    "whole_table_index": 0
+   },
+   {
+    "q": "t05",
+    "setting": "A",
+    "metric": "complete",
+    "baseline": true,
+    "whole_table_index": false
+   },
+   {
+    "q": "t10",
+    "setting": "A",
+    "metric": "table_in",
+    "baseline": false,
+    "whole_table_index": true
+   },
+   {
+    "q": "q11",
+    "setting": "B",
+    "metric": "any_gold",
+    "baseline": false,
+    "whole_table_index": true
+   },
+   {
+    "q": "q11",
+    "setting": "B",
+    "metric": "quotes_in",
+    "baseline": 0,
+    "whole_table_index": 2
+   },
+   {
+    "q": "q13",
+    "setting": "B",
+    "metric": "quotes_in",
+    "baseline": 2,
+    "whole_table_index": 1
+   },
+   {
+    "q": "t10",
+    "setting": "B",
+    "metric": "table_in",
+    "baseline": false,
+    "whole_table_index": true
+   },
+   {
+    "q": "t10",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 0,
+    "whole_table_index": 3
+   },
+   {
+    "q": "t10",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": false,
+    "whole_table_index": true
+   },
+   {
+    "q": "t30",
+    "setting": "B",
+    "metric": "rows_in",
+    "baseline": 1,
+    "whole_table_index": 0
+   },
+   {
+    "q": "t30",
+    "setting": "B",
+    "metric": "complete",
+    "baseline": true,
+    "whole_table_index": false
+   },
+   {
+    "q": "q11",
+    "setting": "C",
+    "metric": "any_gold",
+    "baseline": true,
+    "whole_table_index": false
+   },
+   {
+    "q": "q11",
+    "setting": "C",
+    "metric": "quotes_in",
+    "baseline": 2,
+    "whole_table_index": 0
+   },
+   {
+    "q": "q13",
+    "setting": "C",
+    "metric": "quotes_in",
+    "baseline": 1,
+    "whole_table_index": 2
+   },
+   {
+    "q": "t32",
+    "setting": "C",
+    "metric": "rows_in",
+    "baseline": 1,
+    "whole_table_index": 0
+   },
+   {
+    "q": "t32",
+    "setting": "C",
+    "metric": "complete",
+    "baseline": true,
+    "whole_table_index": false
+   }
+  ]
+ }
+}

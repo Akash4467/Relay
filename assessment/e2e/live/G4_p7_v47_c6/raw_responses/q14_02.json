@@ -1,0 +1,41 @@
+{
+ "question_id": "q14",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T15:01:13.710+00:00",
+  "t_send_ns": 202123711278600,
+  "status": 200,
+  "t_first_byte_ns": 202124136770400,
+  "t_first_content_ns": 202124681901400,
+  "t_last_ns": 202124846800900,
+  "max_gap_ms": 545.1004,
+  "text": "Transformers use the Llama‑3 tokenizer which was designed for multilingual [HNET:3.2:c061]. H‑Net (space) and H‑Net (2‑stage) are byte‑level [HNET:3.2:c061]. The authors introduce a collection of new techniques that enable a dynamic chunking mechanism which automatically learns content‑ and context‑ dependent segmentation strategies learned jointly with the rest of the model [HNET:abstract:c001].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.282638358,
+   "prompt_tokens": 2512,
+   "prompt_time": 0.117964548,
+   "completion_tokens": 310,
+   "completion_time": 0.655556836,
+   "total_tokens": 2822,
+   "total_time": 0.773521384,
+   "completion_tokens_details": {
+    "reasoning_tokens": 206
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "938",
+   "x-ratelimit-reset-requests": "1h29m16.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "4642",
+   "x-ratelimit-reset-tokens": "25.185s"
+  },
+  "error": null,
+  "first_byte_ms": 425.5,
+  "first_content_ms": 970.6,
+  "total_ms": 1135.5
+ }
+}

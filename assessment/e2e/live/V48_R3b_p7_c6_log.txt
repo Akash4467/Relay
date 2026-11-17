@@ -1,0 +1,7 @@
+q16 | ok refused model: not in papers | calls 1 | tok 1870 + 37 | run {'requests': 2, 'tokens': 1907, 'refused': 0}
+t29 | ok refused model: not in papers | calls 1 | tok 2086 + 155 | run {'requests': 3, 'tokens': 4148, 'refused': 0}
+q13 | ok normal None | calls 2 | tok 4672 + 495 | run {'requests': 5, 'tokens': 9315, 'refused': 0}
+q04 | ok normal None | calls 2 | tok 4406 + 504 | run {'requests': 7, 'tokens': 14225, 'refused': 0}
+t05 | ok normal None | calls 1 | tok 1896 + 177 | run {'requests': 8, 'tokens': 16298, 'refused': 0}
+t13 | ok normal None | calls 1 | tok 2040 + 142 | run {'requests': 9, 'tokens': 18480, 'refused': 0}
+t01 | ok normal None | calls 2 | tok 4249 + 177 | run {'requests': 11, 'tokens': 22906, 'refused': 0}

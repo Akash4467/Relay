@@ -1,0 +1,44 @@
+{
+ "question_id": "q06",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:51:12.528+00:00",
+  "t_send_ns": 208722529105300,
+  "status": 200,
+  "t_first_byte_ns": 208722972943500,
+  "t_first_content_ns": 208724229563600,
+  "t_last_ns": 208724375600100,
+  "max_gap_ms": 1256.5938,
+  "text": "Traditional tokenization approaches in language models suffer from fundamental limitations because fixed vocabularies exhibit biases toward high‑resource languages, are fragile when handling adversarial inputs, and show lower performance on character‑level tasks, stemming from their static nature that cannot adapt chunking strategies to input content or context [HNET:A:c088].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.37056811,
+   "prompt_tokens": 1975,
+   "prompt_time": 1.131806912,
+   "completion_tokens": 127,
+   "completion_time": 0.265048601,
+   "total_tokens": 2102,
+   "total_time": 1.396855513,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 53
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "957",
+   "x-ratelimit-reset-requests": "1h1m55.2s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "3986",
+   "x-ratelimit-reset-tokens": "30.105s"
+  },
+  "error": null,
+  "first_byte_ms": 443.8,
+  "first_content_ms": 1700.5,
+  "total_ms": 1846.5
+ }
+}

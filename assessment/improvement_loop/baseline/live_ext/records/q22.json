@@ -1,0 +1,141 @@
+{
+ "run": "assessment/improvement_loop/baseline/live_ext",
+ "timestamp": "2026-11-14T08:25:46.205+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "question_id": "q22",
+ "dataset": [
+  "C_unanswerable"
+ ],
+ "question": "Which commercial voice assistant does the Moshi paper show outperforming Moshi in full-duplex spoken dialogue?",
+ "answerable": false,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §3.1 Overview; MOSHI §7 Conclusion; MOSHI §abstract Abstract; MOSHI §1 Introduction.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "model: not in papers",
+  "citations": [],
+  "request_id": "loop-live_ext-q22"
+ },
+ "client_ms": 13173.3,
+ "evidence_ids": [
+  "MOSHI:3.1:c016",
+  "MOSHI:7:c125",
+  "MOSHI:abstract:c001",
+  "MOSHI:1:c007",
+  "MOSHI:2:c015",
+  "MOSHI:2:c013"
+ ],
+ "gold_units_in_context": [],
+ "gold_units_complete_in_context": [],
+ "drafts": [
+  "NOT_IN_PAPERS"
+ ],
+ "verification": [],
+ "pipeline_status": "refused",
+ "refusal_reason": "model: not in papers",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-live_ext-q22",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T08:25:46.205+00:00",
+  "question_id": "q22",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 1714,
+  "tokens_out": 44,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 726.3,
+  "context_tokens": 1416,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:3.1:c016",
+   "MOSHI:7:c125",
+   "MOSHI:abstract:c001",
+   "MOSHI:1:c007",
+   "MOSHI:2:c015",
+   "MOSHI:2:c013"
+  ],
+  "verification_ms": 0.0,
+  "answer_status": "refused",
+  "llm_calls": 1,
+  "initial_attempts": 1,
+  "redraft_attempts": 0,
+  "fallback_generations": 0,
+  "governor_wait_ms": 11816.8,
+  "model_ttft_ms": 579.1,
+  "first_byte_ms": 398.8,
+  "generation_ms": 603.4,
+  "reasoning_tokens": 30,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1715,
+    "reserved": 2485,
+    "governor_wait_ms": 11816.8,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.318034104,
+     "prompt_tokens": 1714,
+     "prompt_time": 0.079606523,
+     "completion_tokens": 44,
+     "completion_time": 0.117807041,
+     "total_tokens": 1758,
+     "total_time": 0.197413564,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 30
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1714,
+    "tokens_out": 44,
+    "reasoning_tokens": 30,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 398.8,
+    "model_ttft_ms": 579.1,
+    "total_ms": 603.4,
+    "max_gap_ms": 180.2,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "950",
+     "x-ratelimit-reset-requests": "1h12m0s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "6066",
+     "x-ratelimit-reset-tokens": "14.504s"
+    }
+   }
+  ],
+  "first_token_ms": 13152.5,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "model: not in papers",
+  "total_ms": 13153.1
+ }
+}

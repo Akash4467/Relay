@@ -1,0 +1,41 @@
+{
+ "question_id": "q04",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T12:58:18.557+00:00",
+  "t_send_ns": 194748557897500,
+  "status": 200,
+  "t_first_byte_ns": 194748973490700,
+  "t_first_content_ns": 194749298479100,
+  "t_last_ns": 194749412206500,
+  "max_gap_ms": 324.9692,
+  "text": "The authors use Q = 8 quantizers, each with a codebook size of N_A = 2048, and at 12.5Hz this represents a bitrate of 1.1kbps [MOSHI:3.3.1:c030].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.288586328,
+   "prompt_tokens": 2244,
+   "prompt_time": 0.094647779,
+   "completion_tokens": 166,
+   "completion_time": 0.349186723,
+   "total_tokens": 2410,
+   "total_time": 0.443834502,
+   "completion_tokens_details": {
+    "reasoning_tokens": 103
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "993",
+   "x-ratelimit-reset-requests": "10m4.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "1244",
+   "x-ratelimit-reset-tokens": "50.67s"
+  },
+  "error": null,
+  "first_byte_ms": 415.6,
+  "first_content_ms": 740.6,
+  "total_ms": 854.3
+ }
+}

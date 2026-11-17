@@ -1,0 +1,40 @@
+{
+ "name": "relay-eval-c6-G-v4.2-p4",
+ "version": "draft-1",
+ "status": "NOT FROZEN - prepared in phase 11C; freeze only after the label provenance below is reviewed and the corpus switch is approved",
+ "created": "2026-11-14",
+ "supersedes_nothing": "v4 and v4.1 results stay as they are; no frozen output is reused as if produced under this configuration",
+ "corpus": {
+  "version": "c6",
+  "extraction": "e4 (= e2 marks + e3 phantom fix + siunitx units)",
+  "chunking": "c4 settings (relay.retrieval.chunker, piece sizes 256/512, no overlap, no metadata line)",
+  "location": "experiments/phase10/corpus/c6 (to be copied, unchanged, to data/corpus/c6 on activation)",
+  "manifest": "experiments/phase10/corpus/c6/manifest.json",
+  "integrity_audit": "experiments/phase11c/out/corpus_audit_2026-11-14T05-36-51Z.json (passed: 0 unexplained differences)"
+ },
+ "retrieval": {"configuration": "G (phase 11A/11B): retrieval_policy.symbolic_query_expansion = true, prompt_caption_sharing = true",
+               "glossary": "relay/retrieval/symbolic_glossary.json (verified against c3 and c6)",
+               "settings": "config/retrieval_settings.yaml unchanged (A/B/C; production default B: 20 candidates, rerank, 8 passages, 1,600-token budget)",
+               "context_cap": "pressure L0 2,500 (unchanged)"},
+ "verification": {"verification_policy_version": "v4.2", "nli_model": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli", "entail_min": 0.9},
+ "prompt_version": "p4",
+ "generation": {"model": "openai/gpt-oss-120b", "reasoning_effort": "low", "generation_config_version": "g1"},
+ "question_sets": [
+  {"file": "eval/questions.jsonl", "n": 30, "answerable": 15,
+   "labels": "project question set (written from Akash's question ideas, gold quotes assistant-located); NOT independently reviewed",
+   "note": "q09's gold quote was written against c3 text without siunitx units; in c6 it is located with the unit insertions undone (label unchanged)"},
+  {"file": "eval/phase7/table_question_set.json", "n": 32, "answerable": 24,
+   "labels": "PROVISIONAL: assistant-written and assistant-labelled; independent human review pending"},
+  {"file": "experiments/phase11/new_cases.json", "n": 12, "answerable": 10,
+   "labels": "PROVISIONAL: assistant-written (phase 11A); no review"},
+  {"file": "eval/phase9b_human_review (table-mark verifier claims)", "n": 47,
+   "labels": "independent human review received (reviewer 'rahul'); declaration incomplete; benchmark NOT frozen; adjudications recorded by the project owner",
+   "use": "verifier benchmark only, not retrieval"}
+ ],
+ "independently_reviewed_labels_for_retrieval": "none",
+ "required_before_freezing": [
+  "approval of the c3 -> c6 corpus switch",
+  "independent review of the table set and the 12 new cases",
+  "a real-model run budget (none is implied by this file)"
+ ]
+}

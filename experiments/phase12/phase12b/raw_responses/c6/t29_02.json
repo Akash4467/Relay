@@ -1,0 +1,46 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "corpus_version": "c6",
+ "question_id": "t29",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:03:29.576+00:00",
+  "t_send_ns": 177059577378000,
+  "status": 200,
+  "t_first_byte_ns": 177060041570200,
+  "t_first_content_ns": 177060290995700,
+  "t_last_ns": 177060357251700,
+  "max_gap_ms": 249.4049,
+  "text": "The configuration with no marks in any of the five component columns reports an ABX error of 29.1% [MOSHI:T17:r03].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.319163749,
+   "prompt_tokens": 2034,
+   "prompt_time": 0.156174125,
+   "completion_tokens": 79,
+   "completion_time": 0.163642329,
+   "total_tokens": 2113,
+   "total_time": 0.319816454,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 38
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "966",
+   "x-ratelimit-reset-requests": "48m57.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5702",
+   "x-ratelimit-reset-tokens": "17.235s"
+  },
+  "error": null,
+  "first_byte_ms": 464.2,
+  "first_content_ms": 713.6,
+  "total_ms": 779.9
+ }
+}

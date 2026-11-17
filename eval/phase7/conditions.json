@@ -1,0 +1,165 @@
+{
+ "recorded_at": "2026-11-13T20:35:00+00:00",
+ "git": {
+  "commit": "4688baf449321a4f24a49cb509edbf6b040a7a23",
+  "branch": "phase-1-retrieval",
+  "status": [
+   "M docs/DESIGN.md",
+   " M relay/main.py",
+   " M relay/pipeline.py",
+   " M relay/retrieval/chunker.py",
+   " M relay/retrieval/latex_parse.py",
+   " M results/results.csv",
+   " M scripts/ask.py",
+   " M scripts/build_writeup.py",
+   " M scripts/make_results_csv.py",
+   " M scripts/make_tables.py",
+   " M tests/unit/test_results.py",
+   " M writeup/relay_writeup.md",
+   " M writeup/relay_writeup.pdf",
+   "?? 2026-11-13-124510-local-command-caveatthe-command-below-was-run-d.txt",
+   "?? README.md",
+   "?? data/corpus/",
+   "?? docs/architecture.md",
+   "?? docs/architecture.template.md",
+   "?? docs/relay_architecture.pdf",
+   "?? eval/answer_quality_grades.csv",
+   "?? eval/answer_quality_report.md",
+   "?? eval/answer_quality_results.csv",
+   "?? eval/answer_quality_sentences.csv",
+   "?? eval/answer_quality_set.json",
+   "?? eval/phase5_root_cause_report.md",
+   "?? eval/phase6_extraction_report.md",
+   "?? eval/phase6_retrieval_comparison.csv",
+   "?? eval/phase6_retrieval_comparison.md",
+   "?? eval/verifier_v4_report.md",
+   "?? eval/verifier_v5_offline_comparison.md",
+   "?? experiments/",
+   "?? relay/candidate_v5/",
+   "?? relay/eval/answer_quality.py",
+   "?? relay/live_validation.py",
+   "?? results/candidate_v5/",
+   "?? results/live_validation/",
+   "?? results/raw/answer_quality/",
+   "?? results/raw/real/2026-11-13.jsonl",
+   "?? scripts/build_corpus.py",
+   "?? scripts/make_answer_quality.py",
+   "?? submission/",
+   "?? tests/unit/test_answer_quality.py",
+   "?? tests/unit/test_candidate_v5.py",
+   "?? tests/unit/test_latex_parse_e2.py",
+   "?? tests/unit/test_live_validation.py"
+  ]
+ },
+ "default_corpus": {
+  "config_corpus_version": "c3",
+  "dirs": [
+   "data/processed",
+   "data/index"
+  ],
+  "files_sha256": {
+   "data/processed/bibliography_AIAYN.txt": "b8002af35b5a0d98c23696e4cbb7523f437dd4925684e908ed07153b140bcfc3",
+   "data/processed/bibliography_HNET.txt": "b837251ae297e9c3ed4cc16a0a64889a3f66b7efbabeb67220668839d98778f5",
+   "data/processed/bibliography_MOSHI.txt": "7d813d0c07a272eaee6ed4564888ac65bf97333e8822e7f58e6a595b61aa7662",
+   "data/processed/chunks_256.jsonl": "9021ab9800d6634b81795647a2ed686085522dd0cd30d8e78d7f001c2b365d9b",
+   "data/processed/chunks_512.jsonl": "886561fced351c0cd4bf0a7e4c6ea4ec8603bd180b4d90635817f7493617857b",
+   "data/processed/figures.jsonl": "3c8f1a118239d27a000bfa722d7e167722770901092941da056d91ea5cc688f8",
+   "data/processed/paragraphs.jsonl": "a2b4b25262a08a76faba45d24683c1f83ad5a08d608f2e8f77a7faa40e5add68",
+   "data/processed/pdf_validation.json": "d9ab2543fa6c25821605d9854eb042f7745a9f73772cf37259ec916b1940cc58",
+   "data/processed/sections.jsonl": "223eae8d942b37be1db6a75b84ff3a21d16710b35349ac45aa38401995680103",
+   "data/processed/tables.jsonl": "49f799fcef90eb81baa2dfc5a6c295565c2d4dfdd24cfdbebc860603dca262b3",
+   "data/index/bm25_256.pkl": "69ebce8238af3c75329961a60bf850d88d8a9cba5f877e16219270fd8328a77c",
+   "data/index/bm25_512.pkl": "36d911d36bbc5dda2bb62f9d0175d99a8b874bd0fb7bd1e3bb311618af222297",
+   "data/index/faiss_256.ids.json": "dfe52c2f8a1fdec6f708a1c0ec362e373986ab3d344319213e4d392b9baceb73",
+   "data/index/faiss_256.index": "09c36a4bd5bac6bf0b65023d5d1b9f74d3094ca9449abd65cb41a9e1587852c9",
+   "data/index/faiss_512.ids.json": "f30d559a7b4d6f715b15acd14d812c531a51f7602481995a634c9ea20ec94015",
+   "data/index/faiss_512.index": "d79da03e9845992156faf24fc55c107be14fb56c10639eb393807f84746fdb3b",
+   "data/index/idf_256.json": "9cd387763016c4466dfc1ad211cde80e71ab42f9c8199024d68e45a24e09131e",
+   "data/index/idf_512.json": "3091b064c315cf116990f8d9dddd29e1f4b469557f61b28eb96a0728e2fc437d"
+  }
+ },
+ "candidate_corpus": {
+  "version": "c4",
+  "dirs": [
+   "data/corpus/c4/processed",
+   "data/corpus/c4/index"
+  ],
+  "manifest_sha256": "3cddc852f657802e48963c9e8aa65c96a786210598c5ef0f6ddb1ea9c0d87d69",
+  "files_sha256": {
+   "data/corpus/c4/index/bm25_256.pkl": "b89e37f4577ffcfb0a1c849483c7ccda4b1c7d8cb07e3cb98ee1685bd1cf5e3f",
+   "data/corpus/c4/index/bm25_512.pkl": "9f6b850a7d1845dad9bf40d0afb45ec99999e63ffd00310ad27a00cf1f226297",
+   "data/corpus/c4/index/faiss_256.ids.json": "b2259aa92dcb4ba16227dfdbd6544c39ceb3feef710b2d98181b4075318f1171",
+   "data/corpus/c4/index/faiss_256.index": "db3b3c99888c69b3ece46edc844d38ff21a598272ec9650222ba91ae3560ef0e",
+   "data/corpus/c4/index/faiss_512.ids.json": "8385278f918be349469e1e030a35ad9aefc6cb9e767066f31b66cac2e47bf1c2",
+   "data/corpus/c4/index/faiss_512.index": "b15810219f8844ac3d480885dc820125522c70dc140aa02d6d6e95f02f164c82",
+   "data/corpus/c4/index/idf_256.json": "cd3a2c2ffbac9224d5c8a5d2d77424c0ec4cc44c200bc023e41be69f6b395e59",
+   "data/corpus/c4/index/idf_512.json": "c4a0709668d39a1d99231c96f42ad4c052400a283d9ddf07dd9bc493c705d8d0",
+   "data/corpus/c4/manifest.json": "3cddc852f657802e48963c9e8aa65c96a786210598c5ef0f6ddb1ea9c0d87d69",
+   "data/corpus/c4/processed/bibliography_AIAYN.txt": "b8002af35b5a0d98c23696e4cbb7523f437dd4925684e908ed07153b140bcfc3",
+   "data/corpus/c4/processed/bibliography_HNET.txt": "b837251ae297e9c3ed4cc16a0a64889a3f66b7efbabeb67220668839d98778f5",
+   "data/corpus/c4/processed/bibliography_MOSHI.txt": "7d813d0c07a272eaee6ed4564888ac65bf97333e8822e7f58e6a595b61aa7662",
+   "data/corpus/c4/processed/chunks_256.jsonl": "aa6a6735be3ab345496e0ac53612708a5b6c2d9c5c4931805467bbab68c3e7b7",
+   "data/corpus/c4/processed/chunks_512.jsonl": "531b6980cdc939ccab4e6ebaa0e36c211cb9c7e54e2bf6273e96e035505108e6",
+   "data/corpus/c4/processed/figures.jsonl": "3c8f1a118239d27a000bfa722d7e167722770901092941da056d91ea5cc688f8",
+   "data/corpus/c4/processed/paragraphs.jsonl": "a2b4b25262a08a76faba45d24683c1f83ad5a08d608f2e8f77a7faa40e5add68",
+   "data/corpus/c4/processed/pdf_validation.json": "d9ab2543fa6c25821605d9854eb042f7745a9f73772cf37259ec916b1940cc58",
+   "data/corpus/c4/processed/sections.jsonl": "223eae8d942b37be1db6a75b84ff3a21d16710b35349ac45aa38401995680103",
+   "data/corpus/c4/processed/tables.jsonl": "bd674d1fc09be1e91a939c5a7270dffa850fc869c7e8b46187188f4206c74e8c"
+  }
+ },
+ "model": {
+  "id": "openai/gpt-oss-120b",
+  "reasoning_effort": "low",
+  "max_tokens": 900,
+  "temperature": 0.2
+ },
+ "prompt_version": "p3",
+ "embedding": {
+  "model": "BAAI/bge-small-en-v1.5",
+  "query_prefix": "Represent this sentence for searching relevant passages: "
+ },
+ "retrieval_settings": {
+  "A": {
+   "piece_tokens": 256,
+   "candidates": 20,
+   "rerank": false,
+   "final_passages": 8,
+   "context_budget": 1600,
+   "expansion": false
+  },
+  "B": {
+   "piece_tokens": 256,
+   "candidates": 20,
+   "rerank": true,
+   "final_passages": 8,
+   "context_budget": 1600,
+   "expansion": false
+  },
+  "C": {
+   "piece_tokens": 512,
+   "candidates": 20,
+   "rerank": true,
+   "final_passages": 4,
+   "context_budget": 1600,
+   "expansion": false
+  }
+ },
+ "context_cap": 2500,
+ "verifier": {
+  "verification_policy_version": "v4",
+  "nli_model": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+  "entail_min": 0.9,
+  "entail_min_flagged": 0.9
+ },
+ "datasets_sha256": {
+  "eval/questions.jsonl": "ee1794f7daf691e03ccb52cdcadc5bcac87d3a026d612119e028a1af94c21b4a",
+  "eval/answer_quality_set.json": "22b05822d2ff661f2e0d1ecb3e309baac723682a783abf9de9c57b5e66b11989",
+  "eval/answer_quality_grades.csv": "5e14b83f04552ce89f598ab96975349d6ff71f0617bb593b852990667bcb1ac4",
+  "eval/answer_quality_sentences.csv": "4f59a1b23281c3b1fc1b5e62b34f203ae594e81060f43daada7117feb71a09cb"
+ },
+ "historical_runs_sha256": {
+  "results/raw/answer_quality/real_2026-11-13T18-06-56Z.jsonl": "c7f4ca5d736f66327ff51e2b4dfd92ff5da80055b39ecab8e906de8255375340",
+  "results/live_validation/real_v5_2026-11-13T19-39-49Z.jsonl": "00642920ce11a5632c8d48f1f9a8970520c00aee55b2cac42810aef02b51288e",
+  "results/results.csv": "7ad9ae915f4044f7573cfe6a44bce30a320107e74e93c5f81dc9aa052863f11e"
+ }
+}

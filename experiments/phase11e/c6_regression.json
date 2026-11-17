@@ -1,0 +1,506 @@
+{
+ "corpus": "c6",
+ "kind": "MOCKED/STAND-IN offline regression (scripted provider; not model performance)",
+ "started": "2026-11-14T07:00:43+00:00",
+ "config_on_disk_active": "c3",
+ "startup": {
+  "corpus_check": {
+   "corpus": "c6",
+   "corpus_version": "c6",
+   "files_hash_checked": "18",
+   "processed": "D:\\The Relay\\experiments\\phase10\\corpus\\c6\\processed",
+   "index": "D:\\The Relay\\experiments\\phase10\\corpus\\c6\\index"
+  },
+  "checks": {
+   "selected": true,
+   "paths": true,
+   "integrity_validated": true,
+   "indexes_from_selected_corpus": true,
+   "configuration_G": true,
+   "verifier_v4_2": true,
+   "prompt_p4": true
+  },
+  "passed": true
+ },
+ "e2e": {
+  "scenarios": 15,
+  "passed": 15,
+  "failed": [],
+  "corpus_identity": {
+   "q09 evidence contains '230 ms'": true,
+   "expected": true
+  },
+  "q11_expansion": [
+   "h = 1"
+  ],
+  "rows": [
+   {
+    "scenario": "q02_faithful",
+    "question_id": "q02",
+    "outcome": "refused",
+    "reason": "verification failed after redraft",
+    "llm_calls": 2,
+    "expansion": [
+     "h",
+     "d_k",
+     "d_v"
+    ],
+    "evidence_ids": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:3.2.3:c016",
+     "AIAYN:3.2.1:c011",
+     "HNET:B:c107",
+     "AIAYN:AttentionVisualizations:c037"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "q09_units",
+    "question_id": "q09",
+    "outcome": "normal",
+    "reason": null,
+    "llm_calls": 1,
+    "expansion": [],
+    "evidence_ids": [
+     "MOSHI:1:c005",
+     "MOSHI:abstract:c002",
+     "MOSHI:5.3:c083",
+     "MOSHI:7:c125",
+     "MOSHI:1:c004",
+     "MOSHI:abstract:c001",
+     "MOSHI:5.4:c088"
+    ],
+    "evidence_differing_from_other_corpus": [
+     "MOSHI:1:c005"
+    ],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "answer_is_a_verified_draft": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "q11_partial",
+    "question_id": "q11",
+    "outcome": "normal",
+    "reason": null,
+    "llm_calls": 1,
+    "expansion": [
+     "h = 1"
+    ],
+    "evidence_ids": [
+     "AIAYN:6.2:c031",
+     "AIAYN:6.1:c029",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:T3:r07",
+     "AIAYN:T3:r03",
+     "AIAYN:T3:r02",
+     "AIAYN:T3:r04"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "answer_is_a_verified_draft": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "q11_unretrieved_base",
+    "question_id": "q11",
+    "outcome": "refused",
+    "reason": "verification failed after redraft",
+    "llm_calls": 2,
+    "expansion": [
+     "h = 1"
+    ],
+    "evidence_ids": [
+     "AIAYN:6.2:c031",
+     "AIAYN:6.1:c029",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:T3:r07",
+     "AIAYN:T3:r03",
+     "AIAYN:T3:r02",
+     "AIAYN:T3:r04"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "outcome": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "q12_both_rows",
+    "question_id": "q12",
+    "outcome": "normal",
+    "reason": null,
+    "llm_calls": 1,
+    "expansion": [],
+    "evidence_ids": [
+     "MOSHI:T8:r02",
+     "MOSHI:5.5:c090",
+     "MOSHI:5.4:c089",
+     "MOSHI:5.5:c091",
+     "MOSHI:5.5:c092",
+     "MOSHI:T8:r01",
+     "MOSHI:4.3:c061",
+     "MOSHI:1:c008"
+    ],
+    "evidence_differing_from_other_corpus": [
+     "MOSHI:1:c008"
+    ],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "answer_is_a_verified_draft": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "t10_marks",
+    "question_id": "t10",
+    "outcome": "refused",
+    "reason": "model: not in papers",
+    "llm_calls": 1,
+    "expansion": [],
+    "evidence_ids": [
+     "MOSHI:E:c147",
+     "MOSHI:5.2:c076",
+     "MOSHI:6.4:c117",
+     "MOSHI:5.8:c103",
+     "MOSHI:6.1:c109",
+     "MOSHI:5.8:c107",
+     "MOSHI:5.4:c088",
+     "MOSHI:T18:r16"
+    ],
+    "evidence_differing_from_other_corpus": [
+     "MOSHI:E:c147"
+    ],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "q18_refusal",
+    "question_id": "q18",
+    "outcome": "refused",
+    "reason": "model: not in papers",
+    "llm_calls": 1,
+    "expansion": [],
+    "evidence_ids": [
+     "AIAYN:1:c003",
+     "AIAYN:6.1:c029",
+     "AIAYN:6.1:c030",
+     "AIAYN:5.2:c026",
+     "AIAYN:6.3:c032",
+     "AIAYN:6.3:c033",
+     "MOSHI:3.4.1:c035",
+     "HNET:2.4:c040"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "outcome": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "q20_refusal",
+    "question_id": "q20",
+    "outcome": "refused",
+    "reason": "model: not in papers",
+    "llm_calls": 1,
+    "expansion": [],
+    "evidence_ids": [
+     "MOSHI:5.8:c103",
+     "AIAYN:1:c003",
+     "AIAYN:T4:r01",
+     "HNET:3.3:c070",
+     "AIAYN:6.1:c029",
+     "HNET:E.3:c115",
+     "AIAYN:T4:r02",
+     "AIAYN:6.3:c033"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "outcome": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "q30_refusal",
+    "question_id": "q30",
+    "outcome": "refused",
+    "reason": "model: not in papers",
+    "llm_calls": 1,
+    "expansion": [],
+    "evidence_ids": [
+     "HNET:3:c047",
+     "HNET:2.1.1:c015",
+     "HNET:2.2.2:c025",
+     "HNET:1:c012",
+     "HNET:A.1.4:c098",
+     "HNET:A.1.2:c092",
+     "HNET:A.1.3:c094"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "outcome": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "q20_fabricated",
+    "question_id": "q20",
+    "outcome": "refused",
+    "reason": "verification failed after redraft",
+    "llm_calls": 2,
+    "expansion": [],
+    "evidence_ids": [
+     "MOSHI:5.8:c103",
+     "AIAYN:1:c003",
+     "AIAYN:T4:r01",
+     "HNET:3.3:c070",
+     "AIAYN:6.1:c029",
+     "HNET:E.3:c115",
+     "AIAYN:T4:r02",
+     "AIAYN:6.3:c033"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "outcome": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "q30_fabricated",
+    "question_id": "q30",
+    "outcome": "refused",
+    "reason": "verification failed after redraft",
+    "llm_calls": 2,
+    "expansion": [],
+    "evidence_ids": [
+     "HNET:3:c047",
+     "HNET:2.1.1:c015",
+     "HNET:2.2.2:c025",
+     "HNET:1:c012",
+     "HNET:A.1.4:c098",
+     "HNET:A.1.2:c092",
+     "HNET:A.1.3:c094"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "outcome": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "q12_false_absence",
+    "question_id": "q12",
+    "outcome": "refused",
+    "reason": "verification failed after redraft",
+    "llm_calls": 2,
+    "expansion": [],
+    "evidence_ids": [
+     "MOSHI:T8:r02",
+     "MOSHI:5.5:c090",
+     "MOSHI:5.4:c089",
+     "MOSHI:5.5:c091",
+     "MOSHI:5.5:c092",
+     "MOSHI:T8:r01",
+     "MOSHI:4.3:c061",
+     "MOSHI:1:c008"
+    ],
+    "evidence_differing_from_other_corpus": [
+     "MOSHI:1:c008"
+    ],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "outcome": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "invalid_citation",
+    "question_id": "q02",
+    "outcome": "refused",
+    "reason": "verification failed after redraft",
+    "llm_calls": 2,
+    "expansion": [
+     "h",
+     "d_k",
+     "d_v"
+    ],
+    "evidence_ids": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:3.2.3:c016",
+     "AIAYN:3.2.1:c011",
+     "HNET:B:c107",
+     "AIAYN:AttentionVisualizations:c037"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "outcome": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "unretrieved_citation",
+    "question_id": "q02",
+    "outcome": "refused",
+    "reason": "verification failed after redraft",
+    "llm_calls": 2,
+    "expansion": [
+     "h",
+     "d_k",
+     "d_v"
+    ],
+    "evidence_ids": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:3.2.3:c016",
+     "AIAYN:3.2.1:c011",
+     "HNET:B:c107",
+     "AIAYN:AttentionVisualizations:c037"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "outcome": true
+    },
+    "passed": true
+   },
+   {
+    "scenario": "redraft_then_faithful",
+    "question_id": "q02",
+    "outcome": "normal",
+    "reason": null,
+    "llm_calls": 2,
+    "expansion": [
+     "h",
+     "d_k",
+     "d_v"
+    ],
+    "evidence_ids": [
+     "AIAYN:6.2:c031",
+     "AIAYN:3.2.2:c014",
+     "AIAYN:3.2.2:c013",
+     "AIAYN:3.2.3:c016",
+     "AIAYN:3.2.1:c011",
+     "HNET:B:c107",
+     "AIAYN:AttentionVisualizations:c037"
+    ],
+    "evidence_differing_from_other_corpus": [],
+    "checks": {
+     "trace_corpus_version": true,
+     "caption_sharing_on": true,
+     "verifier_got_retrieved_chunks": true,
+     "verifier_evidence_is_selected_corpus_text": true,
+     "original_question_in_prompt": true,
+     "answer_is_a_verified_draft": true
+    },
+    "passed": true
+   }
+  ]
+ },
+ "phase10_suite": {
+  "scenarios": 31,
+  "passed": 31,
+  "failed": [],
+  "output": "experiments/phase11e/out/c6/phase10_suite/offline_integration_2026-11-14T07-00-43Z.json"
+ },
+ "fail_closed": {
+  "cases": {
+   "intact copy (control: must start)": {
+    "refused": false,
+    "message": null,
+    "refused_expected": false
+   },
+   "corrupted index file": {
+    "refused": true,
+    "message": "corpus check failed: corpus c6: integrity check failed: missing [], hash mismatch ['index/bm25_256.pkl'] (manifest C:\\Users\\akash\\AppData\\Local\\Temp\\tmp2bp2i01e\\c6\\manifest.json)"
+   },
+   "missing manifest": {
+    "refused": true,
+    "message": "corpus check failed: corpus c6: manifest not found at C:\\Users\\akash\\AppData\\Local\\Temp\\tmp2bp2i01e\\c6\\manifest.json; build or copy the corpus, or set corpus.active back to c3"
+   },
+   "wrong corpus_version in manifest": {
+    "refused": true,
+    "message": "corpus check failed: corpus c6: manifest declares corpus_version 'c9', config expects 'c6'"
+   }
+  },
+  "passed": true,
+  "no_fallback_to_c3": true
+ },
+ "passed": true
+}
