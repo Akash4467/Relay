@@ -1,0 +1,287 @@
+{
+ "run": "assessment/e2e/live/E25_p7_v46_c6",
+ "timestamp": "2026-11-14T14:47:36.602+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.6c",
+ "question_id": "q08",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "Why did the authors pick sinusoidal positional encodings, and what happened when they tried learned positional embeddings?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §3.5 Positional Encoding; AIAYN §6.2 Model Variations; AIAYN §3.4 Embeddings and Softmax; AIAYN §5.4 Regularization.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-E25_p7_v46_c6-q08"
+ },
+ "client_ms": 41393.0,
+ "evidence_ids": [
+  "AIAYN:3.5:c019",
+  "AIAYN:3.5:c020",
+  "AIAYN:T3:r08",
+  "AIAYN:6.2:c031",
+  "AIAYN:3.4:c018",
+  "AIAYN:5.4:c028",
+  "MOSHI:3.2.1:c019"
+ ],
+ "gold_units_in_context": [
+  true,
+  true,
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  true,
+  true
+ ],
+ "drafts": [
+  "The authors chose sinusoidal positional encodings because they hypothesized that the functions would allow the model to easily learn to attend by relative positions, since for any fixed offset k the encoding at position pos + k can be represented as a linear function of the encoding at position pos, and because the sinusoidal version may allow the model to extrapolate to sequence lengths longer than those encountered during training [AIAYN:3.5:c020]. The authors also experimented with learned positional embeddings and found that the two versions produced nearly identical results, with the learned version yielding a dev perplexity of 4.92 and BLEU of 25.7, matching the base model’s performance [AIAYN:3.5:c020][AIAYN:T3:r08][AIAYN:6.2:c031].",
+  "The authors chose the sinusoidal function because they hypothesized it would allow the model to easily learn to attend by relative positions, since for any fixed offset k, PE_pos+k can be represented as a linear function of PE_pos [AIAYN:3.5:c020]. They also chose the sinusoidal version because it may allow the model to extrapolate to sequence lengths longer than the ones encountered during training [AIAYN:3.5:c020]. The authors also experimented with using learned positional embeddings instead, and found that the two versions produced nearly identical results (see Table 3 row (E)) [AIAYN:3.5:c020]. In row (E) the authors replace their sinusoidal positional encoding with learned positional embeddings, and observe nearly identical results to the base model [AIAYN:6.2:c031]. In Table 3, the (E) configuration has PPL / (dev) = 4.92 and BLEU / (dev) = 25.7 [AIAYN:T3:r08]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.5:c020",
+    "AIAYN:T3:r08",
+    "AIAYN:6.2:c031"
+   ],
+   "failures": [
+    [
+     "The authors chose sinusoidal positional encodings because they hypothesized that the functions would allow the model to easily learn to attend by relative positions, since for any fixed offset k the encoding at position pos + k can be represented as a linear function of the encoding at position pos, and because the sinusoidal version may allow the model to extrapolate to sequence lengths longer than those encountered during training [AIAYN:3.5:c020].",
+     "not supported by the cited passage (entailment 0.10 < 0.9)"
+    ],
+    [
+     "The authors also experimented with learned positional embeddings and found that the two versions produced nearly identical results, with the learned version yielding a dev perplexity of 4.92 and BLEU of 25.7, matching the base model’s performance [AIAYN:3.5:c020][AIAYN:T3:r08][AIAYN:6.2:c031].",
+     "not supported by the cited passage (entailment 0.25 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors chose sinusoidal positional encodings because they hypothesized that the functions would allow the model to easily learn to attend by relative positions, since for any fixed offset k the encoding at position pos + k can be represented as a linear function of the encoding at position pos, and because the sinusoidal version may allow the model to extrapolate to sequence lengths longer than those encountered during training [AIAYN:3.5:c020].",
+     "ok": false,
+     "entailment": 0.09879719706271929,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.10 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The authors also experimented with learned positional embeddings and found that the two versions produced nearly identical results, with the learned version yielding a dev perplexity of 4.92 and BLEU of 25.7, matching the base model’s performance [AIAYN:3.5:c020][AIAYN:T3:r08][AIAYN:6.2:c031].",
+     "ok": false,
+     "entailment": 0.25378913832738037,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.25 < 0.9)"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.5:c020",
+    "AIAYN:6.2:c031",
+    "AIAYN:T3:r08"
+   ],
+   "failures": [
+    [
+     "The authors chose the sinusoidal function because they hypothesized it would allow the model to easily learn to attend by relative positions, since for any fixed offset k, PE_pos+k can be represented as a linear function of PE_pos [AIAYN:3.5:c020].",
+     "not supported by the cited passage (entailment 0.07 < 0.9)"
+    ],
+    [
+     "They also chose the sinusoidal version because it may allow the model to extrapolate to sequence lengths longer than the ones encountered during training [AIAYN:3.5:c020].",
+     "not supported by the cited passage (entailment 0.02 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors chose the sinusoidal function because they hypothesized it would allow the model to easily learn to attend by relative positions, since for any fixed offset k, PE_pos+k can be represented as a linear function of PE_pos [AIAYN:3.5:c020].",
+     "ok": false,
+     "entailment": 0.07365813939438184,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.07 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "They also chose the sinusoidal version because it may allow the model to extrapolate to sequence lengths longer than the ones encountered during training [AIAYN:3.5:c020].",
+     "ok": false,
+     "entailment": 0.02325212863302487,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.02 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The authors also experimented with using learned positional embeddings instead, and found that the two versions produced nearly identical results (see Table 3 row (E)) [AIAYN:3.5:c020].",
+     "ok": true,
+     "entailment": 0.9673284209224255,
+     "reasons": []
+    },
+    {
+     "sentence": "In row (E) the authors replace their sinusoidal positional encoding with learned positional embeddings, and observe nearly identical results to the base model [AIAYN:6.2:c031].",
+     "ok": true,
+     "entailment": 0.9526189054888609,
+     "reasons": []
+    },
+    {
+     "sentence": "In Table 3, the (E) configuration has PPL / (dev) = 4.92 and BLEU / (dev) = 25.7 [AIAYN:T3:r08].",
+     "ok": true,
+     "entailment": 0.11431110949975283,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_p7_v46_c6-q08",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T14:47:36.602+00:00",
+  "question_id": "q08",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4429,
+  "tokens_out": 547,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 938.3,
+  "context_tokens": 1341,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:3.5:c019",
+   "AIAYN:3.5:c020",
+   "AIAYN:T3:r08",
+   "AIAYN:6.2:c031",
+   "AIAYN:3.4:c018",
+   "AIAYN:5.4:c028",
+   "MOSHI:3.2.1:c019"
+  ],
+  "verification_ms": 11791.0,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 25394.9,
+  "model_ttft_ms": 1277.2,
+  "first_byte_ms": 466.2,
+  "generation_ms": 3202.0,
+  "reasoning_tokens": 143,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1809,
+    "reserved": 2579,
+    "governor_wait_ms": 11012.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.367818951,
+     "prompt_tokens": 1808,
+     "prompt_time": 0.692642945,
+     "completion_tokens": 228,
+     "completion_time": 0.56388457,
+     "total_tokens": 2036,
+     "total_time": 1.256527515,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 50
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1808,
+    "tokens_out": 228,
+    "reasoning_tokens": 50,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 466.2,
+    "model_ttft_ms": 1277.2,
+    "total_ms": 1718.7,
+    "max_gap_ms": 810.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "955",
+     "x-ratelimit-reset-requests": "1h4m48s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "3868",
+     "x-ratelimit-reset-tokens": "30.99s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2620,
+    "reserved": 3390,
+    "governor_wait_ms": 14382.5,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.318368796,
+     "prompt_tokens": 2621,
+     "prompt_time": 0.426250906,
+     "completion_tokens": 319,
+     "completion_time": 0.662468594,
+     "total_tokens": 2940,
+     "total_time": 1.0887195,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 93
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2621,
+    "tokens_out": 319,
+    "reasoning_tokens": 93,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 400.8,
+    "model_ttft_ms": 1102.7,
+    "total_ms": 1483.3,
+    "max_gap_ms": 701.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "954",
+     "x-ratelimit-reset-requests": "1h6m14.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4074",
+     "x-ratelimit-reset-tokens": "29.445s"
+    }
+   }
+  ],
+  "first_token_ms": 41363.8,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 41364.5
+ }
+}

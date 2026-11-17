@@ -1,0 +1,259 @@
+{
+ "run": "assessment/e2e/live/E25_p7_v46_c6",
+ "timestamp": "2026-11-14T14:51:17.527+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.6c",
+ "question_id": "q14",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "How is the input segmented in the original Transformer's translation experiments compared with H-Net?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "All models but Transformer take raw byte inputs, while the Transformer uses the GPT‑2 tokenizer [HNET:3.1:c053]. H‑Net takes raw byte inputs and learns a dynamic, content‑ and context‑dependent segmentation strategy [HNET:abstract:c001].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "HNET:3.1:c053",
+   "HNET:abstract:c001"
+  ],
+  "request_id": "loop-E25_p7_v46_c6-q14"
+ },
+ "client_ms": 36528.9,
+ "evidence_ids": [
+  "AIAYN:6.3:c032",
+  "HNET:3.2:c061",
+  "AIAYN:1:c003",
+  "HNET:3.1:c053",
+  "HNET:2.1.2:c019",
+  "HNET:F:c125",
+  "HNET:2.1.2:c020",
+  "HNET:abstract:c001"
+ ],
+ "gold_units_in_context": [
+  false,
+  false,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  false,
+  false,
+  false
+ ],
+ "drafts": [
+  "The authors’ original Transformer translation experiments used the GPT‑2 tokenizer (i.e., BPE‑based tokenization) for inputs [HNET:3.1:c053]. H‑Net models take raw byte inputs and learn a dynamic, content‑dependent chunking strategy instead of fixed BPE tokens [HNET:abstract:c001]. The retrieved passages do not state how the original Transformer experiments segmented the input.",
+  "All models but Transformer take raw byte inputs, while the Transformer uses the GPT‑2 tokenizer [HNET:3.1:c053]. H‑Net takes raw byte inputs and learns a dynamic, content‑ and context‑dependent segmentation strategy [HNET:abstract:c001]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "HNET:3.1:c053",
+    "HNET:abstract:c001"
+   ],
+   "failures": [
+    [
+     "The authors’ original Transformer translation experiments used the GPT‑2 tokenizer (i.e., BPE‑based tokenization) for inputs [HNET:3.1:c053].",
+     "not supported by the cited passage (entailment 0.01 < 0.9); term 'gpt' not in the cited passage; names AIAYN but cites no AIAYN passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors’ original Transformer translation experiments used the GPT‑2 tokenizer (i.e., BPE‑based tokenization) for inputs [HNET:3.1:c053].",
+     "ok": false,
+     "entailment": 0.008067759619432999,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.01 < 0.9); term 'gpt' not in the cited passage; names AIAYN but cites no AIAYN passage"
+     ]
+    },
+    {
+     "sentence": "H‑Net models take raw byte inputs and learn a dynamic, content‑dependent chunking strategy instead of fixed BPE tokens [HNET:abstract:c001].",
+     "ok": true,
+     "entailment": 0.9602660842035208,
+     "reasons": []
+    },
+    {
+     "sentence": "The retrieved passages do not state how the original Transformer experiments segmented the input.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "HNET:3.1:c053",
+    "HNET:abstract:c001"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "All models but Transformer take raw byte inputs, while the Transformer uses the GPT‑2 tokenizer [HNET:3.1:c053].",
+     "ok": true,
+     "entailment": 0.9231867172867526,
+     "reasons": []
+    },
+    {
+     "sentence": "H‑Net takes raw byte inputs and learns a dynamic, content‑ and context‑dependent segmentation strategy [HNET:abstract:c001].",
+     "ok": true,
+     "entailment": 0.9646316749173957,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_p7_v46_c6-q14",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T14:51:17.527+00:00",
+  "question_id": "q14",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4321,
+  "tokens_out": 363,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1015.2,
+  "context_tokens": 1527,
+  "retrieval_policy": "per_paper",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:6.3:c032",
+   "HNET:3.2:c061",
+   "AIAYN:1:c003",
+   "HNET:3.1:c053",
+   "HNET:2.1.2:c019",
+   "HNET:F:c125",
+   "HNET:2.1.2:c020",
+   "HNET:abstract:c001"
+  ],
+  "verification_ms": 3053.7,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 30422.1,
+  "model_ttft_ms": 869.7,
+  "first_byte_ms": 464.5,
+  "generation_ms": 1965.1,
+  "reasoning_tokens": 201,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1988,
+    "reserved": 2758,
+    "governor_wait_ms": 13526.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.368094096,
+     "prompt_tokens": 1987,
+     "prompt_time": 0.07214805,
+     "completion_tokens": 201,
+     "completion_time": 0.416400203,
+     "total_tokens": 2188,
+     "total_time": 0.488548253,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 106
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1987,
+    "tokens_out": 201,
+    "reasoning_tokens": 106,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 464.5,
+    "model_ttft_ms": 869.7,
+    "total_ms": 946.0,
+    "max_gap_ms": 405.2,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "943",
+     "x-ratelimit-reset-requests": "1h22m4.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5242",
+     "x-ratelimit-reset-tokens": "20.685s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2333,
+    "reserved": 3103,
+    "governor_wait_ms": 16895.7,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.317902722,
+     "prompt_tokens": 2334,
+     "prompt_time": 0.096586884,
+     "completion_tokens": 162,
+     "completion_time": 0.510297748,
+     "total_tokens": 2496,
+     "total_time": 0.606884632,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 95
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2334,
+    "tokens_out": 162,
+    "reasoning_tokens": 95,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 521.4,
+    "model_ttft_ms": 919.6,
+    "total_ms": 1019.1,
+    "max_gap_ms": 398.2,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "942",
+     "x-ratelimit-reset-requests": "1h23m31.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5204",
+     "x-ratelimit-reset-tokens": "20.97s"
+    }
+   }
+  ],
+  "first_token_ms": 36498.2,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 36498.9
+ }
+}

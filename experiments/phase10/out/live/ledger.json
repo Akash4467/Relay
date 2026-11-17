@@ -1,0 +1,11 @@
+{
+ "connectivity": {
+  "calls": 5,
+  "tokens": 101
+ },
+ "pipeline": {
+  "calls": 15,
+  "tokens": 29725
+ },
+ "note": "Owner accepted the risk 2026-11-14: run with the current key although a GoDro trojan executed at 01:16 and the key file was last changed at 01:08; no full scan, key not rotated."
+}

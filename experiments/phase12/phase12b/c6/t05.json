@@ -1,0 +1,177 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "timestamp": "2026-11-14T08:00:31.052+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "retrieval_config": {
+  "setting": "B",
+  "cross_paper_reserve_per_paper": 2,
+  "symbolic_query_expansion": true,
+  "prompt_caption_sharing": true
+ },
+ "question_id": "t05",
+ "group": "table_heavy_c6_more_complete",
+ "question": "In the Moshi paper's Mimi codec ablation table that reports ABX, VisQOL, MOSNet and MUSHRA, what MUSHRA score does the configuration with a check mark in all five component columns obtain?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "The configuration with a check mark in all five component columns obtains a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "MOSHI:T3:r03"
+  ],
+  "request_id": "p12-c6-t05"
+ },
+ "client_ms": 12315.7,
+ "evidence_ids": [
+  "MOSHI:T3:r01",
+  "MOSHI:T3:r03",
+  "MOSHI:T3:r02",
+  "MOSHI:T17:r07",
+  "MOSHI:T17:r05",
+  "MOSHI:T17:r06"
+ ],
+ "retrieval_query": null,
+ "query_expansion": [],
+ "caption_sharing": true,
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true
+ ],
+ "drafts": [
+  "The configuration with a check mark in all five component columns obtains a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03]."
+ ],
+ "verification": [
+  {
+   "ok": true,
+   "cited": [
+    "MOSHI:T3:r03"
+   ],
+   "failures": []
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "identity_checks": {
+  "evidence_equals_selected_corpus": true,
+  "original_question_in_every_prompt": true,
+  "expanded_query_not_in_prompt": true
+ },
+ "trace": {
+  "request_id": "p12-c6-t05",
+  "scenario": "phase12_live",
+  "source": "real",
+  "start_time": "2026-11-14T08:00:31.052+00:00",
+  "question_id": "t05",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 1726,
+  "tokens_out": 120,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1468.1,
+  "context_tokens": 1398,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:T3:r01",
+   "MOSHI:T3:r03",
+   "MOSHI:T3:r02",
+   "MOSHI:T17:r07",
+   "MOSHI:T17:r05",
+   "MOSHI:T17:r06"
+  ],
+  "verification_ms": 1151.2,
+  "answer_status": "answered",
+  "llm_calls": 1,
+  "initial_attempts": 1,
+  "redraft_attempts": 0,
+  "fallback_generations": 0,
+  "governor_wait_ms": 8868.0,
+  "model_ttft_ms": 737.3,
+  "first_byte_ms": 438.3,
+  "generation_ms": 812.7,
+  "reasoning_tokens": 75,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1727,
+    "reserved": 2497,
+    "governor_wait_ms": 8868.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.28812766,
+     "prompt_tokens": 1726,
+     "prompt_time": 0.124763937,
+     "completion_tokens": 120,
+     "completion_time": 0.254592341,
+     "total_tokens": 1846,
+     "total_time": 0.379356278,
+     "completion_tokens_details": {
+      "reasoning_tokens": 75
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1726,
+    "tokens_out": 120,
+    "reasoning_tokens": 75,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 438.3,
+    "model_ttft_ms": 737.3,
+    "total_ms": 812.7,
+    "max_gap_ms": 298.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "977",
+     "x-ratelimit-reset-requests": "33m7.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "6010",
+     "x-ratelimit-reset-tokens": "14.925s"
+    }
+   }
+  ],
+  "first_token_ms": 12307.6,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 12308.2
+ },
+ "provider_token_usage": [
+  {
+   "queue_time": 0.28812766,
+   "prompt_tokens": 1726,
+   "prompt_time": 0.124763937,
+   "completion_tokens": 120,
+   "completion_time": 0.254592341,
+   "total_tokens": 1846,
+   "total_time": 0.379356278,
+   "completion_tokens_details": {
+    "reasoning_tokens": 75
+   }
+  }
+ ]
+}

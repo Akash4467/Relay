@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "label": "v3",
+    "threshold": 0.9,
+    "git_commit": "0fc88bebfc96195c0b99cf0ab59ca0d5397e2429",
+    "git_dirty": true,
+    "pairs_file": "eval\\verifier_v3b_targeted.jsonl",
+    "pairs_sha256": "7b35a808fdf9f4847dae18c76fbd1ee7d2fe4df3cb62e7328704196e3d5403a0",
+    "nli_model": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+    "corpus_version": "c3",
+    "verification_policy_version": "v3"
+  },
+  "splits": [
+    "targeted"
+  ],
+  "targeted": {
+    "n": 18,
+    "false_acceptances": 7,
+    "false_rejections": 1,
+    "false_acceptance_rate_pct": 70.0,
+    "false_rejection_rate_pct": 12.5,
+    "accuracy_pct": 55.6,
+    "by_category": {
+      "formula_supported": {
+        "supported": 4,
+        "false_rejections": 1,
+        "unsupported": 0,
+        "false_acceptances": 0
+      },
+      "formula_wrong": {
+        "supported": 0,
+        "false_rejections": 0,
+        "unsupported": 5,
+        "false_acceptances": 2
+      },
+      "absence_supported": {
+        "supported": 4,
+        "false_rejections": 0,
+        "unsupported": 0,
+        "false_acceptances": 0
+      },
+      "absence_contradicted": {
+        "supported": 0,
+        "false_rejections": 0,
+        "unsupported": 5,
+        "false_acceptances": 5
+      }
+    },
+    "confusion": {
+      "supported_accepted": 7,
+      "supported_rejected": 1,
+      "unsupported_accepted": 7,
+      "unsupported_rejected": 3
+    }
+  },
+  "targeted_detail": {
+    "f1": {
+      "sentence": "Scaled dot-product attention computes \\(\\mathrm{Attention}(Q, K, V) = \\mathrm{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V\\) [AIAYN:3.2.1:c011].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9612282279531107,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "f2": {
+      "sentence": "The feed-forward network is \\(\\mathrm{FFN}(x) = \\max(0,\\, xW_1 + b_1)\\,W_2 + b_2\\) [AIAYN:3.3:c017].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.8960670420637272,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.90 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "f3": {
+      "sentence": "The learning rate follows \\(lrate = d_{\\text{model}}^{-0.5} \\cdot \\min(step\\_num^{-0.5},\\ step\\_num \\cdot warmup\\_steps^{-1.5})\\) [AIAYN:5.3:c027].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9847607252907206,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "f4": {
+      "sentence": "In the ratio loss, \\(G = \\tfrac{1}{L}\\sum_{t=1}^{L} p_t\\) is the average boundary probability [HNET:2.2.3:c031].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9557461503519075,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "f5": {
+      "sentence": "Scaled dot-product attention computes \\(\\mathrm{Attention}(Q, K, V) = \\mathrm{softmax}\\left(\\frac{QK^T}{d_k}\\right)V\\) [AIAYN:3.2.1:c011].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9006652547820043,
+      "context": null,
+      "flags": [
+        "term 'td_k' not in the cited passage"
+      ],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "f6": {
+      "sentence": "The feed-forward network is \\(\\mathrm{FFN}(x) = \\max(0, xW_2 + b_2) W_1 + b_1\\) [AIAYN:3.3:c017].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.002983804973275459,
+      "context": null,
+      "flags": [
+        "term 'xw_2' not in the cited passage",
+        "term 'w_1' not in the cited passage"
+      ],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.00 < 0.9); term 'xw_2' not in the cited passage; term 'w_1' not in the cited passage"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "f7": {
+      "sentence": "The learning rate follows \\(lrate = d_{\\text{model}}^{-0.5} \\cdot \\max(step\\_num^{-0.5}, step\\_num \\cdot warmup\\_steps^{-1.5})\\) [AIAYN:5.3:c027].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.011704870661977767,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.01 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "f8": {
+      "sentence": "Scaled dot-product attention computes \\(\\mathrm{Attention}(Q, K, V) = \\mathrm{softmax}\\left(\\frac{KQ^T}{\\sqrt{d_k}}\\right)V\\) [AIAYN:3.2.1:c011].",
+      "ok": true,
+      "absence": false,
+      "entailment": 0.9403255478067989,
+      "context": null,
+      "flags": [
+        "term 'kq' not in the cited passage"
+      ],
+      "reasons": [],
+      "all_sentences_ok": [
+        true
+      ]
+    },
+    "f9": {
+      "sentence": "In the ratio loss, \\(F = \\frac{1}{L}\\sum_{t=1}^{L} p_t\\) is the fraction of vectors actually selected [HNET:2.2.3:c031].",
+      "ok": false,
+      "absence": false,
+      "entailment": 0.16771224544576457,
+      "context": null,
+      "flags": [],
+      "reasons": [
+        "not supported by the cited passage (entailment 0.17 < 0.9)"
+      ],
+      "all_sentences_ok": [
+        false
+      ]
+    },
+    "s1": {
+      "sentence": "The retrieved passages do not state the dropout rate of the big model.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "s2": {
+      "sentence": "The retrieved passages do not state how many speakers took part in these conversations.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "s3": {
+      "sentence": "The retrieved passages do not state the learning rate used with label smoothing.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "s4": {
+      "sentence": "The retrieved passages do not state the compression ratio that H-Net reaches.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "u1": {
+      "sentence": "The retrieved passages do not state the number of warmup steps.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "u2": {
+      "sentence": "The retrieved passages do not state which optimizer was used.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "u3": {
+      "sentence": "The retrieved passages do not state the label smoothing value.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "u4": {
+      "sentence": "The retrieved passages do not state which Whisper model was used for transcription.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    },
+    "u5": {
+      "sentence": "The retrieved passages do not state what happens to compression ratios without the smoothing module.",
+      "ok": true,
+      "absence": true,
+      "entailment": null,
+      "context": null,
+      "flags": [],
+      "reasons": [],
+      "all_sentences_ok": [
+        true,
+        true
+      ]
+    }
+  },
+  "latency_ms_per_answer": {
+    "n": 18,
+    "mean": 438.1,
+    "p50": 393.6,
+    "p95": 655.7
+  }
+}

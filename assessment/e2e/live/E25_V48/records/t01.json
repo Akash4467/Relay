@@ -1,0 +1,230 @@
+{
+ "run": "assessment/e2e/live/E25_V48",
+ "timestamp": "2026-11-14T16:56:48.857+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "t01",
+ "dataset": [
+  "B_failure_focused"
+ ],
+ "question": "In the H-Net paper's table comparing related architectures, is the Autoregressive column marked with a check mark (✓) or a cross (✗) for ByT5?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "In Table 6, the Isotropic configuration has Autoregressive = ✗ for ByT5 [HNET:T6:r01].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "HNET:T6:r01"
+  ],
+  "request_id": "loop-E25_V48-t01"
+ },
+ "client_ms": 33291.9,
+ "evidence_ids": [
+  "HNET:T6:r05",
+  "HNET:T6:r04",
+  "HNET:T6:r03",
+  "HNET:T6:r01",
+  "HNET:T6:r02",
+  "HNET:A:c089",
+  "HNET:2.1.2:c020"
+ ],
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true
+ ],
+ "drafts": [
+  "The Autoregressive column is marked with a cross (✗) for ByT5 [HNET:T6:r01].",
+  "In Table 6, the Isotropic configuration has Autoregressive = ✗ for ByT5 [HNET:T6:r01]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "HNET:T6:r01"
+   ],
+   "failures": [
+    [
+     "The Autoregressive column is marked with a cross (✗) for ByT5 [HNET:T6:r01].",
+     "not supported by the cited passage (entailment 0.21 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The Autoregressive column is marked with a cross (✗) for ByT5 [HNET:T6:r01].",
+     "ok": false,
+     "entailment": 0.2058632656671224,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.21 < 0.9)"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "HNET:T6:r01"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "In Table 6, the Isotropic configuration has Autoregressive = ✗ for ByT5 [HNET:T6:r01].",
+     "ok": true,
+     "entailment": 0.9319821875681682,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_V48-t01",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T16:56:48.857+00:00",
+  "question_id": "t01",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4249,
+  "tokens_out": 157,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 786.7,
+  "context_tokens": 1506,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "HNET:T6:r05",
+   "HNET:T6:r04",
+   "HNET:T6:r03",
+   "HNET:T6:r01",
+   "HNET:T6:r02",
+   "HNET:A:c089",
+   "HNET:2.1.2:c020"
+  ],
+  "verification_ms": 1774.6,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 28676.1,
+  "model_ttft_ms": 607.5,
+  "first_byte_ms": 241.1,
+  "generation_ms": 1998.1,
+  "reasoning_tokens": 85,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1994,
+    "reserved": 2764,
+    "governor_wait_ms": 12732.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.164693675,
+     "prompt_tokens": 1993,
+     "prompt_time": 0.297639091,
+     "completion_tokens": 62,
+     "completion_time": 0.132477348,
+     "total_tokens": 2055,
+     "total_time": 0.430116439,
+     "completion_tokens_details": {
+      "reasoning_tokens": 27
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1993,
+    "tokens_out": 62,
+    "reasoning_tokens": 27,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 241.1,
+    "model_ttft_ms": 607.5,
+    "total_ms": 666.2,
+    "max_gap_ms": 366.3,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "938",
+     "x-ratelimit-reset-requests": "1h29m16.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5183",
+     "x-ratelimit-reset-tokens": "21.127s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2255,
+    "reserved": 3025,
+    "governor_wait_ms": 15943.7,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.315851274,
+     "prompt_tokens": 2256,
+     "prompt_time": 0.724230925,
+     "completion_tokens": 95,
+     "completion_time": 0.197761956,
+     "total_tokens": 2351,
+     "total_time": 0.921992881,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 58
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2256,
+    "tokens_out": 95,
+    "reasoning_tokens": 58,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 406.9,
+    "model_ttft_ms": 1267.4,
+    "total_ms": 1331.9,
+    "max_gap_ms": 860.4,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "937",
+     "x-ratelimit-reset-requests": "1h30m43.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5342",
+     "x-ratelimit-reset-tokens": "19.935s"
+    }
+   }
+  ],
+  "first_token_ms": 33265.4,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 33266.0
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "question_id": "q03",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:45:03.101+00:00",
+  "t_send_ns": 201153101962700,
+  "status": 200,
+  "t_first_byte_ns": 201153353310800,
+  "t_first_content_ns": 201154354270800,
+  "t_last_ns": 201154492110800,
+  "max_gap_ms": 1000.9281,
+  "text": "Inner Monologue is a new training and inference setup for audio language models that predicts time‑aligned text tokens before audio tokens, using text tokens as a per‑timestep prefix to the semantic token [MOSHI:1:c007]. The authors report that Inner Monologue significantly improves the factuality and linguistic quality of generated speech [MOSHI:1:c007] and almost triples Moshi’s accuracy on spoken question‑answering benchmarks, markedly improving over previous work [MOSHI:5.5:c091].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.156379359,
+   "prompt_tokens": 1807,
+   "prompt_time": 0.822601191,
+   "completion_tokens": 158,
+   "completion_time": 0.324681277,
+   "total_tokens": 1965,
+   "total_time": 1.147282468,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 46
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "964",
+   "x-ratelimit-reset-requests": "51m50.399s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2169",
+   "x-ratelimit-reset-tokens": "43.732s"
+  },
+  "error": null,
+  "first_byte_ms": 251.3,
+  "first_content_ms": 1252.3,
+  "total_ms": 1390.1
+ }
+}

@@ -1,0 +1,267 @@
+{
+ "run": "assessment/e2e/live/B12_fix_c3",
+ "timestamp": "2026-11-14T13:06:10.550+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p6",
+ "verifier_version": "v4.5c",
+ "question_id": "q13",
+ "dataset": [
+  "e2e_B12",
+  "numerical_table"
+ ],
+ "question": "At compute matched to GPT-3 Large, what average zero-shot accuracy does the 2-stage H-Net reach compared with the BPE Transformer, and which larger Transformer does it match?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "The authors report that the 2‑stage H‑Net configuration (#FLOPs matched to GPT‑3 Large) has an average zero‑shot accuracy of 55.5 % [HNET:T2:r10]. The authors report that the Transformer configuration (#FLOPs matched to GPT‑3 Large) has an average zero‑shot accuracy of 53.3 % [HNET:T2:r01]. The authors report that the Transformer configuration (#FLOPs matched to GPT‑3 XL) has an average zero‑shot accuracy of 55.5 % [HNET:T2:r11].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "HNET:T2:r10",
+   "HNET:T2:r01",
+   "HNET:T2:r11"
+  ],
+  "request_id": "loop-B12_fix_c3-q13"
+ },
+ "client_ms": 36483.9,
+ "evidence_ids": [
+  "HNET:T2:r10",
+  "HNET:T2:r09",
+  "HNET:T2:r08",
+  "HNET:T2:r07",
+  "HNET:T2:r15",
+  "HNET:T2:r01",
+  "HNET:T2:r11"
+ ],
+ "gold_units_in_context": [
+  true,
+  true,
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  true,
+  true
+ ],
+ "drafts": [
+  "The authors report that the 2‑stage H‑Net configuration matched to GPT‑3 Large obtains an average zero‑shot accuracy of 55.5 % [HNET:T2:r10]. The authors’ Transformer model matched to GPT‑3 Large obtains an average zero‑shot accuracy of 53.3 % [HNET:T2:r01]. The authors note that the 2‑stage H‑Net’s average accuracy of 55.5 % matches the average accuracy of the larger Transformer configuration matched to GPT‑3 XL, which also achieves 55.5 % [HNET:T2:r11].",
+  "The authors report that the 2‑stage H‑Net configuration (#FLOPs matched to GPT‑3 Large) has an average zero‑shot accuracy of 55.5 % [HNET:T2:r10]. The authors report that the Transformer configuration (#FLOPs matched to GPT‑3 Large) has an average zero‑shot accuracy of 53.3 % [HNET:T2:r01]. The authors report that the Transformer configuration (#FLOPs matched to GPT‑3 XL) has an average zero‑shot accuracy of 55.5 % [HNET:T2:r11]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "HNET:T2:r10",
+    "HNET:T2:r01",
+    "HNET:T2:r11"
+   ],
+   "failures": [
+    [
+     "The authors note that the 2‑stage H‑Net’s average accuracy of 55.5 % matches the average accuracy of the larger Transformer configuration matched to GPT‑3 XL, which also achieves 55.5 % [HNET:T2:r11].",
+     "not supported by the cited passage (entailment 0.44 < 0.9); number 55.5 % not in the cited passage; number 55.5 % not in the cited passage; term 'h' not in the cited passage; term 'net' not in the cited passage; term 'gpt' not in the cited passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors report that the 2‑stage H‑Net configuration matched to GPT‑3 Large obtains an average zero‑shot accuracy of 55.5 % [HNET:T2:r10].",
+     "ok": true,
+     "entailment": 0.9887499795063338,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors’ Transformer model matched to GPT‑3 Large obtains an average zero‑shot accuracy of 53.3 % [HNET:T2:r01].",
+     "ok": true,
+     "entailment": 0.9530138946480105,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors note that the 2‑stage H‑Net’s average accuracy of 55.5 % matches the average accuracy of the larger Transformer configuration matched to GPT‑3 XL, which also achieves 55.5 % [HNET:T2:r11].",
+     "ok": false,
+     "entailment": 0.44361131604502485,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.44 < 0.9); number 55.5 % not in the cited passage; number 55.5 % not in the cited passage; term 'h' not in the cited passage; term 'net' not in the cited passage; term 'gpt' not in the cited passage"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "HNET:T2:r10",
+    "HNET:T2:r01",
+    "HNET:T2:r11"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "The authors report that the 2‑stage H‑Net configuration (#FLOPs matched to GPT‑3 Large) has an average zero‑shot accuracy of 55.5 % [HNET:T2:r10].",
+     "ok": true,
+     "entailment": 0.9866821912580854,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors report that the Transformer configuration (#FLOPs matched to GPT‑3 Large) has an average zero‑shot accuracy of 53.3 % [HNET:T2:r01].",
+     "ok": true,
+     "entailment": 0.9851639436992372,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors report that the Transformer configuration (#FLOPs matched to GPT‑3 XL) has an average zero‑shot accuracy of 55.5 % [HNET:T2:r11].",
+     "ok": true,
+     "entailment": 0.979802590899739,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-B12_fix_c3-q13",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T13:06:10.550+00:00",
+  "question_id": "q13",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4492,
+  "tokens_out": 414,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 904.1,
+  "context_tokens": 1578,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "HNET:T2:r10",
+   "HNET:T2:r09",
+   "HNET:T2:r08",
+   "HNET:T2:r07",
+   "HNET:T2:r15",
+   "HNET:T2:r01",
+   "HNET:T2:r11"
+  ],
+  "verification_ms": 3817.6,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 29564.7,
+  "model_ttft_ms": 848.5,
+  "first_byte_ms": 340.4,
+  "generation_ms": 2120.2,
+  "reasoning_tokens": 141,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2067,
+    "reserved": 2837,
+    "governor_wait_ms": 13380.7,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.158426243,
+     "prompt_tokens": 2066,
+     "prompt_time": 0.327802262,
+     "completion_tokens": 219,
+     "completion_time": 0.457338763,
+     "total_tokens": 2285,
+     "total_time": 0.785141025,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 81
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 2066,
+    "tokens_out": 219,
+    "reasoning_tokens": 81,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 340.4,
+    "model_ttft_ms": 848.5,
+    "total_ms": 1119.8,
+    "max_gap_ms": 508.1,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "969",
+     "x-ratelimit-reset-requests": "44m38.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "1823",
+     "x-ratelimit-reset-tokens": "46.327s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2425,
+    "reserved": 3195,
+    "governor_wait_ms": 16184.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.366967014,
+     "prompt_tokens": 2426,
+     "prompt_time": 0.12431107,
+     "completion_tokens": 195,
+     "completion_time": 0.438910217,
+     "total_tokens": 2621,
+     "total_time": 0.563221287,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 60
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2426,
+    "tokens_out": 195,
+    "reasoning_tokens": 60,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 442.2,
+    "model_ttft_ms": 707.2,
+    "total_ms": 1000.4,
+    "max_gap_ms": 264.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "968",
+     "x-ratelimit-reset-requests": "46m4.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2062",
+     "x-ratelimit-reset-tokens": "44.535s"
+    }
+   }
+  ],
+  "first_token_ms": 36446.7,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 36447.4
+ }
+}

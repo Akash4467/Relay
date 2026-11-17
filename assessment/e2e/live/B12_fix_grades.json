@@ -1,0 +1,28 @@
+{
+ "about": "Grades against the papers (ASSISTANT grades, not independent). Arm 1 = c6 + prompt p6 + verifier v4.5c (B12_fix_c6/); arm 2 = c3 + p6 + v4.5c (B12_fix_c3/). Setting B, same 12 questions as B12. Owner-approved cap 90,000 tokens. Groq's daily limit (429, organization token limit) stopped arm 2 at q14; arm 1's q16/q20 were cut by the per-arm 45,000-token cap.",
+ "arm1_c6": {
+  "q01": {"grade": "incorrectly_refused", "trace": "verification", "why": "correct near-verbatim drafts of AIAYN:1:c002 rejected (0.26, 0.72, 0.85)"},
+  "q04": {"grade": "correct_and_fully_supported", "why": "'The authors use Q = 8 quantizers, each with a codebook size of N_A = 2048, and at 12.5Hz this represents a bitrate of 1.1kbps' (MOSHI:3.3.1:c030)"},
+  "q07": {"grade": "incorrectly_refused", "trace": "verification", "why": "D1 correct; near-verbatim masking sentence (AIAYN:3.2.3:c016) rejected at 0.68"},
+  "q12": {"grade": "incorrectly_refused", "trace": "verification (table row wording)", "why": "D1 correct, both rows cited correctly (T8:r01 holds Moshi 26.6/62.3/22.8); 'accuracy on Web Questions' vs the row's 'Web Q.' scored 0.01"},
+  "q13": {"grade": "partially_correct", "why": "shown answer gives 55.5 (2-stage H-Net, GPT-3 Large) and 55.5 (Transformer, GPT-3 XL) but drops the 53.3 BPE-Transformer comparison the question asks for"},
+  "q15": {"grade": "incorrectly_refused", "trace": "generation (ignored rule 8: wrote 'the original Transformer') + verification", "why": "facts right; 'original' sentence rejected at 0.00"},
+  "q14": {"grade": "incorrect_or_unsupported", "critical": true, "trace": "retrieval (AIAYN:5.1:c025 not retrieved) -> generation answered a different question -> verifier cannot check relevance", "why": "SHOWN MISLEADING ANSWER: describes the H-Net paper's Transformer baselines (Llama-3 tokenizer) instead of the original Transformer's byte-pair / word-piece vocabularies; each sentence is true of its cited passage but does not answer the question"},
+  "t05": {"grade": "correct_and_fully_supported", "why": "64.0 +/- 1.7 from MOSHI:T3:r03 (all five marked)"},
+  "t13": {"grade": "correct_and_fully_supported", "why": "36.8 from MOSHI:T5:r01"},
+  "n10": {"grade": "incorrectly_refused", "trace": "verification (table row wording)", "why": "D1 'The base configuration has h = 8 and BLEU / (dev) = 25.8 [AIAYN:T3:r01]' correct, rejected 0.59"},
+  "q16": {"grade": "not_run", "why": "per-arm 45,000-token cap"},
+  "q20": {"grade": "not_run", "why": "per-arm 45,000-token cap"}
+ },
+ "arm2_c3": {
+  "q16": {"grade": "correctly_refused"}, "q20": {"grade": "correctly_refused"},
+  "q01": {"grade": "incorrectly_refused", "trace": "verification", "why": "near-verbatim AIAYN:1:c002 drafts rejected (0.68, 0.18)"},
+  "q04": {"grade": "correct_and_fully_supported", "why": "Q = 8, N_A = 2048, 12.5 Hz, 1.1 kbps (MOSHI:3.3.1:c030)"},
+  "q07": {"grade": "correct_and_fully_supported", "why": "decoder's third sub-layer over encoder output; Q from previous decoder layer, K/V from encoder output; masking (AIAYN 3.1, 3.2.3)"},
+  "q12": {"grade": "incorrectly_refused", "trace": "verification (table row wording)", "why": "as arm 1: correct rows cited, 'Web Questions' vs 'Web Q.' 0.01 / 0.81"},
+  "q13": {"grade": "correct_and_fully_supported", "why": "55.5 (H-Net 2-stage, GPT-3 Large), 53.3 (Transformer, GPT-3 Large), 55.5 (Transformer, GPT-3 XL), each cited to its row; the match is shown by the equal values"},
+  "q15": {"grade": "incorrectly_refused", "trace": "generation (ignored rule 8) + verification", "why": "as arm 1"},
+  "q14": {"grade": "not_run", "why": "Groq daily limit (429)"}, "t05": {"grade": "not_run", "why": "Groq daily limit"},
+  "t13": {"grade": "not_run", "why": "Groq daily limit"}, "n10": {"grade": "not_run", "why": "Groq daily limit"}
+ }
+}

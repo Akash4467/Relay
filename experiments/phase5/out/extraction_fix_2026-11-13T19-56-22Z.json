@@ -1,0 +1,244 @@
+{
+ "tables": [
+  {
+   "table": "MOSHI:T3",
+   "caption": "Ablation study on hyperparameters of the Mimi codec. We evaluate semantic modeli",
+   "rows_changed": 6,
+   "example_before": {
+    "row_header": "",
+    "cells": {
+     "ABX (↓)": "23.3%",
+     "VisQOL (↑)": "2.91",
+     "MOSNet (↑)": "2.89",
+     "MUSHRA (↑)": "65.9±1.7"
+    }
+   },
+   "example_after": {
+    "row_header": "✓",
+    "cells": {
+     "Transformer / in encoder": "✓",
+     "Transformer / in decoder": "✓",
+     "ABX (↓)": "23.3%",
+     "VisQOL (↑)": "2.91",
+     "MOSNet (↑)": "2.89",
+     "MUSHRA (↑)": "65.9±1.7"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T4",
+   "caption": "Audio quality evaluation. Objective and subjective (MUSHRA) evaluation of audio ",
+   "rows_changed": 3,
+   "example_before": {
+    "row_header": "Ground Truth",
+    "cells": {
+     "f_s": "24kHz",
+     "f_r": "-",
+     "bitrate": "-",
+     "causal": "-",
+     "ABX (↓)": "-",
+     "VisQOL (↑)": "-",
+     "MOSNet (↑)": "3.08",
+     "MUSHRA (↑)": "90.6±1.0"
+    }
+   },
+   "example_after": {
+    "row_header": "Ground Truth",
+    "cells": {
+     "f_s": "24kHz",
+     "f_r": "-",
+     "bitrate": "-",
+     "causal": "-",
+     "ABX (↓)": "-",
+     "VisQOL (↑)": "-",
+     "MOSNet (↑)": "3.08",
+     "MUSHRA (↑)": "90.6±1.0"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T5",
+   "caption": "Ablation study on the use of the RQ-Transformer. All models are initialized with",
+   "rows_changed": 2,
+   "example_before": {
+    "row_header": "[0, 1, 2, 3, 4, 5, 6, 7]",
+    "cells": {
+     "Perplexity": "142.2"
+    }
+   },
+   "example_after": {
+    "row_header": "[0, 1, 2, 3, 4, 5, 6, 7]",
+    "cells": {
+     "Perplexity": "142.2"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T6",
+   "caption": "Ablation study on delay patterns, weight of the semantic token and Inner Monolog",
+   "rows_changed": 5,
+   "example_before": {
+    "row_header": "[0, 0, 0, 0, 0, 0, 0, 0]",
+    "cells": {
+     "Semantic Token / Weight": "001.0",
+     "Depthwise / Parametrization": "51",
+     "Transcript / NLL (↓)": "4.36",
+     "Transcript / Length (↑)": "486"
+    }
+   },
+   "example_after": {
+    "row_header": "[0, 0, 0, 0, 0, 0, 0, 0]",
+    "cells": {
+     "Semantic Token / Weight": "001.0",
+     "Depthwise / Parametrization": "✓",
+     "Transcript / NLL (↓)": "4.36",
+     "Transcript / Length (↑)": "486"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T13",
+   "caption": "Regurgitation of training data with condition-free generation from different mod",
+   "rows_changed": 10,
+   "example_before": {
+    "row_header": "single-stream",
+    "cells": {
+     "temp.": "0",
+     "regurgitation rate (%)": "0.00"
+    }
+   },
+   "example_after": {
+    "row_header": "single-stream",
+    "cells": {
+     "temp.": "0",
+     "regurgitation rate (%)": "0.00"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T16",
+   "caption": "Idempotence of tokens. Probabilities that quantization indices remain identical ",
+   "rows_changed": 4,
+   "example_before": {
+    "row_header": "Basic",
+    "cells": {
+     "attacks / Δ T": "0",
+     "k=1 / (semantic)": "0.798",
+     "k=2": "0.783",
+     "k=3": "0.560",
+     "k=4": "0.483",
+     "k=5": "0.421",
+     "k=6": "0.407",
+     "k=7": "0.369",
+     "k=8": "0.404"
+    }
+   },
+   "example_after": {
+    "row_header": "Basic",
+    "cells": {
+     "attacks / Δ T": "0",
+     "k=1 / (semantic)": "0.798",
+     "k=2": "0.783",
+     "k=3": "0.560",
+     "k=4": "0.483",
+     "k=5": "0.421",
+     "k=6": "0.407",
+     "k=7": "0.369",
+     "k=8": "0.404"
+    }
+   }
+  },
+  {
+   "table": "MOSHI:T17",
+   "caption": "Ablation study on hyperparameters of the Mimi codec. We evaluate semantic modeli",
+   "rows_changed": 12,
+   "example_before": {
+    "row_header": "",
+    "cells": {
+     "ABX (↓)": "31.3%",
+     "VisQOL (↑)": "2.37",
+     "MOSNet (↑)": "2.85"
+    }
+   },
+   "example_after": {
+    "row_header": "",
+    "cells": {
+     "ABX (↓)": "31.3%",
+     "VisQOL (↑)": "2.37",
+     "MOSNet (↑)": "2.85"
+    }
+   }
+  },
+  {
+   "table": "HNET:T6",
+   "caption": "Related architectures. Comparison of related architectures, particularly those f",
+   "rows_changed": 11,
+   "example_before": {
+    "row_header": "Isotropic",
+    "cells": {
+     "Autoregressive": "55",
+     "Chunking Mechanism": "—",
+     "Multi-stage / Hierarchy": "—",
+     "Example Architectures": "ByT5"
+    }
+   },
+   "example_after": {
+    "row_header": "Isotropic",
+    "cells": {
+     "Autoregressive": "✗",
+     "Chunking Mechanism": "—",
+     "Multi-stage / Hierarchy": "—",
+     "Example Architectures": "ByT5"
+    }
+   }
+  }
+ ],
+ "prose_paragraphs_changed": 0,
+ "examples": [],
+ "hnet_t6_hnet_row_after": {
+  "row_header": "Hierarchical (dynamic)",
+  "cells": {
+   "Autoregressive": "✓",
+   "Chunking Mechanism": "dynamic chunking",
+   "Multi-stage / Hierarchy": "✓",
+   "Example Architectures": "H-Net"
+  }
+ },
+ "moshi_mimi_ablation_rows_after": [
+  {
+   "row_header": "✓",
+   "cells": {
+    "Transformer / in encoder": "✓",
+    "Transformer / in decoder": "✓",
+    "ABX (↓)": "23.3%",
+    "VisQOL (↑)": "2.91",
+    "MOSNet (↑)": "2.89",
+    "MUSHRA (↑)": "65.9±1.7"
+   }
+  },
+  {
+   "row_header": "✓",
+   "cells": {
+    "Transformer / in encoder": "✓",
+    "Transformer / in decoder": "✓",
+    "WavLM / distillation": "✓",
+    "ABX (↓)": "6.5%",
+    "VisQOL (↑)": "2.22",
+    "MOSNet (↑)": "2.87",
+    "MUSHRA (↑)": "57.8±1.8"
+   }
+  },
+  {
+   "row_header": "✓",
+   "cells": {
+    "Transformer / in decoder": "✓",
+    "WavLM / distillation": "✓",
+    "Split / quantizer": "✓",
+    "ABX (↓)": "10.8%",
+    "VisQOL (↑)": "2.79",
+    "MOSNet (↑)": "2.85",
+    "MUSHRA (↑)": "59.7±1.7"
+   }
+  }
+ ]
+}

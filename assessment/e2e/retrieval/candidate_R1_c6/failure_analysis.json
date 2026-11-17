@@ -1,0 +1,159 @@
+{
+ "A": {
+  "causes": {
+   "bm25_retrieval (dense found it, BM25 did not, fusion cut it)": {
+    "units": 2,
+    "questions": [
+     "t10"
+    ]
+   },
+   "embedding_retrieval (BM25 found it, dense did not, fusion cut it)": {
+    "units": 2,
+    "questions": [
+     "q06",
+     "q10"
+    ]
+   },
+   "fusion_ranking": {
+    "units": 5,
+    "questions": [
+     "n10",
+     "q03",
+     "q09",
+     "q13",
+     "t07"
+    ]
+   },
+   "insufficient_context (in the top final_passages, dropped by the token budget)": {
+    "units": 1,
+    "questions": [
+     "t06"
+    ]
+   },
+   "terminology_mismatch (neither BM25 nor dense ranks it in the pool)": {
+    "units": 7,
+    "questions": [
+     "q03",
+     "q05",
+     "q10",
+     "q14",
+     "t10"
+    ]
+   }
+  },
+  "questions_failing": [
+   "n10",
+   "q03",
+   "q05",
+   "q06",
+   "q09",
+   "q10",
+   "q13",
+   "q14",
+   "t06",
+   "t07",
+   "t10"
+  ]
+ },
+ "B": {
+  "causes": {
+   "bm25_retrieval (dense found it, BM25 did not, fusion cut it)": {
+    "units": 2,
+    "questions": [
+     "t10"
+    ]
+   },
+   "embedding_retrieval (BM25 found it, dense did not, fusion cut it)": {
+    "units": 2,
+    "questions": [
+     "q06",
+     "q10"
+    ]
+   },
+   "reranking": {
+    "units": 6,
+    "questions": [
+     "n10",
+     "q06",
+     "q09",
+     "q10",
+     "q11",
+     "t29"
+    ]
+   },
+   "terminology_mismatch (neither BM25 nor dense ranks it in the pool)": {
+    "units": 7,
+    "questions": [
+     "q03",
+     "q05",
+     "q10",
+     "q14",
+     "t10"
+    ]
+   }
+  },
+  "questions_failing": [
+   "n10",
+   "q03",
+   "q05",
+   "q06",
+   "q09",
+   "q10",
+   "q11",
+   "q14",
+   "t10",
+   "t29"
+  ]
+ },
+ "C": {
+  "causes": {
+   "bm25_retrieval (dense found it, BM25 did not, fusion cut it)": {
+    "units": 1,
+    "questions": [
+     "q10"
+    ]
+   },
+   "embedding_retrieval (BM25 found it, dense did not, fusion cut it)": {
+    "units": 1,
+    "questions": [
+     "q14"
+    ]
+   },
+   "insufficient_context (in the top final_passages, dropped by the token budget)": {
+    "units": 1,
+    "questions": [
+     "t30"
+    ]
+   },
+   "reranking": {
+    "units": 8,
+    "questions": [
+     "n10",
+     "q06",
+     "q07",
+     "q10",
+     "q13",
+     "t29"
+    ]
+   },
+   "terminology_mismatch (neither BM25 nor dense ranks it in the pool)": {
+    "units": 3,
+    "questions": [
+     "q03",
+     "q14"
+    ]
+   }
+  },
+  "questions_failing": [
+   "n10",
+   "q03",
+   "q06",
+   "q07",
+   "q10",
+   "q13",
+   "q14",
+   "t29",
+   "t30"
+  ]
+ }
+}

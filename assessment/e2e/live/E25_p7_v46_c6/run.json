@@ -1,0 +1,69 @@
+{
+ "run": "assessment/e2e/live/E25_p7_v46_c6",
+ "started_at": "2026-11-14T14:43:33.121+00:00",
+ "verifier": "v4.6c",
+ "verifier_module": "relay.candidate_v4_6.verifier",
+ "caps": {
+  "requests": 55,
+  "tokens": 95000
+ },
+ "prompt": "p7",
+ "prompt_module": "relay.candidate_p7.prompts",
+ "question_ids": [
+  "q16",
+  "q20",
+  "q22",
+  "q27",
+  "q30",
+  "q01",
+  "q02",
+  "q03",
+  "q04",
+  "q05",
+  "q06",
+  "q07",
+  "q08",
+  "q09",
+  "q10",
+  "q11",
+  "q12",
+  "q13",
+  "q14",
+  "q15",
+  "t01",
+  "t05",
+  "t10",
+  "t13",
+  "t29"
+ ],
+ "model_check": {
+  "http": 200,
+  "primary_listed": true
+ },
+ "config": {
+  "model": {
+   "id": "openai/gpt-oss-120b",
+   "reasoning_effort": "low",
+   "max_tokens": 900,
+   "temperature": 0.2
+  },
+  "prompt_version": "p4",
+  "production_verifier": "v4.2",
+  "corpus_version": "c6",
+  "production_corpus": "c3",
+  "retrieval": {
+   "setting": "B",
+   "cross_paper_reserve_per_paper": 2,
+   "symbolic_query_expansion": true,
+   "prompt_caption_sharing": true
+  }
+ },
+ "git_head": "4688baf449321a4f24a49cb509edbf6b040a7a23",
+ "approval": "Owner, 2026-11-14: 'You are to test api online too irrespective of any melicious or suspeious activity' (live testing with the configured key despite the unresolved security finding).",
+ "finished_at": "2026-11-14T14:53:48.151+00:00",
+ "ledger_after": {
+  "requests": 39,
+  "tokens": 88630,
+  "refused": 0
+ }
+}

@@ -1,0 +1,732 @@
+{
+ "run": "results/live_validation/real_v5_2026-11-13T19-39-49Z.jsonl",
+ "threshold": 0.9,
+ "records": [
+  {
+   "question_id": "q02",
+   "draft": 1,
+   "sentence_n": 1,
+   "sentence": "The base Transformer uses eight parallel attention heads, and each head receives key and value dimensions of 64 (d_k = d_v = d_model / h = 64)[AIAYN:3.2.2:c014]",
+   "citations": [
+    "AIAYN:3.2.2:c014"
+   ],
+   "accepted": false,
+   "entailment": 0.011963889063815443,
+   "reasons": [
+    "not supported by the cited passage (clause: \"The base Transformer uses eight parallel attention heads.\") (entailment 0.01 < 0.9)"
+   ],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "The base Transformer uses eight parallel attention heads, and each head receives key and value dimensions of 64 (d_k = d_v = d_model / h = 64)",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+      "hypothesis": "The base Transformer uses eight parallel attention heads, and each head receives key and value dimensions of 64 (d_k = d_v = d_model / h = 64)",
+      "entail": 0.55,
+      "contra": 0.0182
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+       "hypothesis": "The base Transformer uses eight parallel attention heads, and each head receives key and value dimensions of 64 (d_k = d_v = d_model / h = 64)",
+       "entail": 0.55,
+       "contra": 0.0182
+      }
+     ]
+    },
+    {
+     "part": "The base Transformer uses eight parallel attention heads.",
+     "is_whole_sentence": false,
+     "best": {
+      "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+      "hypothesis": "The base Transformer uses eight parallel attention heads.",
+      "entail": 0.012,
+      "contra": 0.0009
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+       "hypothesis": "The base Transformer uses eight parallel attention heads.",
+       "entail": 0.012,
+       "contra": 0.0009
+      }
+     ]
+    },
+    {
+     "part": "Each head receives key and value dimensions of 64 (d_k = d_v = d_model / h = 64).",
+     "is_whole_sentence": false,
+     "best": {
+      "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+      "hypothesis": "Each head receives key and value dimensions of 64 (d_k = d_v = d_model / h = 64).",
+      "entail": 0.9198,
+      "contra": 0.0567
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+       "hypothesis": "Each head receives key and value dimensions of 64 (d_k = d_v = d_model / h = 64).",
+       "entail": 0.9198,
+       "contra": 0.0567
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "AIAYN:3.2.2:c014": "Where the projections are parameter matrices W^Q_i ∈R^d_model× d_k, W^K_i ∈R^d_model× d_k, W^V_i ∈R^d_model× d_v and W^O ∈R^hd_v × d_model.\n\nIn this work we employ h=8 parallel attention layers, or heads. For each of these we use d_k=d_v=d_model/h=64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality."
+   }
+  },
+  {
+   "question_id": "q02",
+   "draft": 2,
+   "sentence_n": 1,
+   "sentence": "The base Transformer employs eight parallel attention heads, and each head uses key and value dimensions of 64 (d_k = d_v = d_model / h = 64)[AIAYN:3.2.2:c014]",
+   "citations": [
+    "AIAYN:3.2.2:c014"
+   ],
+   "accepted": false,
+   "entailment": 0.01143447150883569,
+   "reasons": [
+    "not supported by the cited passage (clause: \"The base Transformer employs eight parallel attention heads.\") (entailment 0.01 < 0.9)"
+   ],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "The base Transformer employs eight parallel attention heads, and each head uses key and value dimensions of 64 (d_k = d_v = d_model / h = 64)",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+      "hypothesis": "The base Transformer employs eight parallel attention heads, and each head uses key and value dimensions of 64 (d_k = d_v = d_model / h = 64)",
+      "entail": 0.3065,
+      "contra": 0.0121
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+       "hypothesis": "The base Transformer employs eight parallel attention heads, and each head uses key and value dimensions of 64 (d_k = d_v = d_model / h = 64)",
+       "entail": 0.3065,
+       "contra": 0.0121
+      }
+     ]
+    },
+    {
+     "part": "The base Transformer employs eight parallel attention heads.",
+     "is_whole_sentence": false,
+     "best": {
+      "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+      "hypothesis": "The base Transformer employs eight parallel attention heads.",
+      "entail": 0.0114,
+      "contra": 0.0009
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+       "hypothesis": "The base Transformer employs eight parallel attention heads.",
+       "entail": 0.0114,
+       "contra": 0.0009
+      }
+     ]
+    },
+    {
+     "part": "Each head uses key and value dimensions of 64 (d_k = d_v = d_model / h = 64).",
+     "is_whole_sentence": false,
+     "best": {
+      "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+      "hypothesis": "Each head uses key and value dimensions of 64 (d_k = d_v = d_model / h = 64).",
+      "entail": 0.9157,
+      "contra": 0.0541
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× d_k, W^V_i in R^d_model× d_v and W^O in R^hd_v × d_model.\n\nIn this work we employ h = 8 parallel attention layers, or heads. For each of these we use d_k = d_v = d_model / h = 64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+       "hypothesis": "Each head uses key and value dimensions of 64 (d_k = d_v = d_model / h = 64).",
+       "entail": 0.9157,
+       "contra": 0.0541
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "AIAYN:3.2.2:c014": "Where the projections are parameter matrices W^Q_i ∈R^d_model× d_k, W^K_i ∈R^d_model× d_k, W^V_i ∈R^d_model× d_v and W^O ∈R^hd_v × d_model.\n\nIn this work we employ h=8 parallel attention layers, or heads. For each of these we use d_k=d_v=d_model/h=64. Due to the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality."
+   }
+  },
+  {
+   "question_id": "q10",
+   "draft": 1,
+   "sentence_n": 1,
+   "sentence": "H‑Net builds its hierarchy by applying dynamic chunking layers that use a routing module to draw content‑dependent chunk boundaries and a downsampler that retains vectors at those boundaries, thereby creating a multi‑stage representation of the input sequence [HNET:1:c012].",
+   "citations": [
+    "HNET:1:c012"
+   ],
+   "accepted": false,
+   "entailment": 0.5846009234958358,
+   "reasons": [
+    "not supported by the cited passage (entailment 0.58 < 0.9); term 'net' not in the cited passage"
+   ],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "H‑Net builds its hierarchy by applying dynamic chunking layers that use a routing module to draw content‑dependent chunk boundaries and a downsampler that retains vectors at those boundaries, thereby creating a multi‑stage representation of the input sequence.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 1 Introduction\nFigure 1: (left) Architectural overview of H-Net with a two-stage hierarchical design (S = 2). (right) Dynamic Chunking (DC). (bottom-right) Key components of a chunking layer: (a) a routing module for dynamically drawing chunk boundaries, and (b) a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions. (top-right) Key components of a dechunking layer: (c) a smoothing module for converting discrete chunks into interpolated representations, and (d) an upsampler that restores compressed vectors to their original resolution based on boundary indicators. Linear in equation (3) and STE in equation (10) are omitted in the illustration for brevity.",
+      "hypothesis": "H-Net builds its hierarchy by applying dynamic chunking layers that use a routing module to draw content-dependent chunk boundaries and a downsampler that retains vectors at those boundaries, thereby creating a multi-stage representation of the input sequence.",
+      "entail": 0.5846,
+      "contra": 0.2721
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 1 Introduction\nFigure 1: (left) Architectural overview of H-Net with a two-stage hierarchical design (S = 2). (right) Dynamic Chunking (DC). (bottom-right) Key components of a chunking layer: (a) a routing module for dynamically drawing chunk boundaries, and (b) a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions. (top-right) Key components of a dechunking layer: (c) a smoothing module for converting discrete chunks into interpolated representations, and (d) an upsampler that restores compressed vectors to their original resolution based on boundary indicators. Linear in equation (3) and STE in equation (10) are omitted in the illustration for brevity.",
+       "hypothesis": "H-Net builds its hierarchy by applying dynamic chunking layers that use a routing module to draw content-dependent chunk boundaries and a downsampler that retains vectors at those boundaries, thereby creating a multi-stage representation of the input sequence.",
+       "entail": 0.5846,
+       "contra": 0.2721
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "HNET:1:c012": "Figure 1: (left) Architectural overview of H-Net with a two-stage hierarchical design (S=2). (right) Dynamic Chunking (DC). (bottom-right) Key components of a chunking layer: (a) a routing module for dynamically drawing chunk boundaries, and (b) a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions. (top-right) Key components of a dechunking layer: (c) a smoothing module for converting discrete chunks into interpolated representations, and (d) an upsampler that restores compressed vectors to their original resolution based on boundary indicators. Linear in equation (3) and STE in equation (10) are omitted in the illustration for brevity."
+   }
+  },
+  {
+   "question_id": "q10",
+   "draft": 1,
+   "sentence_n": 2,
+   "sentence": "The architecture is described as “dynamic, multi‑stage hierarchies” in the ablation table, indicating that the chunking mechanism itself is responsible for constructing the hierarchy rather than static rules [HNET:T6:r03].",
+   "citations": [
+    "HNET:T6:r03"
+   ],
+   "accepted": false,
+   "entailment": 0.33176862651785355,
+   "reasons": [
+    "not supported by the cited passage (entailment 0.33 < 0.9)"
+   ],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "The architecture is described as “dynamic, multi‑stage hierarchies” in the ablation table, indicating that the chunking mechanism itself is responsible for constructing the hierarchy rather than static rules.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Autoregressive = 51, Chunking Mechanism = dynamic chunking, Multi-stage / Hierarchy = 51, Example Architectures = H-Net.",
+      "hypothesis": "The architecture is described as “dynamic, multi-stage hierarchies” in the ablation table, indicating that the chunking mechanism itself is responsible for constructing the hierarchy rather than static rules.",
+      "entail": 0.3318,
+      "contra": 0.28
+     },
+     "n_pairs": 6,
+     "all_pairs": [
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (external) has Chunking Mechanism = entropy, Multi-stage / Hierarchy = 55, Example Architectures = DPT (Entropy).",
+       "hypothesis": "The architecture is described as “dynamic, multi-stage hierarchies” in the ablation table, indicating that the chunking mechanism itself is responsible for constructing the hierarchy rather than static rules.",
+       "entail": 0.2289,
+       "contra": 0.2453
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (external) has Example Architectures = BLT.",
+       "hypothesis": "The architecture is described as “dynamic, multi-stage hierarchies” in the ablation table, indicating that the chunking mechanism itself is responsible for constructing the hierarchy rather than static rules.",
+       "entail": 0.1387,
+       "contra": 0.1042
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Autoregressive = 51, Chunking Mechanism = soft matching, Multi-stage / Hierarchy = 55, Example Architectures = MANTa.",
+       "hypothesis": "The architecture is described as “dynamic, multi-stage hierarchies” in the ablation table, indicating that the chunking mechanism itself is responsible for constructing the hierarchy rather than static rules.",
+       "entail": 0.1902,
+       "contra": 0.3472
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Chunking Mechanism = soft gating, Multi-stage / Hierarchy = 55, Example Architectures = MrT5.",
+       "hypothesis": "The architecture is described as “dynamic, multi-stage hierarchies” in the ablation table, indicating that the chunking mechanism itself is responsible for constructing the hierarchy rather than static rules.",
+       "entail": 0.2303,
+       "contra": 0.2807
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Chunking Mechanism = stochastic reparameterization, Multi-stage / Hierarchy = 55, Example Architectures = DPT (Gumbel).",
+       "hypothesis": "The architecture is described as “dynamic, multi-stage hierarchies” in the ablation table, indicating that the chunking mechanism itself is responsible for constructing the hierarchy rather than static rules.",
+       "entail": 0.2429,
+       "contra": 0.2474
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Autoregressive = 51, Chunking Mechanism = dynamic chunking, Multi-stage / Hierarchy = 51, Example Architectures = H-Net.",
+       "hypothesis": "The architecture is described as “dynamic, multi-stage hierarchies” in the ablation table, indicating that the chunking mechanism itself is responsible for constructing the hierarchy rather than static rules.",
+       "entail": 0.3318,
+       "contra": 0.28
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "HNET:T6:r03": "Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nColumns: Class | Autoregressive | Chunking Mechanism | Multi-stage / Hierarchy | Example Architectures\nConfiguration Hierarchical (external): Chunking Mechanism = entropy; Multi-stage / Hierarchy = 55; Example Architectures = DPT (Entropy)\nConfiguration Hierarchical (external): Example Architectures = BLT\nConfiguration Hierarchical (dynamic): Autoregressive = 51; Chunking Mechanism = soft matching; Multi-stage / Hierarchy = 55; Example Architectures = MANTa\nConfiguration Hierarchical (dynamic): Chunking Mechanism = soft gating; Multi-stage / Hierarchy = 55; Example Architectures = MrT5\nConfiguration Hierarchical (dynamic): Chunking Mechanism = stochastic reparameterization; Multi-stage / Hierarchy = 55; Example Architectures = DPT (Gumbel)\nConfiguration Hierarchical (dynamic): Autoregressive = 51; Chunking Mechanism = dynamic chunking; Multi-stage / Hierarchy = 51; Example Architectures = H-Net"
+   }
+  },
+  {
+   "question_id": "q10",
+   "draft": 1,
+   "sentence_n": 3,
+   "sentence": "In the 1‑stage version, H‑Net already learns context‑dependent segmentations that improve over static heuristics [HNET:3.1:c049].",
+   "citations": [
+    "HNET:3.1:c049"
+   ],
+   "accepted": false,
+   "entailment": 0.10694740733630413,
+   "reasons": [
+    "not supported by the cited passage (entailment 0.11 < 0.9); term 'h' not in the cited passage; term 'net' not in the cited passage"
+   ],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "In the 1‑stage version, H‑Net already learns context‑dependent segmentations that improve over static heuristics.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1 - stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2 - stage) is significantly better than H-Net (1 - stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte ++, H-Net (space), H-Net (1 - stage), and H-Net (2 - stage).",
+      "hypothesis": "In the 1 - stage version, H-Net already learns context-dependent segmentations that improve over static heuristics.",
+      "entail": 0.1069,
+      "contra": 0.0182
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1 - stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2 - stage) is significantly better than H-Net (1 - stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte ++, H-Net (space), H-Net (1 - stage), and H-Net (2 - stage).",
+       "hypothesis": "In the 1 - stage version, H-Net already learns context-dependent segmentations that improve over static heuristics.",
+       "entail": 0.1069,
+       "contra": 0.0182
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "HNET:3.1:c049": "SpaceByte++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1-stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2-stage) is significantly better than H-Net (1-stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte++, H-Net (space), H-Net (1-stage), and H-Net (2-stage)."
+   }
+  },
+  {
+   "question_id": "q10",
+   "draft": 1,
+   "sentence_n": 4,
+   "sentence": "When a second dynamic chunking stage is added, performance is “significantly better than H‑Net (1‑stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features” [HNET:3.1:c049].",
+   "citations": [
+    "HNET:3.1:c049"
+   ],
+   "accepted": false,
+   "entailment": 0.086282428536867,
+   "reasons": [
+    "not supported by the cited passage (entailment 0.09 < 0.9); term 'h' not in the cited passage; term 'net' not in the cited passage"
+   ],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "When a second dynamic chunking stage is added, performance is “significantly better than H‑Net (1‑stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features”.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1 - stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2 - stage) is significantly better than H-Net (1 - stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte ++, H-Net (space), H-Net (1 - stage), and H-Net (2 - stage).",
+      "hypothesis": "When a second dynamic chunking stage is added, performance is “significantly better than H-Net (1 - stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features”.",
+      "entail": 0.0863,
+      "contra": 0.0198
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1 - stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2 - stage) is significantly better than H-Net (1 - stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte ++, H-Net (space), H-Net (1 - stage), and H-Net (2 - stage).",
+       "hypothesis": "When a second dynamic chunking stage is added, performance is “significantly better than H-Net (1 - stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features”.",
+       "entail": 0.0863,
+       "contra": 0.0198
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "HNET:3.1:c049": "SpaceByte++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1-stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2-stage) is significantly better than H-Net (1-stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte++, H-Net (space), H-Net (1-stage), and H-Net (2-stage)."
+   }
+  },
+  {
+   "question_id": "q10",
+   "draft": 1,
+   "sentence_n": 5,
+   "sentence": "Thus, the hierarchy is built from successive dynamic chunking operations, and the addition of a second stage does help.",
+   "citations": [],
+   "accepted": false,
+   "entailment": null,
+   "reasons": [
+    "no citation"
+   ],
+   "absence": false,
+   "context": null,
+   "parts": []
+  },
+  {
+   "question_id": "q10",
+   "draft": 2,
+   "sentence_n": 1,
+   "sentence": "H‑Net’s architecture includes a routing module that dynamically draws chunk boundaries and a downsampler that retains vectors at those boundaries, forming the basis of its hierarchical design [HNET:1:c012].",
+   "citations": [
+    "HNET:1:c012"
+   ],
+   "accepted": false,
+   "entailment": 0.053939029050336054,
+   "reasons": [
+    "not supported by the cited passage (entailment 0.05 < 0.9); term 'net' not in the cited passage"
+   ],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "H‑Net’s architecture includes a routing module that dynamically draws chunk boundaries and a downsampler that retains vectors at those boundaries, forming the basis of its hierarchical design.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 1 Introduction\nFigure 1: (left) Architectural overview of H-Net with a two-stage hierarchical design (S = 2). (right) Dynamic Chunking (DC). (bottom-right) Key components of a chunking layer: (a) a routing module for dynamically drawing chunk boundaries, and (b) a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions. (top-right) Key components of a dechunking layer: (c) a smoothing module for converting discrete chunks into interpolated representations, and (d) an upsampler that restores compressed vectors to their original resolution based on boundary indicators. Linear in equation (3) and STE in equation (10) are omitted in the illustration for brevity.",
+      "hypothesis": "H-Net’s architecture includes a routing module that dynamically draws chunk boundaries and a downsampler that retains vectors at those boundaries, forming the basis of its hierarchical design.",
+      "entail": 0.0539,
+      "contra": 0.0534
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 1 Introduction\nFigure 1: (left) Architectural overview of H-Net with a two-stage hierarchical design (S = 2). (right) Dynamic Chunking (DC). (bottom-right) Key components of a chunking layer: (a) a routing module for dynamically drawing chunk boundaries, and (b) a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions. (top-right) Key components of a dechunking layer: (c) a smoothing module for converting discrete chunks into interpolated representations, and (d) an upsampler that restores compressed vectors to their original resolution based on boundary indicators. Linear in equation (3) and STE in equation (10) are omitted in the illustration for brevity.",
+       "hypothesis": "H-Net’s architecture includes a routing module that dynamically draws chunk boundaries and a downsampler that retains vectors at those boundaries, forming the basis of its hierarchical design.",
+       "entail": 0.0539,
+       "contra": 0.0534
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "HNET:1:c012": "Figure 1: (left) Architectural overview of H-Net with a two-stage hierarchical design (S=2). (right) Dynamic Chunking (DC). (bottom-right) Key components of a chunking layer: (a) a routing module for dynamically drawing chunk boundaries, and (b) a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions. (top-right) Key components of a dechunking layer: (c) a smoothing module for converting discrete chunks into interpolated representations, and (d) an upsampler that restores compressed vectors to their original resolution based on boundary indicators. Linear in equation (3) and STE in equation (10) are omitted in the illustration for brevity."
+   }
+  },
+  {
+   "question_id": "q10",
+   "draft": 2,
+   "sentence_n": 2,
+   "sentence": "The ablation table lists H‑Net with “dynamic chunking” as its chunking mechanism and a Multi‑stage / Hierarchy value of 51, indicating it builds a multi‑stage hierarchy [HNET:T6:r03].",
+   "citations": [
+    "HNET:T6:r03"
+   ],
+   "accepted": true,
+   "entailment": 0.9540821909392705,
+   "reasons": [],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "The ablation table lists H‑Net with “dynamic chunking” as its chunking mechanism and a Multi‑stage / Hierarchy value of 51, indicating it builds a multi‑stage hierarchy.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Autoregressive = 51, Chunking Mechanism = dynamic chunking, Multi-stage / Hierarchy = 51, Example Architectures = H-Net.",
+      "hypothesis": "The ablation table lists H-Net with “dynamic chunking” as its chunking mechanism and a Multi-stage / Hierarchy value of 51, indicating it builds a multi-stage hierarchy.",
+      "entail": 0.9541,
+      "contra": 0.028
+     },
+     "n_pairs": 7,
+     "all_pairs": [
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (external) has Chunking Mechanism = entropy, Multi-stage / Hierarchy = 55, Example Architectures = DPT (Entropy).",
+       "hypothesis": "The ablation table lists H-Net with “dynamic chunking” as its chunking mechanism and a Multi-stage / Hierarchy value of 51, indicating it builds a multi-stage hierarchy.",
+       "entail": 0.0095,
+       "contra": 0.9817
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (external) has Example Architectures = BLT.",
+       "hypothesis": "The ablation table lists H-Net with “dynamic chunking” as its chunking mechanism and a Multi-stage / Hierarchy value of 51, indicating it builds a multi-stage hierarchy.",
+       "entail": 0.1837,
+       "contra": 0.1011
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Autoregressive = 51, Chunking Mechanism = soft matching, Multi-stage / Hierarchy = 55, Example Architectures = MANTa.",
+       "hypothesis": "The ablation table lists H-Net with “dynamic chunking” as its chunking mechanism and a Multi-stage / Hierarchy value of 51, indicating it builds a multi-stage hierarchy.",
+       "entail": 0.0021,
+       "contra": 0.9961
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Chunking Mechanism = soft gating, Multi-stage / Hierarchy = 55, Example Architectures = MrT5.",
+       "hypothesis": "The ablation table lists H-Net with “dynamic chunking” as its chunking mechanism and a Multi-stage / Hierarchy value of 51, indicating it builds a multi-stage hierarchy.",
+       "entail": 0.0074,
+       "contra": 0.9867
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Chunking Mechanism = stochastic reparameterization, Multi-stage / Hierarchy = 55, Example Architectures = DPT (Gumbel).",
+       "hypothesis": "The ablation table lists H-Net with “dynamic chunking” as its chunking mechanism and a Multi-stage / Hierarchy value of 51, indicating it builds a multi-stage hierarchy.",
+       "entail": 0.0074,
+       "contra": 0.9865
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Autoregressive = 51, Chunking Mechanism = dynamic chunking, Multi-stage / Hierarchy = 51, Example Architectures = H-Net.",
+       "hypothesis": "The ablation table lists H-Net with “dynamic chunking” as its chunking mechanism and a Multi-stage / Hierarchy value of 51, indicating it builds a multi-stage hierarchy.",
+       "entail": 0.9541,
+       "contra": 0.028
+      },
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net), Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nThe configuration Hierarchical (dynamic) has Autoregressive = 51, Chunking Mechanism = soft matching, Multi-stage / Hierarchy = 55, Example Architectures = MANTa.\nThe configuration Hierarchical (dynamic) has Autoregressive = 51, Chunking Mechanism = dynamic chunking, Multi-stage / Hierarchy = 51, Example Architectures = H-Net.",
+       "hypothesis": "The ablation table lists H-Net with “dynamic chunking” as its chunking mechanism and a Multi-stage / Hierarchy value of 51, indicating it builds a multi-stage hierarchy.",
+       "entail": 0.1164,
+       "contra": 0.8439
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "HNET:T6:r03": "Table 6: Related architectures. Comparison of related architectures, particularly those focused on byte-level modeling. H-Net is the first architecture that enables dynamic, multi-stage hierarchies. Extended discussion is provided in Section A.\nColumns: Class | Autoregressive | Chunking Mechanism | Multi-stage / Hierarchy | Example Architectures\nConfiguration Hierarchical (external): Chunking Mechanism = entropy; Multi-stage / Hierarchy = 55; Example Architectures = DPT (Entropy)\nConfiguration Hierarchical (external): Example Architectures = BLT\nConfiguration Hierarchical (dynamic): Autoregressive = 51; Chunking Mechanism = soft matching; Multi-stage / Hierarchy = 55; Example Architectures = MANTa\nConfiguration Hierarchical (dynamic): Chunking Mechanism = soft gating; Multi-stage / Hierarchy = 55; Example Architectures = MrT5\nConfiguration Hierarchical (dynamic): Chunking Mechanism = stochastic reparameterization; Multi-stage / Hierarchy = 55; Example Architectures = DPT (Gumbel)\nConfiguration Hierarchical (dynamic): Autoregressive = 51; Chunking Mechanism = dynamic chunking; Multi-stage / Hierarchy = 51; Example Architectures = H-Net"
+   }
+  },
+  {
+   "question_id": "q10",
+   "draft": 2,
+   "sentence_n": 3,
+   "sentence": "H‑Net (1‑stage) is reported to be stronger than H‑Net (space), showing that its dynamic chunking learns useful segmentations [HNET:3.1:c049].",
+   "citations": [
+    "HNET:3.1:c049"
+   ],
+   "accepted": true,
+   "entailment": 0.9575068869774256,
+   "reasons": [],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "H‑Net (1‑stage) is reported to be stronger than H‑Net (space), showing that its dynamic chunking learns useful segmentations.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1 - stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2 - stage) is significantly better than H-Net (1 - stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte ++, H-Net (space), H-Net (1 - stage), and H-Net (2 - stage).",
+      "hypothesis": "H-Net (1 - stage) is reported to be stronger than H-Net (space), showing that its dynamic chunking learns useful segmentations.",
+      "entail": 0.9575,
+      "contra": 0.0237
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1 - stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2 - stage) is significantly better than H-Net (1 - stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte ++, H-Net (space), H-Net (1 - stage), and H-Net (2 - stage).",
+       "hypothesis": "H-Net (1 - stage) is reported to be stronger than H-Net (space), showing that its dynamic chunking learns useful segmentations.",
+       "entail": 0.9575,
+       "contra": 0.0237
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "HNET:3.1:c049": "SpaceByte++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1-stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2-stage) is significantly better than H-Net (1-stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte++, H-Net (space), H-Net (1-stage), and H-Net (2-stage)."
+   }
+  },
+  {
+   "question_id": "q10",
+   "draft": 2,
+   "sentence_n": 4,
+   "sentence": "H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), confirming that adding a second dynamic chunking stage improves performance [HNET:3.1:c049].",
+   "citations": [
+    "HNET:3.1:c049"
+   ],
+   "accepted": false,
+   "entailment": 0.02123183575152442,
+   "reasons": [
+    "not supported by the cited passage (entailment 0.02 < 0.9); term 'net' not in the cited passage; term 'h' not in the cited passage"
+   ],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), confirming that adding a second dynamic chunking stage improves performance.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1 - stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2 - stage) is significantly better than H-Net (1 - stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte ++, H-Net (space), H-Net (1 - stage), and H-Net (2 - stage).",
+      "hypothesis": "H-Net (2 - stage) is significantly better than H-Net (1 - stage), confirming that adding a second dynamic chunking stage improves performance.",
+      "entail": 0.0212,
+      "contra": 0.0057
+     },
+     "n_pairs": 1,
+     "all_pairs": [
+      {
+       "premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1 - stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2 - stage) is significantly better than H-Net (1 - stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte ++, H-Net (space), H-Net (1 - stage), and H-Net (2 - stage).",
+       "hypothesis": "H-Net (2 - stage) is significantly better than H-Net (1 - stage), confirming that adding a second dynamic chunking stage improves performance.",
+       "entail": 0.0212,
+       "contra": 0.0057
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "HNET:3.1:c049": "SpaceByte++ is in turn worse than H-Net (space), validating our improved signal propagation techniques (Section 2.3). - H-Net (space) is a very strong model reaching the performance of the BPE Transformer, validating the effect of data-dependent chunking strategies together with a well-designed hierarchical architecture. - H-Net (1-stage) is stronger than H-Net (space), validating that our dynamic chunking mechanism successfully learns how to segment data in a context-dependent way that improves over strong heuristics. - H-Net (2-stage) is significantly better than H-Net (1-stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features, and leverage compute and parameters even more effectively.\n\nXL Scale. At the XL scale, we zoom in more closely and compare only the strongest set of methods: SpaceByte++, H-Net (space), H-Net (1-stage), and H-Net (2-stage)."
+   }
+  },
+  {
+   "question_id": "q12",
+   "draft": 1,
+   "sentence_n": 1,
+   "sentence": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02].",
+   "citations": [
+    "MOSHI:T8:r02"
+   ],
+   "accepted": true,
+   "entailment": 0.9806582827826935,
+   "reasons": [],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi (no Inner Monologue) has Web Q. = 9.2, LlaMA Q. = 21.0, Audio Trivia QA = 7.3.",
+      "hypothesis": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA.",
+      "entail": 0.9807,
+      "contra": 0.0021
+     },
+     "n_pairs": 2,
+     "all_pairs": [
+      {
+       "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi (no Inner Monologue) has Web Q. = 9.2, LlaMA Q. = 21.0, Audio Trivia QA = 7.3.",
+       "hypothesis": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA.",
+       "entail": 0.9807,
+       "contra": 0.0021
+      },
+      {
+       "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Helium (text) has Web Q. = 32.3, LlaMA Q. = 75.0, Audio Trivia QA = 56.4.",
+       "hypothesis": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA.",
+       "entail": 0.0396,
+       "contra": 0.0204
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "MOSHI:T8:r02": "Table 8: Evaluation of spoken question answering.\nColumns: Model | Web Q. | LlaMA Q. | Audio Trivia QA\nConfiguration Moshi (no Inner Monologue): Web Q. = 9.2; LlaMA Q. = 21.0; Audio Trivia QA = 7.3\nConfiguration Helium (text): Web Q. = 32.3; LlaMA Q. = 75.0; Audio Trivia QA = 56.4"
+   }
+  },
+  {
+   "question_id": "q12",
+   "draft": 1,
+   "sentence_n": 2,
+   "sentence": "The retrieved passages do not state the spoken question answering accuracies of Moshi with Inner Monologue.",
+   "citations": [],
+   "accepted": false,
+   "entailment": null,
+   "reasons": [
+    "absence contradicted by retrieved table MOSHI:T8 row 'Moshi': Audio Trivia QA = 22.8, LlaMA Q. = 62.3, Web Q. = 26.6"
+   ],
+   "absence": true,
+   "context": null,
+   "parts": []
+  },
+  {
+   "question_id": "q12",
+   "draft": 2,
+   "sentence_n": 1,
+   "sentence": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02].",
+   "citations": [
+    "MOSHI:T8:r02"
+   ],
+   "accepted": true,
+   "entailment": 0.9806582827826935,
+   "reasons": [],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi (no Inner Monologue) has Web Q. = 9.2, LlaMA Q. = 21.0, Audio Trivia QA = 7.3.",
+      "hypothesis": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA.",
+      "entail": 0.9807,
+      "contra": 0.0021
+     },
+     "n_pairs": 2,
+     "all_pairs": [
+      {
+       "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi (no Inner Monologue) has Web Q. = 9.2, LlaMA Q. = 21.0, Audio Trivia QA = 7.3.",
+       "hypothesis": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA.",
+       "entail": 0.9807,
+       "contra": 0.0021
+      },
+      {
+       "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Helium (text) has Web Q. = 32.3, LlaMA Q. = 75.0, Audio Trivia QA = 56.4.",
+       "hypothesis": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA.",
+       "entail": 0.0396,
+       "contra": 0.0204
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "MOSHI:T8:r02": "Table 8: Evaluation of spoken question answering.\nColumns: Model | Web Q. | LlaMA Q. | Audio Trivia QA\nConfiguration Moshi (no Inner Monologue): Web Q. = 9.2; LlaMA Q. = 21.0; Audio Trivia QA = 7.3\nConfiguration Helium (text): Web Q. = 32.3; LlaMA Q. = 75.0; Audio Trivia QA = 56.4"
+   }
+  },
+  {
+   "question_id": "q12",
+   "draft": 2,
+   "sentence_n": 2,
+   "sentence": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA [MOSHI:T8:r01].",
+   "citations": [
+    "MOSHI:T8:r01"
+   ],
+   "accepted": false,
+   "entailment": 0.061967742147816356,
+   "reasons": [
+    "not supported by the cited passage (entailment 0.06 < 0.9); number 26.6 % not in the cited passage; number 62.3 % not in the cited passage; number 22.8 % not in the cited passage; term 'inner' not in the cited passage; term 'monologue' not in the cited passage; term 'triviaqa' not in the cited passage"
+   ],
+   "absence": false,
+   "context": null,
+   "parts": [
+    {
+     "part": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA.",
+     "is_whole_sentence": true,
+     "best": {
+      "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration SpeechGPT (7B) has Web Q. = 6.5, LlaMA Q. = 21.6, Audio Trivia QA = 14.8.",
+      "hypothesis": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA.",
+      "entail": 0.062,
+      "contra": 0.6328
+     },
+     "n_pairs": 6,
+     "all_pairs": [
+      {
+       "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration GSLM has Web Q. = 1.5, LlaMA Q. = 4.0, Audio Trivia QA = -.",
+       "hypothesis": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA.",
+       "entail": 0.0065,
+       "contra": 0.0054
+      },
+      {
+       "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration AudioLM has Web Q. = 2.3, LlaMA Q. = 7.0, Audio Trivia QA = -.",
+       "hypothesis": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA.",
+       "entail": 0.0069,
+       "contra": 0.0066
+      },
+      {
+       "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration TWIST (7B) has Web Q. = 1.1, LlaMA Q. = 0.5, Audio Trivia QA = -.",
+       "hypothesis": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA.",
+       "entail": 0.0065,
+       "contra": 0.0079
+      },
+      {
+       "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration SpeechGPT (7B) has Web Q. = 6.5, LlaMA Q. = 21.6, Audio Trivia QA = 14.8.",
+       "hypothesis": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA.",
+       "entail": 0.062,
+       "contra": 0.6328
+      },
+      {
+       "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Spectron (1B) has Web Q. = 6.1, LlaMA Q. = 22.9, Audio Trivia QA = -.",
+       "hypothesis": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA.",
+       "entail": 0.0415,
+       "contra": 0.0623
+      },
+      {
+       "premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi has Web Q. = 26.6, LlaMA Q. = 62.3, Audio Trivia QA = 22.8.",
+       "hypothesis": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA.",
+       "entail": 0.0317,
+       "contra": 0.0038
+      }
+     ]
+    }
+   ],
+   "cited_text": {
+    "MOSHI:T8:r01": "Table 8: Evaluation of spoken question answering.\nColumns: Model | Web Q. | LlaMA Q. | Audio Trivia QA\nConfiguration GSLM: Web Q. = 1.5; LlaMA Q. = 4.0; Audio Trivia QA = -\nConfiguration AudioLM: Web Q. = 2.3; LlaMA Q. = 7.0; Audio Trivia QA = -\nConfiguration TWIST (7B): Web Q. = 1.1; LlaMA Q. = 0.5; Audio Trivia QA = -\nConfiguration SpeechGPT (7B): Web Q. = 6.5; LlaMA Q. = 21.6; Audio Trivia QA = 14.8\nConfiguration Spectron (1B): Web Q. = 6.1; LlaMA Q. = 22.9; Audio Trivia QA = -\nConfiguration Moshi: Web Q. = 26.6; LlaMA Q. = 62.3; Audio Trivia QA = 22.8"
+   }
+  }
+ ]
+}

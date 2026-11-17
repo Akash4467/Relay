@@ -1,0 +1,44 @@
+{
+ "question_id": "q14",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:08:36.002+00:00",
+  "t_send_ns": 206166003717300,
+  "status": 200,
+  "t_first_byte_ns": 206166394947000,
+  "t_first_content_ns": 206167301112200,
+  "t_last_ns": 206167457606200,
+  "max_gap_ms": 906.1464,
+  "text": "Sentences were encoded using byte-pair encoding , which has a shared source-target vocabulary of about 37000 tokens[AIAYN:5.1:c025].  \nH-Net (space) and H-Net (2-stage) are byte-level, while the Transformers use the Llama-3 tokenizer which was designed for multilingual[HNET:3.2:c061].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.318876414,
+   "prompt_tokens": 2442,
+   "prompt_time": 0.572412696,
+   "completion_tokens": 239,
+   "completion_time": 0.495167042,
+   "total_tokens": 2681,
+   "total_time": 1.067579738,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 154
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "968",
+   "x-ratelimit-reset-requests": "46m4.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5117",
+   "x-ratelimit-reset-tokens": "21.622s"
+  },
+  "error": null,
+  "first_byte_ms": 391.2,
+  "first_content_ms": 1297.4,
+  "total_ms": 1453.9
+ }
+}

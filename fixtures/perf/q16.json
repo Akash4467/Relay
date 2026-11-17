@@ -1,0 +1,13 @@
+{
+  "question_id": "q16",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "p1",
+  "recorded_at": "2026-11-12T18:43:54.248+00:00",
+  "drafts": [
+    {
+      "content": "NOT_IN_PAPERS",
+      "completion_tokens": 37,
+      "reasoning_tokens": 23
+    }
+  ]
+}

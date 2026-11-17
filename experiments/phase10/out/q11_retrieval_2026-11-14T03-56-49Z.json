@@ -1,0 +1,516 @@
+{
+ "question": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+ "expected": "With h = 1 (d_k = d_v = 512) dev BLEU was 24.9 (perplexity 5.29); the base model (h = 8) scored 25.8 (perplexity 4.92). Single-head attention is 0.9 BLEU worse than the best setting.",
+ "gold": {
+  "AIAYN:T3:r01": "base row (h = 8): BLEU 25.8, PPL 4.92",
+  "AIAYN:T3:r02": "(A) rows incl. h = 1: BLEU 24.9, PPL 5.29"
+ },
+ "corpora": {
+  "c3": {
+   "A": {
+    "baseline": {
+     "final": [
+      "AIAYN:6.2:c031",
+      "AIAYN:3.2.2:c013",
+      "AIAYN:T3:r02",
+      "AIAYN:T3:r07",
+      "AIAYN:T3:r03",
+      "AIAYN:T3:r01"
+     ],
+     "context_tokens": 1537,
+     "search_ms": 552.5,
+     "dropped_by_budget": [
+      "AIAYN:T3:r04",
+      "AIAYN:abstract:c001"
+     ],
+     "gold": {
+      "AIAYN:T3:r01": {
+       "bm25_rank": 18,
+       "dense_rank": 9,
+       "in_fused_top": 6,
+       "after_rerank": 6,
+       "in_context": true
+      },
+      "AIAYN:T3:r02": {
+       "bm25_rank": 7,
+       "dense_rank": 11,
+       "in_fused_top": 3,
+       "after_rerank": 3,
+       "in_context": true
+      }
+     },
+     "table3_in_context": [
+      "AIAYN:T3:r02",
+      "AIAYN:T3:r07",
+      "AIAYN:T3:r03",
+      "AIAYN:T3:r01"
+     ]
+    },
+    "tableref": {
+     "final": [
+      "AIAYN:6.2:c031",
+      "AIAYN:3.2.2:c013",
+      "AIAYN:T3:r02",
+      "AIAYN:T3:r07",
+      "AIAYN:T3:r03",
+      "AIAYN:T3:r01"
+     ],
+     "added_candidates": [],
+     "context_tokens": 1537,
+     "rerank_ms": null,
+     "total_ms": 50.6,
+     "gold_in_context": {
+      "AIAYN:T3:r01": true,
+      "AIAYN:T3:r02": true
+     },
+     "gold_rank_after_rerank": {
+      "AIAYN:T3:r01": 6,
+      "AIAYN:T3:r02": 3
+     },
+     "table3_rows_in_context": [
+      "AIAYN:T3:r02: (A) h=1; (A) h=4; (A) h=16",
+      "AIAYN:T3:r07: (D) ; (D) ; (D) ",
+      "AIAYN:T3:r03: (A) h=32; (B) ; (B) ",
+      "AIAYN:T3:r01: base h=8"
+     ],
+     "other_tables_in_context": []
+    }
+   },
+   "B": {
+    "baseline": {
+     "final": [
+      "AIAYN:6.2:c031",
+      "AIAYN:6.1:c029",
+      "AIAYN:3.2.2:c013",
+      "AIAYN:T3:r07",
+      "AIAYN:T3:r04",
+      "AIAYN:T3:r05"
+     ],
+     "context_tokens": 1506,
+     "search_ms": 1093.3,
+     "dropped_by_budget": [
+      "AIAYN:T3:r06",
+      "AIAYN:T3:r03"
+     ],
+     "gold": {
+      "AIAYN:T3:r01": {
+       "bm25_rank": 18,
+       "dense_rank": 9,
+       "in_fused_top": 6,
+       "after_rerank": 10,
+       "in_context": false
+      },
+      "AIAYN:T3:r02": {
+       "bm25_rank": 7,
+       "dense_rank": 11,
+       "in_fused_top": 3,
+       "after_rerank": 9,
+       "in_context": false
+      }
+     },
+     "table3_in_context": [
+      "AIAYN:T3:r07",
+      "AIAYN:T3:r04",
+      "AIAYN:T3:r05"
+     ]
+    },
+    "tableref": {
+     "final": [
+      "AIAYN:6.2:c031",
+      "AIAYN:6.1:c029",
+      "AIAYN:3.2.2:c013",
+      "AIAYN:T3:r07",
+      "AIAYN:T3:r04",
+      "AIAYN:T3:r05"
+     ],
+     "added_candidates": [
+      "AIAYN:T3:r08",
+      "AIAYN:T3:r09",
+      "HNET:T3:r01",
+      "HNET:T3:r02",
+      "HNET:T3:r03",
+      "HNET:T3:r04",
+      "HNET:T3:r05",
+      "HNET:T3:r06",
+      "HNET:T3:r07",
+      "HNET:T3:r08",
+      "HNET:T3:r09",
+      "HNET:T3:r10",
+      "HNET:T3:r11",
+      "HNET:T3:r12",
+      "HNET:T3:r13",
+      "HNET:T3:r14",
+      "HNET:T3:r15",
+      "MOSHI:T3:r01",
+      "MOSHI:T3:r02"
+     ],
+     "context_tokens": 1506,
+     "rerank_ms": 1989.6,
+     "total_ms": 2029.4,
+     "gold_in_context": {
+      "AIAYN:T3:r01": false,
+      "AIAYN:T3:r02": false
+     },
+     "gold_rank_after_rerank": {
+      "AIAYN:T3:r01": 11,
+      "AIAYN:T3:r02": 9
+     },
+     "table3_rows_in_context": [
+      "AIAYN:T3:r07: (D) ; (D) ; (D) ",
+      "AIAYN:T3:r04: (C) ; (C) ; (C) ",
+      "AIAYN:T3:r05: (C) ; (C) "
+     ],
+     "other_tables_in_context": []
+    }
+   },
+   "C": {
+    "baseline": {
+     "final": [
+      "AIAYN:6.2:c023",
+      "AIAYN:6.1:c022",
+      "AIAYN:T3:r01"
+     ],
+     "context_tokens": 1194,
+     "search_ms": 1906.2,
+     "dropped_by_budget": [
+      "AIAYN:T3:r02"
+     ],
+     "gold": {
+      "AIAYN:T3:r01": {
+       "bm25_rank": 6,
+       "dense_rank": 4,
+       "in_fused_top": 3,
+       "after_rerank": 3,
+       "in_context": true
+      },
+      "AIAYN:T3:r02": {
+       "bm25_rank": 11,
+       "dense_rank": 5,
+       "in_fused_top": 4,
+       "after_rerank": 4,
+       "in_context": false
+      }
+     },
+     "table3_in_context": [
+      "AIAYN:T3:r01"
+     ]
+    },
+    "tableref": {
+     "final": [
+      "AIAYN:6.2:c023",
+      "AIAYN:6.1:c022",
+      "AIAYN:T3:r01"
+     ],
+     "added_candidates": [
+      "HNET:T3:r01",
+      "HNET:T3:r02",
+      "HNET:T3:r03",
+      "HNET:T3:r04",
+      "MOSHI:T3:r01"
+     ],
+     "context_tokens": 1194,
+     "rerank_ms": 2363.0,
+     "total_ms": 2404.8,
+     "gold_in_context": {
+      "AIAYN:T3:r01": true,
+      "AIAYN:T3:r02": false
+     },
+     "gold_rank_after_rerank": {
+      "AIAYN:T3:r01": 3,
+      "AIAYN:T3:r02": 4
+     },
+     "table3_rows_in_context": [
+      "AIAYN:T3:r01: base h=8; (A) h=1; (A) h=4; (A) h=16; (A) h=32; (B) ; (B) "
+     ],
+     "other_tables_in_context": []
+    }
+   }
+  },
+  "c6": {
+   "A": {
+    "baseline": {
+     "final": [
+      "AIAYN:6.2:c031",
+      "AIAYN:3.2.2:c013",
+      "AIAYN:T3:r02",
+      "AIAYN:T3:r07",
+      "AIAYN:3.2.2:c014",
+      "AIAYN:T3:r03"
+     ],
+     "context_tokens": 1447,
+     "search_ms": 39.3,
+     "dropped_by_budget": [
+      "AIAYN:T3:r01",
+      "AIAYN:abstract:c001"
+     ],
+     "gold": {
+      "AIAYN:T3:r01": {
+       "bm25_rank": 19,
+       "dense_rank": 9,
+       "in_fused_top": 7,
+       "after_rerank": 7,
+       "in_context": false
+      },
+      "AIAYN:T3:r02": {
+       "bm25_rank": 7,
+       "dense_rank": 11,
+       "in_fused_top": 3,
+       "after_rerank": 3,
+       "in_context": true
+      }
+     },
+     "table3_in_context": [
+      "AIAYN:T3:r02",
+      "AIAYN:T3:r07",
+      "AIAYN:T3:r03"
+     ]
+    },
+    "tableref": {
+     "final": [
+      "AIAYN:6.2:c031",
+      "AIAYN:3.2.2:c013",
+      "AIAYN:T3:r02",
+      "AIAYN:T3:r07",
+      "AIAYN:3.2.2:c014",
+      "AIAYN:T3:r03"
+     ],
+     "added_candidates": [],
+     "context_tokens": 1447,
+     "rerank_ms": null,
+     "total_ms": 41.4,
+     "gold_in_context": {
+      "AIAYN:T3:r01": false,
+      "AIAYN:T3:r02": true
+     },
+     "gold_rank_after_rerank": {
+      "AIAYN:T3:r01": 7,
+      "AIAYN:T3:r02": 3
+     },
+     "table3_rows_in_context": [
+      "AIAYN:T3:r02: (A) h=1; (A) h=4; (A) h=16",
+      "AIAYN:T3:r07: (D) ; (D) ; (D) ",
+      "AIAYN:T3:r03: (A) h=32; (B) ; (B) "
+     ],
+     "other_tables_in_context": []
+    },
+    "other_questions": [
+     {
+      "id": "q11",
+      "question": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+      "before": [
+       "AIAYN:6.2:c031",
+       "AIAYN:3.2.2:c013",
+       "AIAYN:T3:r02",
+       "AIAYN:T3:r07",
+       "AIAYN:3.2.2:c014",
+       "AIAYN:T3:r03"
+      ],
+      "after": [
+       "AIAYN:6.2:c031",
+       "AIAYN:3.2.2:c013",
+       "AIAYN:T3:r02",
+       "AIAYN:T3:r07",
+       "AIAYN:3.2.2:c014",
+       "AIAYN:T3:r03"
+      ],
+      "changed": false
+     }
+    ],
+    "unaffected_identical": true
+   },
+   "B": {
+    "baseline": {
+     "final": [
+      "AIAYN:6.2:c031",
+      "AIAYN:6.1:c029",
+      "AIAYN:3.2.2:c013",
+      "AIAYN:T3:r07",
+      "AIAYN:T3:r04",
+      "AIAYN:T3:r06"
+     ],
+     "context_tokens": 1519,
+     "search_ms": 1118.8,
+     "dropped_by_budget": [
+      "AIAYN:T3:r03",
+      "AIAYN:T3:r02"
+     ],
+     "gold": {
+      "AIAYN:T3:r01": {
+       "bm25_rank": 19,
+       "dense_rank": 9,
+       "in_fused_top": 7,
+       "after_rerank": 10,
+       "in_context": false
+      },
+      "AIAYN:T3:r02": {
+       "bm25_rank": 7,
+       "dense_rank": 11,
+       "in_fused_top": 3,
+       "after_rerank": 8,
+       "in_context": false
+      }
+     },
+     "table3_in_context": [
+      "AIAYN:T3:r07",
+      "AIAYN:T3:r04",
+      "AIAYN:T3:r06"
+     ]
+    },
+    "tableref": {
+     "final": [
+      "AIAYN:6.2:c031",
+      "AIAYN:6.1:c029",
+      "AIAYN:3.2.2:c013",
+      "AIAYN:T3:r07",
+      "AIAYN:T3:r04",
+      "AIAYN:T3:r05"
+     ],
+     "added_candidates": [
+      "AIAYN:T3:r05",
+      "AIAYN:T3:r08",
+      "HNET:T3:r01",
+      "HNET:T3:r02",
+      "HNET:T3:r03",
+      "HNET:T3:r04",
+      "HNET:T3:r05",
+      "HNET:T3:r06",
+      "HNET:T3:r07",
+      "HNET:T3:r08",
+      "HNET:T3:r09",
+      "HNET:T3:r10",
+      "HNET:T3:r11",
+      "HNET:T3:r12",
+      "HNET:T3:r13",
+      "HNET:T3:r14",
+      "HNET:T3:r15",
+      "MOSHI:T3:r01",
+      "MOSHI:T3:r02",
+      "MOSHI:T3:r03"
+     ],
+     "context_tokens": 1506,
+     "rerank_ms": 2008.2,
+     "total_ms": 2050.6,
+     "gold_in_context": {
+      "AIAYN:T3:r01": false,
+      "AIAYN:T3:r02": false
+     },
+     "gold_rank_after_rerank": {
+      "AIAYN:T3:r01": 11,
+      "AIAYN:T3:r02": 9
+     },
+     "table3_rows_in_context": [
+      "AIAYN:T3:r07: (D) ; (D) ; (D) ",
+      "AIAYN:T3:r04: (C) ; (C) ; (C) ",
+      "AIAYN:T3:r05: (C) ; (C) "
+     ],
+     "other_tables_in_context": []
+    },
+    "other_questions": [
+     {
+      "id": "q11",
+      "question": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+      "before": [
+       "AIAYN:6.2:c031",
+       "AIAYN:6.1:c029",
+       "AIAYN:3.2.2:c013",
+       "AIAYN:T3:r07",
+       "AIAYN:T3:r04",
+       "AIAYN:T3:r06"
+      ],
+      "after": [
+       "AIAYN:6.2:c031",
+       "AIAYN:6.1:c029",
+       "AIAYN:3.2.2:c013",
+       "AIAYN:T3:r07",
+       "AIAYN:T3:r04",
+       "AIAYN:T3:r05"
+      ],
+      "changed": true
+     }
+    ],
+    "unaffected_identical": true
+   },
+   "C": {
+    "baseline": {
+     "final": [
+      "AIAYN:6.2:c023",
+      "AIAYN:6.1:c022",
+      "AIAYN:T3:r01"
+     ],
+     "context_tokens": 1194,
+     "search_ms": 1937.6,
+     "dropped_by_budget": [
+      "AIAYN:T3:r02"
+     ],
+     "gold": {
+      "AIAYN:T3:r01": {
+       "bm25_rank": 7,
+       "dense_rank": 4,
+       "in_fused_top": 3,
+       "after_rerank": 3,
+       "in_context": true
+      },
+      "AIAYN:T3:r02": {
+       "bm25_rank": 11,
+       "dense_rank": 5,
+       "in_fused_top": 4,
+       "after_rerank": 4,
+       "in_context": false
+      }
+     },
+     "table3_in_context": [
+      "AIAYN:T3:r01"
+     ]
+    },
+    "tableref": {
+     "final": [
+      "AIAYN:6.2:c023",
+      "AIAYN:6.1:c022",
+      "AIAYN:T3:r01"
+     ],
+     "added_candidates": [
+      "HNET:T3:r01",
+      "HNET:T3:r02",
+      "HNET:T3:r03",
+      "HNET:T3:r04",
+      "MOSHI:T3:r01",
+      "MOSHI:T3:r02"
+     ],
+     "context_tokens": 1194,
+     "rerank_ms": 2452.5,
+     "total_ms": 2494.5,
+     "gold_in_context": {
+      "AIAYN:T3:r01": true,
+      "AIAYN:T3:r02": false
+     },
+     "gold_rank_after_rerank": {
+      "AIAYN:T3:r01": 3,
+      "AIAYN:T3:r02": 4
+     },
+     "table3_rows_in_context": [
+      "AIAYN:T3:r01: base h=8; (A) h=1; (A) h=4; (A) h=16; (A) h=32; (B) ; (B) "
+     ],
+     "other_tables_in_context": []
+    },
+    "other_questions": [
+     {
+      "id": "q11",
+      "question": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+      "before": [
+       "AIAYN:6.2:c023",
+       "AIAYN:6.1:c022",
+       "AIAYN:T3:r01"
+      ],
+      "after": [
+       "AIAYN:6.2:c023",
+       "AIAYN:6.1:c022",
+       "AIAYN:T3:r01"
+      ],
+      "changed": false
+     }
+    ],
+    "unaffected_identical": true
+   }
+  }
+ }
+}

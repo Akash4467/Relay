@@ -1,0 +1,10 @@
+q16 | ok refused model: not in papers | calls 1 | tok 1870 + 37 | run {'requests': 2, 'tokens': 1907, 'refused': 0}
+q20 | ok refused model: not in papers | calls 1 | tok 1914 + 58 | run {'requests': 3, 'tokens': 3879, 'refused': 0}
+q01 | ok refused verification failed after redraft | calls 2 | tok 4342 + 378 | run {'requests': 5, 'tokens': 8599, 'refused': 0}
+q04 | ok normal None | calls 2 | tok 3946 + 389 | run {'requests': 7, 'tokens': 12934, 'refused': 0}
+q07 | ok normal None | calls 2 | tok 4274 + 761 | run {'requests': 9, 'tokens': 17969, 'refused': 0}
+q12 | ok refused verification failed after redraft | calls 2 | tok 4050 + 320 | run {'requests': 11, 'tokens': 22339, 'refused': 0}
+q13 | ok normal None | calls 2 | tok 4492 + 414 | run {'requests': 13, 'tokens': 27245, 'refused': 0}
+q15 | ok refused verification failed after redraft | calls 2 | tok 4374 + 369 | run {'requests': 15, 'tokens': 31988, 'refused': 0}
+q14 | rate_limited unavailable daily_budget_exhausted | calls 1 | tok 0 + 0 | run {'requests': 16, 'tokens': 31988, 'refused': 0}
+STOP: Groq daily limit (429) at q14; remaining questions not run

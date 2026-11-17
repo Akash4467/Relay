@@ -1,0 +1,12 @@
+{
+  "scenario": "steady",
+  "offered": 21,
+  "admitted": 19,
+  "completed": 15,
+  "rejected": 6,
+  "timed_out": 0,
+  "gave_up": 0,
+  "errors": 0,
+  "duration_s": 600,
+  "offered_per_min": 2.1
+}

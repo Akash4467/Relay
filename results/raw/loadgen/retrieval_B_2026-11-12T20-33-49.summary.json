@@ -1,0 +1,12 @@
+{
+  "scenario": "retrieval_B",
+  "offered": 13,
+  "admitted": 12,
+  "completed": 9,
+  "rejected": 3,
+  "timed_out": 0,
+  "gave_up": 1,
+  "errors": 0,
+  "duration_s": 360,
+  "offered_per_min": 2.17
+}

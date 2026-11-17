@@ -1,0 +1,41 @@
+{
+ "question_id": "q08",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:04:58.440+00:00",
+  "t_send_ns": 205948441781800,
+  "status": 200,
+  "t_first_byte_ns": 205948899906600,
+  "t_first_content_ns": 205949615708100,
+  "t_last_ns": 205949985804900,
+  "max_gap_ms": 715.7742,
+  "text": "We chose this function because we hypothesized it would allow the model to easily learn to attend by relative positions, since for any fixed offset k, PE_pos+k can be represented as a linear function of PE_pos [AIAYN:3.5:c020]. We also experimented with using learned positional embeddings instead, and found that the two versions produced nearly identical results (see Table 3 row (E)) [AIAYN:3.5:c020]. In row (E) we replace our sinusoidal positional encoding with learned positional embeddings, and observe nearly identical results to the base model [AIAYN:6.2:c031]. In Table 3, the (E) configuration has PPL / (dev) = 4.92; BLEU / (dev) = 25.7 [AIAYN:T3:r08].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.370056216,
+   "prompt_tokens": 2609,
+   "prompt_time": 0.158236728,
+   "completion_tokens": 441,
+   "completion_time": 0.932581083,
+   "total_tokens": 3050,
+   "total_time": 1.090817811,
+   "completion_tokens_details": {
+    "reasoning_tokens": 259
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "980",
+   "x-ratelimit-reset-requests": "28m48s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2882",
+   "x-ratelimit-reset-tokens": "38.385s"
+  },
+  "error": null,
+  "first_byte_ms": 458.1,
+  "first_content_ms": 1173.9,
+  "total_ms": 1544.0
+ }
+}

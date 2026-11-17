@@ -1,0 +1,44 @@
+{
+ "question_id": "q09",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:05:16.770+00:00",
+  "t_send_ns": 205966771057000,
+  "status": 200,
+  "t_first_byte_ns": 205967037217700,
+  "t_first_content_ns": 205967594355600,
+  "t_last_ns": 205968488467500,
+  "max_gap_ms": 557.1175,
+  "text": "The authors state that the theoretical latency of 160 ms is achieved by designing a streaming, hierarchical architecture with an acoustic delay of 2 during pretraining and an acoustic delay of 1 during finetuning, which together result in the 160 ms figure【MOSHI:5.3:c083】. The authors also report that the practical latency is about 200 ms, which is higher than the 230 ms average response time measured in natural conversations across 10 languages【MOSHI:1:c005】【MOSHI:abstract:c002】.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.159135011,
+   "prompt_tokens": 2002,
+   "prompt_time": 0.388976141,
+   "completion_tokens": 198,
+   "completion_time": 1.067585207,
+   "total_tokens": 2200,
+   "total_time": 1.456561348,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 74
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "979",
+   "x-ratelimit-reset-requests": "30m14.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2857",
+   "x-ratelimit-reset-tokens": "38.572s"
+  },
+  "error": null,
+  "first_byte_ms": 266.2,
+  "first_content_ms": 823.3,
+  "total_ms": 1717.4
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "question_id": "q14",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:51:32.087+00:00",
+  "t_send_ns": 201542088014300,
+  "status": 200,
+  "t_first_byte_ns": 201542552485300,
+  "t_first_content_ns": 201542957688700,
+  "t_last_ns": 201543034011200,
+  "max_gap_ms": 405.1685,
+  "text": "The authors’ original Transformer translation experiments used the GPT‑2 tokenizer (i.e., BPE‑based tokenization) for inputs [HNET:3.1:c053]. H‑Net models take raw byte inputs and learn a dynamic, content‑dependent chunking strategy instead of fixed BPE tokens [HNET:abstract:c001]. The retrieved passages do not state how the original Transformer experiments segmented the input.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.368094096,
+   "prompt_tokens": 1987,
+   "prompt_time": 0.07214805,
+   "completion_tokens": 201,
+   "completion_time": 0.416400203,
+   "total_tokens": 2188,
+   "total_time": 0.488548253,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 106
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "943",
+   "x-ratelimit-reset-requests": "1h22m4.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5242",
+   "x-ratelimit-reset-tokens": "20.685s"
+  },
+  "error": null,
+  "first_byte_ms": 464.5,
+  "first_content_ms": 869.7,
+  "total_ms": 946.0
+ }
+}

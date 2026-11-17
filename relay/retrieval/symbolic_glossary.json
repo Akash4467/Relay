@@ -1,0 +1,25 @@
+{
+ "about": "Phase 11A symbolic table-header glossary. Document-specific: every entry names its paper and table, quotes the sentence of THAT paper (corpus c6 paragraphs, or the table's own caption) that defines the symbol, and its meaning phrases are verbatim substrings of that sentence. No outside synonyms. Verified by experiments/phase11/glossary.py (check()) and its tests. Author: assistant, 2026-11-14; entries read against the LaTeX source and PDF text; no independent review.",
+ "entries": [
+  {"paper": "AIAYN", "table_id": "T3", "symbol": "h", "meaning": ["parallel attention layers, or heads"],
+   "source": "paragraph", "section_id": "3.2.2", "sentence": "In this work we employ h=8 parallel attention layers, or heads."},
+  {"paper": "AIAYN", "table_id": "T3", "symbol": "d_k", "meaning": ["queries and keys of dimension"],
+   "source": "paragraph", "section_id": "3.2.1", "sentence": "The input consists of queries and keys of dimension d_k, and values of dimension d_v."},
+  {"paper": "AIAYN", "table_id": "T3", "symbol": "d_v", "meaning": ["values of dimension"],
+   "source": "paragraph", "section_id": "3.2.1", "sentence": "The input consists of queries and keys of dimension d_k, and values of dimension d_v."},
+  {"paper": "AIAYN", "table_id": "T3", "symbol": "d_model", "meaning": ["outputs of dimension"],
+   "source": "paragraph", "section_id": "3.1", "sentence": "To facilitate these residual connections, all sub-layers in the model, as well as the embedding layers, produce outputs of dimension d_model=512."},
+  {"paper": "AIAYN", "table_id": "T3", "symbol": "d_ff", "meaning": ["inner-layer has dimensionality"],
+   "source": "paragraph", "section_id": "3.3", "sentence": "The dimensionality of input and output is d_model=512, and the inner-layer has dimensionality d_ff=2048."},
+  {"paper": "AIAYN", "table_id": "T3", "symbol": "N", "meaning": ["stack of", "identical layers"],
+   "source": "paragraph", "section_id": "3.1", "sentence": "The encoder is composed of a stack of N=6 identical layers."},
+  {"paper": "AIAYN", "table_id": "T3", "symbol": "P_drop", "meaning": ["dropout rate"],
+   "source": "paragraph", "section_id": "6.1", "sentence": "The Transformer (big) model trained for English-to-French used dropout rate P_drop=0.1, instead of 0.3."},
+  {"paper": "AIAYN", "table_id": "T3", "symbol": "ε_ls", "meaning": ["label smoothing"],
+   "source": "paragraph", "section_id": "5.4", "sentence": "During training, we employed label smoothing of value ε_ls=0.1 ."},
+  {"paper": "MOSHI", "table_id": "T4", "symbol": "f_s", "meaning": ["audio sample rate"],
+   "source": "caption", "sentence": "f_s is the audio sample rate and f_r the codec frame rate."},
+  {"paper": "MOSHI", "table_id": "T4", "symbol": "f_r", "meaning": ["codec frame rate"],
+   "source": "caption", "sentence": "f_s is the audio sample rate and f_r the codec frame rate."}
+ ]
+}

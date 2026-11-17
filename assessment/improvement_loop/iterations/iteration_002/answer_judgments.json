@@ -1,0 +1,8 @@
+{
+ "about": "ASSISTANT judgments (not independent) for answered answerable replies in iteration_002/live.",
+ "judgments": {
+  "live/q04": {"grade": "correct_answer", "why": "Q = 8 quantizers, codebook 2048, 12.5 Hz, 1.1 kbps (MOSHI:3.3.1:c030). Readability: written in the paper's 'We use' voice."},
+  "live/q13": {"grade": "correct_answer", "why": "55.5 (2-stage H-Net, GPT-3 Large) vs 53.3 (Transformer, GPT-3 Large); Transformer at GPT-3 XL 55.5. Readability: three raw 'Configuration ... has Average / acc = ...' lines; the match with the XL Transformer is shown by the equal values, not stated."},
+  "live/q03": {"grade": "correct_answer", "why": "as in the baseline"}
+ }
+}

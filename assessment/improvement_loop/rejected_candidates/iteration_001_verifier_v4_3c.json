@@ -1,0 +1,14 @@
+{
+ "iteration_id": "iteration_001",
+ "git_head": "4688baf449321a4f24a49cb509edbf6b040a7a23",
+ "working_tree_snapshot": "sha256 over every relay/ and config/ .py/.yaml/.json file (sorted) = 1b0f5b1d2c62e5fc, computed after the iteration_002 candidate was added; production files unchanged since the baseline",
+ "candidate": {"name": "verifier v4.3c", "module": "relay.candidate_v4_3.verifier", "change": "NLI premise of a cited text passage is prefixed with the paper's verbatim self-identification sentence (AIAYN:1:c003, MOSHI:abstract:c001, HNET:1:c005); everything else is the frozen v4.2 verify()"},
+ "targeted_failures": ["F-VER-SUBJ: q02, q15, q04"],
+ "offline_regression": {"unit_tests": "tests/unit/test_candidate_v4_3.py 5/5 passed", "full_suite": "see iteration_002/offline_tests.json (same tree)",
+   "verifier_stress_160_pairs": {"false_rejection": "v4.2 22 -> v4.3c 21", "false_acceptance": "v4.2 6 -> v4.3c 6", "changed": "s13, s16, f2 now accepted (supported); s05, l1 now rejected (supported)"},
+   "live_draft_replay_33_drafts": {"replay_reproduces_recorded_verdicts": "33/33", "false_rejection": "v4.2 9 -> v4.3c 10", "false_acceptance": "v4.2 1 -> v4.3c 1", "flips": "q03 draft 1 (labelled correct) accepted -> rejected"}},
+ "live": {"requests": 0, "tokens": 0, "why": "offline evidence was negative on the live failure drafts; brief §7: no tokens for a candidate that does not pass offline"},
+ "decision": "rejected",
+ "reason": "it rescues no live failure (the drafts add qualifiers such as 'original' and 'base' that the self-reference does not cover; probe: 0.02 / 0.13) and it rejects one previously accepted correct answer (q03)",
+ "details": "offline_verifier_comparison.json"
+}

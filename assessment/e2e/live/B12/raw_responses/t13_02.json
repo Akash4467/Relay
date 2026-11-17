@@ -1,0 +1,41 @@
+{
+ "question_id": "t13",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T12:31:31.312+00:00",
+  "t_send_ns": 193141313154700,
+  "status": 200,
+  "t_first_byte_ns": 193141716485200,
+  "t_first_content_ns": 193141986217100,
+  "t_last_ns": 193142080441200,
+  "max_gap_ms": 269.7124,
+  "text": "The configuration with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] reports a perplexity of 135.4 [MOSHI:T5:r01].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.287312694,
+   "prompt_tokens": 2027,
+   "prompt_time": 0.090711563,
+   "completion_tokens": 131,
+   "completion_time": 0.277346342,
+   "total_tokens": 2158,
+   "total_time": 0.368057905,
+   "completion_tokens_details": {
+    "reasoning_tokens": 76
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "984",
+   "x-ratelimit-reset-requests": "23m2.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2456",
+   "x-ratelimit-reset-tokens": "41.58s"
+  },
+  "error": null,
+  "first_byte_ms": 403.3,
+  "first_content_ms": 673.1,
+  "total_ms": 767.3
+ }
+}

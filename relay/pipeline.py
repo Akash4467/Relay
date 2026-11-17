@@ -1,0 +1,92 @@
+"""One request end to end (DESIGN phase 2): retrieve -> structural sufficiency -> draft -> verify -> [redraft]
+-> answer or refuse. Phase 3 wraps these same steps as LangGraph nodes.
+
+The LLM is any callable taking chat messages and returning the reply text; only the draft and redraft steps
+call it (CLAUDE.md hard rule 7). A structural failure refuses before any LLM call.
+"""
+from __future__ import annotations
+
+import time
+from dataclasses import dataclass, field
+from typing import Callable
+
+from relay.config import RetrievalSetting, app_config
+from relay.llm import prompts
+from relay.llm.hosted import TruncatedOutput
+from relay.retrieval.search import Evidence, Index, policy_flags, search
+from relay.verify import citations, sufficiency
+from relay.verify.verifier import Report, verify
+
+LLM = Callable[[list[dict]], str]
+
+
+@dataclass
+class Result:
+    status: str                      # "answered" | "refused"
+    text: str
+    citations: list[str] = field(default_factory=list)
+    refusal_reason: str | None = None
+    llm_calls: int = 0
+    drafts: list[str] = field(default_factory=list)
+    reports: list[Report] = field(default_factory=list)
+    evidence: Evidence | None = None
+    verification_ms: float = 0.0    # NLI + citation/evidence checks, summed over drafts
+
+
+@dataclass
+class Verifier:
+    nli_model: object
+    entail_min: float
+    entail_min_flagged: float
+
+
+def _refuse(reason: str, ev: Evidence, **kw) -> Result:
+    return Result("refused", prompts.refusal_text(ev.passages), refusal_reason=reason, evidence=ev, **kw)
+
+
+def answer_from_evidence(question: str, ev: Evidence, llm: LLM, verifier: Verifier, corpus_ids: set[str],
+                         allow_redraft: bool = True, verify_fn: Callable[..., Report] | None = None) -> Result:
+    """verify_fn: the verifier; None (every production caller) is the frozen v4 relay.verify.verifier.verify.
+    A candidate (e.g. relay.candidate_v5.verifier.verify) is used only when passed explicitly."""
+    check = verify_fn or verify  # resolved at call time, so the default is always this module's v4 verify
+    suff = sufficiency.check(question, ev.passages)
+    if not suff.ok:
+        return _refuse(f"insufficient evidence: {suff.reason}", ev)
+
+    drafts, reports = [], []
+    verify_ns = 0
+    msgs = prompts.messages(question, ev.passages, ev.caption_sharing)  # model view; ev.passages stay complete
+    truncated = False
+    for attempt in range(2 if allow_redraft else 1):
+        try:
+            draft = llm(msgs).strip()
+        except TruncatedOutput as t:  # cut off at the token limit: never verified or shown; uses the one redraft (F2)
+            drafts.append(t.text.strip())
+            truncated = True
+            msgs = prompts.redraft_messages(question, ev.passages, t.text.strip(), [(
+                t.text.strip()[-80:], "the answer was cut off at the output length limit; answer in fewer sentences")],
+                ev.caption_sharing)
+            continue
+        truncated = False
+        draft = citations.normalize_brackets(draft)  # the answer shown uses the same [ID] form the verifier read
+        drafts.append(draft)
+        if prompts.is_not_in_papers(draft):
+            return _refuse("model: not in papers", ev, llm_calls=len(drafts), drafts=drafts, reports=reports)
+        t0 = time.perf_counter_ns()
+        report = check(draft, ev.passages, corpus_ids, verifier.nli_model,
+                       verifier.entail_min, verifier.entail_min_flagged)
+        verify_ns += time.perf_counter_ns() - t0
+        reports.append(report)
+        if report.ok:
+            return Result("answered", draft, report.cited(), llm_calls=len(drafts), drafts=drafts,
+                          reports=reports, evidence=ev, verification_ms=round(verify_ns / 1e6, 1))
+        msgs = prompts.redraft_messages(question, ev.passages, draft, report.failures(), ev.caption_sharing)
+    reason = ("model output truncated" if truncated else "verification failed") +         (" after redraft" if len(drafts) > 1 else "")
+    return _refuse(reason, ev, llm_calls=len(drafts), drafts=drafts, reports=reports,
+                   verification_ms=round(verify_ns / 1e6, 1))
+
+
+def run(question: str, setting: RetrievalSetting, context_cap: int, index: Index, llm: LLM, verifier: Verifier,
+        reranker=None, allow_redraft: bool = True) -> Result:
+    ev = search(question, setting, context_cap, index, reranker, **policy_flags(app_config()))
+    return answer_from_evidence(question, ev, llm, verifier, set(index.chunks), allow_redraft)

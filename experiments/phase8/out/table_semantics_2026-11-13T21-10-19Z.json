@@ -1,0 +1,1062 @@
+{
+ "case_file": "experiments/phase8/table_semantics_heldout.json",
+ "summary": {
+  "A": {
+   "supported_accepted": 4,
+   "supported_rejected": 4,
+   "unsupported_accepted": 2,
+   "unsupported_rejected": 6,
+   "FAR": 0.25,
+   "FRR": 0.5
+  },
+  "B1": {
+   "supported_accepted": 6,
+   "supported_rejected": 2,
+   "unsupported_accepted": 0,
+   "unsupported_rejected": 8,
+   "FAR": 0.0,
+   "FRR": 0.25
+  },
+  "B2": {
+   "supported_accepted": 4,
+   "supported_rejected": 4,
+   "unsupported_accepted": 0,
+   "unsupported_rejected": 8,
+   "FAR": 0.0,
+   "FRR": 0.5
+  },
+  "C": {
+   "supported_accepted": 0,
+   "supported_rejected": 8,
+   "unsupported_accepted": 0,
+   "unsupported_rejected": 8,
+   "FAR": 0.0,
+   "FRR": 1.0,
+   "abstained": 15
+  },
+  "C+A": {
+   "supported_accepted": 4,
+   "supported_rejected": 4,
+   "unsupported_accepted": 2,
+   "unsupported_rejected": 6,
+   "FAR": 0.25,
+   "FRR": 0.5
+  },
+  "C2": {
+   "supported_accepted": 5,
+   "supported_rejected": 3,
+   "unsupported_accepted": 0,
+   "unsupported_rejected": 8,
+   "FAR": 0.0,
+   "FRR": 0.375,
+   "abstained": 7
+  },
+  "C2+A": {
+   "supported_accepted": 7,
+   "supported_rejected": 1,
+   "unsupported_accepted": 1,
+   "unsupported_rejected": 7,
+   "FAR": 0.125,
+   "FRR": 0.125
+  },
+  "C2g": {
+   "supported_accepted": 5,
+   "supported_rejected": 3,
+   "unsupported_accepted": 0,
+   "unsupported_rejected": 8,
+   "FAR": 0.0,
+   "FRR": 0.375
+  },
+  "D1": {
+   "supported_accepted": 6,
+   "supported_rejected": 2,
+   "unsupported_accepted": 0,
+   "unsupported_rejected": 8,
+   "FAR": 0.0,
+   "FRR": 0.25
+  },
+  "D2": {
+   "supported_accepted": 4,
+   "supported_rejected": 4,
+   "unsupported_accepted": 0,
+   "unsupported_rejected": 8,
+   "FAR": 0.0,
+   "FRR": 0.5
+  }
+ },
+ "results": [
+  {
+   "id": "h01",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the related-architectures table, SpaceByte is marked with a check under Autoregressive.",
+   "chunk": "HNET:T6:r03",
+   "A": {
+    "accepted": false,
+    "entailment": 0.855,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.86 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.573,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.57 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.213,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.21 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.573,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.57 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.213,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.21 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: row not unique (2)"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: row not unique (2)"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "rejected: unresolved mark claim"
+   }
+  },
+  {
+   "id": "h02",
+   "label": "unsupported",
+   "category": "checkmark_incorrect",
+   "claim": "In the related-architectures table, Canine is marked with a check under Autoregressive.",
+   "chunk": "HNET:T6:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.773,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.77 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.326,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.33 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.207,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.21 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.326,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.33 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.207,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.21 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": false,
+    "why": "cell Autoregressive = '✗'; claim says check"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": false,
+    "from": "deterministic"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "h03",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the related-architectures table, Charformer is marked with a check under Multi-stage / Hierarchy.",
+   "chunk": "HNET:T6:r01",
+   "A": {
+    "accepted": true,
+    "entailment": 0.975,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.976,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.828,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.83 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.976,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.828,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.83 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C2": {
+    "accepted": true,
+    "abstained": false,
+    "why": "cell Multi-stage / Hierarchy = '✓'; claim says check"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": true,
+    "from": "deterministic"
+   },
+   "C2g": {
+    "accepted": true,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "h04",
+   "label": "unsupported",
+   "category": "checkmark_incorrect",
+   "claim": "In the related-architectures table, DPT (Entropy) is marked with a check under Multi-stage / Hierarchy.",
+   "chunk": "HNET:T6:r04",
+   "A": {
+    "accepted": true,
+    "entailment": 0.975,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.896,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.90 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.858,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.86 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.896,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.90 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.858,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.86 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": false,
+    "why": "cell Multi-stage / Hierarchy = '✗'; claim says check"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": false,
+    "from": "deterministic"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "h05",
+   "label": "supported",
+   "category": "cross_correct",
+   "claim": "In the related-architectures table, eByte is marked with a cross under Autoregressive.",
+   "chunk": "HNET:T6:r03",
+   "A": {
+    "accepted": false,
+    "entailment": 0.446,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.45 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.84,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.84 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.695,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.70 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.84,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.84 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.695,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.70 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C2": {
+    "accepted": true,
+    "abstained": false,
+    "why": "cell Autoregressive = '✗'; claim says cross"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": true,
+    "from": "deterministic"
+   },
+   "C2g": {
+    "accepted": true,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "h06",
+   "label": "supported",
+   "category": "blank_described_as_blank",
+   "claim": "In the audio quality table, the causal cell for SpeechTokenizer at 4.0kbps is blank.",
+   "chunk": "MOSHI:T4:r03",
+   "A": {
+    "accepted": true,
+    "entailment": 0.991,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.993,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.996,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.993,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.996,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['at']"
+   },
+   "C2": {
+    "accepted": true,
+    "abstained": false,
+    "why": "cell causal = '(blank)'; claim says blank"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": true,
+    "from": "deterministic"
+   },
+   "C2g": {
+    "accepted": true,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "h07",
+   "label": "unsupported",
+   "category": "cross_incorrect",
+   "claim": "In the audio quality table, Mimi, non adv. only is marked with a cross under causal.",
+   "chunk": "MOSHI:T4:r04",
+   "A": {
+    "accepted": false,
+    "entailment": 0.574,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.57 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.493,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.49 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.274,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.27 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.493,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.49 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.274,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.27 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": false,
+    "why": "cell causal = '✓'; claim says cross"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": false,
+    "why": "cell causal = '✓'; claim says cross"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "deterministic"
+   },
+   "C2+A": {
+    "accepted": false,
+    "from": "deterministic"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "h08",
+   "label": "supported",
+   "category": "blank_described_as_blank",
+   "claim": "In the Mimi ablation table with MUSHRA scores, the row with ABX 10.8% has a blank cell under Transformer in encoder.",
+   "chunk": "MOSHI:T3:r02",
+   "A": {
+    "accepted": true,
+    "entailment": 0.965,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.972,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.981,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.972,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.981,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['Transformer / in encoder', 'ABX (↓)', 'MUSHRA (↑)'])"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['score']"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": true,
+    "from": "v4"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "rejected: unresolved mark claim"
+   }
+  },
+  {
+   "id": "h09",
+   "label": "unsupported",
+   "category": "wrong_column",
+   "claim": "In the Mimi ablation table with MUSHRA scores, the row with ABX 10.8% is marked with a check under Transformer in encoder.",
+   "chunk": "MOSHI:T3:r02",
+   "A": {
+    "accepted": false,
+    "entailment": 0.443,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.44 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.763,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.76 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.181,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.18 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.763,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.76 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.181,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.18 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['Transformer / in encoder', 'ABX (↓)', 'MUSHRA (↑)'])"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['score']"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "rejected: unresolved mark claim"
+   }
+  },
+  {
+   "id": "h10",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the delay-pattern ablation, the row with transcript length 1920 is marked with a check under Inner Monologue.",
+   "chunk": "MOSHI:T6:r03",
+   "A": {
+    "accepted": false,
+    "entailment": 0.062,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.06 < 0.9); term 'delay-pattern' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.919,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.312,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.31 < 0.9); term 'delay-pattern' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.919,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.312,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.31 < 0.9); term 'delay-pattern' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['Inner / Monologue', 'Transcript / Length (↑)'])"
+   },
+   "C2": {
+    "accepted": true,
+    "abstained": false,
+    "why": "cell Inner / Monologue = '✓'; claim says check"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": true,
+    "from": "deterministic"
+   },
+   "C2g": {
+    "accepted": true,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "h11",
+   "label": "unsupported",
+   "category": "correct_symbol_wrong_configuration",
+   "claim": "In the delay-pattern ablation, the row with transcript length 486 is marked with a check under Inner Monologue.",
+   "chunk": "MOSHI:T6:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.242,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.24 < 0.9); term 'delay-pattern' not in the cited passage"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.405,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.41 < 0.9); term 'delay-pattern' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.089,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.09 < 0.9); term 'delay-pattern' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.405,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.41 < 0.9); term 'delay-pattern' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.089,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.09 < 0.9); term 'delay-pattern' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['Inner / Monologue', 'Transcript / Length (↑)'])"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": false,
+    "why": "cell Inner / Monologue = '(blank)'; claim says check"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": false,
+    "from": "deterministic"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "h12",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the regurgitation table, the single-stream row with a regurgitation rate of 98.40 is marked with a check under prompted (3s).",
+   "chunk": "MOSHI:T13:r01",
+   "A": {
+    "accepted": true,
+    "entailment": 0.981,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.991,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.987,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.991,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.987,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['prompted (3s)', 'regurgitation rate (%)'])"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: row not unique (5)"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": true,
+    "from": "v4"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "rejected: unresolved mark claim"
+   }
+  },
+  {
+   "id": "h13",
+   "label": "unsupported",
+   "category": "correct_symbol_wrong_configuration",
+   "claim": "In the regurgitation table, the single-stream row with a regurgitation rate of 0.13 is marked with a check under prompted (3s).",
+   "chunk": "MOSHI:T13:r01",
+   "A": {
+    "accepted": false,
+    "entailment": 0.761,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.76 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.318,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.32 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.404,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.40 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.318,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.32 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.404,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.40 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: column not unique (['prompted (3s)', 'regurgitation rate (%)'])"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: row not unique (5)"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "rejected: unresolved mark claim"
+   }
+  },
+  {
+   "id": "h14",
+   "label": "supported",
+   "category": "checkmark_correct",
+   "claim": "In the token idempotence table, the Mimi row with ΔT = 20ms and k=1 probability 0.633 is marked with a check under the RVQGAN attack.",
+   "chunk": "MOSHI:T16:r07",
+   "A": {
+    "accepted": false,
+    "entailment": 0.746,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.75 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": true,
+    "entailment": 0.943,
+    "reasons": []
+   },
+   "B2": {
+    "accepted": true,
+    "entailment": 0.942,
+    "reasons": []
+   },
+   "D1": {
+    "accepted": true,
+    "entailment": 0.943,
+    "reasons": []
+   },
+   "D2": {
+    "accepted": true,
+    "entailment": 0.942,
+    "reasons": []
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['attack', 'probability', 'token']"
+   },
+   "C2": {
+    "accepted": true,
+    "abstained": false,
+    "why": "cell attacks / RVQGAN = '✓'; claim says check"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": true,
+    "from": "deterministic"
+   },
+   "C2g": {
+    "accepted": true,
+    "from": "deterministic"
+   }
+  },
+  {
+   "id": "h15",
+   "label": "unsupported",
+   "category": "checkmark_interpreted",
+   "claim": "Mimi, adv. loss only is a causal codec.",
+   "chunk": "MOSHI:T4:r03",
+   "A": {
+    "accepted": false,
+    "entailment": 0.225,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.22 < 0.9)"
+    ]
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.246,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.25 < 0.9)"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.148,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.15 < 0.9)"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.246,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.25 < 0.9)"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.148,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.15 < 0.9)"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: not a single literal mark claim"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: not a single literal mark claim"
+   },
+   "C+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": false,
+    "from": "v4"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "v4"
+   }
+  },
+  {
+   "id": "h16",
+   "label": "unsupported",
+   "category": "mark_claimed_on_text_cell",
+   "claim": "In the related-architectures table, H-Net is marked with a check under Chunking Mechanism.",
+   "chunk": "HNET:T6:r05",
+   "A": {
+    "accepted": true,
+    "entailment": 0.973,
+    "reasons": []
+   },
+   "B1": {
+    "accepted": false,
+    "entailment": 0.887,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.89 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "B2": {
+    "accepted": false,
+    "entailment": 0.486,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.49 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D1": {
+    "accepted": false,
+    "entailment": 0.887,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.89 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "D2": {
+    "accepted": false,
+    "entailment": 0.486,
+    "reasons": [
+     "not supported by the cited passage (entailment 0.49 < 0.9); term 'related-architectures' not in the cited passage"
+    ]
+   },
+   "C": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: unexplained words ['related-architectures']"
+   },
+   "C2": {
+    "accepted": false,
+    "abstained": true,
+    "why": "abstain: cell is not a mark ('dynamic chunking')"
+   },
+   "C+A": {
+    "accepted": true,
+    "from": "v4"
+   },
+   "C2+A": {
+    "accepted": true,
+    "from": "v4"
+   },
+   "C2g": {
+    "accepted": false,
+    "from": "rejected: unresolved mark claim"
+   }
+  }
+ ],
+ "threshold": 0.9
+}

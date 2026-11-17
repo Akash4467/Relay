@@ -1,0 +1,54 @@
+ M docs/DESIGN.md
+ M relay/main.py
+ M relay/pipeline.py
+ M relay/retrieval/chunker.py
+ M relay/retrieval/latex_parse.py
+ M results/results.csv
+ M scripts/ask.py
+ M scripts/build_writeup.py
+ M scripts/make_results_csv.py
+ M scripts/make_tables.py
+ M tests/unit/test_results.py
+ M writeup/relay_writeup.md
+ M writeup/relay_writeup.pdf
+?? 2026-11-13-124510-local-command-caveatthe-command-below-was-run-d.txt
+?? README.md
+?? data/corpus/
+?? docs/architecture.md
+?? docs/architecture.template.md
+?? docs/relay_architecture.pdf
+?? eval/answer_quality_grades.csv
+?? eval/answer_quality_report.md
+?? eval/answer_quality_results.csv
+?? eval/answer_quality_sentences.csv
+?? eval/answer_quality_set.json
+?? eval/phase5_root_cause_report.md
+?? eval/phase6_extraction_report.md
+?? eval/phase6_retrieval_comparison.csv
+?? eval/phase6_retrieval_comparison.md
+?? eval/phase7/
+?? eval/phase7_answer_quality_report.md
+?? eval/phase7_retrieval_report.md
+?? eval/phase8_context_report.md
+?? eval/phase8_decision_report.md
+?? eval/phase8_extraction_report.md
+?? eval/phase8_table_retrieval_report.md
+?? eval/phase8_verifier_semantics_report.md
+?? eval/verifier_v4_report.md
+?? eval/verifier_v5_offline_comparison.md
+?? experiments/
+?? relay/candidate_v5/
+?? relay/eval/answer_quality.py
+?? relay/live_validation.py
+?? results/candidate_v5/
+?? results/live_validation/
+?? results/raw/answer_quality/
+?? results/raw/real/2026-11-13.jsonl
+?? scripts/build_corpus.py
+?? scripts/make_answer_quality.py
+?? submission/
+?? tests/unit/test_answer_quality.py
+?? tests/unit/test_candidate_v5.py
+?? tests/unit/test_latex_parse_e2.py
+?? tests/unit/test_live_validation.py
+4688baf449321a4f24a49cb509edbf6b040a7a23

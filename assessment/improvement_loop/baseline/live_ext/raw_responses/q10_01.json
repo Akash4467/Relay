@@ -1,0 +1,44 @@
+{
+ "question_id": "q10",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:23:34.804+00:00",
+  "t_send_ns": 178264805724700,
+  "status": 200,
+  "t_first_byte_ns": 178265225965300,
+  "t_first_content_ns": 178265713667200,
+  "t_last_ns": 178266828216100,
+  "max_gap_ms": 487.6821,
+  "text": "H‑Net builds its hierarchy by applying a dynamic‑chunking layer that uses a routing module to draw content‑dependent chunk boundaries and a downsampler that keeps vectors at those boundary positions, thereby creating a compressed representation that can be further processed in subsequent stages [HNET:1:c012][HNET:T6:r03]. The architecture can be iterated, so that the output of one dynamic‑chunking stage becomes the input to a second, yielding a nested, multi‑stage hierarchy [HNET:3.1:c049]. Empirically, adding the second stage improves performance: H‑Net (2‑stage) is significantly better than H‑Net (1‑stage) [HNET:3.1:c049].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.319920148,
+   "prompt_tokens": 1825,
+   "prompt_time": 0.224831086,
+   "completion_tokens": 286,
+   "completion_time": 1.3829417529999999,
+   "total_tokens": 2111,
+   "total_time": 1.607772839,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 121
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "959",
+   "x-ratelimit-reset-requests": "59m2.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5375",
+   "x-ratelimit-reset-tokens": "19.687s"
+  },
+  "error": null,
+  "first_byte_ms": 420.2,
+  "first_content_ms": 907.9,
+  "total_ms": 2022.5
+ }
+}

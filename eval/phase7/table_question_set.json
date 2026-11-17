@@ -1,0 +1,808 @@
+{
+ "name": "phase7_repaired_tables_v1",
+ "created": "2026-11-13",
+ "author": "assistant (Claude); questions and gold written from the LaTeX source tables and the c4 extraction",
+ "review_status": "pending independent human review; not used for any production decision until reviewed",
+ "separate_from": "eval/questions.jsonl and eval/answer_quality_set.json (the original evaluation); not merged",
+ "symbol_policy": "Marks are referred to as printed (✓, ✗, blank). No question asks what a mark means beyond the column it is in; a blank cell is never treated as 'no', false or zero.",
+ "evidence_format": "gold.rows: one entry per table row the answer needs. id: strings that appear on that row's line in both c3 and c4 (identify the row). cells: strings that must also appear on the same line for the evidence to be complete (marks, values). Matching is on chunk row lines ('Configuration ...') of chunks from the given table. paper_cells (optional): the value as printed in the paper where the corpus text is known to differ; required for the evidence to be correct.",
+ "questions": [
+  {
+   "question_id": "t01",
+   "paper": "HNET",
+   "table_id": "T6",
+   "type": "symbol_cell",
+   "answerable": true,
+   "question": "In the H-Net paper's table comparing related architectures, is the Autoregressive column marked with a check mark (✓) or a cross (✗) for ByT5?",
+   "expected_answer": "A cross (✗).",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Example Architectures = ByT5"
+      ],
+      "cells": [
+       "Autoregressive = ✗"
+      ]
+     }
+    ],
+    "columns": [
+     "Autoregressive"
+    ]
+   }
+  },
+  {
+   "question_id": "t02",
+   "paper": "HNET",
+   "table_id": "T6",
+   "type": "row_column_symbol",
+   "answerable": true,
+   "question": "In the H-Net paper's related-architectures table, which chunking mechanism is listed for H-Net, and is its Multi-stage / Hierarchy cell marked ✓ or ✗?",
+   "expected_answer": "Dynamic chunking; Multi-stage / Hierarchy is marked ✓.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Chunking Mechanism = dynamic chunking",
+       "Example Architectures = H-Net"
+      ],
+      "cells": [
+       "Multi-stage / Hierarchy = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "Chunking Mechanism",
+     "Multi-stage / Hierarchy"
+    ]
+   }
+  },
+  {
+   "question_id": "t03",
+   "paper": "HNET",
+   "table_id": "T6",
+   "type": "distinguish_configurations",
+   "answerable": true,
+   "question": "In the H-Net paper's related-architectures table, which example architectures of the 'Hierarchical (dynamic)' class have a cross (✗) under Multi-stage / Hierarchy?",
+   "expected_answer": "MANTa, MrT5 and DPT (Gumbel).",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Example Architectures = MANTa"
+      ],
+      "cells": [
+       "Multi-stage / Hierarchy = ✗"
+      ]
+     },
+     {
+      "id": [
+       "Example Architectures = MrT5"
+      ],
+      "cells": [
+       "Multi-stage / Hierarchy = ✗"
+      ]
+     },
+     {
+      "id": [
+       "Example Architectures = DPT (Gumbel)"
+      ],
+      "cells": [
+       "Multi-stage / Hierarchy = ✗"
+      ]
+     }
+    ],
+    "columns": [
+     "Multi-stage / Hierarchy"
+    ]
+   }
+  },
+  {
+   "question_id": "t04",
+   "paper": "HNET",
+   "table_id": "T6",
+   "type": "unanswerable",
+   "answerable": false,
+   "question": "According to the H-Net paper's related-architectures table, how many parameters does BLT have?",
+   "expected_answer": "Refuse: the table has no parameter column.",
+   "gold": {
+    "rows": [],
+    "columns": []
+   }
+  },
+  {
+   "question_id": "t05",
+   "paper": "MOSHI",
+   "table_id": "T3",
+   "type": "symbol_configuration_value",
+   "answerable": true,
+   "question": "In the Moshi paper's Mimi codec ablation table that reports ABX, VisQOL, MOSNet and MUSHRA, what MUSHRA score does the configuration with a check mark in all five component columns obtain?",
+   "expected_answer": "64.0 ± 1.7.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "MUSHRA (↑) = 64.0±1.7"
+      ],
+      "cells": [
+       "Quantization / Rate = ✓",
+       "Transformer / in encoder = ✓",
+       "Transformer / in decoder = ✓",
+       "WavLM / distillation = ✓",
+       "Split / quantizer = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "MUSHRA (↑)"
+    ]
+   }
+  },
+  {
+   "question_id": "t06",
+   "paper": "MOSHI",
+   "table_id": "T3",
+   "type": "blank_cell",
+   "answerable": true,
+   "question": "In that Mimi codec ablation table with MUSHRA scores, which component column has no mark in the row whose ABX error is 6.5%?",
+   "expected_answer": "Split quantizer (its cell is blank; the other four component columns are checked).",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "ABX (↓) = 6.5%",
+       "MUSHRA (↑) = 57.8±1.8"
+      ],
+      "cells": [
+       "Split / quantizer = (blank)",
+       "WavLM / distillation = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "Split / quantizer"
+    ]
+   }
+  },
+  {
+   "question_id": "t07",
+   "paper": "MOSHI",
+   "table_id": "T3",
+   "type": "distinguish_configurations",
+   "answerable": true,
+   "question": "In the Mimi codec ablation table with MUSHRA scores, what ABX error and MUSHRA score does the row with no mark under Quantization Rate report?",
+   "expected_answer": "ABX 8.0%, MUSHRA 68.3 ± 1.7.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "ABX (↓) = 8.0%",
+       "MUSHRA (↑) = 68.3±1.7"
+      ],
+      "cells": [
+       "Quantization / Rate = (blank)"
+      ]
+     }
+    ],
+    "columns": [
+     "ABX (↓)",
+     "MUSHRA (↑)"
+    ]
+   }
+  },
+  {
+   "question_id": "t08",
+   "paper": "MOSHI",
+   "table_id": "T3",
+   "type": "unanswerable",
+   "answerable": false,
+   "question": "How long did training take for each configuration in the Moshi paper's Mimi codec ablation table?",
+   "expected_answer": "Refuse: the table reports no training time.",
+   "gold": {
+    "rows": [],
+    "columns": []
+   }
+  },
+  {
+   "question_id": "t09",
+   "paper": "MOSHI",
+   "table_id": "T4",
+   "type": "row_column_value",
+   "answerable": true,
+   "question": "In the Moshi paper's audio quality evaluation table of neural audio codecs, what frame rate and bitrate are listed for SemantiCodec?",
+   "expected_answer": "50 Hz frame rate, 1.3 kbps.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "SemantiCodec",
+       "f_r = 50Hz",
+       "bitrate = 1.3kbps"
+      ],
+      "cells": []
+     }
+    ],
+    "columns": [
+     "f_r",
+     "bitrate"
+    ]
+   }
+  },
+  {
+   "question_id": "t10",
+   "paper": "MOSHI",
+   "table_id": "T4",
+   "type": "symbol_column",
+   "answerable": true,
+   "question": "In the Moshi paper's audio quality evaluation table, which rows have a check mark (✓) in the causal column?",
+   "expected_answer": "Mimi, adv. loss only; Same, downsampled at 16kHz; Mimi, non adv. only.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Mimi, adv. loss only",
+       "MUSHRA (↑) = 81.0±1.3"
+      ],
+      "cells": [
+       "causal = ✓"
+      ]
+     },
+     {
+      "id": [
+       "Same, downsampled at 16kHz",
+       "MUSHRA (↑) = 77.7±1.4"
+      ],
+      "cells": [
+       "causal = ✓"
+      ]
+     },
+     {
+      "id": [
+       "Mimi, non adv. only",
+       "MUSHRA (↑) = 58.8±1.8"
+      ],
+      "cells": [
+       "causal = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "causal"
+    ]
+   }
+  },
+  {
+   "question_id": "t11",
+   "paper": "MOSHI",
+   "table_id": "T4",
+   "type": "blank_cell",
+   "answerable": true,
+   "question": "In the Moshi paper's audio quality evaluation table, what is shown in the causal column for RVQGAN?",
+   "expected_answer": "The cell is blank (no mark). The table does not state anything else about it.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "RVQGAN",
+       "MUSHRA (↑) = 31.3±1.3"
+      ],
+      "cells": [
+       "causal = (blank)"
+      ]
+     }
+    ],
+    "columns": [
+     "causal"
+    ]
+   }
+  },
+  {
+   "question_id": "t12",
+   "paper": "MOSHI",
+   "table_id": "T4",
+   "type": "unanswerable",
+   "answerable": false,
+   "question": "What MUSHRA score does the Moshi paper's audio quality table report for EnCodec?",
+   "expected_answer": "Refuse: EnCodec is not in the table.",
+   "gold": {
+    "rows": [],
+    "columns": []
+   }
+  },
+  {
+   "question_id": "t13",
+   "paper": "MOSHI",
+   "table_id": "T5",
+   "type": "symbol_configuration_value",
+   "answerable": true,
+   "question": "In the Moshi RQ-Transformer ablation, with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2], what perplexity does the row with a check mark under RQ-Transformer report?",
+   "expected_answer": "36.8.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "[0, 2, 2, 2, 2, 2, 2, 2]",
+       "Perplexity = 136.8"
+      ],
+      "cells": [
+       "RQ-Transformer = ✓"
+      ],
+      "paper_cells": [
+       "Perplexity = 36.8"
+      ]
+     }
+    ],
+    "columns": [
+     "Perplexity"
+    ]
+   },
+   "corpus_defect": "Corpus defect (c3 and c4): the source writes $\\phantom{1}36.8$; pylatexenc renders the invisible digit, so both corpora show 136.8 (likewise 142.2 for 42.2, 140.3 for 40.3). id strings use the corpus text to locate the row; paper_cells hold the value as printed in the paper."
+  },
+  {
+   "question_id": "t14",
+   "paper": "MOSHI",
+   "table_id": "T5",
+   "type": "distinguish_configurations",
+   "answerable": true,
+   "question": "In the Moshi RQ-Transformer ablation, with acoustic delay [0, 1, 2, 3, 4, 5, 6, 7], what perplexity does the row with no mark under RQ-Transformer report?",
+   "expected_answer": "42.2.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "[0, 1, 2, 3, 4, 5, 6, 7]",
+       "Perplexity = 142.2"
+      ],
+      "cells": [
+       "RQ-Transformer = (blank)"
+      ],
+      "paper_cells": [
+       "Perplexity = 42.2"
+      ]
+     }
+    ],
+    "columns": [
+     "Perplexity"
+    ]
+   },
+   "corpus_defect": "Corpus defect (c3 and c4): the source writes $\\phantom{1}36.8$; pylatexenc renders the invisible digit, so both corpora show 136.8 (likewise 142.2 for 42.2, 140.3 for 40.3). id strings use the corpus text to locate the row; paper_cells hold the value as printed in the paper."
+  },
+  {
+   "question_id": "t15",
+   "paper": "MOSHI",
+   "table_id": "T5",
+   "type": "supported_comparison",
+   "answerable": true,
+   "question": "In the Moshi RQ-Transformer ablation, for acoustic delay [0, 1, 2, 3, 4, 5, 6, 7], is perplexity lower in the row with a check mark under RQ-Transformer or in the row without one?",
+   "expected_answer": "Lower with the check mark: 40.3 versus 42.2 (the caption allows comparisons within one delay).",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "[0, 1, 2, 3, 4, 5, 6, 7]",
+       "Perplexity = 140.3"
+      ],
+      "cells": [
+       "RQ-Transformer = ✓"
+      ],
+      "paper_cells": [
+       "Perplexity = 40.3"
+      ]
+     },
+     {
+      "id": [
+       "[0, 1, 2, 3, 4, 5, 6, 7]",
+       "Perplexity = 142.2"
+      ],
+      "cells": [
+       "RQ-Transformer = (blank)"
+      ],
+      "paper_cells": [
+       "Perplexity = 42.2"
+      ]
+     }
+    ],
+    "columns": [
+     "RQ-Transformer",
+     "Perplexity"
+    ]
+   },
+   "corpus_defect": "Corpus defect (c3 and c4): the source writes $\\phantom{1}36.8$; pylatexenc renders the invisible digit, so both corpora show 136.8 (likewise 142.2 for 42.2, 140.3 for 40.3). id strings use the corpus text to locate the row; paper_cells hold the value as printed in the paper."
+  },
+  {
+   "question_id": "t16",
+   "paper": "MOSHI",
+   "table_id": "T5",
+   "type": "unsupported_comparison",
+   "answerable": false,
+   "question": "Which acoustic delay pattern gives the lowest perplexity overall in the Moshi RQ-Transformer ablation?",
+   "expected_answer": "Refuse or caveat: the caption says perplexities are only comparable between models with the same delay.",
+   "gold": {
+    "rows": [],
+    "columns": []
+   }
+  },
+  {
+   "question_id": "t17",
+   "paper": "MOSHI",
+   "table_id": "T6",
+   "type": "symbol_configuration_value",
+   "answerable": true,
+   "question": "In the Moshi ablation of delay patterns, semantic token weight and Inner Monologue, what transcript NLL and transcript length does the row with a check mark under Inner Monologue report?",
+   "expected_answer": "NLL 2.77, length 1920.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Transcript / NLL (↓) = 2.77",
+       "Transcript / Length (↑) = 1920"
+      ],
+      "cells": [
+       "Inner / Monologue = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "Transcript / NLL (↓)",
+     "Transcript / Length (↑)"
+    ]
+   }
+  },
+  {
+   "question_id": "t18",
+   "paper": "MOSHI",
+   "table_id": "T6",
+   "type": "blank_cell",
+   "answerable": true,
+   "question": "In that Moshi ablation of delay patterns and semantic token weight, with semantic token weight 100.0, what transcript length does the row without a mark under Depthwise Parametrization report?",
+   "expected_answer": "538.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Semantic Token / Weight = 100.0",
+       "Transcript / Length (↑) = 538"
+      ],
+      "cells": []
+     }
+    ],
+    "columns": [
+     "Transcript / Length (↑)"
+    ]
+   }
+  },
+  {
+   "question_id": "t19",
+   "paper": "MOSHI",
+   "table_id": "T6",
+   "type": "symbol_cell",
+   "answerable": true,
+   "question": "In the Moshi ablation of delay patterns, semantic token weight and Inner Monologue, is Depthwise Parametrization marked for acoustic delay [0, 0, 0, 0, 0, 0, 0, 0]?",
+   "expected_answer": "Yes, it has a check mark (✓).",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "[0, 0, 0, 0, 0, 0, 0, 0]",
+       "Transcript / NLL (↓) = 4.36"
+      ],
+      "cells": [
+       "Depthwise / Parametrization = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "Depthwise / Parametrization"
+    ]
+   }
+  },
+  {
+   "question_id": "t20",
+   "paper": "MOSHI",
+   "table_id": "T6",
+   "type": "unanswerable",
+   "answerable": false,
+   "question": "What MMLU score does the Moshi ablation of delay patterns and Inner Monologue report for each configuration?",
+   "expected_answer": "Refuse: that table reports transcript NLL and length only.",
+   "gold": {
+    "rows": [],
+    "columns": []
+   }
+  },
+  {
+   "question_id": "t21",
+   "paper": "MOSHI",
+   "table_id": "T13",
+   "type": "symbol_configuration_value",
+   "answerable": true,
+   "question": "In the Moshi table on regurgitation of training data, what regurgitation rate does the single-stream row with a check mark only under 'prompted (3s)' report at temperature 0?",
+   "expected_answer": "100.00%.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "single-stream",
+       "regurgitation rate (%) = 100.00"
+      ],
+      "cells": [
+       "prompted (3s) = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "regurgitation rate (%)"
+    ]
+   }
+  },
+  {
+   "question_id": "t22",
+   "paper": "MOSHI",
+   "table_id": "T13",
+   "type": "distinguish_configurations",
+   "answerable": true,
+   "question": "In the Moshi regurgitation table, what rate does the multi-stream row with check marks under prompted (3s), deduplicated and fine-tuned report?",
+   "expected_answer": "0.00% (at temperature 0.8).",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "multi-stream",
+       "temp. = 0.8",
+       "regurgitation rate (%) = 0.00"
+      ],
+      "cells": [
+       "prompted (3s) = ✓",
+       "deduplicated = ✓",
+       "fine-tuned = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "regurgitation rate (%)"
+    ]
+   }
+  },
+  {
+   "question_id": "t23",
+   "paper": "MOSHI",
+   "table_id": "T13",
+   "type": "supported_comparison",
+   "answerable": true,
+   "question": "In the Moshi regurgitation table, at temperature 0.8, how does the single-stream regurgitation rate differ between the row with a check only under 'prompted (3s)' and the row with no marks at all?",
+   "expected_answer": "98.40% with the prompted check versus 0.19% with no marks.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "single-stream",
+       "temp. = 0.8",
+       "regurgitation rate (%) = 98.40"
+      ],
+      "cells": [
+       "prompted (3s) = ✓"
+      ]
+     },
+     {
+      "id": [
+       "single-stream",
+       "temp. = 0.8",
+       "regurgitation rate (%) = 0.19"
+      ],
+      "cells": []
+     }
+    ],
+    "columns": [
+     "regurgitation rate (%)"
+    ]
+   }
+  },
+  {
+   "question_id": "t24",
+   "paper": "MOSHI",
+   "table_id": "T13",
+   "type": "unanswerable",
+   "answerable": false,
+   "question": "What regurgitation rate does the Moshi regurgitation table report for the single-stream model prompted with 3s at temperature 1.0?",
+   "expected_answer": "Refuse: no prompted row at temperature 1.0 is reported.",
+   "gold": {
+    "rows": [],
+    "columns": []
+   }
+  },
+  {
+   "question_id": "t25",
+   "paper": "MOSHI",
+   "table_id": "T16",
+   "type": "symbol_configuration_value",
+   "answerable": true,
+   "question": "In the Moshi table on idempotence of tokens, what probability is reported for Mimi at k=1 (semantic) with ΔT = 40ms and a check mark under the RVQGAN attack?",
+   "expected_answer": "0.450.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Mimi",
+       "attacks / Δ T = 40ms",
+       "k=1 / (semantic) = 0.450"
+      ],
+      "cells": [
+       "attacks / RVQGAN = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "k=1 / (semantic)"
+    ]
+   }
+  },
+  {
+   "question_id": "t26",
+   "paper": "MOSHI",
+   "table_id": "T16",
+   "type": "row_column_value",
+   "answerable": true,
+   "question": "In the Moshi token idempotence table, what probability does the Basic codec reach at k=8 with ΔT = 0 and no mark under the RVQGAN attack?",
+   "expected_answer": "0.404.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Basic",
+       "attacks / Δ T = 0",
+       "k=8 = 0.404"
+      ],
+      "cells": []
+     }
+    ],
+    "columns": [
+     "k=8"
+    ]
+   }
+  },
+  {
+   "question_id": "t27",
+   "paper": "MOSHI",
+   "table_id": "T16",
+   "type": "unanswerable",
+   "answerable": false,
+   "question": "What idempotence probability does the Moshi token idempotence table report at quantizer level k=9?",
+   "expected_answer": "Refuse: the table stops at k=8.",
+   "gold": {
+    "rows": [],
+    "columns": []
+   }
+  },
+  {
+   "question_id": "t28",
+   "paper": "MOSHI",
+   "table_id": "T16",
+   "type": "distinguish_configurations",
+   "answerable": true,
+   "question": "In the Moshi token idempotence table, are any rows of the Basic codec marked under the RVQGAN attack?",
+   "expected_answer": "No: all four Basic rows have no mark under RVQGAN; the marked rows are Mimi rows.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Basic",
+       "attacks / Δ T = 0",
+       "k=8 = 0.404"
+      ],
+      "cells": []
+     },
+     {
+      "id": [
+       "Mimi",
+       "attacks / Δ T = 0",
+       "k=1 / (semantic) = 0.741"
+      ],
+      "cells": [
+       "attacks / RVQGAN = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "attacks / RVQGAN"
+    ]
+   }
+  },
+  {
+   "question_id": "t29",
+   "paper": "MOSHI",
+   "table_id": "T17",
+   "type": "symbol_configuration_value",
+   "answerable": true,
+   "question": "In the Moshi paper's extended Mimi codec ablation (the table reporting only ABX, VisQOL and MOSNet), what ABX error does the configuration with no marks in any of the five component columns report?",
+   "expected_answer": "31.3%.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "ABX (↓) = 31.3%",
+       "VisQOL (↑) = 2.37"
+      ],
+      "cells": [
+       "Quantization / Rate = (blank)",
+       "Transformer / in encoder = (blank)",
+       "Transformer / in decoder = (blank)",
+       "WavLM / distillation = (blank)",
+       "Split / quantizer = (blank)"
+      ]
+     }
+    ],
+    "columns": [
+     "ABX (↓)"
+    ]
+   }
+  },
+  {
+   "question_id": "t30",
+   "paper": "MOSHI",
+   "table_id": "T17",
+   "type": "symbol_column",
+   "answerable": true,
+   "question": "In the Moshi paper's extended Mimi codec ablation, what ABX error does the row with a check mark only under 'Transformer in decoder' report?",
+   "expected_answer": "27.5%.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "ABX (↓) = 27.5%",
+       "VisQOL (↑) = 2.30"
+      ],
+      "cells": [
+       "Transformer / in decoder = ✓",
+       "Transformer / in encoder = (blank)",
+       "Quantization / Rate = (blank)"
+      ]
+     }
+    ],
+    "columns": [
+     "ABX (↓)"
+    ]
+   }
+  },
+  {
+   "question_id": "t31",
+   "paper": "MOSHI",
+   "table_id": "T17",
+   "type": "unanswerable",
+   "answerable": false,
+   "question": "What MUSHRA score does the Moshi paper's extended Mimi codec ablation (the table without a MUSHRA column) report for the configuration checked in all five component columns?",
+   "expected_answer": "Refuse: that table has no MUSHRA column (the other Mimi ablation table reports MUSHRA).",
+   "gold": {
+    "rows": [],
+    "columns": []
+   }
+  },
+  {
+   "question_id": "t32",
+   "paper": "MOSHI",
+   "table_id": "T17",
+   "type": "distinguish_configurations",
+   "answerable": true,
+   "question": "In the Moshi paper's extended Mimi codec ablation, what VisQOL does the row with check marks under Quantization Rate and both Transformer columns, and no marks under WavLM distillation and Split quantizer, report?",
+   "expected_answer": "2.82.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "ABX (↓) = 23.3%",
+       "VisQOL (↑) = 2.82"
+      ],
+      "cells": [
+       "Quantization / Rate = ✓",
+       "Transformer / in encoder = ✓",
+       "Transformer / in decoder = ✓",
+       "WavLM / distillation = (blank)",
+       "Split / quantizer = (blank)"
+      ]
+     }
+    ],
+    "columns": [
+     "VisQOL (↑)"
+    ]
+   }
+  }
+ ]
+}

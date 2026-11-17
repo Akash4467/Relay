@@ -1,0 +1,21 @@
+{
+ "about": "Grades of every B12 reply against the source papers (NOT against the verifier decision). ASSISTANT grades, not an independent review. Scale (owner's brief §4): correct_and_fully_supported | partially_correct | incorrect_or_unsupported | correctly_refused | incorrectly_refused. 'trace' = earliest pipeline stage responsible for a non-correct outcome. 'judgments' (for metrics.py) maps the answered answerable replies to its grade names.",
+ "grades": {
+  "q01": {"grade": "correct_and_fully_supported", "shown": "answered", "citation_correct": true, "why": "sequential h_t from h_(t-1) precludes parallelization; critical at longer lengths as memory limits batching (AIAYN:1:c002)"},
+  "q04": {"grade": "incorrectly_refused", "trace": "verification", "why": "D1 is correct (12.5 Hz, 8 quantizers, 2048, 1.1 kbps, all in MOSHI:3.3.1:c030) and was rejected at 0.40; D0 also held a false absence sentence ('frame rate not stated'), correctly rejected"},
+  "q07": {"grade": "incorrectly_refused", "trace": "verification", "why": "D1 is correct per AIAYN 3.1/3.2.3 (decoder: masked self-attention, encoder-decoder attention, feed-forward; Q from decoder, K/V from encoder output) and was rejected (0.46, 0.74)"},
+  "q12": {"grade": "incorrectly_refused", "trace": "generation", "why": "both rows (MOSHI:T8:r01 with Inner Monologue, T8:r02 without) were in context; the model gave only the without-IM row and claimed the with-IM accuracies are not stated: a false absence claim the verifier correctly rejected"},
+  "q13": {"grade": "incorrectly_refused", "trace": "verification", "why": "values correct (55.5 vs 53.3; XL Transformer 55.5); the comparison sentence cites only HNET:T2:r11 (H-Net's 55.5 is in r10) and was rejected; the 53.3 sentence 0.89"},
+  "q15": {"grade": "incorrectly_refused", "trace": "verification", "why": "'The original Transformer was trained on eight NVIDIA P100 GPUs' is correct (AIAYN:5.2:c026) and was rejected at 0.01 twice (subject/qualifier not in passage); Moshi H100 sentence accepted"},
+  "q14": {"grade": "incorrectly_refused", "trace": "retrieval (terminology)", "why": "AIAYN:5.1:c025 (byte-pair / word-piece) not retrieved (BM25 rank 345, dense 238); the model correctly declined on the evidence it had"},
+  "t05": {"grade": "incorrect_or_unsupported", "shown": "answered", "citation_correct": false, "trace": "extraction (c3 rows lack check marks) -> verifier false acceptance", "critical": true, "why": "SHOWN WRONG ANSWER: 65.9 +/- 1.7; expected 64.0 +/- 1.7. The cited MOSHI:T3:r01 holds 65.9 but carries no marks, so 'all five components checked' is unsupported; same failure as Phase 12"},
+  "t13": {"grade": "incorrectly_refused", "trace": "extraction (c3 rows lack check marks)", "why": "drafts said 135.4 (wrong row; marks absent in c3), correctly rejected"},
+  "n10": {"grade": "incorrectly_refused", "trace": "verification", "why": "D1 '8 attention heads [AIAYN:T3:r01]' and 'development BLEU 25.8 [AIAYN:T3:r01]' are correct (the base row holds h = 8 and dev BLEU 25.8); rejected at 0.04. D0 had no citations (correctly rejected)"},
+  "q16": {"grade": "correctly_refused", "why": "no dollar cost in the paper"},
+  "q20": {"grade": "correctly_refused", "why": "no MMLU/GPT-4 comparison in AIAYN"}
+ },
+ "judgments": {
+  "B12/q01": {"grade": "correct_answer"},
+  "B12/t05": {"grade": "incorrect", "verifier_false_acceptance": true}
+ }
+}

@@ -1,0 +1,172 @@
+{
+ "run_at": "2026-11-14T12:57:25+00:00",
+ "results": [
+  {
+   "name": "phase11e",
+   "command": "uv run pytest -q experiments/phase11e",
+   "cwd": ".",
+   "exit_status": 0,
+   "counts": {
+    "passed": 11
+   },
+   "output_tail": [
+    "...........                                                              [100%]",
+    "11 passed in 1.59s"
+   ]
+  },
+  {
+   "name": "phase11a",
+   "command": "uv run pytest -q experiments/phase11",
+   "cwd": ".",
+   "exit_status": 0,
+   "counts": {
+    "passed": 24
+   },
+   "output_tail": [
+    "........................                                                 [100%]",
+    "24 passed in 88.44s (0:01:28)"
+   ]
+  },
+  {
+   "name": "phase11b",
+   "command": "uv run pytest -q experiments/phase11b",
+   "cwd": ".",
+   "exit_status": 0,
+   "counts": {
+    "passed": 12,
+    "warning": 1
+   },
+   "output_tail": [
+    "experiments/phase11b/test_e2e_real.py::test_q11_h1_row_is_retrieved_and_base_row_stays_unresolved",
+    "",
+    "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+    "12 passed, 1 warning in 40.17s"
+   ]
+  },
+  {
+   "name": "phase11c",
+   "command": "uv run pytest -q experiments/phase11c",
+   "cwd": ".",
+   "exit_status": 0,
+   "counts": {
+    "passed": 6
+   },
+   "output_tail": [
+    "......                                                                   [100%]",
+    "6 passed in 0.25s"
+   ]
+  },
+  {
+   "name": "phase10",
+   "command": "uv run pytest -q experiments/phase10",
+   "cwd": ".",
+   "exit_status": 0,
+   "counts": {
+    "passed": 31
+   },
+   "output_tail": [
+    "...............................                                          [100%]",
+    "31 passed in 26.61s"
+   ]
+  },
+  {
+   "name": "phase9b",
+   "command": "uv run pytest -q experiments/phase9b",
+   "cwd": ".",
+   "exit_status": 0,
+   "counts": {
+    "passed": 63
+   },
+   "output_tail": [
+    "...............................................................          [100%]",
+    "63 passed in 2.84s"
+   ]
+  },
+  {
+   "name": "full_python_suite",
+   "command": "uv run pytest -q tests/unit tests/integration",
+   "cwd": ".",
+   "exit_status": 0,
+   "counts": {
+    "passed": 510
+   },
+   "output_tail": [
+    "........................................................................ [ 84%]",
+    "........................................................................ [ 98%]",
+    "......                                                                   [100%]",
+    "510 passed in 10.55s"
+   ]
+  },
+  {
+   "name": "phase10_offline_integration",
+   "command": "uv run python experiments/phase10/offline_integration.py",
+   "cwd": ".",
+   "exit_status": 0,
+   "counts": {
+    "scenarios_passed": 31,
+    "scenarios": 31
+   },
+   "output_tail": [
+    "experiments/phase10/out/offline_integration_2026-11-14T12-56-11Z.json | passed 31 of 31",
+    "",
+    "",
+    ""
+   ]
+  },
+  {
+   "name": "go_vet_standin",
+   "command": "go vet ./...",
+   "cwd": "standin",
+   "exit_status": 0,
+   "counts": {},
+   "output_tail": []
+  },
+  {
+   "name": "go_test_standin",
+   "command": "go test -count=1 ./...",
+   "cwd": "standin",
+   "exit_status": 0,
+   "counts": {
+    "packages_ok": 1,
+    "packages_failed": 0,
+    "packages_without_tests": 1
+   },
+   "output_tail": [
+    "?   \trelay/standin/cmd/standin\t[no test files]",
+    "ok  \trelay/standin/internal/sim\t2.184s"
+   ]
+  },
+  {
+   "name": "go_vet_loadgen",
+   "command": "go vet ./...",
+   "cwd": "loadgen",
+   "exit_status": 0,
+   "counts": {},
+   "output_tail": []
+  },
+  {
+   "name": "go_test_loadgen",
+   "command": "go test -count=1 ./...",
+   "cwd": "loadgen",
+   "exit_status": 0,
+   "counts": {
+    "packages_ok": 1,
+    "packages_failed": 0,
+    "packages_without_tests": 1
+   },
+   "output_tail": [
+    "?   \trelay/loadgen/cmd/loadgen\t[no test files]",
+    "ok  \trelay/loadgen/internal/run\t4.716s"
+   ]
+  },
+  {
+   "name": "phase12",
+   "command": "uv run python -m py_compile experiments/phase12/run_phase12.py experiments/phase12/analyse_phase12.py",
+   "cwd": ".",
+   "exit_status": 0,
+   "counts": {},
+   "output_tail": []
+  }
+ ],
+ "all_exit_zero": true
+}

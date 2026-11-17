@@ -1,0 +1,251 @@
+{
+ "run": "assessment/e2e/live/E25_p7_v46_c6",
+ "timestamp": "2026-11-14T14:49:29.808+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.6c",
+ "question_id": "q11",
+ "dataset": [
+  "A_fixed_regression",
+  "B_failure_focused"
+ ],
+ "question": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.2 Model Variations; AIAYN §6.1 Machine Translation; AIAYN §3.2.2 Multi-Head Attention.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-E25_p7_v46_c6-q11"
+ },
+ "client_ms": 35629.2,
+ "evidence_ids": [
+  "AIAYN:6.2:c031",
+  "AIAYN:6.1:c029",
+  "AIAYN:3.2.2:c013",
+  "AIAYN:T3:r07",
+  "AIAYN:T3:r03",
+  "AIAYN:T3:r02",
+  "AIAYN:T3:r04"
+ ],
+ "gold_units_in_context": [
+  true,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  false
+ ],
+ "drafts": [
+  "The authors report that the configuration with a single attention head (h = 1, d_k = 512, d_v = 512) achieved a development BLEU of 24.9 [AIAYN:T3:r02]. The retrieved passages do not state the development BLEU for the base configuration.",
+  "In Table 3, Configuration (A) with h = 1, d_k = 512, d_v = 512 has BLEU / (dev) = 24.9 [AIAYN:T3:r02]. The retrieved passages do not state the development BLEU for the base configuration."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:T3:r02"
+   ],
+   "failures": [
+    [
+     "The authors report that the configuration with a single attention head (h = 1, d_k = 512, d_v = 512) achieved a development BLEU of 24.9 [AIAYN:T3:r02].",
+     "not supported by the cited passage (entailment 0.64 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors report that the configuration with a single attention head (h = 1, d_k = 512, d_v = 512) achieved a development BLEU of 24.9 [AIAYN:T3:r02].",
+     "ok": false,
+     "entailment": 0.6408222366292651,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.64 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The retrieved passages do not state the development BLEU for the base configuration.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:T3:r02"
+   ],
+   "failures": [
+    [
+     "In Table 3, Configuration (A) with h = 1, d_k = 512, d_v = 512 has BLEU / (dev) = 24.9 [AIAYN:T3:r02].",
+     "not supported by the cited passage (entailment 0.40 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "In Table 3, Configuration (A) with h = 1, d_k = 512, d_v = 512 has BLEU / (dev) = 24.9 [AIAYN:T3:r02].",
+     "ok": false,
+     "entailment": 0.404866988983189,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.40 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The retrieved passages do not state the development BLEU for the base configuration.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_p7_v46_c6-q11",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T14:49:29.808+00:00",
+  "question_id": "q11",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4497,
+  "tokens_out": 394,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 997.4,
+  "context_tokens": 1599,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "h = 1"
+  ],
+  "retrieval_query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get? [h = 1]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:6.1:c029",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:T3:r07",
+   "AIAYN:T3:r03",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r04"
+  ],
+  "verification_ms": 1656.0,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 30637.8,
+  "model_ttft_ms": 1218.5,
+  "first_byte_ms": 473.7,
+  "generation_ms": 2225.0,
+  "reasoning_tokens": 248,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2079,
+    "reserved": 2849,
+    "governor_wait_ms": 13254.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.369297341,
+     "prompt_tokens": 2078,
+     "prompt_time": 0.509980751,
+     "completion_tokens": 182,
+     "completion_time": 0.377741415,
+     "total_tokens": 2260,
+     "total_time": 0.887722166,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 107
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 2078,
+    "tokens_out": 182,
+    "reasoning_tokens": 107,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 473.7,
+    "model_ttft_ms": 1218.5,
+    "total_ms": 1357.8,
+    "max_gap_ms": 744.8,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "949",
+     "x-ratelimit-reset-requests": "1h13m26.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5270",
+     "x-ratelimit-reset-tokens": "20.475s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2418,
+    "reserved": 3188,
+    "governor_wait_ms": 17383.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.164057736,
+     "prompt_tokens": 2419,
+     "prompt_time": 0.156054564,
+     "completion_tokens": 212,
+     "completion_time": 0.44995554,
+     "total_tokens": 2631,
+     "total_time": 0.606010104,
+     "completion_tokens_details": {
+      "reasoning_tokens": 141
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2419,
+    "tokens_out": 212,
+    "reasoning_tokens": 141,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 295.6,
+    "model_ttft_ms": 810.7,
+    "total_ms": 867.2,
+    "max_gap_ms": 515.0,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "948",
+     "x-ratelimit-reset-requests": "1h14m52.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5236",
+     "x-ratelimit-reset-tokens": "20.729s"
+    }
+   }
+  ],
+  "first_token_ms": 35559.2,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 35560.4
+ }
+}

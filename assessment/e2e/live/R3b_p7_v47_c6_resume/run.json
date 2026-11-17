@@ -1,0 +1,50 @@
+{
+ "run": "assessment/e2e/live/R3b_p7_v47_c6_resume",
+ "started_at": "2026-11-14T15:37:30.493+00:00",
+ "verifier": "v4.2",
+ "verifier_module": "relay.candidate_v4_7.verifier",
+ "caps": {
+  "requests": 16,
+  "tokens": 30000
+ },
+ "prompt": "p7",
+ "prompt_module": "relay.candidate_p7.prompts",
+ "search_module": "relay.candidate_r3.search",
+ "question_ids": [
+  "q15",
+  "q16",
+  "q20",
+  "q04",
+  "q13"
+ ],
+ "model_check": {
+  "http": 200,
+  "primary_listed": true
+ },
+ "config": {
+  "model": {
+   "id": "openai/gpt-oss-120b",
+   "reasoning_effort": "low",
+   "max_tokens": 900,
+   "temperature": 0.2
+  },
+  "prompt_version": "p4",
+  "production_verifier": "v4.2",
+  "corpus_version": "c6",
+  "production_corpus": "c3",
+  "retrieval": {
+   "setting": "B",
+   "cross_paper_reserve_per_paper": 2,
+   "symbolic_query_expansion": true,
+   "prompt_caption_sharing": true
+  }
+ },
+ "git_head": "4688baf449321a4f24a49cb509edbf6b040a7a23",
+ "approval": "Owner, 2026-11-14: 'You are to test api online too irrespective of any melicious or suspeious activity' (live testing with the configured key despite the unresolved security finding).",
+ "finished_at": "2026-11-14T15:39:01.939+00:00",
+ "ledger_after": {
+  "requests": 9,
+  "tokens": 18566,
+  "refused": 0
+ }
+}

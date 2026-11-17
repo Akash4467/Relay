@@ -1,0 +1,985 @@
+{
+  "meta": {
+    "git_commit": "0fc88bebfc96195c0b99cf0ab59ca0d5397e2429",
+    "git_dirty": true,
+    "pairs_sha256": "e762746e1e3451d5ef248a46e5b8735e85c0803769b10879f031db1b9ee89fe6",
+    "nli_model": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+    "corpus_version": "c3",
+    "verification_policy_version": "v2"
+  },
+  "stress": {
+    "provisional_threshold": 0.9,
+    "calibration_choice": {
+      "threshold": 0.6,
+      "calibration": {
+        "n": 12,
+        "false_acceptances": 1,
+        "false_rejections": 0,
+        "false_acceptance_rate_pct": 16.7,
+        "false_rejection_rate_pct": 0.0,
+        "accuracy_pct": 91.7,
+        "by_category": {
+          "table_row": {
+            "supported": 1,
+            "false_rejections": 0,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "comparison": {
+            "supported": 1,
+            "false_rejections": 0,
+            "unsupported": 0,
+            "false_acceptances": 0
+          },
+          "latex": {
+            "supported": 1,
+            "false_rejections": 0,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "pronoun": {
+            "supported": 1,
+            "false_rejections": 0,
+            "unsupported": 1,
+            "false_acceptances": 1
+          },
+          "absence": {
+            "supported": 2,
+            "false_rejections": 0,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "added": {
+            "supported": 0,
+            "false_rejections": 0,
+            "unsupported": 2,
+            "false_acceptances": 0
+          }
+        }
+      },
+      "heldout": {
+        "n": 8,
+        "false_acceptances": 1,
+        "false_rejections": 3,
+        "false_acceptance_rate_pct": 25.0,
+        "false_rejection_rate_pct": 75.0,
+        "accuracy_pct": 50.0,
+        "by_category": {
+          "table_row": {
+            "supported": 1,
+            "false_rejections": 0,
+            "unsupported": 0,
+            "false_acceptances": 0
+          },
+          "comparison": {
+            "supported": 1,
+            "false_rejections": 1,
+            "unsupported": 1,
+            "false_acceptances": 1
+          },
+          "latex": {
+            "supported": 1,
+            "false_rejections": 1,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "pronoun": {
+            "supported": 1,
+            "false_rejections": 1,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "added": {
+            "supported": 0,
+            "false_rejections": 0,
+            "unsupported": 1,
+            "false_acceptances": 0
+          }
+        }
+      },
+      "calibration_detail": {
+        "t1": {
+          "sentence": "In Table 4, the Transformer (4 layers) trained on WSJ only reaches a WSJ 23 F1 of 91.3 [AIAYN:T4:r01].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.9734066701967665,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true
+          ]
+        },
+        "t3": {
+          "sentence": "In Table 4, the semi-supervised Transformer (4 layers) reaches a WSJ 23 F1 of 93.0 [AIAYN:T4:r02].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.05057472769084251,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.05 < 0.6)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "c1": {
+          "sentence": "In Table 5, the Mamba-2 (M10) model reaches a lower final perplexity than the Transformer (T9) [HNET:T5:r01].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.6381942852182753,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true
+          ]
+        },
+        "l1": {
+          "sentence": "The attention output is computed as \\(\\mathrm{softmax}(QK^T/\\sqrt{d_k})V\\) [AIAYN:3.2.1:c011].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.6630227274293758,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true
+          ]
+        },
+        "l3": {
+          "sentence": "The attention output is computed as \\(\\mathrm{softmax}(QK^T/d_k)V\\), dividing the dot products by \\(d_k\\) [AIAYN:3.2.1:c011].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.48968684719495553,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.49 < 0.6)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "p1": {
+          "sentence": "It keeps continuous gradients during backpropagation [HNET:2.2.2:c029].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.9979240732377983,
+          "context": "The Straight-Through Estimator rounds confidence scores to 1.0 in the forward pass.",
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true,
+            true
+          ]
+        },
+        "p3": {
+          "sentence": "It keeps continuous gradients during backpropagation [HNET:2.2.2:c029].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.995631766594642,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            false,
+            true
+          ]
+        },
+        "a1": {
+          "sentence": "The retrieved passages do not state its training time.",
+          "ok": true,
+          "absence": true,
+          "entailment": null,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true,
+            true
+          ]
+        },
+        "a2": {
+          "sentence": "The retrieved passages do not state its learning rate.",
+          "ok": true,
+          "absence": true,
+          "entailment": null,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true,
+            true
+          ]
+        },
+        "a3": {
+          "sentence": "The paper does not report its learning rate.",
+          "ok": false,
+          "absence": false,
+          "entailment": null,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "claims the papers do not state something; only the retrieved passages were seen, so write \"The retrieved passages do not state ...\""
+          ],
+          "all_sentences_ok": [
+            true,
+            false
+          ]
+        },
+        "d1": {
+          "sentence": "The Mamba-2 (M10) model has 33M parameters and was trained for twice as many steps as the Transformer (T9) [HNET:T5:r01].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.028071817297385518,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.03 < 0.6)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "d3": {
+          "sentence": "H-Net already performs strongly without STE, and STE removes the need for the smoothing module [HNET:2.2.2:c029].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.008868004893997533,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.01 < 0.6)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        }
+      },
+      "heldout_detail": {
+        "t2": {
+          "sentence": "In Table 5, the H-Net (M3T1+M15+M4) model has 66M parameters and a final perplexity of 2.697 on HG38 [HNET:T5:r01].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.9931028751308714,
+          "context": null,
+          "flags": [
+            "term 'm3 t1' not in the cited passage"
+          ],
+          "reasons": [],
+          "all_sentences_ok": [
+            true
+          ]
+        },
+        "c2": {
+          "sentence": "Helium scores higher than MPT on MMLU in Table 2 [MOSHI:T2:r01].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.12758210250216062,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.13 < 0.6)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "c3": {
+          "sentence": "In Table 9, the cascaded model has a longer gap than the best non-cascaded model [MOSHI:T9:r01].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.849505687280088,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true
+          ]
+        },
+        "l2": {
+          "sentence": "For a boundary position the confidence score is \\(c_t = p_t\\), and for other positions it is \\(c_t = 1 - p_t\\) [HNET:2.2.2:c028].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.06703366300961633,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.07 < 0.6)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "l4": {
+          "sentence": "For a boundary position the confidence score is \\(c_t = 1 - p_t\\) [HNET:2.2.2:c028].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.20237668772715084,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.20 < 0.6)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "p2": {
+          "sentence": "This keeps the dynamic chunking causal [HNET:2.4:c038].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.5919641264132371,
+          "context": "H-Net computes boundary probabilities only from current and previous representations.",
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.59 < 0.6)"
+          ],
+          "all_sentences_ok": [
+            true,
+            false
+          ]
+        },
+        "p4": {
+          "sentence": "This lets the model look at future tokens during training [HNET:2.4:c038].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.07742922016356286,
+          "context": "H-Net computes boundary probabilities only from current and previous representations.",
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.08 < 0.6)"
+          ],
+          "all_sentences_ok": [
+            true,
+            false
+          ]
+        },
+        "d2": {
+          "sentence": "Helium scores 54.3 on MMLU, the highest score among all open models of any size [MOSHI:T2:r01].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.0032011723048222264,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.00 < 0.6)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        }
+      }
+    },
+    "provisional": {
+      "threshold": 0.9,
+      "calibration": {
+        "n": 12,
+        "false_acceptances": 1,
+        "false_rejections": 2,
+        "false_acceptance_rate_pct": 16.7,
+        "false_rejection_rate_pct": 33.3,
+        "accuracy_pct": 75.0,
+        "by_category": {
+          "table_row": {
+            "supported": 1,
+            "false_rejections": 0,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "comparison": {
+            "supported": 1,
+            "false_rejections": 1,
+            "unsupported": 0,
+            "false_acceptances": 0
+          },
+          "latex": {
+            "supported": 1,
+            "false_rejections": 1,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "pronoun": {
+            "supported": 1,
+            "false_rejections": 0,
+            "unsupported": 1,
+            "false_acceptances": 1
+          },
+          "absence": {
+            "supported": 2,
+            "false_rejections": 0,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "added": {
+            "supported": 0,
+            "false_rejections": 0,
+            "unsupported": 2,
+            "false_acceptances": 0
+          }
+        }
+      },
+      "heldout": {
+        "n": 8,
+        "false_acceptances": 0,
+        "false_rejections": 3,
+        "false_acceptance_rate_pct": 0.0,
+        "false_rejection_rate_pct": 75.0,
+        "accuracy_pct": 62.5,
+        "by_category": {
+          "table_row": {
+            "supported": 1,
+            "false_rejections": 0,
+            "unsupported": 0,
+            "false_acceptances": 0
+          },
+          "comparison": {
+            "supported": 1,
+            "false_rejections": 1,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "latex": {
+            "supported": 1,
+            "false_rejections": 1,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "pronoun": {
+            "supported": 1,
+            "false_rejections": 1,
+            "unsupported": 1,
+            "false_acceptances": 0
+          },
+          "added": {
+            "supported": 0,
+            "false_rejections": 0,
+            "unsupported": 1,
+            "false_acceptances": 0
+          }
+        }
+      },
+      "calibration_detail": {
+        "t1": {
+          "sentence": "In Table 4, the Transformer (4 layers) trained on WSJ only reaches a WSJ 23 F1 of 91.3 [AIAYN:T4:r01].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.9734066701967665,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true
+          ]
+        },
+        "t3": {
+          "sentence": "In Table 4, the semi-supervised Transformer (4 layers) reaches a WSJ 23 F1 of 93.0 [AIAYN:T4:r02].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.05057472769084251,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.05 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "c1": {
+          "sentence": "In Table 5, the Mamba-2 (M10) model reaches a lower final perplexity than the Transformer (T9) [HNET:T5:r01].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.6381942852182753,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.64 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "l1": {
+          "sentence": "The attention output is computed as \\(\\mathrm{softmax}(QK^T/\\sqrt{d_k})V\\) [AIAYN:3.2.1:c011].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.6630227274293758,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.66 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "l3": {
+          "sentence": "The attention output is computed as \\(\\mathrm{softmax}(QK^T/d_k)V\\), dividing the dot products by \\(d_k\\) [AIAYN:3.2.1:c011].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.48968684719495553,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.49 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "p1": {
+          "sentence": "It keeps continuous gradients during backpropagation [HNET:2.2.2:c029].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.9979240732377983,
+          "context": "The Straight-Through Estimator rounds confidence scores to 1.0 in the forward pass.",
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true,
+            true
+          ]
+        },
+        "p3": {
+          "sentence": "It keeps continuous gradients during backpropagation [HNET:2.2.2:c029].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.995631766594642,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            false,
+            true
+          ]
+        },
+        "a1": {
+          "sentence": "The retrieved passages do not state its training time.",
+          "ok": true,
+          "absence": true,
+          "entailment": null,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true,
+            true
+          ]
+        },
+        "a2": {
+          "sentence": "The retrieved passages do not state its learning rate.",
+          "ok": true,
+          "absence": true,
+          "entailment": null,
+          "context": null,
+          "flags": [],
+          "reasons": [],
+          "all_sentences_ok": [
+            true,
+            true
+          ]
+        },
+        "a3": {
+          "sentence": "The paper does not report its learning rate.",
+          "ok": false,
+          "absence": false,
+          "entailment": null,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "claims the papers do not state something; only the retrieved passages were seen, so write \"The retrieved passages do not state ...\""
+          ],
+          "all_sentences_ok": [
+            true,
+            false
+          ]
+        },
+        "d1": {
+          "sentence": "The Mamba-2 (M10) model has 33M parameters and was trained for twice as many steps as the Transformer (T9) [HNET:T5:r01].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.028071817297385518,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.03 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "d3": {
+          "sentence": "H-Net already performs strongly without STE, and STE removes the need for the smoothing module [HNET:2.2.2:c029].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.008868004893997533,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.01 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        }
+      },
+      "heldout_detail": {
+        "t2": {
+          "sentence": "In Table 5, the H-Net (M3T1+M15+M4) model has 66M parameters and a final perplexity of 2.697 on HG38 [HNET:T5:r01].",
+          "ok": true,
+          "absence": false,
+          "entailment": 0.9931028751308714,
+          "context": null,
+          "flags": [
+            "term 'm3 t1' not in the cited passage"
+          ],
+          "reasons": [],
+          "all_sentences_ok": [
+            true
+          ]
+        },
+        "c2": {
+          "sentence": "Helium scores higher than MPT on MMLU in Table 2 [MOSHI:T2:r01].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.12758210250216062,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.13 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "c3": {
+          "sentence": "In Table 9, the cascaded model has a longer gap than the best non-cascaded model [MOSHI:T9:r01].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.849505687280088,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.85 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "l2": {
+          "sentence": "For a boundary position the confidence score is \\(c_t = p_t\\), and for other positions it is \\(c_t = 1 - p_t\\) [HNET:2.2.2:c028].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.06703366300961633,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.07 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "l4": {
+          "sentence": "For a boundary position the confidence score is \\(c_t = 1 - p_t\\) [HNET:2.2.2:c028].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.20237668772715084,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.20 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        },
+        "p2": {
+          "sentence": "This keeps the dynamic chunking causal [HNET:2.4:c038].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.5919641264132371,
+          "context": "H-Net computes boundary probabilities only from current and previous representations.",
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.59 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            true,
+            false
+          ]
+        },
+        "p4": {
+          "sentence": "This lets the model look at future tokens during training [HNET:2.4:c038].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.07742922016356286,
+          "context": "H-Net computes boundary probabilities only from current and previous representations.",
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.08 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            true,
+            false
+          ]
+        },
+        "d2": {
+          "sentence": "Helium scores 54.3 on MMLU, the highest score among all open models of any size [MOSHI:T2:r01].",
+          "ok": false,
+          "absence": false,
+          "entailment": 0.0032011723048222264,
+          "context": null,
+          "flags": [],
+          "reasons": [
+            "not supported by the cited passage (entailment 0.00 < 0.9)"
+          ],
+          "all_sentences_ok": [
+            false
+          ]
+        }
+      }
+    },
+    "latency_ms_per_answer": {
+      "n": 20,
+      "mean": 1305.1,
+      "p50": 1324.8,
+      "p95": 3099.6
+    },
+    "pairs": {
+      "t1": {
+        "supported": true,
+        "category": "table_row",
+        "split": "calibration"
+      },
+      "t2": {
+        "supported": true,
+        "category": "table_row",
+        "split": "heldout"
+      },
+      "t3": {
+        "supported": false,
+        "category": "table_row",
+        "split": "calibration"
+      },
+      "c1": {
+        "supported": true,
+        "category": "comparison",
+        "split": "calibration"
+      },
+      "c2": {
+        "supported": true,
+        "category": "comparison",
+        "split": "heldout"
+      },
+      "c3": {
+        "supported": false,
+        "category": "comparison",
+        "split": "heldout"
+      },
+      "l1": {
+        "supported": true,
+        "category": "latex",
+        "split": "calibration"
+      },
+      "l2": {
+        "supported": true,
+        "category": "latex",
+        "split": "heldout"
+      },
+      "l3": {
+        "supported": false,
+        "category": "latex",
+        "split": "calibration"
+      },
+      "l4": {
+        "supported": false,
+        "category": "latex",
+        "split": "heldout"
+      },
+      "p1": {
+        "supported": true,
+        "category": "pronoun",
+        "split": "calibration"
+      },
+      "p2": {
+        "supported": true,
+        "category": "pronoun",
+        "split": "heldout"
+      },
+      "p3": {
+        "supported": false,
+        "category": "pronoun",
+        "split": "calibration"
+      },
+      "p4": {
+        "supported": false,
+        "category": "pronoun",
+        "split": "heldout"
+      },
+      "a1": {
+        "supported": true,
+        "category": "absence",
+        "split": "calibration"
+      },
+      "a2": {
+        "supported": true,
+        "category": "absence",
+        "split": "calibration"
+      },
+      "a3": {
+        "supported": false,
+        "category": "absence",
+        "split": "calibration"
+      },
+      "d1": {
+        "supported": false,
+        "category": "added",
+        "split": "calibration"
+      },
+      "d2": {
+        "supported": false,
+        "category": "added",
+        "split": "heldout"
+      },
+      "d3": {
+        "supported": false,
+        "category": "added",
+        "split": "calibration"
+      }
+    }
+  },
+  "replays": {
+    "q05": [
+      {
+        "answer_ok": false,
+        "sentences": [
+          {
+            "sentence": "The routing module predicts boundaries by measuring the cosine similarity between adjacent encoder‑output vectors: it first projects each output \\(\\hat{x}_t\\) to queries \\(q_t\\) and keys \\(k_t\\), then computes a boundary probability \\(p_t = \\tfrac12\\bigl(1 - \\frac{q_t^\\top k_{t-1}}{\\|q_t\\|\\|k_{t-1}\\|}\\bigr)\\) which lies in \\([0,1]\\) [HNET:2.2.1:c023].",
+            "ok": true,
+            "absence": false,
+            "entailment": 0.9351232257696125,
+            "context": null,
+            "flags": [],
+            "reasons": []
+          },
+          {
+            "sentence": "A hard boundary indicator \\(b_t\\) is set to 1 whenever \\(p_t \\ge 0.5\\), otherwise 0, with \\(p_1\\) defined as 1.0 to start the sequence with a boundary [HNET:2.2.1:c023].",
+            "ok": false,
+            "absence": false,
+            "entailment": 0.8443737455042871,
+            "context": null,
+            "flags": [],
+            "reasons": [
+              "not supported by the cited passage (entailment 0.84 < 0.9)"
+            ]
+          },
+          {
+            "sentence": "Lower cosine similarity (i.e., larger \\(p_t\\)) signals a contextual or semantic shift, prompting the module to place a chunk boundary at that position [HNET:2.2.1:c023].",
+            "ok": false,
+            "absence": false,
+            "entailment": 0.60142521012945,
+            "context": null,
+            "flags": [],
+            "reasons": [
+              "not supported by the cited passage (entailment 0.60 < 0.9)"
+            ]
+          }
+        ]
+      },
+      {
+        "answer_ok": false,
+        "sentences": [
+          {
+            "sentence": "The routing module computes cosine similarity between adjacent encoder outputs by projecting each \\(\\hat{x}_t\\) to a query \\(q_t\\) and a key \\(k_t\\) and then calculating a boundary probability \\(p_t = \\tfrac12\\!\\left(1 - \\frac{q_t^\\top k_{t-1}}{\\|q_t\\|\\|k_{t-1}\\|}\\right) \\in [0,1]\\) [HNET:2.2.1:c023].",
+            "ok": false,
+            "absence": false,
+            "entailment": 0.6310104213977613,
+            "context": null,
+            "flags": [],
+            "reasons": [
+              "not supported by the cited passage (entailment 0.63 < 0.9)"
+            ]
+          },
+          {
+            "sentence": "It then forms a hard boundary indicator \\(b_t = \\mathds{1}_{\\{p_t \\ge 0.5\\}}\\) with \\(p_1\\) defined as 1.0 to ensure the sequence begins with a boundary [HNET:2.2.1:c023].",
+            "ok": false,
+            "absence": false,
+            "entailment": 0.6110021356374409,
+            "context": null,
+            "flags": [],
+            "reasons": [
+              "not supported by the cited passage (entailment 0.61 < 0.9)"
+            ]
+          }
+        ]
+      }
+    ],
+    "q11": [
+      {
+        "answer_ok": false,
+        "sentences": [
+          {
+            "sentence": "The single‑head attention variant (row A with h = 1) achieved a development BLEU of 24.9 [AIAYN:T3:r02].",
+            "ok": false,
+            "absence": false,
+            "entailment": 0.015085490058469405,
+            "context": null,
+            "flags": [],
+            "reasons": [
+              "not supported by the cited passage (entailment 0.02 < 0.9)"
+            ]
+          },
+          {
+            "sentence": "The papers do not state the development BLEU of the base configuration.",
+            "ok": false,
+            "absence": false,
+            "entailment": null,
+            "context": null,
+            "flags": [],
+            "reasons": [
+              "claims the papers do not state something; only the retrieved passages were seen, so write \"The retrieved passages do not state ...\""
+            ]
+          }
+        ]
+      },
+      {
+        "answer_ok": false,
+        "sentences": [
+          {
+            "sentence": "The model with a single attention head (row A, h = 1) obtained a development BLEU of 24.9 [AIAYN:T3:r02].",
+            "ok": false,
+            "absence": false,
+            "entailment": 0.3107488598798308,
+            "context": null,
+            "flags": [],
+            "reasons": [
+              "not supported by the cited passage (entailment 0.31 < 0.9)"
+            ]
+          },
+          {
+            "sentence": "The papers do not state the development BLEU of the base configuration.",
+            "ok": false,
+            "absence": false,
+            "entailment": null,
+            "context": null,
+            "flags": [],
+            "reasons": [
+              "claims the papers do not state something; only the retrieved passages were seen, so write \"The retrieved passages do not state ...\""
+            ]
+          }
+        ]
+      }
+    ],
+    "q16": {
+      "status": "refused",
+      "refusal_reason": "model: not in papers",
+      "text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.1 Machine Translation; AIAYN §6.2 Model Variations.",
+      "llm_calls": 1,
+      "not_in_papers_is_control_signal": true
+    }
+  }
+}

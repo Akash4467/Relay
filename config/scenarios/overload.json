@@ -1,0 +1,36 @@
+{
+  "name": "overload",
+  "source": "stand-in",
+  "target": "http://127.0.0.1:8000/ask",
+  "standin": "http://127.0.0.1:8001",
+  "questions_file": "eval/questions.jsonl",
+  "question_ids": [
+    "q05",
+    "q11",
+    "q16"
+  ],
+  "retrieval_setting": "B",
+  "patience_ms": {
+    "median": 15000,
+    "sigma": 0.5,
+    "min": 3000,
+    "max": 60000
+  },
+  "seed": 42,
+  "duration_s": 480,
+  "phases": [
+    {
+      "from_s": 0,
+      "to_s": 480,
+      "rate_per_min": 4.6
+    }
+  ],
+  "admin": [
+    {
+      "at_s": 0,
+      "body": {
+        "reset": true
+      }
+    }
+  ]
+}

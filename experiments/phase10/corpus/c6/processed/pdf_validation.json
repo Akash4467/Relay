@@ -1,0 +1,23 @@
+[
+  {
+    "paper": "AIAYN",
+    "paragraphs": 62,
+    "located": 62,
+    "coverage_pct": 100.0,
+    "headings_missing": []
+  },
+  {
+    "paper": "MOSHI",
+    "paragraphs": 140,
+    "located": 140,
+    "coverage_pct": 100.0,
+    "headings_missing": []
+  },
+  {
+    "paper": "HNET",
+    "paragraphs": 161,
+    "located": 159,
+    "coverage_pct": 98.8,
+    "headings_missing": []
+  }
+]

@@ -1,0 +1,175 @@
+{
+ "q02 named subject 'base Transformer'": [
+  {
+   "variant": "original clause",
+   "claim": "The base Transformer uses eight parallel attention heads.",
+   "entail": 0.012,
+   "contra": 0.0009,
+   "best_premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× "
+  },
+  {
+   "variant": "drop 'base'",
+   "claim": "The Transformer uses eight parallel attention heads.",
+   "entail": 0.9761,
+   "contra": 0.0031,
+   "best_premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× "
+  },
+  {
+   "variant": "8 for eight",
+   "claim": "The base Transformer uses 8 parallel attention heads.",
+   "entail": 0.0129,
+   "contra": 0.0009,
+   "best_premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× "
+  },
+  {
+   "variant": "drop 'base', 8",
+   "claim": "The Transformer uses 8 parallel attention heads.",
+   "entail": 0.9778,
+   "contra": 0.003,
+   "best_premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× "
+  },
+  {
+   "variant": "passage's own subject",
+   "claim": "In this work they employ h=8 parallel attention layers, or heads.",
+   "entail": 0.9951,
+   "contra": 0.002,
+   "best_premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× "
+  },
+  {
+   "variant": "'base model'",
+   "claim": "The base model uses 8 parallel attention heads.",
+   "entail": 0.1317,
+   "contra": 0.0023,
+   "best_premise": "Attention Is All You Need (Transformer) || 3.2.2 Multi-Head Attention\nWhere the projections are parameter matrices W^Q_i in R^d_model× d_k, W^K_i in R^d_model× "
+  }
+ ],
+ "q12 table row label vs entity and metric names": [
+  {
+   "variant": "original",
+   "claim": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA.",
+   "entail": 0.062,
+   "contra": 0.6328,
+   "best_premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration SpeechGPT (7B) has Web Q. = 6."
+  },
+  {
+   "variant": "drop 'with Inner Monologue'",
+   "claim": "Moshi achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA.",
+   "entail": 0.5503,
+   "contra": 0.0101,
+   "best_premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi has Web Q. = 26.6, LlaMA"
+  },
+  {
+   "variant": "table's column names",
+   "claim": "Moshi with Inner Monologue achieves 26.6 on Web Q., 62.3 on LlaMA Q., and 22.8 on Audio Trivia QA.",
+   "entail": 0.025,
+   "contra": 0.0029,
+   "best_premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi has Web Q. = 26.6, LlaMA"
+  },
+  {
+   "variant": "column names, no qualifier",
+   "claim": "Moshi achieves 26.6 on Web Q., 62.3 on LlaMA Q., and 22.8 on Audio Trivia QA.",
+   "entail": 0.4008,
+   "contra": 0.0061,
+   "best_premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi has Web Q. = 26.6, LlaMA"
+  },
+  {
+   "variant": "table's own wording",
+   "claim": "The configuration Moshi has Web Q. = 26.6, LlaMA Q. = 62.3, Audio Trivia QA = 22.8.",
+   "entail": 0.7568,
+   "contra": 0.1698,
+   "best_premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi has Web Q. = 26.6, LlaMA"
+  },
+  {
+   "variant": "one value",
+   "claim": "Moshi achieves 26.6 on Web Q.",
+   "entail": 0.9861,
+   "contra": 0.0016,
+   "best_premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi has Web Q. = 26.6, LlaMA"
+  }
+ ],
+ "q12 the without-IM sentence (accepted) for contrast": [
+  {
+   "variant": "accepted live",
+   "claim": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA.",
+   "entail": 0.9807,
+   "contra": 0.0021,
+   "best_premise": "Moshi: a speech-text foundation model for real-time dialogue, Table 8: Evaluation of spoken question answering.\nThe configuration Moshi (no Inner Monologue) has"
+  }
+ ],
+ "q10 participle tail / inference": [
+  {
+   "variant": "original",
+   "claim": "H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), confirming that adding a second dynamic chunking stage improves performance.",
+   "entail": 0.0212,
+   "contra": 0.0057,
+   "best_premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our"
+  },
+  {
+   "variant": "first clause only",
+   "claim": "H‑Net (2‑stage) is significantly better than H‑Net (1‑stage).",
+   "entail": 0.9282,
+   "contra": 0.0221,
+   "best_premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our"
+  },
+  {
+   "variant": "tail only",
+   "claim": "Adding a second dynamic chunking stage improves performance.",
+   "entail": 0.0028,
+   "contra": 0.0017,
+   "best_premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our"
+  },
+  {
+   "variant": "passage's own tail",
+   "claim": "H-Net (2-stage) is significantly better than H-Net (1-stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features.",
+   "entail": 0.8014,
+   "contra": 0.0502,
+   "best_premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our"
+  }
+ ],
+ "q10 paraphrase of c049": [
+  {
+   "variant": "original",
+   "claim": "In the 1‑stage version, H‑Net already learns context‑dependent segmentations that improve over static heuristics.",
+   "entail": 0.1069,
+   "contra": 0.0182,
+   "best_premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our"
+  },
+  {
+   "variant": "closer wording",
+   "claim": "H-Net (1-stage) learns to segment data in a context-dependent way that improves over strong heuristics.",
+   "entail": 0.4109,
+   "contra": 0.0784,
+   "best_premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our"
+  },
+  {
+   "variant": "'static' vs 'strong'",
+   "claim": "H-Net (1-stage) learns context-dependent segmentations that improve over strong heuristics.",
+   "entail": 0.8057,
+   "contra": 0.0419,
+   "best_premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 3.1 Language Modeling\nSpaceByte ++ is in turn worse than H-Net (space), validating our"
+  }
+ ],
+ "q10 figure caption with an added conclusion": [
+  {
+   "variant": "original",
+   "claim": "H‑Net’s architecture includes a routing module that dynamically draws chunk boundaries and a downsampler that retains vectors at those boundaries, forming the basis of its hierarchical design.",
+   "entail": 0.0539,
+   "contra": 0.0534,
+   "best_premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 1 Introduction\nFigure 1: (left) Architectural overview of H-Net with a two-stage hiera"
+  },
+  {
+   "variant": "drop the conclusion",
+   "claim": "H‑Net’s architecture includes a routing module that dynamically draws chunk boundaries and a downsampler that retains vectors at those boundaries.",
+   "entail": 0.9815,
+   "contra": 0.0088,
+   "best_premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 1 Introduction\nFigure 1: (left) Architectural overview of H-Net with a two-stage hiera"
+  },
+  {
+   "variant": "caption wording",
+   "claim": "A chunking layer has a routing module for dynamically drawing chunk boundaries and a downsampler that selectively retains vectors based on boundary indicators.",
+   "entail": 0.9971,
+   "contra": 0.0013,
+   "best_premise": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) || 1 Introduction\nFigure 1: (left) Architectural overview of H-Net with a two-stage hiera"
+  }
+ ]
+}

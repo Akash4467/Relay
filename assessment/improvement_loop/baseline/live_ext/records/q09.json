@@ -1,0 +1,294 @@
+{
+ "run": "assessment/improvement_loop/baseline/live_ext",
+ "timestamp": "2026-11-14T08:22:48.726+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "question_id": "q09",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "Where does Moshi's 160 ms theoretical latency come from, and how does its practical latency compare with natural conversation?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §1 Introduction; MOSHI §abstract Abstract; MOSHI §5.3 Ablations on generative modeling; MOSHI §7 Conclusion.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-live_ext-q09"
+ },
+ "client_ms": 33571.4,
+ "evidence_ids": [
+  "MOSHI:1:c005",
+  "MOSHI:abstract:c002",
+  "MOSHI:5.3:c083",
+  "MOSHI:7:c125",
+  "MOSHI:1:c004",
+  "MOSHI:abstract:c001",
+  "MOSHI:5.4:c088"
+ ],
+ "gold_units_in_context": [
+  false,
+  true,
+  true,
+  true
+ ],
+ "gold_units_complete_in_context": [
+  false,
+  true,
+  true,
+  true
+ ],
+ "drafts": [
+  "Moshi’s theoretical latency of 160 ms is achieved by the model’s streaming, hierarchical architecture that is pretrained with an acoustic delay of 2 and finetuned with an acoustic delay of 1, which together set the target delay for real‑time operation[MOSHI:5.3:c083]. This design choice is highlighted in the introduction as giving Moshi a theoretical latency of 160 ms, which is lower than the 230 ms average measured in natural conversations across ten languages[MOSHI:1:c005]. In practice, Moshi runs with a latency of about 200 ms, as reported in the abstract[MOSHI:abstract:c002]. This practical latency is still below the typical natural‑conversation response time of a few hundred milliseconds and specifically lower than the 230 ms average observed in real human dialogue[MOSHI:1:c005].",
+  "Moshi’s theoretical latency of 160 ms is specified as a design goal of its streaming, hierarchical architecture in the introduction[MOSHI:1:c005] and is reinforced by the abstract’s statement of a 160 ms theoretical latency[MOSHI:abstract:c002]. The abstract also reports that Moshi achieves a practical latency of about 200 ms in operation[MOSHI:abstract:c002]. Natural conversations are reported to have an average response time of 230 ms across ten languages[MOSHI:1:c005]. Thus, Moshi’s practical latency of 200 ms is lower than the typical natural‑conversation latency of 230 ms."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:5.3:c083",
+    "MOSHI:1:c005",
+    "MOSHI:abstract:c002"
+   ],
+   "failures": [
+    [
+     "Moshi’s theoretical latency of 160 ms is achieved by the model’s streaming, hierarchical architecture that is pretrained with an acoustic delay of 2 and finetuned with an acoustic delay of 1, which together set the target delay for real‑time operation[MOSHI:5.3:c083].",
+     "not supported by the cited passage (clause: \"This together set the target delay for real‑time operation.\") (entailment 0.14 < 0.9)"
+    ],
+    [
+     "This design choice is highlighted in the introduction as giving Moshi a theoretical latency of 160 ms, which is lower than the 230 ms average measured in natural conversations across ten languages[MOSHI:1:c005].",
+     "not supported by the cited passage (clause: \"This design choice is highlighted in the introduction as giving Moshi a theoretical latency of 160 ms.\") (entailment 0.11 < 0.9); number 160 ms not in the cited passage; number 230 ms not in the cited passage"
+    ],
+    [
+     "This practical latency is still below the typical natural‑conversation response time of a few hundred milliseconds and specifically lower than the 230 ms average observed in real human dialogue[MOSHI:1:c005].",
+     "not supported by the cited passage (entailment 0.77 < 0.9); number 230 ms not in the cited passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "Moshi’s theoretical latency of 160 ms is achieved by the model’s streaming, hierarchical architecture that is pretrained with an acoustic delay of 2 and finetuned with an acoustic delay of 1, which together set the target delay for real‑time operation[MOSHI:5.3:c083].",
+     "ok": false,
+     "entailment": 0.14056978465929143,
+     "reasons": [
+      "not supported by the cited passage (clause: \"This together set the target delay for real‑time operation.\") (entailment 0.14 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "This design choice is highlighted in the introduction as giving Moshi a theoretical latency of 160 ms, which is lower than the 230 ms average measured in natural conversations across ten languages[MOSHI:1:c005].",
+     "ok": false,
+     "entailment": 0.10975692679049126,
+     "reasons": [
+      "not supported by the cited passage (clause: \"This design choice is highlighted in the introduction as giving Moshi a theoretical latency of 160 ms.\") (entailment 0.11 < 0.9); number 160 ms not in the cited passage; number 230 ms not in the cited passage"
+     ]
+    },
+    {
+     "sentence": "In practice, Moshi runs with a latency of about 200 ms, as reported in the abstract[MOSHI:abstract:c002].",
+     "ok": true,
+     "entailment": 0.9956225324969102,
+     "reasons": []
+    },
+    {
+     "sentence": "This practical latency is still below the typical natural‑conversation response time of a few hundred milliseconds and specifically lower than the 230 ms average observed in real human dialogue[MOSHI:1:c005].",
+     "ok": false,
+     "entailment": 0.767992697968309,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.77 < 0.9); number 230 ms not in the cited passage"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:1:c005",
+    "MOSHI:abstract:c002"
+   ],
+   "failures": [
+    [
+     "Moshi’s theoretical latency of 160 ms is specified as a design goal of its streaming, hierarchical architecture in the introduction[MOSHI:1:c005] and is reinforced by the abstract’s statement of a 160 ms theoretical latency[MOSHI:abstract:c002].",
+     "not supported by the cited passage (entailment 0.59 < 0.9)"
+    ],
+    [
+     "Thus, Moshi’s practical latency of 200 ms is lower than the typical natural‑conversation latency of 230 ms.",
+     "no citation"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "Moshi’s theoretical latency of 160 ms is specified as a design goal of its streaming, hierarchical architecture in the introduction[MOSHI:1:c005] and is reinforced by the abstract’s statement of a 160 ms theoretical latency[MOSHI:abstract:c002].",
+     "ok": false,
+     "entailment": 0.5907305708186168,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.59 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The abstract also reports that Moshi achieves a practical latency of about 200 ms in operation[MOSHI:abstract:c002].",
+     "ok": true,
+     "entailment": 0.9898430798623751,
+     "reasons": []
+    },
+    {
+     "sentence": "Natural conversations are reported to have an average response time of 230 ms across ten languages[MOSHI:1:c005].",
+     "ok": true,
+     "entailment": 0.9794366331880084,
+     "reasons": []
+    },
+    {
+     "sentence": "Thus, Moshi’s practical latency of 200 ms is lower than the typical natural‑conversation latency of 230 ms.",
+     "ok": false,
+     "entailment": null,
+     "reasons": [
+      "no citation"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-live_ext-q09",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T08:22:48.726+00:00",
+  "question_id": "q09",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4164,
+  "tokens_out": 504,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 720.6,
+  "context_tokens": 1530,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:1:c005",
+   "MOSHI:abstract:c002",
+   "MOSHI:5.3:c083",
+   "MOSHI:7:c125",
+   "MOSHI:1:c004",
+   "MOSHI:abstract:c001",
+   "MOSHI:5.4:c088"
+  ],
+  "verification_ms": 5291.3,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 25613.1,
+  "model_ttft_ms": 690.4,
+  "first_byte_ms": 365.1,
+  "generation_ms": 1895.0,
+  "reasoning_tokens": 166,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1831,
+    "reserved": 2601,
+    "governor_wait_ms": 10382.2,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.288019953,
+     "prompt_tokens": 1830,
+     "prompt_time": 0.110192802,
+     "completion_tokens": 289,
+     "completion_time": 0.600697858,
+     "total_tokens": 2119,
+     "total_time": 0.71089066,
+     "completion_tokens_details": {
+      "reasoning_tokens": 97
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1830,
+    "tokens_out": 289,
+    "reasoning_tokens": 97,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 365.1,
+    "model_ttft_ms": 690.4,
+    "total_ms": 1070.2,
+    "max_gap_ms": 325.3,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "961",
+     "x-ratelimit-reset-requests": "56m9.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5520",
+     "x-ratelimit-reset-tokens": "18.6s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2333,
+    "reserved": 3103,
+    "governor_wait_ms": 15230.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.158105566,
+     "prompt_tokens": 2334,
+     "prompt_time": 0.110588702,
+     "completion_tokens": 215,
+     "completion_time": 0.452701794,
+     "total_tokens": 2549,
+     "total_time": 0.563290496,
+     "completion_tokens_details": {
+      "reasoning_tokens": 69
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2334,
+    "tokens_out": 215,
+    "reasoning_tokens": 69,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 265.7,
+    "model_ttft_ms": 538.3,
+    "total_ms": 824.8,
+    "max_gap_ms": 272.5,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "960",
+     "x-ratelimit-reset-requests": "57m36s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5377",
+     "x-ratelimit-reset-tokens": "19.672s"
+    }
+   }
+  ],
+  "first_token_ms": 33545.6,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 33546.1
+ }
+}

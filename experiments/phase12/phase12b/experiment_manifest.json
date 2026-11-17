@@ -1,0 +1,67 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "created_at": "2026-11-14T07:40:27.872+00:00",
+ "owner_approval": "Owner re-accepted the risk on 2026-11-14 for Phase 12 ('Accept risk again'): the current key is used although the earlier machine-security finding is unresolved (no full scan, key not rotated). Token cap raised by the owner from 30,000 to 100,000 ('Raise cap to 100,000').",
+ "caps": {
+  "connectivity_requests": 5,
+  "initial_generation_calls": 24,
+  "generation_requests": 48,
+  "total_tokens": 100000
+ },
+ "est_tokens_per_call_for_cap_guard": 3000,
+ "model": {
+  "id": "openai/gpt-oss-120b",
+  "reasoning_effort": "low",
+  "max_tokens": 900,
+  "temperature": 0.2
+ },
+ "prompt_version": "p4",
+ "verifier": {
+  "version": "v4.2",
+  "nli_model": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+  "entail_min": 0.9,
+  "entail_min_flagged": 0.9
+ },
+ "retrieval": {
+  "setting": "B",
+  "policy": {
+   "cross_paper_reserve_per_paper": 2,
+   "symbolic_query_expansion": true,
+   "prompt_caption_sharing": true
+  },
+  "context_cap": 2500
+ },
+ "corpora": {
+  "c3": {
+   "corpus_version": "c3",
+   "manifest_path": "config/corpus_manifests/c3.json",
+   "processed_data_path": "data/processed",
+   "index_path": "data/index"
+  },
+  "c6": {
+   "corpus_version": "c6",
+   "manifest_path": "experiments/phase10/corpus/c6/manifest.json",
+   "processed_data_path": "experiments/phase10/corpus/c6/processed",
+   "index_path": "experiments/phase10/corpus/c6/index"
+  }
+ },
+ "config_on_disk": {
+  "corpus.active": "c3",
+  "corpus_version": "c3"
+ },
+ "corpus_selection": "in memory: deep copy of app_config() with corpus.active/corpus_version set, one main.State per corpus; both States share ONE governor and retry budget (one Groq account)",
+ "execution": "sequential; per question both corpora back to back, order alternating c3-first / c6-first",
+ "outcome_categories": [
+  "correct_answer",
+  "partially_correct",
+  "incorrect",
+  "unsupported",
+  "correct_abstention",
+  "false_refusal",
+  "invalid_citation",
+  "provider_failure",
+  "incomplete_budget_or_timeout"
+ ],
+ "excluded_inputs": "the seven unknown-provenance artifacts and the three unknown-provenance stand-in fixtures (experiments/phase11f/fixture_provenance_audit.json) are not read",
+ "git_head": "4688baf449321a4f24a49cb509edbf6b040a7a23"
+}

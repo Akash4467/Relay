@@ -1,0 +1,41 @@
+{
+ "question_id": "q02",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:01:39.259+00:00",
+  "t_send_ns": 205749259768500,
+  "status": 200,
+  "t_first_byte_ns": 205749532890500,
+  "t_first_content_ns": 205749778037600,
+  "t_last_ns": 205749901437300,
+  "max_gap_ms": 245.1181,
+  "text": "In this work the authors employ h=8 parallel attention layers, or heads [AIAYN:3.2.2:c014].  \nFor each of these the authors use d_k=d_v=d_model/h=64 [AIAYN:3.2.2:c014].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.164067744,
+   "prompt_tokens": 2304,
+   "prompt_time": 0.129802007,
+   "completion_tokens": 115,
+   "completion_time": 0.241266946,
+   "total_tokens": 2419,
+   "total_time": 0.371068953,
+   "completion_tokens_details": {
+    "reasoning_tokens": 48
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "991",
+   "x-ratelimit-reset-requests": "12m57.599s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "1739",
+   "x-ratelimit-reset-tokens": "46.957s"
+  },
+  "error": null,
+  "first_byte_ms": 273.1,
+  "first_content_ms": 518.3,
+  "total_ms": 641.7
+ }
+}

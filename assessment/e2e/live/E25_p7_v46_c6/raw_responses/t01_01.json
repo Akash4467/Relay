@@ -1,0 +1,44 @@
+{
+ "question_id": "t01",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:52:43.524+00:00",
+  "t_send_ns": 201613525957000,
+  "status": 200,
+  "t_first_byte_ns": 201613981604000,
+  "t_first_content_ns": 201614293728300,
+  "t_last_ns": 201614389673100,
+  "max_gap_ms": 312.0922,
+  "text": "The authors' table shows that the Isotropic configuration with Example Architecture ByT5 has Autoregressive = ✗【HNET:T6:r01】.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.284759416,
+   "prompt_tokens": 1993,
+   "prompt_time": 0.244243687,
+   "completion_tokens": 67,
+   "completion_time": 0.140124097,
+   "total_tokens": 2060,
+   "total_time": 0.384367784,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 26
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "939",
+   "x-ratelimit-reset-requests": "1h27m50.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5422",
+   "x-ratelimit-reset-tokens": "19.334s"
+  },
+  "error": null,
+  "first_byte_ms": 455.6,
+  "first_content_ms": 767.8,
+  "total_ms": 863.7
+ }
+}

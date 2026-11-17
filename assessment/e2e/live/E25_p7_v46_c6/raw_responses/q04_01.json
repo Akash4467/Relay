@@ -1,0 +1,44 @@
+{
+ "question_id": "q04",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:45:37.711+00:00",
+  "t_send_ns": 201187712865500,
+  "status": 200,
+  "t_first_byte_ns": 201188019842900,
+  "t_first_content_ns": 201188534102400,
+  "t_last_ns": 201188686173800,
+  "max_gap_ms": 514.2285,
+  "text": "The authors state that Mimi’s initial frame size and overall stride correspond to 80 ms, which gives a frame rate of 12.5 Hz [MOSHI:3.3.1:c029]. The authors also report using Q = 8 quantizers, each with a codebook size of N_A = 2048, which at 12.5 Hz represents a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.155816955,
+   "prompt_tokens": 1994,
+   "prompt_time": 0.193371664,
+   "completion_tokens": 255,
+   "completion_time": 0.528067733,
+   "total_tokens": 2249,
+   "total_time": 0.721439397,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 144
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "962",
+   "x-ratelimit-reset-requests": "54m43.2s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2630",
+   "x-ratelimit-reset-tokens": "40.275s"
+  },
+  "error": null,
+  "first_byte_ms": 307.0,
+  "first_content_ms": 821.2,
+  "total_ms": 973.3
+ }
+}

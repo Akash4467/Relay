@@ -1,0 +1,249 @@
+{
+ "run": "assessment/e2e/live/B12_p7_c6",
+ "timestamp": "2026-11-14T14:18:49.064+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.5c",
+ "question_id": "q12",
+ "dataset": [
+  "e2e_B12",
+  "numerical_table"
+ ],
+ "question": "What spoken question answering accuracy does Moshi reach on Web Questions, Llama Questions and Audio TriviaQA, with and without Inner Monologue?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §5.4 Audio language modeling; MOSHI §5.5 Spoken question answering; MOSHI §4.3 Speech-Text Instruct data; MOSHI §1 Introduction.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-B12_p7_c6-q12"
+ },
+ "client_ms": 31833.2,
+ "evidence_ids": [
+  "MOSHI:T8:r02",
+  "MOSHI:5.5:c090",
+  "MOSHI:5.4:c089",
+  "MOSHI:5.5:c091",
+  "MOSHI:5.5:c092",
+  "MOSHI:T8:r01",
+  "MOSHI:4.3:c061",
+  "MOSHI:1:c008"
+ ],
+ "gold_units_in_context": [
+  true,
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  true
+ ],
+ "drafts": [
+  "The authors report that Moshi without Inner Monologue achieves 9.2 % accuracy on Web Questions, 21.0 % on LlaMA Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02]. The retrieved passages do not state the spoken question answering accuracy of Moshi with Inner Monologue.",
+  "The authors report that Moshi (no Inner Monologue) achieves Web Q. = 9.2, LlaMA Q. = 21.0, and Audio Trivia QA = 7.3 [MOSHI:T8:r02]. The authors also report that Moshi achieves Web Q. = 26.6, LlaMA Q. = 62.3, and Audio Trivia QA = 22.8 [MOSHI:T8:r01]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:T8:r02"
+   ],
+   "failures": [
+    [
+     "The retrieved passages do not state the spoken question answering accuracy of Moshi with Inner Monologue.",
+     "absence contradicted: absence contradicted by retrieved table MOSHI:T8 row 'Moshi': Audio Trivia QA = 22.8, LlaMA Q. = 62.3, Web Q. = 26.6"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors report that Moshi without Inner Monologue achieves 9.2 % accuracy on Web Questions, 21.0 % on LlaMA Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02].",
+     "ok": true,
+     "entailment": 0.927173521668806,
+     "reasons": []
+    },
+    {
+     "sentence": "The retrieved passages do not state the spoken question answering accuracy of Moshi with Inner Monologue.",
+     "ok": false,
+     "entailment": null,
+     "reasons": [
+      "absence contradicted: absence contradicted by retrieved table MOSHI:T8 row 'Moshi': Audio Trivia QA = 22.8, LlaMA Q. = 62.3, Web Q. = 26.6"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:T8:r02",
+    "MOSHI:T8:r01"
+   ],
+   "failures": [
+    [
+     "The authors also report that Moshi achieves Web Q. = 26.6, LlaMA Q. = 62.3, and Audio Trivia QA = 22.8 [MOSHI:T8:r01].",
+     "not supported by the cited passage (entailment 0.60 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors report that Moshi (no Inner Monologue) achieves Web Q. = 9.2, LlaMA Q. = 21.0, and Audio Trivia QA = 7.3 [MOSHI:T8:r02].",
+     "ok": true,
+     "entailment": 0.9218520374869641,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors also report that Moshi achieves Web Q. = 26.6, LlaMA Q. = 62.3, and Audio Trivia QA = 22.8 [MOSHI:T8:r01].",
+     "ok": false,
+     "entailment": 0.5961656478243816,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.60 < 0.9)"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-B12_p7_c6-q12",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T14:18:49.064+00:00",
+  "question_id": "q12",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4079,
+  "tokens_out": 322,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1069.8,
+  "context_tokens": 1434,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:T8:r02",
+   "MOSHI:5.5:c090",
+   "MOSHI:5.4:c089",
+   "MOSHI:5.5:c091",
+   "MOSHI:5.5:c092",
+   "MOSHI:T8:r01",
+   "MOSHI:4.3:c061",
+   "MOSHI:1:c008"
+  ],
+  "verification_ms": 1809.2,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 27006.7,
+  "model_ttft_ms": 734.5,
+  "first_byte_ms": 460.4,
+  "generation_ms": 1873.1,
+  "reasoning_tokens": 131,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1908,
+    "reserved": 2678,
+    "governor_wait_ms": 10891.8,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.37143613,
+     "prompt_tokens": 1907,
+     "prompt_time": 0.097087945,
+     "completion_tokens": 158,
+     "completion_time": 0.3366111,
+     "total_tokens": 2065,
+     "total_time": 0.433699045,
+     "completion_tokens_details": {
+      "reasoning_tokens": 77
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1907,
+    "tokens_out": 158,
+    "reasoning_tokens": 77,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 460.4,
+    "model_ttft_ms": 734.5,
+    "total_ms": 889.9,
+    "max_gap_ms": 274.1,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "991",
+     "x-ratelimit-reset-requests": "12m57.599s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "779",
+     "x-ratelimit-reset-tokens": "54.157s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2171,
+    "reserved": 2941,
+    "governor_wait_ms": 16114.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.373520621,
+     "prompt_tokens": 2172,
+     "prompt_time": 0.117905133,
+     "completion_tokens": 164,
+     "completion_time": 0.349244948,
+     "total_tokens": 2336,
+     "total_time": 0.467150081,
+     "completion_tokens_details": {
+      "reasoning_tokens": 54
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2172,
+    "tokens_out": 164,
+    "reasoning_tokens": 54,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 506.3,
+    "model_ttft_ms": 752.8,
+    "total_ms": 983.2,
+    "max_gap_ms": 246.5,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "990",
+     "x-ratelimit-reset-requests": "14m24s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "973",
+     "x-ratelimit-reset-tokens": "52.702s"
+    }
+   }
+  ],
+  "first_token_ms": 31798.0,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 31798.7
+ }
+}

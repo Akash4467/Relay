@@ -1,0 +1,44 @@
+{
+ "question_id": "q14",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:56:08.746+00:00",
+  "t_send_ns": 209018746997300,
+  "status": 200,
+  "t_first_byte_ns": 209019194593300,
+  "t_first_content_ns": 209020641801900,
+  "t_last_ns": 209020853511500,
+  "max_gap_ms": 1447.1896,
+  "text": "Sentences were encoded using byte‑pair encoding with a shared source‑target vocabulary of about 37000 tokens [AIAYN:5.1:c025]. All models but Transformer take raw byte inputs (Transformer uses GPT‑2 tokenizer) [HNET:3.1:c053]. H‑Net (space) and H‑Net (2‑stage) are byte‑level, while the Transformers use the Llama‑3 tokenizer [HNET:3.2:c061].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.367591799,
+   "prompt_tokens": 2528,
+   "prompt_time": 0.227855455,
+   "completion_tokens": 346,
+   "completion_time": 1.427847661,
+   "total_tokens": 2874,
+   "total_time": 1.655703116,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 238
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "941",
+   "x-ratelimit-reset-requests": "1h24m57.599s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5070",
+   "x-ratelimit-reset-tokens": "21.975s"
+  },
+  "error": null,
+  "first_byte_ms": 447.6,
+  "first_content_ms": 1894.8,
+  "total_ms": 2106.5
+ }
+}

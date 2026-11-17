@@ -1,0 +1,55 @@
+{
+ "iteration_id": "iteration_003",
+ "git_head": "4688baf449321a4f24a49cb509edbf6b040a7a23",
+ "candidate": {
+  "name": "verifier v4.4c (on top of accepted prompt candidate p5r)",
+  "module": "relay.candidate_v4_4.verifier",
+  "change": "a cited text passage is also offered to NLI as each sentence and each adjacent sentence pair, under the passage header; whole-chunk premise, tables, threshold 0.9 and all level-1 checks unchanged"
+ },
+ "targeted_failures": [
+  "F-VER-PREMISE: q15 ('All models are trained on H100 GPUs' 0.48), q02 ('For each of these we use d_k=d_v=d_model/h=64' 0.81), q08 (verbatim sentences 0.57-0.69)"
+ ],
+ "offline_regression": {
+  "unit_tests": "tests/unit/test_candidate_v4_4.py 3/3 passed",
+  "verifier_comparison": "NOT COMPLETED: the run (stress sets + live replay) was stopped by Claude Code because the machine ran low on memory; it produced no output. Not restarted without the owner's go-ahead.",
+  "verifier_comparison_rerun_2026-11-14": {
+   "dir": "comparison_rerun_2026-11-14/ (cases.jsonl is the checkpoint; log: comparison_rerun_2026-11-14.log)",
+   "status": "STOPPED by its own memory guard after 2 of 205 cases (160 stress + 45 live drafts)",
+   "memory": "free physical memory 2.45 GB at start, 1.44 GB after loading the NLI model, 0.98 GB after case 2 (guard 1.0 GB); nothing was closed",
+   "completed_cases": {
+    "stress:verifier_stress:s01": "supported; v4.2 accept, v4.4c accept (1.3 s)",
+    "stress:verifier_stress:s02": "supported; v4.2 REJECT, v4.4c accept (6.5 s) - a rescue, but 2 cases decide nothing"
+   },
+   "resume_command": "PYTHONIOENCODING=utf-8 uv run python assessment/improvement_loop/tools/verifier_compare_checkpointed.py relay.candidate_v4_4.verifier assessment/improvement_loop/iterations/iteration_003/comparison_rerun_2026-11-14 --min-free-gb 1.0 assessment/improvement_loop/baseline/phase12_c3_reused assessment/improvement_loop/baseline/live_ext assessment/improvement_loop/iterations/iteration_002/live"
+  },
+  "verifier_comparison_completed_2026-11-14": {
+   "dir": "comparison_rerun_2026-11-14/ (cases.jsonl 252 cases: 160 labelled stress + 92 recorded live drafts, each draft against its own corpus; summary.json)",
+   "stress_160": {
+    "false_rejections": "v4.2 22 -> v4.4c 10",
+    "false_acceptances": "v4.2 6 -> v4.4c 9",
+    "new_false_acceptances": {
+     "u11": "'Each training step of the base models took about 1.0 seconds' (1.0 s is the big models; base 0.4 s) 0.92",
+     "u05": "'inner layer is twice as wide as the model dimension' (it is 4x) 0.95",
+     "l3": "attention formula without the square root 0.95"
+    },
+    "newly_rejected_correct": 0
+   },
+   "live_drafts_92": {
+    "false_rejections": "v4.2 33 -> v4.4c 27",
+    "false_acceptances": "v4.2 2 -> v4.4c 3",
+    "new_false_acceptance": "B12_fix_c3 q01#0 (labelled mixed: an added inference)",
+    "rescued": 6,
+    "newly_rejected_correct": 0
+   },
+   "exact_copy_sentences_still_rejected": "v4.2 5 of 9 -> v4.4c 0 of 9",
+   "verification_time": "v4.4c 8-15 s per answer vs ~1 s for v4.2 on long drafts"
+  }
+ },
+ "live": {
+  "requests": 0,
+  "tokens": 0,
+  "why": "offline comparison incomplete (and today's loop budget is spent: 72,666 / 77,000)"
+ },
+ "decision": "REJECTED (owner's gate: false acceptances increase: 3 new factual false acceptances on the stress set + 1 on live drafts)",
+ "reason": "single-sentence premises lose the context that separates base from big models, ratios and formulas; recall gains cannot outweigh accepting wrong facts"
+}

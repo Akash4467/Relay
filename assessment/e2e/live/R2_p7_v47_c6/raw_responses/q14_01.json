@@ -1,0 +1,41 @@
+{
+ "question_id": "q14",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T15:15:26.668+00:00",
+  "t_send_ns": 202976668834400,
+  "status": 200,
+  "t_first_byte_ns": 202977155637300,
+  "t_first_content_ns": 202977766923900,
+  "t_last_ns": 202977928479100,
+  "max_gap_ms": 611.262,
+  "text": "The authors’ original Transformer translation experiments encoded sentences using byte‑pair encoding, which provides a shared source‑target vocabulary of about 37000 tokens【AIAYN:5.1:c025】. The authors’ H‑Net model avoids tokenization and instead chunks input on spaces and “space‑like” bytes as part of its hierarchical architecture【HNET:3:c041】.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.375061095,
+   "prompt_tokens": 2041,
+   "prompt_time": 0.427791419,
+   "completion_tokens": 169,
+   "completion_time": 0.351063212,
+   "total_tokens": 2210,
+   "total_time": 0.778854631,
+   "completion_tokens_details": {
+    "reasoning_tokens": 81
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "941",
+   "x-ratelimit-reset-requests": "1h24m57.599s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5478",
+   "x-ratelimit-reset-tokens": "18.915s"
+  },
+  "error": null,
+  "first_byte_ms": 486.8,
+  "first_content_ms": 1098.1,
+  "total_ms": 1259.6
+ }
+}

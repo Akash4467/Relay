@@ -1,0 +1,24 @@
+q01 c3 | ok normal None | calls 2 | tok 3904 + 258 | identity True | ledger 5299 2
+q01 c6 | ok refused verification failed after redraft | calls 2 | tok 3892 + 254 | identity True | ledger 9445 4
+q02 c6 | ok refused verification failed after redraft | calls 2 | tok 3814 + 232 | identity True | ledger 13491 6
+q02 c3 | ok refused verification failed after redraft | calls 2 | tok 3814 + 232 | identity True | ledger 17537 8
+q07 c3 | ok refused verification failed after redraft | calls 2 | tok 3863 + 603 | identity True | ledger 22003 10
+q07 c6 | ok refused verification failed after redraft | calls 2 | tok 3952 + 554 | identity True | ledger 26509 12
+q15 c6 | ok refused verification failed after redraft | calls 2 | tok 3904 + 257 | identity True | ledger 30670 14
+q15 c3 | ok refused verification failed after redraft | calls 2 | tok 3904 + 267 | identity True | ledger 34841 16
+t01 c3 | ok refused model: not in papers | calls 2 | tok 3560 + 181 | identity True | ledger 38582 18
+t01 c6 | ok normal None | calls 2 | tok 3782 + 157 | identity True | ledger 42521 20
+t05 c6 | ok normal None | calls 1 | tok 1726 + 120 | identity True | ledger 44367 21
+t05 c3 | ok normal None | calls 1 | tok 1720 + 106 | identity True | ledger 46193 22
+t13 c3 | ok refused model: not in papers | calls 2 | tok 3871 + 224 | identity True | ledger 50288 24
+t13 c6 | ok normal None | calls 1 | tok 1870 + 127 | identity True | ledger 52285 25
+q11 c6 | ok normal None | calls 1 | tok 1908 + 210 | identity True | ledger 54403 26
+q11 c3 | ok refused model: not in papers | calls 2 | tok 4006 + 319 | identity True | ledger 58728 28
+t10 c3 | ok refused model: not in papers | calls 1 | tok 1837 + 46 | identity True | ledger 60611 29
+t10 c6 | ok refused model: not in papers | calls 1 | tok 1886 + 38 | identity True | ledger 62535 30
+t29 c6 | ok refused verification failed after redraft | calls 2 | tok 3950 + 266 | identity True | ledger 66751 32
+t29 c3 | ok refused verification failed after redraft | calls 2 | tok 3563 + 238 | identity True | ledger 70552 34
+q16 c3 | ok refused model: not in papers | calls 1 | tok 1700 + 38 | identity True | ledger 72290 35
+q16 c6 | ok refused model: not in papers | calls 1 | tok 1700 + 38 | identity True | ledger 74028 36
+q27 c6 | ok refused model: not in papers | calls 1 | tok 1818 + 61 | identity True | ledger 75907 37
+q27 c3 | ok refused model: not in papers | calls 1 | tok 1818 + 76 | identity True | ledger 77801 38

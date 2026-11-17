@@ -1,0 +1,94 @@
+{
+ "group": "connectivity",
+ "stamp": "2026-11-14T02-40-56Z",
+ "note": "Owner accepted the risk 2026-11-14: run with the current key although a GoDro trojan executed at 01:16 and the key file was last changed at 01:08; no full scan, key not rotated.",
+ "caps": {
+  "calls": 5,
+  "tokens": 1000
+ },
+ "ledger_after": {
+  "calls": 5,
+  "tokens": 101
+ },
+ "1_auth_and_model_list": {
+  "http": 200,
+  "n_models": 11,
+  "primary_listed": true,
+  "fallback_listed": true,
+  "gpt_oss_models": [
+   "openai/gpt-oss-120b",
+   "openai/gpt-oss-20b",
+   "openai/gpt-oss-safeguard-20b"
+  ],
+  "client_ms": 747.6
+ },
+ "2_basic_completion": {
+  "http": 200,
+  "error": null,
+  "finish_reason": "stop",
+  "text": "pong",
+  "usage": {
+   "queue_time": 0.158427318,
+   "prompt_tokens": 78,
+   "prompt_time": 0.003027477,
+   "completion_tokens": 23,
+   "completion_time": 0.04828306,
+   "total_tokens": 101,
+   "total_time": 0.051310537,
+   "completion_tokens_details": {
+    "reasoning_tokens": 13
+   }
+  },
+  "first_byte_ms": 250.4,
+  "first_content_ms": 294.8,
+  "total_ms": 297.1,
+  "rate_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "999",
+   "x-ratelimit-reset-requests": "1m26.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "7794",
+   "x-ratelimit-reset-tokens": "1.545s"
+  },
+  "client_ms": 545.6
+ },
+ "3_invalid_model": {
+  "llm_error": "bad_request",
+  "http": 404,
+  "error": "{\"error\":{\"message\":\"The model `openai/this-model-does-not-exist` does not exist or you do not have access to it.\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\"}}\n",
+  "finish_reason": null,
+  "text": "",
+  "usage": null,
+  "first_byte_ms": null,
+  "first_content_ms": null,
+  "total_ms": 86.6,
+  "rate_headers": {},
+  "client_ms": 328.7
+ },
+ "4_invalid_key": {
+  "llm_error": "bad_request",
+  "http": 401,
+  "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+  "finish_reason": null,
+  "text": "",
+  "usage": null,
+  "first_byte_ms": null,
+  "first_content_ms": null,
+  "total_ms": 92.4,
+  "rate_headers": {},
+  "client_ms": 338.5
+ },
+ "5_timeout_1ms": {
+  "llm_error": "timeout",
+  "http": null,
+  "error": "timeout: ReadTimeout",
+  "finish_reason": null,
+  "text": "",
+  "usage": null,
+  "first_byte_ms": null,
+  "first_content_ms": null,
+  "total_ms": 35.5,
+  "rate_headers": {},
+  "client_ms": 326.7
+ }
+}

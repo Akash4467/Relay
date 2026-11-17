@@ -1,0 +1,41 @@
+{
+ "question_id": "q07",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T12:58:33.933+00:00",
+  "t_send_ns": 194763934292900,
+  "status": 200,
+  "t_first_byte_ns": 194764395518500,
+  "t_first_content_ns": 194764713111100,
+  "t_last_ns": 194765180155700,
+  "max_gap_ms": 317.5555,
+  "text": "The decoder stack contains a third sub‑layer that performs multi‑head attention over the output of the encoder, whereas the encoder stack only has self‑attention sub‑layers that attend to its own previous layer outputs [AIAYN:3.1:c009]. In the decoder, the self‑attention sub‑layer is masked so that each position can attend only to earlier positions, preserving the auto‑regressive property, while the encoder’s self‑attention allows each position to attend to all positions in the previous encoder layer [AIAYN:3.2.3:c016]. In encoder‑decoder attention layers, the queries are taken from the previous decoder layer and the keys and values are taken from the output of the encoder [AIAYN:3.2.3:c016]. The encoder’s self‑attention uses the same source for queries, keys and values—the output of the previous encoder layer—for each position [AIAYN:3.2.3:c016]. The retrieved passages do not state how the decoder’s overall architecture differs in terms of number of layers or other components.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.305482114,
+   "prompt_tokens": 1885,
+   "prompt_time": 0.093921832,
+   "completion_tokens": 328,
+   "completion_time": 0.694557571,
+   "total_tokens": 2213,
+   "total_time": 0.788479403,
+   "completion_tokens_details": {
+    "reasoning_tokens": 97
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "992",
+   "x-ratelimit-reset-requests": "11m31.2s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "1598",
+   "x-ratelimit-reset-tokens": "48.015s"
+  },
+  "error": null,
+  "first_byte_ms": 461.2,
+  "first_content_ms": 778.8,
+  "total_ms": 1245.9
+ }
+}

@@ -1,0 +1,97 @@
+{
+ "corpus_version": "c6",
+ "parent_corpus": "c4",
+ "experimental": true,
+ "built_at": "2026-11-14T03:41:18+00:00",
+ "extraction": "e4 = e2 + e3 (phantoms) + siunitx units",
+ "section_metadata": "none (c4 placement)",
+ "chunking": {
+  "base": "relay.retrieval.chunker, c4 settings, no metadata line",
+  "piece_sizes": [
+   256,
+   512
+  ],
+  "counts": {
+   "256": {
+    "chunks": 465,
+    "table_chunks": 146
+   },
+   "512": {
+    "chunks": 260,
+    "table_chunks": 71
+   }
+  }
+ },
+ "embedding": {
+  "model": "BAAI/bge-small-en-v1.5",
+  "query_prefix": "Represent this sentence for searching relevant passages: ",
+  "indexes": [
+   {
+    "size": 256,
+    "chunks": 465,
+    "vocab": 5817,
+    "dim": 384
+   },
+   {
+    "size": 512,
+    "chunks": 260,
+    "vocab": 5817,
+    "dim": 384
+   }
+  ]
+ },
+ "gate": {
+  "changed_paragraphs": 2,
+  "inserted_tokens": [
+   "min",
+   "ms",
+   "s"
+  ],
+  "unknown_unit_macros": [],
+  "report": "experiments/phase10/out/e4_changes.json"
+ },
+ "git_commit": "4688baf449321a4f24a49cb509edbf6b040a7a23",
+ "sources": {
+  "AIAYN": {
+   "src_tree_sha256": "da758cacfe135f49d80a11237dbf409c44586189b8b07c95d852fa6c88dc8334"
+  },
+  "MOSHI": {
+   "src_tree_sha256": "609a276c9cc9298c8d1b90b1f5c3779a17047521422ef365ac948eee5f9a9763"
+  },
+  "HNET": {
+   "src_tree_sha256": "79265f9de10d03536c837fff4f588b5cf68c9b65e06b5b67bd3eb31e142dd4e0"
+  }
+ },
+ "code_sha256": {
+  "relay/retrieval/latex_parse.py": "fd23baaa6ff91dfbf4eaec74329c047631b0c313edda39a3b4ebe8ae8cf07d53",
+  "relay/retrieval/pdf_validate.py": "1dcb35bad924f29001fc260c2348b59387b812190ee5a4fa65415d9c5c2561b5",
+  "relay/retrieval/chunker.py": "56fd54a6ad58e94c01ae77662db93588093c863fd96336c5922f54a5203cf369",
+  "relay/retrieval/index_build.py": "5314f762f85a51a674db36784412f5899b79b0ae19ba7b72c2ec7963fbfe62e7",
+  "relay/llm/tokenizer.py": "6bdcdf8b3ab1c76418a2328eb27b829ff5db6a2e3b9010bc20abfac270efbcdf",
+  "config/retrieval_settings.yaml": "613efc8c2f07975c175ec94c9caf60f1741d0469fa7cb296c3889b47a24f5399",
+  "experiments/phase9/extraction_e3.py": "43356bcbe38a6fac5bc7c648ed289770fae7ad7b08f849d28df2f61fd3793f6f",
+  "experiments/phase10/extraction_e4.py": "e296c72152e32b58d29b0844d39c2eca36abaadfcfdd3d9df3f66f97c977b305",
+  "experiments/phase10/build_c6.py": "4f82c3827146a95f65647300ab5ad90fc7a7108a6d9992b866f6559c1be24ce3"
+ },
+ "outputs_sha256": {
+  "index/bm25_256.pkl": "4dd76426f3211878213c5a55cdbaf5ad4d46ad15ce306200000321fd4e521932",
+  "index/bm25_512.pkl": "3f75d3f47c367ec2f13a05c16f7bf3cb1116be1265027e31013dbb8f423d676f",
+  "index/faiss_256.ids.json": "b2259aa92dcb4ba16227dfdbd6544c39ceb3feef710b2d98181b4075318f1171",
+  "index/faiss_256.index": "f73708a6b306a194254f2f79129b928d772412787942c4a2a74e969c8c89e9bf",
+  "index/faiss_512.ids.json": "8385278f918be349469e1e030a35ad9aefc6cb9e767066f31b66cac2e47bf1c2",
+  "index/faiss_512.index": "30349700bcf6107d52c74cb32de1c3bc5d92ba68a3bab233ed2ee2d102cb4c75",
+  "index/idf_256.json": "1861246c5f377f17c75fa8746536a6730c65da9e972b1210c5160c42187a522e",
+  "index/idf_512.json": "5e433f1301a7002caf11d02cbeb007097f67a419f857c31498d7224cc8bb6669",
+  "processed/bibliography_AIAYN.txt": "b8002af35b5a0d98c23696e4cbb7523f437dd4925684e908ed07153b140bcfc3",
+  "processed/bibliography_HNET.txt": "b837251ae297e9c3ed4cc16a0a64889a3f66b7efbabeb67220668839d98778f5",
+  "processed/bibliography_MOSHI.txt": "7d813d0c07a272eaee6ed4564888ac65bf97333e8822e7f58e6a595b61aa7662",
+  "processed/chunks_256.jsonl": "7fc171ce2101fe3166235a36f113321addeded3ee1634869b97bc03c98e481c1",
+  "processed/chunks_512.jsonl": "120ef97f403044a62fb14602e89b1225d82fa5859ade32080d6269bb29910fa2",
+  "processed/figures.jsonl": "3c8f1a118239d27a000bfa722d7e167722770901092941da056d91ea5cc688f8",
+  "processed/paragraphs.jsonl": "27c4dbdedda4dbda02982f2b2ae7e23734ec4275705762fcb395b3839baf20aa",
+  "processed/pdf_validation.json": "d9ab2543fa6c25821605d9854eb042f7745a9f73772cf37259ec916b1940cc58",
+  "processed/sections.jsonl": "223eae8d942b37be1db6a75b84ff3a21d16710b35349ac45aa38401995680103",
+  "processed/tables.jsonl": "25c82a810e4d02deb361859e904a5c665486cd2802d2bd86cabb61398b249252"
+ },
+ "sources_equal_parent": true
+}

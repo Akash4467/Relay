@@ -1,0 +1,145 @@
+{
+ "run": "assessment/e2e/live/E25_V48",
+ "timestamp": "2026-11-14T16:58:09.063+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "t29",
+ "dataset": [
+  "B_failure_focused"
+ ],
+ "question": "In the Moshi paper's extended Mimi codec ablation (the table reporting only ABX, VisQOL and MOSNet), what ABX error does the configuration with no marks in any of the five component columns report?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §A Additional ablation on Mimi codec; MOSHI §5.1 Text Language Modeling.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "model: not in papers",
+  "citations": [],
+  "request_id": "loop-E25_V48-t29"
+ },
+ "client_ms": 15407.9,
+ "evidence_ids": [
+  "MOSHI:T17:r05",
+  "MOSHI:T17:r07",
+  "MOSHI:T17:r06",
+  "MOSHI:T3:r03",
+  "MOSHI:T17:r03",
+  "MOSHI:T3:r01",
+  "MOSHI:T17:r04"
+ ],
+ "gold_units_in_context": [
+  false
+ ],
+ "gold_units_complete_in_context": [
+  false
+ ],
+ "drafts": [
+  "NOT_IN_PAPERS"
+ ],
+ "verification": [],
+ "pipeline_status": "refused",
+ "refusal_reason": "model: not in papers",
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_V48-t29",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T16:58:09.063+00:00",
+  "question_id": "t29",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 2086,
+  "tokens_out": 138,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 2899.1,
+  "context_tokens": 1590,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:T17:r05",
+   "MOSHI:T17:r07",
+   "MOSHI:T17:r06",
+   "MOSHI:T3:r03",
+   "MOSHI:T17:r03",
+   "MOSHI:T3:r01",
+   "MOSHI:T17:r04"
+  ],
+  "verification_ms": 0.0,
+  "answer_status": "refused",
+  "llm_calls": 1,
+  "initial_attempts": 1,
+  "redraft_attempts": 0,
+  "fallback_generations": 0,
+  "governor_wait_ms": 11698.0,
+  "model_ttft_ms": 638.0,
+  "first_byte_ms": 273.1,
+  "generation_ms": 646.4,
+  "reasoning_tokens": 124,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2087,
+    "reserved": 2857,
+    "governor_wait_ms": 11698.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.153473684,
+     "prompt_tokens": 2086,
+     "prompt_time": 0.090147519,
+     "completion_tokens": 138,
+     "completion_time": 0.28718345,
+     "total_tokens": 2224,
+     "total_time": 0.377330969,
+     "completion_tokens_details": {
+      "reasoning_tokens": 124
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 2086,
+    "tokens_out": 138,
+    "reasoning_tokens": 124,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 273.1,
+    "model_ttft_ms": 638.0,
+    "total_ms": 646.4,
+    "max_gap_ms": 364.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "933",
+     "x-ratelimit-reset-requests": "1h36m28.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5361",
+     "x-ratelimit-reset-tokens": "19.792s"
+    }
+   }
+  ],
+  "first_token_ms": 15357.2,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "model: not in papers",
+  "total_ms": 15358.0
+ }
+}

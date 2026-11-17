@@ -1,0 +1,4 @@
+{"about": "Grades against the papers (ASSISTANT grades). Run: c6 + retrieval R3b + p7 + v4.7c, 2026-11-14 (R3b_p7_v47_c6/). Stopped by Groq's daily limit (429) at q15 after 6,779 tokens; q15 (429), q16, q20, q04, q13 not run.",
+ "grades": {
+  "q14": {"grade": "partially_correct", "why": "Both halves now on target and from the right passages: 'Sentences were encoded using byte-pair encoding, which has a shared source-target vocabulary of about 37000 tokens [AIAYN:5.1:c025]' and 'H-Net (space) and H-Net (2-stage) are byte-level, while the Transformers use the Llama-3 tokenizer [HNET:3.2:c061]'. Missing: the 32000 word-piece vocabulary for English-French and H-Net's learned dynamic chunking. Readability risk: 'the Transformers' in the H-Net sentence are H-Net's own baselines. Previous runs: refused (production), misleading (c6+p7+v4.6c), SpaceByte half off-target (R2)."},
+  "q15": {"grade": "not_run", "why": "Groq daily limit (429) during the redraft call"}}}

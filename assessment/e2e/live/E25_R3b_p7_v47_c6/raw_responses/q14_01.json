@@ -1,0 +1,44 @@
+{
+ "question_id": "q14",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:08:16.425+00:00",
+  "t_send_ns": 206146425774000,
+  "status": 200,
+  "t_first_byte_ns": 206146871335400,
+  "t_first_content_ns": 206147905487700,
+  "t_last_ns": 206148101847400,
+  "max_gap_ms": 1034.1237,
+  "text": "The authors’ original Transformer experiments encoded sentences with byte‑pair encoding, using a shared source‑target vocabulary of about 37000 tokens【AIAYN:5.1:c025】.  \nThe H‑Net experiments use raw byte inputs for H‑Net (space) and H‑Net (2‑stage), while the Transformer baselines in those experiments use the Llama‑3 tokenizer rather than BPE【HNET:3.2:c061】.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.370958959,
+   "prompt_tokens": 1893,
+   "prompt_time": 0.885764672,
+   "completion_tokens": 169,
+   "completion_time": 0.349945557,
+   "total_tokens": 2062,
+   "total_time": 1.235710229,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 65
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "969",
+   "x-ratelimit-reset-requests": "44m38.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5045",
+   "x-ratelimit-reset-tokens": "22.162s"
+  },
+  "error": null,
+  "first_byte_ms": 445.6,
+  "first_content_ms": 1479.7,
+  "total_ms": 1676.1
+ }
+}

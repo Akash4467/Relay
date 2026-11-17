@@ -1,0 +1,266 @@
+{
+ "run": "assessment/e2e/live/R3b_p7_v47_c6",
+ "timestamp": "2026-11-14T15:32:46.125+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "q14",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "How is the input segmented in the original Transformer's translation experiments compared with H-Net?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "Sentences were encoded using byte-pair encoding, which has a shared source-target vocabulary of about 37000 tokens[AIAYN:5.1:c025]. H-Net (space) and H-Net (2-stage) are byte-level, while the Transformers use the Llama-3 tokenizer[HNET:3.2:c061]. The retrieved passages do not state how the original Transformer’s input segmentation differs from H‑Net beyond these points.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "AIAYN:5.1:c025",
+   "HNET:3.2:c061"
+  ],
+  "request_id": "loop-R3b_p7_v47_c6-q14"
+ },
+ "client_ms": 6686.9,
+ "evidence_ids": [
+  "AIAYN:5.1:c025",
+  "AIAYN:T3:r09",
+  "HNET:3.2:c061",
+  "AIAYN:T3:r01",
+  "HNET:3.1:c053",
+  "AIAYN:T3:r02",
+  "AIAYN:T3:r07",
+  "HNET:2.1.2:c019"
+ ],
+ "gold_units_in_context": [
+  true,
+  true,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  true,
+  false
+ ],
+ "drafts": [
+  "The authors’ original Transformer experiments encoded sentences with byte‑pair encoding, using a shared source‑target vocabulary of about 37000 tokens[AIAYN:5.1:c025]. The H‑Net models process raw byte inputs, with H‑Net (space) and H‑Net (2‑stage) being byte‑level while the Transformers in the H‑Net comparisons use the Llama‑3 tokenizer[HNET:3.2:c061]. The retrieved passages do not state any additional details about segmentation differences.",
+  "Sentences were encoded using byte-pair encoding, which has a shared source-target vocabulary of about 37000 tokens[AIAYN:5.1:c025]. H-Net (space) and H-Net (2-stage) are byte-level, while the Transformers use the Llama-3 tokenizer[HNET:3.2:c061]. The retrieved passages do not state how the original Transformer’s input segmentation differs from H‑Net beyond these points."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:5.1:c025",
+    "HNET:3.2:c061"
+   ],
+   "failures": [
+    [
+     "The authors’ original Transformer experiments encoded sentences with byte‑pair encoding, using a shared source‑target vocabulary of about 37000 tokens[AIAYN:5.1:c025].",
+     "not supported by the cited passage (entailment 0.00 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors’ original Transformer experiments encoded sentences with byte‑pair encoding, using a shared source‑target vocabulary of about 37000 tokens[AIAYN:5.1:c025].",
+     "ok": false,
+     "entailment": 0.003227618583759457,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.00 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The H‑Net models process raw byte inputs, with H‑Net (space) and H‑Net (2‑stage) being byte‑level while the Transformers in the H‑Net comparisons use the Llama‑3 tokenizer[HNET:3.2:c061].",
+     "ok": true,
+     "entailment": 0.975882834973521,
+     "reasons": []
+    },
+    {
+     "sentence": "The retrieved passages do not state any additional details about segmentation differences.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "AIAYN:5.1:c025",
+    "HNET:3.2:c061"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "Sentences were encoded using byte-pair encoding, which has a shared source-target vocabulary of about 37000 tokens[AIAYN:5.1:c025].",
+     "ok": true,
+     "entailment": 0.9655174913959591,
+     "reasons": []
+    },
+    {
+     "sentence": "H-Net (space) and H-Net (2-stage) are byte-level, while the Transformers use the Llama-3 tokenizer[HNET:3.2:c061].",
+     "ok": true,
+     "entailment": 0.5873264385765344,
+     "reasons": []
+    },
+    {
+     "sentence": "The retrieved passages do not state how the original Transformer’s input segmentation differs from H‑Net beyond these points.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "term_expansion": [
+  "byte-pair encoding",
+  "word-piece vocabulary"
+ ],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-R3b_p7_v47_c6-q14",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T15:32:46.125+00:00",
+  "question_id": "q14",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4142,
+  "tokens_out": 451,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1536.3,
+  "context_tokens": 1429,
+  "retrieval_policy": "per_paper",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:5.1:c025",
+   "AIAYN:T3:r09",
+   "HNET:3.2:c061",
+   "AIAYN:T3:r01",
+   "HNET:3.1:c053",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r07",
+   "HNET:2.1.2:c019"
+  ],
+  "verification_ms": 3123.3,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 0.1,
+  "model_ttft_ms": 660.6,
+  "first_byte_ms": 353.1,
+  "generation_ms": 1868.9,
+  "reasoning_tokens": 232,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1894,
+    "reserved": 2664,
+    "governor_wait_ms": 0.1,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.167287006,
+     "prompt_tokens": 1893,
+     "prompt_time": 0.159005211,
+     "completion_tokens": 193,
+     "completion_time": 0.402883688,
+     "total_tokens": 2086,
+     "total_time": 0.561888899,
+     "completion_tokens_details": {
+      "reasoning_tokens": 75
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1893,
+    "tokens_out": 193,
+    "reasoning_tokens": 75,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 353.1,
+    "model_ttft_ms": 660.6,
+    "total_ms": 831.1,
+    "max_gap_ms": 307.4,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "941",
+     "x-ratelimit-reset-requests": "1h24m57.599s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5574",
+     "x-ratelimit-reset-tokens": "18.195s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2248,
+    "reserved": 3018,
+    "governor_wait_ms": 0.0,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.159672313,
+     "prompt_tokens": 2249,
+     "prompt_time": 0.220623703,
+     "completion_tokens": 258,
+     "completion_time": 0.572102572,
+     "total_tokens": 2507,
+     "total_time": 0.792726275,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 157
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2249,
+    "tokens_out": 258,
+    "reasoning_tokens": 157,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 279.4,
+    "model_ttft_ms": 849.1,
+    "total_ms": 1037.8,
+    "max_gap_ms": 569.7,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "940",
+     "x-ratelimit-reset-requests": "1h26m24s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "3358",
+     "x-ratelimit-reset-tokens": "34.815s"
+    }
+   }
+  ],
+  "first_token_ms": 6578.7,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 6579.3
+ }
+}

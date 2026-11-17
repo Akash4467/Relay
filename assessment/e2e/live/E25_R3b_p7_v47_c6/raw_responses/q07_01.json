@@ -1,0 +1,41 @@
+{
+ "question_id": "q07",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:04:00.758+00:00",
+  "t_send_ns": 205890758323700,
+  "status": 200,
+  "t_first_byte_ns": 205891010431100,
+  "t_first_content_ns": 205891363709500,
+  "t_last_ns": 205891651943800,
+  "max_gap_ms": 353.256,
+  "text": "The decoder stack contains a third sub‑layer that performs multi‑head attention over the output of the encoder, whereas the encoder stack only has self‑attention sub‑layers [AIAYN:3.1:c009].  \nIn the decoder, the self‑attention sub‑layer is masked to prevent positions from attending to subsequent positions, a restriction that is not applied in the encoder [AIAYN:3.1:c009].  \nIn encoder‑decoder attention layers, the queries come from the previous decoder layer, while the keys and values (the memory) come from the output of the encoder [AIAYN:3.2.3:c016].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.155744943,
+   "prompt_tokens": 1885,
+   "prompt_time": 0.105014338,
+   "completion_tokens": 258,
+   "completion_time": 0.540645894,
+   "total_tokens": 2143,
+   "total_time": 0.645660232,
+   "completion_tokens_details": {
+    "reasoning_tokens": 112
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "983",
+   "x-ratelimit-reset-requests": "24m28.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2715",
+   "x-ratelimit-reset-tokens": "39.637s"
+  },
+  "error": null,
+  "first_byte_ms": 252.1,
+  "first_content_ms": 605.4,
+  "total_ms": 893.6
+ }
+}

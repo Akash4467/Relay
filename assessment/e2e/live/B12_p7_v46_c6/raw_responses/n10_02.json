@@ -1,0 +1,44 @@
+{
+ "question_id": "n10",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:39:02.052+00:00",
+  "t_send_ns": 200792052706700,
+  "status": 200,
+  "t_first_byte_ns": 200792531430100,
+  "t_first_content_ns": 200793673504700,
+  "t_last_ns": 200793759852700,
+  "max_gap_ms": 1142.0503,
+  "text": "The base configuration has h = 8 [AIAYN:T3:r01]. The base configuration has BLEU / (dev) = 25.8 [AIAYN:T3:r01].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.317961846,
+   "prompt_tokens": 2486,
+   "prompt_time": 0.679818532,
+   "completion_tokens": 223,
+   "completion_time": 0.552686561,
+   "total_tokens": 2709,
+   "total_time": 1.2325050929999999,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 173
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "970",
+   "x-ratelimit-reset-requests": "43m12s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "4520",
+   "x-ratelimit-reset-tokens": "26.1s"
+  },
+  "error": null,
+  "first_byte_ms": 478.7,
+  "first_content_ms": 1620.8,
+  "total_ms": 1707.1
+ }
+}

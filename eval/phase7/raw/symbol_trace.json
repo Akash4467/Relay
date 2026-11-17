@@ -1,0 +1,310 @@
+{
+ "symbol_[symbol]_occurrences": {
+  "c3": 0,
+  "c4": 0
+ },
+ "cases": [
+  {
+   "symbol": "checked ✓",
+   "table": "HNET:T6",
+   "row": "Example Architectures = H-Net",
+   "column": "Multi-stage / Hierarchy",
+   "question": "t02",
+   "corpora": {
+    "c3": {
+     "extracted_cell": "51",
+     "chunk": "HNET:T6:r03",
+     "chunk_line": "Configuration Hierarchical (dynamic): Autoregressive = 51; Chunking Mechanism = dynamic chunking; Multi-stage / Hierarchy = 51; Example Architectures = H-Net",
+     "row_chunk_in_context_B": true,
+     "line_in_model_context": true,
+     "generated_answer": "PENDING: no model output (no API calls in this phase)",
+     "verifier_probes_constructed": [
+      {
+       "claim": "In the related-architectures table, the H-Net row is marked with a check under Multi-stage / Hierarchy.",
+       "label": "literal, correct",
+       "accepted": false,
+       "entailment": 0.768,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.77 < 0.9); term 'related-architectures' not in the cited passage"
+       ]
+      },
+      {
+       "claim": "In the related-architectures table, the H-Net row is marked with a cross under Multi-stage / Hierarchy.",
+       "label": "literal, wrong",
+       "accepted": false,
+       "entailment": 0.698,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.70 < 0.9); term 'related-architectures' not in the cited passage"
+       ]
+      },
+      {
+       "claim": "H-Net supports multi-stage hierarchies.",
+       "label": "interpretation (stated in the caption)",
+       "accepted": true,
+       "entailment": 0.999,
+       "reasons": []
+      }
+     ]
+    },
+    "c4": {
+     "extracted_cell": "✓",
+     "chunk": "HNET:T6:r05",
+     "chunk_line": "Configuration Hierarchical (dynamic): Autoregressive = ✓; Chunking Mechanism = dynamic chunking; Multi-stage / Hierarchy = ✓; Example Architectures = H-Net",
+     "row_chunk_in_context_B": true,
+     "line_in_model_context": true,
+     "generated_answer": "PENDING: no model output (no API calls in this phase)",
+     "verifier_probes_constructed": [
+      {
+       "claim": "In the related-architectures table, the H-Net row is marked with a check under Multi-stage / Hierarchy.",
+       "label": "literal, correct",
+       "accepted": true,
+       "entailment": 0.989,
+       "reasons": []
+      },
+      {
+       "claim": "In the related-architectures table, the H-Net row is marked with a cross under Multi-stage / Hierarchy.",
+       "label": "literal, wrong",
+       "accepted": false,
+       "entailment": 0.831,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.83 < 0.9); term 'related-architectures' not in the cited passage"
+       ]
+      },
+      {
+       "claim": "H-Net supports multi-stage hierarchies.",
+       "label": "interpretation (stated in the caption)",
+       "accepted": true,
+       "entailment": 0.998,
+       "reasons": []
+      }
+     ]
+    }
+   }
+  },
+  {
+   "symbol": "crossed ✗",
+   "table": "HNET:T6",
+   "row": "Example Architectures = MANTa",
+   "column": "Multi-stage / Hierarchy",
+   "question": "t03",
+   "corpora": {
+    "c3": {
+     "extracted_cell": "55",
+     "chunk": "HNET:T6:r03",
+     "chunk_line": "Configuration Hierarchical (dynamic): Autoregressive = 51; Chunking Mechanism = soft matching; Multi-stage / Hierarchy = 55; Example Architectures = MANTa",
+     "row_chunk_in_context_B": true,
+     "line_in_model_context": true,
+     "generated_answer": "PENDING: no model output (no API calls in this phase)",
+     "verifier_probes_constructed": [
+      {
+       "claim": "In the related-architectures table, MANTa is marked with a cross under Multi-stage / Hierarchy.",
+       "label": "literal, correct",
+       "accepted": false,
+       "entailment": 0.499,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.50 < 0.9); term 'related-architectures' not in the cited passage"
+       ]
+      },
+      {
+       "claim": "In the related-architectures table, MANTa is marked with a check under Multi-stage / Hierarchy.",
+       "label": "literal, wrong",
+       "accepted": false,
+       "entailment": 0.565,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.57 < 0.9); term 'related-architectures' not in the cited passage"
+       ]
+      },
+      {
+       "claim": "MANTa does not support multi-stage hierarchies.",
+       "label": "interpretation (meaning of ✗ not defined)",
+       "accepted": false,
+       "entailment": 0.105,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.11 < 0.9)"
+       ]
+      }
+     ]
+    },
+    "c4": {
+     "extracted_cell": "✗",
+     "chunk": "HNET:T6:r04",
+     "chunk_line": "Configuration Hierarchical (dynamic): Autoregressive = ✓; Chunking Mechanism = soft matching; Multi-stage / Hierarchy = ✗; Example Architectures = MANTa",
+     "row_chunk_in_context_B": true,
+     "line_in_model_context": true,
+     "generated_answer": "PENDING: no model output (no API calls in this phase)",
+     "verifier_probes_constructed": [
+      {
+       "claim": "In the related-architectures table, MANTa is marked with a cross under Multi-stage / Hierarchy.",
+       "label": "literal, correct",
+       "accepted": false,
+       "entailment": 0.787,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.79 < 0.9); term 'related-architectures' not in the cited passage"
+       ]
+      },
+      {
+       "claim": "In the related-architectures table, MANTa is marked with a check under Multi-stage / Hierarchy.",
+       "label": "literal, wrong",
+       "accepted": true,
+       "entailment": 0.988,
+       "reasons": []
+      },
+      {
+       "claim": "MANTa does not support multi-stage hierarchies.",
+       "label": "interpretation (meaning of ✗ not defined)",
+       "accepted": false,
+       "entailment": 0.815,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.82 < 0.9)"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "symbol": "blank via empty macro (blank)",
+   "table": "MOSHI:T4",
+   "row": "RVQGAN",
+   "column": "causal",
+   "question": "t11",
+   "corpora": {
+    "c3": {
+     "extracted_cell": "<column absent>",
+     "chunk": "MOSHI:T4:r01",
+     "chunk_line": "Configuration RVQGAN: f_s = 24kHz; f_r = 75Hz; bitrate = 1.5kbps; ABX (↓) = -; VisQOL (↑) = 1.74; MOSNet (↑) = 2.74; MUSHRA (↑) = 31.3±1.3",
+     "row_chunk_in_context_B": true,
+     "line_in_model_context": true,
+     "generated_answer": "PENDING: no model output (no API calls in this phase)",
+     "verifier_probes_constructed": [
+      {
+       "claim": "In the audio quality table, the causal cell for RVQGAN is blank.",
+       "label": "literal, correct",
+       "accepted": false,
+       "entailment": 0.388,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.39 < 0.9)"
+       ]
+      },
+      {
+       "claim": "RVQGAN is not causal.",
+       "label": "interpretation of a blank (table alone does not say)",
+       "accepted": false,
+       "entailment": 0.19,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.19 < 0.9)"
+       ]
+      },
+      {
+       "claim": "RVQGAN is causal.",
+       "label": "wrong",
+       "accepted": false,
+       "entailment": 0.089,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.09 < 0.9)"
+       ]
+      }
+     ]
+    },
+    "c4": {
+     "extracted_cell": "(blank)",
+     "chunk": "MOSHI:T4:r01",
+     "chunk_line": "Configuration RVQGAN: f_s = 24kHz; f_r = 75Hz; bitrate = 1.5kbps; causal = (blank); ABX (↓) = -; VisQOL (↑) = 1.74; MOSNet (↑) = 2.74; MUSHRA (↑) = 31.3±1.3",
+     "row_chunk_in_context_B": true,
+     "line_in_model_context": true,
+     "generated_answer": "PENDING: no model output (no API calls in this phase)",
+     "verifier_probes_constructed": [
+      {
+       "claim": "In the audio quality table, the causal cell for RVQGAN is blank.",
+       "label": "literal, correct",
+       "accepted": true,
+       "entailment": 0.997,
+       "reasons": []
+      },
+      {
+       "claim": "RVQGAN is not causal.",
+       "label": "interpretation of a blank (table alone does not say)",
+       "accepted": false,
+       "entailment": 0.133,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.13 < 0.9)"
+       ]
+      },
+      {
+       "claim": "RVQGAN is causal.",
+       "label": "wrong",
+       "accepted": true,
+       "entailment": 0.958,
+       "reasons": []
+      }
+     ]
+    }
+   }
+  },
+  {
+   "symbol": "blank, empty LaTeX cell",
+   "table": "MOSHI:T6",
+   "row": "Transcript / Length (↑) = 538",
+   "column": "Depthwise / Parametrization",
+   "question": "t18",
+   "corpora": {
+    "c3": {
+     "extracted_cell": "<column absent>",
+     "chunk": "MOSHI:T6:r02",
+     "chunk_line": "Configuration [0, 2, 2, 2, 2, 2, 2, 2]: Semantic Token / Weight = 100.0; Transcript / NLL (↓) = 3.75; Transcript / Length (↑) = 538",
+     "row_chunk_in_context_B": true,
+     "line_in_model_context": true,
+     "generated_answer": "PENDING: no model output (no API calls in this phase)",
+     "verifier_probes_constructed": [
+      {
+       "claim": "In the delay-pattern ablation, the row with transcript length 538 has no mark under Depthwise Parametrization.",
+       "label": "literal, correct",
+       "accepted": false,
+       "entailment": 0.436,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.44 < 0.9); term 'delay-pattern' not in the cited passage"
+       ]
+      },
+      {
+       "claim": "The row with transcript length 538 does not use depthwise parametrization.",
+       "label": "interpretation of a blank",
+       "accepted": false,
+       "entailment": 0.566,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.57 < 0.9)"
+       ]
+      }
+     ]
+    },
+    "c4": {
+     "extracted_cell": "",
+     "chunk": "MOSHI:T6:r02",
+     "chunk_line": "Configuration [0, 2, 2, 2, 2, 2, 2, 2]: Semantic Token / Weight = 100.0; Transcript / NLL (↓) = 3.75; Transcript / Length (↑) = 538",
+     "row_chunk_in_context_B": true,
+     "line_in_model_context": true,
+     "generated_answer": "PENDING: no model output (no API calls in this phase)",
+     "verifier_probes_constructed": [
+      {
+       "claim": "In the delay-pattern ablation, the row with transcript length 538 has no mark under Depthwise Parametrization.",
+       "label": "literal, correct",
+       "accepted": false,
+       "entailment": 0.45,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.45 < 0.9); term 'delay-pattern' not in the cited passage"
+       ]
+      },
+      {
+       "claim": "The row with transcript length 538 does not use depthwise parametrization.",
+       "label": "interpretation of a blank",
+       "accepted": false,
+       "entailment": 0.544,
+       "reasons": [
+        "not supported by the cited passage (entailment 0.54 < 0.9)"
+       ]
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

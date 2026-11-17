@@ -1,0 +1,3 @@
+questions x settings: 222 | final context changed: [('A', 'q14'), ('B', 'q14'), ('C', 'q14'), ('B', 'q15')] | expansion fired on: ['q14']
+candidate_R1_c6 ['AIAYN:5.2:c026', 'MOSHI:4.4:c062', 'AIAYN:1:c003', 'MOSHI:3.1:c017', 'MOSHI:3.4.1:c040', 'MOSHI:4.4:c064', 'AIAYN:6.1:c029', 'MOSHI:3.1:c016'] [True, True] 1599
+candidate_R2_c6 ['AIAYN:6.1:c030', 'MOSHI:3.1:c017', 'AIAYN:5.2:c026', 'MOSHI:4.4:c062', 'AIAYN:1:c003', 'MOSHI:3.4.1:c040', 'MOSHI:4.4:c064', 'AIAYN:6.1:c029'] [True, True] 1551

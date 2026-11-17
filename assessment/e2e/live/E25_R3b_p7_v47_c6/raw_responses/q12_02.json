@@ -1,0 +1,44 @@
+{
+ "question_id": "q12",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:07:23.180+00:00",
+  "t_send_ns": 206093181112400,
+  "status": 200,
+  "t_first_byte_ns": 206093414513100,
+  "t_first_content_ns": 206093763234000,
+  "t_last_ns": 206094449210100,
+  "max_gap_ms": 452.7142,
+  "text": "The authors report that Moshi (no Inner Monologue) has Web Q. = 9.2, LlaMA Q. = 21.0, and Audio Trivia QA = 7.3 [MOSHI:T8:r02]. The authors also report that Moshi (with Inner Monologue) has Web Q. = 26.6, LlaMA Q. = 62.3, and Audio Trivia QA = 22.8 [MOSHI:T8:r01].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.156906938,
+   "prompt_tokens": 2173,
+   "prompt_time": 0.112996404,
+   "completion_tokens": 152,
+   "completion_time": 0.92809457,
+   "total_tokens": 2325,
+   "total_time": 1.041090974,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 42
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "972",
+   "x-ratelimit-reset-requests": "40m19.2s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "3875",
+   "x-ratelimit-reset-tokens": "30.937s"
+  },
+  "error": null,
+  "first_byte_ms": 233.4,
+  "first_content_ms": 582.1,
+  "total_ms": 1268.1
+ }
+}

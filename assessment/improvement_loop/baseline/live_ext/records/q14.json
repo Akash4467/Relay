@@ -1,0 +1,269 @@
+{
+ "run": "assessment/improvement_loop/baseline/live_ext",
+ "timestamp": "2026-11-14T08:25:00.564+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "question_id": "q14",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "How is the input segmented in the original Transformer's translation experiments compared with H-Net?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.3 English Constituency Parsing; HNET §3.2 Alternate Language Datasets; AIAYN §1 Introduction; HNET §3.1 Language Modeling.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-live_ext-q14"
+ },
+ "client_ms": 31743.5,
+ "evidence_ids": [
+  "AIAYN:6.3:c032",
+  "HNET:3.2:c061",
+  "AIAYN:1:c003",
+  "HNET:3.1:c053",
+  "HNET:2.1.2:c019",
+  "HNET:F:c125",
+  "HNET:2.1.2:c020",
+  "HNET:abstract:c001"
+ ],
+ "gold_units_in_context": [
+  false,
+  false,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  false,
+  false,
+  false
+ ],
+ "drafts": [
+  "The original Transformer translation experiments used a fixed BPE‑style tokenizer (the Llama‑3 tokenizer) that segments input into pre‑defined subword tokens [HNET:3.2:c061]. In contrast, H‑Net replaces this pipeline with a dynamic chunking mechanism that learns content‑ and context‑dependent segmentation jointly with the model, operating directly on raw bytes [HNET:abstract:c001].",
+  "The original Transformer translation experiments segmented input with the Llama‑3 tokenizer, a BPE‑style tokenizer designed for multilingual text [HNET:3.2:c061]. H‑Net instead learns a dynamic, content‑ and context‑dependent chunking mechanism that operates directly on raw bytes, replacing the fixed tokenization pipeline [HNET:abstract:c001]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "HNET:3.2:c061",
+    "HNET:abstract:c001"
+   ],
+   "failures": [
+    [
+     "The original Transformer translation experiments used a fixed BPE‑style tokenizer (the Llama‑3 tokenizer) that segments input into pre‑defined subword tokens [HNET:3.2:c061].",
+     "not supported by the cited passage (entailment 0.03 < 0.9); term 'llama' not in the cited passage; names AIAYN but cites no AIAYN passage"
+    ],
+    [
+     "In contrast, H‑Net replaces this pipeline with a dynamic chunking mechanism that learns content‑ and context‑dependent segmentation jointly with the model, operating directly on raw bytes [HNET:abstract:c001].",
+     "not supported by the cited passage (entailment 0.34 < 0.9); term 'h' not in the cited passage; term 'net' not in the cited passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The original Transformer translation experiments used a fixed BPE‑style tokenizer (the Llama‑3 tokenizer) that segments input into pre‑defined subword tokens [HNET:3.2:c061].",
+     "ok": false,
+     "entailment": 0.030047793328091193,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.03 < 0.9); term 'llama' not in the cited passage; names AIAYN but cites no AIAYN passage"
+     ]
+    },
+    {
+     "sentence": "In contrast, H‑Net replaces this pipeline with a dynamic chunking mechanism that learns content‑ and context‑dependent segmentation jointly with the model, operating directly on raw bytes [HNET:abstract:c001].",
+     "ok": false,
+     "entailment": 0.33628907209036457,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.34 < 0.9); term 'h' not in the cited passage; term 'net' not in the cited passage"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "HNET:3.2:c061",
+    "HNET:abstract:c001"
+   ],
+   "failures": [
+    [
+     "The original Transformer translation experiments segmented input with the Llama‑3 tokenizer, a BPE‑style tokenizer designed for multilingual text [HNET:3.2:c061].",
+     "not supported by the cited passage (entailment 0.02 < 0.9); term 'llama' not in the cited passage; names AIAYN but cites no AIAYN passage"
+    ],
+    [
+     "H‑Net instead learns a dynamic, content‑ and context‑dependent chunking mechanism that operates directly on raw bytes, replacing the fixed tokenization pipeline [HNET:abstract:c001].",
+     "not supported by the cited passage (entailment 0.51 < 0.9); term 'net' not in the cited passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The original Transformer translation experiments segmented input with the Llama‑3 tokenizer, a BPE‑style tokenizer designed for multilingual text [HNET:3.2:c061].",
+     "ok": false,
+     "entailment": 0.024329550481748365,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.02 < 0.9); term 'llama' not in the cited passage; names AIAYN but cites no AIAYN passage"
+     ]
+    },
+    {
+     "sentence": "H‑Net instead learns a dynamic, content‑ and context‑dependent chunking mechanism that operates directly on raw bytes, replacing the fixed tokenization pipeline [HNET:abstract:c001].",
+     "ok": false,
+     "entailment": 0.5129520515403588,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.51 < 0.9); term 'net' not in the cited passage"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-live_ext-q14",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T08:25:00.564+00:00",
+  "question_id": "q14",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3926,
+  "tokens_out": 402,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 689.3,
+  "context_tokens": 1527,
+  "retrieval_policy": "per_paper",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:6.3:c032",
+   "HNET:3.2:c061",
+   "AIAYN:1:c003",
+   "HNET:3.1:c053",
+   "HNET:2.1.2:c019",
+   "HNET:F:c125",
+   "HNET:2.1.2:c020",
+   "HNET:abstract:c001"
+  ],
+  "verification_ms": 1315.3,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 27899.5,
+  "model_ttft_ms": 794.8,
+  "first_byte_ms": 464.9,
+  "generation_ms": 1794.0,
+  "reasoning_tokens": 222,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1818,
+    "reserved": 2588,
+    "governor_wait_ms": 12247.7,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.371354903,
+     "prompt_tokens": 1817,
+     "prompt_time": 0.075181053,
+     "completion_tokens": 207,
+     "completion_time": 0.493711561,
+     "total_tokens": 2024,
+     "total_time": 0.568892614,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 112
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1817,
+    "tokens_out": 207,
+    "reasoning_tokens": 112,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 464.9,
+    "model_ttft_ms": 794.8,
+    "total_ms": 1026.7,
+    "max_gap_ms": 330.0,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "953",
+     "x-ratelimit-reset-requests": "1h7m40.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5743",
+     "x-ratelimit-reset-tokens": "16.927s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2108,
+    "reserved": 2878,
+    "governor_wait_ms": 15651.8,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.156818971,
+     "prompt_tokens": 2109,
+     "prompt_time": 0.099784921,
+     "completion_tokens": 195,
+     "completion_time": 0.40935321,
+     "total_tokens": 2304,
+     "total_time": 0.509138131,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 110
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2109,
+    "tokens_out": 195,
+    "reasoning_tokens": 110,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 262.9,
+    "model_ttft_ms": 606.9,
+    "total_ms": 767.3,
+    "max_gap_ms": 344.0,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "952",
+     "x-ratelimit-reset-requests": "1h9m7.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5671",
+     "x-ratelimit-reset-tokens": "17.467s"
+    }
+   }
+  ],
+  "first_token_ms": 31723.4,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 31723.9
+ }
+}

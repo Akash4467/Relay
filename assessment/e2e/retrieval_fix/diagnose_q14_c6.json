@@ -1,0 +1,51 @@
+{
+ "+ word-piece vocabulary, source-target vocabulary": {
+  "bm25_rank_in_AIAYN": 1,
+  "dense_rank_in_AIAYN": 9,
+  "fused_rank_in_AIAYN_slot(10)": 3,
+  "reranked_rank_in_AIAYN_slot": 7,
+  "in_final_context": false,
+  "final_context": [
+   "AIAYN:6.3:c032",
+   "HNET:3.2:c058",
+   "AIAYN:7:c034",
+   "HNET:3.1:c051",
+   "HNET:abstract:c001",
+   "HNET:2.1.2:c020"
+  ],
+  "hnet_in_context": 4
+ },
+ "+ sentences were encoded, word-piece vocabulary": {
+  "bm25_rank_in_AIAYN": 1,
+  "dense_rank_in_AIAYN": 12,
+  "fused_rank_in_AIAYN_slot(10)": 6,
+  "reranked_rank_in_AIAYN_slot": 5,
+  "in_final_context": false,
+  "final_context": [
+   "AIAYN:6.3:c032",
+   "HNET:3.2:c061",
+   "AIAYN:7:c034",
+   "HNET:3.1:c051",
+   "HNET:abstract:c001",
+   "HNET:3:c041"
+  ],
+  "hnet_in_context": 4
+ },
+ "+ byte-pair, word-piece vocabulary, source-target": {
+  "bm25_rank_in_AIAYN": 1,
+  "dense_rank_in_AIAYN": 8,
+  "fused_rank_in_AIAYN_slot(10)": 2,
+  "reranked_rank_in_AIAYN_slot": 8,
+  "in_final_context": false,
+  "final_context": [
+   "AIAYN:6.3:c032",
+   "HNET:3.2:c058",
+   "AIAYN:T3:r01",
+   "HNET:3.2:c061",
+   "HNET:E.2:c114",
+   "AIAYN:T3:r09",
+   "AIAYN:T3:r07"
+  ],
+  "hnet_in_context": 3
+ }
+}

@@ -1,0 +1,287 @@
+{
+ "run": "assessment/e2e/live/E25_V48",
+ "timestamp": "2026-11-14T16:52:32.513+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "q09",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "Where does Moshi's 160 ms theoretical latency come from, and how does its practical latency compare with natural conversation?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "The authors settle on a theoretical latency of 160 ms by pretraining Moshi with an acoustic delay of 2 and finetuning it with an acoustic delay of 1[MOSHI:5.3:c083]. The authors design a streaming, hierarchical architecture with a theoretical latency of 160 ms—lower than the 230 ms average in natural conversations measured over 10 languages[MOSHI:1:c005]. The authors report a theoretical latency of 160 ms, 200 ms in practice[MOSHI:abstract:c002]. The retrieved passages do not state how the practical latency compares numerically to the natural conversation latency.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "MOSHI:5.3:c083",
+   "MOSHI:1:c005",
+   "MOSHI:abstract:c002"
+  ],
+  "request_id": "loop-E25_V48-q09"
+ },
+ "client_ms": 38179.4,
+ "evidence_ids": [
+  "MOSHI:1:c005",
+  "MOSHI:abstract:c002",
+  "MOSHI:5.3:c083",
+  "MOSHI:7:c125",
+  "MOSHI:1:c004",
+  "MOSHI:abstract:c001",
+  "MOSHI:5.4:c088"
+ ],
+ "gold_units_in_context": [
+  false,
+  true,
+  true,
+  true
+ ],
+ "gold_units_complete_in_context": [
+  false,
+  true,
+  true,
+  true
+ ],
+ "drafts": [
+  "The authors state that the theoretical latency of 160 ms is achieved by the streaming, hierarchical architecture of Moshi, which is set by pretraining with an acoustic delay of 2 and finetuning with an acoustic delay of 1[MOSHI:5.3:c083]. The authors also note that this 160 ms theoretical latency is lower than the 230 ms average measured in natural conversations across 10 languages[MOSHI:1:c005]. In practice, the authors report a latency of 200 ms, which remains higher than the theoretical value but still comparable to natural conversation response times[MOSHI:abstract:c002]. The retrieved passages do not state how the practical latency directly compares numerically to the natural conversation latency.",
+  "The authors settle on a theoretical latency of 160 ms by pretraining Moshi with an acoustic delay of 2 and finetuning it with an acoustic delay of 1[MOSHI:5.3:c083]. The authors design a streaming, hierarchical architecture with a theoretical latency of 160 ms—lower than the 230 ms average in natural conversations measured over 10 languages[MOSHI:1:c005]. The authors report a theoretical latency of 160 ms, 200 ms in practice[MOSHI:abstract:c002]. The retrieved passages do not state how the practical latency compares numerically to the natural conversation latency."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:5.3:c083",
+    "MOSHI:1:c005",
+    "MOSHI:abstract:c002"
+   ],
+   "failures": [
+    [
+     "The authors state that the theoretical latency of 160 ms is achieved by the streaming, hierarchical architecture of Moshi, which is set by pretraining with an acoustic delay of 2 and finetuning with an acoustic delay of 1[MOSHI:5.3:c083].",
+     "not supported by the cited passage (clause: \"The authors state that the theoretical latency of 160 ms is achieved by the streaming, hierarchical architecture of Moshi.\") (entailment 0.17 < 0.9)"
+    ],
+    [
+     "In practice, the authors report a latency of 200 ms, which remains higher than the theoretical value but still comparable to natural conversation response times[MOSHI:abstract:c002].",
+     "not supported by the cited passage (entailment 0.90 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors state that the theoretical latency of 160 ms is achieved by the streaming, hierarchical architecture of Moshi, which is set by pretraining with an acoustic delay of 2 and finetuning with an acoustic delay of 1[MOSHI:5.3:c083].",
+     "ok": false,
+     "entailment": 0.1727156526187925,
+     "reasons": [
+      "not supported by the cited passage (clause: \"The authors state that the theoretical latency of 160 ms is achieved by the streaming, hierarchical architecture of Moshi.\") (entailment 0.17 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The authors also note that this 160 ms theoretical latency is lower than the 230 ms average measured in natural conversations across 10 languages[MOSHI:1:c005].",
+     "ok": true,
+     "entailment": 0.9945720082797785,
+     "reasons": []
+    },
+    {
+     "sentence": "In practice, the authors report a latency of 200 ms, which remains higher than the theoretical value but still comparable to natural conversation response times[MOSHI:abstract:c002].",
+     "ok": false,
+     "entailment": 0.8976501219740386,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.90 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The retrieved passages do not state how the practical latency directly compares numerically to the natural conversation latency.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "MOSHI:5.3:c083",
+    "MOSHI:1:c005",
+    "MOSHI:abstract:c002"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "The authors settle on a theoretical latency of 160 ms by pretraining Moshi with an acoustic delay of 2 and finetuning it with an acoustic delay of 1[MOSHI:5.3:c083].",
+     "ok": true,
+     "entailment": 0.9955163500035392,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors design a streaming, hierarchical architecture with a theoretical latency of 160 ms—lower than the 230 ms average in natural conversations measured over 10 languages[MOSHI:1:c005].",
+     "ok": true,
+     "entailment": 0.9980478531726246,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors report a theoretical latency of 160 ms, 200 ms in practice[MOSHI:abstract:c002].",
+     "ok": true,
+     "entailment": 0.9946152864177079,
+     "reasons": []
+    },
+    {
+     "sentence": "The retrieved passages do not state how the practical latency compares numerically to the natural conversation latency.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_V48-q09",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T16:52:32.513+00:00",
+  "question_id": "q09",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4620,
+  "tokens_out": 476,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 704.8,
+  "context_tokens": 1532,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:1:c005",
+   "MOSHI:abstract:c002",
+   "MOSHI:5.3:c083",
+   "MOSHI:7:c125",
+   "MOSHI:1:c004",
+   "MOSHI:abstract:c001",
+   "MOSHI:5.4:c088"
+  ],
+  "verification_ms": 3291.8,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 29291.6,
+  "model_ttft_ms": 1149.7,
+  "first_byte_ms": 451.9,
+  "generation_ms": 4827.4,
+  "reasoning_tokens": 170,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2003,
+    "reserved": 2773,
+    "governor_wait_ms": 11654.5,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.371107501,
+     "prompt_tokens": 2002,
+     "prompt_time": 0.277475962,
+     "completion_tokens": 245,
+     "completion_time": 0.748167757,
+     "total_tokens": 2247,
+     "total_time": 1.025643719,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 81
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 2002,
+    "tokens_out": 245,
+    "reasoning_tokens": 81,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 451.9,
+    "model_ttft_ms": 1149.7,
+    "total_ms": 1471.5,
+    "max_gap_ms": 697.7,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "952",
+     "x-ratelimit-reset-requests": "1h9m7.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4501",
+     "x-ratelimit-reset-tokens": "26.242s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2617,
+    "reserved": 3387,
+    "governor_wait_ms": 17637.1,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.367732635,
+     "prompt_tokens": 2618,
+     "prompt_time": 1.418922337,
+     "completion_tokens": 231,
+     "completion_time": 1.466132989,
+     "total_tokens": 2849,
+     "total_time": 2.885055326,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 89
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2618,
+    "tokens_out": 231,
+    "reasoning_tokens": 89,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 477.8,
+    "model_ttft_ms": 3080.8,
+    "total_ms": 3355.9,
+    "max_gap_ms": 2603.0,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "951",
+     "x-ratelimit-reset-requests": "1h10m33.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4760",
+     "x-ratelimit-reset-tokens": "24.3s"
+    }
+   }
+  ],
+  "first_token_ms": 38142.2,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 38142.7
+ }
+}

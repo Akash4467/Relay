@@ -1,0 +1,481 @@
+{
+ "group": "pipeline",
+ "stamp": "2026-11-14T03-19-29Z",
+ "note": "Owner accepted the risk 2026-11-14: run with the current key although a GoDro trojan executed at 01:16 and the key file was last changed at 01:08; no full scan, key not rotated.",
+ "caps": {
+  "calls": 16,
+  "tokens": 55000
+ },
+ "ledger_after": {
+  "calls": 15,
+  "tokens": 29725
+ },
+ "questions": [
+  {
+   "id": "q02",
+   "category": "answerable_factual",
+   "question": "How many attention heads does the base Transformer use, and what key and value dimension does each head get?",
+   "expected": "h = 8 heads, each with d_k = d_v = d_model/h = 64; because each head is smaller, the total cost is similar to single-head attention with full dimensionality.",
+   "answerable": true,
+   "final_text": "The model employs eight parallel attention heads, and each head uses key and value dimensions of 64 (d_k = d_v = d_model/h = 64) [AIAYN:3.2.2:c014]",
+   "done": {
+    "model": "openai/gpt-oss-120b",
+    "status": "ok",
+    "tier": "normal",
+    "reason": null,
+    "citations": [
+     "AIAYN:3.2.2:c014"
+    ],
+    "request_id": "p10-live-q02"
+   },
+   "client_ms": 3837.9,
+   "evidence_ids": [
+    "AIAYN:6.2:c031",
+    "MOSHI:3.4.1:c040",
+    "AIAYN:3.2.2:c014",
+    "AIAYN:3.2.3:c016",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:AttentionVisualizations:c036",
+    "HNET:B:c107",
+    "AIAYN:AttentionVisualizations:c037"
+   ],
+   "drafts": [
+    "The base Transformer uses eight parallel attention heads [h=8] and each head receives key and value dimensions of 64 (d_k = d_v = d_model/h = 64)[AIAYN:3.2.2:c014]",
+    "The model employs eight parallel attention heads, and each head uses key and value dimensions of 64 (d_k = d_v = d_model/h = 64) [AIAYN:3.2.2:c014]"
+   ],
+   "verification": [
+    {
+     "ok": false,
+     "cited": [
+      "AIAYN:3.2.2:c014"
+     ],
+     "failures": [
+      [
+       "The base Transformer uses eight parallel attention heads [h=8] and each head receives key and value dimensions of 64 (d_k = d_v = d_model/h = 64)[AIAYN:3.2.2:c014]",
+       "not supported by the cited passage (entailment 0.80 < 0.9)"
+      ]
+     ]
+    },
+    {
+     "ok": true,
+     "cited": [
+      "AIAYN:3.2.2:c014"
+     ],
+     "failures": []
+    }
+   ],
+   "trace": {
+    "status": "ok",
+    "answer_tier": "normal",
+    "reply_reason": null,
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 3821,
+    "tokens_out": 241,
+    "reasoning_tokens": 126,
+    "retrieval_ms": 1106.1,
+    "governor_wait_ms": 0.0,
+    "first_byte_ms": 508.3,
+    "model_ttft_ms": 695.2,
+    "generation_ms": 1627.0,
+    "verification_ms": 1059.2,
+    "total_ms": 3811.3,
+    "context_tokens": 1538
+   },
+   "calls": [
+    {
+     "attempt": 0,
+     "status": "ok",
+     "http": 200,
+     "tokens_in": 1834,
+     "tokens_out": 106,
+     "reasoning_tokens": 46,
+     "finish_reason": "stop",
+     "first_byte_ms": 508.3,
+     "total_ms": 813.8,
+     "governor_wait_ms": 0.0,
+     "error": null,
+     "backoff_s": null
+    },
+    {
+     "attempt": 0,
+     "status": "ok",
+     "http": 200,
+     "tokens_in": 1987,
+     "tokens_out": 135,
+     "reasoning_tokens": 80,
+     "finish_reason": "stop",
+     "first_byte_ms": 427.2,
+     "total_ms": 813.2,
+     "governor_wait_ms": 0.0,
+     "error": null,
+     "backoff_s": null
+    }
+   ]
+  },
+  {
+   "id": "q09",
+   "category": "multi_passage",
+   "question": "Where does Moshi's 160 ms theoretical latency come from, and how does its practical latency compare with natural conversation?",
+   "expected": "Mimi tokens at 12.5 Hz give a minimum of 80 ms (one frame); Moshi adds one step (80 ms) of acoustic delay, being pretrained with a delay of 2 and fine-tuned with a delay of 1, for 160 ms in theory. In practice latency is about 200 ms, below the roughly 230 ms average gap in natural conversation measured over 10 languages.",
+   "answerable": true,
+   "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §1 Introduction; MOSHI §abstract Abstract; MOSHI §5.3 Ablations on generative modeling; MOSHI §7 Conclusion.",
+   "done": {
+    "model": "openai/gpt-oss-120b",
+    "status": "ok",
+    "tier": "refused",
+    "reason": "verification failed after redraft",
+    "citations": [],
+    "request_id": "p10-live-q09"
+   },
+   "client_ms": 12528.8,
+   "evidence_ids": [
+    "MOSHI:1:c005",
+    "MOSHI:abstract:c002",
+    "MOSHI:5.3:c083",
+    "MOSHI:7:c125",
+    "MOSHI:1:c004",
+    "MOSHI:abstract:c001",
+    "MOSHI:5.4:c088"
+   ],
+   "drafts": [
+    "Moshi’s theoretical latency of 160 ms is derived from its streaming, hierarchical architecture that uses an acoustic delay of 2 during pre‑training and an acoustic delay of 1 during fine‑tuning, which together set the target end‑to‑end delay of the system[MOSHI:5.3:c083]. In practice the model runs with a latency of about 200 ms, as reported in the abstract[MOSHI:abstract:c002]. Natural conversations have an average response time of roughly 230 ms across ten languages, which is higher than Moshi’s practical latency[MOSHI:1:c005]. The retrieved passages do not state how the 160 ms figure is mathematically computed from component latencies.",
+    "Moshi’s theoretical latency of 160 ms is set by pretraining the model with an acoustic delay of 2 and fine‑tuning it with an acoustic delay of 1, which together define the target end‑to‑end delay[MOSHI:5.3:c083]. The abstract reports that Moshi runs with a practical latency of about 200 ms[MOSHI:abstract:c002]. Natural conversations have an average response time of 230 ms across ten languages, which is higher than Moshi’s practical latency[MOSHI:1:c005]."
+   ],
+   "verification": [
+    {
+     "ok": false,
+     "cited": [
+      "MOSHI:5.3:c083",
+      "MOSHI:abstract:c002",
+      "MOSHI:1:c005"
+     ],
+     "failures": [
+      [
+       "Moshi’s theoretical latency of 160 ms is derived from its streaming, hierarchical architecture that uses an acoustic delay of 2 during pre‑training and an acoustic delay of 1 during fine‑tuning, which together set the target end‑to‑end delay of the system[MOSHI:5.3:c083].",
+       "not supported by the cited passage (clause: \"This together set the target end‑to‑end delay of the system.\") (entailment 0.03 < 0.9)"
+      ],
+      [
+       "Natural conversations have an average response time of roughly 230 ms across ten languages, which is higher than Moshi’s practical latency[MOSHI:1:c005].",
+       "not supported by the cited passage (clause: \"This is higher than Moshi’s practical latency.\") (entailment 0.09 < 0.9); number 230 ms not in the cited passage"
+      ],
+      [
+       "The retrieved passages do not state how the 160 ms figure is mathematically computed from component latencies.",
+       "an absence sentence must not contain a value: a value is a claim that needs a citation"
+      ]
+     ]
+    },
+    {
+     "ok": false,
+     "cited": [
+      "MOSHI:5.3:c083",
+      "MOSHI:abstract:c002",
+      "MOSHI:1:c005"
+     ],
+     "failures": [
+      [
+       "Moshi’s theoretical latency of 160 ms is set by pretraining the model with an acoustic delay of 2 and fine‑tuning it with an acoustic delay of 1, which together define the target end‑to‑end delay[MOSHI:5.3:c083].",
+       "not supported by the cited passage (clause: \"This together define the target end‑to‑end delay.\") (entailment 0.03 < 0.9)"
+      ],
+      [
+       "Natural conversations have an average response time of 230 ms across ten languages, which is higher than Moshi’s practical latency[MOSHI:1:c005].",
+       "not supported by the cited passage (clause: \"This is higher than Moshi’s practical latency.\") (entailment 0.09 < 0.9); number 230 ms not in the cited passage"
+      ]
+     ]
+    }
+   ],
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "verification failed after redraft",
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 4079,
+    "tokens_out": 464,
+    "reasoning_tokens": 175,
+    "retrieval_ms": 744.6,
+    "governor_wait_ms": 3971.1,
+    "first_byte_ms": 510.6,
+    "model_ttft_ms": 857.9,
+    "generation_ms": 2299.8,
+    "verification_ms": 5489.2,
+    "total_ms": 12523.3,
+    "context_tokens": 1530
+   },
+   "calls": [
+    {
+     "attempt": 0,
+     "status": "ok",
+     "http": 200,
+     "tokens_in": 1830,
+     "tokens_out": 231,
+     "reasoning_tokens": 68,
+     "finish_reason": "stop",
+     "first_byte_ms": 510.6,
+     "total_ms": 1200.9,
+     "governor_wait_ms": 0.0,
+     "error": null,
+     "backoff_s": null
+    },
+    {
+     "attempt": 0,
+     "status": "ok",
+     "http": 200,
+     "tokens_in": 2249,
+     "tokens_out": 233,
+     "reasoning_tokens": 107,
+     "finish_reason": "stop",
+     "first_byte_ms": 460.9,
+     "total_ms": 1098.9,
+     "governor_wait_ms": 3971.1,
+     "error": null,
+     "backoff_s": null
+    }
+   ]
+  },
+  {
+   "id": "q12",
+   "category": "table_evidence",
+   "question": "What spoken question answering accuracy does Moshi reach on Web Questions, Llama Questions and Audio TriviaQA, with and without Inner Monologue?",
+   "expected": "With Inner Monologue: 26.6 (Web Q.), 62.3 (Llama Q.), 22.8 (Audio TriviaQA). Without it: 9.2, 21.0 and 7.3, so Inner Monologue roughly triples accuracy.",
+   "answerable": true,
+   "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §5.4 Audio language modeling; MOSHI §5.5 Spoken question answering; MOSHI §4.3 Speech-Text Instruct data; MOSHI §1 Introduction.",
+   "done": {
+    "model": "openai/gpt-oss-120b",
+    "status": "ok",
+    "tier": "refused",
+    "reason": "verification failed after redraft",
+    "citations": [],
+    "request_id": "p10-live-q12"
+   },
+   "client_ms": 27691.3,
+   "evidence_ids": [
+    "MOSHI:T8:r02",
+    "MOSHI:5.5:c090",
+    "MOSHI:5.4:c089",
+    "MOSHI:5.5:c091",
+    "MOSHI:5.5:c092",
+    "MOSHI:T8:r01",
+    "MOSHI:4.3:c061",
+    "MOSHI:1:c008"
+   ],
+   "drafts": [
+    "Moshi without Inner Monologue achieves 9.2 % accuracy on Web Questions, 21.0 % on LlaMA Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02]. The retrieved passages do not state the accuracies of Moshi with Inner Monologue.",
+    "Moshi without Inner Monologue reaches 9.2 % accuracy on Web Questions, 21.0 % on LlaMA Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02]. The retrieved passages do not provide the exact accuracies of Moshi with Inner Monologue."
+   ],
+   "verification": [
+    {
+     "ok": false,
+     "cited": [
+      "MOSHI:T8:r02"
+     ],
+     "failures": [
+      [
+       "The retrieved passages do not state the accuracies of Moshi with Inner Monologue.",
+       "absence contradicted: MOSHI:5.5:c091 says: \"The most striking result is the impact of Inner Monologue on Moshi's performance, almost tripling its accuracy on all be…\""
+      ]
+     ]
+    },
+    {
+     "ok": false,
+     "cited": [
+      "MOSHI:T8:r02"
+     ],
+     "failures": [
+      [
+       "The retrieved passages do not provide the exact accuracies of Moshi with Inner Monologue.",
+       "no citation"
+      ]
+     ]
+    }
+   ],
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "verification failed after redraft",
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 3650,
+    "tokens_out": 335,
+    "reasoning_tokens": 184,
+    "retrieval_ms": 707.5,
+    "governor_wait_ms": 24789.3,
+    "first_byte_ms": 307.4,
+    "model_ttft_ms": 614.6,
+    "generation_ms": 1631.9,
+    "verification_ms": 535.5,
+    "total_ms": 27685.7,
+    "context_tokens": 1443
+   },
+   "calls": [
+    {
+     "attempt": 0,
+     "status": "ok",
+     "http": 200,
+     "tokens_in": 1746,
+     "tokens_out": 175,
+     "reasoning_tokens": 100,
+     "finish_reason": "stop",
+     "first_byte_ms": 307.4,
+     "total_ms": 752.0,
+     "governor_wait_ms": 10242.4,
+     "error": null,
+     "backoff_s": null
+    },
+    {
+     "attempt": 0,
+     "status": "ok",
+     "http": 200,
+     "tokens_in": 1904,
+     "tokens_out": 160,
+     "reasoning_tokens": 84,
+     "finish_reason": "stop",
+     "first_byte_ms": 456.0,
+     "total_ms": 879.9,
+     "governor_wait_ms": 14546.9,
+     "error": null,
+     "backoff_s": null
+    }
+   ]
+  },
+  {
+   "id": "q11",
+   "category": "numerical_comparison",
+   "question": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+   "expected": "With h = 1 (d_k = d_v = 512) dev BLEU was 24.9 (perplexity 5.29); the base model (h = 8) scored 25.8 (perplexity 4.92). Single-head attention is 0.9 BLEU worse than the best setting.",
+   "answerable": true,
+   "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.2 Model Variations; AIAYN §6.1 Machine Translation; AIAYN §3.2.2 Multi-Head Attention.",
+   "done": {
+    "model": "openai/gpt-oss-120b",
+    "status": "ok",
+    "tier": "refused",
+    "reason": "model: not in papers",
+    "citations": [],
+    "request_id": "p10-live-q11"
+   },
+   "client_ms": 14150.8,
+   "evidence_ids": [
+    "AIAYN:6.2:c031",
+    "AIAYN:6.1:c029",
+    "AIAYN:3.2.2:c013",
+    "AIAYN:T3:r07",
+    "AIAYN:T3:r04",
+    "AIAYN:T3:r05"
+   ],
+   "drafts": [
+    "NOT_IN_PAPERS"
+   ],
+   "verification": [],
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "model: not in papers",
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 1816,
+    "tokens_out": 85,
+    "reasoning_tokens": 71,
+    "retrieval_ms": 716.7,
+    "governor_wait_ms": 12933.9,
+    "first_byte_ms": 231.7,
+    "model_ttft_ms": 479.8,
+    "generation_ms": 489.8,
+    "verification_ms": 0.0,
+    "total_ms": 14144.7,
+    "context_tokens": 1506
+   },
+   "calls": [
+    {
+     "attempt": 0,
+     "status": "ok",
+     "http": 200,
+     "tokens_in": 1816,
+     "tokens_out": 85,
+     "reasoning_tokens": 71,
+     "finish_reason": "stop",
+     "first_byte_ms": 231.7,
+     "total_ms": 489.8,
+     "governor_wait_ms": 12933.9,
+     "error": null,
+     "backoff_s": null
+    }
+   ]
+  },
+  {
+   "id": "q20",
+   "category": "not_in_papers",
+   "question": "According to Vaswani et al., how does the Transformer compare with GPT-4 on MMLU?",
+   "expected": "Refuse: the Transformer paper has no MMLU or GPT-4 results. MMLU and GPT-4 appear only in the Moshi paper, which must not be attributed to AIAYN.",
+   "answerable": false,
+   "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §5.8 Compressing Moshi and Impact on Speech Quality; AIAYN §1 Introduction; AIAYN §6.3 English Constituency Parsing; HNET §3.3 Ablation Studies.",
+   "done": {
+    "model": "openai/gpt-oss-120b",
+    "status": "ok",
+    "tier": "refused",
+    "reason": "model: not in papers",
+    "citations": [],
+    "request_id": "p10-live-q20"
+   },
+   "client_ms": 14518.9,
+   "evidence_ids": [
+    "MOSHI:5.8:c103",
+    "AIAYN:1:c003",
+    "AIAYN:T4:r01",
+    "HNET:3.3:c070",
+    "AIAYN:6.1:c029",
+    "HNET:E.3:c115",
+    "AIAYN:T4:r02",
+    "AIAYN:6.3:c033"
+   ],
+   "drafts": [
+    "NOT_IN_PAPERS"
+   ],
+   "verification": [],
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "model: not in papers",
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 1768,
+    "tokens_out": 59,
+    "reasoning_tokens": 45,
+    "retrieval_ms": 647.2,
+    "governor_wait_ms": 12726.7,
+    "first_byte_ms": 866.1,
+    "model_ttft_ms": 1121.7,
+    "generation_ms": 1134.3,
+    "verification_ms": 0.0,
+    "total_ms": 14513.5,
+    "context_tokens": 1472
+   },
+   "calls": [
+    {
+     "attempt": 0,
+     "status": "ok",
+     "http": 200,
+     "tokens_in": 1768,
+     "tokens_out": 59,
+     "reasoning_tokens": 45,
+     "finish_reason": "stop",
+     "first_byte_ms": 866.1,
+     "total_ms": 1134.3,
+     "governor_wait_ms": 12726.7,
+     "error": null,
+     "backoff_s": null
+    }
+   ]
+  }
+ ],
+ "ids": "q02,q09,q11,q20,q12",
+ "versions": {
+  "verification_policy_version": "v4.1",
+  "prompt_version": "p3",
+  "corpus_version": "c3"
+ }
+}

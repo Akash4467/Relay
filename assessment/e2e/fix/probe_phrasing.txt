@@ -1,0 +1,21 @@
+Output of assessment/e2e/fix/probe_phrasing.py (production verifier v4.2, threshold 0.9, c3 chunks), 2026-11-14:
+reject q15 orig   0.01 :: The original Transformer was trained on eight NVIDIA P100 GPUs [AIAYN:5.2:c026].
+ACCEPT q15 auth   0.96 :: The authors trained their Transformer models on one machine with 8 NVIDIA P100 GPUs [AIAYN:5.2:c026].
+ACCEPT q15 auth2  0.97 :: The Transformer paper's models were trained on one machine with 8 NVIDIA P100 GPUs [AIAYN:5.2:c026].
+reject q15 mo     0.88 :: The Moshi paper states that all models are trained on H100 GPUs [MOSHI:4.4:c062].
+ACCEPT q15 mo2    0.92 :: All Moshi models are trained on H100 GPUs [MOSHI:4.4:c062].
+reject q04 orig   0.40 :: Mimi operates at a frame rate of 12.5 Hz, uses 8 quantizers each with a codebook size of 2048, ...
+ACCEPT q04 auth   1.00 | 0.97 :: The authors use Q = 8 quantizers, each with a codebook size of N_A = 2048 [...]. At 12.5 Hz, this ...
+reject n10 orig   0.04 | 0.98 :: The base Transformer uses 8 attention heads [AIAYN:T3:r01]. Its development BLEU score is 25.8 [...]
+ACCEPT n10 row    0.99 | 0.97 :: In Table 3, the base configuration has h = 8 [AIAYN:T3:r01]. In Table 3, the base configuration has a developm...
+ACCEPT n10 row2   0.94 :: The base configuration in Table 3 uses h = 8 attention heads and reaches a development BLEU of 25.8 [...]
+reject q13 orig   0.07 :: This H-Net performance is equal to that of the Transformer configuration matched to GPT-3 XL, ... [HNET:T2:r11].
+ACCEPT q13 both   0.90 :: The 2-stage H-Net at GPT-3 Large compute and the Transformer matched to GPT-3 XL both have ... 55.5 [r10][r11].
+reject q07 enc    0.01 :: The encoder is composed of a stack of N = 6 identical layers, each with ... [AIAYN:3.1:c009].
+ACCEPT q07 dec    0.98 :: In addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, ...
+ACCEPT q07 qkv    0.98 :: In encoder-decoder attention layers, the queries come from the previous decoder layer, ...
+reject FA1        0.00 :: The authors trained their Transformer models on one machine with 16 NVIDIA P100 GPUs [AIAYN:5.2:c026].
+reject FA2        0.00 :: In Table 3, the base configuration has h = 16 [AIAYN:T3:r01].
+reject FA3        0.00 :: The authors use Q = 16 quantizers, each with a codebook size of N_A = 2048 [MOSHI:3.3.1:c030].
+reject FA4        0.00 :: In Table 3, the base configuration has a development BLEU of 26.4 [AIAYN:T3:r01].
+reject FA5        0.00 :: All Moshi models are trained on TPU v5 pods [MOSHI:4.4:c062].

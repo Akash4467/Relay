@@ -1,0 +1,41 @@
+{
+ "question_id": "q05",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:03:29.105+00:00",
+  "t_send_ns": 205859105789600,
+  "status": 200,
+  "t_first_byte_ns": 205859564910400,
+  "t_first_content_ns": 205859950998300,
+  "t_last_ns": 205860319670400,
+  "max_gap_ms": 386.0598,
+  "text": "The routing module predicts boundaries between adjacent elements through a similarity score [HNET:1:c007]. It measures cosine similarity between adjacent encoder outputs and computes boundary probabilities p_t = ½ (1 − (q_tᵀ k_{t‑1}) / ‖q_t‖‖k_{t‑1}‖) ∈ [0,1] [HNET:2.2.1:c023]. A hard boundary indicator b_t is obtained by thresholding p_t at 0.5, i.e., b_t = 𝟙_{ {p_t ≥ 0.5} } with p₁ = 1.0 by definition [HNET:2.2.1:c023].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.370843753,
+   "prompt_tokens": 2723,
+   "prompt_time": 0.265103157,
+   "completion_tokens": 234,
+   "completion_time": 0.492932407,
+   "total_tokens": 2957,
+   "total_time": 0.758035564,
+   "completion_tokens_details": {
+    "reasoning_tokens": 50
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "985",
+   "x-ratelimit-reset-requests": "21m36s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2461",
+   "x-ratelimit-reset-tokens": "41.542s"
+  },
+  "error": null,
+  "first_byte_ms": 459.1,
+  "first_content_ms": 845.2,
+  "total_ms": 1213.9
+ }
+}

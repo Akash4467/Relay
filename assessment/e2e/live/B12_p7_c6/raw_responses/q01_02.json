@@ -1,0 +1,41 @@
+{
+ "question_id": "q01",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:17:29.902+00:00",
+  "t_send_ns": 199499902551400,
+  "status": 200,
+  "t_first_byte_ns": 199500290530600,
+  "t_first_content_ns": 199500745064500,
+  "t_last_ns": 199500920745800,
+  "max_gap_ms": 454.5086,
+  "text": "Aligning the positions to steps in computation time, the authors generate a sequence of hidden states h_t, as a function of the previous hidden state h_t‑1 and the input for position t [AIAYN:1:c002]. This inherently sequential nature precludes parallelization within training examples, which becomes critical at longer sequence lengths, as memory constraints limit batching across examples [AIAYN:1:c002].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.317828104,
+   "prompt_tokens": 2635,
+   "prompt_time": 0.154728241,
+   "completion_tokens": 230,
+   "completion_time": 0.47956094,
+   "total_tokens": 2865,
+   "total_time": 0.634289181,
+   "completion_tokens_details": {
+    "reasoning_tokens": 137
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "996",
+   "x-ratelimit-reset-requests": "5m45.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "1170",
+   "x-ratelimit-reset-tokens": "51.225s"
+  },
+  "error": null,
+  "first_byte_ms": 388.0,
+  "first_content_ms": 842.5,
+  "total_ms": 1018.2
+ }
+}

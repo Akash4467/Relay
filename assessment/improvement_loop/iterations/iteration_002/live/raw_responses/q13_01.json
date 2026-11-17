@@ -1,0 +1,44 @@
+{
+ "question_id": "q13",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:41:53.034+00:00",
+  "t_send_ns": 179363035901800,
+  "status": 200,
+  "t_first_byte_ns": 179363514770400,
+  "t_first_content_ns": 179363800345500,
+  "t_last_ns": 179364038249600,
+  "max_gap_ms": 285.5358,
+  "text": "The 2‑stage H‑Net reaches an average zero‑shot accuracy of 55.5 % when its FLOPs are matched to GPT‑3 Large, compared with the BPE Transformer’s average of 53.3 % under the same FLOP budget【HNET:T2:r10】【HNET:T2:r01】. It matches the performance of the larger Transformer whose FLOPs are matched to GPT‑3 XL, which also attains an average accuracy of 55.5 %【HNET:T2:r11】.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.3690936,
+   "prompt_tokens": 1896,
+   "prompt_time": 0.074737166,
+   "completion_tokens": 218,
+   "completion_time": 0.454611634,
+   "total_tokens": 2114,
+   "total_time": 0.5293488,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 96
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "951",
+   "x-ratelimit-reset-requests": "1h10m33.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "1936",
+   "x-ratelimit-reset-tokens": "45.48s"
+  },
+  "error": null,
+  "first_byte_ms": 478.9,
+  "first_content_ms": 764.4,
+  "total_ms": 1002.3
+ }
+}

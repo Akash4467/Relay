@@ -1,0 +1,105 @@
+{"paper": "AIAYN", "section_id": "abstract", "title": "Abstract", "parent": null, "order": 0}
+{"paper": "AIAYN", "section_id": "1", "title": "Introduction", "parent": null, "order": 1}
+{"paper": "AIAYN", "section_id": "2", "title": "Background", "parent": null, "order": 2}
+{"paper": "AIAYN", "section_id": "3", "title": "Model Architecture", "parent": null, "order": 3}
+{"paper": "AIAYN", "section_id": "3.1", "title": "Encoder and Decoder Stacks", "parent": "3", "order": 4}
+{"paper": "AIAYN", "section_id": "3.2", "title": "Attention", "parent": "3", "order": 5}
+{"paper": "AIAYN", "section_id": "3.2.1", "title": "Scaled Dot-Product Attention", "parent": "3.2", "order": 6}
+{"paper": "AIAYN", "section_id": "3.2.2", "title": "Multi-Head Attention", "parent": "3.2", "order": 7}
+{"paper": "AIAYN", "section_id": "3.2.3", "title": "Applications of Attention in our Model", "parent": "3.2", "order": 8}
+{"paper": "AIAYN", "section_id": "3.3", "title": "Position-wise Feed-Forward Networks", "parent": "3", "order": 9}
+{"paper": "AIAYN", "section_id": "3.4", "title": "Embeddings and Softmax", "parent": "3", "order": 10}
+{"paper": "AIAYN", "section_id": "3.5", "title": "Positional Encoding", "parent": "3", "order": 11}
+{"paper": "AIAYN", "section_id": "4", "title": "Why Self-Attention", "parent": null, "order": 12}
+{"paper": "AIAYN", "section_id": "5", "title": "Training", "parent": null, "order": 13}
+{"paper": "AIAYN", "section_id": "5.1", "title": "Training Data and Batching", "parent": "5", "order": 14}
+{"paper": "AIAYN", "section_id": "5.2", "title": "Hardware and Schedule", "parent": "5", "order": 15}
+{"paper": "AIAYN", "section_id": "5.3", "title": "Optimizer", "parent": "5", "order": 16}
+{"paper": "AIAYN", "section_id": "5.4", "title": "Regularization", "parent": "5", "order": 17}
+{"paper": "AIAYN", "section_id": "6", "title": "Results", "parent": null, "order": 18}
+{"paper": "AIAYN", "section_id": "6.1", "title": "Machine Translation", "parent": "6", "order": 19}
+{"paper": "AIAYN", "section_id": "6.2", "title": "Model Variations", "parent": "6", "order": 20}
+{"paper": "AIAYN", "section_id": "6.3", "title": "English Constituency Parsing", "parent": "6", "order": 21}
+{"paper": "AIAYN", "section_id": "7", "title": "Conclusion", "parent": null, "order": 22}
+{"paper": "AIAYN", "section_id": "AttentionVisualizations", "title": "Attention Visualizations", "parent": null, "order": 23}
+{"paper": "MOSHI", "section_id": "abstract", "title": "Abstract", "parent": null, "order": 0}
+{"paper": "MOSHI", "section_id": "1", "title": "Introduction", "parent": null, "order": 1}
+{"paper": "MOSHI", "section_id": "2", "title": "Related Work", "parent": null, "order": 2}
+{"paper": "MOSHI", "section_id": "3", "title": "Model", "parent": null, "order": 3}
+{"paper": "MOSHI", "section_id": "3.1", "title": "Overview", "parent": "3", "order": 4}
+{"paper": "MOSHI", "section_id": "3.2", "title": "The Helium Text Language Model", "parent": "3", "order": 5}
+{"paper": "MOSHI", "section_id": "3.2.1", "title": "Architecture", "parent": "3.2", "order": 6}
+{"paper": "MOSHI", "section_id": "3.2.2", "title": "Pre-training data filtering", "parent": "3.2", "order": 7}
+{"paper": "MOSHI", "section_id": "3.3", "title": "Audio Tokenization", "parent": "3", "order": 8}
+{"paper": "MOSHI", "section_id": "3.3.1", "title": "Architecture", "parent": "3.3", "order": 9}
+{"paper": "MOSHI", "section_id": "3.3.2", "title": "Learning semantic-acoustic tokens with a split RVQ", "parent": "3.3", "order": 10}
+{"paper": "MOSHI", "section_id": "3.4", "title": "Generative audio modeling", "parent": "3", "order": 11}
+{"paper": "MOSHI", "section_id": "3.4.1", "title": "Hierarchical autoregressive modeling with RQ-Transformer", "parent": "3.4", "order": 12}
+{"paper": "MOSHI", "section_id": "3.4.2", "title": "Audio modeling", "parent": "3.4", "order": 13}
+{"paper": "MOSHI", "section_id": "3.4.3", "title": "Multi-stream modeling", "parent": "3.4", "order": 14}
+{"paper": "MOSHI", "section_id": "3.4.4", "title": "Inner Monologue", "parent": "3.4", "order": 15}
+{"paper": "MOSHI", "section_id": "4", "title": "Datasets and training", "parent": null, "order": 16}
+{"paper": "MOSHI", "section_id": "4.1", "title": "Text data", "parent": "4", "order": 17}
+{"paper": "MOSHI", "section_id": "4.2", "title": "Audio data", "parent": "4", "order": 18}
+{"paper": "MOSHI", "section_id": "4.3", "title": "Speech-Text Instruct data", "parent": "4", "order": 19}
+{"paper": "MOSHI", "section_id": "4.4", "title": "Training stages and hyper-parameters", "parent": "4", "order": 20}
+{"paper": "MOSHI", "section_id": "5", "title": "Evaluation", "parent": null, "order": 21}
+{"paper": "MOSHI", "section_id": "5.1", "title": "Text Language Modeling", "parent": "5", "order": 22}
+{"paper": "MOSHI", "section_id": "5.2", "title": "Audio Tokenization", "parent": "5", "order": 23}
+{"paper": "MOSHI", "section_id": "5.3", "title": "Ablations on generative modeling", "parent": "5", "order": 24}
+{"paper": "MOSHI", "section_id": "5.4", "title": "Audio language modeling", "parent": "5", "order": 25}
+{"paper": "MOSHI", "section_id": "5.5", "title": "Spoken question answering", "parent": "5", "order": 26}
+{"paper": "MOSHI", "section_id": "5.6", "title": "Quality and statistics of generated dialogues", "parent": "5", "order": 27}
+{"paper": "MOSHI", "section_id": "5.7", "title": "Streaming ASR and TTS", "parent": "5", "order": 28}
+{"paper": "MOSHI", "section_id": "5.8", "title": "Compressing Moshi and Impact on Speech Quality", "parent": "5", "order": 29}
+{"paper": "MOSHI", "section_id": "6", "title": "Safety", "parent": null, "order": 30}
+{"paper": "MOSHI", "section_id": "6.1", "title": "Toxicity analysis", "parent": "6", "order": 31}
+{"paper": "MOSHI", "section_id": "6.2", "title": "Regurgitation analysis", "parent": "6", "order": 32}
+{"paper": "MOSHI", "section_id": "6.3", "title": "System voice consistency", "parent": "6", "order": 33}
+{"paper": "MOSHI", "section_id": "6.4", "title": "Identification of the content generated by Moshi: Watermarking", "parent": "6", "order": 34}
+{"paper": "MOSHI", "section_id": "7", "title": "Conclusion", "parent": null, "order": 35}
+{"paper": "MOSHI", "section_id": "A", "title": "Additional ablation on Mimi codec", "parent": null, "order": 36}
+{"paper": "MOSHI", "section_id": "B", "title": "Audio matching and deduplication", "parent": null, "order": 37}
+{"paper": "MOSHI", "section_id": "C", "title": "Delayed text LM as a zero-shot streaming ASR and TTS", "parent": null, "order": 38}
+{"paper": "MOSHI", "section_id": "D", "title": "Characterizing Audio Artifacts Caused by Quantization", "parent": null, "order": 39}
+{"paper": "MOSHI", "section_id": "E", "title": "Safety and Toxicity", "parent": null, "order": 40}
+{"paper": "MOSHI", "section_id": "F", "title": "Synthetic transcripts generation for fine-tuning", "parent": null, "order": 41}
+{"paper": "MOSHI", "section_id": "F.1", "title": "General knowledge", "parent": "F", "order": 42}
+{"paper": "MOSHI", "section_id": "F.2", "title": "Misspelling", "parent": "F", "order": 43}
+{"paper": "MOSHI", "section_id": "F.3", "title": "Voice instructions", "parent": "F", "order": 44}
+{"paper": "HNET", "section_id": "abstract", "title": "Abstract", "parent": null, "order": 0}
+{"paper": "HNET", "section_id": "1", "title": "Introduction", "parent": null, "order": 1}
+{"paper": "HNET", "section_id": "2", "title": "H-Net Architecture", "parent": null, "order": 2}
+{"paper": "HNET", "section_id": "2.1", "title": "Architectural Overview", "parent": "2", "order": 3}
+{"paper": "HNET", "section_id": "2.1.1", "title": "Components of H-Net", "parent": "2.1", "order": 4}
+{"paper": "HNET", "section_id": "2.1.2", "title": "Design Principles", "parent": "2.1", "order": 5}
+{"paper": "HNET", "section_id": "2.2", "title": "Dynamic Chunking (DC)", "parent": "2", "order": 6}
+{"paper": "HNET", "section_id": "2.2.1", "title": "Chunking Layer", "parent": "2.2", "order": 7}
+{"paper": "HNET", "section_id": "2.2.2", "title": "Dechunking", "parent": "2.2", "order": 8}
+{"paper": "HNET", "section_id": "2.2.3", "title": "Ratio Loss", "parent": "2.2", "order": 9}
+{"paper": "HNET", "section_id": "2.3", "title": "Improved Techniques for Hierarchical Sequence Modeling", "parent": "2", "order": 10}
+{"paper": "HNET", "section_id": "2.4", "title": "Autoregressive Training and Inference", "parent": "2", "order": 11}
+{"paper": "HNET", "section_id": "3", "title": "Experiments", "parent": null, "order": 12}
+{"paper": "HNET", "section_id": "3.1", "title": "Language Modeling", "parent": "3", "order": 13}
+{"paper": "HNET", "section_id": "3.2", "title": "Alternate Language Datasets", "parent": "3", "order": 14}
+{"paper": "HNET", "section_id": "3.3", "title": "Ablation Studies", "parent": "3", "order": 15}
+{"paper": "HNET", "section_id": "4", "title": "Discussion", "parent": null, "order": 16}
+{"paper": "HNET", "section_id": "5", "title": "Conclusion", "parent": null, "order": 17}
+{"paper": "HNET", "section_id": "Acknowledgements", "title": "Acknowledgements", "parent": null, "order": 18}
+{"paper": "HNET", "section_id": "A", "title": "Related Work", "parent": null, "order": 19}
+{"paper": "HNET", "section_id": "A.1", "title": "Autoregressive Tokenizer-free Architectures", "parent": "A", "order": 20}
+{"paper": "HNET", "section_id": "A.1.1", "title": "Isotropic Architectures", "parent": "A.1", "order": 21}
+{"paper": "HNET", "section_id": "A.1.2", "title": "Static Chunking", "parent": "A.1", "order": 22}
+{"paper": "HNET", "section_id": "A.1.3", "title": "External Chunking", "parent": "A.1", "order": 23}
+{"paper": "HNET", "section_id": "A.1.4", "title": "Dynamic Chunking", "parent": "A.1", "order": 24}
+{"paper": "HNET", "section_id": "A.2", "title": "Non-Autoregressive Tokenizer-free Architectures", "parent": "A", "order": 25}
+{"paper": "HNET", "section_id": "A.3", "title": "Other Tokenization-related Work", "parent": "A", "order": 26}
+{"paper": "HNET", "section_id": "B", "title": "FLOPs Computation", "parent": null, "order": 27}
+{"paper": "HNET", "section_id": "C", "title": "Learning Rate Modulation", "parent": null, "order": 28}
+{"paper": "HNET", "section_id": "D", "title": "Additional Experimental Setup Details", "parent": null, "order": 29}
+{"paper": "HNET", "section_id": "D.1", "title": "Robustness Score", "parent": "D", "order": 30}
+{"paper": "HNET", "section_id": "E", "title": "Additional Ablation Studies", "parent": null, "order": 31}
+{"paper": "HNET", "section_id": "E.1", "title": "Different Downsampling Methods in the Chunking Layer", "parent": "E", "order": 32}
+{"paper": "HNET", "section_id": "E.2", "title": "Details of Chinese and Code Experiments", "parent": "E", "order": 33}
+{"paper": "HNET", "section_id": "E.3", "title": "DNA Architecture Ablations", "parent": "E", "order": 34}
+{"paper": "HNET", "section_id": "F", "title": "Distilling Token-Level Models to Byte-Level", "parent": null, "order": 35}

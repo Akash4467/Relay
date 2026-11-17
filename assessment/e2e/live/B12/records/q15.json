@@ -1,0 +1,257 @@
+{
+ "run": "assessment/e2e/live/B12",
+ "timestamp": "2026-11-14T12:30:05.380+00:00",
+ "corpus_version": "c3",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "question_id": "q15",
+ "dataset": [
+  "e2e_B12",
+  "cross_paper"
+ ],
+ "question": "Which NVIDIA GPUs were used to train the original Transformer and Moshi?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §5.2 Hardware and Schedule; MOSHI §4.4 Training stages and hyper-parameters; AIAYN §1 Introduction; MOSHI §3.1 Overview.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-B12-q15"
+ },
+ "client_ms": 28540.7,
+ "evidence_ids": [
+  "AIAYN:5.2:c026",
+  "MOSHI:4.4:c062",
+  "AIAYN:1:c003",
+  "MOSHI:3.1:c017",
+  "MOSHI:3.4.1:c040",
+  "MOSHI:4.4:c064",
+  "AIAYN:6.1:c029",
+  "MOSHI:3.1:c016"
+ ],
+ "gold_units_in_context": [
+  true,
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  true
+ ],
+ "drafts": [
+  "The original Transformer was trained on eight NVIDIA P100 GPUs [AIAYN:5.2:c026][AIAYN:1:c003]. Moshi was trained on H100 GPUs [MOSHI:4.4:c062].",
+  "The original Transformer was trained on eight NVIDIA P100 GPUs [AIAYN:5.2:c026]. Moshi was trained on H100 GPUs [MOSHI:4.4:c062]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:5.2:c026",
+    "AIAYN:1:c003",
+    "MOSHI:4.4:c062"
+   ],
+   "failures": [
+    [
+     "The original Transformer was trained on eight NVIDIA P100 GPUs [AIAYN:5.2:c026][AIAYN:1:c003].",
+     "not supported by the cited passage (entailment 0.01 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The original Transformer was trained on eight NVIDIA P100 GPUs [AIAYN:5.2:c026][AIAYN:1:c003].",
+     "ok": false,
+     "entailment": 0.010299845773026296,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.01 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "Moshi was trained on H100 GPUs [MOSHI:4.4:c062].",
+     "ok": true,
+     "entailment": 0.9906983721555015,
+     "reasons": []
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:5.2:c026",
+    "MOSHI:4.4:c062"
+   ],
+   "failures": [
+    [
+     "The original Transformer was trained on eight NVIDIA P100 GPUs [AIAYN:5.2:c026].",
+     "not supported by the cited passage (entailment 0.01 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The original Transformer was trained on eight NVIDIA P100 GPUs [AIAYN:5.2:c026].",
+     "ok": false,
+     "entailment": 0.005100200144212748,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.01 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "Moshi was trained on H100 GPUs [MOSHI:4.4:c062].",
+     "ok": true,
+     "entailment": 0.9906983721555015,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-B12-q15",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T12:30:05.380+00:00",
+  "question_id": "q15",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3904,
+  "tokens_out": 229,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c3",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 728.6,
+  "context_tokens": 1599,
+  "retrieval_policy": "per_paper",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:5.2:c026",
+   "MOSHI:4.4:c062",
+   "AIAYN:1:c003",
+   "MOSHI:3.1:c017",
+   "MOSHI:3.4.1:c040",
+   "MOSHI:4.4:c064",
+   "AIAYN:6.1:c029",
+   "MOSHI:3.1:c016"
+  ],
+  "verification_ms": 1651.7,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 24351.6,
+  "model_ttft_ms": 655.1,
+  "first_byte_ms": 459.7,
+  "generation_ms": 1762.5,
+  "reasoning_tokens": 123,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1887,
+    "reserved": 2657,
+    "governor_wait_ms": 10463.2,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.370574204,
+     "prompt_tokens": 1886,
+     "prompt_time": 0.09649892,
+     "completion_tokens": 97,
+     "completion_time": 0.286232066,
+     "total_tokens": 1983,
+     "total_time": 0.382730986,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 40
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1886,
+    "tokens_out": 97,
+    "reasoning_tokens": 40,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 459.7,
+    "model_ttft_ms": 655.1,
+    "total_ms": 833.3,
+    "max_gap_ms": 195.4,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "989",
+     "x-ratelimit-reset-requests": "15m50.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "1432",
+     "x-ratelimit-reset-tokens": "49.26s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2017,
+    "reserved": 2787,
+    "governor_wait_ms": 13888.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.370678727,
+     "prompt_tokens": 2018,
+     "prompt_time": 0.202327454,
+     "completion_tokens": 132,
+     "completion_time": 0.275367522,
+     "total_tokens": 2150,
+     "total_time": 0.477694976,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 83
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2018,
+    "tokens_out": 132,
+    "reasoning_tokens": 83,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 457.6,
+    "model_ttft_ms": 846.3,
+    "total_ms": 929.2,
+    "max_gap_ms": 388.7,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "988",
+     "x-ratelimit-reset-requests": "17m16.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "1864",
+     "x-ratelimit-reset-tokens": "46.02s"
+    }
+   }
+  ],
+  "first_token_ms": 28519.9,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 28520.4
+ }
+}

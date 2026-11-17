@@ -1,0 +1,198 @@
+{
+ "about": "Phase 9B review-package inputs written by the assistant (the Phase 8 case author). For every Phase 8 case: the table column the claim is about (as named in c4 tables.jsonl), an optional extra note on the current label, and optional preparer flags. Flags are the preparer's own doubts, offered to the reviewer; they do NOT change any label. Labels stay exactly as in experiments/phase8/table_semantics_{cases,heldout}.json.",
+ "table_notes": {
+  "HNET:T6": "Source data/raw/HNET/src/tab/related.tex. HNET defines \\cmark = \\ding{51} (check) and \\xmark = \\ding{55} (cross) in main.tex lines 94-95; both print visibly. No legend defines what a check or cross means. Many marks are \\multirow cells shared by several rows. The caption says H-Net 'is the first architecture that enables dynamic, multi-stage hierarchies' and points to the background section for discussion.",
+  "MOSHI:T3": "Source sections/evaluation.tex (tab:mimi_ablations). MOSHI defines \\xmark as EMPTY (main.tex line 44: \\newcommand{\\xmark}{}), so every \\xmark prints as a blank cell in the PDF; \\checkmark prints a check. c4 shows \\xmark cells as '(blank)'. No legend. Prose in 5.2 ('Results - Acoustic tokens': 'improvement in MUSHRA when adding a Transformer in the decoder') reads the columns as components that are present or absent.",
+  "MOSHI:T4": "Source sections/evaluation.tex (tab:mimi_baselines). The causal column uses \\xmark (defined EMPTY, prints blank) for RVQGAN, SemantiCodec and SpeechTokenizer, and \\checkmark for the Mimi rows. c4 shows '(blank)'. Separate prose in 5.2 ('Results - Acoustic tokens') says: 'both RVQGAN and SemantiCodec are non-causal, while Mimi is fully causal'. SpeechTokenizer's causality is not stated in prose.",
+  "MOSHI:T6": "Source sections/evaluation.tex (tab:ablation-delays). Row 1 Inner Monologue is \\xmark (prints blank, c4 '(blank)'); rows 2-5 Inner Monologue and row 4 Depthwise are genuinely empty LaTeX cells (c4 shows them as absent/''). Both print blank. No legend. Weight cells in c4 carry the \\phantom defect (001.0); the PDF prints 1.0.",
+  "MOSHI:T13": "Source sections/safety.tex (tab:regurgitation). Empty cells are genuinely empty LaTeX (not a macro). No legend. The caption says: 'With dataset deduplication, we do not observe any exact re-generation ... even if we prompt the model with the first 3s'. Rows 7 and 8 of the single-stream block are identical.",
+  "MOSHI:T16": "Source sections/safety.tex (tab:idempotence). The RVQGAN attack column holds \\checkmark or a genuinely empty cell. The caption calls the attacks 'optional audio post-processing attacks' including 're-encoding with RVQGAN'."
+ },
+ "cases": {
+  "s01": {
+   "column": "Multi-stage / Hierarchy"
+  },
+  "s02": {
+   "column": "Multi-stage / Hierarchy"
+  },
+  "s03": {
+   "column": "Multi-stage / Hierarchy"
+  },
+  "s04": {
+   "column": "Multi-stage / Hierarchy"
+  },
+  "s05": {
+   "column": "Autoregressive"
+  },
+  "s06": {
+   "column": "Autoregressive"
+  },
+  "s07": {
+   "column": "Autoregressive"
+  },
+  "s08": {
+   "column": "Autoregressive"
+  },
+  "s09": {
+   "column": "Multi-stage / Hierarchy"
+  },
+  "s10": {
+   "column": "Multi-stage / Hierarchy",
+   "flags": [
+    "mark_meaning_needs_paper: the cross prints visibly (\\ding{55}) in a capability-comparison table, and the caption says H-Net is the first architecture with dynamic multi-stage hierarchies. A reader may take the cross as 'no'. No legend states it. The current label applies the Phase 8 rule that a mark is never converted into a property."
+   ]
+  },
+  "s11": {
+   "column": "Multi-stage / Hierarchy"
+  },
+  "s12": {
+   "column": "Multi-stage / Hierarchy",
+   "note": "Supported by the caption text, not by a cell."
+  },
+  "s13": {
+   "column": "causal",
+   "flags": [
+    "source_intent: the PDF prints a blank, but the LaTeX is \\xmark, the authors' cross macro defined as empty. 'Blank' describes the rendering, not the source intent."
+   ]
+  },
+  "s14": {
+   "column": "causal",
+   "flags": [
+    "prose_supports: section 5.2 prose states 'both RVQGAN and SemantiCodec are non-causal'. The claim is phrased 'According to the audio quality table', so the current label is about the table only; with the paper's prose the statement is true.",
+    "source_intent: the cell is \\xmark (cross macro defined empty)."
+   ]
+  },
+  "s15": {
+   "column": "causal",
+   "note": "No cell in the table holds a numeric causal value."
+  },
+  "s16": {
+   "column": "causal",
+   "flags": [
+    "source_intent: the cell is \\xmark (cross macro defined empty)."
+   ]
+  },
+  "s17": {
+   "column": "causal",
+   "note": "Section 5.2 prose states that RVQGAN is non-causal, so the claim is also contradicted by the paper outside the table."
+  },
+  "s18": {
+   "column": "causal"
+  },
+  "s19": {
+   "column": "causal"
+  },
+  "s20": {
+   "column": "WavLM / distillation"
+  },
+  "s21": {
+   "column": "Split / quantizer"
+  },
+  "s22": {
+   "column": "Split / quantizer",
+   "flags": [
+    "source_intent: the cell is \\xmark (cross macro defined empty)."
+   ]
+  },
+  "s23": {
+   "column": "Split / quantizer",
+   "flags": [
+    "ablation_reading: in this ablation table the authors write \\checkmark for an included component and \\xmark (printed blank) otherwise, and 5.2 prose reads the columns as components added or removed. A reviewer may judge 'does not use a split quantizer' supported by the paper even though no legend states it."
+   ]
+  },
+  "s24": {
+   "column": "Quantization / Rate"
+  },
+  "s25": {
+   "column": "MUSHRA (↑)",
+   "note": "The 6.5% row has MUSHRA 57.8; the highest MUSHRA in the table is 68.3 (row 5). The claim is contradicted, not only unsupported."
+  },
+  "s26": {
+   "column": "prompted (3s)"
+  },
+  "s27": {
+   "column": "deduplicated"
+  },
+  "s28": {
+   "column": "deduplicated"
+  },
+  "s29": {
+   "column": "deduplicated",
+   "flags": [
+    "ablation_reading: the caption describes deduplication as a training condition ('With dataset deduplication, we do not observe ...') and the 100.00 regurgitation rate is consistent with no deduplication. A reviewer may judge the claim supported by the paper; the current label applies the rule that a blank is never read as 'no'."
+   ]
+  },
+  "s30": {
+   "column": "attacks / RVQGAN"
+  },
+  "s31": {
+   "column": "attacks / RVQGAN"
+  },
+  "h01": {
+   "column": "Autoregressive",
+   "note": "The check is a \\multirow cell shared by the six externally-chunked rows."
+  },
+  "h02": {
+   "column": "Autoregressive"
+  },
+  "h03": {
+   "column": "Multi-stage / Hierarchy"
+  },
+  "h04": {
+   "column": "Multi-stage / Hierarchy"
+  },
+  "h05": {
+   "column": "Autoregressive"
+  },
+  "h06": {
+   "column": "causal",
+   "flags": [
+    "source_intent: the cell is \\xmark (cross macro defined empty); prose does not state SpeechTokenizer's causality."
+   ]
+  },
+  "h07": {
+   "column": "causal"
+  },
+  "h08": {
+   "column": "Transformer / in encoder",
+   "flags": [
+    "source_intent: the cell is \\xmark (cross macro defined empty)."
+   ]
+  },
+  "h09": {
+   "column": "Transformer / in encoder"
+  },
+  "h10": {
+   "column": "Inner / Monologue"
+  },
+  "h11": {
+   "column": "Inner / Monologue"
+  },
+  "h12": {
+   "column": "prompted (3s)"
+  },
+  "h13": {
+   "column": "prompted (3s)"
+  },
+  "h14": {
+   "column": "attacks / RVQGAN"
+  },
+  "h15": {
+   "column": "causal",
+   "flags": [
+    "prose_supports: the causal cell is a check and section 5.2 prose says 'Mimi is fully causal'. A reviewer may judge the claim supported. The current label applies the rule that a check is never converted into a property."
+   ]
+  },
+  "h16": {
+   "column": "Chunking Mechanism"
+  }
+ },
+ "reviewer_source_notes": {
+  "HNET:T6": "HNET main.tex lines 94-95: \\cmark = \\ding{51} (prints a check), \\xmark = \\ding{55} (prints a cross). Several cells are \\multirow cells shared by consecutive rows (see cell_latex_source). Prose that refers to this table: sections/4_discussion.tex lines 5 and 31, sections/A_background.tex line 20, sections/1_introduction.tex line 14 (footnote). A text search of the LaTeX source found no sentence defining the marks; please verify.",
+  "MOSHI:T3": "MOSHI main.tex lines 43-44: \\cmark = \\ding{51} (prints a check); \\xmark is defined as EMPTY, so a cell written \\xmark prints nothing. A cell left empty in LaTeX also prints nothing. Prose that refers to this table: sections/evaluation.tex lines 96, 104, 108 (Section 5.2) and sections/methods.tex lines 131, 142, 150 (Section 3.3). A text search of the LaTeX source found no sentence defining the marks; please verify.",
+  "MOSHI:T4": "MOSHI main.tex lines 43-44: \\cmark = \\ding{51} (prints a check); \\xmark is defined as EMPTY, so a cell written \\xmark prints nothing. A cell left empty in LaTeX also prints nothing. Prose that refers to this table: sections/evaluation.tex lines 96 and 108 (Section 5.2) and sections/methods.tex line 146. A text search of the LaTeX source found no sentence defining the marks; please verify.",
+  "MOSHI:T6": "MOSHI main.tex lines 43-44: \\cmark = \\ding{51} (prints a check); \\xmark is defined as EMPTY, so a cell written \\xmark prints nothing. A cell left empty in LaTeX also prints nothing. In this table row 1 Inner Monologue is written \\xmark; rows 2-5 Inner Monologue and row 4 Depthwise are empty LaTeX cells. The extracted Weight values '001.0' are a known extraction defect; the PDF prints 1.0. Prose that refers to this table: sections/evaluation.tex line 159 and sections/methods.tex line 212. A text search of the LaTeX source found no sentence defining the marks; please verify.",
+  "MOSHI:T13": "MOSHI main.tex lines 43-44: \\cmark = \\ding{51} (prints a check); \\xmark is defined as EMPTY, so a cell written \\xmark prints nothing. A cell left empty in LaTeX also prints nothing. In this table the unmarked cells are empty LaTeX cells (not \\xmark). Prose that refers to this table: sections/safety.tex lines 79 and 88. A text search of the LaTeX source found no sentence defining the marks; please verify.",
+  "MOSHI:T16": "MOSHI main.tex lines 43-44: \\cmark = \\ding{51} (prints a check); \\xmark is defined as EMPTY, so a cell written \\xmark prints nothing. A cell left empty in LaTeX also prints nothing. In this table the RVQGAN column holds \\checkmark or an empty LaTeX cell. Prose that refers to this table: sections/safety.tex line 177. A text search of the LaTeX source found no sentence defining the marks; please verify."
+ }
+}

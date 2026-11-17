@@ -1,0 +1,2050 @@
+{
+ "stamp": "2026-11-14T04-01-41Z",
+ "model_load_s": 23.4,
+ "scenarios": [
+  {
+   "scenario": "normal_answer",
+   "question_chars": 61,
+   "expect": {
+    "tier": "normal",
+    "calls": 1
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-normal_answer",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "normal",
+      "reason": null,
+      "citations": [
+       "AIAYN:6.2:c031"
+      ],
+      "request_id": "p10-normal_answer"
+     }
+    ]
+   ],
+   "client_ms": 2418.8,
+   "provider_calls": 1,
+   "drafts_sent": [
+    "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+   ],
+   "safety": "verified draft",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "normal",
+    "reply_reason": null,
+    "failure_reason": null,
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 1500,
+    "tokens_out": 120,
+    "retrieval_ms": 1672.1,
+    "verification_ms": 696.6,
+    "generation_ms": 2.2,
+    "total_ms": 2377.7,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "lenticular_citation",
+   "question_chars": 61,
+   "expect": {
+    "tier": "normal",
+    "calls": 1,
+    "note": "L1: gpt-oss citation style"
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-lenticular_citation",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "normal",
+      "reason": null,
+      "citations": [
+       "AIAYN:6.2:c031"
+      ],
+      "request_id": "p10-lenticular_citation"
+     }
+    ]
+   ],
+   "client_ms": 1764.3,
+   "provider_calls": 1,
+   "drafts_sent": [
+    "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 【AIAYN:6.2:c031】."
+   ],
+   "safety": "verified draft",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "normal",
+    "reply_reason": null,
+    "failure_reason": null,
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 1500,
+    "tokens_out": 120,
+    "retrieval_ms": 1170.0,
+    "verification_ms": 579.1,
+    "generation_ms": 1.2,
+    "total_ms": 1756.4,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "lenticular_unretrieved",
+   "question_chars": 61,
+   "expect": {
+    "tier": "refused",
+    "calls": 2,
+    "note": "L1: still strict"
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-lenticular_unretrieved",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.2 Model Variations; AIAYN §3.2.3 Applications of Attention in our Model; AIAYN §3.2.2 Multi-Head Attention; AIAYN §7 Conclusion."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "refused",
+      "reason": "verification failed after redraft",
+      "citations": [],
+      "request_id": "p10-lenticular_unretrieved"
+     }
+    ]
+   ],
+   "client_ms": 1164.3,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "The base model uses 8 heads 【HNET:9.9:c001】.",
+    "The base model uses 8 heads 【HNET:9.9:c001】."
+   ],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "verification failed after redraft",
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 3000,
+    "tokens_out": 240,
+    "retrieval_ms": 1146.6,
+    "verification_ms": 0.2,
+    "generation_ms": 1.7,
+    "total_ms": 1156.3,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "empty_question",
+   "question_chars": 0,
+   "expect": {
+    "http": 400,
+    "calls": 0,
+    "note": "F1"
+   },
+   "events": [
+    [
+     "http",
+     400
+    ],
+    [
+     "bad_request",
+     {
+      "error": "invalid_question",
+      "detail": "the question is empty",
+      "request_id": "p10-empty_question"
+     }
+    ]
+   ],
+   "client_ms": 8.2,
+   "provider_calls": 0,
+   "drafts_sent": [],
+   "safety": "HTTP 400 before any provider call",
+   "checks": {
+    "safe_reply": true,
+    "http": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "bad_request",
+    "answer_tier": null,
+    "reply_reason": "invalid_question",
+    "failure_reason": "invalid_question",
+    "llm_calls": null,
+    "retries": 0,
+    "redraft_attempts": null,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": null,
+    "verification_ms": null,
+    "generation_ms": null,
+    "total_ms": 0.0,
+    "context_tokens": null
+   },
+   "then": null
+  },
+  {
+   "scenario": "whitespace_question",
+   "question_chars": 6,
+   "expect": {
+    "http": 400,
+    "calls": 0,
+    "note": "F1"
+   },
+   "events": [
+    [
+     "http",
+     400
+    ],
+    [
+     "bad_request",
+     {
+      "error": "invalid_question",
+      "detail": "the question is empty",
+      "request_id": "p10-whitespace_question"
+     }
+    ]
+   ],
+   "client_ms": 8.5,
+   "provider_calls": 0,
+   "drafts_sent": [],
+   "safety": "HTTP 400 before any provider call",
+   "checks": {
+    "safe_reply": true,
+    "http": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "bad_request",
+    "answer_tier": null,
+    "reply_reason": "invalid_question",
+    "failure_reason": "invalid_question",
+    "llm_calls": null,
+    "retries": 0,
+    "redraft_attempts": null,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": null,
+    "verification_ms": null,
+    "generation_ms": null,
+    "total_ms": 0.0,
+    "context_tokens": null
+   },
+   "then": null
+  },
+  {
+   "scenario": "very_long_question",
+   "question_chars": 21499,
+   "expect": {
+    "http": 400,
+    "calls": 0,
+    "note": "F1: ~21k chars"
+   },
+   "events": [
+    [
+     "http",
+     400
+    ],
+    [
+     "bad_request",
+     {
+      "error": "invalid_question",
+      "detail": "the question is too long (21499 characters; the limit is 1000)",
+      "request_id": "p10-very_long_question"
+     }
+    ]
+   ],
+   "client_ms": 8.1,
+   "provider_calls": 0,
+   "drafts_sent": [],
+   "safety": "HTTP 400 before any provider call",
+   "checks": {
+    "safe_reply": true,
+    "http": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "bad_request",
+    "answer_tier": null,
+    "reply_reason": "invalid_question",
+    "failure_reason": "invalid_question",
+    "llm_calls": null,
+    "retries": 0,
+    "redraft_attempts": null,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": null,
+    "verification_ms": null,
+    "generation_ms": null,
+    "total_ms": 0.0,
+    "context_tokens": null
+   },
+   "then": null
+  },
+  {
+   "scenario": "unknown_retrieval_setting",
+   "question_chars": 61,
+   "expect": {
+    "http": 400,
+    "calls": 0,
+    "note": "F6"
+   },
+   "events": [
+    [
+     "http",
+     400
+    ],
+    [
+     "bad_request",
+     {
+      "error": "invalid_retrieval_setting",
+      "detail": "unknown retrieval_setting 'Z'; use one of ['A', 'B', 'C']",
+      "request_id": "p10-unknown_retrieval_setting"
+     }
+    ]
+   ],
+   "client_ms": 7.9,
+   "provider_calls": 0,
+   "drafts_sent": [],
+   "safety": "HTTP 400 before any provider call",
+   "checks": {
+    "safe_reply": true,
+    "http": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "bad_request",
+    "answer_tier": null,
+    "reply_reason": "invalid_retrieval_setting",
+    "failure_reason": "invalid_retrieval_setting",
+    "llm_calls": null,
+    "retries": 0,
+    "redraft_attempts": null,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": null,
+    "verification_ms": null,
+    "generation_ms": null,
+    "total_ms": 0.0,
+    "context_tokens": null
+   },
+   "then": null
+  },
+  {
+   "scenario": "empty_retrieval",
+   "question_chars": 61,
+   "expect": {
+    "tier": "refused",
+    "calls": 0,
+    "patch": "empty_search"
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-empty_retrieval",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "refused",
+      "reason": "insufficient evidence: no usable passage in the context",
+      "citations": [],
+      "request_id": "p10-empty_retrieval"
+     }
+    ]
+   ],
+   "client_ms": 11.0,
+   "provider_calls": 0,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "insufficient evidence: no usable passage in the context",
+    "failure_reason": null,
+    "llm_calls": 0,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 0.0,
+    "verification_ms": 0.0,
+    "generation_ms": 0,
+    "total_ms": 3.2,
+    "context_tokens": 0
+   },
+   "then": null
+  },
+  {
+   "scenario": "not_in_papers",
+   "question_chars": 27,
+   "expect": {
+    "tier": "refused",
+    "calls": 1
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-not_in_papers",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §6.1 Toxicity analysis; MOSHI §E Safety and Toxicity."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "refused",
+      "reason": "model: not in papers",
+      "citations": [],
+      "request_id": "p10-not_in_papers"
+     }
+    ]
+   ],
+   "client_ms": 1004.0,
+   "provider_calls": 1,
+   "drafts_sent": [
+    "NOT_IN_PAPERS"
+   ],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "model: not in papers",
+    "failure_reason": null,
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 1500,
+    "tokens_out": 120,
+    "retrieval_ms": 990.7,
+    "verification_ms": 0.0,
+    "generation_ms": 0.7,
+    "total_ms": 996.3,
+    "context_tokens": 1435
+   },
+   "then": null
+  },
+  {
+   "scenario": "not_in_papers_near_miss",
+   "question_chars": 27,
+   "expect": {
+    "tier": "refused",
+    "calls": 1,
+    "note": "F7"
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-not_in_papers_near_miss",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: MOSHI §6.1 Toxicity analysis; MOSHI §E Safety and Toxicity."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "refused",
+      "reason": "model: not in papers",
+      "citations": [],
+      "request_id": "p10-not_in_papers_near_miss"
+     }
+    ]
+   ],
+   "client_ms": 959.3,
+   "provider_calls": 1,
+   "drafts_sent": [
+    "NOT_IN_PAPERS."
+   ],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "model: not in papers",
+    "failure_reason": null,
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 1500,
+    "tokens_out": 120,
+    "retrieval_ms": 945.8,
+    "verification_ms": 0.0,
+    "generation_ms": 0.8,
+    "total_ms": 951.9,
+    "context_tokens": 1435
+   },
+   "then": null
+  },
+  {
+   "scenario": "invalid_citation",
+   "question_chars": 61,
+   "expect": {
+    "tier": "refused",
+    "calls": 2
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-invalid_citation",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.2 Model Variations; AIAYN §3.2.3 Applications of Attention in our Model; AIAYN §3.2.2 Multi-Head Attention; AIAYN §7 Conclusion."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "refused",
+      "reason": "verification failed after redraft",
+      "citations": [],
+      "request_id": "p10-invalid_citation"
+     }
+    ]
+   ],
+   "client_ms": 1190.6,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "The base model uses 8 heads [AIAYN:9.9:c999].",
+    "The base model uses 8 heads [AIAYN:9.9:c999]."
+   ],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "verification failed after redraft",
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 3000,
+    "tokens_out": 240,
+    "retrieval_ms": 1172.7,
+    "verification_ms": 0.2,
+    "generation_ms": 2.0,
+    "total_ms": 1183.4,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "uncited_answer",
+   "question_chars": 61,
+   "expect": {
+    "tier": "refused",
+    "calls": 2
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-uncited_answer",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.2 Model Variations; AIAYN §3.2.3 Applications of Attention in our Model; AIAYN §3.2.2 Multi-Head Attention; AIAYN §7 Conclusion."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "refused",
+      "reason": "verification failed after redraft",
+      "citations": [],
+      "request_id": "p10-uncited_answer"
+     }
+    ]
+   ],
+   "client_ms": 1249.2,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "The base model uses 8 attention heads.",
+    "The base model uses 8 attention heads."
+   ],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "verification failed after redraft",
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 3000,
+    "tokens_out": 240,
+    "retrieval_ms": 1230.6,
+    "verification_ms": 0.1,
+    "generation_ms": 2.0,
+    "total_ms": 1241.4,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "unsupported_claim",
+   "question_chars": 61,
+   "expect": {
+    "tier": "refused",
+    "calls": 2
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-unsupported_claim",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.2 Model Variations; AIAYN §3.2.3 Applications of Attention in our Model; AIAYN §3.2.2 Multi-Head Attention; AIAYN §7 Conclusion."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "refused",
+      "reason": "verification failed after redraft",
+      "citations": [],
+      "request_id": "p10-unsupported_claim"
+     }
+    ]
+   ],
+   "client_ms": 2287.4,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "The Transformer was trained on one trillion tokens of web text [AIAYN:6.2:c031].",
+    "The Transformer was trained on one trillion tokens of web text [AIAYN:6.2:c031]."
+   ],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "verification failed after redraft",
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 3000,
+    "tokens_out": 240,
+    "retrieval_ms": 1213.3,
+    "verification_ms": 1056.5,
+    "generation_ms": 1.6,
+    "total_ms": 2279.6,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "contradicts_evidence",
+   "question_chars": 61,
+   "expect": {
+    "tier": "refused",
+    "calls": 2
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-contradicts_evidence",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.2 Model Variations; AIAYN §3.2.3 Applications of Attention in our Model; AIAYN §3.2.2 Multi-Head Attention; AIAYN §7 Conclusion."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "refused",
+      "reason": "verification failed after redraft",
+      "citations": [],
+      "request_id": "p10-contradicts_evidence"
+     }
+    ]
+   ],
+   "client_ms": 2302.5,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "The Transformer base model uses 64 attention heads [AIAYN:6.2:c031].",
+    "The Transformer base model uses 64 attention heads [AIAYN:6.2:c031]."
+   ],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "verification failed after redraft",
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 3000,
+    "tokens_out": 240,
+    "retrieval_ms": 1162.4,
+    "verification_ms": 1121.8,
+    "generation_ms": 2.3,
+    "total_ms": 2294.7,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "bad_then_good_redraft",
+   "question_chars": 61,
+   "expect": {
+    "tier": "normal",
+    "calls": 2
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-bad_then_good_redraft",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "normal",
+      "reason": null,
+      "citations": [
+       "AIAYN:6.2:c031"
+      ],
+      "request_id": "p10-bad_then_good_redraft"
+     }
+    ]
+   ],
+   "client_ms": 1808.4,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "The base model uses 8 heads.",
+    "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+   ],
+   "safety": "verified draft",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "normal",
+    "reply_reason": null,
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 3000,
+    "tokens_out": 240,
+    "retrieval_ms": 1206.8,
+    "verification_ms": 582.2,
+    "generation_ms": 2.0,
+    "total_ms": 1799.4,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "truncated_length_finish",
+   "question_chars": 61,
+   "expect": {
+    "tier": "refused",
+    "calls": 2,
+    "reason": "model output truncated after redraft",
+    "note": "F2"
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-truncated_length_finish",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §6.2 Model Variations; AIAYN §3.2.3 Applications of Attention in our Model; AIAYN §3.2.2 Multi-Head Attention; AIAYN §7 Conclusion."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "refused",
+      "reason": "model output truncated after redraft",
+      "citations": [],
+      "request_id": "p10-truncated_length_finish"
+     }
+    ]
+   ],
+   "client_ms": 1246.6,
+   "provider_calls": 2,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "reason": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "refused",
+    "reply_reason": "model output truncated after redraft",
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 3000,
+    "tokens_out": 240,
+    "retrieval_ms": 1227.8,
+    "verification_ms": 0.0,
+    "generation_ms": 2.0,
+    "total_ms": 1238.8,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "truncated_then_good",
+   "question_chars": 61,
+   "expect": {
+    "tier": "normal",
+    "calls": 2,
+    "note": "F2"
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-truncated_then_good",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "normal",
+      "reason": null,
+      "citations": [
+       "AIAYN:6.2:c031"
+      ],
+      "request_id": "p10-truncated_then_good"
+     }
+    ]
+   ],
+   "client_ms": 1872.4,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+   ],
+   "safety": "verified draft",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "normal",
+    "reply_reason": null,
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 0,
+    "redraft_attempts": 1,
+    "tokens_in": 3000,
+    "tokens_out": 240,
+    "retrieval_ms": 1255.4,
+    "verification_ms": 597.0,
+    "generation_ms": 2.1,
+    "total_ms": 1863.9,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "malformed_stream_chunk",
+   "question_chars": 61,
+   "expect": {
+    "status": "error",
+    "calls": 3,
+    "note": "F3: retried"
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-malformed_stream_chunk",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "The assistant hit an internal error. Please try again."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "error",
+      "tier": "unavailable",
+      "reason": "upstream_error",
+      "request_id": "p10-malformed_stream_chunk"
+     }
+    ]
+   ],
+   "client_ms": 2114.4,
+   "provider_calls": 3,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "status": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "error",
+    "answer_tier": "unavailable",
+    "reply_reason": "upstream_error",
+    "failure_reason": "upstream_error",
+    "llm_calls": 3,
+    "retries": 2,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 1179.2,
+    "verification_ms": null,
+    "generation_ms": 2.6,
+    "total_ms": 2107.4,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "malformed_then_good",
+   "question_chars": 61,
+   "expect": {
+    "tier": "normal",
+    "calls": 2,
+    "note": "F3"
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-malformed_then_good",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "normal",
+      "reason": null,
+      "citations": [
+       "AIAYN:6.2:c031"
+      ],
+      "request_id": "p10-malformed_then_good"
+     }
+    ]
+   ],
+   "client_ms": 2273.3,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+   ],
+   "safety": "verified draft",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "normal",
+    "reply_reason": null,
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 1,
+    "redraft_attempts": 0,
+    "tokens_in": 1500,
+    "tokens_out": 120,
+    "retrieval_ms": 1239.1,
+    "verification_ms": 584.6,
+    "generation_ms": 1.8,
+    "total_ms": 2266.3,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "drop_mid_stream",
+   "question_chars": 61,
+   "expect": {
+    "status": "error",
+    "calls": 3
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-drop_mid_stream",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "The assistant hit an internal error. Please try again."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "error",
+      "tier": "unavailable",
+      "reason": "upstream_error",
+      "request_id": "p10-drop_mid_stream"
+     }
+    ]
+   ],
+   "client_ms": 1906.3,
+   "provider_calls": 3,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "status": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "error",
+    "answer_tier": "unavailable",
+    "reply_reason": "upstream_error",
+    "failure_reason": "upstream_error",
+    "llm_calls": 3,
+    "retries": 2,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 1215.1,
+    "verification_ms": null,
+    "generation_ms": 2.8,
+    "total_ms": 1900.2,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "drop_then_recover",
+   "question_chars": 61,
+   "expect": {
+    "tier": "normal",
+    "calls": 2
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-drop_then_recover",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "normal",
+      "reason": null,
+      "citations": [
+       "AIAYN:6.2:c031"
+      ],
+      "request_id": "p10-drop_then_recover"
+     }
+    ]
+   ],
+   "client_ms": 2061.8,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+   ],
+   "safety": "verified draft",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "normal",
+    "reply_reason": null,
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 1,
+    "redraft_attempts": 0,
+    "tokens_in": 1500,
+    "tokens_out": 120,
+    "retrieval_ms": 1163.2,
+    "verification_ms": 587.6,
+    "generation_ms": 2.2,
+    "total_ms": 2054.9,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "timeout_first_byte",
+   "question_chars": 61,
+   "expect": {
+    "status": "timeout",
+    "calls": 3
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-timeout_first_byte",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "The assistant is at capacity right now and couldn't start your question in time. Please try again in about 10 seconds."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "timeout",
+      "tier": "unavailable",
+      "reason": "internal_timeout",
+      "request_id": "p10-timeout_first_byte"
+     }
+    ]
+   ],
+   "client_ms": 1857.4,
+   "provider_calls": 3,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "status": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "timeout",
+    "answer_tier": "unavailable",
+    "reply_reason": "internal_timeout",
+    "failure_reason": "internal_timeout",
+    "llm_calls": 3,
+    "retries": 2,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 1174.1,
+    "verification_ms": null,
+    "generation_ms": 1.6,
+    "total_ms": 1849.7,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "connect_error",
+   "question_chars": 61,
+   "expect": {
+    "status": "error",
+    "calls": 3
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-connect_error",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "The assistant hit an internal error. Please try again."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "error",
+      "tier": "unavailable",
+      "reason": "upstream_error",
+      "request_id": "p10-connect_error"
+     }
+    ]
+   ],
+   "client_ms": 2272.3,
+   "provider_calls": 3,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "status": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "error",
+    "answer_tier": "unavailable",
+    "reply_reason": "upstream_error",
+    "failure_reason": "upstream_error",
+    "llm_calls": 3,
+    "retries": 2,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 1189.5,
+    "verification_ms": null,
+    "generation_ms": 1.5,
+    "total_ms": 2265.2,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "http_500_then_ok",
+   "question_chars": 61,
+   "expect": {
+    "tier": "normal",
+    "calls": 2
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-http_500_then_ok",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "normal",
+      "reason": null,
+      "citations": [
+       "AIAYN:6.2:c031"
+      ],
+      "request_id": "p10-http_500_then_ok"
+     }
+    ]
+   ],
+   "client_ms": 1971.8,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+   ],
+   "safety": "verified draft",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "normal",
+    "reply_reason": null,
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 1,
+    "redraft_attempts": 0,
+    "tokens_in": 1500,
+    "tokens_out": 120,
+    "retrieval_ms": 1200.2,
+    "verification_ms": 610.1,
+    "generation_ms": 2.1,
+    "total_ms": 1964.9,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "http_429_minute_then_ok",
+   "question_chars": 61,
+   "expect": {
+    "tier": "normal",
+    "calls": 2
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-http_429_minute_then_ok",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "ok",
+      "tier": "normal",
+      "reason": null,
+      "citations": [
+       "AIAYN:6.2:c031"
+      ],
+      "request_id": "p10-http_429_minute_then_ok"
+     }
+    ]
+   ],
+   "client_ms": 2742.5,
+   "provider_calls": 2,
+   "drafts_sent": [
+    "To evaluate the importance of different components of the Transformer, we varied our base model in different ways, measuring the change in performance on English-to-German translation on the development set, newstest2013 [AIAYN:6.2:c031]."
+   ],
+   "safety": "verified draft",
+   "checks": {
+    "safe_reply": true,
+    "tier": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "ok",
+    "answer_tier": "normal",
+    "reply_reason": null,
+    "failure_reason": null,
+    "llm_calls": 2,
+    "retries": 1,
+    "redraft_attempts": 0,
+    "tokens_in": 1500,
+    "tokens_out": 120,
+    "retrieval_ms": 1145.1,
+    "verification_ms": 580.2,
+    "generation_ms": 1.6,
+    "total_ms": 2735.7,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "http_429_per_day",
+   "question_chars": 61,
+   "expect": {
+    "status": "rate_limited",
+    "calls": 1,
+    "then_immediate": true
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-http_429_per_day",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "The research assistant has used today's model capacity, so I can't write a new answer right now. Full answers resume in about 60 minutes."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "rate_limited",
+      "tier": "unavailable",
+      "reason": "daily_budget_exhausted",
+      "request_id": "p10-http_429_per_day"
+     }
+    ]
+   ],
+   "client_ms": 1239.6,
+   "provider_calls": 1,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "status": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "rate_limited",
+    "answer_tier": "unavailable",
+    "reply_reason": "daily_budget_exhausted",
+    "failure_reason": "daily_budget_exhausted",
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 1224.7,
+    "verification_ms": null,
+    "generation_ms": 1.0,
+    "total_ms": 1231.1,
+    "context_tokens": 1568
+   },
+   "then": {
+    "events": [
+     [
+      "http",
+      200
+     ],
+     [
+      "meta",
+      {
+       "request_id": "p10-http_429_per_day-2",
+       "admitted": false
+      }
+     ],
+     [
+      "content",
+      {
+       "text": "The research assistant has used today's model capacity, so I can't write a new answer right now. Full answers resume in about 60 minutes."
+      }
+     ],
+     [
+      "done",
+      {
+       "status": "rate_limited",
+       "tier": "unavailable",
+       "reason": "daily_budget_exhausted"
+      }
+     ]
+    ],
+    "ms": 12.3,
+    "provider_calls_after": 1
+   }
+  },
+  {
+   "scenario": "http_429_day_unrecognised_wording",
+   "question_chars": 61,
+   "expect": {
+    "status": "rate_limited",
+    "reason": "daily_budget_exhausted",
+    "calls": 1,
+    "note": "F4"
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-http_429_day_unrecognised_wording",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "The research assistant has used today's model capacity, so I can't write a new answer right now. Full answers resume in about 60 minutes."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "rate_limited",
+      "tier": "unavailable",
+      "reason": "daily_budget_exhausted",
+      "request_id": "p10-http_429_day_unrecognised_wording"
+     }
+    ]
+   ],
+   "client_ms": 1265.9,
+   "provider_calls": 1,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "status": true,
+    "reason": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "rate_limited",
+    "answer_tier": "unavailable",
+    "reply_reason": "daily_budget_exhausted",
+    "failure_reason": "daily_budget_exhausted",
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 1250.5,
+    "verification_ms": null,
+    "generation_ms": 0.9,
+    "total_ms": 1258.0,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "http_429_rpd_header_zero",
+   "question_chars": 61,
+   "expect": {
+    "status": "rate_limited",
+    "reason": "daily_budget_exhausted",
+    "calls": 1,
+    "note": "F4"
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-http_429_rpd_header_zero",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "The research assistant has used today's model capacity, so I can't write a new answer right now. Full answers resume in about 10 minutes."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "rate_limited",
+      "tier": "unavailable",
+      "reason": "daily_budget_exhausted",
+      "request_id": "p10-http_429_rpd_header_zero"
+     }
+    ]
+   ],
+   "client_ms": 1197.9,
+   "provider_calls": 1,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "status": true,
+    "reason": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "rate_limited",
+    "answer_tier": "unavailable",
+    "reply_reason": "daily_budget_exhausted",
+    "failure_reason": "daily_budget_exhausted",
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 1183.4,
+    "verification_ms": null,
+    "generation_ms": 0.7,
+    "total_ms": 1190.3,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "http_401_bad_key",
+   "question_chars": 61,
+   "expect": {
+    "status": "error",
+    "calls": 1
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-http_401_bad_key",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "The assistant hit an internal error. Please try again."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "error",
+      "tier": "unavailable",
+      "reason": "upstream_error",
+      "request_id": "p10-http_401_bad_key"
+     }
+    ]
+   ],
+   "client_ms": 1141.8,
+   "provider_calls": 1,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "status": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "error",
+    "answer_tier": "unavailable",
+    "reply_reason": "upstream_error",
+    "failure_reason": "upstream_error",
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 1128.0,
+    "verification_ms": null,
+    "generation_ms": 0.8,
+    "total_ms": 1133.9,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "http_404_bad_model",
+   "question_chars": 61,
+   "expect": {
+    "status": "error",
+    "calls": 1
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-http_404_bad_model",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "The assistant hit an internal error. Please try again."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "error",
+      "tier": "unavailable",
+      "reason": "upstream_error",
+      "request_id": "p10-http_404_bad_model"
+     }
+    ]
+   ],
+   "client_ms": 1250.4,
+   "provider_calls": 1,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "status": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "error",
+    "answer_tier": "unavailable",
+    "reply_reason": "upstream_error",
+    "failure_reason": "upstream_error",
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 1235.8,
+    "verification_ms": null,
+    "generation_ms": 0.7,
+    "total_ms": 1243.0,
+    "context_tokens": 1568
+   },
+   "then": null
+  },
+  {
+   "scenario": "http_400_context_too_long",
+   "question_chars": 61,
+   "expect": {
+    "status": "error",
+    "calls": 1
+   },
+   "events": [
+    [
+     "http",
+     200
+    ],
+    [
+     "meta",
+     {
+      "request_id": "p10-http_400_context_too_long",
+      "admitted": true
+     }
+    ],
+    [
+     "content",
+     {
+      "text": "The assistant hit an internal error. Please try again."
+     }
+    ],
+    [
+     "done",
+     {
+      "model": "openai/gpt-oss-120b",
+      "status": "error",
+      "tier": "unavailable",
+      "reason": "upstream_error",
+      "request_id": "p10-http_400_context_too_long"
+     }
+    ]
+   ],
+   "client_ms": 1303.5,
+   "provider_calls": 1,
+   "drafts_sent": [],
+   "safety": "fixed non-answer text",
+   "checks": {
+    "safe_reply": true,
+    "status": true,
+    "provider_calls": true
+   },
+   "passed": true,
+   "trace": {
+    "status": "error",
+    "answer_tier": "unavailable",
+    "reply_reason": "upstream_error",
+    "failure_reason": "upstream_error",
+    "llm_calls": 1,
+    "retries": 0,
+    "redraft_attempts": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "retrieval_ms": 1286.6,
+    "verification_ms": null,
+    "generation_ms": 0.9,
+    "total_ms": 1293.0,
+    "context_tokens": 1568
+   },
+   "then": null
+  }
+ ]
+}

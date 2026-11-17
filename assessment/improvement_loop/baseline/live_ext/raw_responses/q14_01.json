@@ -1,0 +1,44 @@
+{
+ "question_id": "q14",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:25:13.505+00:00",
+  "t_send_ns": 178363505383100,
+  "status": 200,
+  "t_first_byte_ns": 178363970253600,
+  "t_first_content_ns": 178364300227300,
+  "t_last_ns": 178364532099600,
+  "max_gap_ms": 329.9529,
+  "text": "The original Transformer translation experiments used a fixed BPE‑style tokenizer (the Llama‑3 tokenizer) that segments input into pre‑defined subword tokens [HNET:3.2:c061]. In contrast, H‑Net replaces this pipeline with a dynamic chunking mechanism that learns content‑ and context‑dependent segmentation jointly with the model, operating directly on raw bytes [HNET:abstract:c001].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.371354903,
+   "prompt_tokens": 1817,
+   "prompt_time": 0.075181053,
+   "completion_tokens": 207,
+   "completion_time": 0.493711561,
+   "total_tokens": 2024,
+   "total_time": 0.568892614,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 112
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "953",
+   "x-ratelimit-reset-requests": "1h7m40.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5743",
+   "x-ratelimit-reset-tokens": "16.927s"
+  },
+  "error": null,
+  "first_byte_ms": 464.9,
+  "first_content_ms": 794.8,
+  "total_ms": 1026.7
+ }
+}

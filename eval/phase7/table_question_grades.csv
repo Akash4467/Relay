@@ -1,0 +1,33 @@
+question_id,table,type,answerable,expected_answer,evidence_complete_c3_B,evidence_complete_c4_B,answer_c3,answer_c4,grade_c3,grade_c4,grader,human_review
+t01,HNET:T6,symbol_cell,True,A cross (✗).,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t02,HNET:T6,row_column_symbol,True,Dynamic chunking; Multi-stage / Hierarchy is marked ✓.,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t03,HNET:T6,distinguish_configurations,True,"MANTa, MrT5 and DPT (Gumbel).",False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t04,HNET:T6,unanswerable,False,Refuse: the table has no parameter column.,n/a,n/a,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t05,MOSHI:T3,symbol_configuration_value,True,64.0 ± 1.7.,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t06,MOSHI:T3,blank_cell,True,Split quantizer (its cell is blank; the other four component columns are checked).,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t07,MOSHI:T3,distinguish_configurations,True,"ABX 8.0%, MUSHRA 68.3 ± 1.7.",False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t08,MOSHI:T3,unanswerable,False,Refuse: the table reports no training time.,n/a,n/a,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t09,MOSHI:T4,row_column_value,True,"50 Hz frame rate, 1.3 kbps.",True,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t10,MOSHI:T4,symbol_column,True,"Mimi, adv. loss only; Same, downsampled at 16kHz; Mimi, non adv. only.",False,False,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t11,MOSHI:T4,blank_cell,True,The cell is blank (no mark). The table does not state anything else about it.,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t12,MOSHI:T4,unanswerable,False,Refuse: EnCodec is not in the table.,n/a,n/a,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t13,MOSHI:T5,symbol_configuration_value,True,36.8.,False,False,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t14,MOSHI:T5,distinguish_configurations,True,42.2.,False,False,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t15,MOSHI:T5,supported_comparison,True,Lower with the check mark: 40.3 versus 42.2 (the caption allows comparisons within one delay).,False,False,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t16,MOSHI:T5,unsupported_comparison,False,Refuse or caveat: the caption says perplexities are only comparable between models with the same delay.,n/a,n/a,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t17,MOSHI:T6,symbol_configuration_value,True,"NLL 2.77, length 1920.",False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t18,MOSHI:T6,blank_cell,True,538.,True,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t19,MOSHI:T6,symbol_cell,True,"Yes, it has a check mark (✓).",False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t20,MOSHI:T6,unanswerable,False,Refuse: that table reports transcript NLL and length only.,n/a,n/a,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t21,MOSHI:T13,symbol_configuration_value,True,100.00%.,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t22,MOSHI:T13,distinguish_configurations,True,0.00% (at temperature 0.8).,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t23,MOSHI:T13,supported_comparison,True,98.40% with the prompted check versus 0.19% with no marks.,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t24,MOSHI:T13,unanswerable,False,Refuse: no prompted row at temperature 1.0 is reported.,n/a,n/a,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t25,MOSHI:T16,symbol_configuration_value,True,0.450.,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t26,MOSHI:T16,row_column_value,True,0.404.,True,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t27,MOSHI:T16,unanswerable,False,Refuse: the table stops at k=8.,n/a,n/a,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t28,MOSHI:T16,distinguish_configurations,True,No: all four Basic rows have no mark under RVQGAN; the marked rows are Mimi rows.,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t29,MOSHI:T17,symbol_configuration_value,True,31.3%.,False,False,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t30,MOSHI:T17,symbol_column,True,27.5%.,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t31,MOSHI:T17,unanswerable,False,Refuse: that table has no MUSHRA column (the other Mimi ablation table reports MUSHRA).,n/a,n/a,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending
+t32,MOSHI:T17,distinguish_configurations,True,2.82.,False,True,PENDING: no model output,PENDING: no model output,pending,pending,none yet,pending

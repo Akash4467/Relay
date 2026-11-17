@@ -1,0 +1,46 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "corpus_version": "c3",
+ "question_id": "t13",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:01:09.788+00:00",
+  "t_send_ns": 176919788994800,
+  "status": 200,
+  "t_first_byte_ns": 176920220171900,
+  "t_first_content_ns": 176920899182400,
+  "t_last_ns": 176921019054100,
+  "max_gap_ms": 678.9916,
+  "text": "The row with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] that has a check mark under RQ‑Transformer reports a perplexity of 135.4 [MOSHI:T5:r01].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.28817189,
+   "prompt_tokens": 1840,
+   "prompt_time": 0.258367822,
+   "completion_tokens": 173,
+   "completion_time": 0.54574575,
+   "total_tokens": 2013,
+   "total_time": 0.804113572,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 106
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "975",
+   "x-ratelimit-reset-requests": "36m0s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5869",
+   "x-ratelimit-reset-tokens": "15.982s"
+  },
+  "error": null,
+  "first_byte_ms": 431.2,
+  "first_content_ms": 1110.2,
+  "total_ms": 1230.1
+ }
+}

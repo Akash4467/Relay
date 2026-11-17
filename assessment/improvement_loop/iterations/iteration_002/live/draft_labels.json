@@ -1,0 +1,11 @@
+{
+ "about": "ASSISTANT labels (not independent), same rubric as the baseline draft labels.",
+ "labels": {"q02#0": "correct", "q02#1": "correct", "q04#0": "correct", "q04#1": "correct", "q08#0": "correct",
+            "q08#1": "correct", "q13#0": "mixed", "q13#1": "correct", "q15#0": "correct", "q15#1": "correct",
+            "q03#0": "mixed", "q03#1": "correct"},
+ "notes": {"q02#1": "verbatim AIAYN:3.2.2:c014; the d_k sentence (anaphora 'For each of these') rejected at 0.81",
+           "q15#1": "both sentences verbatim from their cited chunks; 'All models are trained on H100 GPUs' rejected at 0.48",
+           "q08#1": "verbatim AIAYN:3.5:c020 / 6.2:c031 sentences rejected at 0.57-0.69",
+           "q13#0": "the comparison sentence cites only HNET:T2:r11 (as in the baseline)",
+           "q03#0": "'per-timestep prefix to the semantic token' not in MOSHI:1:c007 (as in the baseline)"}
+}

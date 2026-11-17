@@ -1,0 +1,122 @@
+[
+ {
+  "case": "q12 redraft, correct",
+  "sentence": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA [MOSHI:T8:r01].",
+  "should_accept": true,
+  "accepted": true,
+  "reason": "table-verified: row 'Moshi': Web Q. = 26.6, LlaMA Q. = 62.3, Audio Trivia QA = 22.8",
+  "ok": true
+ },
+ {
+  "case": "plain row, correct",
+  "sentence": "Moshi achieves 26.6 on Web Q. [MOSHI:T8:r01].",
+  "should_accept": true,
+  "accepted": true,
+  "reason": "table-verified: row 'Moshi': Web Q. = 26.6",
+  "ok": true
+ },
+ {
+  "case": "no-IM row, correct",
+  "sentence": "Moshi without Inner Monologue achieves 9.2 % on Web Questions [MOSHI:T8:r02].",
+  "should_accept": true,
+  "accepted": false,
+  "reason": null,
+  "ok": false
+ },
+ {
+  "case": "wrong value",
+  "sentence": "Moshi with Inner Monologue achieves 26.6 % on Web Questions and 21.0 % on Llama Questions [MOSHI:T8:r01].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "values swapped between columns",
+  "sentence": "Moshi achieves 62.3 % on Web Questions and 26.6 % on Llama Questions [MOSHI:T8:r01].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "wrong variant (no-IM claim, IM numbers)",
+  "sentence": "Moshi without Inner Monologue achieves 26.6 % on Web Questions [MOSHI:T8:r01].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "wrong variant (IM claim, no-IM numbers)",
+  "sentence": "Moshi with Inner Monologue achieves 9.2 % on Web Questions [MOSHI:T8:r02].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "wrong entity",
+  "sentence": "SpeechGPT achieves 26.6 % on Web Questions [MOSHI:T8:r01].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "comparative",
+  "sentence": "Moshi achieves 26.6 % on Web Questions, higher than SpeechGPT [MOSHI:T8:r01].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "negation",
+  "sentence": "Moshi does not achieve 26.6 % on Web Questions [MOSHI:T8:r01].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "extra unsupported condition",
+  "sentence": "Moshi achieves 26.6 % on Web Questions in a five-shot setting [MOSHI:T8:r01].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "number without its column",
+  "sentence": "Moshi achieves 26.6 % [MOSHI:T8:r01].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "missing cell claimed",
+  "sentence": "AudioLM achieves 7.0 % on Audio Trivia QA [MOSHI:T8:r01].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "multi-row claim",
+  "sentence": "The 2-stage H-Net reaches 55.5 at GPT-3 Large compute, compared with 53.3 for the BPE Transformer [HNET:T2:r10][HNET:T2:r01].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ },
+ {
+  "case": "wrong size row",
+  "sentence": "The 2-stage H-Net matched to GPT-3 Large reaches an average accuracy of 58.2 [HNET:T2:r15].",
+  "should_accept": false,
+  "accepted": false,
+  "reason": null,
+  "ok": true
+ }
+]

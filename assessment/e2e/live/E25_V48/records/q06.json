@@ -1,0 +1,170 @@
+{
+ "run": "assessment/e2e/live/E25_V48",
+ "timestamp": "2026-11-14T16:50:57.122+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "q06",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "What limitation of tokenization motivates the Dynamic Chunking paper?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "Traditional tokenization approaches in language models suffer from fundamental limitations because fixed vocabularies exhibit biases toward high‑resource languages, are fragile when handling adversarial inputs, and show lower performance on character‑level tasks, stemming from their static nature that cannot adapt chunking strategies to input content or context [HNET:A:c088].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "HNET:A:c088"
+  ],
+  "request_id": "loop-E25_V48-q06"
+ },
+ "client_ms": 18211.0,
+ "evidence_ids": [
+  "HNET:A:c088",
+  "HNET:A.1:c090",
+  "HNET:3:c047",
+  "HNET:A.1.3:c094",
+  "HNET:1:c009",
+  "HNET:A.3:c103",
+  "HNET:4:c080",
+  "HNET:A.3:c105"
+ ],
+ "gold_units_in_context": [
+  false,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  false,
+  false
+ ],
+ "drafts": [
+  "Traditional tokenization approaches in language models suffer from fundamental limitations because fixed vocabularies exhibit biases toward high‑resource languages, are fragile when handling adversarial inputs, and show lower performance on character‑level tasks, stemming from their static nature that cannot adapt chunking strategies to input content or context [HNET:A:c088]."
+ ],
+ "verification": [
+  {
+   "ok": true,
+   "cited": [
+    "HNET:A:c088"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "Traditional tokenization approaches in language models suffer from fundamental limitations because fixed vocabularies exhibit biases toward high‑resource languages, are fragile when handling adversarial inputs, and show lower performance on character‑level tasks, stemming from their static nature that cannot adapt chunking strategies to input content or context [HNET:A:c088].",
+     "ok": true,
+     "entailment": 0.9661293141305044,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_V48-q06",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T16:50:57.122+00:00",
+  "question_id": "q06",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 1975,
+  "tokens_out": 127,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 746.3,
+  "context_tokens": 1520,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "HNET:A:c088",
+   "HNET:A.1:c090",
+   "HNET:3:c047",
+   "HNET:A.1.3:c094",
+   "HNET:1:c009",
+   "HNET:A.3:c103",
+   "HNET:4:c080",
+   "HNET:A.3:c105"
+  ],
+  "verification_ms": 934.0,
+  "answer_status": "answered",
+  "llm_calls": 1,
+  "initial_attempts": 1,
+  "redraft_attempts": 0,
+  "fallback_generations": 0,
+  "governor_wait_ms": 14656.4,
+  "model_ttft_ms": 1700.5,
+  "first_byte_ms": 443.8,
+  "generation_ms": 1846.5,
+  "reasoning_tokens": 53,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1976,
+    "reserved": 2746,
+    "governor_wait_ms": 14656.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.37056811,
+     "prompt_tokens": 1975,
+     "prompt_time": 1.131806912,
+     "completion_tokens": 127,
+     "completion_time": 0.265048601,
+     "total_tokens": 2102,
+     "total_time": 1.396855513,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 53
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1975,
+    "tokens_out": 127,
+    "reasoning_tokens": 53,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 443.8,
+    "model_ttft_ms": 1700.5,
+    "total_ms": 1846.5,
+    "max_gap_ms": 1256.6,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "957",
+     "x-ratelimit-reset-requests": "1h1m55.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "3986",
+     "x-ratelimit-reset-tokens": "30.105s"
+    }
+   }
+  ],
+  "first_token_ms": 18189.2,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 18189.6
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "question_id": "q08",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:52:26.844+00:00",
+  "t_send_ns": 208796845004700,
+  "status": 200,
+  "t_first_byte_ns": 208797249219000,
+  "t_first_content_ns": 208797824521800,
+  "t_last_ns": 208798219844200,
+  "max_gap_ms": 575.2847,
+  "text": "The authors state that they chose this function because they hypothesized it would allow the model to easily learn to attend by relative positions, since for any fixed offset k, PE_pos+k can be represented as a linear function of PE_pos [AIAYN:3.5:c020]. The authors also state that they chose the sinusoidal version because it may allow the model to extrapolate to sequence lengths longer than the ones encountered during training [AIAYN:3.5:c020]. The authors say they also experimented with using learned positional embeddings instead, and found that the two versions produced nearly identical results (see Table 3 row (E)) [AIAYN:3.5:c020]. In Table 3, the (E) configuration has PPL / (dev) = 4.92; BLEU / (dev) = 25.7 [AIAYN:T3:r08].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.30506579,
+   "prompt_tokens": 2587,
+   "prompt_time": 0.129636406,
+   "completion_tokens": 402,
+   "completion_time": 0.848107851,
+   "total_tokens": 2989,
+   "total_time": 0.977744257,
+   "completion_tokens_details": {
+    "reasoning_tokens": 204
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "953",
+   "x-ratelimit-reset-requests": "1h7m40.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "4645",
+   "x-ratelimit-reset-tokens": "25.162s"
+  },
+  "error": null,
+  "first_byte_ms": 404.2,
+  "first_content_ms": 979.5,
+  "total_ms": 1374.8
+ }
+}

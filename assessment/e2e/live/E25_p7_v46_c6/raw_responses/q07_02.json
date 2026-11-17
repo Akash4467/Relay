@@ -1,0 +1,41 @@
+{
+ "question_id": "q07",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:47:31.488+00:00",
+  "t_send_ns": 201301489237700,
+  "status": 200,
+  "t_first_byte_ns": 201301908007000,
+  "t_first_content_ns": 201302735747100,
+  "t_last_ns": 201302964795500,
+  "max_gap_ms": 827.6952,
+  "text": "In addition to the two sub‑layers in each encoder layer, the decoder inserts a third sub‑layer, which performs multi‑head attention over the output of the encoder stack [AIAYN:3.1:c009]. Self‑attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position, and we prevent leftward information flow by masking out (setting to -∞) all values in the input of the softmax which correspond to illegal connections [AIAYN:3.2.3:c016]. In “encoder‑decoder attention” layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.276236903,
+   "prompt_tokens": 2297,
+   "prompt_time": 0.123616833,
+   "completion_tokens": 470,
+   "completion_time": 0.981974575,
+   "total_tokens": 2767,
+   "total_time": 1.105591408,
+   "completion_tokens_details": {
+    "reasoning_tokens": 300
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "956",
+   "x-ratelimit-reset-requests": "1h3m21.6s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "3873",
+   "x-ratelimit-reset-tokens": "30.952s"
+  },
+  "error": null,
+  "first_byte_ms": 418.8,
+  "first_content_ms": 1246.5,
+  "total_ms": 1475.6
+ }
+}

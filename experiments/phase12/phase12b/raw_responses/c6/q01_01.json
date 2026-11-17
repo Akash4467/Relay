@@ -1,0 +1,46 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "corpus_version": "c6",
+ "question_id": "q01",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T07:56:17.135+00:00",
+  "t_send_ns": 176627137027200,
+  "status": 200,
+  "t_first_byte_ns": 176627597545300,
+  "t_first_content_ns": 176627856236800,
+  "t_last_ns": 176628033219800,
+  "max_gap_ms": 258.67,
+  "text": "Recurrent models compute hidden states h_t as a function of the previous hidden state h_t‑1 and the input at position t, which makes their computation inherently sequential and thus precludes parallelization within training examples [AIAYN:1:c002]. This sequential nature becomes especially critical for longer sequences because memory constraints then limit the ability to batch across examples, reducing overall training efficiency [AIAYN:1:c002].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.371524732,
+   "prompt_tokens": 1849,
+   "prompt_time": 0.156020731,
+   "completion_tokens": 136,
+   "completion_time": 0.283923853,
+   "total_tokens": 1985,
+   "total_time": 0.439944584,
+   "prompt_tokens_details": {
+    "cached_tokens": 1792
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 42
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "995",
+   "x-ratelimit-reset-requests": "7m12s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2924",
+   "x-ratelimit-reset-tokens": "38.07s"
+  },
+  "error": null,
+  "first_byte_ms": 460.5,
+  "first_content_ms": 719.2,
+  "total_ms": 896.2
+ }
+}

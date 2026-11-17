@@ -1,0 +1,41 @@
+{
+ "question_id": "t01",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:09:28.845+00:00",
+  "t_send_ns": 206218845906700,
+  "status": 200,
+  "t_first_byte_ns": 206219249216600,
+  "t_first_content_ns": 206219471414000,
+  "t_last_ns": 206219528939300,
+  "max_gap_ms": 222.1662,
+  "text": "The authors list ByT5 under the Isotropic configuration with Autoregressive = ✗ [HNET:T6:r01].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.321100059,
+   "prompt_tokens": 1993,
+   "prompt_time": 0.133562096,
+   "completion_tokens": 71,
+   "completion_time": 0.150215949,
+   "total_tokens": 2064,
+   "total_time": 0.283778045,
+   "completion_tokens_details": {
+    "reasoning_tokens": 36
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "965",
+   "x-ratelimit-reset-requests": "50m24s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5064",
+   "x-ratelimit-reset-tokens": "22.02s"
+  },
+  "error": null,
+  "first_byte_ms": 403.3,
+  "first_content_ms": 625.5,
+  "total_ms": 683.0
+ }
+}

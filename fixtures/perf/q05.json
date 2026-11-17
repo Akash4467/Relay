@@ -1,0 +1,18 @@
+{
+  "question_id": "q05",
+  "model": "openai/gpt-oss-120b",
+  "prompt_version": "p1",
+  "recorded_at": "2026-11-12T18:42:10.219+00:00",
+  "drafts": [
+    {
+      "content": "The routing module predicts boundaries by measuring the cosine similarity between adjacent encoder‑output vectors: it first projects each output \\(\\hat{x}_t\\) to queries \\(q_t\\) and keys \\(k_t\\), then computes a boundary probability \\(p_t = \\tfrac12\\bigl(1 - \\frac{q_t^\\top k_{t-1}}{\\|q_t\\|\\|k_{t-1}\\|}\\bigr)\\) which lies in \\([0,1]\\) [HNET:2.2.1:c023]. A hard boundary indicator \\(b_t\\) is set to 1 whenever \\(p_t \\ge 0.5\\), otherwise 0, with \\(p_1\\) defined as 1.0 to start the sequence with a boundary [HNET:2.2.1:c023]. Lower cosine similarity (i.e., larger \\(p_t\\)) signals a contextual or semantic shift, prompting the module to place a chunk boundary at that position [HNET:2.2.1:c023].",
+      "completion_tokens": 306,
+      "reasoning_tokens": 72
+    },
+    {
+      "content": "The routing module computes cosine similarity between adjacent encoder outputs by projecting each \\(\\hat{x}_t\\) to a query \\(q_t\\) and a key \\(k_t\\) and then calculating a boundary probability \\(p_t = \\tfrac12\\!\\left(1 - \\frac{q_t^\\top k_{t-1}}{\\|q_t\\|\\|k_{t-1}\\|}\\right) \\in [0,1]\\) [HNET:2.2.1:c023]. It then forms a hard boundary indicator \\(b_t = \\mathds{1}_{\\{p_t \\ge 0.5\\}}\\) with \\(p_1\\) defined as 1.0 to ensure the sequence begins with a boundary [HNET:2.2.1:c023].",
+      "completion_tokens": 250,
+      "reasoning_tokens": 69
+    }
+  ]
+}

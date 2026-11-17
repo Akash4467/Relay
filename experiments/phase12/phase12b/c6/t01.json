@@ -1,0 +1,257 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "timestamp": "2026-11-14T07:59:59.229+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p4",
+ "verifier_version": "v4.2",
+ "retrieval_config": {
+  "setting": "B",
+  "cross_paper_reserve_per_paper": 2,
+  "symbolic_query_expansion": true,
+  "prompt_caption_sharing": true
+ },
+ "question_id": "t01",
+ "group": "table_heavy_c6_more_complete",
+ "question": "In the H-Net paper's table comparing related architectures, is the Autoregressive column marked with a check mark (✓) or a cross (✗) for ByT5?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "In the table, the Isotropic configuration with Example Architecture = ByT5 has Autoregressive = ✗ [HNET:T6:r01].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "HNET:T6:r01"
+  ],
+  "request_id": "p12-c6-t01"
+ },
+ "client_ms": 31741.9,
+ "evidence_ids": [
+  "HNET:T6:r05",
+  "HNET:T6:r04",
+  "HNET:T6:r03",
+  "HNET:T6:r01",
+  "HNET:T6:r02",
+  "HNET:A:c089",
+  "HNET:2.1.2:c020"
+ ],
+ "retrieval_query": null,
+ "query_expansion": [],
+ "caption_sharing": true,
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true
+ ],
+ "drafts": [
+  "The table shows that for the Isotropic configuration with Example Architecture = ByT5, the Autoregressive column is marked with a cross (✗) [HNET:T6:r01].",
+  "In the table, the Isotropic configuration with Example Architecture = ByT5 has Autoregressive = ✗ [HNET:T6:r01]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "HNET:T6:r01"
+   ],
+   "failures": [
+    [
+     "The table shows that for the Isotropic configuration with Example Architecture = ByT5, the Autoregressive column is marked with a cross (✗) [HNET:T6:r01].",
+     "not supported by the cited passage (entailment 0.86 < 0.9)"
+    ]
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "HNET:T6:r01"
+   ],
+   "failures": []
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "identity_checks": {
+  "evidence_equals_selected_corpus": true,
+  "original_question_in_every_prompt": true,
+  "expanded_query_not_in_prompt": true
+ },
+ "trace": {
+  "request_id": "p12-c6-t01",
+  "scenario": "phase12_live",
+  "source": "real",
+  "start_time": "2026-11-14T07:59:59.229+00:00",
+  "question_id": "t01",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 3782,
+  "tokens_out": 157,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1215.7,
+  "context_tokens": 1506,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "HNET:T6:r05",
+   "HNET:T6:r04",
+   "HNET:T6:r03",
+   "HNET:T6:r01",
+   "HNET:T6:r02",
+   "HNET:A:c089",
+   "HNET:2.1.2:c020"
+  ],
+  "verification_ms": 3075.1,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 24555.9,
+  "model_ttft_ms": 1140.3,
+  "first_byte_ms": 402.8,
+  "generation_ms": 2843.5,
+  "reasoning_tokens": 64,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1824,
+    "reserved": 2594,
+    "governor_wait_ms": 12126.8,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.317288749,
+     "prompt_tokens": 1823,
+     "prompt_time": 0.352900859,
+     "completion_tokens": 73,
+     "completion_time": 0.476259715,
+     "total_tokens": 1896,
+     "total_time": 0.829160574,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 23
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1823,
+    "tokens_out": 73,
+    "reasoning_tokens": 23,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 402.8,
+    "model_ttft_ms": 1140.3,
+    "total_ms": 1226.3,
+    "max_gap_ms": 737.4,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "979",
+     "x-ratelimit-reset-requests": "30m14.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5886",
+     "x-ratelimit-reset-tokens": "15.854s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1958,
+    "reserved": 2728,
+    "governor_wait_ms": 12429.1,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.318017182,
+     "prompt_tokens": 1959,
+     "prompt_time": 0.713089524,
+     "completion_tokens": 84,
+     "completion_time": 0.50865454,
+     "total_tokens": 2043,
+     "total_time": 1.221744064,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 41
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 1959,
+    "tokens_out": 84,
+    "reasoning_tokens": 41,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 398.7,
+    "model_ttft_ms": 1486.6,
+    "total_ms": 1617.2,
+    "max_gap_ms": 1087.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "978",
+     "x-ratelimit-reset-requests": "31m40.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5777",
+     "x-ratelimit-reset-tokens": "16.672s"
+    }
+   }
+  ],
+  "first_token_ms": 31732.0,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 31732.6
+ },
+ "provider_token_usage": [
+  {
+   "queue_time": 0.317288749,
+   "prompt_tokens": 1823,
+   "prompt_time": 0.352900859,
+   "completion_tokens": 73,
+   "completion_time": 0.476259715,
+   "total_tokens": 1896,
+   "total_time": 0.829160574,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 23
+   }
+  },
+  {
+   "queue_time": 0.318017182,
+   "prompt_tokens": 1959,
+   "prompt_time": 0.713089524,
+   "completion_tokens": 84,
+   "completion_time": 0.50865454,
+   "total_tokens": 2043,
+   "total_time": 1.221744064,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 41
+   }
+  }
+ ]
+}

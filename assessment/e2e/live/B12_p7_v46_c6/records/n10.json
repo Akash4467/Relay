@@ -1,0 +1,252 @@
+{
+ "run": "assessment/e2e/live/B12_p7_v46_c6",
+ "timestamp": "2026-11-14T14:38:28.834+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.6c",
+ "question_id": "n10",
+ "dataset": [
+  "e2e_B12",
+  "prose_and_table"
+ ],
+ "question": "How many attention heads does the base Transformer use, and what development BLEU does the base configuration reach in the variation table?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "The base configuration has h = 8 [AIAYN:T3:r01]. The base configuration has BLEU / (dev) = 25.8 [AIAYN:T3:r01].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "AIAYN:T3:r01"
+  ],
+  "request_id": "loop-B12_p7_v46_c6-n10"
+ },
+ "client_ms": 35639.7,
+ "evidence_ids": [
+  "AIAYN:6.2:c031",
+  "AIAYN:T3:r07",
+  "AIAYN:T3:r06",
+  "AIAYN:T3:r01",
+  "AIAYN:T3:r04",
+  "AIAYN:T3:r02",
+  "AIAYN:T3:r03"
+ ],
+ "gold_units_in_context": [
+  true,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  false
+ ],
+ "drafts": [
+  "The base Transformer uses eight attention heads [AIAYN:T3:r01]. In the variation table, the base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r01].",
+  "The base configuration has h = 8 [AIAYN:T3:r01]. The base configuration has BLEU / (dev) = 25.8 [AIAYN:T3:r01]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:T3:r01"
+   ],
+   "failures": [
+    [
+     "The base Transformer uses eight attention heads [AIAYN:T3:r01].",
+     "not supported by the cited passage (entailment 0.07 < 0.9)"
+    ],
+    [
+     "In the variation table, the base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r01].",
+     "not supported by the cited passage (entailment 0.86 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The base Transformer uses eight attention heads [AIAYN:T3:r01].",
+     "ok": false,
+     "entailment": 0.06890774950914129,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.07 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "In the variation table, the base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r01].",
+     "ok": false,
+     "entailment": 0.8638979037272712,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.86 < 0.9)"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "AIAYN:T3:r01"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "The base configuration has h = 8 [AIAYN:T3:r01].",
+     "ok": true,
+     "entailment": 0.9961716557041773,
+     "reasons": []
+    },
+    {
+     "sentence": "The base configuration has BLEU / (dev) = 25.8 [AIAYN:T3:r01].",
+     "ok": true,
+     "entailment": 0.3055530663275724,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-B12_p7_v46_c6-n10",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T14:38:28.834+00:00",
+  "question_id": "n10",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4461,
+  "tokens_out": 314,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1064.8,
+  "context_tokens": 1500,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "h"
+  ],
+  "retrieval_query": "How many attention heads does the base Transformer use, and what development BLEU does the base configuration reach in the variation table? [h]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:T3:r07",
+   "AIAYN:T3:r06",
+   "AIAYN:T3:r01",
+   "AIAYN:T3:r04",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r03"
+  ],
+  "verification_ms": 1496.9,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 30619.7,
+  "model_ttft_ms": 702.1,
+  "first_byte_ms": 496.9,
+  "generation_ms": 2411.8,
+  "reasoning_tokens": 212,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1976,
+    "reserved": 2746,
+    "governor_wait_ms": 12827.2,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.259469999,
+     "prompt_tokens": 1975,
+     "prompt_time": 0.112338449,
+     "completion_tokens": 91,
+     "completion_time": 0.190810842,
+     "total_tokens": 2066,
+     "total_time": 0.303149291,
+     "completion_tokens_details": {
+      "reasoning_tokens": 39
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1975,
+    "tokens_out": 91,
+    "reasoning_tokens": 39,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 496.9,
+    "model_ttft_ms": 702.1,
+    "total_ms": 704.7,
+    "max_gap_ms": 205.2,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "971",
+     "x-ratelimit-reset-requests": "41m45.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4725",
+     "x-ratelimit-reset-tokens": "24.562s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2485,
+    "reserved": 3255,
+    "governor_wait_ms": 17792.5,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.317961846,
+     "prompt_tokens": 2486,
+     "prompt_time": 0.679818532,
+     "completion_tokens": 223,
+     "completion_time": 0.552686561,
+     "total_tokens": 2709,
+     "total_time": 1.2325050929999999,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 173
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2486,
+    "tokens_out": 223,
+    "reasoning_tokens": 173,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 478.7,
+    "model_ttft_ms": 1620.8,
+    "total_ms": 1707.1,
+    "max_gap_ms": 1142.1,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "970",
+     "x-ratelimit-reset-requests": "43m12s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4520",
+     "x-ratelimit-reset-tokens": "26.1s"
+    }
+   }
+  ],
+  "first_token_ms": 35618.1,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 35618.8
+ }
+}

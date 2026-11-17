@@ -1,0 +1,247 @@
+{
+ "run": "assessment/e2e/live/E25_V48",
+ "timestamp": "2026-11-14T16:53:44.323+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "q11",
+ "dataset": [
+  "A_fixed_regression",
+  "B_failure_focused"
+ ],
+ "question": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "In Table 3, the Configuration (A) row has BLEU / (dev) = 24.9 [AIAYN:T3:r02]. The retrieved passages do not state the development BLEU for the base configuration.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "AIAYN:T3:r02"
+  ],
+  "request_id": "loop-E25_V48-q11"
+ },
+ "client_ms": 36569.1,
+ "evidence_ids": [
+  "AIAYN:6.2:c031",
+  "AIAYN:6.1:c029",
+  "AIAYN:3.2.2:c013",
+  "AIAYN:T3:r07",
+  "AIAYN:T3:r03",
+  "AIAYN:T3:r02",
+  "AIAYN:T3:r04"
+ ],
+ "gold_units_in_context": [
+  true,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  false
+ ],
+ "drafts": [
+  "The authors’ single‑head configuration (h = 1, d_k = 512, d_v = 512) achieved a development BLEU of 24.9 [AIAYN:T3:r02]. The retrieved passages do not state the development BLEU for the base configuration.",
+  "In Table 3, the Configuration (A) row has BLEU / (dev) = 24.9 [AIAYN:T3:r02]. The retrieved passages do not state the development BLEU for the base configuration."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:T3:r02"
+   ],
+   "failures": [
+    [
+     "The authors’ single‑head configuration (h = 1, d_k = 512, d_v = 512) achieved a development BLEU of 24.9 [AIAYN:T3:r02].",
+     "not supported by the cited passage (entailment 0.06 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors’ single‑head configuration (h = 1, d_k = 512, d_v = 512) achieved a development BLEU of 24.9 [AIAYN:T3:r02].",
+     "ok": false,
+     "entailment": 0.06436459344466142,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.06 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "The retrieved passages do not state the development BLEU for the base configuration.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "AIAYN:T3:r02"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "In Table 3, the Configuration (A) row has BLEU / (dev) = 24.9 [AIAYN:T3:r02].",
+     "ok": true,
+     "entailment": 0.6049611607371712,
+     "reasons": []
+    },
+    {
+     "sentence": "The retrieved passages do not state the development BLEU for the base configuration.",
+     "ok": true,
+     "entailment": null,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_V48-q11",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T16:53:44.323+00:00",
+  "question_id": "q11",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4487,
+  "tokens_out": 435,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 845.8,
+  "context_tokens": 1599,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "h = 1"
+  ],
+  "retrieval_query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get? [h = 1]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:6.1:c029",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:T3:r07",
+   "AIAYN:T3:r03",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r04"
+  ],
+  "verification_ms": 1042.5,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 32554.2,
+  "model_ttft_ms": 757.0,
+  "first_byte_ms": 406.0,
+  "generation_ms": 2079.9,
+  "reasoning_tokens": 308,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2079,
+    "reserved": 2849,
+    "governor_wait_ms": 14575.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.314240402,
+     "prompt_tokens": 2078,
+     "prompt_time": 0.095478495,
+     "completion_tokens": 183,
+     "completion_time": 0.394512574,
+     "total_tokens": 2261,
+     "total_time": 0.489991069,
+     "completion_tokens_details": {
+      "reasoning_tokens": 112
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 2078,
+    "tokens_out": 183,
+    "reasoning_tokens": 112,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 406.0,
+    "model_ttft_ms": 757.0,
+    "total_ms": 889.2,
+    "max_gap_ms": 350.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "948",
+     "x-ratelimit-reset-requests": "1h14m52.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5194",
+     "x-ratelimit-reset-tokens": "21.045s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2408,
+    "reserved": 3178,
+    "governor_wait_ms": 17978.8,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.315777651,
+     "prompt_tokens": 2409,
+     "prompt_time": 0.233688482,
+     "completion_tokens": 252,
+     "completion_time": 0.553183161,
+     "total_tokens": 2661,
+     "total_time": 0.786871643,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 196
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2409,
+    "tokens_out": 252,
+    "reasoning_tokens": 196,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 396.1,
+    "model_ttft_ms": 1083.1,
+    "total_ms": 1190.7,
+    "max_gap_ms": 687.0,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "947",
+     "x-ratelimit-reset-requests": "1h16m19.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "5182",
+     "x-ratelimit-reset-tokens": "21.135s"
+    }
+   }
+  ],
+  "first_token_ms": 36547.2,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 36547.8
+ }
+}

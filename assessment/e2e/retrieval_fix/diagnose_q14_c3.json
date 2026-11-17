@@ -1,0 +1,89 @@
+{
+ "original": {
+  "bm25_rank_in_AIAYN": 51,
+  "dense_rank_in_AIAYN": 36,
+  "fused_rank_in_AIAYN_slot(10)": null,
+  "reranked_rank_in_AIAYN_slot": null,
+  "in_final_context": false,
+  "final_context": [
+   "AIAYN:6.3:c032",
+   "HNET:3.2:c061",
+   "AIAYN:1:c003",
+   "HNET:3.1:c053",
+   "HNET:2.1.2:c019",
+   "HNET:F:c125",
+   "HNET:2.1.2:c020",
+   "HNET:abstract:c001"
+  ],
+  "hnet_in_context": 6
+ },
+ "+ byte-pair encoding, word-piece vocabulary": {
+  "bm25_rank_in_AIAYN": 1,
+  "dense_rank_in_AIAYN": 8,
+  "fused_rank_in_AIAYN_slot(10)": 1,
+  "reranked_rank_in_AIAYN_slot": 9,
+  "in_final_context": false,
+  "final_context": [
+   "AIAYN:T3:r09",
+   "HNET:3.2:c061",
+   "AIAYN:T3:r01",
+   "HNET:3.3:c069",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r07",
+   "AIAYN:6.3:c032"
+  ],
+  "hnet_in_context": 2
+ },
+ "+ byte-pair encoding, word-piece, tokens, vocabulary": {
+  "bm25_rank_in_AIAYN": 1,
+  "dense_rank_in_AIAYN": 5,
+  "fused_rank_in_AIAYN_slot(10)": 1,
+  "reranked_rank_in_AIAYN_slot": 9,
+  "in_final_context": false,
+  "final_context": [
+   "AIAYN:T3:r09",
+   "HNET:1:c011",
+   "AIAYN:T3:r02",
+   "HNET:3.2:c061",
+   "AIAYN:T3:r01",
+   "AIAYN:T3:r07",
+   "AIAYN:6.3:c032"
+  ],
+  "hnet_in_context": 2
+ },
+ "+ encoded using byte-pair encoding": {
+  "bm25_rank_in_AIAYN": 1,
+  "dense_rank_in_AIAYN": 21,
+  "fused_rank_in_AIAYN_slot(10)": 4,
+  "reranked_rank_in_AIAYN_slot": 9,
+  "in_final_context": false,
+  "final_context": [
+   "AIAYN:T3:r02",
+   "HNET:3.2:c061",
+   "AIAYN:T3:r09",
+   "HNET:3.2:c064",
+   "AIAYN:T3:r01",
+   "AIAYN:T3:r08",
+   "AIAYN:T3:r06",
+   "AIAYN:T3:r07"
+  ],
+  "hnet_in_context": 2
+ },
+ "+ tokenization (generic word)": {
+  "bm25_rank_in_AIAYN": 51,
+  "dense_rank_in_AIAYN": 26,
+  "fused_rank_in_AIAYN_slot(10)": null,
+  "reranked_rank_in_AIAYN_slot": null,
+  "in_final_context": false,
+  "final_context": [
+   "AIAYN:6.3:c032",
+   "HNET:1:c011",
+   "AIAYN:1:c003",
+   "HNET:3.2:c058",
+   "HNET:3.2:c061",
+   "HNET:abstract:c001",
+   "HNET:3:c041"
+  ],
+  "hnet_in_context": 5
+ }
+}

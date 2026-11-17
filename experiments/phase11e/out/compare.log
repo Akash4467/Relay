@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3453.60it/s]
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 3263.61it/s]
+c3 original           {'questions': 15, 'recall@5': 0.529, 'recall@8': 0.647, 'mrr': 0.597, 'coverage': 0.647, 'all_gold_questions': 8, 'multi_unit_all_gold': '5/12', 'budget_retention': 1.0}
+c3 original_nontable  {'questions': 12, 'recall@5': 0.593, 'recall@8': 0.593, 'mrr': 0.565, 'coverage': 0.593, 'all_gold_questions': 6, 'multi_unit_all_gold': '3/9', 'budget_retention': 1.0}
+c3 table              {'questions': 24, 'recall@5': 0.968, 'recall@8': 1.0, 'mrr': 0.767, 'coverage': 1.0, 'all_gold_questions': 3, 'multi_unit_all_gold': '0/5', 'budget_retention': 1.0}
+c3 new                {'questions': 10, 'recall@5': 0.917, 'recall@8': 0.917, 'mrr': 0.562, 'coverage': 0.917, 'all_gold_questions': 9, 'multi_unit_all_gold': '1/2', 'budget_retention': 1.0}
+c6 original           {'questions': 15, 'recall@5': 0.529, 'recall@8': 0.647, 'mrr': 0.596, 'coverage': 0.647, 'all_gold_questions': 8, 'multi_unit_all_gold': '5/12', 'budget_retention': 1.0}
+c6 original_nontable  {'questions': 12, 'recall@5': 0.593, 'recall@8': 0.593, 'mrr': 0.565, 'coverage': 0.593, 'all_gold_questions': 6, 'multi_unit_all_gold': '3/9', 'budget_retention': 1.0}
+c6 table              {'questions': 24, 'recall@5': 0.806, 'recall@8': 0.871, 'mrr': 0.667, 'coverage': 0.871, 'all_gold_questions': 22, 'multi_unit_all_gold': '4/5', 'budget_retention': 1.0}
+c6 new                {'questions': 10, 'recall@5': 0.917, 'recall@8': 0.917, 'mrr': 0.562, 'coverage': 0.917, 'all_gold_questions': 9, 'multi_unit_all_gold': '1/2', 'budget_retention': 1.0}
+complete gained: ['table:t01', 'table:t02', 'table:t03', 'table:t05', 'table:t06', 'table:t07', 'table:t11', 'table:t13', 'table:t14', 'table:t15', 'table:t17', 'table:t19', 'table:t21', 'table:t22', 'table:t23', 'table:t25', 'table:t28', 'table:t30', 'table:t32'] | lost: []
+latency: {'c3': {'median': 714.7, 'p95': 783.8}, 'c6': {'median': 706.6, 'p95': 776.0}} | tokens: {'c3': {'mean': 1489.1, 'max': 1599}, 'c6': {'mean': 1502.8, 'max': 1599}}
+q11 r01 in context: {'c3': False, 'c6': False} | r02: {'c3': True, 'c6': True}
+EXIT 0

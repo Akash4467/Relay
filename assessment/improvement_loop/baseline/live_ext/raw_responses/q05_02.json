@@ -1,0 +1,44 @@
+{
+ "question_id": "q05",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:21:58.765+00:00",
+  "t_send_ns": 178168765815600,
+  "status": 200,
+  "t_first_byte_ns": 178169109745600,
+  "t_first_content_ns": 178170388221600,
+  "t_last_ns": 178170809853300,
+  "max_gap_ms": 1278.4543,
+  "text": "The routing module computes cosine similarity between adjacent encoder outputs by projecting each output \\hat{x}_t to a query q_t = W_q \\hat{x}_t and a key k_t = W_k \\hat{x}_t, then forms a boundary probability p_t = ½ (1 − (q_t^⊤ k_{t‑1})/(‖q_t‖‖k_{t‑1}‖)) which lies in [0, 1] [HNET:2.2.1:c023]. It then creates a hard boundary indicator b_t by setting b_t = 1 if p_t ≥ 0.5 and 0 otherwise, with p_1 defined as 1.0 to start the sequence with a boundary [HNET:2.2.1:c023].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.245028968,
+   "prompt_tokens": 2114,
+   "prompt_time": 1.121319807,
+   "completion_tokens": 278,
+   "completion_time": 0.581616582,
+   "total_tokens": 2392,
+   "total_time": 1.702936389,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 69
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "965",
+   "x-ratelimit-reset-requests": "50m24s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "3336",
+   "x-ratelimit-reset-tokens": "34.98s"
+  },
+  "error": null,
+  "first_byte_ms": 343.9,
+  "first_content_ms": 1622.4,
+  "total_ms": 2044.0
+ }
+}

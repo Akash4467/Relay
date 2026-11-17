@@ -5,9 +5,10 @@ Read `docs/DESIGN.md` before changing anything. It is the single source of truth
 ## What this project is
 A citation-grounded Q&A pipeline over exactly three arXiv papers (AIAYN 1706.03762v7, MOSHI 2410.00037v1, HNET 2507.07955v2), built to behave well under bursts, rate limits and overload. It runs against Groq's free tier (real) and a Go stand-in (simulated). This is a graded assignment: every number in the write-up must be recomputable from `results/results.csv`.
 
-- Python app (`relay/`): FastAPI single worker + LangGraph state machine (11 nodes), local hybrid retrieval (BM25 + BGE-small/FAISS + RRF + optional cross-encoder), admission layer, rate governor, deterministic verification.
+- Python app (`relay/`), as built: FastAPI single worker; the request pipeline is plain Python functions (`relay/pipeline.py`: retrieve → structural sufficiency check → draft → verify → at most one redraft → answer or refuse); local hybrid retrieval (BM25 + BGE-small/FAISS + RRF + optional cross-encoder); admission layer (bounded FIFO queue, deadline-based rejection); rate governor; verification = deterministic checks + local NLI (`verification_policy_version: v4`, threshold 0.9, frozen).
+- Planned in DESIGN.md but **not built**: the LangGraph state machine (11 nodes), the gpt-oss-20b fallback, pressure levels L1–L3, the response cache, single-flight, Mode B stand-in fixtures. DESIGN.md's main sections describe the original plan; §20.3 records what was actually built and every deviation.
 - Go (`standin/`, `loadgen/`): OpenAI-compatible stand-in model service; open-loop Poisson load generator.
-- Models: `openai/gpt-oss-120b` (primary), `openai/gpt-oss-20b` (fallback), both `reasoning_effort: low`. Do NOT use `llama-3.3-70b-versatile` or `llama-3.1-8b-instant`: they were shut down for free tier on 2026-08-16.
+- Models: `openai/gpt-oss-120b`, `reasoning_effort: low`, is the only model the pipeline calls. `openai/gpt-oss-20b` is listed in `config/app.yaml`/`config/limits.yaml` as the planned fallback and was probed once by `scripts/check_models.py`, but no code path calls it (`fallback_generations` is always 0). Do NOT use `llama-3.3-70b-versatile` or `llama-3.1-8b-instant`: they were shut down for free tier on 2026-08-16.
 
 ## Hard rules
 1. **Never spend real Groq calls without asking me first.** The daily quota is shared by everything and is the scarcest resource (TPD ~200K, ≈ 57 answers/day). Tests, dev runs and load tests use the stand-in (`LLM_PROVIDER=standin`). Before any real run, state how many calls and tokens it will use.
@@ -16,14 +17,14 @@ A citation-grounded Q&A pipeline over exactly three arXiv papers (AIAYN 1706.037
 4. Never hand-edit numbers in tables or the write-up. Tables come from `scripts/make_tables.py`, which reads only `results/results.csv`.
 5. Never delete or overwrite anything in `results/raw/`. Raw results are a deliverable; new runs append new files.
 6. Exact paper versions only. Never fetch a paper URL without the version suffix.
-7. Only `draft` and `redraft` nodes call the LLM. No LLM calls for classification, retrieval checks or verification.
+7. Only the `draft` and `redraft` steps call the LLM. No LLM calls for classification, retrieval checks or verification.
 8. The production path verifies the complete answer before anything is sent (Option 1). Sentence-level streaming is an optional experiment only, behind a flag, default off.
 9. Every hosted call goes through the rate governor (reserve → call → settle). No direct calls that bypass it, including retries.
 10. Answer quality is measured only on real-service runs. The stand-in replies from fixtures matched by question_id; never random replay.
 11. Don't add Redis, Celery, databases, Docker orchestration or extra services.
 
 ## Testing after every unit (mandatory)
-A "unit" is one module or component (e.g. `latex_parse`, `chunker`, `rrf`, `buckets`, `model_decision`, a graph node, the stand-in's SSE writer). After finishing each unit, before starting the next one:
+A "unit" is one module or component (e.g. `latex_parse`, `chunker`, `rrf`, `buckets`, `model_decision`, a pipeline step, the stand-in's SSE writer). After finishing each unit, before starting the next one:
 
 1. **Unit tests**: write tests for the unit you just built in `tests/unit/test_<module>.py` (Go: `<pkg>_test.go` next to the code). Cover the normal case, edge cases and failure paths. Pure logic is tested with no network, no models loaded where avoidable (use small fakes), and fixed random seeds.
 2. **Integration tests**: write or extend tests in `tests/integration/` that run the new unit together with every unit already built (e.g. after `rerank`: question → BM25 + dense → RRF → rerank → evidence; after `verify`: retrieve → draft from a Mode B fixture → verify → refuse/return). Integration tests that need a model use the Go stand-in or a local fake server, **never real Groq**.
@@ -37,7 +38,7 @@ Tests that would hit real Groq do not exist in the suite; real calls happen only
 - Chunk IDs: `{PAPER}:{section_id}:c{NNN}` (tables `{PAPER}:T{n}:r{NN}`); papers `AIAYN`, `MOSHI`, `HNET`. Citations in answers: `[MOSHI:4.2:c017]`.
 - Bump `prompt_version`, `corpus_version`, `verification_policy_version` or `generation_config_version` in `config/app.yaml` whenever the corresponding thing changes; they are part of the cache key and recorded with fixtures.
 - All timing with monotonic nanoseconds (`time.perf_counter_ns()` / Go `time.Now()` monotonic); wall time only for `start_time`.
-- Every node is wrapped by the tracing wrapper; new code paths that wait (queue, governor, backoff) must emit a span.
+- Every request writes one trace record (`results/raw/traces/`, from `relay/main.py`); new code paths that wait (queue, governor, backoff) must be timed in it.
 - `results.csv` required columns are fixed by the brief (DESIGN.md §18.3). Add extra columns only at the end.
 - CPU-bound inference (embeddings, cross-encoder, NLI) runs in the bounded thread pool, never on the event loop.
 - Config values live in `config/*.yaml`, not in code. Initial values are placeholders to be recalibrated from measurements.
@@ -50,22 +51,26 @@ uv sync                     # creates .venv (Python 3.12) and installs deps + de
 # ingestion (offline)
 uv run python -m relay.retrieval.fetch_papers
 uv run python -m relay.retrieval.latex_parse
+uv run python -m relay.retrieval.pdf_validate
 uv run python -m relay.retrieval.chunker
 uv run python -m relay.retrieval.index_build
 # app
-uv run uvicorn relay.main:app --port 8000 --workers 1
+LLM_PROVIDER=standin GROQ_API_KEY=dummy GROQ_BASE_URL=http://127.0.0.1:8001/v1 \n  uv run uvicorn relay.main:app --host 127.0.0.1 --port 8000 --workers 1   # real Groq also needs ALLOW_REAL=1
 # stand-in
-cd standin && go run ./cmd/standin -config ../config/standin.yaml -port 8001
+cd standin && go run ./cmd/standin -config ../config/standin.json -port 8001 -root ..   # fixtures: uv run python scripts/record_fixtures.py
 # load test
-cd loadgen && go run ./cmd/loadgen -scenario ../config/scenarios/burst.yaml -target http://localhost:8000/ask
+cd loadgen && go run ./cmd/loadgen -scenario ../config/scenarios/burst.json -root ..
+bash scripts/run_scenarios.sh steady burst overload rpm_halved daily_exhausted retrieval_A retrieval_B retrieval_C
 # results
-uv run python scripts/make_results_csv.py && uv run python scripts/make_tables.py
+uv run python scripts/make_results_csv.py && uv run python scripts/make_retrieval_csv.py && uv run python scripts/make_tables.py
+# report
+uv run python scripts/build_writeup.py && uv run python scripts/render_writeup.py
 # tests (run after every unit)
 uv run pytest -q tests/unit tests/integration && (cd standin && go test ./...) && (cd loadgen && go test ./...)
 ```
 
 ## Current phase
-Follow the build order in DESIGN.md §20.1. Phase 2 (one request end to end, with a caught unsupported claim and a correct refusal) must work before any admission, governor-tuning or simulator work.
+Submission preparation. The build order in DESIGN.md §20.1 is done as far as it went (see §20.3); verifier v4 is frozen; load-test results (`results/`) were measured with verifier v2 and are never regenerated. Report: edit `writeup/relay_writeup.template.md`, then `uv run python scripts/build_writeup.py` and `uv run python scripts/render_writeup.py` (2-page check).
 
 ## Open decisions
 See DESIGN.md §22. Ask me rather than choosing silently.

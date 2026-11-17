@@ -1,0 +1,1026 @@
+[
+ {
+  "corpus": "c3",
+  "scenario": "q02_faithful",
+  "question_id": "q02",
+  "expansion": [
+   "h",
+   "d_k",
+   "d_v"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:3.2.2:c014",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3.2.1:c011",
+   "HNET:B:c107",
+   "AIAYN:AttentionVisualizations:c037"
+  ],
+  "drafts": [
+   "In this work we employ h=8 parallel attention layers, or heads [AIAYN:3.2.2:c014]. For each of these we use d_k=d_v=d_model/h=64 [AIAYN:3.2.2:c014].",
+   "In this work we employ h=8 parallel attention layers, or heads [AIAYN:3.2.2:c014]. For each of these we use d_k=d_v=d_model/h=64 [AIAYN:3.2.2:c014]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true
+  },
+  "passed": true,
+  "expected": null
+ },
+ {
+  "corpus": "c3",
+  "scenario": "q09_units",
+  "question_id": "q09",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:1:c005",
+   "MOSHI:abstract:c002",
+   "MOSHI:5.3:c083",
+   "MOSHI:7:c125",
+   "MOSHI:1:c004",
+   "MOSHI:abstract:c001",
+   "MOSHI:5.4:c088"
+  ],
+  "drafts": [
+   "Moshi's theoretical latency of 160 ms is lower than the 230 ms average in natural conversations measured over 10 languages [MOSHI:1:c005]."
+  ],
+  "llm_calls": 1,
+  "outcome": "normal",
+  "reason": null,
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "answer_is_a_verified_draft": true
+  },
+  "passed": true,
+  "expected": null
+ },
+ {
+  "corpus": "c3",
+  "scenario": "q11_partial",
+  "question_id": "q11",
+  "expansion": [
+   "h = 1"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:6.1:c029",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:T3:r07",
+   "AIAYN:T3:r03",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r04"
+  ],
+  "drafts": [
+   "The variant with a single attention head (h = 1) reaches a development BLEU of 24.9 [AIAYN:T3:r02]. The retrieved passages do not state the development BLEU of the base configuration."
+  ],
+  "llm_calls": 1,
+  "outcome": "normal",
+  "reason": null,
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "answer_is_a_verified_draft": true
+  },
+  "passed": true,
+  "expected": null
+ },
+ {
+  "corpus": "c3",
+  "scenario": "q11_unretrieved_base",
+  "question_id": "q11",
+  "expansion": [
+   "h = 1"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:6.1:c029",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:T3:r07",
+   "AIAYN:T3:r03",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r04"
+  ],
+  "drafts": [
+   "The base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r01].",
+   "The base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r01]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused_unless_r01_retrieved"
+ },
+ {
+  "corpus": "c3",
+  "scenario": "q12_both_rows",
+  "question_id": "q12",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:T8:r02",
+   "MOSHI:5.5:c090",
+   "MOSHI:5.4:c089",
+   "MOSHI:5.5:c091",
+   "MOSHI:5.5:c092",
+   "MOSHI:T8:r01",
+   "MOSHI:4.3:c061",
+   "MOSHI:1:c008"
+  ],
+  "drafts": [
+   "Moshi reaches 26.6 on Web Questions, 62.3 on LlaMA Questions and 22.8 on Audio Trivia QA [MOSHI:T8:r01]. Without Inner Monologue, Moshi reaches 9.2, 21.0 and 7.3 [MOSHI:T8:r02]."
+  ],
+  "llm_calls": 1,
+  "outcome": "normal",
+  "reason": null,
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": false,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "answer_is_a_verified_draft": true
+  },
+  "passed": false,
+  "expected": null
+ },
+ {
+  "corpus": "c3",
+  "scenario": "t10_marks",
+  "question_id": "t10",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:T4:r04",
+   "MOSHI:T4:r03",
+   "MOSHI:E:c147",
+   "MOSHI:5.2:c076",
+   "MOSHI:6.4:c117",
+   "MOSHI:5.8:c103",
+   "MOSHI:5.8:c100"
+  ],
+  "drafts": [
+   "In the audio quality evaluation table, the causal column of Mimi, adv. loss only is ✓ [MOSHI:T4:r03].",
+   "In the audio quality evaluation table, the causal column of Mimi, adv. loss only is ✓ [MOSHI:T4:r03]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true
+  },
+  "passed": true,
+  "expected": null
+ },
+ {
+  "corpus": "c3",
+  "scenario": "q18_refusal",
+  "question_id": "q18",
+  "expansion": [],
+  "evidence_ids": [
+   "AIAYN:1:c003",
+   "AIAYN:6.1:c029",
+   "AIAYN:6.1:c030",
+   "AIAYN:5.2:c026",
+   "AIAYN:6.3:c032",
+   "AIAYN:6.3:c033",
+   "MOSHI:3.4.1:c035",
+   "HNET:2.4:c040"
+  ],
+  "drafts": [
+   "NOT_IN_PAPERS"
+  ],
+  "llm_calls": 1,
+  "outcome": "refused",
+  "reason": "model: not in papers",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c3",
+  "scenario": "q20_refusal",
+  "question_id": "q20",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:5.8:c103",
+   "AIAYN:1:c003",
+   "AIAYN:T4:r01",
+   "HNET:3.3:c070",
+   "AIAYN:6.1:c029",
+   "HNET:E.3:c115",
+   "AIAYN:T4:r02",
+   "AIAYN:6.3:c033"
+  ],
+  "drafts": [
+   "NOT_IN_PAPERS"
+  ],
+  "llm_calls": 1,
+  "outcome": "refused",
+  "reason": "model: not in papers",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c3",
+  "scenario": "q30_refusal",
+  "question_id": "q30",
+  "expansion": [],
+  "evidence_ids": [
+   "HNET:3:c047",
+   "HNET:2.1.1:c015",
+   "HNET:2.2.2:c025",
+   "HNET:1:c012",
+   "HNET:A.1.4:c098",
+   "HNET:A.1.2:c092",
+   "HNET:A.1.3:c094"
+  ],
+  "drafts": [
+   "NOT_IN_PAPERS"
+  ],
+  "llm_calls": 1,
+  "outcome": "refused",
+  "reason": "model: not in papers",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c3",
+  "scenario": "q20_fabricated",
+  "question_id": "q20",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:5.8:c103",
+   "AIAYN:1:c003",
+   "AIAYN:T4:r01",
+   "HNET:3.3:c070",
+   "AIAYN:6.1:c029",
+   "HNET:E.3:c115",
+   "AIAYN:T4:r02",
+   "AIAYN:6.3:c033"
+  ],
+  "drafts": [
+   "The Transformer scores 86.4 on MMLU, below GPT-4 [MOSHI:5.8:c103].",
+   "The Transformer scores 86.4 on MMLU, below GPT-4 [MOSHI:5.8:c103]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c3",
+  "scenario": "q30_fabricated",
+  "question_id": "q30",
+  "expansion": [],
+  "evidence_ids": [
+   "HNET:3:c047",
+   "HNET:2.1.1:c015",
+   "HNET:2.2.2:c025",
+   "HNET:1:c012",
+   "HNET:A.1.4:c098",
+   "HNET:A.1.2:c092",
+   "HNET:A.1.3:c094"
+  ],
+  "drafts": [
+   "Moshi's dynamic chunking layer uses a chunk size of 4 [HNET:3:c047].",
+   "Moshi's dynamic chunking layer uses a chunk size of 4 [HNET:3:c047]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c3",
+  "scenario": "q12_false_absence",
+  "question_id": "q12",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:T8:r02",
+   "MOSHI:5.5:c090",
+   "MOSHI:5.4:c089",
+   "MOSHI:5.5:c091",
+   "MOSHI:5.5:c092",
+   "MOSHI:T8:r01",
+   "MOSHI:4.3:c061",
+   "MOSHI:1:c008"
+  ],
+  "drafts": [
+   "Moshi without Inner Monologue gets 9.2 on Web Questions [MOSHI:T8:r02]. The retrieved passages do not state the spoken question answering accuracy of Moshi with Inner Monologue.",
+   "Moshi without Inner Monologue gets 9.2 on Web Questions [MOSHI:T8:r02]. The retrieved passages do not state the spoken question answering accuracy of Moshi with Inner Monologue."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": false,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": false,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c3",
+  "scenario": "invalid_citation",
+  "question_id": "q02",
+  "expansion": [
+   "h",
+   "d_k",
+   "d_v"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:3.2.2:c014",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3.2.1:c011",
+   "HNET:B:c107",
+   "AIAYN:AttentionVisualizations:c037"
+  ],
+  "drafts": [
+   "The base Transformer uses 8 attention heads [AIAYN:9.9:c999].",
+   "The base Transformer uses 8 attention heads [AIAYN:9.9:c999]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c3",
+  "scenario": "unretrieved_citation",
+  "question_id": "q02",
+  "expansion": [
+   "h",
+   "d_k",
+   "d_v"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:3.2.2:c014",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3.2.1:c011",
+   "HNET:B:c107",
+   "AIAYN:AttentionVisualizations:c037"
+  ],
+  "drafts": [
+   "The base Transformer uses 8 attention heads [HNET:1:c001].",
+   "The base Transformer uses 8 attention heads [HNET:1:c001]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c3",
+  "scenario": "redraft_then_faithful",
+  "question_id": "q02",
+  "expansion": [
+   "h",
+   "d_k",
+   "d_v"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:3.2.2:c014",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3.2.1:c011",
+   "HNET:B:c107",
+   "AIAYN:AttentionVisualizations:c037"
+  ],
+  "drafts": [
+   "The base Transformer uses 8 attention heads [AIAYN:9.9:c999].",
+   "In this work we employ h=8 parallel attention layers, or heads [AIAYN:3.2.2:c014]."
+  ],
+  "llm_calls": 2,
+  "outcome": "normal",
+  "reason": null,
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "answer_is_a_verified_draft": true
+  },
+  "passed": true,
+  "expected": null
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q02_faithful",
+  "question_id": "q02",
+  "expansion": [
+   "h",
+   "d_k",
+   "d_v"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:3.2.2:c014",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3.2.1:c011",
+   "HNET:B:c107",
+   "AIAYN:AttentionVisualizations:c037"
+  ],
+  "drafts": [
+   "In this work we employ h=8 parallel attention layers, or heads [AIAYN:3.2.2:c014]. For each of these we use d_k=d_v=d_model/h=64 [AIAYN:3.2.2:c014].",
+   "In this work we employ h=8 parallel attention layers, or heads [AIAYN:3.2.2:c014]. For each of these we use d_k=d_v=d_model/h=64 [AIAYN:3.2.2:c014]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true
+  },
+  "passed": true,
+  "expected": null
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q09_units",
+  "question_id": "q09",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:1:c005",
+   "MOSHI:abstract:c002",
+   "MOSHI:5.3:c083",
+   "MOSHI:7:c125",
+   "MOSHI:1:c004",
+   "MOSHI:abstract:c001",
+   "MOSHI:5.4:c088"
+  ],
+  "drafts": [
+   "Moshi's theoretical latency of 160 ms is lower than the 230 ms average in natural conversations measured over 10 languages [MOSHI:1:c005]."
+  ],
+  "llm_calls": 1,
+  "outcome": "normal",
+  "reason": null,
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "answer_is_a_verified_draft": true
+  },
+  "passed": true,
+  "expected": null
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q11_partial",
+  "question_id": "q11",
+  "expansion": [
+   "h = 1"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:6.1:c029",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:T3:r07",
+   "AIAYN:T3:r03",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r04"
+  ],
+  "drafts": [
+   "The variant with a single attention head (h = 1) reaches a development BLEU of 24.9 [AIAYN:T3:r02]. The retrieved passages do not state the development BLEU of the base configuration."
+  ],
+  "llm_calls": 1,
+  "outcome": "normal",
+  "reason": null,
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "answer_is_a_verified_draft": true
+  },
+  "passed": true,
+  "expected": null
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q11_unretrieved_base",
+  "question_id": "q11",
+  "expansion": [
+   "h = 1"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:6.1:c029",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:T3:r07",
+   "AIAYN:T3:r03",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r04"
+  ],
+  "drafts": [
+   "The base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r01].",
+   "The base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r01]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused_unless_r01_retrieved"
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q12_both_rows",
+  "question_id": "q12",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:T8:r02",
+   "MOSHI:5.5:c090",
+   "MOSHI:5.4:c089",
+   "MOSHI:5.5:c091",
+   "MOSHI:5.5:c092",
+   "MOSHI:T8:r01",
+   "MOSHI:4.3:c061",
+   "MOSHI:1:c008"
+  ],
+  "drafts": [
+   "Moshi reaches 26.6 on Web Questions, 62.3 on LlaMA Questions and 22.8 on Audio Trivia QA [MOSHI:T8:r01]. Without Inner Monologue, Moshi reaches 9.2, 21.0 and 7.3 [MOSHI:T8:r02]."
+  ],
+  "llm_calls": 1,
+  "outcome": "normal",
+  "reason": null,
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": false,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "answer_is_a_verified_draft": true
+  },
+  "passed": false,
+  "expected": null
+ },
+ {
+  "corpus": "c6",
+  "scenario": "t10_marks",
+  "question_id": "t10",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:E:c147",
+   "MOSHI:5.2:c076",
+   "MOSHI:6.4:c117",
+   "MOSHI:5.8:c103",
+   "MOSHI:6.1:c109",
+   "MOSHI:5.8:c107",
+   "MOSHI:5.4:c088",
+   "MOSHI:T18:r16"
+  ],
+  "drafts": [
+   "NOT_IN_PAPERS"
+  ],
+  "llm_calls": 1,
+  "outcome": "refused",
+  "reason": "model: not in papers",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": false,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true
+  },
+  "passed": false,
+  "expected": null
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q18_refusal",
+  "question_id": "q18",
+  "expansion": [],
+  "evidence_ids": [
+   "AIAYN:1:c003",
+   "AIAYN:6.1:c029",
+   "AIAYN:6.1:c030",
+   "AIAYN:5.2:c026",
+   "AIAYN:6.3:c032",
+   "AIAYN:6.3:c033",
+   "MOSHI:3.4.1:c035",
+   "HNET:2.4:c040"
+  ],
+  "drafts": [
+   "NOT_IN_PAPERS"
+  ],
+  "llm_calls": 1,
+  "outcome": "refused",
+  "reason": "model: not in papers",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q20_refusal",
+  "question_id": "q20",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:5.8:c103",
+   "AIAYN:1:c003",
+   "AIAYN:T4:r01",
+   "HNET:3.3:c070",
+   "AIAYN:6.1:c029",
+   "HNET:E.3:c115",
+   "AIAYN:T4:r02",
+   "AIAYN:6.3:c033"
+  ],
+  "drafts": [
+   "NOT_IN_PAPERS"
+  ],
+  "llm_calls": 1,
+  "outcome": "refused",
+  "reason": "model: not in papers",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q30_refusal",
+  "question_id": "q30",
+  "expansion": [],
+  "evidence_ids": [
+   "HNET:3:c047",
+   "HNET:2.1.1:c015",
+   "HNET:2.2.2:c025",
+   "HNET:1:c012",
+   "HNET:A.1.4:c098",
+   "HNET:A.1.2:c092",
+   "HNET:A.1.3:c094"
+  ],
+  "drafts": [
+   "NOT_IN_PAPERS"
+  ],
+  "llm_calls": 1,
+  "outcome": "refused",
+  "reason": "model: not in papers",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q20_fabricated",
+  "question_id": "q20",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:5.8:c103",
+   "AIAYN:1:c003",
+   "AIAYN:T4:r01",
+   "HNET:3.3:c070",
+   "AIAYN:6.1:c029",
+   "HNET:E.3:c115",
+   "AIAYN:T4:r02",
+   "AIAYN:6.3:c033"
+  ],
+  "drafts": [
+   "The Transformer scores 86.4 on MMLU, below GPT-4 [MOSHI:5.8:c103].",
+   "The Transformer scores 86.4 on MMLU, below GPT-4 [MOSHI:5.8:c103]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q30_fabricated",
+  "question_id": "q30",
+  "expansion": [],
+  "evidence_ids": [
+   "HNET:3:c047",
+   "HNET:2.1.1:c015",
+   "HNET:2.2.2:c025",
+   "HNET:1:c012",
+   "HNET:A.1.4:c098",
+   "HNET:A.1.2:c092",
+   "HNET:A.1.3:c094"
+  ],
+  "drafts": [
+   "Moshi's dynamic chunking layer uses a chunk size of 4 [HNET:3:c047].",
+   "Moshi's dynamic chunking layer uses a chunk size of 4 [HNET:3:c047]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c6",
+  "scenario": "q12_false_absence",
+  "question_id": "q12",
+  "expansion": [],
+  "evidence_ids": [
+   "MOSHI:T8:r02",
+   "MOSHI:5.5:c090",
+   "MOSHI:5.4:c089",
+   "MOSHI:5.5:c091",
+   "MOSHI:5.5:c092",
+   "MOSHI:T8:r01",
+   "MOSHI:4.3:c061",
+   "MOSHI:1:c008"
+  ],
+  "drafts": [
+   "Moshi without Inner Monologue gets 9.2 on Web Questions [MOSHI:T8:r02]. The retrieved passages do not state the spoken question answering accuracy of Moshi with Inner Monologue.",
+   "Moshi without Inner Monologue gets 9.2 on Web Questions [MOSHI:T8:r02]. The retrieved passages do not state the spoken question answering accuracy of Moshi with Inner Monologue."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": false,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": false,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c6",
+  "scenario": "invalid_citation",
+  "question_id": "q02",
+  "expansion": [
+   "h",
+   "d_k",
+   "d_v"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:3.2.2:c014",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3.2.1:c011",
+   "HNET:B:c107",
+   "AIAYN:AttentionVisualizations:c037"
+  ],
+  "drafts": [
+   "The base Transformer uses 8 attention heads [AIAYN:9.9:c999].",
+   "The base Transformer uses 8 attention heads [AIAYN:9.9:c999]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c6",
+  "scenario": "unretrieved_citation",
+  "question_id": "q02",
+  "expansion": [
+   "h",
+   "d_k",
+   "d_v"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:3.2.2:c014",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3.2.1:c011",
+   "HNET:B:c107",
+   "AIAYN:AttentionVisualizations:c037"
+  ],
+  "drafts": [
+   "The base Transformer uses 8 attention heads [HNET:1:c001].",
+   "The base Transformer uses 8 attention heads [HNET:1:c001]."
+  ],
+  "llm_calls": 2,
+  "outcome": "refused",
+  "reason": "verification failed after redraft",
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "outcome": true
+  },
+  "passed": true,
+  "expected": "refused"
+ },
+ {
+  "corpus": "c6",
+  "scenario": "redraft_then_faithful",
+  "question_id": "q02",
+  "expansion": [
+   "h",
+   "d_k",
+   "d_v"
+  ],
+  "evidence_ids": [
+   "AIAYN:6.2:c031",
+   "AIAYN:3.2.2:c014",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3.2.1:c011",
+   "HNET:B:c107",
+   "AIAYN:AttentionVisualizations:c037"
+  ],
+  "drafts": [
+   "The base Transformer uses 8 attention heads [AIAYN:9.9:c999].",
+   "In this work we employ h=8 parallel attention layers, or heads [AIAYN:3.2.2:c014]."
+  ],
+  "llm_calls": 2,
+  "outcome": "normal",
+  "reason": null,
+  "failures": null,
+  "checks": {
+   "prompt_has_original_question": true,
+   "prompt_has_all_evidence_ids": true,
+   "each_caption_at_most_once": true,
+   "verifier_got_the_retrieved_chunks": true,
+   "verifier_chunks_complete_and_unmodified": true,
+   "answer_is_a_verified_draft": true
+  },
+  "passed": true,
+  "expected": null
+ }
+]

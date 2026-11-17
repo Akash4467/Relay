@@ -1,0 +1,46 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "corpus_version": "c3",
+ "question_id": "q02",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T07:57:04.514+00:00",
+  "t_send_ns": 176674515359900,
+  "status": 200,
+  "t_first_byte_ns": 176674783806300,
+  "t_first_content_ns": 176675821363400,
+  "t_last_ns": 176675892164800,
+  "max_gap_ms": 1037.5357,
+  "text": "The base Transformer employs eight parallel attention heads, and each head receives key and value dimensions of 64 [AIAYN:3.2.2:c014].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.158377302,
+   "prompt_tokens": 1839,
+   "prompt_time": 0.897539253,
+   "completion_tokens": 99,
+   "completion_time": 0.216747766,
+   "total_tokens": 1938,
+   "total_time": 1.114287019,
+   "prompt_tokens_details": {
+    "cached_tokens": 1792
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 56
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "991",
+   "x-ratelimit-reset-requests": "12m57.599s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "2830",
+   "x-ratelimit-reset-tokens": "38.775s"
+  },
+  "error": null,
+  "first_byte_ms": 268.4,
+  "first_content_ms": 1306.0,
+  "total_ms": 1376.8
+ }
+}

@@ -1,0 +1,42 @@
+# Phase 11C: PROPOSED change to select corpus c6 in production. NOT APPLIED. Apply only after separate approval.
+#
+# Step 0 (data, no code): copy the built corpus, unchanged, next to c4 (c3 in data/processed + data/index is never
+# overwritten, so switching back is one config line):
+#     cp -r experiments/phase10/corpus/c6 data/corpus/c6
+#     then verify every file against data/corpus/c6/manifest.json "outputs_sha256".
+#
+# Steps 1-3 (code + config), unified diff:
+
+--- a/config/app.yaml
++++ b/config/app.yaml
+@@
+-corpus_version: c3                     # bump when chunks are rebuilt; c2 (2026-11-13): structured table rows; c3: specialrule fix
++corpus_version: c6                     # c6 (phase 11C): extraction e4 (marks, phantom fix, siunitx units), c4 chunking; c3: specialrule fix
++corpus:
++  processed_dir: data/corpus/c6/processed
++  index_dir: data/corpus/c6/index
++  manifest: data/corpus/c6/manifest.json
+
+--- a/relay/main.py
++++ b/relay/main.py
+@@ class State:
+-        self.indexes = {size: Index(size, embedder) for size in {s.piece_tokens for s in self.settings.values()}}
++        corpus = self.cfg.get("corpus") or {}
++        dirs = (Path(corpus["index_dir"]), Path(corpus["processed_dir"])) if corpus else ()
++        self.indexes = {size: Index(size, embedder, *dirs) for size in {s.piece_tokens for s in self.settings.values()}}
+
+--- a/relay/eval/answer_quality.py
++++ b/relay/eval/answer_quality.py
+@@
+-    index = Index(setting.piece_tokens, load_model())
++    corpus = cfg.get("corpus") or {}
++    index = Index(setting.piece_tokens, load_model(),
++                  *((Path(corpus["index_dir"]), Path(corpus["processed_dir"])) if corpus else ()))
+
+# (relay/live_validation.py: the same two lines as answer_quality.py)
+#
+# Step 4 (checks before activation): a startup check that every file under corpus.processed_dir/index_dir matches the
+# manifest's outputs_sha256; the stand-in fixtures are keyed by question_id and record prompt_version/corpus_version,
+# so fixtures recorded under c3 must be re-recorded (stand-in only, no Groq) or marked as c3; the trace already records
+# evidence_ids, so c3 and c6 citations stay distinguishable (some TABLE chunk IDs name different rows in c3 and c6:
+# MOSHI T3, T13, T16, T17 and HNET T6 are split into more chunks in c6).

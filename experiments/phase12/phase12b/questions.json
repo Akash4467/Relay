@@ -1,0 +1,441 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "fixed_at": "2026-11-14T07:40:27.863+00:00",
+ "selection_rule": {
+  "ordinary_answerable": "original set, answerable, category direct/multi_section/cross_paper, every gold unit retrieved on BOTH corpora in Phase 11F: first two direct (q01, q02), first multi_section (q07), first cross_paper (q15)",
+  "table_heavy_c6_more_complete": "Phase 7 table set, answerable, complete_evidence == 'gained' (complete gold rows in context on c6, not on c3) in experiments/phase11f/per_question_comparison.json: the first such question of each of the first three distinct tables (HNET T6 t01, MOSHI T3 t05, MOSHI T5 t13)",
+  "targeted": "q11, t10, t29 as required by the Phase 12 brief",
+  "unanswerable": "original set refusal questions on two different papers not run live in Phase 10: q16 (AIAYN), q27 (HNET)"
+ },
+ "n": 12,
+ "questions": [
+  {
+   "question_id": "q01",
+   "group": "ordinary_answerable",
+   "dataset": "original",
+   "question": "According to the Transformer paper, what property of recurrent models prevents parallelization within training examples, and why does it matter more for long sequences?",
+   "answerable": true,
+   "expected_answer": "Recurrent models compute each hidden state h_t from the previous hidden state h_(t-1) and the input at position t; this inherently sequential computation precludes parallelization within training examples, which becomes critical at longer sequence lengths because memory constraints limit batching across examples.",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "AIAYN §1",
+     "page": 2,
+     "quote": "This inherently sequential nature precludes parallelization within training examples"
+    }
+   ],
+   "paper": null,
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, gold quotes located by the assistant; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": "same",
+    "c3_found": 1,
+    "c6_found": 1,
+    "units": 1
+   },
+   "corpus_order": [
+    "c3",
+    "c6"
+   ]
+  },
+  {
+   "question_id": "q02",
+   "group": "ordinary_answerable",
+   "dataset": "original",
+   "question": "How many attention heads does the base Transformer use, and what key and value dimension does each head get?",
+   "answerable": true,
+   "expected_answer": "h = 8 heads, each with d_k = d_v = d_model/h = 64; because each head is smaller, the total cost is similar to single-head attention with full dimensionality.",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "AIAYN §3.2.2",
+     "page": 5,
+     "quote": "In this work we employ h=8 parallel attention layers, or heads. For each of these we use d_k=d_v=d_model/h=64."
+    }
+   ],
+   "paper": null,
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, gold quotes located by the assistant; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": "same",
+    "c3_found": 1,
+    "c6_found": 1,
+    "units": 1
+   },
+   "corpus_order": [
+    "c6",
+    "c3"
+   ]
+  },
+  {
+   "question_id": "q07",
+   "group": "ordinary_answerable",
+   "dataset": "original",
+   "question": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from?",
+   "answerable": true,
+   "expected_answer": "Both are stacks of N = 6 identical layers. The decoder adds a third sub-layer that performs multi-head attention over the encoder output, and its self-attention is masked so a position cannot attend to subsequent positions. In encoder-decoder attention the queries come from the previous decoder layer and the keys and values come from the encoder output.",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "AIAYN §3.1",
+     "page": 3,
+     "quote": "the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack"
+    },
+    {
+     "section": "AIAYN §3.1",
+     "page": 3,
+     "quote": "to prevent positions from attending to subsequent positions"
+    },
+    {
+     "section": "AIAYN §3.2.3",
+     "page": 5,
+     "quote": "the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder"
+    }
+   ],
+   "paper": null,
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, gold quotes located by the assistant; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": "same",
+    "c3_found": 3,
+    "c6_found": 3,
+    "units": 3
+   },
+   "corpus_order": [
+    "c3",
+    "c6"
+   ]
+  },
+  {
+   "question_id": "q15",
+   "group": "ordinary_answerable",
+   "dataset": "original",
+   "question": "Which NVIDIA GPUs were used to train the original Transformer and Moshi?",
+   "answerable": true,
+   "expected_answer": "The Transformer was trained on one machine with 8 NVIDIA P100 GPUs (12 hours for base, 3.5 days for big). All Moshi models were trained on H100 GPUs using FSDP and activation checkpointing; the Moshi paper does not give a GPU count.",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "AIAYN §5.2",
+     "page": 7,
+     "quote": "We trained our models on one machine with 8 NVIDIA P100 GPUs."
+    },
+    {
+     "section": "MOSHI §4.4",
+     "page": 20,
+     "quote": "All models are trained on H100 GPUs, using FSDP and activation checkpointing."
+    }
+   ],
+   "paper": null,
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, gold quotes located by the assistant; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": "same",
+    "c3_found": 2,
+    "c6_found": 2,
+    "units": 2
+   },
+   "corpus_order": [
+    "c6",
+    "c3"
+   ]
+  },
+  {
+   "question_id": "t01",
+   "group": "table_heavy_c6_more_complete",
+   "dataset": "table",
+   "question": "In the H-Net paper's table comparing related architectures, is the Autoregressive column marked with a check mark (✓) or a cross (✗) for ByT5?",
+   "answerable": true,
+   "expected_answer": "A cross (✗).",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Example Architectures = ByT5"
+      ],
+      "cells": [
+       "Autoregressive = ✗"
+      ]
+     }
+    ],
+    "columns": [
+     "Autoregressive"
+    ]
+   },
+   "evidence": null,
+   "paper": "HNET",
+   "table_id": "T6",
+   "label_provenance": "eval/phase7/table_question_set.json: PROVISIONAL assistant-authored labels; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": "gained",
+    "c3_found": 1,
+    "c6_found": 1,
+    "units": 1
+   },
+   "corpus_order": [
+    "c3",
+    "c6"
+   ]
+  },
+  {
+   "question_id": "t05",
+   "group": "table_heavy_c6_more_complete",
+   "dataset": "table",
+   "question": "In the Moshi paper's Mimi codec ablation table that reports ABX, VisQOL, MOSNet and MUSHRA, what MUSHRA score does the configuration with a check mark in all five component columns obtain?",
+   "answerable": true,
+   "expected_answer": "64.0 ± 1.7.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "MUSHRA (↑) = 64.0±1.7"
+      ],
+      "cells": [
+       "Quantization / Rate = ✓",
+       "Transformer / in encoder = ✓",
+       "Transformer / in decoder = ✓",
+       "WavLM / distillation = ✓",
+       "Split / quantizer = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "MUSHRA (↑)"
+    ]
+   },
+   "evidence": null,
+   "paper": "MOSHI",
+   "table_id": "T3",
+   "label_provenance": "eval/phase7/table_question_set.json: PROVISIONAL assistant-authored labels; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": "gained",
+    "c3_found": 1,
+    "c6_found": 1,
+    "units": 1
+   },
+   "corpus_order": [
+    "c6",
+    "c3"
+   ]
+  },
+  {
+   "question_id": "t13",
+   "group": "table_heavy_c6_more_complete",
+   "dataset": "table",
+   "question": "In the Moshi RQ-Transformer ablation, with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2], what perplexity does the row with a check mark under RQ-Transformer report?",
+   "answerable": true,
+   "expected_answer": "36.8.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "[0, 2, 2, 2, 2, 2, 2, 2]",
+       "Perplexity = 136.8"
+      ],
+      "cells": [
+       "RQ-Transformer = ✓"
+      ],
+      "paper_cells": [
+       "Perplexity = 36.8"
+      ]
+     }
+    ],
+    "columns": [
+     "Perplexity"
+    ]
+   },
+   "evidence": null,
+   "paper": "MOSHI",
+   "table_id": "T5",
+   "label_provenance": "eval/phase7/table_question_set.json: PROVISIONAL assistant-authored labels; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": "gained",
+    "c3_found": 1,
+    "c6_found": 1,
+    "units": 1
+   },
+   "corpus_order": [
+    "c3",
+    "c6"
+   ]
+  },
+  {
+   "question_id": "q11",
+   "group": "targeted",
+   "dataset": "original",
+   "question": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+   "answerable": true,
+   "expected_answer": "With h = 1 (d_k = d_v = 512) dev BLEU was 24.9 (perplexity 5.29); the base model (h = 8) scored 25.8 (perplexity 4.92). Single-head attention is 0.9 BLEU worse than the best setting.",
+   "gold": null,
+   "evidence": [
+    {
+     "section": "AIAYN Table 3",
+     "page": null,
+     "quote": "(A): h = 1; d_k = 512; d_v = 512; PPL / (dev) = 5.29; BLEU / (dev) = 24.9"
+    },
+    {
+     "section": "AIAYN Table 3",
+     "page": null,
+     "quote": "PPL / (dev) = 4.92; BLEU / (dev) = 25.8"
+    }
+   ],
+   "paper": null,
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, gold quotes located by the assistant; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": "same",
+    "c3_found": 1,
+    "c6_found": 1,
+    "units": 2
+   },
+   "corpus_order": [
+    "c6",
+    "c3"
+   ]
+  },
+  {
+   "question_id": "t10",
+   "group": "targeted",
+   "dataset": "table",
+   "question": "In the Moshi paper's audio quality evaluation table, which rows have a check mark (✓) in the causal column?",
+   "answerable": true,
+   "expected_answer": "Mimi, adv. loss only; Same, downsampled at 16kHz; Mimi, non adv. only.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "Mimi, adv. loss only",
+       "MUSHRA (↑) = 81.0±1.3"
+      ],
+      "cells": [
+       "causal = ✓"
+      ]
+     },
+     {
+      "id": [
+       "Same, downsampled at 16kHz",
+       "MUSHRA (↑) = 77.7±1.4"
+      ],
+      "cells": [
+       "causal = ✓"
+      ]
+     },
+     {
+      "id": [
+       "Mimi, non adv. only",
+       "MUSHRA (↑) = 58.8±1.8"
+      ],
+      "cells": [
+       "causal = ✓"
+      ]
+     }
+    ],
+    "columns": [
+     "causal"
+    ]
+   },
+   "evidence": null,
+   "paper": "MOSHI",
+   "table_id": "T4",
+   "label_provenance": "eval/phase7/table_question_set.json: PROVISIONAL assistant-authored labels; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": "same",
+    "c3_found": 3,
+    "c6_found": 0,
+    "units": 3
+   },
+   "corpus_order": [
+    "c3",
+    "c6"
+   ]
+  },
+  {
+   "question_id": "t29",
+   "group": "targeted",
+   "dataset": "table",
+   "question": "In the Moshi paper's extended Mimi codec ablation (the table reporting only ABX, VisQOL and MOSNet), what ABX error does the configuration with no marks in any of the five component columns report?",
+   "answerable": true,
+   "expected_answer": "31.3%.",
+   "gold": {
+    "rows": [
+     {
+      "id": [
+       "ABX (↓) = 31.3%",
+       "VisQOL (↑) = 2.37"
+      ],
+      "cells": [
+       "Quantization / Rate = (blank)",
+       "Transformer / in encoder = (blank)",
+       "Transformer / in decoder = (blank)",
+       "WavLM / distillation = (blank)",
+       "Split / quantizer = (blank)"
+      ]
+     }
+    ],
+    "columns": [
+     "ABX (↓)"
+    ]
+   },
+   "evidence": null,
+   "paper": "MOSHI",
+   "table_id": "T17",
+   "label_provenance": "eval/phase7/table_question_set.json: PROVISIONAL assistant-authored labels; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": "same",
+    "c3_found": 1,
+    "c6_found": 0,
+    "units": 1
+   },
+   "corpus_order": [
+    "c6",
+    "c3"
+   ]
+  },
+  {
+   "question_id": "q16",
+   "group": "unanswerable",
+   "dataset": "original",
+   "question": "How many US dollars did it cost to train the big Transformer on English-German?",
+   "answerable": false,
+   "expected_answer": "Refuse: the paper reports training cost in FLOPs and as 3.5 days on 8 P100 GPUs, never in dollars.",
+   "gold": null,
+   "evidence": [],
+   "paper": null,
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, gold quotes located by the assistant; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": null,
+    "c3_found": null,
+    "c6_found": null,
+    "units": null
+   },
+   "corpus_order": [
+    "c3",
+    "c6"
+   ]
+  },
+  {
+   "question_id": "q27",
+   "group": "unanswerable",
+   "dataset": "original",
+   "question": "How many GPU-hours did it take to train the 2-stage H-Net at GPT-3 XL size?",
+   "answerable": false,
+   "expected_answer": "Refuse: the paper reports FLOPs per byte and data budgets but no GPUs or GPU-hours.",
+   "gold": null,
+   "evidence": [],
+   "paper": null,
+   "table_id": null,
+   "label_provenance": "eval/questions.jsonl: project labels, gold quotes located by the assistant; NOT independently reviewed",
+   "phase11f_offline": {
+    "complete_evidence": null,
+    "c3_found": null,
+    "c6_found": null,
+    "units": null
+   },
+   "corpus_order": [
+    "c6",
+    "c3"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "corpus_version": "c3",
+ "root": "data",
+ "note": "c3 predates corpus manifests (it lives in data/processed + data/index). This manifest was written in phase 11D from hashes recorded BEFORE it, at the start of phases 9A and 9B (identical lists); no hash here was computed for the purpose. outputs_sha256 keys are relative to root, as in the c4/c6 manifests.",
+ "hash_sources": [
+  "experiments/phase9/out/baseline_checksums.sha256",
+  "experiments/phase9b/out/baseline_checksums.sha256"
+ ],
+ "outputs_sha256": {
+  "index/bm25_256.pkl": "69ebce8238af3c75329961a60bf850d88d8a9cba5f877e16219270fd8328a77c",
+  "index/bm25_512.pkl": "36d911d36bbc5dda2bb62f9d0175d99a8b874bd0fb7bd1e3bb311618af222297",
+  "index/faiss_256.ids.json": "dfe52c2f8a1fdec6f708a1c0ec362e373986ab3d344319213e4d392b9baceb73",
+  "index/faiss_256.index": "09c36a4bd5bac6bf0b65023d5d1b9f74d3094ca9449abd65cb41a9e1587852c9",
+  "index/faiss_512.ids.json": "f30d559a7b4d6f715b15acd14d812c531a51f7602481995a634c9ea20ec94015",
+  "index/faiss_512.index": "d79da03e9845992156faf24fc55c107be14fb56c10639eb393807f84746fdb3b",
+  "index/idf_256.json": "9cd387763016c4466dfc1ad211cde80e71ab42f9c8199024d68e45a24e09131e",
+  "index/idf_512.json": "3091b064c315cf116990f8d9dddd29e1f4b469557f61b28eb96a0728e2fc437d",
+  "processed/bibliography_AIAYN.txt": "b8002af35b5a0d98c23696e4cbb7523f437dd4925684e908ed07153b140bcfc3",
+  "processed/bibliography_HNET.txt": "b837251ae297e9c3ed4cc16a0a64889a3f66b7efbabeb67220668839d98778f5",
+  "processed/bibliography_MOSHI.txt": "7d813d0c07a272eaee6ed4564888ac65bf97333e8822e7f58e6a595b61aa7662",
+  "processed/chunks_256.jsonl": "9021ab9800d6634b81795647a2ed686085522dd0cd30d8e78d7f001c2b365d9b",
+  "processed/chunks_512.jsonl": "886561fced351c0cd4bf0a7e4c6ea4ec8603bd180b4d90635817f7493617857b",
+  "processed/figures.jsonl": "3c8f1a118239d27a000bfa722d7e167722770901092941da056d91ea5cc688f8",
+  "processed/paragraphs.jsonl": "a2b4b25262a08a76faba45d24683c1f83ad5a08d608f2e8f77a7faa40e5add68",
+  "processed/pdf_validation.json": "d9ab2543fa6c25821605d9854eb042f7745a9f73772cf37259ec916b1940cc58",
+  "processed/sections.jsonl": "223eae8d942b37be1db6a75b84ff3a21d16710b35349ac45aa38401995680103",
+  "processed/tables.jsonl": "49f799fcef90eb81baa2dfc5a6c295565c2d4dfdd24cfdbebc860603dca262b3"
+ }
+}

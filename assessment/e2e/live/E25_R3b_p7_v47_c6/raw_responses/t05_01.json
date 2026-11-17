@@ -1,0 +1,44 @@
+{
+ "question_id": "t05",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:09:43.598+00:00",
+  "t_send_ns": 206233598993400,
+  "status": 200,
+  "t_first_byte_ns": 206234083212500,
+  "t_first_content_ns": 206234552912000,
+  "t_last_ns": 206234809922200,
+  "max_gap_ms": 469.6724,
+  "text": "In Table 3, the configuration where Quantization / Rate, Transformer / in encoder, Transformer / in decoder, WavLM / distillation, and Split / quantizer are all checked has a MUSHRA score of 64.0±1.7 % [MOSHI:T3:r03].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.370397563,
+   "prompt_tokens": 1896,
+   "prompt_time": 0.261841177,
+   "completion_tokens": 176,
+   "completion_time": 0.468460359,
+   "total_tokens": 2072,
+   "total_time": 0.730301536,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 92
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "964",
+   "x-ratelimit-reset-requests": "51m50.399s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5166",
+   "x-ratelimit-reset-tokens": "21.255s"
+  },
+  "error": null,
+  "first_byte_ms": 484.2,
+  "first_content_ms": 953.9,
+  "total_ms": 1210.9
+ }
+}

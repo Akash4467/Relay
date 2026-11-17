@@ -1,0 +1,44 @@
+{
+ "question_id": "q13",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:37:02.400+00:00",
+  "t_send_ns": 200672401321400,
+  "status": 200,
+  "t_first_byte_ns": 200672981819000,
+  "t_first_content_ns": 200674413793000,
+  "t_last_ns": 200674720427100,
+  "max_gap_ms": 1431.9384,
+  "text": "In Table 2, the H‑Net (2‑stage) configuration (#FLOPs matched to GPT‑3 Large) has Average / acc ↑ = 55.5 [HNET:T2:r10].  \nIn Table 2, the Transformer (#FLOPs matched to GPT‑3 Large) has Average / acc ↑ = 53.3 [HNET:T2:r01].  \nIn Table 2, the Transformer (#FLOPs matched to GPT‑3 XL) has Average / acc ↑ = 55.5 [HNET:T2:r11].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.370382061,
+   "prompt_tokens": 2611,
+   "prompt_time": 0.135005524,
+   "completion_tokens": 335,
+   "completion_time": 1.5614182620000001,
+   "total_tokens": 2946,
+   "total_time": 1.696423786,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 196
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "977",
+   "x-ratelimit-reset-requests": "33m7.2s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "3387",
+   "x-ratelimit-reset-tokens": "34.597s"
+  },
+  "error": null,
+  "first_byte_ms": 580.5,
+  "first_content_ms": 2012.5,
+  "total_ms": 2319.1
+ }
+}

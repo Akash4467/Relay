@@ -1,0 +1,22 @@
+{
+ "about": "ASSISTANT labels (not independent) for every verified draft of the Phase 12 c3 live run, from reading each draft against the cited evidence and the expected answer. correct = every sentence right and supported by the cited chunks; mixed = right overall but at least one sentence inaccurate or unsupported by its citation (the whole answer should be rejected); wrong = the answer's value is wrong; unsupported = the value happens to match the expected answer but cannot be derived from the cited c3 evidence (c3 table rows carry no marks). A verifier should accept only 'correct'.",
+ "source": "experiments/phase12/phase12b/c3 (copied unchanged into records/)",
+ "labels": {
+  "q01#0": "mixed", "q01#1": "correct",
+  "q02#0": "correct", "q02#1": "correct",
+  "q07#0": "mixed", "q07#1": "mixed",
+  "q15#0": "correct", "q15#1": "correct",
+  "t01#0": "wrong",
+  "t05#0": "wrong",
+  "t13#0": "wrong",
+  "q11#0": "mixed",
+  "t29#0": "unsupported", "t29#1": "unsupported"
+ },
+ "notes": {
+  "q01#0": "'making the lack of parallelism more costly' is an inference, not in AIAYN:1:c002",
+  "q07#0": "'the encoder stack contains only self-attention sub-layers': encoder layers also have a feed-forward sub-layer",
+  "q07#1": "'the encoder stack consists only of self-attention sub-layers': same error",
+  "q11#0": "25.8 (base) cited to AIAYN:T3:r02, which holds only the h=1 row",
+  "t29#0": "31.3% is the expected value, but 'no marks in any column' cannot be read from c3's unmarked T17 rows"
+ }
+}

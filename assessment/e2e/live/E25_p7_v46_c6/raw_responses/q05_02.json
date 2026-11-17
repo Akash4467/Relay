@@ -1,0 +1,44 @@
+{
+ "question_id": "q05",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:46:38.950+00:00",
+  "t_send_ns": 201248951154400,
+  "status": 200,
+  "t_first_byte_ns": 201249381984700,
+  "t_first_content_ns": 201250308432500,
+  "t_last_ns": 201250712994100,
+  "max_gap_ms": 926.4099,
+  "text": "The authors describe Dynamic Chunking as composed of a routing module which predicts boundaries between adjacent elements through a similarity score [HNET:1:c007]. The routing module adds an inductive bias by measuring the similarity between adjacent representations: when context changes, consecutive vectors should exhibit lower similarity [HNET:2.2.1:c023]. It calculates boundary probabilities p_t and boundary indicators b_t as follows: p_t = ½ (1 − q_tᵀ k_{t‑1} / ‖q_t‖‖k_{t‑1}‖) ∈ [0, 1], b_t = 𝟙_{ {p_t ≥ 0.5} }, where p_1 = 1.0 by definition [HNET:2.2.1:c023].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.25880227,
+   "prompt_tokens": 2945,
+   "prompt_time": 0.397399003,
+   "completion_tokens": 420,
+   "completion_time": 0.996398565,
+   "total_tokens": 3365,
+   "total_time": 1.393797568,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 222
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "959",
+   "x-ratelimit-reset-requests": "59m2.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "3196",
+   "x-ratelimit-reset-tokens": "36.03s"
+  },
+  "error": null,
+  "first_byte_ms": 430.8,
+  "first_content_ms": 1357.3,
+  "total_ms": 1761.8
+ }
+}

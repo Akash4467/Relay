@@ -1,0 +1,41 @@
+{
+ "question_id": "q07",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T14:35:28.801+00:00",
+  "t_send_ns": 200578801746100,
+  "status": 200,
+  "t_first_byte_ns": 200579388898300,
+  "t_first_content_ns": 200579694110200,
+  "t_last_ns": 200579973188300,
+  "max_gap_ms": 305.1682,
+  "text": "The decoder differs from the encoder in that it inserts a third sub‑layer that performs multi‑head attention over the output of the encoder stack, and it modifies its self‑attention sub‑layer with masking to prevent positions from attending to subsequent positions, preserving the auto‑regressive property [AIAYN:3.1:c009]. In contrast, the encoder contains only self‑attention layers in which the keys, values and queries all come from the same source, namely the output of the previous encoder layer [AIAYN:3.2.3:c016]. In encoder‑decoder attention layers, the queries come from the previous decoder layer while the memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016]. The retrieved passages do not state any additional architectural differences beyond these points.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.319003747,
+   "prompt_tokens": 1885,
+   "prompt_time": 0.096046729,
+   "completion_tokens": 280,
+   "completion_time": 0.584928568,
+   "total_tokens": 2165,
+   "total_time": 0.680975297,
+   "completion_tokens_details": {
+    "reasoning_tokens": 101
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "982",
+   "x-ratelimit-reset-requests": "25m55.199s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "1140",
+   "x-ratelimit-reset-tokens": "51.45s"
+  },
+  "error": null,
+  "first_byte_ms": 587.2,
+  "first_content_ms": 892.4,
+  "total_ms": 1171.4
+ }
+}

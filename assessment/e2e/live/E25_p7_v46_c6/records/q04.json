@@ -1,0 +1,241 @@
+{
+ "run": "assessment/e2e/live/E25_p7_v46_c6",
+ "timestamp": "2026-11-14T14:45:22.908+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.6c",
+ "question_id": "q04",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "What frame rate, number of quantizers, codebook size and bitrate does the Mimi codec use?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "The authors use Q = 8 quantizers, each with a codebook size of N_A = 2048, and at 12.5Hz this represents a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "MOSHI:3.3.1:c030"
+  ],
+  "request_id": "loop-E25_p7_v46_c6-q04"
+ },
+ "client_ms": 36301.8,
+ "evidence_ids": [
+  "MOSHI:3.3.1:c030",
+  "MOSHI:3.3.1:c028",
+  "MOSHI:3.3.1:c029",
+  "MOSHI:T17:r07",
+  "MOSHI:T17:r05",
+  "MOSHI:T17:r06",
+  "MOSHI:5.1:c071"
+ ],
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true
+ ],
+ "drafts": [
+  "The authors state that Mimi’s initial frame size and overall stride correspond to 80 ms, which gives a frame rate of 12.5 Hz [MOSHI:3.3.1:c029]. The authors also report using Q = 8 quantizers, each with a codebook size of N_A = 2048, which at 12.5 Hz represents a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+  "The authors use Q = 8 quantizers, each with a codebook size of N_A = 2048, and at 12.5Hz this represents a bitrate of 1.1 kbps [MOSHI:3.3.1:c030]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "MOSHI:3.3.1:c029",
+    "MOSHI:3.3.1:c030"
+   ],
+   "failures": [
+    [
+     "The authors state that Mimi’s initial frame size and overall stride correspond to 80 ms, which gives a frame rate of 12.5 Hz [MOSHI:3.3.1:c029].",
+     "not supported by the cited passage (clause: \"This gives a frame rate of 12.5 Hz.\") (entailment 0.25 < 0.9); number 12.5 hz not in the cited passage; term 'hz' not in the cited passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors state that Mimi’s initial frame size and overall stride correspond to 80 ms, which gives a frame rate of 12.5 Hz [MOSHI:3.3.1:c029].",
+     "ok": false,
+     "entailment": 0.25441551723559264,
+     "reasons": [
+      "not supported by the cited passage (clause: \"This gives a frame rate of 12.5 Hz.\") (entailment 0.25 < 0.9); number 12.5 hz not in the cited passage; term 'hz' not in the cited passage"
+     ]
+    },
+    {
+     "sentence": "The authors also report using Q = 8 quantizers, each with a codebook size of N_A = 2048, which at 12.5 Hz represents a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+     "ok": true,
+     "entailment": 0.9705126071810858,
+     "reasons": []
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "MOSHI:3.3.1:c030"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "The authors use Q = 8 quantizers, each with a codebook size of N_A = 2048, and at 12.5Hz this represents a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+     "ok": true,
+     "entailment": 0.9972755985344268,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_p7_v46_c6-q04",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T14:45:22.908+00:00",
+  "question_id": "q04",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4398,
+  "tokens_out": 541,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 908.8,
+  "context_tokens": 1526,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "f_r"
+  ],
+  "retrieval_query": "What frame rate, number of quantizers, codebook size and bitrate does the Mimi codec use? [f_r]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "MOSHI:3.3.1:c030",
+   "MOSHI:3.3.1:c028",
+   "MOSHI:3.3.1:c029",
+   "MOSHI:T17:r07",
+   "MOSHI:T17:r05",
+   "MOSHI:T17:r06",
+   "MOSHI:5.1:c071"
+  ],
+  "verification_ms": 4454.4,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 28806.8,
+  "model_ttft_ms": 821.2,
+  "first_byte_ms": 307.0,
+  "generation_ms": 2066.1,
+  "reasoning_tokens": 364,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1995,
+    "reserved": 2765,
+    "governor_wait_ms": 13877.2,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.155816955,
+     "prompt_tokens": 1994,
+     "prompt_time": 0.193371664,
+     "completion_tokens": 255,
+     "completion_time": 0.528067733,
+     "total_tokens": 2249,
+     "total_time": 0.721439397,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 144
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1994,
+    "tokens_out": 255,
+    "reasoning_tokens": 144,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 307.0,
+    "model_ttft_ms": 821.2,
+    "total_ms": 973.3,
+    "max_gap_ms": 514.2,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "962",
+     "x-ratelimit-reset-requests": "54m43.2s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2630",
+     "x-ratelimit-reset-tokens": "40.275s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2403,
+    "reserved": 3173,
+    "governor_wait_ms": 14929.6,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.158230762,
+     "prompt_tokens": 2404,
+     "prompt_time": 0.168043688,
+     "completion_tokens": 286,
+     "completion_time": 0.691496837,
+     "total_tokens": 2690,
+     "total_time": 0.859540525,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 220
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2404,
+    "tokens_out": 286,
+    "reasoning_tokens": 220,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 373.3,
+    "model_ttft_ms": 998.2,
+    "total_ms": 1092.8,
+    "max_gap_ms": 624.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "961",
+     "x-ratelimit-reset-requests": "56m9.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2589",
+     "x-ratelimit-reset-tokens": "40.582s"
+    }
+   }
+  ],
+  "first_token_ms": 36274.7,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 36275.5
+ }
+}

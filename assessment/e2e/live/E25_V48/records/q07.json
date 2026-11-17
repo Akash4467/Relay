@@ -1,0 +1,277 @@
+{
+ "run": "assessment/e2e/live/E25_V48",
+ "timestamp": "2026-11-14T16:51:15.344+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "q07",
+ "dataset": [
+  "A_fixed_regression",
+  "B_failure_focused"
+ ],
+ "question": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §3.2.3 Applications of Attention in our Model; AIAYN §3 Model Architecture; AIAYN §3.1 Encoder and Decoder Stacks; AIAYN §3.3 Position-wise Feed-Forward Networks.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-E25_V48-q07"
+ },
+ "client_ms": 37244.0,
+ "evidence_ids": [
+  "AIAYN:3.2.3:c016",
+  "AIAYN:3:c006",
+  "AIAYN:3.1:c009",
+  "AIAYN:3.3:c017",
+  "HNET:2.1.2:c017",
+  "HNET:3.3:c069",
+  "AIAYN:abstract:c001"
+ ],
+ "gold_units_in_context": [
+  true,
+  true,
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  true,
+  true
+ ],
+ "drafts": [
+  "The decoder stack includes a third sub‑layer that performs multi‑head attention over the output of the encoder stack, whereas the encoder stack contains only self‑attention and feed‑forward sub‑layers [AIAYN:3.1:c009]. In the decoder, the self‑attention sub‑layer is masked to prevent positions from attending to subsequent positions, while the encoder’s self‑attention allows each position to attend to all positions in the previous encoder layer [AIAYN:3.2.3:c016]. In encoder‑decoder attention layers, the queries are taken from the previous decoder layer and the memory keys and values are taken from the output of the encoder [AIAYN:3.2.3:c016].",
+  "In addition to the two sub‑layers in each encoder layer, the decoder inserts a third sub‑layer, which performs multi‑head attention over the output of the encoder stack [AIAYN:3.1:c009]. In encoder‑decoder attention layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016]. In a self‑attention layer all of the keys, values and queries come from the same place, in this case, the output of the previous layer in the encoder [AIAYN:3.2.3:c016]. Similarly, self‑attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position [AIAYN:3.2.3:c016]. We need to prevent leftward information flow in the decoder to preserve the auto‑regressive property, and we implement this by masking out (setting to -∞) all values in the input of the softmax which correspond to illegal connections [AIAYN:3.2.3:c016]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.3:c016"
+   ],
+   "failures": [
+    [
+     "The decoder stack includes a third sub‑layer that performs multi‑head attention over the output of the encoder stack, whereas the encoder stack contains only self‑attention and feed‑forward sub‑layers [AIAYN:3.1:c009].",
+     "not supported by the cited passage (clause: \"The encoder stack contains only self‑attention and feed‑forward sub‑layers.\") (entailment 0.00 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The decoder stack includes a third sub‑layer that performs multi‑head attention over the output of the encoder stack, whereas the encoder stack contains only self‑attention and feed‑forward sub‑layers [AIAYN:3.1:c009].",
+     "ok": false,
+     "entailment": 0.0034782691037772433,
+     "reasons": [
+      "not supported by the cited passage (clause: \"The encoder stack contains only self‑attention and feed‑forward sub‑layers.\") (entailment 0.00 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "In the decoder, the self‑attention sub‑layer is masked to prevent positions from attending to subsequent positions, while the encoder’s self‑attention allows each position to attend to all positions in the previous encoder layer [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.9072281197116997,
+     "reasons": []
+    },
+    {
+     "sentence": "In encoder‑decoder attention layers, the queries are taken from the previous decoder layer and the memory keys and values are taken from the output of the encoder [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.960428986541428,
+     "reasons": []
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:3.1:c009",
+    "AIAYN:3.2.3:c016"
+   ],
+   "failures": [
+    [
+     "We need to prevent leftward information flow in the decoder to preserve the auto‑regressive property, and we implement this by masking out (setting to -∞) all values in the input of the softmax which correspond to illegal connections [AIAYN:3.2.3:c016].",
+     "not supported by the cited passage (clause: \"We need to prevent leftward information flow in the decoder to preserve the auto‑regressive property.\") (entailment 0.84 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "In addition to the two sub‑layers in each encoder layer, the decoder inserts a third sub‑layer, which performs multi‑head attention over the output of the encoder stack [AIAYN:3.1:c009].",
+     "ok": true,
+     "entailment": 0.9812652139920157,
+     "reasons": []
+    },
+    {
+     "sentence": "In encoder‑decoder attention layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.9752922663940788,
+     "reasons": []
+    },
+    {
+     "sentence": "In a self‑attention layer all of the keys, values and queries come from the same place, in this case, the output of the previous layer in the encoder [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.9580560660522758,
+     "reasons": []
+    },
+    {
+     "sentence": "Similarly, self‑attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position [AIAYN:3.2.3:c016].",
+     "ok": true,
+     "entailment": 0.892066033856065,
+     "reasons": []
+    },
+    {
+     "sentence": "We need to prevent leftward information flow in the decoder to preserve the auto‑regressive property, and we implement this by masking out (setting to -∞) all values in the input of the softmax which correspond to illegal connections [AIAYN:3.2.3:c016].",
+     "ok": false,
+     "entailment": 0.8353839900660569,
+     "reasons": [
+      "not supported by the cited passage (clause: \"We need to prevent leftward information flow in the decoder to preserve the auto‑regressive property.\") (entailment 0.84 < 0.9)"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "term_expansion": [],
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_V48-q07",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T16:51:15.344+00:00",
+  "question_id": "q07",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4216,
+  "tokens_out": 931,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 762.5,
+  "context_tokens": 1412,
+  "retrieval_policy": "global",
+  "query_expansion": [
+   "d_k"
+  ],
+  "retrieval_query": "How does the Transformer decoder differ from the encoder, and where do the queries, keys and values of the encoder-decoder attention come from? [d_k]",
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:3.2.3:c016",
+   "AIAYN:3:c006",
+   "AIAYN:3.1:c009",
+   "AIAYN:3.3:c017",
+   "HNET:2.1.2:c017",
+   "HNET:3.3:c069",
+   "AIAYN:abstract:c001"
+  ],
+  "verification_ms": 5454.5,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 28215.4,
+  "model_ttft_ms": 562.3,
+  "first_byte_ms": 130.9,
+  "generation_ms": 2759.1,
+  "reasoning_tokens": 529,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1886,
+    "reserved": 2656,
+    "governor_wait_ms": 11508.2,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.052415204,
+     "prompt_tokens": 1885,
+     "prompt_time": 0.093732431,
+     "completion_tokens": 308,
+     "completion_time": 0.658622147,
+     "total_tokens": 2193,
+     "total_time": 0.752354578,
+     "completion_tokens_details": {
+      "reasoning_tokens": 151
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1885,
+    "tokens_out": 308,
+    "reasoning_tokens": 151,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 130.9,
+    "model_ttft_ms": 562.3,
+    "total_ms": 878.5,
+    "max_gap_ms": 431.3,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "956",
+     "x-ratelimit-reset-requests": "1h3m21.6s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4307",
+     "x-ratelimit-reset-tokens": "27.697s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2330,
+    "reserved": 3100,
+    "governor_wait_ms": 16707.2,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.318084924,
+     "prompt_tokens": 2331,
+     "prompt_time": 0.129198642,
+     "completion_tokens": 623,
+     "completion_time": 1.310696354,
+     "total_tokens": 2954,
+     "total_time": 1.439894996,
+     "completion_tokens_details": {
+      "reasoning_tokens": 378
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2331,
+    "tokens_out": 623,
+    "reasoning_tokens": 378,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 444.9,
+    "model_ttft_ms": 1387.3,
+    "total_ms": 1880.6,
+    "max_gap_ms": 942.4,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "955",
+     "x-ratelimit-reset-requests": "1h4m48s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "4306",
+     "x-ratelimit-reset-tokens": "27.705s"
+    }
+   }
+  ],
+  "first_token_ms": 37220.3,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 37221.3
+ }
+}

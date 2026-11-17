@@ -1,0 +1,18 @@
+{"about": "Grades against the papers (ASSISTANT grades, not independent). Run: c6 + R3b + p7 + v4.7c, setting B, the 25 frozen questions, 2026-11-14 (E25_R3b_p7_v47_c6/). 41 requests, 93,002 tokens (cap 95,000). Production unchanged.",
+ "grades": {
+  "q16": {"grade": "correctly_refused"}, "q20": {"grade": "correctly_refused"}, "q22": {"grade": "correctly_refused"}, "q27": {"grade": "correctly_refused"}, "q30": {"grade": "correctly_refused"},
+  "q02": {"grade": "correct_and_fully_supported", "why": "h=8, d_k=d_v=d_model/h=64"},
+  "q03": {"grade": "correct_and_fully_supported", "why": "time-aligned text tokens before audio tokens; factuality and linguistic quality; almost triples accuracy; marginal inference cost"},
+  "q04": {"grade": "correct_and_fully_supported", "why": "12.5 Hz, 1.1 kbps, Q = 8, N_A = 2048 (paper's 'We use' voice)"},
+  "q06": {"grade": "partially_correct", "why": "real limitations (HNET:A:c088), not the stated motivation"},
+  "q07": {"grade": "correct_and_fully_supported", "why": "third sub-layer; masked decoder self-attention; Q from decoder, K/V from encoder output"},
+  "q09": {"grade": "partially_correct", "why": "delay 2 -> 1 gives 160 ms; 200 ms in practice; 160 below 230 ms; misses the 80 ms frame part"},
+  "q10": {"grade": "partially_correct", "why": "chunking layer components and two-stage design (HNET:1:c012); 2-stage significantly better than 1-stage (HNET:3.1:c049); misses encoder / main network / decoder recursion"},
+  "q13": {"grade": "incorrect_or_unsupported", "critical": true, "why": "gives H-Net 55.5 but states 'The retrieved passages do not state the average zero-shot accuracy of the BPE Transformer' although HNET:T2:r01 (Transformer, GPT-3 Large, 53.3) was in context: a FALSE absence statement accepted (row label 'Transformer' lacks 'BPE'). The redraft dropped the correct 53.3 sentence of D0."},
+  "q14": {"grade": "partially_correct", "why": "byte-pair encoding ~37000 shared vocabulary (AIAYN:5.1:c025); H-Net byte-level (HNET:3.2:c061); misses 32000 word-piece and learned chunking"},
+  "q15": {"grade": "correct_and_fully_supported"},
+  "t01": {"grade": "correct_and_fully_supported"}, "t05": {"grade": "correct_and_fully_supported", "why": "64.0 +/- 1.7"},
+  "t13": {"grade": "correct_and_fully_supported", "why": "36.8"},
+  "t29": {"grade": "incorrect_or_unsupported", "critical": true, "why": "SHOWN WRONG ANSWER: 'Configuration Row 5 reports ABX = 29.1%' for the configuration with no marks (expected 31.3%). Row 5 has a check under Quantization / Rate. Gold row MOSHI:T17:r01 not in context (retrieval). D0 claimed 'no marks' (rejected 0.85); the p7 redraft restated the row WITHOUT the question's condition, a true sentence (0.99) that does not answer the question."},
+  "q01": {"grade": "incorrectly_refused"}, "q05": {"grade": "incorrectly_refused"}, "q08": {"grade": "incorrectly_refused"},
+  "q11": {"grade": "incorrectly_refused"}, "q12": {"grade": "incorrectly_refused"}, "t10": {"grade": "incorrectly_refused", "why": "safe decline; retrieval"}}}

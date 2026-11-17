@@ -1,0 +1,3 @@
+correct_verbatim: reject [(0.97, ["the question asks about Dynamic Chunking for End-to-End Hierarchical Sequence Modeling (H-Net) (HNET), but no sentence cites a passage from it: answer that part from that paper's passages, or write one sentence 'The retrieved passages do not state <missing part>.'"], []), (1.0, [], [])]
+correct_complete: ACCEPT [(0.97, [], []), (0.99, [], []), (0.59, [], ['accepted by exact support (verbatim quote or exact table-row cells)'])]
+misleading_hnet_only: reject [(0.0, ['not supported by the cited passage (clause: "The Transformer uses the GPT-2 tokenizer.") (entailment 0.00 < 0.9); term \'gpt-2\' not in the cited passage'], ["term 'gpt-2' not in the cited passage"])]

@@ -1,0 +1,283 @@
+{
+ "run": "assessment/e2e/live/E25_p7_v46_c6",
+ "timestamp": "2026-11-14T14:45:59.235+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.6c",
+ "question_id": "q05",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "How does H-Net's routing module decide where chunk boundaries go?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: HNET §1 Introduction; HNET §2.1.1 Components of H-Net; HNET §2.2.1 Chunking Layer; HNET §3.1 Language Modeling.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-E25_p7_v46_c6-q05"
+ },
+ "client_ms": 43721.2,
+ "evidence_ids": [
+  "HNET:1:c007",
+  "HNET:2.1.1:c015",
+  "HNET:1:c012",
+  "HNET:2.2.1:c023",
+  "HNET:3.1:c052",
+  "HNET:E:c112",
+  "HNET:2.2.2:c029"
+ ],
+ "gold_units_in_context": [
+  true,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  true,
+  false
+ ],
+ "drafts": [
+  "The routing module decides chunk boundaries by measuring cosine similarity between adjacent encoder outputs and converting this similarity into a boundary probability p_t that ranges from 0 to 1 [HNET:2.2.1:c023]. Specifically, it first projects each encoder output \\hat{x}_t to query q_t and key k_t vectors, then computes p_t = ½ (1 − (q_t^⊤ k_{t‑1}) / ‖q_t‖‖k_{t‑1}‖) [HNET:2.2.1:c023]. A hard boundary indicator b_t is set to 1 when p_t ≥ 0.5 and to 0 otherwise, with p_1 defined as 1.0 to ensure the sequence starts with a boundary [HNET:2.2.1:c023]. This mechanism implements the intuition that lower similarity between consecutive vectors signals a contextual or semantic shift, prompting a chunk boundary [HNET:1:c007].",
+  "The authors describe Dynamic Chunking as composed of a routing module which predicts boundaries between adjacent elements through a similarity score [HNET:1:c007]. The routing module adds an inductive bias by measuring the similarity between adjacent representations: when context changes, consecutive vectors should exhibit lower similarity [HNET:2.2.1:c023]. It calculates boundary probabilities p_t and boundary indicators b_t as follows: p_t = ½ (1 − q_tᵀ k_{t‑1} / ‖q_t‖‖k_{t‑1}‖) ∈ [0, 1], b_t = 𝟙_{ {p_t ≥ 0.5} }, where p_1 = 1.0 by definition [HNET:2.2.1:c023]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "HNET:2.2.1:c023",
+    "HNET:1:c007"
+   ],
+   "failures": [
+    [
+     "Specifically, it first projects each encoder output \\hat{x}_t to query q_t and key k_t vectors, then computes p_t = ½ (1 − (q_t^⊤ k_{t‑1}) / ‖q_t‖‖k_{t‑1}‖) [HNET:2.2.1:c023].",
+     "not supported by the cited passage (entailment 0.62 < 0.9)"
+    ],
+    [
+     "A hard boundary indicator b_t is set to 1 when p_t ≥ 0.5 and to 0 otherwise, with p_1 defined as 1.0 to ensure the sequence starts with a boundary [HNET:2.2.1:c023].",
+     "not supported by the cited passage (entailment 0.79 < 0.9)"
+    ],
+    [
+     "This mechanism implements the intuition that lower similarity between consecutive vectors signals a contextual or semantic shift, prompting a chunk boundary [HNET:1:c007].",
+     "not supported by the cited passage (entailment 0.03 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The routing module decides chunk boundaries by measuring cosine similarity between adjacent encoder outputs and converting this similarity into a boundary probability p_t that ranges from 0 to 1 [HNET:2.2.1:c023].",
+     "ok": true,
+     "entailment": 0.9125308231534065,
+     "reasons": []
+    },
+    {
+     "sentence": "Specifically, it first projects each encoder output \\hat{x}_t to query q_t and key k_t vectors, then computes p_t = ½ (1 − (q_t^⊤ k_{t‑1}) / ‖q_t‖‖k_{t‑1}‖) [HNET:2.2.1:c023].",
+     "ok": false,
+     "entailment": 0.6230440016256942,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.62 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "A hard boundary indicator b_t is set to 1 when p_t ≥ 0.5 and to 0 otherwise, with p_1 defined as 1.0 to ensure the sequence starts with a boundary [HNET:2.2.1:c023].",
+     "ok": false,
+     "entailment": 0.7903158578680319,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.79 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "This mechanism implements the intuition that lower similarity between consecutive vectors signals a contextual or semantic shift, prompting a chunk boundary [HNET:1:c007].",
+     "ok": false,
+     "entailment": 0.03254069396148288,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.03 < 0.9)"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "HNET:1:c007",
+    "HNET:2.2.1:c023"
+   ],
+   "failures": [
+    [
+     "It calculates boundary probabilities p_t and boundary indicators b_t as follows: p_t = ½ (1 − q_tᵀ k_{t‑1} / ‖q_t‖‖k_{t‑1}‖) ∈ [0, 1], b_t = 𝟙_{ {p_t ≥ 0.5} }, where p_1 = 1.0 by definition [HNET:2.2.1:c023].",
+     "not supported by the cited passage (entailment 0.72 < 0.9); number 𝟙 not in the cited passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The authors describe Dynamic Chunking as composed of a routing module which predicts boundaries between adjacent elements through a similarity score [HNET:1:c007].",
+     "ok": true,
+     "entailment": 0.9869951296363998,
+     "reasons": []
+    },
+    {
+     "sentence": "The routing module adds an inductive bias by measuring the similarity between adjacent representations: when context changes, consecutive vectors should exhibit lower similarity [HNET:2.2.1:c023].",
+     "ok": true,
+     "entailment": 0.9632353938044345,
+     "reasons": []
+    },
+    {
+     "sentence": "It calculates boundary probabilities p_t and boundary indicators b_t as follows: p_t = ½ (1 − q_tᵀ k_{t‑1} / ‖q_t‖‖k_{t‑1}‖) ∈ [0, 1], b_t = 𝟙_{ {p_t ≥ 0.5} }, where p_1 = 1.0 by definition [HNET:2.2.1:c023].",
+     "ok": false,
+     "entailment": 0.7152768670357487,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.72 < 0.9); number 𝟙 not in the cited passage"
+     ]
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-E25_p7_v46_c6-q05",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T14:45:59.235+00:00",
+  "question_id": "q05",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4914,
+  "tokens_out": 724,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 981.0,
+  "context_tokens": 1510,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "HNET:1:c007",
+   "HNET:2.1.1:c015",
+   "HNET:1:c012",
+   "HNET:2.2.1:c023",
+   "HNET:3.1:c052",
+   "HNET:E:c112",
+   "HNET:2.2.2:c029"
+  ],
+  "verification_ms": 3573.0,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 35833.8,
+  "model_ttft_ms": 785.6,
+  "first_byte_ms": 423.7,
+  "generation_ms": 3210.5,
+  "reasoning_tokens": 283,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1970,
+    "reserved": 2740,
+    "governor_wait_ms": 14331.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.318880907,
+     "prompt_tokens": 1969,
+     "prompt_time": 0.221783806,
+     "completion_tokens": 304,
+     "completion_time": 0.810232553,
+     "total_tokens": 2273,
+     "total_time": 1.032016359,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 61
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1969,
+    "tokens_out": 304,
+    "reasoning_tokens": 61,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 423.7,
+    "model_ttft_ms": 785.6,
+    "total_ms": 1448.7,
+    "max_gap_ms": 361.9,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "960",
+     "x-ratelimit-reset-requests": "57m36s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "3015",
+     "x-ratelimit-reset-tokens": "37.387s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2944,
+    "reserved": 3714,
+    "governor_wait_ms": 21502.4,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.25880227,
+     "prompt_tokens": 2945,
+     "prompt_time": 0.397399003,
+     "completion_tokens": 420,
+     "completion_time": 0.996398565,
+     "total_tokens": 3365,
+     "total_time": 1.393797568,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 222
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2945,
+    "tokens_out": 420,
+    "reasoning_tokens": 222,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 430.8,
+    "model_ttft_ms": 1357.3,
+    "total_ms": 1761.8,
+    "max_gap_ms": 926.4,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "959",
+     "x-ratelimit-reset-requests": "59m2.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "3196",
+     "x-ratelimit-reset-tokens": "36.03s"
+    }
+   }
+  ],
+  "first_token_ms": 43690.4,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 43691.2
+ }
+}

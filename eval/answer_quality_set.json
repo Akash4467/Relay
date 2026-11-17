@@ -1,0 +1,67 @@
+{
+  "name": "answer_quality_v1",
+  "frozen_on": "2026-11-13",
+  "purpose": "Real-model answer-quality evaluation (brief: at least 15 questions). Questions are referenced by ID from eval/questions.jsonl and never copied or edited here.",
+  "questions_file": "eval/questions.jsonl",
+  "questions_sha256": "ee1794f7daf691e03ccb52cdcadc5bcac87d3a026d612119e028a1af94c21b4a",
+  "retrieval_setting": "B",
+  "verification_policy_version": "v4",
+  "model": "openai/gpt-oss-120b",
+  "budget": {"max_calls": 33, "max_tokens": 105000},
+  "ids": ["q02", "q04", "q06", "q07", "q08", "q09", "q10", "q12", "q13", "q14", "q17", "q20", "q21", "q25", "q26"],
+  "answerable_ids": ["q02", "q04", "q06", "q07", "q08", "q09", "q10", "q12", "q13", "q14"],
+  "unanswerable_ids": ["q17", "q20", "q21", "q25", "q26"],
+  "authorship": {
+    "note": "Every chosen question carries a 'User idea N' note in questions.jsonl; several were narrowed or reframed. The owner confirms authorship before the results are reported.",
+    "unconfirmed_and_excluded": ["q11", "q15", "q30"]
+  },
+  "excluded": {
+    "q05": "real drafts used to diagnose and build verifier v3/v4",
+    "q11": "real drafts used to build verifier v3/v4; authorship unconfirmed",
+    "q16": "real drafts used to diagnose verifier v3/v4",
+    "q15": "authorship unconfirmed",
+    "q30": "authorship unconfirmed",
+    "q01": "direct slots filled one per paper, test split first",
+    "q03": "direct slots filled one per paper, test split first",
+    "q18 q19 q22 q23 q24 q27 q28 q29": "one unanswerable question per trap type"
+  },
+  "known_retrieval_misses_setting_B": {
+    "q06": "first gold passage at rank 11 (eval/reports/retrieval_test_c3.json)",
+    "q10": "first gold passage at rank 9; 8 passages are kept",
+    "q14": "no gold passage among the candidates (eval/reports/retrieval_dev_c3.json)"
+  },
+  "required_elements": {
+    "q02": ["8 heads", "d_k = d_v = 64"],
+    "q04": ["frame rate 12.5 Hz", "8 quantizers", "codebook size 2048", "bitrate 1.1 kbps"],
+    "q06": ["tokenization is a barrier to true end-to-end models"],
+    "q07": ["the decoder adds a third sub-layer that attends over the encoder output", "decoder self-attention is masked so a position cannot attend to later positions", "encoder-decoder attention: queries from the previous decoder layer, keys and values from the encoder output"],
+    "q08": ["sinusoids chosen so the model can attend by relative position and/or extrapolate to longer sequences", "learned positional embeddings gave nearly identical results"],
+    "q09": ["80 ms from one Mimi frame at 12.5 Hz plus 80 ms of acoustic delay gives 160 ms", "about 200 ms in practice", "below the roughly 230 ms average gap in natural conversation"],
+    "q10": ["a stage is encoder, dynamic chunking into a main network, dechunking and decoder", "the main network can itself be an H-Net, so stages nest", "2 stages improved on 1 stage"],
+    "q12": ["with Inner Monologue: 26.6 Web Questions, 62.3 Llama Questions, 22.8 Audio TriviaQA", "without Inner Monologue: 9.2, 21.0, 7.3"],
+    "q13": ["2-stage H-Net 55.5 vs BPE Transformer 53.3 at GPT-3 Large compute", "55.5 matches the Transformer at GPT-3 XL compute"],
+    "q14": ["the Transformer used fixed subword vocabularies (byte-pair encoding, about 37000 shared tokens for English-German, and/or a 32000 word-piece vocabulary for English-French)", "H-Net reads raw bytes and learns its segmentation with dynamic chunking"]
+  },
+  "labels": {
+    "correct_full_cited": "Answerable; an answer was delivered; every required element is present and correct; no false claim; every factual sentence is fully supported by the passages it cites.",
+    "correct_partially_cited": "Answerable; an answer was delivered; every required element is present and correct; no false claim; at least one factual sentence is only partly supported or unsupported by its cited passages, although the claim is true according to the papers.",
+    "partially_correct": "Answerable; an answer was delivered; no false claim; at least one required element is missing (including an answer that says part of it is not stated). Citation support is recorded per sentence.",
+    "factually_wrong": "An answer was delivered that contains at least one false claim or a wrong paper attribution; for an unanswerable question, any delivered answer that invents or implies the missing information or accepts a false premise.",
+    "correct_refusal": "Unanswerable; the reply refuses or says the information is not in the retrieved passages, and invents nothing. True, cited side facts are allowed (e.g. q21: H100 GPUs, count not stated). Answering only the answerable part without inventing the rest counts here and is noted in the rationale.",
+    "false_refusal": "Answerable; the reply is a refusal, whatever caused it (structural check, model declined, verifier rejection after redraft). The cause is recorded as a failure category, never as a correct outcome.",
+    "not_run": "No reply because the run stopped (budget, provider error, daily limit). Excluded from rates and reported separately."
+  },
+  "sentence_level": {
+    "citation_support": ["supported", "partly_supported", "unsupported", "cites_unretrieved_passage", "absence_sentence"],
+    "factual": ["true", "false", "not_checkable"],
+    "note": "Graded for every draft, delivered or rejected, by reading the cited passage text stored in the raw record. The verifier's decision per sentence comes from the raw record and is kept in separate columns."
+  },
+  "failure_categories": ["retrieval_miss", "model_error", "model_declined", "verifier_false_rejection", "verifier_false_acceptance", "citation_error", "structural_refusal", "provider_error"],
+  "grading": "Assistant pre-grades every question, draft and sentence (label: assistant_graded); the owner confirms or changes each grade. No LLM judge and no judging API calls.",
+  "metrics": {
+    "table3_over_15_asked": ["correct and cited % = correct_full_cited / 15", "wrong % = factually_wrong / 15", "correctly refused % = correct_refusal / 15"],
+    "per_class": ["answerable (10): correct_full_cited, correct_partially_cited, partially_correct, factually_wrong, false_refusal", "unanswerable (5): correct_refusal, factually_wrong"],
+    "also": ["unsupported sentences in delivered answers", "verifier false acceptances and false rejections on graded drafts", "tokens per question and per delivered answer", "latency"],
+    "intervals": "counts with Wilson 95% intervals; n is small"
+  }
+}

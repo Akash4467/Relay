@@ -1,0 +1,41 @@
+{
+ "question_id": "q11",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T16:53:59.748+00:00",
+  "t_send_ns": 208889749006800,
+  "status": 200,
+  "t_first_byte_ns": 208890154998800,
+  "t_first_content_ns": 208890505969600,
+  "t_last_ns": 208890638204700,
+  "max_gap_ms": 350.9471,
+  "text": "The authors’ single‑head configuration (h = 1, d_k = 512, d_v = 512) achieved a development BLEU of 24.9 [AIAYN:T3:r02]. The retrieved passages do not state the development BLEU for the base configuration.",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.314240402,
+   "prompt_tokens": 2078,
+   "prompt_time": 0.095478495,
+   "completion_tokens": 183,
+   "completion_time": 0.394512574,
+   "total_tokens": 2261,
+   "total_time": 0.489991069,
+   "completion_tokens_details": {
+    "reasoning_tokens": 112
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "948",
+   "x-ratelimit-reset-requests": "1h14m52.8s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5194",
+   "x-ratelimit-reset-tokens": "21.045s"
+  },
+  "error": null,
+  "first_byte_ms": 406.0,
+  "first_content_ms": 757.0,
+  "total_ms": 889.2
+ }
+}

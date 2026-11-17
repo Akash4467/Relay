@@ -1,0 +1,29 @@
+{
+  "_source": "Fitted 2026-11-13 from 5 real gpt-oss-120b answer calls (results/raw/real/2026-11-12.jsonl, N=5: very small). Limits from config/limits.yaml (Groq docs + the headers seen). load_* and faults are NOT calibrated: no concurrency or failure was observed on the real service.",
+  "seed": 42,
+  "models": {
+    "openai/gpt-oss-120b": {"rpm": 30, "rpd": 1000, "tpm": 8000, "tpd": 200000},
+    "openai/gpt-oss-20b":  {"rpm": 30, "rpd": 1000, "tpm": 8000, "tpd": 200000}
+  },
+  "latency": {
+    "first_byte_log_mu": 6.243,
+    "first_byte_log_sigma": 0.368,
+    "reasoning_tokens_per_s": 280,
+    "content_tokens_per_s": 530,
+    "chunk_tokens": 8,
+    "load_first_byte_per_inflight": 0.05,
+    "load_rate_per_inflight": 0.03
+  },
+  "request_overhead_tokens": 67,
+  "chars_per_token": 4.0,
+  "faults": {
+    "p_500": 0.01,
+    "p_slow_success": 0.02,
+    "slow_factor": 6.0,
+    "p_stall": 0.01,
+    "stall_ms": 4000,
+    "p_timeout": 0.005
+  },
+  "fixtures_dir": "fixtures/perf",
+  "log_dir": "results/raw/standin"
+}

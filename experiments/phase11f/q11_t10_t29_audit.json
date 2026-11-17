@@ -1,0 +1,407 @@
+{
+ "c3/q11": {
+  "query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+  "expanded_retrieval_query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get? [h = 1]",
+  "gold_rows": [
+   [
+    "Configuration base:",
+    "BLEU / (dev) = 25.8"
+   ],
+   [
+    "(A): h = 1;",
+    "BLEU / (dev) = 24.9"
+   ]
+  ],
+  "chunks_holding_each_gold_row": [
+   [
+    "AIAYN:T3:r01"
+   ],
+   [
+    "AIAYN:T3:r02"
+   ]
+  ],
+  "chunks_holding_it_complete": [
+   [
+    "AIAYN:T3:r01"
+   ],
+   [
+    "AIAYN:T3:r02"
+   ]
+  ],
+  "gold_chunk_ranks": {
+   "AIAYN:T3:r01": {
+    "bm25": 16,
+    "dense": 6,
+    "fused": 5,
+    "reranked": 9,
+    "in_final_context": false
+   },
+   "AIAYN:T3:r02": {
+    "bm25": 5,
+    "dense": 9,
+    "fused": 3,
+    "reranked": 6,
+    "in_final_context": true
+   }
+  },
+  "final_context": [
+   "AIAYN:6.2:c031",
+   "AIAYN:6.1:c029",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:T3:r07",
+   "AIAYN:T3:r03",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r04"
+  ],
+  "all_gold_rows_in_final_context": false,
+  "all_gold_rows_complete_in_final_context": false,
+  "verifier_on_gold_restating_draft": {
+   "draft": "With a single attention head the development BLEU is 24.9 [AIAYN:T3:r02]. The base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r01].",
+   "accepted": false,
+   "failures": [
+    [
+     "With a single attention head the development BLEU is 24.9 [AIAYN:T3:r0",
+     "not supported by the cited passage (entailment 0.79 < 0.9)"
+    ],
+    [
+     "The base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r0",
+     "cites AIAYN:T3:r01, which was not retrieved for this question"
+    ]
+   ]
+  }
+ },
+ "c3/t10": {
+  "query": "In the Moshi paper's audio quality evaluation table, which rows have a check mark (✓) in the causal column?",
+  "expanded_retrieval_query": null,
+  "gold_rows": [
+   [
+    "Mimi, adv. loss only",
+    "MUSHRA (↑) = 81.0±1.3",
+    "causal = ✓"
+   ],
+   [
+    "Same, downsampled at 16kHz",
+    "MUSHRA (↑) = 77.7±1.4",
+    "causal = ✓"
+   ],
+   [
+    "Mimi, non adv. only",
+    "MUSHRA (↑) = 58.8±1.8",
+    "causal = ✓"
+   ]
+  ],
+  "chunks_holding_each_gold_row": [
+   [
+    "MOSHI:T4:r03"
+   ],
+   [
+    "MOSHI:T4:r04"
+   ],
+   [
+    "MOSHI:T4:r04"
+   ]
+  ],
+  "chunks_holding_it_complete": [
+   [],
+   [],
+   []
+  ],
+  "gold_chunk_ranks": {
+   "MOSHI:T4:r03": {
+    "bm25": 88,
+    "dense": 5,
+    "fused": 8,
+    "reranked": 2,
+    "in_final_context": true
+   },
+   "MOSHI:T4:r04": {
+    "bm25": 89,
+    "dense": 4,
+    "fused": 7,
+    "reranked": 1,
+    "in_final_context": true
+   }
+  },
+  "final_context": [
+   "MOSHI:T4:r04",
+   "MOSHI:T4:r03",
+   "MOSHI:E:c147",
+   "MOSHI:5.2:c076",
+   "MOSHI:6.4:c117",
+   "MOSHI:5.8:c103",
+   "MOSHI:5.8:c100"
+  ],
+  "all_gold_rows_in_final_context": true,
+  "all_gold_rows_complete_in_final_context": false,
+  "verifier_on_gold_restating_draft": {
+   "draft": "In the audio quality evaluation table, the causal column is checked for Mimi, adv. loss only, for Same, downsampled at 16kHz, and for Mimi, non adv. only [MOSHI:T4:r03; MOSHI:T4:r04].",
+   "accepted": false,
+   "failures": [
+    [
+     "In the audio quality evaluation table, the causal column is checked fo",
+     "not supported by the cited passage (entailment 0.30 < 0.9)"
+    ]
+   ]
+  }
+ },
+ "c3/t29": {
+  "query": "In the Moshi paper's extended Mimi codec ablation (the table reporting only ABX, VisQOL and MOSNet), what ABX error does the configuration with no marks in any of the five component columns report?",
+  "expanded_retrieval_query": null,
+  "gold_rows": [
+   [
+    "ABX (↓) = 31.3%",
+    "VisQOL (↑) = 2.37",
+    "Quantization / Rate = (blank)",
+    "Transformer / in encoder = (blank)",
+    "Transformer / in decoder = (blank)",
+    "WavLM / distillation = (blank)",
+    "Split / quantizer = (blank)"
+   ]
+  ],
+  "chunks_holding_each_gold_row": [
+   [
+    "MOSHI:T17:r01"
+   ]
+  ],
+  "chunks_holding_it_complete": [
+   []
+  ],
+  "gold_chunk_ranks": {
+   "MOSHI:T17:r01": {
+    "bm25": 3,
+    "dense": 1,
+    "fused": 1,
+    "reranked": 2,
+    "in_final_context": true
+   }
+  },
+  "final_context": [
+   "MOSHI:T17:r02",
+   "MOSHI:T17:r01",
+   "MOSHI:T17:r03",
+   "MOSHI:T3:r01",
+   "MOSHI:T3:r02",
+   "MOSHI:A:c127",
+   "MOSHI:5.1:c070"
+  ],
+  "all_gold_rows_in_final_context": true,
+  "all_gold_rows_complete_in_final_context": false,
+  "verifier_on_gold_restating_draft": {
+   "draft": "In the extended Mimi codec ablation, the configuration with an ABX error of 31.3% has a VisQOL of 2.37 [MOSHI:T17:r01].",
+   "accepted": false,
+   "failures": [
+    [
+     "In the extended Mimi codec ablation, the configuration with an ABX err",
+     "not supported by the cited passage (entailment 0.31 < 0.9)"
+    ]
+   ]
+  }
+ },
+ "c6/q11": {
+  "query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get?",
+  "expanded_retrieval_query": "In the Table 3 ablations, what development BLEU did the model get with a single attention head, and what did the base configuration get? [h = 1]",
+  "gold_rows": [
+   [
+    "Configuration base:",
+    "BLEU / (dev) = 25.8"
+   ],
+   [
+    "(A): h = 1;",
+    "BLEU / (dev) = 24.9"
+   ]
+  ],
+  "chunks_holding_each_gold_row": [
+   [
+    "AIAYN:T3:r01"
+   ],
+   [
+    "AIAYN:T3:r02"
+   ]
+  ],
+  "chunks_holding_it_complete": [
+   [
+    "AIAYN:T3:r01"
+   ],
+   [
+    "AIAYN:T3:r02"
+   ]
+  ],
+  "gold_chunk_ranks": {
+   "AIAYN:T3:r01": {
+    "bm25": 16,
+    "dense": 6,
+    "fused": 5,
+    "reranked": 9,
+    "in_final_context": false
+   },
+   "AIAYN:T3:r02": {
+    "bm25": 5,
+    "dense": 9,
+    "fused": 3,
+    "reranked": 6,
+    "in_final_context": true
+   }
+  },
+  "final_context": [
+   "AIAYN:6.2:c031",
+   "AIAYN:6.1:c029",
+   "AIAYN:3.2.2:c013",
+   "AIAYN:T3:r07",
+   "AIAYN:T3:r03",
+   "AIAYN:T3:r02",
+   "AIAYN:T3:r04"
+  ],
+  "all_gold_rows_in_final_context": false,
+  "all_gold_rows_complete_in_final_context": false,
+  "verifier_on_gold_restating_draft": {
+   "draft": "With a single attention head the development BLEU is 24.9 [AIAYN:T3:r02]. The base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r01].",
+   "accepted": false,
+   "failures": [
+    [
+     "With a single attention head the development BLEU is 24.9 [AIAYN:T3:r0",
+     "not supported by the cited passage (entailment 0.79 < 0.9)"
+    ],
+    [
+     "The base configuration reaches a development BLEU of 25.8 [AIAYN:T3:r0",
+     "cites AIAYN:T3:r01, which was not retrieved for this question"
+    ]
+   ]
+  }
+ },
+ "c6/t10": {
+  "query": "In the Moshi paper's audio quality evaluation table, which rows have a check mark (✓) in the causal column?",
+  "expanded_retrieval_query": null,
+  "gold_rows": [
+   [
+    "Mimi, adv. loss only",
+    "MUSHRA (↑) = 81.0±1.3",
+    "causal = ✓"
+   ],
+   [
+    "Same, downsampled at 16kHz",
+    "MUSHRA (↑) = 77.7±1.4",
+    "causal = ✓"
+   ],
+   [
+    "Mimi, non adv. only",
+    "MUSHRA (↑) = 58.8±1.8",
+    "causal = ✓"
+   ]
+  ],
+  "chunks_holding_each_gold_row": [
+   [
+    "MOSHI:T4:r03"
+   ],
+   [
+    "MOSHI:T4:r04"
+   ],
+   [
+    "MOSHI:T4:r04"
+   ]
+  ],
+  "chunks_holding_it_complete": [
+   [
+    "MOSHI:T4:r03"
+   ],
+   [
+    "MOSHI:T4:r04"
+   ],
+   [
+    "MOSHI:T4:r04"
+   ]
+  ],
+  "gold_chunk_ranks": {
+   "MOSHI:T4:r03": {
+    "bm25": 40,
+    "dense": 31,
+    "fused": null,
+    "reranked": null,
+    "in_final_context": false
+   },
+   "MOSHI:T4:r04": {
+    "bm25": 35,
+    "dense": 19,
+    "fused": null,
+    "reranked": null,
+    "in_final_context": false
+   }
+  },
+  "final_context": [
+   "MOSHI:E:c147",
+   "MOSHI:5.2:c076",
+   "MOSHI:6.4:c117",
+   "MOSHI:5.8:c103",
+   "MOSHI:6.1:c109",
+   "MOSHI:5.8:c107",
+   "MOSHI:5.4:c088",
+   "MOSHI:T18:r16"
+  ],
+  "all_gold_rows_in_final_context": false,
+  "all_gold_rows_complete_in_final_context": false,
+  "verifier_on_gold_restating_draft": {
+   "draft": "In the audio quality evaluation table, the causal column is checked for Mimi, adv. loss only, for Same, downsampled at 16kHz, and for Mimi, non adv. only [MOSHI:T4:r03; MOSHI:T4:r04].",
+   "accepted": false,
+   "failures": [
+    [
+     "In the audio quality evaluation table, the causal column is checked fo",
+     "cites MOSHI:T4:r03, which was not retrieved for this question; cites MOSHI:T4:r04, which was not retrieved for this question"
+    ]
+   ]
+  }
+ },
+ "c6/t29": {
+  "query": "In the Moshi paper's extended Mimi codec ablation (the table reporting only ABX, VisQOL and MOSNet), what ABX error does the configuration with no marks in any of the five component columns report?",
+  "expanded_retrieval_query": null,
+  "gold_rows": [
+   [
+    "ABX (↓) = 31.3%",
+    "VisQOL (↑) = 2.37",
+    "Quantization / Rate = (blank)",
+    "Transformer / in encoder = (blank)",
+    "Transformer / in decoder = (blank)",
+    "WavLM / distillation = (blank)",
+    "Split / quantizer = (blank)"
+   ]
+  ],
+  "chunks_holding_each_gold_row": [
+   [
+    "MOSHI:T17:r01"
+   ]
+  ],
+  "chunks_holding_it_complete": [
+   [
+    "MOSHI:T17:r01"
+   ]
+  ],
+  "gold_chunk_ranks": {
+   "MOSHI:T17:r01": {
+    "bm25": 9,
+    "dense": 2,
+    "fused": 5,
+    "reranked": 10,
+    "in_final_context": false
+   }
+  },
+  "final_context": [
+   "MOSHI:T17:r05",
+   "MOSHI:T17:r07",
+   "MOSHI:T17:r06",
+   "MOSHI:T3:r03",
+   "MOSHI:T17:r03",
+   "MOSHI:T3:r01",
+   "MOSHI:T17:r04"
+  ],
+  "all_gold_rows_in_final_context": false,
+  "all_gold_rows_complete_in_final_context": false,
+  "verifier_on_gold_restating_draft": {
+   "draft": "In the extended Mimi codec ablation, the configuration with an ABX error of 31.3% has a VisQOL of 2.37 [MOSHI:T17:r01].",
+   "accepted": false,
+   "failures": [
+    [
+     "In the extended Mimi codec ablation, the configuration with an ABX err",
+     "cites MOSHI:T17:r01, which was not retrieved for this question"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,257 @@
+{
+ "run": "assessment/e2e/live/G4_p7_v47_c6",
+ "timestamp": "2026-11-14T15:01:29.193+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p7",
+ "verifier_version": "v4.2",
+ "question_id": "q01",
+ "dataset": [
+  "A_fixed_regression"
+ ],
+ "question": "According to the Transformer paper, what property of recurrent models prevents parallelization within training examples, and why does it matter more for long sequences?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "I couldn't find this in the passages I retrieved from the three papers, so I won't guess. I searched: AIAYN §1 Introduction; AIAYN §abstract Abstract; AIAYN §6.3 English Constituency Parsing; HNET §1 Introduction.",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "refused",
+  "reason": "verification failed after redraft",
+  "citations": [],
+  "request_id": "loop-G4_p7_v47_c6-q01"
+ },
+ "client_ms": 39530.9,
+ "evidence_ids": [
+  "AIAYN:1:c002",
+  "AIAYN:1:c003",
+  "AIAYN:abstract:c001",
+  "AIAYN:6.3:c033",
+  "HNET:1:c010",
+  "MOSHI:6.2:c111",
+  "HNET:4:c081",
+  "HNET:1:c004"
+ ],
+ "gold_units_in_context": [
+  true
+ ],
+ "gold_units_complete_in_context": [
+  true
+ ],
+ "drafts": [
+  "Recurrent models factor computation along the symbol positions of the input and output sequences, generating each hidden state h_t as a function of the previous hidden state h_t‑1 and the input at position t, which inherently makes the computation sequential and precludes parallelization within training examples [AIAYN:1:c002]. This sequential nature becomes critical at longer sequence lengths because memory constraints limit batching across examples, making the lack of parallelization more impactful for long sequences [AIAYN:1:c002].",
+  "Recurrent models factor computation along the symbol positions of the input and output sequences and align the positions to steps in computation time, generating a sequence of hidden states h_t as a function of the previous hidden state h_t‑1 and the input for position t [AIAYN:1:c002]. This inherently sequential nature precludes parallelization within training examples, which becomes critical at longer sequence lengths, as memory constraints limit batching across examples [AIAYN:1:c002]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:1:c002"
+   ],
+   "failures": [
+    [
+     "Recurrent models factor computation along the symbol positions of the input and output sequences, generating each hidden state h_t as a function of the previous hidden state h_t‑1 and the input at position t, which inherently makes the computation sequential and precludes parallelization within training examples [AIAYN:1:c002].",
+     "not supported by the cited passage (clause: \"Recurrent models factor computation along the symbol positions of the input and output sequences, generating each hidden state h_t as a function of the previous hidden state h_t‑1 and the input at position t.\") (entailment 0.66 < 0.9)"
+    ],
+    [
+     "This sequential nature becomes critical at longer sequence lengths because memory constraints limit batching across examples, making the lack of parallelization more impactful for long sequences [AIAYN:1:c002].",
+     "not supported by the cited passage (entailment 0.73 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "Recurrent models factor computation along the symbol positions of the input and output sequences, generating each hidden state h_t as a function of the previous hidden state h_t‑1 and the input at position t, which inherently makes the computation sequential and precludes parallelization within training examples [AIAYN:1:c002].",
+     "ok": false,
+     "entailment": 0.6563785585302981,
+     "reasons": [
+      "not supported by the cited passage (clause: \"Recurrent models factor computation along the symbol positions of the input and output sequences, generating each hidden state h_t as a function of the previous hidden state h_t‑1 and the input at position t.\") (entailment 0.66 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "This sequential nature becomes critical at longer sequence lengths because memory constraints limit batching across examples, making the lack of parallelization more impactful for long sequences [AIAYN:1:c002].",
+     "ok": false,
+     "entailment": 0.7256389708117724,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.73 < 0.9)"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": false,
+   "cited": [
+    "AIAYN:1:c002"
+   ],
+   "failures": [
+    [
+     "Recurrent models factor computation along the symbol positions of the input and output sequences and align the positions to steps in computation time, generating a sequence of hidden states h_t as a function of the previous hidden state h_t‑1 and the input for position t [AIAYN:1:c002].",
+     "not supported by the cited passage (entailment 0.68 < 0.9)"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "Recurrent models factor computation along the symbol positions of the input and output sequences and align the positions to steps in computation time, generating a sequence of hidden states h_t as a function of the previous hidden state h_t‑1 and the input for position t [AIAYN:1:c002].",
+     "ok": false,
+     "entailment": 0.6834967559917986,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.68 < 0.9)"
+     ]
+    },
+    {
+     "sentence": "This inherently sequential nature precludes parallelization within training examples, which becomes critical at longer sequence lengths, as memory constraints limit batching across examples [AIAYN:1:c002].",
+     "ok": true,
+     "entailment": 0.07278235373771984,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "refused",
+ "refusal_reason": "verification failed after redraft",
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-G4_p7_v47_c6-q01",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T15:01:29.193+00:00",
+  "question_id": "q01",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4661,
+  "tokens_out": 336,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 1166.4,
+  "context_tokens": 1548,
+  "retrieval_policy": "global",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:1:c002",
+   "AIAYN:1:c003",
+   "AIAYN:abstract:c001",
+   "AIAYN:6.3:c033",
+   "HNET:1:c010",
+   "MOSHI:6.2:c111",
+   "HNET:4:c081",
+   "HNET:1:c004"
+  ],
+  "verification_ms": 5769.0,
+  "answer_status": "refused",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 28834.4,
+  "model_ttft_ms": 774.5,
+  "first_byte_ms": 522.8,
+  "generation_ms": 3694.1,
+  "reasoning_tokens": 121,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2020,
+    "reserved": 2790,
+    "governor_wait_ms": 12262.5,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.319957888,
+     "prompt_tokens": 2019,
+     "prompt_time": 0.199509746,
+     "completion_tokens": 170,
+     "completion_time": 0.45353316,
+     "total_tokens": 2189,
+     "total_time": 0.653042906,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 60
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 2019,
+    "tokens_out": 170,
+    "reasoning_tokens": 60,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 522.8,
+    "model_ttft_ms": 774.5,
+    "total_ms": 1083.6,
+    "max_gap_ms": 251.8,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "935",
+     "x-ratelimit-reset-requests": "1h33m36s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "1628",
+     "x-ratelimit-reset-tokens": "47.79s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2641,
+    "reserved": 3411,
+    "governor_wait_ms": 16571.9,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.319448175,
+     "prompt_tokens": 2642,
+     "prompt_time": 1.8558983850000002,
+     "completion_tokens": 166,
+     "completion_time": 0.345005101,
+     "total_tokens": 2808,
+     "total_time": 2.200903486,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 61
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2642,
+    "tokens_out": 166,
+    "reasoning_tokens": 61,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 434.1,
+    "model_ttft_ms": 2412.2,
+    "total_ms": 2610.5,
+    "max_gap_ms": 1978.1,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "934",
+     "x-ratelimit-reset-requests": "1h35m2.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "2146",
+     "x-ratelimit-reset-tokens": "43.905s"
+    }
+   }
+  ],
+  "first_token_ms": 39505.6,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "refused",
+  "reply_reason": "verification failed after redraft",
+  "total_ms": 39506.4
+ }
+}

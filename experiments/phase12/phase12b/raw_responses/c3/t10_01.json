@@ -1,0 +1,46 @@
+{
+ "experiment_id": "phase12-live-c3-c6-2026-11-14",
+ "corpus_version": "c3",
+ "question_id": "t10",
+ "seq": 1,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T08:02:43.776+00:00",
+  "t_send_ns": 177013777562000,
+  "status": 200,
+  "t_first_byte_ns": 177014300053500,
+  "t_first_content_ns": 177014919481600,
+  "t_last_ns": 177015115781100,
+  "max_gap_ms": 619.4086,
+  "text": "NOT_IN_PAPERS",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.370683238,
+   "prompt_tokens": 1837,
+   "prompt_time": 0.391718627,
+   "completion_tokens": 46,
+   "completion_time": 0.428399904,
+   "total_tokens": 1883,
+   "total_time": 0.820118531,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 32
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "969",
+   "x-ratelimit-reset-requests": "44m38.4s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "5637",
+   "x-ratelimit-reset-tokens": "17.722s"
+  },
+  "error": null,
+  "first_byte_ms": 522.5,
+  "first_content_ms": 1141.9,
+  "total_ms": 1338.2
+ }
+}

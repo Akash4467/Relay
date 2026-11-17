@@ -1,0 +1,41 @@
+{
+ "question_id": "q14",
+ "seq": 2,
+ "call": {
+  "model": "openai/gpt-oss-120b",
+  "started_at": "2026-11-14T15:15:29.781+00:00",
+  "t_send_ns": 202979781287500,
+  "status": 200,
+  "t_first_byte_ns": 202980153030800,
+  "t_first_content_ns": 202980476273500,
+  "t_last_ns": 202980614999900,
+  "max_gap_ms": 323.2194,
+  "text": "Sentences were encoded using byte‑pair encoding, which has a shared source‑target vocabulary of about 37000 tokens[AIAYN:5.1:c025]. SpaceByte represents the canonical hierarchical architecture with external boundary supervision, which chunks on spaces and “space‑like” bytes[HNET:3:c041].",
+  "finish_reason": "stop",
+  "usage": {
+   "queue_time": 0.287982776,
+   "prompt_tokens": 2595,
+   "prompt_time": 0.188118898,
+   "completion_tokens": 132,
+   "completion_time": 0.279121141,
+   "total_tokens": 2727,
+   "total_time": 0.467240039,
+   "completion_tokens_details": {
+    "reasoning_tokens": 57
+   }
+  },
+  "usage_source": "usage",
+  "headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-remaining-requests": "940",
+   "x-ratelimit-reset-requests": "1h26m24s",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-tokens": "3201",
+   "x-ratelimit-reset-tokens": "35.992s"
+  },
+  "error": null,
+  "first_byte_ms": 371.7,
+  "first_content_ms": 695.0,
+  "total_ms": 833.7
+ }
+}

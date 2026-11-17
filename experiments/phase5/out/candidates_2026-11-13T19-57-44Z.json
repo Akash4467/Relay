@@ -1,0 +1,3039 @@
+{
+ "summary": {
+  "v4": {
+   "labelled": {
+    "v3_eval": {
+     "Sacc": 16,
+     "Urej": 22,
+     "Srej": 2,
+     "Uacc": 2
+    },
+    "v3b_targeted": {
+     "Sacc": 7,
+     "Srej": 1,
+     "Urej": 8,
+     "Uacc": 2
+    },
+    "v2_stress calibration": {
+     "Sacc": 5,
+     "Urej": 5,
+     "Srej": 1,
+     "Uacc": 1
+    },
+    "held-out (evaluation only)": {
+     "Sacc": 1,
+     "Srej": 3,
+     "Urej": 4
+    }
+   },
+   "sentences_accepted": {
+    "supported": 16,
+    "partly_supported": 0,
+    "unsupported_or_false": 3
+   },
+   "sentences_total": {
+    "supported": 41,
+    "partly_supported": 12,
+    "unsupported_or_false": 8
+   },
+   "drafts_accepted": 3
+  },
+  "v5": {
+   "labelled": {
+    "v3_eval": {
+     "Sacc": 16,
+     "Urej": 22,
+     "Srej": 2,
+     "Uacc": 2
+    },
+    "v3b_targeted": {
+     "Sacc": 7,
+     "Srej": 1,
+     "Urej": 8,
+     "Uacc": 2
+    },
+    "v2_stress calibration": {
+     "Sacc": 5,
+     "Urej": 5,
+     "Srej": 1,
+     "Uacc": 1
+    },
+    "held-out (evaluation only)": {
+     "Sacc": 1,
+     "Srej": 3,
+     "Urej": 4
+    }
+   },
+   "sentences_accepted": {
+    "supported": 23,
+    "partly_supported": 0,
+    "unsupported_or_false": 1
+   },
+   "sentences_total": {
+    "supported": 41,
+    "partly_supported": 12,
+    "unsupported_or_false": 8
+   },
+   "drafts_accepted": 2
+  },
+  "v5+T": {
+   "labelled": {
+    "v3_eval": {
+     "Sacc": 16,
+     "Urej": 22,
+     "Srej": 2,
+     "Uacc": 2
+    },
+    "v3b_targeted": {
+     "Sacc": 7,
+     "Srej": 1,
+     "Urej": 8,
+     "Uacc": 2
+    },
+    "v2_stress calibration": {
+     "Sacc": 5,
+     "Urej": 5,
+     "Srej": 1,
+     "Uacc": 1
+    },
+    "held-out (evaluation only)": {
+     "Sacc": 1,
+     "Srej": 3,
+     "Urej": 4
+    }
+   },
+   "sentences_accepted": {
+    "supported": 23,
+    "partly_supported": 1,
+    "unsupported_or_false": 1
+   },
+   "sentences_total": {
+    "supported": 41,
+    "partly_supported": 12,
+    "unsupported_or_false": 8
+   },
+   "drafts_accepted": 3
+  },
+  "v5+C": {
+   "labelled": {
+    "v3_eval": {
+     "Sacc": 16,
+     "Urej": 22,
+     "Srej": 2,
+     "Uacc": 2
+    },
+    "v3b_targeted": {
+     "Sacc": 7,
+     "Srej": 1,
+     "Urej": 8,
+     "Uacc": 2
+    },
+    "v2_stress calibration": {
+     "Sacc": 5,
+     "Urej": 5,
+     "Srej": 1,
+     "Uacc": 1
+    },
+    "held-out (evaluation only)": {
+     "Sacc": 1,
+     "Srej": 3,
+     "Urej": 4
+    }
+   },
+   "sentences_accepted": {
+    "supported": 25,
+    "partly_supported": 0,
+    "unsupported_or_false": 1
+   },
+   "sentences_total": {
+    "supported": 41,
+    "partly_supported": 12,
+    "unsupported_or_false": 8
+   },
+   "drafts_accepted": 2
+  },
+  "v5+T+C": {
+   "labelled": {
+    "v3_eval": {
+     "Sacc": 16,
+     "Urej": 22,
+     "Srej": 2,
+     "Uacc": 2
+    },
+    "v3b_targeted": {
+     "Sacc": 7,
+     "Srej": 1,
+     "Urej": 8,
+     "Uacc": 2
+    },
+    "v2_stress calibration": {
+     "Sacc": 5,
+     "Urej": 5,
+     "Srej": 1,
+     "Uacc": 1
+    },
+    "held-out (evaluation only)": {
+     "Sacc": 1,
+     "Srej": 3,
+     "Urej": 4
+    }
+   },
+   "sentences_accepted": {
+    "supported": 25,
+    "partly_supported": 1,
+    "unsupported_or_false": 1
+   },
+   "sentences_total": {
+    "supported": 41,
+    "partly_supported": 12,
+    "unsupported_or_false": 8
+   },
+   "drafts_accepted": 3
+  }
+ },
+ "sentence_changes_vs_v5": {
+  "v5+T": [
+   "live v5 run q12 d2 s2 (partly_supported): Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, an"
+  ],
+  "v5+C": [
+   "15-question run (v4 drafts) q08 d1 s1 (supported): The authors chose sinusoidal positional encodings because they hypothesized that the sinus",
+   "15-question run (v4 drafts) q13 d2 s1 (supported): The 2‑stage H‑Net achieves an average zero‑shot accuracy of 55.5 % when its FLOPs are matc"
+  ],
+  "v5+T+C": [
+   "15-question run (v4 drafts) q08 d1 s1 (supported): The authors chose sinusoidal positional encodings because they hypothesized that the sinus",
+   "15-question run (v4 drafts) q13 d2 s1 (supported): The 2‑stage H‑Net achieves an average zero‑shot accuracy of 55.5 % when its FLOPs are matc",
+   "live v5 run q12 d2 s2 (partly_supported): Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, an"
+  ]
+ },
+ "labelled_changes_vs_v5": {
+  "v5+T": {
+   "v3_eval": [],
+   "v3b_targeted": [],
+   "v2_stress calibration": [],
+   "held-out (evaluation only)": []
+  },
+  "v5+C": {
+   "v3_eval": [],
+   "v3b_targeted": [],
+   "v2_stress calibration": [],
+   "held-out (evaluation only)": []
+  },
+  "v5+T+C": {
+   "v3_eval": [],
+   "v3b_targeted": [],
+   "v2_stress calibration": [],
+   "held-out (evaluation only)": []
+  }
+ },
+ "labelled": {
+  "v3_eval": {
+   "v4": {
+    "d1": [
+     true,
+     true
+    ],
+    "d2": [
+     true,
+     true
+    ],
+    "d3": [
+     true,
+     true
+    ],
+    "d4": [
+     true,
+     true
+    ],
+    "d5": [
+     true,
+     true
+    ],
+    "d6": [
+     true,
+     true
+    ],
+    "m1": [
+     true,
+     true
+    ],
+    "m2": [
+     false,
+     false
+    ],
+    "m3": [
+     true,
+     true
+    ],
+    "m4": [
+     true,
+     false
+    ],
+    "m5": [
+     true,
+     true
+    ],
+    "m6": [
+     false,
+     false
+    ],
+    "t1": [
+     true,
+     true
+    ],
+    "t2": [
+     false,
+     false
+    ],
+    "t3": [
+     true,
+     true
+    ],
+    "t4": [
+     true,
+     true
+    ],
+    "t5": [
+     true,
+     true
+    ],
+    "t6": [
+     false,
+     false
+    ],
+    "p1": [
+     true,
+     true
+    ],
+    "p2": [
+     false,
+     false
+    ],
+    "p3": [
+     true,
+     true
+    ],
+    "p4": [
+     true,
+     false
+    ],
+    "p5": [
+     true,
+     true
+    ],
+    "p6": [
+     false,
+     false
+    ],
+    "k1": [
+     false,
+     false
+    ],
+    "k2": [
+     false,
+     false
+    ],
+    "k3": [
+     false,
+     false
+    ],
+    "k4": [
+     false,
+     false
+    ],
+    "k5": [
+     false,
+     false
+    ],
+    "k6": [
+     false,
+     false
+    ],
+    "n1": [
+     false,
+     false
+    ],
+    "n2": [
+     false,
+     false
+    ],
+    "n3": [
+     false,
+     false
+    ],
+    "n4": [
+     false,
+     false
+    ],
+    "n5": [
+     false,
+     false
+    ],
+    "n6": [
+     false,
+     false
+    ],
+    "a1": [
+     false,
+     false
+    ],
+    "a2": [
+     false,
+     true
+    ],
+    "a3": [
+     false,
+     false
+    ],
+    "a4": [
+     false,
+     false
+    ],
+    "a5": [
+     false,
+     false
+    ],
+    "a6": [
+     false,
+     true
+    ]
+   },
+   "v5": {
+    "d1": [
+     true,
+     true
+    ],
+    "d2": [
+     true,
+     true
+    ],
+    "d3": [
+     true,
+     true
+    ],
+    "d4": [
+     true,
+     true
+    ],
+    "d5": [
+     true,
+     true
+    ],
+    "d6": [
+     true,
+     true
+    ],
+    "m1": [
+     true,
+     true
+    ],
+    "m2": [
+     false,
+     false
+    ],
+    "m3": [
+     true,
+     true
+    ],
+    "m4": [
+     true,
+     false
+    ],
+    "m5": [
+     true,
+     true
+    ],
+    "m6": [
+     false,
+     false
+    ],
+    "t1": [
+     true,
+     true
+    ],
+    "t2": [
+     false,
+     false
+    ],
+    "t3": [
+     true,
+     true
+    ],
+    "t4": [
+     true,
+     true
+    ],
+    "t5": [
+     true,
+     true
+    ],
+    "t6": [
+     false,
+     false
+    ],
+    "p1": [
+     true,
+     true
+    ],
+    "p2": [
+     false,
+     false
+    ],
+    "p3": [
+     true,
+     true
+    ],
+    "p4": [
+     true,
+     false
+    ],
+    "p5": [
+     true,
+     true
+    ],
+    "p6": [
+     false,
+     false
+    ],
+    "k1": [
+     false,
+     false
+    ],
+    "k2": [
+     false,
+     false
+    ],
+    "k3": [
+     false,
+     false
+    ],
+    "k4": [
+     false,
+     false
+    ],
+    "k5": [
+     false,
+     false
+    ],
+    "k6": [
+     false,
+     false
+    ],
+    "n1": [
+     false,
+     false
+    ],
+    "n2": [
+     false,
+     false
+    ],
+    "n3": [
+     false,
+     false
+    ],
+    "n4": [
+     false,
+     false
+    ],
+    "n5": [
+     false,
+     false
+    ],
+    "n6": [
+     false,
+     false
+    ],
+    "a1": [
+     false,
+     false
+    ],
+    "a2": [
+     false,
+     true
+    ],
+    "a3": [
+     false,
+     false
+    ],
+    "a4": [
+     false,
+     false
+    ],
+    "a5": [
+     false,
+     false
+    ],
+    "a6": [
+     false,
+     true
+    ]
+   },
+   "v5+T": {
+    "d1": [
+     true,
+     true
+    ],
+    "d2": [
+     true,
+     true
+    ],
+    "d3": [
+     true,
+     true
+    ],
+    "d4": [
+     true,
+     true
+    ],
+    "d5": [
+     true,
+     true
+    ],
+    "d6": [
+     true,
+     true
+    ],
+    "m1": [
+     true,
+     true
+    ],
+    "m2": [
+     false,
+     false
+    ],
+    "m3": [
+     true,
+     true
+    ],
+    "m4": [
+     true,
+     false
+    ],
+    "m5": [
+     true,
+     true
+    ],
+    "m6": [
+     false,
+     false
+    ],
+    "t1": [
+     true,
+     true
+    ],
+    "t2": [
+     false,
+     false
+    ],
+    "t3": [
+     true,
+     true
+    ],
+    "t4": [
+     true,
+     true
+    ],
+    "t5": [
+     true,
+     true
+    ],
+    "t6": [
+     false,
+     false
+    ],
+    "p1": [
+     true,
+     true
+    ],
+    "p2": [
+     false,
+     false
+    ],
+    "p3": [
+     true,
+     true
+    ],
+    "p4": [
+     true,
+     false
+    ],
+    "p5": [
+     true,
+     true
+    ],
+    "p6": [
+     false,
+     false
+    ],
+    "k1": [
+     false,
+     false
+    ],
+    "k2": [
+     false,
+     false
+    ],
+    "k3": [
+     false,
+     false
+    ],
+    "k4": [
+     false,
+     false
+    ],
+    "k5": [
+     false,
+     false
+    ],
+    "k6": [
+     false,
+     false
+    ],
+    "n1": [
+     false,
+     false
+    ],
+    "n2": [
+     false,
+     false
+    ],
+    "n3": [
+     false,
+     false
+    ],
+    "n4": [
+     false,
+     false
+    ],
+    "n5": [
+     false,
+     false
+    ],
+    "n6": [
+     false,
+     false
+    ],
+    "a1": [
+     false,
+     false
+    ],
+    "a2": [
+     false,
+     true
+    ],
+    "a3": [
+     false,
+     false
+    ],
+    "a4": [
+     false,
+     false
+    ],
+    "a5": [
+     false,
+     false
+    ],
+    "a6": [
+     false,
+     true
+    ]
+   },
+   "v5+C": {
+    "d1": [
+     true,
+     true
+    ],
+    "d2": [
+     true,
+     true
+    ],
+    "d3": [
+     true,
+     true
+    ],
+    "d4": [
+     true,
+     true
+    ],
+    "d5": [
+     true,
+     true
+    ],
+    "d6": [
+     true,
+     true
+    ],
+    "m1": [
+     true,
+     true
+    ],
+    "m2": [
+     false,
+     false
+    ],
+    "m3": [
+     true,
+     true
+    ],
+    "m4": [
+     true,
+     false
+    ],
+    "m5": [
+     true,
+     true
+    ],
+    "m6": [
+     false,
+     false
+    ],
+    "t1": [
+     true,
+     true
+    ],
+    "t2": [
+     false,
+     false
+    ],
+    "t3": [
+     true,
+     true
+    ],
+    "t4": [
+     true,
+     true
+    ],
+    "t5": [
+     true,
+     true
+    ],
+    "t6": [
+     false,
+     false
+    ],
+    "p1": [
+     true,
+     true
+    ],
+    "p2": [
+     false,
+     false
+    ],
+    "p3": [
+     true,
+     true
+    ],
+    "p4": [
+     true,
+     false
+    ],
+    "p5": [
+     true,
+     true
+    ],
+    "p6": [
+     false,
+     false
+    ],
+    "k1": [
+     false,
+     false
+    ],
+    "k2": [
+     false,
+     false
+    ],
+    "k3": [
+     false,
+     false
+    ],
+    "k4": [
+     false,
+     false
+    ],
+    "k5": [
+     false,
+     false
+    ],
+    "k6": [
+     false,
+     false
+    ],
+    "n1": [
+     false,
+     false
+    ],
+    "n2": [
+     false,
+     false
+    ],
+    "n3": [
+     false,
+     false
+    ],
+    "n4": [
+     false,
+     false
+    ],
+    "n5": [
+     false,
+     false
+    ],
+    "n6": [
+     false,
+     false
+    ],
+    "a1": [
+     false,
+     false
+    ],
+    "a2": [
+     false,
+     true
+    ],
+    "a3": [
+     false,
+     false
+    ],
+    "a4": [
+     false,
+     false
+    ],
+    "a5": [
+     false,
+     false
+    ],
+    "a6": [
+     false,
+     true
+    ]
+   },
+   "v5+T+C": {
+    "d1": [
+     true,
+     true
+    ],
+    "d2": [
+     true,
+     true
+    ],
+    "d3": [
+     true,
+     true
+    ],
+    "d4": [
+     true,
+     true
+    ],
+    "d5": [
+     true,
+     true
+    ],
+    "d6": [
+     true,
+     true
+    ],
+    "m1": [
+     true,
+     true
+    ],
+    "m2": [
+     false,
+     false
+    ],
+    "m3": [
+     true,
+     true
+    ],
+    "m4": [
+     true,
+     false
+    ],
+    "m5": [
+     true,
+     true
+    ],
+    "m6": [
+     false,
+     false
+    ],
+    "t1": [
+     true,
+     true
+    ],
+    "t2": [
+     false,
+     false
+    ],
+    "t3": [
+     true,
+     true
+    ],
+    "t4": [
+     true,
+     true
+    ],
+    "t5": [
+     true,
+     true
+    ],
+    "t6": [
+     false,
+     false
+    ],
+    "p1": [
+     true,
+     true
+    ],
+    "p2": [
+     false,
+     false
+    ],
+    "p3": [
+     true,
+     true
+    ],
+    "p4": [
+     true,
+     false
+    ],
+    "p5": [
+     true,
+     true
+    ],
+    "p6": [
+     false,
+     false
+    ],
+    "k1": [
+     false,
+     false
+    ],
+    "k2": [
+     false,
+     false
+    ],
+    "k3": [
+     false,
+     false
+    ],
+    "k4": [
+     false,
+     false
+    ],
+    "k5": [
+     false,
+     false
+    ],
+    "k6": [
+     false,
+     false
+    ],
+    "n1": [
+     false,
+     false
+    ],
+    "n2": [
+     false,
+     false
+    ],
+    "n3": [
+     false,
+     false
+    ],
+    "n4": [
+     false,
+     false
+    ],
+    "n5": [
+     false,
+     false
+    ],
+    "n6": [
+     false,
+     false
+    ],
+    "a1": [
+     false,
+     false
+    ],
+    "a2": [
+     false,
+     true
+    ],
+    "a3": [
+     false,
+     false
+    ],
+    "a4": [
+     false,
+     false
+    ],
+    "a5": [
+     false,
+     false
+    ],
+    "a6": [
+     false,
+     true
+    ]
+   }
+  },
+  "v3b_targeted": {
+   "v4": {
+    "f1": [
+     true,
+     true
+    ],
+    "f2": [
+     true,
+     false
+    ],
+    "f3": [
+     true,
+     true
+    ],
+    "f4": [
+     true,
+     true
+    ],
+    "f5": [
+     false,
+     false
+    ],
+    "f6": [
+     false,
+     false
+    ],
+    "f7": [
+     false,
+     false
+    ],
+    "f8": [
+     false,
+     false
+    ],
+    "f9": [
+     false,
+     false
+    ],
+    "s1": [
+     true,
+     true
+    ],
+    "s2": [
+     true,
+     true
+    ],
+    "s3": [
+     true,
+     true
+    ],
+    "s4": [
+     true,
+     true
+    ],
+    "u1": [
+     false,
+     false
+    ],
+    "u2": [
+     false,
+     true
+    ],
+    "u3": [
+     false,
+     false
+    ],
+    "u4": [
+     false,
+     false
+    ],
+    "u5": [
+     false,
+     true
+    ]
+   },
+   "v5": {
+    "f1": [
+     true,
+     true
+    ],
+    "f2": [
+     true,
+     false
+    ],
+    "f3": [
+     true,
+     true
+    ],
+    "f4": [
+     true,
+     true
+    ],
+    "f5": [
+     false,
+     false
+    ],
+    "f6": [
+     false,
+     false
+    ],
+    "f7": [
+     false,
+     false
+    ],
+    "f8": [
+     false,
+     false
+    ],
+    "f9": [
+     false,
+     false
+    ],
+    "s1": [
+     true,
+     true
+    ],
+    "s2": [
+     true,
+     true
+    ],
+    "s3": [
+     true,
+     true
+    ],
+    "s4": [
+     true,
+     true
+    ],
+    "u1": [
+     false,
+     false
+    ],
+    "u2": [
+     false,
+     true
+    ],
+    "u3": [
+     false,
+     false
+    ],
+    "u4": [
+     false,
+     false
+    ],
+    "u5": [
+     false,
+     true
+    ]
+   },
+   "v5+T": {
+    "f1": [
+     true,
+     true
+    ],
+    "f2": [
+     true,
+     false
+    ],
+    "f3": [
+     true,
+     true
+    ],
+    "f4": [
+     true,
+     true
+    ],
+    "f5": [
+     false,
+     false
+    ],
+    "f6": [
+     false,
+     false
+    ],
+    "f7": [
+     false,
+     false
+    ],
+    "f8": [
+     false,
+     false
+    ],
+    "f9": [
+     false,
+     false
+    ],
+    "s1": [
+     true,
+     true
+    ],
+    "s2": [
+     true,
+     true
+    ],
+    "s3": [
+     true,
+     true
+    ],
+    "s4": [
+     true,
+     true
+    ],
+    "u1": [
+     false,
+     false
+    ],
+    "u2": [
+     false,
+     true
+    ],
+    "u3": [
+     false,
+     false
+    ],
+    "u4": [
+     false,
+     false
+    ],
+    "u5": [
+     false,
+     true
+    ]
+   },
+   "v5+C": {
+    "f1": [
+     true,
+     true
+    ],
+    "f2": [
+     true,
+     false
+    ],
+    "f3": [
+     true,
+     true
+    ],
+    "f4": [
+     true,
+     true
+    ],
+    "f5": [
+     false,
+     false
+    ],
+    "f6": [
+     false,
+     false
+    ],
+    "f7": [
+     false,
+     false
+    ],
+    "f8": [
+     false,
+     false
+    ],
+    "f9": [
+     false,
+     false
+    ],
+    "s1": [
+     true,
+     true
+    ],
+    "s2": [
+     true,
+     true
+    ],
+    "s3": [
+     true,
+     true
+    ],
+    "s4": [
+     true,
+     true
+    ],
+    "u1": [
+     false,
+     false
+    ],
+    "u2": [
+     false,
+     true
+    ],
+    "u3": [
+     false,
+     false
+    ],
+    "u4": [
+     false,
+     false
+    ],
+    "u5": [
+     false,
+     true
+    ]
+   },
+   "v5+T+C": {
+    "f1": [
+     true,
+     true
+    ],
+    "f2": [
+     true,
+     false
+    ],
+    "f3": [
+     true,
+     true
+    ],
+    "f4": [
+     true,
+     true
+    ],
+    "f5": [
+     false,
+     false
+    ],
+    "f6": [
+     false,
+     false
+    ],
+    "f7": [
+     false,
+     false
+    ],
+    "f8": [
+     false,
+     false
+    ],
+    "f9": [
+     false,
+     false
+    ],
+    "s1": [
+     true,
+     true
+    ],
+    "s2": [
+     true,
+     true
+    ],
+    "s3": [
+     true,
+     true
+    ],
+    "s4": [
+     true,
+     true
+    ],
+    "u1": [
+     false,
+     false
+    ],
+    "u2": [
+     false,
+     true
+    ],
+    "u3": [
+     false,
+     false
+    ],
+    "u4": [
+     false,
+     false
+    ],
+    "u5": [
+     false,
+     true
+    ]
+   }
+  },
+  "v2_stress calibration": {
+   "v4": {
+    "t1": [
+     true,
+     true
+    ],
+    "t3": [
+     false,
+     false
+    ],
+    "c1": [
+     true,
+     false
+    ],
+    "l1": [
+     true,
+     true
+    ],
+    "l3": [
+     false,
+     false
+    ],
+    "p1": [
+     true,
+     true
+    ],
+    "p3": [
+     false,
+     true
+    ],
+    "a1": [
+     true,
+     true
+    ],
+    "a2": [
+     true,
+     true
+    ],
+    "a3": [
+     false,
+     false
+    ],
+    "d1": [
+     false,
+     false
+    ],
+    "d3": [
+     false,
+     false
+    ]
+   },
+   "v5": {
+    "t1": [
+     true,
+     true
+    ],
+    "t3": [
+     false,
+     false
+    ],
+    "c1": [
+     true,
+     false
+    ],
+    "l1": [
+     true,
+     true
+    ],
+    "l3": [
+     false,
+     false
+    ],
+    "p1": [
+     true,
+     true
+    ],
+    "p3": [
+     false,
+     true
+    ],
+    "a1": [
+     true,
+     true
+    ],
+    "a2": [
+     true,
+     true
+    ],
+    "a3": [
+     false,
+     false
+    ],
+    "d1": [
+     false,
+     false
+    ],
+    "d3": [
+     false,
+     false
+    ]
+   },
+   "v5+T": {
+    "t1": [
+     true,
+     true
+    ],
+    "t3": [
+     false,
+     false
+    ],
+    "c1": [
+     true,
+     false
+    ],
+    "l1": [
+     true,
+     true
+    ],
+    "l3": [
+     false,
+     false
+    ],
+    "p1": [
+     true,
+     true
+    ],
+    "p3": [
+     false,
+     true
+    ],
+    "a1": [
+     true,
+     true
+    ],
+    "a2": [
+     true,
+     true
+    ],
+    "a3": [
+     false,
+     false
+    ],
+    "d1": [
+     false,
+     false
+    ],
+    "d3": [
+     false,
+     false
+    ]
+   },
+   "v5+C": {
+    "t1": [
+     true,
+     true
+    ],
+    "t3": [
+     false,
+     false
+    ],
+    "c1": [
+     true,
+     false
+    ],
+    "l1": [
+     true,
+     true
+    ],
+    "l3": [
+     false,
+     false
+    ],
+    "p1": [
+     true,
+     true
+    ],
+    "p3": [
+     false,
+     true
+    ],
+    "a1": [
+     true,
+     true
+    ],
+    "a2": [
+     true,
+     true
+    ],
+    "a3": [
+     false,
+     false
+    ],
+    "d1": [
+     false,
+     false
+    ],
+    "d3": [
+     false,
+     false
+    ]
+   },
+   "v5+T+C": {
+    "t1": [
+     true,
+     true
+    ],
+    "t3": [
+     false,
+     false
+    ],
+    "c1": [
+     true,
+     false
+    ],
+    "l1": [
+     true,
+     true
+    ],
+    "l3": [
+     false,
+     false
+    ],
+    "p1": [
+     true,
+     true
+    ],
+    "p3": [
+     false,
+     true
+    ],
+    "a1": [
+     true,
+     true
+    ],
+    "a2": [
+     true,
+     true
+    ],
+    "a3": [
+     false,
+     false
+    ],
+    "d1": [
+     false,
+     false
+    ],
+    "d3": [
+     false,
+     false
+    ]
+   }
+  },
+  "held-out (evaluation only)": {
+   "v4": {
+    "t2": [
+     true,
+     true
+    ],
+    "c2": [
+     true,
+     false
+    ],
+    "c3": [
+     false,
+     false
+    ],
+    "l2": [
+     true,
+     false
+    ],
+    "l4": [
+     false,
+     false
+    ],
+    "p2": [
+     true,
+     false
+    ],
+    "p4": [
+     false,
+     false
+    ],
+    "d2": [
+     false,
+     false
+    ]
+   },
+   "v5": {
+    "t2": [
+     true,
+     true
+    ],
+    "c2": [
+     true,
+     false
+    ],
+    "c3": [
+     false,
+     false
+    ],
+    "l2": [
+     true,
+     false
+    ],
+    "l4": [
+     false,
+     false
+    ],
+    "p2": [
+     true,
+     false
+    ],
+    "p4": [
+     false,
+     false
+    ],
+    "d2": [
+     false,
+     false
+    ]
+   },
+   "v5+T": {
+    "t2": [
+     true,
+     true
+    ],
+    "c2": [
+     true,
+     false
+    ],
+    "c3": [
+     false,
+     false
+    ],
+    "l2": [
+     true,
+     false
+    ],
+    "l4": [
+     false,
+     false
+    ],
+    "p2": [
+     true,
+     false
+    ],
+    "p4": [
+     false,
+     false
+    ],
+    "d2": [
+     false,
+     false
+    ]
+   },
+   "v5+C": {
+    "t2": [
+     true,
+     true
+    ],
+    "c2": [
+     true,
+     false
+    ],
+    "c3": [
+     false,
+     false
+    ],
+    "l2": [
+     true,
+     false
+    ],
+    "l4": [
+     false,
+     false
+    ],
+    "p2": [
+     true,
+     false
+    ],
+    "p4": [
+     false,
+     false
+    ],
+    "d2": [
+     false,
+     false
+    ]
+   },
+   "v5+T+C": {
+    "t2": [
+     true,
+     true
+    ],
+    "c2": [
+     true,
+     false
+    ],
+    "c3": [
+     false,
+     false
+    ],
+    "l2": [
+     true,
+     false
+    ],
+    "l4": [
+     false,
+     false
+    ],
+    "p2": [
+     true,
+     false
+    ],
+    "p4": [
+     false,
+     false
+    ],
+    "d2": [
+     false,
+     false
+    ]
+   }
+  }
+ },
+ "sentences": [
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q02",
+   "draft": 1,
+   "sentence": 1,
+   "text": "The base Transformer uses eight parallel attention heads [h=8] and each head receives key and value dimensions of 64 (d_k = d_v = d_model/h = 64)【AIAYN:3.2.2:c014】",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q02",
+   "draft": 2,
+   "sentence": 1,
+   "text": "The base Transformer employs eight parallel attention heads, and each head uses key and value dimensions of 64 (d_k = d_v = d_model/h = 64)【AIAYN:3.2.2:c014】",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q04",
+   "draft": 1,
+   "sentence": 1,
+   "text": "Mimi operates at a frame rate of 12.5 Hz, uses 8 quantizers each with a codebook size of 2048, and this configuration yields a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q04",
+   "draft": 2,
+   "sentence": 1,
+   "text": "Mimi uses Q = 8 quantizers, each with a codebook size of N_A = 2048, and at 12.5 Hz this corresponds to a bitrate of 1.1 kbps [MOSHI:3.3.1:c030].",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q06",
+   "draft": 1,
+   "sentence": 1,
+   "text": "Traditional tokenization uses fixed vocabularies that are biased toward high‑resource languages, are fragile when handling adversarial inputs, and perform poorly on character‑level tasks because their static chunking cannot adapt to input content or context【HNET:A:c088】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": true,
+   "draft_ok_v5+T": true,
+   "draft_ok_v5+C": true,
+   "draft_ok_v5+T+C": true
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q06",
+   "draft": 1,
+   "sentence": 2,
+   "text": "The retrieved passages do not state any additional limitation.",
+   "support": "absence_sentence",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": true,
+   "draft_ok_v5+T": true,
+   "draft_ok_v5+C": true,
+   "draft_ok_v5+T+C": true
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q06",
+   "draft": 2,
+   "sentence": 1,
+   "text": "Traditional tokenization relies on fixed vocabularies that exhibit biases toward high‑resource languages, show fragility with adversarial inputs, and yield lower performance on character‑level tasks【HNET:A:c088】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q06",
+   "draft": 2,
+   "sentence": 2,
+   "text": "These limitations stem from the static nature of predefined vocabularies, which cannot adapt their chunking strategies to input content or context【HNET:A:c088】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q06",
+   "draft": 2,
+   "sentence": 3,
+   "text": "The retrieved passages do not state any other limitation.",
+   "support": "absence_sentence",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q07",
+   "draft": 1,
+   "sentence": 1,
+   "text": "The decoder stack adds a third sub‑layer that performs multi‑head attention over the encoder’s output, whereas the encoder stack contains only self‑attention and feed‑forward sub‑layers [AIAYN:3.1:c009].",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q07",
+   "draft": 1,
+   "sentence": 2,
+   "text": "In the decoder’s self‑attention sub‑layer positions are masked so that each position can attend only to earlier positions, preserving the auto‑regressive property, while the encoder’s self‑attention allows every position to attend to all positions in the previous encoder layer [AIAYN:3.2.3:c016].",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q07",
+   "draft": 1,
+   "sentence": 3,
+   "text": "In encoder‑decoder attention layers, the queries are taken from the previous decoder layer, and the keys and values are taken from the output of the encoder [AIAYN:3.2.3:c016].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q07",
+   "draft": 1,
+   "sentence": 4,
+   "text": "The decoder therefore differs by incorporating masked self‑attention and an additional cross‑attention sub‑layer that draws its queries from the decoder and its keys/values from the encoder.",
+   "support": "unsupported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q07",
+   "draft": 2,
+   "sentence": 1,
+   "text": "The decoder stack includes a third sub‑layer that performs multi‑head attention over the encoder output, while the encoder stack does not have this layer [AIAYN:3.1:c009].",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q07",
+   "draft": 2,
+   "sentence": 2,
+   "text": "In encoder self‑attention all queries, keys and values come from the same previous encoder layer [AIAYN:3.2.3:c016].",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q07",
+   "draft": 2,
+   "sentence": 3,
+   "text": "In decoder self‑attention each position can attend only to positions up to and including that position, using masking to prevent leftward information flow [AIAYN:3.2.3:c016].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q07",
+   "draft": 2,
+   "sentence": 4,
+   "text": "Encoder‑decoder attention uses queries from the previous decoder layer and keys and values from the encoder output [AIAYN:3.2.3:c016].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q08",
+   "draft": 1,
+   "sentence": 1,
+   "text": "The authors chose sinusoidal positional encodings because they hypothesized that the sinusoid functions would allow the model to easily learn to attend by relative positions, since for any fixed offset k, PE_{pos+k} can be represented as a linear function of PE_{pos} [AIAYN:3.5:c020].",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q08",
+   "draft": 1,
+   "sentence": 2,
+   "text": "They also noted that the sinusoidal version may enable extrapolation to sequence lengths longer than those seen during training [AIAYN:3.5:c020].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q08",
+   "draft": 1,
+   "sentence": 3,
+   "text": "When they tried learned positional embeddings instead, they observed nearly identical results to the base model, with a dev perplexity of 4.92 and BLEU of 25.7, indicating no significant performance difference [AIAYN:T3:r08][AIAYN:6.2:c031].",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q08",
+   "draft": 2,
+   "sentence": 1,
+   "text": "The authors used sine and cosine functions of different frequencies for positional encodings because they hypothesized that this would allow the model to easily learn to attend by relative positions, since for any fixed offset k, PE_{pos+k} can be represented as a linear function of PE_{pos} [AIAYN:3.5:c020].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q08",
+   "draft": 2,
+   "sentence": 2,
+   "text": "They also chose the sinusoidal version because it may allow the model to extrapolate to sequence lengths longer than those encountered during training [AIAYN:3.5:c020].",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q08",
+   "draft": 2,
+   "sentence": 3,
+   "text": "They experimented with learned positional embeddings instead and found that the two versions produced nearly identical results [AIAYN:3.5:c020].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q08",
+   "draft": 2,
+   "sentence": 4,
+   "text": "In Table 3 row (E) they replaced sinusoidal positional encoding with learned positional embeddings and observed a dev perplexity of 4.92 and BLEU of 25.7, essentially matching the base model [AIAYN:T3:r08][AIAYN:6.2:c031].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q09",
+   "draft": 1,
+   "sentence": 1,
+   "text": "Moshi’s theoretical latency of 160 ms is achieved by the model’s streaming, hierarchical architecture, which is set by pre‑training Moshi with an acoustic delay of 2 and fine‑tuning it with an acoustic delay of 1, resulting in a design latency of 160 ms【MOSHI:5.3:c083】.",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q09",
+   "draft": 1,
+   "sentence": 2,
+   "text": "The paper reports that in practice Moshi runs with a latency of about 200 ms【MOSHI:abstract:c002】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q09",
+   "draft": 1,
+   "sentence": 3,
+   "text": "Natural conversations have an average response time of 230 ms, so Moshi’s practical latency is lower than typical human turn‑taking latency【MOSHI:1:c005】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q09",
+   "draft": 2,
+   "sentence": 1,
+   "text": "Moshi’s theoretical latency of 160 ms is stated in the introduction and abstract, where the streaming hierarchical design is described as having a theoretical latency of 160 ms【MOSHI:1:c005】【MOSHI:abstract:c002】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q09",
+   "draft": 2,
+   "sentence": 2,
+   "text": "The same abstract reports that Moshi’s practical latency is about 200 ms【MOSHI:abstract:c002】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q09",
+   "draft": 2,
+   "sentence": 3,
+   "text": "Natural conversations are reported to have an average latency of 230 ms, which is higher than Moshi’s practical latency【MOSHI:1:c005】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q10",
+   "draft": 1,
+   "sentence": 1,
+   "text": "H‑Net builds its hierarchy by applying dynamic chunking layers that use a routing module to draw content‑dependent chunk boundaries and a downsampler that keeps vectors at those boundaries, thereby creating successive compressed representations of the input sequence【HNET:1:c012】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q10",
+   "draft": 1,
+   "sentence": 2,
+   "text": "The architecture is the first to support dynamic, multi‑stage hierarchies, with its dynamic chunking mechanism explicitly listed as the component that enables a multi‑stage hierarchy【HNET:T6:r03】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q10",
+   "draft": 1,
+   "sentence": 3,
+   "text": "Adding a second stage improves performance: H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), demonstrating that iterated dynamic chunking can learn a nested hierarchy of useful features【HNET:3.1:c049】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q10",
+   "draft": 2,
+   "sentence": 1,
+   "text": "H‑Net’s hierarchy is created by dynamic chunking layers that include a routing module for drawing content‑dependent chunk boundaries and a downsampler that retains vectors at those boundaries, compressing the sequence while preserving semantically important positions【HNET:1:c012】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q10",
+   "draft": 2,
+   "sentence": 2,
+   "text": "The architecture is identified as the first to enable dynamic, multi‑stage hierarchies, with its dynamic chunking mechanism listed as the component that provides a multi‑stage hierarchy【HNET:T6:r03】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q10",
+   "draft": 2,
+   "sentence": 3,
+   "text": "Adding a second stage improves results: H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), showing that iterated dynamic chunking can learn a nested hierarchy of useful features【HNET:3.1:c049】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q12",
+   "draft": 1,
+   "sentence": 1,
+   "text": "Moshi without Inner Monologue achieves 9.2 % accuracy on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": true,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q12",
+   "draft": 1,
+   "sentence": 2,
+   "text": "The retrieved passages do not state the spoken question answering accuracy of Moshi with Inner Monologue.",
+   "support": "absence_sentence",
+   "factual": "false",
+   "v4": true,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": true,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q13",
+   "draft": 1,
+   "sentence": 1,
+   "text": "The 2‑stage H‑Net reaches an average zero‑shot accuracy of 55.5 % when its FLOPs are matched to GPT‑3 Large, compared with the BPE Transformer’s average accuracy of 53.3 % under the same FLOP budget【HNET:T2:r10】【HNET:T2:r01】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q13",
+   "draft": 1,
+   "sentence": 2,
+   "text": "It matches the performance of a larger Transformer that is FLOP‑matched to GPT‑3 XL, which attains an average accuracy of 58.2 %【HNET:T2:r15】.",
+   "support": "unsupported",
+   "factual": "false",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q13",
+   "draft": 2,
+   "sentence": 1,
+   "text": "The 2‑stage H‑Net achieves an average zero‑shot accuracy of 55.5 % when its FLOPs are matched to GPT‑3 Large, while the Transformer matched to GPT‑3 Large attains an average accuracy of 53.3 %【HNET:T2:r10】【HNET:T2:r01】.",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q13",
+   "draft": 2,
+   "sentence": 2,
+   "text": "This 2‑stage H‑Net also matches the performance of a larger Transformer that is FLOP‑matched to GPT‑3 XL, which reaches an average accuracy of 58.2 %【HNET:T2:r15】.",
+   "support": "unsupported",
+   "factual": "false",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q26",
+   "draft": 1,
+   "sentence": 1,
+   "text": "The paper does not claim that H‑Net outperforms every Transformer architecture on every NLP task; it reports that H‑Net models consistently achieve higher performance than the Transformer baseline on many tasks and datasets, but it does not provide evidence of superiority across all Transformer variants and all NLP tasks.",
+   "support": "unsupported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q26",
+   "draft": 1,
+   "sentence": 2,
+   "text": "The retrieved passages do not state that H‑Net outperforms every Transformer architecture on every NLP task.",
+   "support": "absence_sentence",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q26",
+   "draft": 2,
+   "sentence": 1,
+   "text": "The passages report that H‑Net models consistently achieve higher performance than the Transformer baseline on many tasks and datasets, but they do not claim superiority over every Transformer architecture on every NLP task [HNET:3.1:c051][HNET:3.2:c066].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": true,
+   "draft_ok_v5": true,
+   "draft_ok_v5+T": true,
+   "draft_ok_v5+C": true,
+   "draft_ok_v5+T+C": true
+  },
+  {
+   "source": "15-question run (v4 drafts)",
+   "question_id": "q26",
+   "draft": 2,
+   "sentence": 2,
+   "text": "The retrieved passages do not state that H‑Net outperforms every Transformer architecture on every NLP task.",
+   "support": "absence_sentence",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": true,
+   "draft_ok_v5": true,
+   "draft_ok_v5+T": true,
+   "draft_ok_v5+C": true,
+   "draft_ok_v5+T+C": true
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q02",
+   "draft": 1,
+   "sentence": 1,
+   "text": "The base Transformer uses eight parallel attention heads, and each head receives key and value dimensions of 64 (d_k = d_v = d_model / h = 64)【AIAYN:3.2.2:c014】",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q02",
+   "draft": 2,
+   "sentence": 1,
+   "text": "The base Transformer employs eight parallel attention heads, and each head uses key and value dimensions of 64 (d_k = d_v = d_model / h = 64)【AIAYN:3.2.2:c014】",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q10",
+   "draft": 1,
+   "sentence": 1,
+   "text": "H‑Net builds its hierarchy by applying dynamic chunking layers that use a routing module to draw content‑dependent chunk boundaries and a downsampler that retains vectors at those boundaries, thereby creating a multi‑stage representation of the input sequence [HNET:1:c012].",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q10",
+   "draft": 1,
+   "sentence": 2,
+   "text": "The architecture is described as “dynamic, multi‑stage hierarchies” in the ablation table, indicating that the chunking mechanism itself is responsible for constructing the hierarchy rather than static rules [HNET:T6:r03].",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q10",
+   "draft": 1,
+   "sentence": 3,
+   "text": "In the 1‑stage version, H‑Net already learns context‑dependent segmentations that improve over static heuristics [HNET:3.1:c049].",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q10",
+   "draft": 1,
+   "sentence": 4,
+   "text": "When a second dynamic chunking stage is added, performance is “significantly better than H‑Net (1‑stage), validating that iterated dynamic chunking can potentially learn a nested hierarchy of useful features” [HNET:3.1:c049].",
+   "support": "supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q10",
+   "draft": 1,
+   "sentence": 5,
+   "text": "Thus, the hierarchy is built from successive dynamic chunking operations, and the addition of a second stage does help.",
+   "support": "unsupported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q10",
+   "draft": 2,
+   "sentence": 1,
+   "text": "H‑Net’s architecture includes a routing module that dynamically draws chunk boundaries and a downsampler that retains vectors at those boundaries, forming the basis of its hierarchical design [HNET:1:c012].",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q10",
+   "draft": 2,
+   "sentence": 2,
+   "text": "The ablation table lists H‑Net with “dynamic chunking” as its chunking mechanism and a Multi‑stage / Hierarchy value of 51, indicating it builds a multi‑stage hierarchy [HNET:T6:r03].",
+   "support": "unsupported",
+   "factual": "false",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q10",
+   "draft": 2,
+   "sentence": 3,
+   "text": "H‑Net (1‑stage) is reported to be stronger than H‑Net (space), showing that its dynamic chunking learns useful segmentations [HNET:3.1:c049].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q10",
+   "draft": 2,
+   "sentence": 4,
+   "text": "H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), confirming that adding a second dynamic chunking stage improves performance [HNET:3.1:c049].",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q12",
+   "draft": 1,
+   "sentence": 1,
+   "text": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": true,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q12",
+   "draft": 1,
+   "sentence": 2,
+   "text": "The retrieved passages do not state the spoken question answering accuracies of Moshi with Inner Monologue.",
+   "support": "absence_sentence",
+   "factual": "false",
+   "v4": true,
+   "v5": false,
+   "v5+T": false,
+   "v5+C": false,
+   "v5+T+C": false,
+   "draft_ok_v4": true,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": false,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": false
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q12",
+   "draft": 2,
+   "sentence": 1,
+   "text": "Moshi without Inner Monologue achieves 9.2 % on Web Questions, 21.0 % on Llama Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02].",
+   "support": "supported",
+   "factual": "true",
+   "v4": true,
+   "v5": true,
+   "v5+T": true,
+   "v5+C": true,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": true,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": true
+  },
+  {
+   "source": "live v5 run",
+   "question_id": "q12",
+   "draft": 2,
+   "sentence": 2,
+   "text": "Moshi with Inner Monologue achieves 26.6 % on Web Questions, 62.3 % on Llama Questions, and 22.8 % on Audio TriviaQA [MOSHI:T8:r01].",
+   "support": "partly_supported",
+   "factual": "true",
+   "v4": false,
+   "v5": false,
+   "v5+T": true,
+   "v5+C": false,
+   "v5+T+C": true,
+   "draft_ok_v4": false,
+   "draft_ok_v5": false,
+   "draft_ok_v5+T": true,
+   "draft_ok_v5+C": false,
+   "draft_ok_v5+T+C": true
+  }
+ ]
+}

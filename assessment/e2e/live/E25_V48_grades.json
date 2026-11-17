@@ -1,0 +1,17 @@
+{"about": "Grades against the papers (ASSISTANT grades, not independent). Run: c6 + R3b + p7 + v4.8c, setting B, the 25 frozen questions, 2026-11-14 (E25_V48/). 41 requests, 93,658 tokens (cap 95,000); completed (no 429). Production unchanged.",
+ "grades": {
+  "q16": {"grade": "correctly_refused"}, "q20": {"grade": "correctly_refused"}, "q22": {"grade": "correctly_refused"}, "q27": {"grade": "correctly_refused"}, "q30": {"grade": "correctly_refused"},
+  "q02": {"grade": "correct_and_fully_supported", "why": "h=8, d_k=d_v=d_model/h=64"},
+  "q03": {"grade": "correct_and_fully_supported", "why": "time-aligned text tokens before audio tokens; factuality and linguistic quality; almost triples accuracy"},
+  "q04": {"grade": "correct_and_fully_supported", "why": "Q = 8, N_A = 2048, 12.5 Hz, 1.1 kbps"},
+  "q05": {"grade": "correct_and_fully_supported", "why": "cosine similarity of adjacent encoder outputs (q_t, k_(t-1)); p_t = 1/2 (1 - cos); b_t = 1 when p_t >= 0.5; p_1 = 1.0 (HNET:1:c007, 2.2.1:c023). First time answered in any run"},
+  "q06": {"grade": "partially_correct", "why": "real tokenization limitations (HNET:A:c088), not the stated motivation"},
+  "q09": {"grade": "partially_correct", "why": "delay 2 -> 1 gives 160 ms; 200 ms in practice; 160 below 230 ms; misses the 80 ms frame; ends with a hedge that the passages do not compare 200 with 230 numerically"},
+  "q10": {"grade": "partially_correct", "why": "two-stage design with the second stage chunking the compressed representation (nested hierarchy); 2-stage significantly better than 1-stage; misses encoder / main network / decoder"},
+  "q11": {"grade": "partially_correct", "why": "h=1 dev BLEU 24.9 (AIAYN:T3:r02); honest 'base BLEU not stated' (base row AIAYN:T3:r01 not retrieved, so the absence is legitimate and fix 2 correctly lets it stand). First time answered"},
+  "q13": {"grade": "correct_and_fully_supported", "why": "55.5 vs 53.3 at GPT-3 Large; Transformer at GPT-3 XL 55.5"},
+  "q14": {"grade": "partially_correct", "why": "byte-pair encoding, ~37000 shared vocabulary (AIAYN:5.1:c025); H-Net byte-level; misses the 32000 word-piece vocabulary; also lists H-Net's Transformer baselines' tokenizers (GPT-2, Llama-3), true but potentially confusing"},
+  "q15": {"grade": "correct_and_fully_supported"},
+  "t01": {"grade": "correct_and_fully_supported"}, "t05": {"grade": "correct_and_fully_supported", "why": "64.0 +/- 1.7"}, "t13": {"grade": "correct_and_fully_supported", "why": "36.8"},
+  "q01": {"grade": "incorrectly_refused"}, "q07": {"grade": "incorrectly_refused"}, "q08": {"grade": "incorrectly_refused"},
+  "q12": {"grade": "incorrectly_refused"}, "t10": {"grade": "incorrectly_refused", "why": "safe decline; retrieval"}, "t29": {"grade": "incorrectly_refused", "why": "safe decline; gold row not retrieved on c6"}}}

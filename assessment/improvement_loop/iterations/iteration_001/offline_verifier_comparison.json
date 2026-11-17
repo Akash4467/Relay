@@ -1,0 +1,2604 @@
+{
+ "threshold": 0.9,
+ "candidate": "relay.candidate_v4_3.verifier",
+ "stress": {
+  "eval/verifier_stress.jsonl": {
+   "n": 40,
+   "confusion": {
+    "v4.2": {
+     "supported_accepted": 13,
+     "supported_rejected": 7,
+     "unsupported_accepted": 1,
+     "unsupported_rejected": 19
+    },
+    "v4.3c": {
+     "supported_accepted": 13,
+     "supported_rejected": 7,
+     "unsupported_accepted": 1,
+     "unsupported_rejected": 19
+    }
+   },
+   "changed": [],
+   "rows": [
+    {
+     "pair_id": "s01",
+     "supported": true,
+     "category": "exact",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9955165718787848
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9948058033096403
+     }
+    },
+    {
+     "pair_id": "s02",
+     "supported": true,
+     "category": "exact",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.4134437866313141
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.03988075758344895
+     }
+    },
+    {
+     "pair_id": "s03",
+     "supported": true,
+     "category": "exact",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9926027427777924
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9937132041105827
+     }
+    },
+    {
+     "pair_id": "u01",
+     "supported": false,
+     "category": "exact",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.013196812212236
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.02066521161716267
+     }
+    },
+    {
+     "pair_id": "u02",
+     "supported": false,
+     "category": "exact",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0003099525212577816
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.00029629967445536783
+     }
+    },
+    {
+     "pair_id": "s04",
+     "supported": true,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9913105839696797
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9628679785761393
+     }
+    },
+    {
+     "pair_id": "s05",
+     "supported": true,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9494736037502489
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9677014822734705
+     }
+    },
+    {
+     "pair_id": "s06",
+     "supported": true,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9668222802504077
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9753638878661096
+     }
+    },
+    {
+     "pair_id": "s07",
+     "supported": true,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9577267442106547
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9573969243957791
+     }
+    },
+    {
+     "pair_id": "u03",
+     "supported": false,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.00018687191010664854
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.00030583624561524394
+     }
+    },
+    {
+     "pair_id": "u04",
+     "supported": false,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 9.366396659254998e-05
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0001114782885973924
+     }
+    },
+    {
+     "pair_id": "s08",
+     "supported": true,
+     "category": "technical_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.03287294558643281
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0483377611780618
+     }
+    },
+    {
+     "pair_id": "s09",
+     "supported": true,
+     "category": "technical_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.2305494202625093
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.25157948650702594
+     }
+    },
+    {
+     "pair_id": "s10",
+     "supported": true,
+     "category": "technical_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9913329185637502
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9929148039089714
+     }
+    },
+    {
+     "pair_id": "u05",
+     "supported": false,
+     "category": "technical_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.026275993497291365
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.04187316825589327
+     }
+    },
+    {
+     "pair_id": "u06",
+     "supported": false,
+     "category": "technical_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.07338485413719655
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.09593483542569467
+     }
+    },
+    {
+     "pair_id": "s11",
+     "supported": true,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.7685323603968693
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.8129147663023364
+     }
+    },
+    {
+     "pair_id": "s12",
+     "supported": true,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.5610921222879213
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.7760702069821633
+     }
+    },
+    {
+     "pair_id": "s13",
+     "supported": true,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9946616516200272
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9901974367464532
+     }
+    },
+    {
+     "pair_id": "u07",
+     "supported": false,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.030805280525457092
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.02754325649598062
+     }
+    },
+    {
+     "pair_id": "u08",
+     "supported": false,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9865556348934182
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9829878417821939
+     }
+    },
+    {
+     "pair_id": "s14",
+     "supported": true,
+     "category": "numerical",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.28909579486398534
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.1550356484403615
+     }
+    },
+    {
+     "pair_id": "s15",
+     "supported": true,
+     "category": "numerical",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9908470568259587
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9922453124185698
+     }
+    },
+    {
+     "pair_id": "u09",
+     "supported": false,
+     "category": "numerical",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0019961026058466203
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.006512081616417372
+     }
+    },
+    {
+     "pair_id": "u10",
+     "supported": false,
+     "category": "numerical",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0007410772061840616
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0008567701047497007
+     }
+    },
+    {
+     "pair_id": "u11",
+     "supported": false,
+     "category": "numerical",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.016347057450025078
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.030381698815731606
+     }
+    },
+    {
+     "pair_id": "u12",
+     "supported": false,
+     "category": "numerical",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.004111014420830316
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.007055613342670855
+     }
+    },
+    {
+     "pair_id": "s16",
+     "supported": true,
+     "category": "attribution",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.6008232178523895
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.44697082609035194
+     }
+    },
+    {
+     "pair_id": "s17",
+     "supported": true,
+     "category": "attribution",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9790731068543457
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9757344928605881
+     }
+    },
+    {
+     "pair_id": "u13",
+     "supported": false,
+     "category": "attribution",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.001347652296547869
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.001115037088753293
+     }
+    },
+    {
+     "pair_id": "u14",
+     "supported": false,
+     "category": "attribution",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0036388844381416985
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0036554638201946998
+     }
+    },
+    {
+     "pair_id": "u15",
+     "supported": false,
+     "category": "attribution",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.001230608286684046
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.000999063929639971
+     }
+    },
+    {
+     "pair_id": "s18",
+     "supported": true,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9947701825166632
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9947659776964254
+     }
+    },
+    {
+     "pair_id": "s19",
+     "supported": true,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9975433160972906
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9971463096681706
+     }
+    },
+    {
+     "pair_id": "s20",
+     "supported": true,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9749373602953342
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9730565248514078
+     }
+    },
+    {
+     "pair_id": "u16",
+     "supported": false,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.00045541275354853497
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0005454640524114487
+     }
+    },
+    {
+     "pair_id": "u17",
+     "supported": false,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.008789176388777561
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.024201900024560585
+     }
+    },
+    {
+     "pair_id": "u18",
+     "supported": false,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.00019480164841683377
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.00027930218881586983
+     }
+    },
+    {
+     "pair_id": "u19",
+     "supported": false,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.012939086296455694
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.02201585859461108
+     }
+    },
+    {
+     "pair_id": "u20",
+     "supported": false,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.001992788187332981
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0023993030811033014
+     }
+    }
+   ]
+  },
+  "eval/verifier_stress_v2.jsonl": {
+   "n": 40,
+   "confusion": {
+    "v4.2": {
+     "supported_accepted": 12,
+     "supported_rejected": 8,
+     "unsupported_accepted": 1,
+     "unsupported_rejected": 19
+    },
+    "v4.3c": {
+     "supported_accepted": 13,
+     "supported_rejected": 7,
+     "unsupported_accepted": 1,
+     "unsupported_rejected": 19
+    }
+   },
+   "changed": [
+    {
+     "pair_id": "s05",
+     "supported": true,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9539965893103771
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.8090262097742631
+     }
+    },
+    {
+     "pair_id": "s13",
+     "supported": true,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8230939517598785
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9589114865254639
+     }
+    },
+    {
+     "pair_id": "s16",
+     "supported": true,
+     "category": "attribution",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8758883960202168
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9828213325215305
+     }
+    }
+   ],
+   "rows": [
+    {
+     "pair_id": "s01",
+     "supported": true,
+     "category": "exact",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.21190921513669705
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.28282522616669103
+     }
+    },
+    {
+     "pair_id": "s02",
+     "supported": true,
+     "category": "exact",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.5919199062958982
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.6586655312249341
+     }
+    },
+    {
+     "pair_id": "s03",
+     "supported": true,
+     "category": "exact",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9975462320098775
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9970240649568517
+     }
+    },
+    {
+     "pair_id": "u01",
+     "supported": false,
+     "category": "exact",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.01841249454778703
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.05700272794311768
+     }
+    },
+    {
+     "pair_id": "u02",
+     "supported": false,
+     "category": "exact",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.00020487792147537697
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.00022626558023107954
+     }
+    },
+    {
+     "pair_id": "s04",
+     "supported": true,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9739339898148694
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9606636601451805
+     }
+    },
+    {
+     "pair_id": "s05",
+     "supported": true,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9539965893103771
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.8090262097742631
+     }
+    },
+    {
+     "pair_id": "s06",
+     "supported": true,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9978924262154342
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9976585248130535
+     }
+    },
+    {
+     "pair_id": "s07",
+     "supported": true,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9965971429777505
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9971487625281007
+     }
+    },
+    {
+     "pair_id": "u03",
+     "supported": false,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.25299612900558077
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.4319754671993226
+     }
+    },
+    {
+     "pair_id": "u04",
+     "supported": false,
+     "category": "semantic_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0011930233258593936
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0008497117523155018
+     }
+    },
+    {
+     "pair_id": "s08",
+     "supported": true,
+     "category": "technical_paraphrase",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9270510053719133
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9454642661658766
+     }
+    },
+    {
+     "pair_id": "s09",
+     "supported": true,
+     "category": "technical_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.005626337511782054
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.004932456237263101
+     }
+    },
+    {
+     "pair_id": "s10",
+     "supported": true,
+     "category": "technical_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8398537273814572
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.7706810193483898
+     }
+    },
+    {
+     "pair_id": "u05",
+     "supported": false,
+     "category": "technical_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8598608736371461
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.8750662076701403
+     }
+    },
+    {
+     "pair_id": "u06",
+     "supported": false,
+     "category": "technical_paraphrase",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.005763228251626051
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.008226927112719492
+     }
+    },
+    {
+     "pair_id": "s11",
+     "supported": true,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9938153909788292
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9962098290168492
+     }
+    },
+    {
+     "pair_id": "s12",
+     "supported": true,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.781823509116316
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.8175396115271545
+     }
+    },
+    {
+     "pair_id": "s13",
+     "supported": true,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8230939517598785
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9589114865254639
+     }
+    },
+    {
+     "pair_id": "u07",
+     "supported": false,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8557969459518665
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.800830794451911
+     }
+    },
+    {
+     "pair_id": "u08",
+     "supported": false,
+     "category": "implicit_entity",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9634529635440069
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9631359936845378
+     }
+    },
+    {
+     "pair_id": "s14",
+     "supported": true,
+     "category": "numerical",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9992971381330045
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9991131101983047
+     }
+    },
+    {
+     "pair_id": "s15",
+     "supported": true,
+     "category": "numerical",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9613829797860288
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9615933940218174
+     }
+    },
+    {
+     "pair_id": "u09",
+     "supported": false,
+     "category": "numerical",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0009441439477266716
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0014091282629494092
+     }
+    },
+    {
+     "pair_id": "u10",
+     "supported": false,
+     "category": "numerical",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0028908046710782987
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0030833433353905245
+     }
+    },
+    {
+     "pair_id": "u11",
+     "supported": false,
+     "category": "numerical",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.018634387130851485
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.023985421180993192
+     }
+    },
+    {
+     "pair_id": "u12",
+     "supported": false,
+     "category": "numerical",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.003320050875464115
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.003070372196321913
+     }
+    },
+    {
+     "pair_id": "s16",
+     "supported": true,
+     "category": "attribution",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8758883960202168
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9828213325215305
+     }
+    },
+    {
+     "pair_id": "s17",
+     "supported": true,
+     "category": "attribution",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.912659239503676
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.954815863423084
+     }
+    },
+    {
+     "pair_id": "u13",
+     "supported": false,
+     "category": "attribution",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.001614114729456596
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0019890465927064945
+     }
+    },
+    {
+     "pair_id": "u14",
+     "supported": false,
+     "category": "attribution",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0013567221783358405
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.001064501329350511
+     }
+    },
+    {
+     "pair_id": "u15",
+     "supported": false,
+     "category": "attribution",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.7802782563545549
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.7912073507676106
+     }
+    },
+    {
+     "pair_id": "s18",
+     "supported": true,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9940503516305667
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9872306581374305
+     }
+    },
+    {
+     "pair_id": "s19",
+     "supported": true,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.5854756874653299
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.5288234145269634
+     }
+    },
+    {
+     "pair_id": "s20",
+     "supported": true,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9960390737257064
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9975415567345018
+     }
+    },
+    {
+     "pair_id": "u16",
+     "supported": false,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.297391357378563
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.11255718987258605
+     }
+    },
+    {
+     "pair_id": "u17",
+     "supported": false,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.00015049180512095587
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.00017273687896543187
+     }
+    },
+    {
+     "pair_id": "u18",
+     "supported": false,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.042024078748236056
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0509175281872914
+     }
+    },
+    {
+     "pair_id": "u19",
+     "supported": false,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.01320231954875537
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.030795085814783987
+     }
+    },
+    {
+     "pair_id": "u20",
+     "supported": false,
+     "category": "experimental_added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0009088876874974978
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0011278573063804268
+     }
+    }
+   ]
+  },
+  "eval/verifier_v2_stress.jsonl": {
+   "n": 20,
+   "confusion": {
+    "v4.2": {
+     "supported_accepted": 6,
+     "supported_rejected": 4,
+     "unsupported_accepted": 1,
+     "unsupported_rejected": 9
+    },
+    "v4.3c": {
+     "supported_accepted": 5,
+     "supported_rejected": 5,
+     "unsupported_accepted": 1,
+     "unsupported_rejected": 9
+    }
+   },
+   "changed": [
+    {
+     "pair_id": "l1",
+     "supported": true,
+     "category": "latex",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9116913950698102
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.8958869750493856
+     }
+    }
+   ],
+   "rows": [
+    {
+     "pair_id": "t1",
+     "supported": true,
+     "category": "table_row",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.970812049583109
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.970812049583109
+     }
+    },
+    {
+     "pair_id": "t2",
+     "supported": true,
+     "category": "table_row",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9896889763293556
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9896889763293556
+     }
+    },
+    {
+     "pair_id": "t3",
+     "supported": false,
+     "category": "table_row",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "c1",
+     "supported": true,
+     "category": "comparison",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.49320096987140555
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.49320096987140555
+     }
+    },
+    {
+     "pair_id": "c2",
+     "supported": true,
+     "category": "comparison",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.09671502905199623
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.09671502905199623
+     }
+    },
+    {
+     "pair_id": "c3",
+     "supported": false,
+     "category": "comparison",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8168735108530641
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.8168735108530641
+     }
+    },
+    {
+     "pair_id": "l1",
+     "supported": true,
+     "category": "latex",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9116913950698102
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.8958869750493856
+     }
+    },
+    {
+     "pair_id": "l2",
+     "supported": true,
+     "category": "latex",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "l3",
+     "supported": false,
+     "category": "latex",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.739145463552047
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.7185542035708956
+     }
+    },
+    {
+     "pair_id": "l4",
+     "supported": false,
+     "category": "latex",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "p1",
+     "supported": true,
+     "category": "pronoun",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9979512229465253
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9978514503602751
+     }
+    },
+    {
+     "pair_id": "p2",
+     "supported": true,
+     "category": "pronoun",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.5972821784021707
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.7507716841181183
+     }
+    },
+    {
+     "pair_id": "p3",
+     "supported": false,
+     "category": "pronoun",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9957099206310216
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9952840039969624
+     }
+    },
+    {
+     "pair_id": "p4",
+     "supported": false,
+     "category": "pronoun",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.08090182372116425
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.1529327581293479
+     }
+    },
+    {
+     "pair_id": "a1",
+     "supported": true,
+     "category": "absence",
+     "v4.2": {
+      "ok": true,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "a2",
+     "supported": true,
+     "category": "absence",
+     "v4.2": {
+      "ok": true,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "a3",
+     "supported": false,
+     "category": "absence",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "d1",
+     "supported": false,
+     "category": "added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.020116637623330755
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.020116637623330755
+     }
+    },
+    {
+     "pair_id": "d2",
+     "supported": false,
+     "category": "added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0011284857802111975
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0011284857802111975
+     }
+    },
+    {
+     "pair_id": "d3",
+     "supported": false,
+     "category": "added",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.002904471479762984
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0033517473148244976
+     }
+    }
+   ]
+  },
+  "eval/verifier_v3_eval.jsonl": {
+   "n": 42,
+   "confusion": {
+    "v4.2": {
+     "supported_accepted": 16,
+     "supported_rejected": 2,
+     "unsupported_accepted": 2,
+     "unsupported_rejected": 22
+    },
+    "v4.3c": {
+     "supported_accepted": 16,
+     "supported_rejected": 2,
+     "unsupported_accepted": 2,
+     "unsupported_rejected": 22
+    }
+   },
+   "changed": [],
+   "rows": [
+    {
+     "pair_id": "d1",
+     "supported": true,
+     "category": "direct",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9950630429555986
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9938918853162183
+     }
+    },
+    {
+     "pair_id": "d2",
+     "supported": true,
+     "category": "direct",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9978589765893344
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9966124126517731
+     }
+    },
+    {
+     "pair_id": "d3",
+     "supported": true,
+     "category": "direct",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9970088242664562
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9964805788252046
+     }
+    },
+    {
+     "pair_id": "d4",
+     "supported": true,
+     "category": "direct",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9917050361500127
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9762366343907354
+     }
+    },
+    {
+     "pair_id": "d5",
+     "supported": true,
+     "category": "direct",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.965175513986431
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9901976296251015
+     }
+    },
+    {
+     "pair_id": "d6",
+     "supported": true,
+     "category": "direct",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9943652070885021
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.995583816307794
+     }
+    },
+    {
+     "pair_id": "m1",
+     "supported": true,
+     "category": "math",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9857238060293243
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9847080756419634
+     }
+    },
+    {
+     "pair_id": "m2",
+     "supported": false,
+     "category": "math",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "m3",
+     "supported": true,
+     "category": "math",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9688302690167516
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9686782709227313
+     }
+    },
+    {
+     "pair_id": "m4",
+     "supported": true,
+     "category": "math",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8741746852742589
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.7894537741445019
+     }
+    },
+    {
+     "pair_id": "m5",
+     "supported": true,
+     "category": "math",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.978555353677429
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9774636354016591
+     }
+    },
+    {
+     "pair_id": "m6",
+     "supported": false,
+     "category": "math",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "t1",
+     "supported": true,
+     "category": "table",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9796102195473028
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9796102195473028
+     }
+    },
+    {
+     "pair_id": "t2",
+     "supported": false,
+     "category": "table",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "t3",
+     "supported": true,
+     "category": "table",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9806951974987279
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9806951974987279
+     }
+    },
+    {
+     "pair_id": "t4",
+     "supported": true,
+     "category": "table",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9867072231018403
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9867072231018403
+     }
+    },
+    {
+     "pair_id": "t5",
+     "supported": true,
+     "category": "table",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9848984765391601
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9848984765391601
+     }
+    },
+    {
+     "pair_id": "t6",
+     "supported": false,
+     "category": "table",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "p1",
+     "supported": true,
+     "category": "pronoun",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9955331789395969
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9957042530130265
+     }
+    },
+    {
+     "pair_id": "p2",
+     "supported": false,
+     "category": "pronoun",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.00017346422670099748
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0002768653451207309
+     }
+    },
+    {
+     "pair_id": "p3",
+     "supported": true,
+     "category": "pronoun",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9724640148641753
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9836007380945848
+     }
+    },
+    {
+     "pair_id": "p4",
+     "supported": true,
+     "category": "pronoun",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.7188112431326018
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.6009865923798652
+     }
+    },
+    {
+     "pair_id": "p5",
+     "supported": true,
+     "category": "pronoun",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9872741167472777
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9815924773973965
+     }
+    },
+    {
+     "pair_id": "p6",
+     "supported": false,
+     "category": "pronoun",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0007334684051729479
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.001017243474613217
+     }
+    },
+    {
+     "pair_id": "k1",
+     "supported": false,
+     "category": "compound",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.019697725480702373
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.02025121690028778
+     }
+    },
+    {
+     "pair_id": "k2",
+     "supported": false,
+     "category": "compound",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.001240971834096019
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0014054847084335642
+     }
+    },
+    {
+     "pair_id": "k3",
+     "supported": false,
+     "category": "compound",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.01797541447499635
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.017986053794886814
+     }
+    },
+    {
+     "pair_id": "k4",
+     "supported": false,
+     "category": "compound",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0023982006263576524
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0035318092025427733
+     }
+    },
+    {
+     "pair_id": "k5",
+     "supported": false,
+     "category": "compound",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0005280615625985657
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0007095995831594653
+     }
+    },
+    {
+     "pair_id": "k6",
+     "supported": false,
+     "category": "compound",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0018473329855335989
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0019313840103601066
+     }
+    },
+    {
+     "pair_id": "n1",
+     "supported": false,
+     "category": "numeric",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0013434026827079213
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0027980121577645474
+     }
+    },
+    {
+     "pair_id": "n2",
+     "supported": false,
+     "category": "numeric",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "n3",
+     "supported": false,
+     "category": "numeric",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.0011410652028449968
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.0010423213257117028
+     }
+    },
+    {
+     "pair_id": "n4",
+     "supported": false,
+     "category": "numeric",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.006845909538167757
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.006845909538167757
+     }
+    },
+    {
+     "pair_id": "n5",
+     "supported": false,
+     "category": "numeric",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "n6",
+     "supported": false,
+     "category": "numeric",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.5145855460392212
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": 0.5145855460392212
+     }
+    },
+    {
+     "pair_id": "a1",
+     "supported": false,
+     "category": "absence",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "a2",
+     "supported": false,
+     "category": "absence",
+     "v4.2": {
+      "ok": true,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "a3",
+     "supported": false,
+     "category": "absence",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "a4",
+     "supported": false,
+     "category": "absence",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "a5",
+     "supported": false,
+     "category": "absence",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "a6",
+     "supported": false,
+     "category": "absence",
+     "v4.2": {
+      "ok": true,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": null
+     }
+    }
+   ]
+  },
+  "eval/verifier_v3b_targeted.jsonl": {
+   "n": 18,
+   "confusion": {
+    "v4.2": {
+     "supported_accepted": 7,
+     "supported_rejected": 1,
+     "unsupported_accepted": 1,
+     "unsupported_rejected": 9
+    },
+    "v4.3c": {
+     "supported_accepted": 8,
+     "supported_rejected": 0,
+     "unsupported_accepted": 1,
+     "unsupported_rejected": 9
+    }
+   },
+   "changed": [
+    {
+     "pair_id": "f2",
+     "supported": true,
+     "category": "formula_supported",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8960670420637272
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9039409879761233
+     }
+    }
+   ],
+   "rows": [
+    {
+     "pair_id": "f1",
+     "supported": true,
+     "category": "formula_supported",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9612282279531107
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9463917182088839
+     }
+    },
+    {
+     "pair_id": "f2",
+     "supported": true,
+     "category": "formula_supported",
+     "v4.2": {
+      "ok": false,
+      "entailment": 0.8960670420637272
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9039409879761233
+     }
+    },
+    {
+     "pair_id": "f3",
+     "supported": true,
+     "category": "formula_supported",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9856468817203665
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.98914619503986
+     }
+    },
+    {
+     "pair_id": "f4",
+     "supported": true,
+     "category": "formula_supported",
+     "v4.2": {
+      "ok": true,
+      "entailment": 0.9494091649344074
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": 0.9212816229696325
+     }
+    },
+    {
+     "pair_id": "f5",
+     "supported": false,
+     "category": "formula_wrong",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "f6",
+     "supported": false,
+     "category": "formula_wrong",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "f7",
+     "supported": false,
+     "category": "formula_wrong",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "f8",
+     "supported": false,
+     "category": "formula_wrong",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "f9",
+     "supported": false,
+     "category": "formula_wrong",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "s1",
+     "supported": true,
+     "category": "absence_supported",
+     "v4.2": {
+      "ok": true,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "s2",
+     "supported": true,
+     "category": "absence_supported",
+     "v4.2": {
+      "ok": true,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "s3",
+     "supported": true,
+     "category": "absence_supported",
+     "v4.2": {
+      "ok": true,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "s4",
+     "supported": true,
+     "category": "absence_supported",
+     "v4.2": {
+      "ok": true,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "u1",
+     "supported": false,
+     "category": "absence_contradicted",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "u2",
+     "supported": false,
+     "category": "absence_contradicted",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "u3",
+     "supported": false,
+     "category": "absence_contradicted",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "u4",
+     "supported": false,
+     "category": "absence_contradicted",
+     "v4.2": {
+      "ok": false,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": false,
+      "entailment": null
+     }
+    },
+    {
+     "pair_id": "u5",
+     "supported": false,
+     "category": "absence_contradicted",
+     "v4.2": {
+      "ok": true,
+      "entailment": null
+     },
+     "v4.3c": {
+      "ok": true,
+      "entailment": null
+     }
+    }
+   ]
+  }
+ },
+ "live_replay": [
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "q01",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "Recurrent models compute hidden states h_t as a function of the previous hidden state h_t‑1 and the input at position t, which makes their computation inherently sequential and thus precludes parallelization within training examples [AIAYN:1:c002]. This sequential nature becomes especially problematic for longer sequences because memory constraints then limit the ability to batch across examples, making the lack of parallelism more costly [AIAYN:1:c002]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "q01",
+   "draft": 1,
+   "recorded_ok": true,
+   "v4.2": true,
+   "v4.3c": true,
+   "label": "correct",
+   "text": "Recurrent models generate hidden states h_t from the previous hidden state h_t‑1 and the input at position t, which makes their computation inherently sequential and prevents parallelization within training examples [AIAYN:1:c002]. This lack of parallelism becomes critical at longer sequence lengths, where memory constraints limit batching across examples [AIAYN:1:c002]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "q02",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "correct",
+   "text": "The base Transformer employs eight parallel attention heads, and each head receives key and value dimensions of 64 [AIAYN:3.2.2:c014]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "q02",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "correct",
+   "text": "The model uses h = 8 parallel attention heads, and for each head the key and value dimensions are d_k = d_v = 64 [AIAYN:3.2.2:c014]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "q07",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "The decoder stack adds a third sub‑layer that performs multi‑head attention over the encoder’s output, whereas the encoder stack contains only self‑attention sub‑layers that attend to its own previous layer outputs [AIAYN:3.1:c009][AIAYN:3.2.3:c016]. In the encoder‑decoder attention, the queries are taken from the preceding decoder layer, while the keys and values are taken from the encoder’s output representations [AIAYN:3.2.3:c016]. The decoder also masks its self‑attention to prevent positions from attending to subsequent positions, preserving the auto‑regressive property [AIAYN:3.2.3:c016][AIAYN:3.1:c009]. The encoder’s self‑attention uses the same source for queries, keys, and values—the output of its previous encoder layer [AIAYN:3.2.3:c016]. The retrieved passages do not state any additional architectural differences beyond these points."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "q07",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "The decoder stack includes an additional sub‑layer that performs multi‑head attention over the encoder’s output, while the encoder stack consists only of self‑attention sub‑layers [AIAYN:3.1:c009]. In encoder‑decoder attention the queries come from the previous decoder layer and the keys and values come from the encoder’s output [AIAYN:3.2.3:c016]. Self‑attention in the encoder uses the same source for queries, keys and values—the output of the previous encoder layer [AIAYN:3.2.3:c016]. In the decoder, self‑attention is masked to prevent positions from attending to subsequent positions, preserving the auto‑regressive property [AIAYN:3.2.3:c016]. The retrieved passages do not state any further differences between encoder and decoder."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "q11",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "The single‑head attention configuration (h = 1) achieved a development BLEU of 24.9 [AIAYN:T3:r02]. The base configuration achieved a development BLEU of 25.8 [AIAYN:T3:r02]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "q15",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "correct",
+   "text": "The original Transformer was trained on eight NVIDIA P100 GPUs [AIAYN:5.2:c026][AIAYN:1:c003]. Moshi was trained on H100 GPUs [MOSHI:4.4:c062]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "q15",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "correct",
+   "text": "The original Transformer was trained on eight NVIDIA P100 GPUs [AIAYN:5.2:c026]. Moshi was trained on H100 GPUs [MOSHI:4.4:c062]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "t01",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "wrong",
+   "text": "The table marks the Autoregressive entry for ByT5 with a check mark (✓) [HNET:T6:r01]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "t05",
+   "draft": 0,
+   "recorded_ok": true,
+   "v4.2": true,
+   "v4.3c": true,
+   "label": "wrong",
+   "text": "The configuration with a check mark in all five component columns obtains a MUSHRA score of 65.9±1.7 %[MOSHI:T3:r01]"
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "t13",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "wrong",
+   "text": "The row with acoustic delay [0, 2, 2, 2, 2, 2, 2, 2] that has a check mark under RQ‑Transformer reports a perplexity of 135.4 [MOSHI:T5:r01]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "t29",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "unsupported",
+   "text": "The configuration with no marks in any of the five component columns reports an ABX error of 31.3% [MOSHI:T17:r01]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/phase12_c3_reused",
+   "question_id": "t29",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "unsupported",
+   "text": "The configuration with no marks in any of the five component columns reports an ABX error of 31.3% [MOSHI:T17:r01]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q03",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "Inner Monologue is a new training and inference setup for audio language models that predicts time‑aligned text tokens before audio tokens, using text tokens as a per‑timestep prefix to the semantic token [MOSHI:1:c007]. It significantly improves the factuality and linguistic quality of generated speech [MOSHI:1:c007] and almost triples Moshi’s accuracy on spoken question‑answering benchmarks, markedly raising performance over prior work while only marginally increasing inference cost [MOSHI:5.5:c091]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q03",
+   "draft": 1,
+   "recorded_ok": true,
+   "v4.2": true,
+   "v4.3c": false,
+   "label": "correct",
+   "text": "Inner Monologue is a new training and inference setup for audio language models that significantly improves the factuality and linguistic quality of generated speech by predicting time‑aligned text tokens before audio tokens [MOSHI:1:c007]. It almost triples Moshi’s accuracy on spoken question‑answering benchmarks, markedly improving performance over previous work while only marginally increasing inference cost [MOSHI:5.5:c091]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q04",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "correct",
+   "text": "Mimi operates at a frame rate of 12.5 Hz, uses 8 quantizers each with a codebook size of 2048, and this configuration yields a bitrate of 1.1 kbps [MOSHI:3.3.1:c030]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q04",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "correct",
+   "text": "Mimi uses 8 quantizers each with a codebook size of 2048, operates at 12.5 Hz, and this configuration corresponds to a bitrate of 1.1 kbps [MOSHI:3.3.1:c030]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q05",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "uncertain",
+   "text": "The routing module measures the similarity between adjacent encoder outputs by computing cosine similarity of learned query and key projections for each position, forming a boundary probability p_t = ½ (1 − (q_t^⊤ k_{t‑1})/(‖q_t‖‖k_{t‑1}‖)) that lies in [0, 1] [HNET:2.2.1:c023]. A hard boundary indicator b_t is then set to 1 when p_t ≥ 0.5 and 0 otherwise, with p_1 defined as 1.0 to start the sequence with a boundary [HNET:2.2.1:c023]. The module therefore places chunk boundaries at positions where the cosine similarity between consecutive representations drops enough to make p_t ≥ 0.5, reflecting a contextual or semantic shift [HNET:2.2.1:c023]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q05",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "correct",
+   "text": "The routing module computes cosine similarity between adjacent encoder outputs by projecting each output \\hat{x}_t to a query q_t = W_q \\hat{x}_t and a key k_t = W_k \\hat{x}_t, then forms a boundary probability p_t = ½ (1 − (q_t^⊤ k_{t‑1})/(‖q_t‖‖k_{t‑1}‖)) which lies in [0, 1] [HNET:2.2.1:c023]. It then creates a hard boundary indicator b_t by setting b_t = 1 if p_t ≥ 0.5 and 0 otherwise, with p_1 defined as 1.0 to start the sequence with a boundary [HNET:2.2.1:c023]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q06",
+   "draft": 0,
+   "recorded_ok": true,
+   "v4.2": true,
+   "v4.3c": true,
+   "label": "correct",
+   "text": "Traditional tokenization uses fixed vocabularies that are biased toward high‑resource languages, are fragile when handling adversarial inputs, and perform poorly on character‑level tasks because the static chunking cannot adapt to input content or context[HNET:A:c088]. The retrieved passages do not state any additional limitation."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q08",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "correct",
+   "text": "The authors chose sinusoidal positional encodings because they hypothesized that the sinusoid function would allow the model to easily learn to attend by relative positions, since for any fixed offset k, PE_{pos+k} can be represented as a linear function of PE_{pos}, and because it may enable extrapolation to sequence lengths longer than those seen during training [AIAYN:3.5:c020]. They also experimented with learned positional embeddings and found that the two versions produced nearly identical results, with the learned version yielding a dev perplexity of 4.92 and BLEU of 25.7, essentially the same as the base model [AIAYN:3.5:c020][AIAYN:T3:r08][AIAYN:6.2:c031]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q08",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "The authors selected sinusoidal positional encodings because they hypothesized the function would let the model easily learn to attend by relative positions and might allow extrapolation to longer sequence lengths [AIAYN:3.5:c020]. They also tried learned positional embeddings and observed nearly identical results to the sinusoidal version, with the learned variant yielding a dev perplexity of 4.92 and BLEU of 25.7, matching the base model’s performance [AIAYN:3.5:c020][AIAYN:6.2:c031]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q09",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "Moshi’s theoretical latency of 160 ms is achieved by the model’s streaming, hierarchical architecture that is pretrained with an acoustic delay of 2 and finetuned with an acoustic delay of 1, which together set the target delay for real‑time operation[MOSHI:5.3:c083]. This design choice is highlighted in the introduction as giving Moshi a theoretical latency of 160 ms, which is lower than the 230 ms average measured in natural conversations across ten languages[MOSHI:1:c005]. In practice, Moshi runs with a latency of about 200 ms, as reported in the abstract[MOSHI:abstract:c002]. This practical latency is still below the typical natural‑conversation response time of a few hundred milliseconds and specifically lower than the 230 ms average observed in real human dialogue[MOSHI:1:c005]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q09",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "Moshi’s theoretical latency of 160 ms is specified as a design goal of its streaming, hierarchical architecture in the introduction[MOSHI:1:c005] and is reinforced by the abstract’s statement of a 160 ms theoretical latency[MOSHI:abstract:c002]. The abstract also reports that Moshi achieves a practical latency of about 200 ms in operation[MOSHI:abstract:c002]. Natural conversations are reported to have an average response time of 230 ms across ten languages[MOSHI:1:c005]. Thus, Moshi’s practical latency of 200 ms is lower than the typical natural‑conversation latency of 230 ms."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q10",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "H‑Net builds its hierarchy by applying a dynamic‑chunking layer that uses a routing module to draw content‑dependent chunk boundaries and a downsampler that keeps vectors at those boundary positions, thereby creating a compressed representation that can be further processed in subsequent stages [HNET:1:c012][HNET:T6:r03]. The architecture can be iterated, so that the output of one dynamic‑chunking stage becomes the input to a second, yielding a nested, multi‑stage hierarchy [HNET:3.1:c049]. Empirically, adding the second stage improves performance: H‑Net (2‑stage) is significantly better than H‑Net (1‑stage) [HNET:3.1:c049]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q10",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "correct",
+   "text": "H‑Net’s hierarchy is created by a dynamic‑chunking layer that includes a routing module for drawing chunk boundaries and a downsampler that retains vectors at those boundary indicators, reducing sequence length while preserving semantically important positions [HNET:1:c012]. The model can apply this dynamic chunking iteratively, forming two nested stages (S=2) as shown in the architectural overview [HNET:1:c012]. H‑Net (2‑stage) is significantly better than H‑Net (1‑stage), demonstrating that adding a second dynamic‑chunking stage improves performance [HNET:3.1:c049]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q12",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "Moshi without Inner Monologue achieves 9.2 % accuracy on Web Questions, 21.0 % on LlaMA Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02][MOSHI:5.4:c089]. The retrieved passages do not state the accuracies of Moshi with Inner Monologue."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q12",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "Moshi without Inner Monologue achieves 9.2 % accuracy on Web Questions, 21.0 % on LlaMA Questions, and 7.3 % on Audio TriviaQA [MOSHI:T8:r02][MOSHI:5.4:c089]. The retrieved passages do not state the accuracies of Moshi with Inner Monologue."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q13",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "The 2‑stage H‑Net reaches an average zero‑shot accuracy of 55.5 % [HNET:T2:r10]. The BPE Transformer matched to GPT‑3 Large attains an average accuracy of 53.3 % [HNET:T2:r01]. The H‑Net’s performance matches that of the larger Transformer matched to GPT‑3 XL, which also records an average accuracy of 55.5 % [HNET:T2:r11]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q13",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "mixed",
+   "text": "The 2‑stage H‑Net reaches an average zero‑shot accuracy of 55.5 % [HNET:T2:r10]. The Transformer matched to GPT‑3 Large obtains an average accuracy of 53.3 % [HNET:T2:r01]. The H‑Net’s average accuracy equals that of the Transformer matched to GPT‑3 XL, which also records an average accuracy of 55.5 % [HNET:T2:r11]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q14",
+   "draft": 0,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "wrong",
+   "text": "The original Transformer translation experiments used a fixed BPE‑style tokenizer (the Llama‑3 tokenizer) that segments input into pre‑defined subword tokens [HNET:3.2:c061]. In contrast, H‑Net replaces this pipeline with a dynamic chunking mechanism that learns content‑ and context‑dependent segmentation jointly with the model, operating directly on raw bytes [HNET:abstract:c001]."
+  },
+  {
+   "run": "assessment/improvement_loop/baseline/live_ext",
+   "question_id": "q14",
+   "draft": 1,
+   "recorded_ok": false,
+   "v4.2": false,
+   "v4.3c": false,
+   "label": "wrong",
+   "text": "The original Transformer translation experiments segmented input with the Llama‑3 tokenizer, a BPE‑style tokenizer designed for multilingual text [HNET:3.2:c061]. H‑Net instead learns a dynamic, content‑ and context‑dependent chunking mechanism that operates directly on raw bytes, replacing the fixed tokenization pipeline [HNET:abstract:c001]."
+  }
+ ],
+ "live_replay_summary": {
+  "n_drafts": 33,
+  "recorded_equals_v4.2_replay": 33,
+  "v4.2": {
+   "accepted": 4,
+   "accepted_labelled_correct": 3,
+   "false_acceptance (accepted, labelled mixed/wrong/unsupported)": 1,
+   "false_rejection (rejected, labelled correct)": 9,
+   "unlabelled": 0
+  },
+  "v4.3c": {
+   "accepted": 3,
+   "accepted_labelled_correct": 2,
+   "false_acceptance (accepted, labelled mixed/wrong/unsupported)": 1,
+   "false_rejection (rejected, labelled correct)": 10,
+   "unlabelled": 0
+  }
+ }
+}

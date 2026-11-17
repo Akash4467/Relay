@@ -1,0 +1,257 @@
+{
+ "run": "assessment/e2e/live/B12_fix_c6",
+ "timestamp": "2026-11-14T13:00:43.805+00:00",
+ "corpus_version": "c6",
+ "model_id": "openai/gpt-oss-120b",
+ "prompt_version": "p6",
+ "verifier_version": "v4.5c",
+ "question_id": "q14",
+ "dataset": [
+  "e2e_B12",
+  "terminology_mismatch"
+ ],
+ "question": "How is the input segmented in the original Transformer's translation experiments compared with H-Net?",
+ "answerable": true,
+ "http_status": 200,
+ "final_text": "The Transformers use the Llama‑3 tokenizer which was designed for multilingual, while H‑Net (space) and H‑Net (2‑stage) are byte‑level [HNET:3.2:c061]. The authors introduce a dynamic chunking mechanism which automatically learns content‑ and context‑dependent segmentation strategies learned jointly with the rest of the model [HNET:abstract:c001].",
+ "done": {
+  "model": "openai/gpt-oss-120b",
+  "status": "ok",
+  "tier": "normal",
+  "reason": null,
+  "citations": [
+   "HNET:3.2:c061",
+   "HNET:abstract:c001"
+  ],
+  "request_id": "loop-B12_fix_c6-q14"
+ },
+ "client_ms": 37126.6,
+ "evidence_ids": [
+  "AIAYN:6.3:c032",
+  "HNET:3.2:c061",
+  "AIAYN:1:c003",
+  "HNET:3.1:c053",
+  "HNET:2.1.2:c019",
+  "HNET:F:c125",
+  "HNET:2.1.2:c020",
+  "HNET:abstract:c001"
+ ],
+ "gold_units_in_context": [
+  false,
+  false,
+  false
+ ],
+ "gold_units_complete_in_context": [
+  false,
+  false,
+  false
+ ],
+ "drafts": [
+  "The original Transformer translation experiments used a BPE‑based tokenizer (the Llama‑3 tokenizer designed for multilingual text) to segment inputs [HNET:3.2:c061]. In contrast, H‑Net processes raw byte inputs and learns a dynamic, content‑ and context‑dependent segmentation jointly with the model, replacing the fixed BPE tokenization pipeline [HNET:abstract:c001].",
+  "The Transformers use the Llama‑3 tokenizer which was designed for multilingual, while H‑Net (space) and H‑Net (2‑stage) are byte‑level [HNET:3.2:c061]. The authors introduce a dynamic chunking mechanism which automatically learns content‑ and context‑dependent segmentation strategies learned jointly with the rest of the model [HNET:abstract:c001]."
+ ],
+ "verification": [
+  {
+   "ok": false,
+   "cited": [
+    "HNET:3.2:c061",
+    "HNET:abstract:c001"
+   ],
+   "failures": [
+    [
+     "The original Transformer translation experiments used a BPE‑based tokenizer (the Llama‑3 tokenizer designed for multilingual text) to segment inputs [HNET:3.2:c061].",
+     "not supported by the cited passage (entailment 0.06 < 0.9); term 'llama' not in the cited passage; names AIAYN but cites no AIAYN passage"
+    ],
+    [
+     "In contrast, H‑Net processes raw byte inputs and learns a dynamic, content‑ and context‑dependent segmentation jointly with the model, replacing the fixed BPE tokenization pipeline [HNET:abstract:c001].",
+     "not supported by the cited passage (entailment 0.57 < 0.9); term 'h' not in the cited passage; term 'net' not in the cited passage"
+    ]
+   ],
+   "sentences": [
+    {
+     "sentence": "The original Transformer translation experiments used a BPE‑based tokenizer (the Llama‑3 tokenizer designed for multilingual text) to segment inputs [HNET:3.2:c061].",
+     "ok": false,
+     "entailment": 0.055458604239759415,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.06 < 0.9); term 'llama' not in the cited passage; names AIAYN but cites no AIAYN passage"
+     ]
+    },
+    {
+     "sentence": "In contrast, H‑Net processes raw byte inputs and learns a dynamic, content‑ and context‑dependent segmentation jointly with the model, replacing the fixed BPE tokenization pipeline [HNET:abstract:c001].",
+     "ok": false,
+     "entailment": 0.569507120374114,
+     "reasons": [
+      "not supported by the cited passage (entailment 0.57 < 0.9); term 'h' not in the cited passage; term 'net' not in the cited passage"
+     ]
+    }
+   ]
+  },
+  {
+   "ok": true,
+   "cited": [
+    "HNET:3.2:c061",
+    "HNET:abstract:c001"
+   ],
+   "failures": [],
+   "sentences": [
+    {
+     "sentence": "The Transformers use the Llama‑3 tokenizer which was designed for multilingual, while H‑Net (space) and H‑Net (2‑stage) are byte‑level [HNET:3.2:c061].",
+     "ok": true,
+     "entailment": 0.9739903167236634,
+     "reasons": []
+    },
+    {
+     "sentence": "The authors introduce a dynamic chunking mechanism which automatically learns content‑ and context‑dependent segmentation strategies learned jointly with the rest of the model [HNET:abstract:c001].",
+     "ok": true,
+     "entailment": 0.9984671117682641,
+     "reasons": []
+    }
+   ]
+  }
+ ],
+ "pipeline_status": "answered",
+ "refusal_reason": null,
+ "evidence_equals_corpus": true,
+ "trace": {
+  "request_id": "loop-B12_fix_c6-q14",
+  "scenario": "improvement_loop",
+  "source": "real",
+  "start_time": "2026-11-14T13:00:43.805+00:00",
+  "question_id": "q14",
+  "retrieval_setting": "B",
+  "deadline_ms": 180000,
+  "queue_length_at_arrival": 0,
+  "busy_at_arrival": 0,
+  "degradation_level": "L0",
+  "cache_hit": false,
+  "retries": 0,
+  "tokens_in": 4322,
+  "tokens_out": 395,
+  "verification_policy_version": "v4.2",
+  "corpus_version": "c6",
+  "admitted": true,
+  "queue_wait_ms": 0.0,
+  "retrieval_ms": 691.7,
+  "context_tokens": 1527,
+  "retrieval_policy": "per_paper",
+  "query_expansion": [],
+  "retrieval_query": null,
+  "caption_sharing": true,
+  "evidence_ids": [
+   "AIAYN:6.3:c032",
+   "HNET:3.2:c061",
+   "AIAYN:1:c003",
+   "HNET:3.1:c053",
+   "HNET:2.1.2:c019",
+   "HNET:F:c125",
+   "HNET:2.1.2:c020",
+   "HNET:abstract:c001"
+  ],
+  "verification_ms": 1808.3,
+  "answer_status": "answered",
+  "llm_calls": 2,
+  "initial_attempts": 2,
+  "redraft_attempts": 1,
+  "fallback_generations": 0,
+  "governor_wait_ms": 31697.4,
+  "model_ttft_ms": 771.4,
+  "first_byte_ms": 357.7,
+  "generation_ms": 2884.5,
+  "reasoning_tokens": 217,
+  "reservation_overrun_tokens": 0,
+  "model": "openai/gpt-oss-120b",
+  "calls": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 1988,
+    "reserved": 2758,
+    "governor_wait_ms": 14340.2,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.28069816,
+     "prompt_tokens": 1987,
+     "prompt_time": 0.176101175,
+     "completion_tokens": 196,
+     "completion_time": 0.410944065,
+     "total_tokens": 2183,
+     "total_time": 0.58704524,
+     "completion_tokens_details": {
+      "reasoning_tokens": 107
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": -1,
+    "tokens_in": 1987,
+    "tokens_out": 196,
+    "reasoning_tokens": 107,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 357.7,
+    "model_ttft_ms": 771.4,
+    "total_ms": 940.7,
+    "max_gap_ms": 413.7,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "984",
+     "x-ratelimit-reset-requests": "23m2.4s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "1639",
+     "x-ratelimit-reset-tokens": "47.707s"
+    }
+   },
+   {
+    "model": "openai/gpt-oss-120b",
+    "attempt": 0,
+    "tokens_in_local": 2334,
+    "reserved": 3104,
+    "governor_wait_ms": 17357.2,
+    "status": "ok",
+    "http": 200,
+    "usage": {
+     "queue_time": 0.369336462,
+     "prompt_tokens": 2335,
+     "prompt_time": 1.083714014,
+     "completion_tokens": 199,
+     "completion_time": 0.425052192,
+     "total_tokens": 2534,
+     "total_time": 1.508766206,
+     "prompt_tokens_details": {
+      "cached_tokens": 256
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 110
+     }
+    },
+    "usage_estimated": false,
+    "usage_source": "usage",
+    "prompt_tokens_local_error": 1,
+    "tokens_in": 2335,
+    "tokens_out": 199,
+    "reasoning_tokens": 110,
+    "reservation_overrun_tokens": 0,
+    "finish_reason": "stop",
+    "first_byte_ms": 441.5,
+    "model_ttft_ms": 1770.0,
+    "total_ms": 1943.8,
+    "max_gap_ms": 1328.5,
+    "rate_headers": {
+     "x-ratelimit-limit-requests": "1000",
+     "x-ratelimit-remaining-requests": "983",
+     "x-ratelimit-reset-requests": "24m28.8s",
+     "x-ratelimit-limit-tokens": "8000",
+     "x-ratelimit-remaining-tokens": "1522",
+     "x-ratelimit-reset-tokens": "48.585s"
+    }
+   }
+  ],
+  "first_token_ms": 37105.4,
+  "status": "ok",
+  "failure_reason": null,
+  "answer_tier": "normal",
+  "reply_reason": null,
+  "total_ms": 37106.0
+ }
+}
